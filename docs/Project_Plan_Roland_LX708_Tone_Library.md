@@ -1,0 +1,1 @@
+Full project plan content here - see the file in artifacts for complete text
