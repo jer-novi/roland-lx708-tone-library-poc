@@ -65,29 +65,128 @@ Resultaat is direct bruikbaar in Ableton, voor een cd of online.
 
 ## 7. Genre-tips
 
-### Techno / Deephouse
+> Gear-context bij alle tips: LX708 + Rubix22 (2 in / 2 uit) + Maschine MK2 + Ableton Live, 2 microfoons, en akoestische instrumenten in huis: **gitaar** (jij) en **ukelele** (Judith).
+
+### Elektronisch
+
+#### Techno / Deephouse
 - Neem de LX708 **droog** op (Ambience 0–1), layer in Ableton met een TR-808/909 groove uit Maschine.
 - GM2 **TR-808 Tom**, **Synth Bass 1/2** en **ANALOG Set** zijn directe knipogen naar Roland's dance-erfgoed.
 - Sidechain de piano/pad-laag op de kick; **Warm Pad** of **Sine Pad** als sublaag onder stabs.
 - **Pop EP** of **FM E.Piano** door een chorus + delay = instant deephouse-chord-stabs.
 
-### Pop
-- **American Grand** (directer) vaak beter in een dichte mix dan European Grand.
-- Dual: piano + **Soft Pad** of **Choir 1**, laag in de mix.
-- Dubbel opnemen (audio + MIDI tegelijk via Rubix22 + USB-MIDI): MIDI als vangnet om later noten te fixen en een VST-laag toe te voegen.
+#### Melodische techno (Tale Of Us / Afterlife-stijl)
+- **Sine Pad** of **Bowed Glass** als melodische hoofdlaag, octaaf lager dubbelen met **Synth Bass 2**.
+- Speel arpeggio's op de LX708 als MIDI in en kwantiseer naar 1/16; stuur dezelfde MIDI naar een Maschine-pluck én terug naar de piano (GM2 **Crystal** of **Synth Mallet**) — twee texturen, één performance.
+- Lange spanningsbogen: automatiseer in Ableton een low-pass filter over de gestackte lagen.
 
-### Jazz
+#### Classic house / piano house (90s, "Show Me Love")
+- Hét genre voor deze piano: **Rock Piano** of **Bright Upright**, korte stabs, beetje los gekwantiseerd.
+- In Ableton: transponeer samples van je eigen stabs +5/+7 semitonen voor het klassieke pitched-piano-effect.
+- **M1-achtig orgel-huis**: GM2 **Organ 2** of **Perc.Organ 1** met release kort.
+
+#### Lo-fi hiphop / chillhop
+- **Mellow Upright** of **Mellow Forte**, Ambience laag, opzettelijk niet strak spelen.
+- In Ableton/Maschine: pitch-wobble (Wow & Flutter), vinylruis, low-pass rond 8 kHz, mono maken.
+- Sample je eigen 4-maats loops in Maschine en chop ze — de LX708 wordt je eigen sample-bibliotheek.
+- GM2 **Jazz Guitar** of echte gitaar (DI in Rubix22) met dezelfde lo-fi behandeling erbovenop.
+
+#### Synthwave / retrowave
+- **FM E.Piano** + **AnalogBrass1/2** + **Halo Pad** = instant 80s. GM2 **Square Lead1** voor melodieën.
+- LinnDrum-achtige drums uit Maschine; alles door een lichte chorus.
+
+#### Ambient / drone
+- **Sweep Pad**, **Space Voice**, **Itopia**, **Halo Pad** met sustainpedaal vastgehouden → opnemen → in Ableton time-stretchen (4x) en reverben = instant drone-bed.
+- Neem de pianospeakers op met je 2 mics terwijl je door de kamer loopt voor organische modulatie.
+
+#### Downtempo / trip-hop
+- **Vintage EP** of **60's EP** met veel ruimte, trage BRUSH-achtige drums.
+- Echte gitaar met tremolo-effect in Ableton + **Tremolo Str.** uit GM2 als spookachtige dubbeling.
+
+#### Liquid drum & bass
+- **E.Grand** of **Pop EP** voor de typische soulvolle chords; pads eronder (**Warm Pad**).
+- Neem chords als MIDI op, halveer het tempo bij inspelen (87 ipv 174 BPM) en versnel daarna.
+
+### Met gitaar & ukelele (voor jou en Judith)
+
+#### Singer-songwriter / indie-folk
+- Basis: gitaar (mic 1 of DI) + zang (mic 2) via Rubix22; LX708 erbij als **MIDI** zodat beide ingangen vrij blijven.
+- **Mellow Upright** vult gitaarakkoorden mooi aan zonder te concurreren: speel vooral *boven* de gitaar (rechterhand, octaaf 5–6) of juist alleen lage grondtonen.
+- EQ-truc: high-pass de piano rond 200 Hz zodat de gitaarbody de warmte levert.
+
+#### Ukelele-pop (Hawaiiaans / "Somewhere Over the Rainbow"-sfeer)
+- Uke (mic, 20–30 cm bij de 12e fret) + **Hawaiian Gt** uit GM2 als slide-dubbeling via MIDI.
+- Piano minimaal: enkele noten met **Music Box** of **Celesta** als sprankel-laag.
+- Duo-opname met Judith: uke op IN 1, zang op IN 2, piano als MIDI — alle drie in één take.
+
+#### Bossa nova / latin
+- Nylon-gevoel: GM2 **Nylon-str.Gt** via MIDI of echte gitaar fingerpicking; uke kan de cavaquinho-rol pakken (kort, percussief strummen).
+- Piano: **American Grand**, spaarzame comping op de 2&. GM2 **Agogo**/**Castanets** of Maschine voor percussie.
+
+#### Country / americana
+- **Honky-tonk** is er letterlijk voor gemaakt; combineer met **Steel-str.Gt** (echt of GM2) en **Fiddle**.
+- Train-beat uit Maschine met brushes (**BRUSH Set** via MIDI kan ook).
+
+#### Reggae / ska (leuk met uke!)
+- De uke is een natuurlijke skank-machine: strum strak op de offbeats, mic dichtbij en dood de ruimte.
+- Piano dubbelt de skank: **Bright Upright**, kort en staccato; orgel-"bubble" met **Organ 2** (linkerhand 1/8-noten).
+- Bas: GM2 **FingeredBass** of **AcousticBass** via MIDI, diep en rond gemixt.
+
+#### Blues / gospel / soul
+- **Rock Piano** of **Ragtime Piano** voor blues; **Gospel Spin** (Leslie-orgel) is je gospelwapen — Dual met piano kan op het instrument zelf.
+- Gitaar met slide + **TremoloOrgan** eronder = zuidelijk kerkje.
+- 6/8 gospelballad: piano + **Choir 1** in Dual, echte handclaps via de mics, stack 3 passes.
+
+#### R&B / neo-soul
+- **1976SuitCase** of **EP Belle** door lichte auto-wah/phaser in Ableton; speel met veel 9ths/11ths.
+- Gitaar: dead-notes en korte double-stops (Maschine-swing op 55–60%).
+- D'Angelo-truc: kwantiseer drums strak maar speel keys/gitaar bewust achter de beat.
+
+### Akoestisch / klassiek
+
+#### Jazz
 - **Combo Jz.Org** in Split met **AcousticBass**: linkerhand walking bass.
 - **1976SuitCase** met een vleugje eigen Ambience (3–4) voor ballads; **JAZZ Set**/**BRUSH Set** als GM2-begeleiding via MIDI.
 
-### Modern klassiek (Nils Frahm / Ólafur Arnalds-stijl)
+#### Modern klassiek (Nils Frahm / Ólafur Arnalds-stijl)
 - **Upright Piano** of **Mellow Upright** + microfoons dicht op de kast voor mechanische geluiden (hamers, pedaal) — juist die "ruis" is het genre.
 - Dual met **SymphonicStr1** of **Warm Pad** heel zacht eronder.
 - Neem ook de room-mics op (zie routingboard, setup C).
 
-### Folk
-- **Steel-str.Gt**, **Mandolin**, **Fiddle**, **Accordion** uit GM2 als schetsinstrumenten via MIDI; later vervangen of juist lo-fi houden.
+#### Folk
+- **Steel-str.Gt**, **Mandolin**, **Fiddle**, **Accordion** uit GM2 als schetsinstrumenten via MIDI; later vervangen door je echte gitaar/uke of juist lo-fi houden.
 - Upright-piano's met lage Ambience passen mooi onder zang (mic via Rubix22, kanaal 2).
+- Iers/keltisch: **Tin whistle-rol** kan met GM2 **Recorder** of **Pan Flute**; uke vervangt de bouzouki verrassend goed (capo + arpeggio's).
+
+#### Pop
+- **American Grand** (directer) vaak beter in een dichte mix dan European Grand.
+- Dual: piano + **Soft Pad** of **Choir 1**, laag in de mix.
+- Dubbel opnemen (audio + MIDI tegelijk via Rubix22 + USB-MIDI): MIDI als vangnet om later noten te fixen en een VST-laag toe te voegen.
+
+## 7b. Productietips (mix & workflow)
+
+**Opnemen**
+1. **Altijd audio + MIDI tegelijk** als de kabels toch liggen — MIDI is gratis verzekering.
+2. Mic-technieken met 2 mics: **XY** (compact stereo, geen fase-problemen) voor uke/gitaar; **spaced pair** voor piano-kast + room; **close + room** voor modern klassiek.
+3. Check fase als je DI + mic combineert: flip polariteit in Ableton en kies wat voller klinkt.
+4. Neem 10 seconden "stilte" op in je opnameruimte — handig als noise-print en als lo-fi ruisbed.
+
+**Layeren & arrangeren**
+5. Stapel nooit twee brede lagen in hetzelfde register: piano midden, pad eronder (low-passed), sprankel erboven (**Celesta**, **Music Box**, **Crystal**).
+6. Gebruik de GM2-set als **arrangeer-schetsblok**: hele band via multitimbrale MIDI, daarna laag voor laag vervangen door echte gitaar/uke/VST's.
+7. Sample de LX708 in **Maschine**: elke C van elke octaaf van je favoriete 10 tones opnemen → eigen multisample-kits, ook zonder piano beschikbaar.
+
+**Mixen**
+8. EQ-carving piano vs. gitaar/uke: piano high-pass ~150–200 Hz bij gitaar in de mix; uke leeft rond 2–4 kHz — dip de piano daar 2 dB.
+9. Reverb als **send** (één ruimte voor alles) klinkt als een band in één kamer; aparte reverbs per spoor klinkt als losse overdubs. Kies bewust.
+10. Comprimeer de som van piano-lagen samen (bus-compressie, 2–3 dB reductie) in plaats van elk spoor apart.
+11. Mono-check: deephouse/lofi vaak smaller = krachtiger; klassiek/ambient mag breed.
+12. Referentietrack via Bluetooth naar de LX708-speakers sturen en meespelen is prima voor schetsen — maar mix op de monitors via de Rubix22.
+
+**Workflow**
+13. Eén Ableton-template "LX708" met: audio-in 1/2, MIDI-track LX708, Maschine-track, returns (reverb/delay) en een resample-track. Scheelt elke sessie 10 minuten.
+14. Noteer per opname de tone + Ambience-stand (de toekomstige "recording log"-feature in de webapp).
+15. Werk in passes van max. 8 maten bij overdubben op de piano zelf; foutje = alleen die pass opnieuw (let op: een part opnieuw opnemen **overschrijft** het).
 
 ## 8. Compositie-snelstart per sessie
 
