@@ -1,1 +1,55 @@
-full yml
+spring:
+  application:
+    name: roland-tone-library
+
+  datasource:
+    # On Render set: DB_URL=jdbc:postgresql://<hostname>:5432/pianosounds
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/pianosounds}
+    username: ${DB_USERNAME:pianosounds_user}
+    password: ${DB_PASSWORD:}
+    hikari:
+      maximum-pool-size: ${DB_POOL_SIZE:5}
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+  cache:
+    type: caffeine
+    cache-names: wikiSummaries, wikiHtml
+    caffeine:
+      spec: maximumSize=1000,expireAfterWrite=24h
+
+server:
+  port: ${PORT:8080}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info
+
+app:
+  seed:
+    # Set SEED_ENABLED=false to skip seeding at startup (it is idempotent either way)
+    enabled: ${SEED_ENABLED:true}
+  cors:
+    # Comma separated, e.g. "https://your-app.vercel.app,http://localhost:3000"
+    allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:3000}
+  wikipedia:
+    base-url: https://en.wikipedia.org/api/rest_v1
+    # Be polite to the Wikipedia API: minimum delay between bulk requests (ms)
+    bulk-delay-ms: 250
+
+logging:
+  level:
+    com.rolandapp: INFO
