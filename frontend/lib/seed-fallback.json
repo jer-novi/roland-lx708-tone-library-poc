@@ -1,0 +1,3266 @@
+{
+  "categories": [
+    {
+      "name": "Piano",
+      "displayOrder": 1,
+      "description": "PureAcoustic gemodelleerde concertvleugels"
+    },
+    {
+      "name": "E. Piano",
+      "displayOrder": 2,
+      "description": "Elektrische piano's: Rhodes, Wurlitzer, FM en Clavinet"
+    },
+    {
+      "name": "Strings",
+      "displayOrder": 3,
+      "description": "Strijkers, orkest en ensembleklanken"
+    },
+    {
+      "name": "Other",
+      "displayOrder": 4,
+      "description": "Orgels, upright piano's, klassiek, drums en de volledige GM2-set"
+    }
+  ],
+  "tones": [
+    {
+      "toneNumber": 1,
+      "name": "European Grand",
+      "category": "Piano",
+      "subCategory": null,
+      "origin": "Roland PureAcoustic Piano Modeling",
+      "wikipediaPageTitle": "Grand piano",
+      "funFacts": "Gemodelleerd naar een Europese concertvleugel (Hamburg-stijl); dit is de hoofdklank van de LX708, opgebouwd met Roland's PureAcoustic Piano Modeling — er wordt dus geen sample afgespeeld maar fysiek gemodelleerd.",
+      "combinationSuggestions": "Dual met SymphonicStr1 voor filmische ballads; Split met AcousticBass voor jazz-trio gevoel."
+    },
+    {
+      "toneNumber": 2,
+      "name": "European v2",
+      "category": "Piano",
+      "subCategory": null,
+      "origin": "Roland PureAcoustic Piano Modeling",
+      "wikipediaPageTitle": "Grand piano",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 3,
+      "name": "American Grand",
+      "category": "Piano",
+      "subCategory": null,
+      "origin": "Roland PureAcoustic Piano Modeling",
+      "wikipediaPageTitle": "Steinway & Sons",
+      "funFacts": "Gemodelleerd naar een Amerikaanse concertvleugel (New York-stijl) met een vollere, donkerdere bas en directere aanslag — ideaal voor jazz en pop.",
+      "combinationSuggestions": "Dual met Soft Pad voor moderne pop; Split met FingeredBass voor singer-songwriter werk."
+    },
+    {
+      "toneNumber": 4,
+      "name": "American v2",
+      "category": "Piano",
+      "subCategory": null,
+      "origin": "Roland PureAcoustic Piano Modeling",
+      "wikipediaPageTitle": "Steinway & Sons",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 1,
+      "name": "1976SuitCase",
+      "category": "E. Piano",
+      "subCategory": null,
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Rhodes piano",
+      "funFacts": "Geïnspireerd op de Fender Rhodes Mark I Suitcase uit 1976, dé elektrische piano van Stevie Wonder, Herbie Hancock en talloze soul- en fusionplaten.",
+      "combinationSuggestions": "Dual met Warm Pad voor neo-soul; combineer in Ableton met vinyl-ruis en een TR-808 groove uit Maschine."
+    },
+    {
+      "toneNumber": 2,
+      "name": "Tremolo EP",
+      "category": "E. Piano",
+      "subCategory": null,
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Rhodes piano",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 3,
+      "name": "Pop EP",
+      "category": "E. Piano",
+      "subCategory": null,
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Electric piano",
+      "funFacts": null,
+      "combinationSuggestions": "Dual met Choir 1 voor dromerige pop; mooi met sidechain-compressie in een deephouse-context."
+    },
+    {
+      "toneNumber": 4,
+      "name": "Vintage EP",
+      "category": "E. Piano",
+      "subCategory": null,
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Wurlitzer electronic piano",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 5,
+      "name": "FM E.Piano",
+      "category": "E. Piano",
+      "subCategory": null,
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Yamaha DX7",
+      "funFacts": "Het klassieke FM-pianogeluid van de Yamaha DX7 — hét geluid van vrijwel elke pop-ballad uit de jaren '80.",
+      "combinationSuggestions": "Dual met Sine Pad voor 80s-ballads; leg er in Ableton een chorus + reverb overheen."
+    },
+    {
+      "toneNumber": 6,
+      "name": "EP Belle",
+      "category": "E. Piano",
+      "subCategory": null,
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Electric piano",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 7,
+      "name": "60's EP",
+      "category": "E. Piano",
+      "subCategory": null,
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Wurlitzer electronic piano",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 8,
+      "name": "Clav.",
+      "category": "E. Piano",
+      "subCategory": null,
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Clavinet",
+      "funFacts": "De Hohner Clavinet is wereldberoemd geworden door Stevie Wonder's 'Superstition' — perfect voor funk-riffs.",
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 9,
+      "name": "Stage Phaser",
+      "category": "E. Piano",
+      "subCategory": null,
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Phaser (effect)",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 10,
+      "name": "70's EP",
+      "category": "E. Piano",
+      "subCategory": null,
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Rhodes piano",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 11,
+      "name": "E.Grand",
+      "category": "E. Piano",
+      "subCategory": null,
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Yamaha CP-70",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 1,
+      "name": "SymphonicStr1",
+      "category": "Strings",
+      "subCategory": null,
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "String section",
+      "funFacts": null,
+      "combinationSuggestions": "Dual met European Grand (klassiek) of met Warm Pad (modern-klassiek à la Ólafur Arnalds)."
+    },
+    {
+      "toneNumber": 2,
+      "name": "Epic Strings",
+      "category": "Strings",
+      "subCategory": null,
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "String section",
+      "funFacts": null,
+      "combinationSuggestions": "Dual met Magical Piano voor trailer-achtige composities."
+    },
+    {
+      "toneNumber": 3,
+      "name": "Rich Strings",
+      "category": "Strings",
+      "subCategory": null,
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "String section",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 4,
+      "name": "Orchestra Str",
+      "category": "Strings",
+      "subCategory": null,
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "String orchestra",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 5,
+      "name": "Orchestra",
+      "category": "Strings",
+      "subCategory": null,
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Orchestra",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 6,
+      "name": "Chamber Winds",
+      "category": "Strings",
+      "subCategory": null,
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Wind ensemble",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 7,
+      "name": "Harp",
+      "category": "Strings",
+      "subCategory": null,
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Harp",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 8,
+      "name": "Violin",
+      "category": "Strings",
+      "subCategory": null,
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Violin",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 9,
+      "name": "Velo Strings",
+      "category": "Strings",
+      "subCategory": null,
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "String section",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 10,
+      "name": "Flute",
+      "category": "Strings",
+      "subCategory": null,
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Flute",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 11,
+      "name": "Cello",
+      "category": "Strings",
+      "subCategory": null,
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Cello",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 12,
+      "name": "OrchestraBrs",
+      "category": "Strings",
+      "subCategory": null,
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Brass section",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 13,
+      "name": "Pizzicato Str",
+      "category": "Strings",
+      "subCategory": null,
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Pizzicato",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 14,
+      "name": "SymphonicStr2",
+      "category": "Strings",
+      "subCategory": null,
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "String section",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 15,
+      "name": "Soft Pad",
+      "category": "Strings",
+      "subCategory": null,
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Synthesizer",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 16,
+      "name": "Magical Piano",
+      "category": "Strings",
+      "subCategory": null,
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Piano",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 17,
+      "name": "Jazz Scat",
+      "category": "Strings",
+      "subCategory": null,
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Scat singing",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 18,
+      "name": "A.Bass+Cymbl",
+      "category": "Strings",
+      "subCategory": null,
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Double bass",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 1,
+      "name": "Pipe Organ",
+      "category": "Other",
+      "subCategory": "Organ",
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Pipe organ",
+      "funFacts": null,
+      "combinationSuggestions": "Solo gebruiken met veel Ambience voor kerkakoestiek; Split met Choir voor sacrale sfeer."
+    },
+    {
+      "toneNumber": 2,
+      "name": "Nason Flt 8'",
+      "category": "Other",
+      "subCategory": "Organ",
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Flue pipe",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 3,
+      "name": "Combo Jz.Org",
+      "category": "Other",
+      "subCategory": "Organ",
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Hammond organ",
+      "funFacts": null,
+      "combinationSuggestions": "Split met AcousticBass: linkerhand walking bass, rechterhand orgel — instant jazzclub."
+    },
+    {
+      "toneNumber": 4,
+      "name": "Ballad Organ",
+      "category": "Other",
+      "subCategory": "Organ",
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Hammond organ",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 5,
+      "name": "ChurchOrgan1",
+      "category": "Other",
+      "subCategory": "Organ",
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Pipe organ",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 6,
+      "name": "ChurchOrgan2",
+      "category": "Other",
+      "subCategory": "Organ",
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Pipe organ",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 7,
+      "name": "Gospel Spin",
+      "category": "Other",
+      "subCategory": "Organ",
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Leslie speaker",
+      "funFacts": "Hammond-orgel door een roterende Leslie-speaker; het 'spin'-effect ontstaat door de draaiende hoorn die het geluid moduleert.",
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 8,
+      "name": "Full Stops",
+      "category": "Other",
+      "subCategory": "Organ",
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Pipe organ",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 9,
+      "name": "Mellow Bars",
+      "category": "Other",
+      "subCategory": "Organ",
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Hammond organ",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 10,
+      "name": "Light Organ",
+      "category": "Other",
+      "subCategory": "Organ",
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Hammond organ",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 11,
+      "name": "Lower Organ",
+      "category": "Other",
+      "subCategory": "Organ",
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Hammond organ",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 12,
+      "name": "60's Organ",
+      "category": "Other",
+      "subCategory": "Organ",
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Vox Continental",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 13,
+      "name": "Upright Piano",
+      "category": "Other",
+      "subCategory": "Upright",
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Upright piano",
+      "funFacts": null,
+      "combinationSuggestions": "Mooi met weinig Ambience voor een intieme indie/folk-sound; dual met Tape-achtige pad uit Maschine."
+    },
+    {
+      "toneNumber": 14,
+      "name": "Mellow Upright",
+      "category": "Other",
+      "subCategory": "Upright",
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Upright piano",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 15,
+      "name": "Bright Upright",
+      "category": "Other",
+      "subCategory": "Upright",
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Upright piano",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 16,
+      "name": "Rock Piano",
+      "category": "Other",
+      "subCategory": "Upright",
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Piano rock",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 17,
+      "name": "Ragtime Piano",
+      "category": "Other",
+      "subCategory": "Upright",
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Ragtime",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 18,
+      "name": "Fortepiano",
+      "category": "Other",
+      "subCategory": "Classical",
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Fortepiano",
+      "funFacts": "De voorloper van de moderne piano, zoals Mozart en de jonge Beethoven hem kenden — lichter van toon en sneller uitstervend.",
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 19,
+      "name": "Mellow Forte",
+      "category": "Other",
+      "subCategory": "Classical",
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Fortepiano",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 20,
+      "name": "Bright Forte",
+      "category": "Other",
+      "subCategory": "Classical",
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Fortepiano",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 21,
+      "name": "Harpsichord",
+      "category": "Other",
+      "subCategory": "Classical",
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Harpsichord",
+      "funFacts": "Bij een klavecimbel worden de snaren getokkeld in plaats van aangeslagen; aanslaggevoeligheid bestond op het origineel dus niet.",
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 22,
+      "name": "Harpsi 8'+4'",
+      "category": "Other",
+      "subCategory": "Classical",
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Harpsichord",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 23,
+      "name": "Do Re Mi 1#",
+      "category": "Other",
+      "subCategory": "Do Re Mi",
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 24,
+      "name": "Do Re Mi 1b",
+      "category": "Other",
+      "subCategory": "Do Re Mi",
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 25,
+      "name": "Do Re Mi 2#",
+      "category": "Other",
+      "subCategory": "Do Re Mi",
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 26,
+      "name": "Do Re Mi 2b",
+      "category": "Other",
+      "subCategory": "Do Re Mi",
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 27,
+      "name": "STANDARD Set",
+      "category": "Other",
+      "subCategory": "Drums",
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Drum kit",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 28,
+      "name": "ROOM Set",
+      "category": "Other",
+      "subCategory": "Drums",
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Drum kit",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 29,
+      "name": "POWER Set",
+      "category": "Other",
+      "subCategory": "Drums",
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Drum kit",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 30,
+      "name": "ELEC.Set",
+      "category": "Other",
+      "subCategory": "Drums",
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Electronic drum",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 31,
+      "name": "ANALOG Set",
+      "category": "Other",
+      "subCategory": "Drums",
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Roland TR-808",
+      "funFacts": "Gebaseerd op de Roland TR-808 drummachine uit 1980 — de basis van hiphop, electro en techno. Een stukje Roland-geschiedenis in je piano.",
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 32,
+      "name": "JAZZ Set",
+      "category": "Other",
+      "subCategory": "Drums",
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Drum kit",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 33,
+      "name": "BRUSH Set",
+      "category": "Other",
+      "subCategory": "Drums",
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Brush (music)",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 34,
+      "name": "ORCH.Set",
+      "category": "Other",
+      "subCategory": "Drums",
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Percussion section",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 35,
+      "name": "SFX Set",
+      "category": "Other",
+      "subCategory": "Drums",
+      "origin": "Roland SuperNATURAL",
+      "wikipediaPageTitle": "Sound effect",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 36,
+      "name": "Piano 1",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Piano",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 37,
+      "name": "Piano 1w",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Piano",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 38,
+      "name": "Piano 1d",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Piano",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 39,
+      "name": "Piano 2",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Piano",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 40,
+      "name": "Piano 2w",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Piano",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 41,
+      "name": "Piano 3",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Piano",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 42,
+      "name": "Piano 3w",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Piano",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 43,
+      "name": "Honky-tonk",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Honky-tonk piano",
+      "funFacts": "Het bewust ontstemde saloon-pianogeluid: twee licht uiteen gestemde pianolagen tegelijk.",
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 44,
+      "name": "Honky-tonk w",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Honky-tonk piano",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 45,
+      "name": "E.Piano 1",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Piano",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 46,
+      "name": "Detuned EP 1",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Electric piano",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 47,
+      "name": "Vintage EP",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Wurlitzer electronic piano",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 48,
+      "name": "60's E.Piano",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Electric piano",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 49,
+      "name": "E.Piano 2",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Piano",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 50,
+      "name": "Detuned EP 2",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Electric piano",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 51,
+      "name": "St.FM EP",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Frequency modulation synthesis",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 52,
+      "name": "EP Legend",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Yamaha DX7",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 53,
+      "name": "EP Phaser",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Electric piano",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 54,
+      "name": "Harpsi.",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Harpsichord",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 55,
+      "name": "Coupled Hps.",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 56,
+      "name": "Harpsi.w",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Harpsichord",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 57,
+      "name": "Harpsi.o",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Harpsichord",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 58,
+      "name": "Clav.",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Clavinet",
+      "funFacts": "De Hohner Clavinet is wereldberoemd geworden door Stevie Wonder's 'Superstition' — perfect voor funk-riffs.",
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 59,
+      "name": "Pulse Clav.",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Clavinet",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 60,
+      "name": "Celesta",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Celesta",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 61,
+      "name": "Glockenspiel",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Glockenspiel",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 62,
+      "name": "Music Box",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Music box",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 63,
+      "name": "Vibraphone",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Vibraphone",
+      "funFacts": "De vibrafoon heeft motorgedreven roterende kleppen in de resonatorbuizen die het kenmerkende vibrato veroorzaken.",
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 64,
+      "name": "Vibraphone w",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Vibraphone",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 65,
+      "name": "Marimba",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Marimba",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 66,
+      "name": "Marimba w",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Marimba",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 67,
+      "name": "Xylophone",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Xylophone",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 68,
+      "name": "TubularBells",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Tubular bells",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 69,
+      "name": "Church Bell",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Church bell",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 70,
+      "name": "Carillon",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Carillon",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 71,
+      "name": "Santur",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Santur",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 72,
+      "name": "Organ 1",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Hammond organ",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 73,
+      "name": "TremoloOrgan",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Hammond organ",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 74,
+      "name": "60's Organ",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Vox Continental",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 75,
+      "name": "Organ 2",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Hammond organ",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 76,
+      "name": "Perc.Organ 1",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Hammond organ",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 77,
+      "name": "Chorus Organ",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Hammond organ",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 78,
+      "name": "Perc.Organ 2",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Hammond organ",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 79,
+      "name": "Rock Organ",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Hammond organ",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 80,
+      "name": "Church Org.1",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Pipe organ",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 81,
+      "name": "Church Org.2",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Pipe organ",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 82,
+      "name": "Church Org.3",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Pipe organ",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 83,
+      "name": "Reed Organ",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Pump organ",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 84,
+      "name": "Puff Organ",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Pump organ",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 85,
+      "name": "Accordion 1",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Accordion",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 86,
+      "name": "Accordion 2",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Accordion",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 87,
+      "name": "Harmonica",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Harmonica",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 88,
+      "name": "Bandoneon",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Bandoneon",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 89,
+      "name": "Nylon-str.Gt",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Classical guitar",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 90,
+      "name": "Ukulele",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Ukulele",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 91,
+      "name": "Nylon Gt o",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Classical guitar",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 92,
+      "name": "Nylon Gt 2",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Classical guitar",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 93,
+      "name": "Steel-str.Gt",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Steel-string acoustic guitar",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 94,
+      "name": "12-str.Gt",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Twelve-string guitar",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 95,
+      "name": "Mandolin",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Mandolin",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 96,
+      "name": "Steel+Body",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Steel-string acoustic guitar",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 97,
+      "name": "Jazz Guitar",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Jazz guitar",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 98,
+      "name": "Hawaiian Gt",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Steel guitar",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 99,
+      "name": "Clean Guitar",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Electric guitar",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 100,
+      "name": "Chorus Gt 1",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 101,
+      "name": "Mid Tone Gt",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 102,
+      "name": "Muted Guitar",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Palm mute",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 103,
+      "name": "Funk Guitar1",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Electric guitar",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 104,
+      "name": "Funk Guitar2",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Electric guitar",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 105,
+      "name": "Chorus Gt 2",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 106,
+      "name": "Overdrive Gt",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Distortion (music)",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 107,
+      "name": "Guitar Pinch",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Electric guitar",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 108,
+      "name": "DistortionGt",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Distortion (music)",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 109,
+      "name": "Gt Feedback1",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 110,
+      "name": "Dist.Rhy Gt",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 111,
+      "name": "Gt Harmonics",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 112,
+      "name": "Gt Feedback2",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 113,
+      "name": "AcousticBass",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Double bass",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 114,
+      "name": "FingeredBass",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Bass guitar",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 115,
+      "name": "Finger Slap",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 116,
+      "name": "Picked Bass",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Bass guitar",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 117,
+      "name": "FretlessBass",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Fretless guitar",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 118,
+      "name": "Slap Bass 1",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Slapping (music)",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 119,
+      "name": "Slap Bass 2",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Slapping (music)",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 120,
+      "name": "Synth Bass 1",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Bass synthesizer",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 121,
+      "name": "WarmSyn.Bass",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Bass synthesizer",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 122,
+      "name": "Synth Bass 3",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Bass synthesizer",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 123,
+      "name": "Clav.Bass",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Clavinet",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 124,
+      "name": "Hammer Bass",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 125,
+      "name": "Synth Bass 2",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Bass synthesizer",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 126,
+      "name": "Synth Bass 4",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Bass synthesizer",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 127,
+      "name": "RubberSyn.Bs",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Bass synthesizer",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 128,
+      "name": "Attack Pulse",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 129,
+      "name": "Violin",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Violin",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 130,
+      "name": "Slow Violin",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Violin",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 131,
+      "name": "Viola",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Viola",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 132,
+      "name": "Cello",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Cello",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 133,
+      "name": "Contrabass",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Double bass",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 134,
+      "name": "Tremolo Str.",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Tremolo",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 135,
+      "name": "PizzicatoStr",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Pizzicato",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 136,
+      "name": "Harp",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Harp",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 137,
+      "name": "Yang Qin",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Yangqin",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 138,
+      "name": "Timpani",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Timpani",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 139,
+      "name": "Strings",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "String section",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 140,
+      "name": "Orchestra",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Orchestra",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 141,
+      "name": "60's Strings",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "String section",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 142,
+      "name": "Slow Strings",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "String section",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 143,
+      "name": "Syn.Strings1",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Synthesizer",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 144,
+      "name": "Syn.Strings3",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Synthesizer",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 145,
+      "name": "Syn.Strings2",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Synthesizer",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 146,
+      "name": "Choir 1",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Choir",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 147,
+      "name": "Choir 2",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Choir",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 148,
+      "name": "Voice",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Human voice",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 149,
+      "name": "Humming",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Humming",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 150,
+      "name": "Synth Voice",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Vocoder",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 151,
+      "name": "Analog Voice",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Vocoder",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 152,
+      "name": "OrchestraHit",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Orchestra hit",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 153,
+      "name": "Bass Hit",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Orchestra hit",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 154,
+      "name": "6th Hit",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Orchestra hit",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 155,
+      "name": "Euro Hit",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Orchestra hit",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 156,
+      "name": "Trumpet",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Trumpet",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 157,
+      "name": "Dark Trumpet",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Trumpet",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 158,
+      "name": "Trombone 1",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Trombone",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 159,
+      "name": "Trombone 2",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Trombone",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 160,
+      "name": "Bright Tb",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Trombone",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 161,
+      "name": "Tuba",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Tuba",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 162,
+      "name": "MuteTrumpet1",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Mute (music)",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 163,
+      "name": "MuteTrumpet2",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Mute (music)",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 164,
+      "name": "French Horn1",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "French horn",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 165,
+      "name": "French Horn2",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "French horn",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 166,
+      "name": "Brass 1",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Brass section",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 167,
+      "name": "Brass 2",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Brass section",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 168,
+      "name": "Synth Brass1",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Brass section",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 169,
+      "name": "Synth Brass3",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Brass section",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 170,
+      "name": "AnalogBrass1",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Brass section",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 171,
+      "name": "Jump Brass",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Brass section",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 172,
+      "name": "Synth Brass2",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Brass section",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 173,
+      "name": "Synth Brass4",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Brass section",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 174,
+      "name": "AnalogBrass2",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Brass section",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 175,
+      "name": "Soprano Sax",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Soprano saxophone",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 176,
+      "name": "Alto Sax",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Alto saxophone",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 177,
+      "name": "Tenor Sax",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Tenor saxophone",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 178,
+      "name": "Baritone Sax",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Baritone saxophone",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 179,
+      "name": "Oboe",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Oboe",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 180,
+      "name": "English Horn",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Cor anglais",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 181,
+      "name": "Bassoon",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Bassoon",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 182,
+      "name": "Clarinet",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Clarinet",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 183,
+      "name": "Piccolo",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Piccolo",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 184,
+      "name": "Flute",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Flute",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 185,
+      "name": "Recorder",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Recorder (musical instrument)",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 186,
+      "name": "Pan Flute",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Pan flute",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 187,
+      "name": "Bottle Blow",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 188,
+      "name": "Shakuhachi",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Shakuhachi",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 189,
+      "name": "Whistle",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Whistling",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 190,
+      "name": "Ocarina",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Ocarina",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 191,
+      "name": "Square Lead1",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Lead synthesizer",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 192,
+      "name": "Square Lead2",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Lead synthesizer",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 193,
+      "name": "Sine Lead",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Lead synthesizer",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 194,
+      "name": "Saw Lead 1",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Lead synthesizer",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 195,
+      "name": "Saw Lead 2",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Lead synthesizer",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 196,
+      "name": "Doctor Solo",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 197,
+      "name": "Natural Lead",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Lead synthesizer",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 198,
+      "name": "SequencedSaw",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Sawtooth wave",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 199,
+      "name": "Syn.Calliope",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 200,
+      "name": "Chiffer Lead",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Lead synthesizer",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 201,
+      "name": "Charang",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 202,
+      "name": "Wire Lead",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Lead synthesizer",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 203,
+      "name": "Solo Vox",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 204,
+      "name": "5th Saw Lead",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Lead synthesizer",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 205,
+      "name": "Bass+Lead",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Lead synthesizer",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 206,
+      "name": "Delayed Lead",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Lead synthesizer",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 207,
+      "name": "Fantasia",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 208,
+      "name": "Warm Pad",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Synthesizer pad",
+      "funFacts": null,
+      "combinationSuggestions": "Onderlaag onder elke pianoklank voor modern-klassiek; in de mix laagpass-filteren rond 5 kHz."
+    },
+    {
+      "toneNumber": 209,
+      "name": "Sine Pad",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Synthesizer pad",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 210,
+      "name": "Polysynth",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 211,
+      "name": "Space Voice",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 212,
+      "name": "Itopia",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 213,
+      "name": "Bowed Glass",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 214,
+      "name": "Metallic Pad",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Synthesizer pad",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 215,
+      "name": "Halo Pad",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Synthesizer pad",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 216,
+      "name": "Sweep Pad",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Synthesizer pad",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 217,
+      "name": "Ice Rain",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 218,
+      "name": "Soundtrack",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 219,
+      "name": "Crystal",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 220,
+      "name": "Synth Mallet",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 221,
+      "name": "Atmosphere",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 222,
+      "name": "Brightness",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 223,
+      "name": "Goblins",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 224,
+      "name": "Echo Drops",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 225,
+      "name": "Echo Bell",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 226,
+      "name": "Echo Pan",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 227,
+      "name": "Star Theme",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 228,
+      "name": "Sitar 1",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Sitar",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 229,
+      "name": "Sitar 2",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Sitar",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 230,
+      "name": "Banjo",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Banjo",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 231,
+      "name": "Shamisen",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Shamisen",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 232,
+      "name": "Koto",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Koto (instrument)",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 233,
+      "name": "Taisho Koto",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Taishōgoto",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 234,
+      "name": "Kalimba",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Mbira",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 235,
+      "name": "Bagpipe",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Bagpipes",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 236,
+      "name": "Fiddle",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Fiddle",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 237,
+      "name": "Shanai",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Shehnai",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 238,
+      "name": "Tinkle Bell",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Bell",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 239,
+      "name": "Agogo",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Agogô",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 240,
+      "name": "Steel Drums",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Steelpan",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 241,
+      "name": "Woodblock",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Wood block",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 242,
+      "name": "Castanets",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Castanets",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 243,
+      "name": "Taiko",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Taiko",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 244,
+      "name": "Concert BD",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Bass drum",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 245,
+      "name": "Melodic Tom1",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 246,
+      "name": "Melodic Tom2",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 247,
+      "name": "Synth Drum",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Electronic drum",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 248,
+      "name": "TR-808 Tom",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Roland TR-808",
+      "funFacts": "De synthetische toms van Roland's eigen TR-808 — onmisbaar in electro en oldschool hiphop.",
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 249,
+      "name": "Elec.Perc.",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 250,
+      "name": "Reverse Cym.",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 251,
+      "name": "Gt FretNoise",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 252,
+      "name": "Gt Cut Noise",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 253,
+      "name": "BsStringSlap",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 254,
+      "name": "Breath Noise",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 255,
+      "name": "Fl.Key Click",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 256,
+      "name": "Seashore",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Ocean",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 257,
+      "name": "Rain",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 258,
+      "name": "Thunder",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 259,
+      "name": "Wind",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 260,
+      "name": "Stream",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 261,
+      "name": "Bubble",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 262,
+      "name": "Bird 1",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 263,
+      "name": "Dog",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 264,
+      "name": "Horse Gallop",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 265,
+      "name": "Bird 2",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 266,
+      "name": "Telephone 1",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 267,
+      "name": "Telephone 2",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 268,
+      "name": "DoorCreaking",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 269,
+      "name": "Door",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 270,
+      "name": "Scratch",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Scratching",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 271,
+      "name": "Wind Chimes",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Wind chime",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 272,
+      "name": "Helicopter",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 273,
+      "name": "Car Engine",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 274,
+      "name": "Car Stop",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 275,
+      "name": "Car Pass",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 276,
+      "name": "Car Crash",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 277,
+      "name": "Siren",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 278,
+      "name": "Train",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 279,
+      "name": "Jetplane",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 280,
+      "name": "Starship",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 281,
+      "name": "Burst Noise",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 282,
+      "name": "Applause",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": "Applause",
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 283,
+      "name": "Laughing",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 284,
+      "name": "Screaming",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 285,
+      "name": "Punch",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 286,
+      "name": "Heart Beat",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 287,
+      "name": "Footsteps",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 288,
+      "name": "Gun Shot",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 289,
+      "name": "Machine Gun",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 290,
+      "name": "Laser Gun",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    },
+    {
+      "toneNumber": 291,
+      "name": "Explosion",
+      "category": "Other",
+      "subCategory": "GM2",
+      "origin": "GM2",
+      "wikipediaPageTitle": null,
+      "funFacts": null,
+      "combinationSuggestions": null
+    }
+  ]
+}
