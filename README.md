@@ -1,49 +1,73 @@
-# Roland LX708 Tone Library - PoC
+# Roland LX708 Tone Library
 
-Volledige digitale bibliotheek voor de Roland LX708 piano tones.
+Digitale bibliotheek voor alle 324 tones van de Roland LX708, met Wikipedia-achtergrond per instrument, opname-tips en studio-routing referentie.
 
-## Quick Start (PoC Wikipedia Integratie)
+## Status
 
-### 1. Backend (Spring Boot)
+| Onderdeel | Status |
+|-----------|--------|
+| Backend (Spring Boot 3.3, Java 21) | ✅ Werkend: schema, seeding (324 tones), tones-API, Wikipedia-service |
+| Seed data (`data/tones_seed.json`) | ✅ Volledige officiële Tone List uit de LX708-handleiding |
+| Docs (opnamegids + routingboard) | ✅ `docs/LX708_Opname_Gids.md`, `docs/Studio_Routing_Ideeenboard.md` |
+| Frontend (Next.js 15) | ⏳ Nog niet in deze repo |
+| Audio-integratie (Freesound/YouTube), Admin/JWT | ⏳ Gepland |
+
+## Backend lokaal draaien
+
+Vereist: Java 21, Maven, PostgreSQL (database `pianosounds`).
 
 ```bash
 cd backend
-./mvnw spring-boot:run
-# of mvn spring-boot:run
+DB_URL=jdbc:postgresql://localhost:5432/pianosounds \
+DB_USERNAME=pianosounds_user \
+DB_PASSWORD=... \
+mvn spring-boot:run
 ```
 
-- Loopt op http://localhost:8080
-- H2 console: http://localhost:8080/h2-console (JDBC URL: jdbc:h2:mem:rolanddb)
-- API: http://localhost:8080/api/tones
-- Flyway maakt tabellen + categories aan
+Flyway maakt het schema aan; bij het opstarten seedt `DataInitializer` alle 324 tones uit `src/main/resources/data/tones_seed.json` (idempotent — herstart maakt nooit duplicaten).
 
-**Belangrijk**: De seeder is minimaal. Gebruik de Admin endpoints later of voeg handmatig tones toe via SQL/ Admin. De `tones_seed.json` bevat de data uit de originele lijst (controleer/corrigeer categories).
+### Environment variables (Render)
 
-### 2. Frontend (Next.js)
+| Variabele | Voorbeeld |
+|-----------|-----------|
+| `DB_URL` | `jdbc:postgresql://<render-hostname>:5432/pianosounds` |
+| `DB_USERNAME` | `pianosounds_user` |
+| `DB_PASSWORD` | *(secret)* |
+| `CORS_ALLOWED_ORIGINS` | `https://jouw-app.vercel.app,http://localhost:3000` |
+| `SEED_ENABLED` | `true` (default) — zet op `false` om seeding over te slaan |
+| `PORT` | wordt door Render gezet |
+
+## API
+
+| Endpoint | Beschrijving |
+|----------|--------------|
+| `GET /api/categories` | Categorieën (Piano, E. Piano, Strings, Other) incl. tone count |
+| `GET /api/tones?category=&subCategory=&q=` | Tones filteren/zoeken (subcategorieën: Organ, Upright, Classical, Do Re Mi, Drums, GM2) |
+| `GET /api/tones/sub-categories` | Lijst van subcategorieën |
+| `GET /api/tones/{id}` | Detail incl. wiki-data en audio samples |
+| `GET /api/tones/{id}/wiki?refresh=true|false` | Wikipedia summary + volledige HTML (gecachet in DB, 30 dagen vers) |
+| `PUT /api/tones/{id}/wiki-title` | Page title handmatig overschrijven: `{"pageTitle": "Rhodes piano"}` |
+| `POST /api/wiki/refresh-missing` | Bulk: haal wiki-data op voor alle tones zonder data (rate-limited) |
+| `GET /actuator/health` | Health check voor Render |
+
+## Tests
 
 ```bash
-cd frontend
-npm install
-npm run dev
+cd backend && mvn test
 ```
 
-Open http://localhost:3000
+Smoke tests draaien op H2 en verifiëren dat de volledige tone list (4 + 11 + 18 + 291) correct seedt en de filters werken.
 
-- Filter op category of zoek
-- Klik op een tone card → modal met Wikipedia summary (automatisch opgehaald via backend)
-- Klik "Lees het volledige Wikipedia-artikel" → toont gesanitized HTML uit Wikipedia
+## Seed data regenereren
 
-### Vereisten
-- Java 21+
-- Node 20+
-- (Optioneel) PostgreSQL voor productie (verander application.yml)
+```bash
+python3 scripts/generate_tones_seed.py
+```
 
-### Volgende stappen na PoC
-1. Verbeter DataSeeder om `tones_seed.json` volledig te importeren (categorie lookup + create if not exists)
-2. Voeg JWT + Admin UI toe
-3. Integreer Freesound + YouTube Data API
-4. Deploy frontend naar Vercel, backend naar Render/Railway
+Schrijft `data/tones_seed.json` én de classpath-kopie in `backend/src/main/resources/data/`.
 
-Zie `docs/Project_Plan_Roland_LX708_Tone_Library.md` voor het volledige architectuurplan, DB schema en API specificatie.
+## Documentatie
 
-Gemaakt als Senior Full-Stack Developer opdracht.
+- `docs/LX708_Opname_Gids.md` — opnameknoppen, Dual/Split (max 2 klanken live), intern overdubben, audio naar USB (WAV 44,1 kHz/16-bit), genre-tips
+- `docs/Studio_Routing_Ideeenboard.md` — 5 routing-setups voor LX708 + Rubix22 + Maschine MK2 + Ableton + mics
+- `docs/Project_Plan_Roland_LX708_Tone_Library.md` — architectuurplan
