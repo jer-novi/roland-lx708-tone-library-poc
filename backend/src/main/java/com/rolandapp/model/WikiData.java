@@ -28,6 +28,9 @@ public class WikiData {
     @Column(name = "source_url", length = 512)
     private String sourceUrl;
 
+    @Column(name = "thumbnail_url", length = 512)
+    private String thumbnailUrl;
+
     @Column(name = "last_fetched_at")
     private Instant lastFetchedAt;
 
@@ -77,6 +80,14 @@ public class WikiData {
 
     public void setSourceUrl(String sourceUrl) {
         this.sourceUrl = sourceUrl;
+    }
+
+    public String getThumbnailUrl() {
+        return thumbnailUrl;
+    }
+
+    public void setThumbnailUrl(String thumbnailUrl) {
+        this.thumbnailUrl = thumbnailUrl;
     }
 
     public Instant getLastFetchedAt() {

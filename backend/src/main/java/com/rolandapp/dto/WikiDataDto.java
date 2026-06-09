@@ -9,6 +9,7 @@ public record WikiDataDto(
         String summary,
         String fullHtml,
         String sourceUrl,
+        String thumbnailUrl,
         Instant lastFetchedAt
 ) {
     public static WikiDataDto from(WikiData wikiData) {
@@ -17,6 +18,7 @@ public record WikiDataDto(
                 wikiData.getSummary(),
                 wikiData.getFullHtml(),
                 wikiData.getSourceUrl(),
+                wikiData.getThumbnailUrl(),
                 wikiData.getLastFetchedAt()
         );
     }

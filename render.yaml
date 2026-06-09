@@ -1,0 +1,24 @@
+# Render Blueprint: maakt de backend-service aan met de juiste instellingen.
+# Gebruik: Render dashboard -> New -> Blueprint -> kies deze repo.
+# De drie env vars met "sync: false" vul je eenmalig in het dashboard in.
+services:
+  - type: web
+    name: roland-tone-library-api
+    runtime: docker
+    repo: https://github.com/jer-novi/roland-lx708-tone-library-poc
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
+    region: frankfurt
+    plan: free
+    healthCheckPath: /actuator/health
+    envVars:
+      - key: DB_URL
+        sync: false # jdbc:postgresql://dpg-d8ilvq67r5hc73d27p1g-a:5432/pianosounds
+      - key: DB_USERNAME
+        sync: false # pianosounds_user
+      - key: DB_PASSWORD
+        sync: false
+      - key: CORS_ALLOWED_ORIGINS
+        value: https://roland-lx708-tone-library-poc.vercel.app,http://localhost:3000
+      - key: SEED_ENABLED
+        value: "true"
