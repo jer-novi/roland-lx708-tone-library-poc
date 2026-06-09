@@ -8,6 +8,8 @@ export interface ToneDto {
   wikipediaPageTitle: string | null;
   combinationSuggestions: string | null;
   funFacts: string | null;
+  thumbnailUrl: string | null;
+  shortSummary: string | null;
 }
 
 export interface ToneCategoryDto {
@@ -23,6 +25,7 @@ export interface WikiDataDto {
   summary: string | null;
   fullHtml: string | null;
   sourceUrl: string | null;
+  thumbnailUrl: string | null;
   lastFetchedAt: string | null;
 }
 

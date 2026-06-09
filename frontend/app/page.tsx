@@ -16,6 +16,7 @@ export default function Home() {
   const [query, setQuery] = useState("");
   const [favoritesOnly, setFavoritesOnly] = useState(false);
   const [openTone, setOpenTone] = useState<ToneDto | null>(null);
+  const [expandedKey, setExpandedKey] = useState<string | null>(null);
   const { favorites, toggle } = useFavorites();
 
   const { data, isLoading } = useQuery({
@@ -79,11 +80,11 @@ export default function Home() {
 
       <main className="mt-6">
         {isLoading ? (
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-            {Array.from({ length: 15 }).map((_, i) => (
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            {Array.from({ length: 12 }).map((_, i) => (
               <div
                 key={i}
-                className="h-28 animate-pulse rounded-xl border border-border-soft bg-surface"
+                className="h-32 animate-pulse rounded-xl border border-border-soft bg-surface"
               />
             ))}
           </div>
@@ -96,13 +97,15 @@ export default function Home() {
             <p className="mb-3 text-xs text-muted">
               {filtered.length} {filtered.length === 1 ? "tone" : "tones"}
             </p>
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+            <div className="grid grid-cols-1 items-start gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {filtered.map((tone) => (
                 <ToneCard
                   key={toneKey(tone)}
                   tone={tone}
                   isFavorite={favorites.has(toneKey(tone))}
+                  isExpanded={expandedKey === toneKey(tone)}
                   onToggleFavorite={toggle}
+                  onToggleExpand={setExpandedKey}
                   onOpen={setOpenTone}
                 />
               ))}

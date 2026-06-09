@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { useQuery } from "@tanstack/react-query";
 import DOMPurify from "dompurify";
 import { fetchWiki } from "@/lib/api";
@@ -45,15 +46,26 @@ export function ToneModal({ tone, onClose }: Props) {
         onClick={(e) => e.stopPropagation()}
       >
         <header className="flex items-start justify-between gap-4 border-b border-border-soft p-5">
-          <div>
-            <p className="font-mono text-xs text-muted">
-              {tone.category}
-              {tone.subCategory ? ` · ${tone.subCategory}` : ""} · #{tone.toneNumber}
-            </p>
-            <h2 className="mt-1 text-xl font-bold">{tone.name}</h2>
-            {tone.origin && (
-              <p className="mt-0.5 text-xs text-muted">{tone.origin}</p>
+          <div className="flex items-start gap-4">
+            {tone.thumbnailUrl && (
+              <Image
+                src={tone.thumbnailUrl}
+                alt={tone.wikipediaPageTitle ?? tone.name}
+                width={64}
+                height={64}
+                className="size-16 shrink-0 rounded-xl border border-border-soft object-cover"
+              />
             )}
+            <div>
+              <p className="font-mono text-xs text-muted">
+                {tone.category}
+                {tone.subCategory ? ` · ${tone.subCategory}` : ""} · #{tone.toneNumber}
+              </p>
+              <h2 className="mt-1 text-xl font-bold">{tone.name}</h2>
+              {tone.origin && (
+                <p className="mt-0.5 text-xs text-muted">{tone.origin}</p>
+              )}
+            </div>
           </div>
           <button
             onClick={onClose}

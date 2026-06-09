@@ -44,7 +44,12 @@ const seed = seedFallback as SeedFile;
  * fallback entries; detail views then skip backend-only data like wiki HTML.
  */
 function fallbackTones(): ToneDto[] {
-  return seed.tones.map((t, i) => ({ id: -(i + 1), ...t }));
+  return seed.tones.map((t, i) => ({
+    id: -(i + 1),
+    ...t,
+    thumbnailUrl: null,
+    shortSummary: null,
+  }));
 }
 
 function fallbackCategories(): ToneCategoryDto[] {

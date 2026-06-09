@@ -107,6 +107,7 @@ public class WikiService {
         wikiData.setSummary(summary.path("extract").asText(null));
         wikiData.setFullHtml(html);
         wikiData.setSourceUrl(summary.path("content_urls").path("desktop").path("page").asText(null));
+        wikiData.setThumbnailUrl(summary.path("thumbnail").path("source").asText(null));
         wikiData.setLastFetchedAt(Instant.now());
         return wikiDataRepository.save(wikiData);
     }

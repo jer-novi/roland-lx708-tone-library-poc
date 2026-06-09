@@ -7,22 +7,31 @@ import com.rolandapp.exception.NotFoundException;
 import com.rolandapp.model.Tone;
 import com.rolandapp.repository.ToneCategoryRepository;
 import com.rolandapp.repository.ToneRepository;
+import com.rolandapp.repository.WikiDataRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
+import java.util.function.Function;
 
 @Service
 @Transactional(readOnly = true)
 public class ToneService {
 
+    private static final int SHORT_SUMMARY_LENGTH = 220;
+
     private final ToneRepository toneRepository;
     private final ToneCategoryRepository categoryRepository;
+    private final WikiDataRepository wikiDataRepository;
 
-    public ToneService(ToneRepository toneRepository, ToneCategoryRepository categoryRepository) {
+    public ToneService(ToneRepository toneRepository,
+                       ToneCategoryRepository categoryRepository,
+                       WikiDataRepository wikiDataRepository) {
         this.toneRepository = toneRepository;
         this.categoryRepository = categoryRepository;
+        this.wikiDataRepository = wikiDataRepository;
     }
 
     /**
@@ -34,13 +43,31 @@ public class ToneService {
         String sub = normalize(subCategory);
         String q = normalize(query);
 
+        Map<Long, WikiDataRepository.WikiCardData> cardData = wikiDataRepository.findAllCardData()
+                .stream()
+                .collect(java.util.stream.Collectors.toMap(
+                        WikiDataRepository.WikiCardData::getToneId, Function.identity()));
+
         return toneRepository.findAllWithCategory().stream()
                 .filter(t -> cat == null || t.getCategory().getName().toLowerCase(Locale.ROOT).equals(cat))
                 .filter(t -> sub == null || (t.getSubCategory() != null
                         && t.getSubCategory().toLowerCase(Locale.ROOT).equals(sub)))
                 .filter(t -> q == null || t.getName().toLowerCase(Locale.ROOT).contains(q))
-                .map(ToneDto::from)
+                .map(t -> {
+                    WikiDataRepository.WikiCardData card = cardData.get(t.getId());
+                    return ToneDto.from(t,
+                            card != null ? card.getThumbnailUrl() : null,
+                            card != null ? truncateAtWord(card.getSummary()) : null);
+                })
                 .toList();
+    }
+
+    static String truncateAtWord(String text) {
+        if (text == null || text.length() <= SHORT_SUMMARY_LENGTH) {
+            return text;
+        }
+        int lastSpace = text.lastIndexOf(' ', SHORT_SUMMARY_LENGTH);
+        return text.substring(0, lastSpace > 0 ? lastSpace : SHORT_SUMMARY_LENGTH) + "…";
     }
 
     public ToneDetailDto getDetail(Long id) {
