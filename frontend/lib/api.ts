@@ -29,6 +29,9 @@ interface SeedTone {
   wikipediaPageTitle: string | null;
   funFacts: string | null;
   combinationSuggestions: string | null;
+  midiBankMsb: number | null;
+  midiBankLsb: number | null;
+  midiProgram: number | null;
 }
 
 interface SeedFile {

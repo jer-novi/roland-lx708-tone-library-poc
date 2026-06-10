@@ -3,6 +3,7 @@
 import Image from "next/image";
 import type { ToneDto } from "@/lib/types";
 import { toneKey } from "@/lib/types";
+import { PlayToneButton } from "@/components/PlayToneButton";
 
 const CATEGORY_COLORS: Record<string, string> = {
   Piano: "bg-amber-500/15 text-amber-300",
@@ -25,6 +26,8 @@ interface Props {
   onToggleFavorite: (key: string) => void;
   onToggleExpand: (key: string | null) => void;
   onOpen: (tone: ToneDto) => void;
+  onPlay: (tone: ToneDto) => Promise<boolean>;
+  midiAvailable: boolean;
 }
 
 export function ToneCard({
@@ -34,6 +37,8 @@ export function ToneCard({
   onToggleFavorite,
   onToggleExpand,
   onOpen,
+  onPlay,
+  midiAvailable,
 }: Props) {
   const key = toneKey(tone);
   const badge = CATEGORY_COLORS[tone.category] ?? CATEGORY_COLORS.Other;
@@ -82,6 +87,11 @@ export function ToneCard({
                 {tone.subCategory}
               </span>
             )}
+            <PlayToneButton
+              tone={tone}
+              onPlay={onPlay}
+              midiAvailable={midiAvailable}
+            />
           </div>
         </div>
 

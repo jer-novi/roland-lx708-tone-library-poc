@@ -35,6 +35,16 @@ public class Tone {
     @Column(name = "fun_facts", columnDefinition = "TEXT")
     private String funFacts;
 
+    @Column(name = "midi_bank_msb")
+    private Integer midiBankMsb;
+
+    @Column(name = "midi_bank_lsb")
+    private Integer midiBankLsb;
+
+    /** Program number 1-128, zoals genoteerd in de MIDI Implementation (zender stuurt waarde - 1). */
+    @Column(name = "midi_program")
+    private Integer midiProgram;
+
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "category_id", nullable = false)
     private ToneCategory category;
@@ -112,6 +122,30 @@ public class Tone {
 
     public void setFunFacts(String funFacts) {
         this.funFacts = funFacts;
+    }
+
+    public Integer getMidiBankMsb() {
+        return midiBankMsb;
+    }
+
+    public void setMidiBankMsb(Integer midiBankMsb) {
+        this.midiBankMsb = midiBankMsb;
+    }
+
+    public Integer getMidiBankLsb() {
+        return midiBankLsb;
+    }
+
+    public void setMidiBankLsb(Integer midiBankLsb) {
+        this.midiBankLsb = midiBankLsb;
+    }
+
+    public Integer getMidiProgram() {
+        return midiProgram;
+    }
+
+    public void setMidiProgram(Integer midiProgram) {
+        this.midiProgram = midiProgram;
     }
 
     public ToneCategory getCategory() {

@@ -6,13 +6,16 @@ import { useQuery } from "@tanstack/react-query";
 import DOMPurify from "dompurify";
 import { fetchWiki } from "@/lib/api";
 import type { ToneDto } from "@/lib/types";
+import { PlayToneButton } from "@/components/PlayToneButton";
 
 interface Props {
   tone: ToneDto;
   onClose: () => void;
+  onPlay: (tone: ToneDto) => Promise<boolean>;
+  midiAvailable: boolean;
 }
 
-export function ToneModal({ tone, onClose }: Props) {
+export function ToneModal({ tone, onClose, onPlay, midiAvailable }: Props) {
   const [showFullArticle, setShowFullArticle] = useState(false);
 
   // Fallback entries (negative id) have no backend record to fetch wiki for
@@ -77,6 +80,21 @@ export function ToneModal({ tone, onClose }: Props) {
         </header>
 
         <div className="flex-1 space-y-5 overflow-y-auto p-5">
+          {midiAvailable && tone.midiProgram != null && (
+            <section className="flex flex-wrap items-center gap-3">
+              <PlayToneButton
+                tone={tone}
+                onPlay={onPlay}
+                midiAvailable={midiAvailable}
+                variant="modal"
+              />
+              <span className="font-mono text-[11px] text-muted">
+                MIDI: bank {tone.midiBankMsb}/{tone.midiBankLsb} · program{" "}
+                {tone.midiProgram}
+              </span>
+            </section>
+          )}
+
           {tone.funFacts && (
             <section>
               <h3 className="mb-1 text-xs font-semibold uppercase tracking-wider text-accent">

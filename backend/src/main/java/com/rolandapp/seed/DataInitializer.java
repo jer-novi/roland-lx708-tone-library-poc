@@ -102,7 +102,10 @@ public class DataInitializer implements CommandLineRunner {
                 || !Objects.equals(tone.getOrigin(), seed.origin())
                 || !Objects.equals(tone.getWikipediaPageTitle(), seed.wikipediaPageTitle())
                 || !Objects.equals(tone.getFunFacts(), seed.funFacts())
-                || !Objects.equals(tone.getCombinationSuggestions(), seed.combinationSuggestions());
+                || !Objects.equals(tone.getCombinationSuggestions(), seed.combinationSuggestions())
+                || !Objects.equals(tone.getMidiBankMsb(), seed.midiBankMsb())
+                || !Objects.equals(tone.getMidiBankLsb(), seed.midiBankLsb())
+                || !Objects.equals(tone.getMidiProgram(), seed.midiProgram());
     }
 
     private void applySeed(Tone tone, ToneSeedFile.ToneSeed seed) {
@@ -112,5 +115,8 @@ public class DataInitializer implements CommandLineRunner {
         tone.setWikipediaPageTitle(seed.wikipediaPageTitle());
         tone.setFunFacts(seed.funFacts());
         tone.setCombinationSuggestions(seed.combinationSuggestions());
+        tone.setMidiBankMsb(seed.midiBankMsb());
+        tone.setMidiBankLsb(seed.midiBankLsb());
+        tone.setMidiProgram(seed.midiProgram());
     }
 }
