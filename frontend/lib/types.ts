@@ -10,6 +10,12 @@ export interface ToneDto {
   funFacts: string | null;
   thumbnailUrl: string | null;
   shortSummary: string | null;
+  /** Bank Select MSB (CC0) uit de officiële MIDI Implementation */
+  midiBankMsb: number | null;
+  /** Bank Select LSB (CC32) */
+  midiBankLsb: number | null;
+  /** Program number 1-128 zoals in het document; verzonden wordt (midiProgram - 1) */
+  midiProgram: number | null;
 }
 
 export interface ToneCategoryDto {

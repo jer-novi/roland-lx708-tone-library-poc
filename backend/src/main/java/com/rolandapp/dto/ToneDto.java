@@ -13,7 +13,10 @@ public record ToneDto(
         String combinationSuggestions,
         String funFacts,
         String thumbnailUrl,
-        String shortSummary
+        String shortSummary,
+        Integer midiBankMsb,
+        Integer midiBankLsb,
+        Integer midiProgram
 ) {
     public static ToneDto from(Tone tone) {
         return from(tone, null, null);
@@ -31,7 +34,10 @@ public record ToneDto(
                 tone.getCombinationSuggestions(),
                 tone.getFunFacts(),
                 thumbnailUrl,
-                shortSummary
+                shortSummary,
+                tone.getMidiBankMsb(),
+                tone.getMidiBankLsb(),
+                tone.getMidiProgram()
         );
     }
 }

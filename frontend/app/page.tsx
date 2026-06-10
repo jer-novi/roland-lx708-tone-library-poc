@@ -6,7 +6,9 @@ import { fetchToneLibrary } from "@/lib/api";
 import type { ToneDto } from "@/lib/types";
 import { toneKey } from "@/lib/types";
 import { useFavorites } from "@/hooks/useFavorites";
+import { useMidi } from "@/hooks/useMidi";
 import { FilterBar } from "@/components/FilterBar";
+import { MidiBar } from "@/components/MidiBar";
 import { ToneCard } from "@/components/ToneCard";
 import { ToneModal } from "@/components/ToneModal";
 
@@ -18,6 +20,8 @@ export default function Home() {
   const [openTone, setOpenTone] = useState<ToneDto | null>(null);
   const [expandedKey, setExpandedKey] = useState<string | null>(null);
   const { favorites, toggle } = useFavorites();
+  const midi = useMidi();
+  const midiAvailable = midi.status !== "unsupported";
 
   const { data, isLoading } = useQuery({
     queryKey: ["library"],
@@ -78,6 +82,8 @@ export default function Home() {
         onFavoritesOnly={setFavoritesOnly}
       />
 
+      <MidiBar midi={midi} />
+
       <main className="mt-6">
         {isLoading ? (
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -107,6 +113,8 @@ export default function Home() {
                   onToggleFavorite={toggle}
                   onToggleExpand={setExpandedKey}
                   onOpen={setOpenTone}
+                  onPlay={midi.sendTone}
+                  midiAvailable={midiAvailable}
                 />
               ))}
             </div>
@@ -114,7 +122,14 @@ export default function Home() {
         )}
       </main>
 
-      {openTone && <ToneModal tone={openTone} onClose={() => setOpenTone(null)} />}
+      {openTone && (
+        <ToneModal
+          tone={openTone}
+          onClose={() => setOpenTone(null)}
+          onPlay={midi.sendTone}
+          midiAvailable={midiAvailable}
+        />
+      )}
 
       <footer className="mt-16 border-t border-border-soft pt-6 text-xs text-muted">
         Gebaseerd op de officiële Roland LX708 Tone List · Wikipedia-content
