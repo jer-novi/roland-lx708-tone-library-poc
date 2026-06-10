@@ -1,6 +1,9 @@
 "use client";
 
+import { useState } from "react";
 import type { ToneCategoryDto } from "@/lib/types";
+import type { Collection } from "@/lib/collections";
+import { COLLECTIONS } from "@/lib/collections";
 
 interface Props {
   categories: ToneCategoryDto[];
@@ -10,10 +13,17 @@ interface Props {
   query: string;
   favoritesOnly: boolean;
   favoritesCount: number;
+  activeCollection: Collection | null;
+  collectionCounts: Record<string, number>;
+  allTags: { tag: string; count: number }[];
+  selectedTags: ReadonlySet<string>;
   onCategory: (name: string | null) => void;
   onSubCategory: (name: string | null) => void;
   onQuery: (q: string) => void;
   onFavoritesOnly: (v: boolean) => void;
+  onCollection: (name: Collection | null) => void;
+  onToggleTag: (tag: string) => void;
+  onClearTags: () => void;
 }
 
 export function FilterBar({
@@ -24,11 +34,19 @@ export function FilterBar({
   query,
   favoritesOnly,
   favoritesCount,
+  activeCollection,
+  collectionCounts,
+  allTags,
+  selectedTags,
   onCategory,
   onSubCategory,
   onQuery,
   onFavoritesOnly,
+  onCollection,
+  onToggleTag,
+  onClearTags,
 }: Props) {
+  const [showTags, setShowTags] = useState(false);
   return (
     <div className="space-y-3">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -67,6 +85,57 @@ export function FilterBar({
             label={`${c.name} (${c.toneCount})`}
             active={activeCategory === c.name}
             onClick={() => onCategory(activeCategory === c.name ? null : c.name)}
+          />
+        ))}
+        <button
+          onClick={() => setShowTags((v) => !v)}
+          aria-expanded={showTags}
+          className={`rounded-full border px-3.5 py-1.5 text-sm transition ${
+            selectedTags.size > 0
+              ? "border-accent/60 bg-accent-soft text-accent"
+              : "border-border-soft bg-surface text-muted hover:border-accent/30 hover:text-foreground"
+          }`}
+        >
+          Klank {selectedTags.size > 0 ? `(${selectedTags.size})` : ""}{" "}
+          {showTags ? "▴" : "▾"}
+        </button>
+      </div>
+
+      {showTags && (
+        <div className="rounded-xl border border-border-soft bg-surface p-3">
+          <div className="flex flex-wrap gap-1.5">
+            {allTags.map(({ tag, count }) => (
+              <FilterChip
+                key={tag}
+                small
+                label={`${tag} (${count})`}
+                active={selectedTags.has(tag)}
+                onClick={() => onToggleTag(tag)}
+              />
+            ))}
+          </div>
+          {selectedTags.size > 0 && (
+            <button
+              onClick={onClearTags}
+              className="mt-2 text-[11px] text-muted/70 underline underline-offset-2 hover:text-accent"
+            >
+              Wis klankfilters
+            </button>
+          )}
+        </div>
+      )}
+
+      <div className="flex flex-wrap items-center gap-2">
+        <span className="text-[11px] uppercase tracking-wider text-muted/70">
+          Collecties
+        </span>
+        {COLLECTIONS.map((col) => (
+          <FilterChip
+            key={col}
+            small
+            label={`${col}${collectionCounts[col] ? ` (${collectionCounts[col]})` : ""}`}
+            active={activeCollection === col}
+            onClick={() => onCollection(activeCollection === col ? null : col)}
           />
         ))}
       </div>

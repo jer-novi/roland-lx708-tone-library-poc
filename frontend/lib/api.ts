@@ -32,6 +32,7 @@ interface SeedTone {
   midiBankMsb: number | null;
   midiBankLsb: number | null;
   midiProgram: number | null;
+  tags: string | null;
 }
 
 interface SeedFile {

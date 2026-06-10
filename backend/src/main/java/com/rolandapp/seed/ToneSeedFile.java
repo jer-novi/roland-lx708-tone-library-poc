@@ -19,7 +19,8 @@ public record ToneSeedFile(List<CategorySeed> categories, List<ToneSeed> tones) 
             String combinationSuggestions,
             Integer midiBankMsb,
             Integer midiBankLsb,
-            Integer midiProgram
+            Integer midiProgram,
+            String tags
     ) {
     }
 }

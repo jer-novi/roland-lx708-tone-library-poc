@@ -6,6 +6,7 @@ import { useQuery } from "@tanstack/react-query";
 import DOMPurify from "dompurify";
 import { fetchWiki } from "@/lib/api";
 import type { ToneDto } from "@/lib/types";
+import { collectionsFor, parseTags } from "@/lib/collections";
 import { PlayToneButton } from "@/components/PlayToneButton";
 
 interface Props {
@@ -67,6 +68,27 @@ export function ToneModal({ tone, onClose, onPlay, midiAvailable }: Props) {
               <h2 className="mt-1 text-xl font-bold">{tone.name}</h2>
               {tone.origin && (
                 <p className="mt-0.5 text-xs text-muted">{tone.origin}</p>
+              )}
+              {(parseTags(tone.tags).length > 0 ||
+                collectionsFor(tone).length > 0) && (
+                <div className="mt-2 flex flex-wrap gap-1.5">
+                  {collectionsFor(tone).map((col) => (
+                    <span
+                      key={col}
+                      className="rounded-full bg-accent-soft px-2 py-0.5 text-[11px] font-medium text-accent"
+                    >
+                      {col}
+                    </span>
+                  ))}
+                  {parseTags(tone.tags).map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full border border-border-soft px-2 py-0.5 text-[11px] text-muted"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               )}
             </div>
           </div>

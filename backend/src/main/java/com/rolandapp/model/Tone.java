@@ -45,6 +45,10 @@ public class Tone {
     @Column(name = "midi_program")
     private Integer midiProgram;
 
+    /** Nederlandse klank-tags (timbre + context), comma-separated. */
+    @Column(length = 512)
+    private String tags;
+
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "category_id", nullable = false)
     private ToneCategory category;
@@ -146,6 +150,14 @@ public class Tone {
 
     public void setMidiProgram(Integer midiProgram) {
         this.midiProgram = midiProgram;
+    }
+
+    public String getTags() {
+        return tags;
+    }
+
+    public void setTags(String tags) {
+        this.tags = tags;
     }
 
     public ToneCategory getCategory() {

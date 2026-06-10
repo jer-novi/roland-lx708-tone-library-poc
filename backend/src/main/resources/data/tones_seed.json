@@ -33,7 +33,8 @@
       "combinationSuggestions": "Dual met SymphonicStr1 voor filmische ballads; Split met AcousticBass voor jazz-trio gevoel.",
       "midiBankMsb": 0,
       "midiBankLsb": 68,
-      "midiProgram": 1
+      "midiProgram": 1,
+      "tags": "akoestisch,warm,klassiek,ballad"
     },
     {
       "toneNumber": 2,
@@ -46,7 +47,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 0,
       "midiBankLsb": 69,
-      "midiProgram": 1
+      "midiProgram": 1,
+      "tags": "akoestisch,warm,klassiek"
     },
     {
       "toneNumber": 3,
@@ -59,7 +61,8 @@
       "combinationSuggestions": "Dual met Soft Pad voor moderne pop; Split met FingeredBass voor singer-songwriter werk.",
       "midiBankMsb": 1,
       "midiBankLsb": 68,
-      "midiProgram": 1
+      "midiProgram": 1,
+      "tags": "akoestisch,helder,jazz,ballad"
     },
     {
       "toneNumber": 4,
@@ -72,7 +75,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 1,
       "midiBankLsb": 69,
-      "midiProgram": 1
+      "midiProgram": 1,
+      "tags": "akoestisch,helder,jazz"
     },
     {
       "toneNumber": 1,
@@ -85,7 +89,8 @@
       "combinationSuggestions": "Dual met Warm Pad voor neo-soul; combineer in Ableton met vinyl-ruis en een TR-808 groove uit Maschine.",
       "midiBankMsb": 8,
       "midiBankLsb": 71,
-      "midiProgram": 5
+      "midiProgram": 5,
+      "tags": "vintage,warm,jazz,ballad"
     },
     {
       "toneNumber": 2,
@@ -98,7 +103,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 0,
       "midiBankLsb": 69,
-      "midiProgram": 5
+      "midiProgram": 5,
+      "tags": "vintage,zwevend,warm,ballad"
     },
     {
       "toneNumber": 3,
@@ -111,7 +117,8 @@
       "combinationSuggestions": "Dual met Choir 1 voor dromerige pop; mooi met sidechain-compressie in een deephouse-context.",
       "midiBankMsb": 16,
       "midiBankLsb": 67,
-      "midiProgram": 5
+      "midiProgram": 5,
+      "tags": "helder,sprankelend,ballad"
     },
     {
       "toneNumber": 4,
@@ -124,7 +131,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 0,
       "midiBankLsb": 67,
-      "midiProgram": 5
+      "midiProgram": 5,
+      "tags": "vintage,warm,lo-fi"
     },
     {
       "toneNumber": 5,
@@ -137,7 +145,8 @@
       "combinationSuggestions": "Dual met Sine Pad voor 80s-ballads; leg er in Ableton een chorus + reverb overheen.",
       "midiBankMsb": 0,
       "midiBankLsb": 70,
-      "midiProgram": 6
+      "midiProgram": 6,
+      "tags": "synthetisch,helder,electronic,ballad"
     },
     {
       "toneNumber": 6,
@@ -150,7 +159,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 8,
       "midiBankLsb": 68,
-      "midiProgram": 6
+      "midiProgram": 6,
+      "tags": "zacht,sprankelend,ballad"
     },
     {
       "toneNumber": 7,
@@ -163,7 +173,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 24,
       "midiBankLsb": 65,
-      "midiProgram": 5
+      "midiProgram": 5,
+      "tags": "vintage,warm,lo-fi"
     },
     {
       "toneNumber": 8,
@@ -176,7 +187,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 0,
       "midiBankLsb": 67,
-      "midiProgram": 8
+      "midiProgram": 8,
+      "tags": "percussief,vintage,jazz"
     },
     {
       "toneNumber": 9,
@@ -189,7 +201,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 0,
       "midiBankLsb": 68,
-      "midiProgram": 5
+      "midiProgram": 5,
+      "tags": "vintage,zwevend,electronic"
     },
     {
       "toneNumber": 10,
@@ -202,7 +215,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 16,
       "midiBankLsb": 66,
-      "midiProgram": 5
+      "midiProgram": 5,
+      "tags": "vintage,warm,jazz"
     },
     {
       "toneNumber": 11,
@@ -215,7 +229,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 0,
       "midiBankLsb": 69,
-      "midiProgram": 3
+      "midiProgram": 3,
+      "tags": "helder,vintage,ballad"
     },
     {
       "toneNumber": 1,
@@ -228,7 +243,8 @@
       "combinationSuggestions": "Dual met European Grand (klassiek) of met Warm Pad (modern-klassiek à la Ólafur Arnalds).",
       "midiBankMsb": 1,
       "midiBankLsb": 67,
-      "midiProgram": 50
+      "midiProgram": 50,
+      "tags": "warm,zwevend,klassiek,fx/cinematic"
     },
     {
       "toneNumber": 2,
@@ -241,7 +257,8 @@
       "combinationSuggestions": "Dual met Magical Piano voor trailer-achtige composities.",
       "midiBankMsb": 1,
       "midiBankLsb": 67,
-      "midiProgram": 49
+      "midiProgram": 49,
+      "tags": "zwevend,klassiek,fx/cinematic"
     },
     {
       "toneNumber": 3,
@@ -254,7 +271,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 0,
       "midiBankLsb": 71,
-      "midiProgram": 50
+      "midiProgram": 50,
+      "tags": "warm,zwevend,ballad"
     },
     {
       "toneNumber": 4,
@@ -267,7 +285,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 0,
       "midiBankLsb": 64,
-      "midiProgram": 49
+      "midiProgram": 49,
+      "tags": "akoestisch,klassiek"
     },
     {
       "toneNumber": 5,
@@ -280,7 +299,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 8,
       "midiBankLsb": 66,
-      "midiProgram": 49
+      "midiProgram": 49,
+      "tags": "akoestisch,klassiek,fx/cinematic"
     },
     {
       "toneNumber": 6,
@@ -293,7 +313,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 0,
       "midiBankLsb": 67,
-      "midiProgram": 69
+      "midiProgram": 69,
+      "tags": "zacht,akoestisch,klassiek"
     },
     {
       "toneNumber": 7,
@@ -306,7 +327,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 0,
       "midiBankLsb": 68,
-      "midiProgram": 47
+      "midiProgram": 47,
+      "tags": "sprankelend,zacht,klassiek"
     },
     {
       "toneNumber": 8,
@@ -319,7 +341,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 0,
       "midiBankLsb": 0,
-      "midiProgram": 41
+      "midiProgram": 41,
+      "tags": "akoestisch,helder,klassiek,folk"
     },
     {
       "toneNumber": 9,
@@ -332,7 +355,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 1,
       "midiBankLsb": 65,
-      "midiProgram": 49
+      "midiProgram": 49,
+      "tags": "zwevend,klassiek"
     },
     {
       "toneNumber": 10,
@@ -345,7 +369,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 0,
       "midiBankLsb": 64,
-      "midiProgram": 74
+      "midiProgram": 74,
+      "tags": "zacht,helder,klassiek"
     },
     {
       "toneNumber": 11,
@@ -358,7 +383,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 0,
       "midiBankLsb": 0,
-      "midiProgram": 43
+      "midiProgram": 43,
+      "tags": "warm,donker,klassiek"
     },
     {
       "toneNumber": 12,
@@ -371,7 +397,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 1,
       "midiBankLsb": 66,
-      "midiProgram": 61
+      "midiProgram": 61,
+      "tags": "helder,klassiek,fx/cinematic"
     },
     {
       "toneNumber": 13,
@@ -384,7 +411,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 0,
       "midiBankLsb": 0,
-      "midiProgram": 46
+      "midiProgram": 46,
+      "tags": "percussief,klassiek"
     },
     {
       "toneNumber": 14,
@@ -397,7 +425,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 1,
       "midiBankLsb": 65,
-      "midiProgram": 50
+      "midiProgram": 50,
+      "tags": "warm,zwevend,klassiek"
     },
     {
       "toneNumber": 15,
@@ -410,7 +439,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 0,
       "midiBankLsb": 64,
-      "midiProgram": 90
+      "midiProgram": 90,
+      "tags": "zwevend,zacht,synthetisch,electronic"
     },
     {
       "toneNumber": 16,
@@ -423,7 +453,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 47,
       "midiBankLsb": 65,
-      "midiProgram": 3
+      "midiProgram": 3,
+      "tags": "sprankelend,zwevend,fx/cinematic"
     },
     {
       "toneNumber": 17,
@@ -436,7 +467,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 0,
       "midiBankLsb": 65,
-      "midiProgram": 55
+      "midiProgram": 55,
+      "tags": "vintage,jazz"
     },
     {
       "toneNumber": 18,
@@ -449,7 +481,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 0,
       "midiBankLsb": 66,
-      "midiProgram": 33
+      "midiProgram": 33,
+      "tags": "akoestisch,donker,jazz"
     },
     {
       "toneNumber": 1,
@@ -462,7 +495,8 @@
       "combinationSuggestions": "Solo gebruiken met veel Ambience voor kerkakoestiek; Split met Choir voor sacrale sfeer.",
       "midiBankMsb": 8,
       "midiBankLsb": 70,
-      "midiProgram": 20
+      "midiProgram": 20,
+      "tags": "akoestisch,kerk/gospel,klassiek"
     },
     {
       "toneNumber": 2,
@@ -475,7 +509,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 16,
       "midiBankLsb": 66,
-      "midiProgram": 20
+      "midiProgram": 20,
+      "tags": "zacht,kerk/gospel,klassiek"
     },
     {
       "toneNumber": 3,
@@ -488,7 +523,8 @@
       "combinationSuggestions": "Split met AcousticBass: linkerhand walking bass, rechterhand orgel — instant jazzclub.",
       "midiBankMsb": 0,
       "midiBankLsb": 70,
-      "midiProgram": 19
+      "midiProgram": 19,
+      "tags": "vintage,jazz"
     },
     {
       "toneNumber": 4,
@@ -501,7 +537,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 0,
       "midiBankLsb": 69,
-      "midiProgram": 19
+      "midiProgram": 19,
+      "tags": "warm,ballad"
     },
     {
       "toneNumber": 5,
@@ -514,7 +551,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 0,
       "midiBankLsb": 66,
-      "midiProgram": 20
+      "midiProgram": 20,
+      "tags": "akoestisch,kerk/gospel,klassiek"
     },
     {
       "toneNumber": 6,
@@ -527,7 +565,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 8,
       "midiBankLsb": 69,
-      "midiProgram": 20
+      "midiProgram": 20,
+      "tags": "akoestisch,kerk/gospel,klassiek"
     },
     {
       "toneNumber": 7,
@@ -540,7 +579,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 0,
       "midiBankLsb": 71,
-      "midiProgram": 17
+      "midiProgram": 17,
+      "tags": "vintage,kerk/gospel"
     },
     {
       "toneNumber": 8,
@@ -553,7 +593,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 0,
       "midiBankLsb": 69,
-      "midiProgram": 17
+      "midiProgram": 17,
+      "tags": "helder,kerk/gospel,klassiek"
     },
     {
       "toneNumber": 9,
@@ -566,7 +607,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 32,
       "midiBankLsb": 68,
-      "midiProgram": 17
+      "midiProgram": 17,
+      "tags": "warm,vintage,jazz"
     },
     {
       "toneNumber": 10,
@@ -579,7 +621,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 32,
       "midiBankLsb": 69,
-      "midiProgram": 17
+      "midiProgram": 17,
+      "tags": "zacht,vintage,jazz"
     },
     {
       "toneNumber": 11,
@@ -592,7 +635,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 0,
       "midiBankLsb": 66,
-      "midiProgram": 17
+      "midiProgram": 17,
+      "tags": "donker,vintage,jazz"
     },
     {
       "toneNumber": 12,
@@ -605,7 +649,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 16,
       "midiBankLsb": 64,
-      "midiProgram": 17
+      "midiProgram": 17,
+      "tags": "vintage,lo-fi"
     },
     {
       "toneNumber": 13,
@@ -618,7 +663,8 @@
       "combinationSuggestions": "Mooi met weinig Ambience voor een intieme indie/folk-sound; dual met Tape-achtige pad uit Maschine.",
       "midiBankMsb": 16,
       "midiBankLsb": 64,
-      "midiProgram": 1
+      "midiProgram": 1,
+      "tags": "akoestisch,warm,folk"
     },
     {
       "toneNumber": 14,
@@ -631,7 +677,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 1,
       "midiBankLsb": 65,
-      "midiProgram": 1
+      "midiProgram": 1,
+      "tags": "akoestisch,zacht,ballad"
     },
     {
       "toneNumber": 15,
@@ -644,7 +691,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 1,
       "midiBankLsb": 66,
-      "midiProgram": 1
+      "midiProgram": 1,
+      "tags": "akoestisch,helder,folk"
     },
     {
       "toneNumber": 16,
@@ -657,7 +705,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 8,
       "midiBankLsb": 64,
-      "midiProgram": 3
+      "midiProgram": 3,
+      "tags": "akoestisch,helder,percussief"
     },
     {
       "toneNumber": 17,
@@ -670,7 +719,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 0,
       "midiBankLsb": 64,
-      "midiProgram": 4
+      "midiProgram": 4,
+      "tags": "vintage,lo-fi,jazz"
     },
     {
       "toneNumber": 18,
@@ -683,7 +733,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 2,
       "midiBankLsb": 64,
-      "midiProgram": 1
+      "midiProgram": 1,
+      "tags": "vintage,akoestisch,klassiek"
     },
     {
       "toneNumber": 19,
@@ -696,7 +747,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 2,
       "midiBankLsb": 65,
-      "midiProgram": 1
+      "midiProgram": 1,
+      "tags": "vintage,zacht,klassiek"
     },
     {
       "toneNumber": 20,
@@ -709,7 +761,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 2,
       "midiBankLsb": 66,
-      "midiProgram": 1
+      "midiProgram": 1,
+      "tags": "vintage,helder,klassiek"
     },
     {
       "toneNumber": 21,
@@ -722,7 +775,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 0,
       "midiBankLsb": 67,
-      "midiProgram": 7
+      "midiProgram": 7,
+      "tags": "vintage,sprankelend,klassiek"
     },
     {
       "toneNumber": 22,
@@ -735,7 +789,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 8,
       "midiBankLsb": 67,
-      "midiProgram": 7
+      "midiProgram": 7,
+      "tags": "vintage,sprankelend,klassiek"
     },
     {
       "toneNumber": 23,
@@ -748,7 +803,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 10,
-      "midiProgram": 54
+      "midiProgram": 54,
+      "tags": "zacht,zwevend"
     },
     {
       "toneNumber": 24,
@@ -761,7 +817,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 11,
-      "midiProgram": 54
+      "midiProgram": 54,
+      "tags": "zacht,zwevend"
     },
     {
       "toneNumber": 25,
@@ -774,7 +831,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 12,
-      "midiProgram": 54
+      "midiProgram": 54,
+      "tags": "zacht,zwevend"
     },
     {
       "toneNumber": 26,
@@ -787,7 +845,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 13,
-      "midiProgram": 54
+      "midiProgram": 54,
+      "tags": "zacht,zwevend"
     },
     {
       "toneNumber": 27,
@@ -800,7 +859,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 120,
       "midiBankLsb": 0,
-      "midiProgram": 1
+      "midiProgram": 1,
+      "tags": "percussief"
     },
     {
       "toneNumber": 28,
@@ -813,7 +873,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 120,
       "midiBankLsb": 0,
-      "midiProgram": 9
+      "midiProgram": 9,
+      "tags": "percussief"
     },
     {
       "toneNumber": 29,
@@ -826,7 +887,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 120,
       "midiBankLsb": 0,
-      "midiProgram": 17
+      "midiProgram": 17,
+      "tags": "percussief,electronic"
     },
     {
       "toneNumber": 30,
@@ -839,7 +901,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 120,
       "midiBankLsb": 0,
-      "midiProgram": 25
+      "midiProgram": 25,
+      "tags": "percussief,synthetisch,electronic"
     },
     {
       "toneNumber": 31,
@@ -852,7 +915,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 120,
       "midiBankLsb": 0,
-      "midiProgram": 26
+      "midiProgram": 26,
+      "tags": "percussief,synthetisch,vintage,electronic"
     },
     {
       "toneNumber": 32,
@@ -865,7 +929,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 120,
       "midiBankLsb": 0,
-      "midiProgram": 33
+      "midiProgram": 33,
+      "tags": "percussief,akoestisch,jazz"
     },
     {
       "toneNumber": 33,
@@ -878,7 +943,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 120,
       "midiBankLsb": 0,
-      "midiProgram": 41
+      "midiProgram": 41,
+      "tags": "percussief,zacht,akoestisch,jazz"
     },
     {
       "toneNumber": 34,
@@ -891,7 +957,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 120,
       "midiBankLsb": 0,
-      "midiProgram": 49
+      "midiProgram": 49,
+      "tags": "percussief,akoestisch,klassiek"
     },
     {
       "toneNumber": 35,
@@ -904,7 +971,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 120,
       "midiBankLsb": 0,
-      "midiProgram": 57
+      "midiProgram": 57,
+      "tags": "percussief,fx/cinematic"
     },
     {
       "toneNumber": 36,
@@ -917,7 +985,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 1
+      "midiProgram": 1,
+      "tags": "akoestisch,helder"
     },
     {
       "toneNumber": 37,
@@ -930,7 +999,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 1
+      "midiProgram": 1,
+      "tags": "akoestisch,helder"
     },
     {
       "toneNumber": 38,
@@ -943,7 +1013,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 2,
-      "midiProgram": 1
+      "midiProgram": 1,
+      "tags": "akoestisch,helder"
     },
     {
       "toneNumber": 39,
@@ -956,7 +1027,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 2
+      "midiProgram": 2,
+      "tags": "akoestisch,helder"
     },
     {
       "toneNumber": 40,
@@ -969,7 +1041,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 2
+      "midiProgram": 2,
+      "tags": "akoestisch,helder"
     },
     {
       "toneNumber": 41,
@@ -982,7 +1055,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 3
+      "midiProgram": 3,
+      "tags": "akoestisch,helder"
     },
     {
       "toneNumber": 42,
@@ -995,7 +1069,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 3
+      "midiProgram": 3,
+      "tags": "akoestisch,helder"
     },
     {
       "toneNumber": 43,
@@ -1008,7 +1083,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 4
+      "midiProgram": 4,
+      "tags": "akoestisch,helder,vintage,lo-fi"
     },
     {
       "toneNumber": 44,
@@ -1021,7 +1097,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 4
+      "midiProgram": 4,
+      "tags": "akoestisch,helder,vintage,lo-fi"
     },
     {
       "toneNumber": 45,
@@ -1034,7 +1111,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 5
+      "midiProgram": 5,
+      "tags": "vintage,warm,ballad"
     },
     {
       "toneNumber": 46,
@@ -1047,7 +1125,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 5
+      "midiProgram": 5,
+      "tags": "vintage,warm,ballad,lo-fi"
     },
     {
       "toneNumber": 47,
@@ -1060,7 +1139,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 2,
-      "midiProgram": 5
+      "midiProgram": 5,
+      "tags": "vintage,warm,ballad"
     },
     {
       "toneNumber": 48,
@@ -1073,7 +1153,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 3,
-      "midiProgram": 5
+      "midiProgram": 5,
+      "tags": "vintage,warm,ballad,lo-fi"
     },
     {
       "toneNumber": 49,
@@ -1086,7 +1167,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 6
+      "midiProgram": 6,
+      "tags": "vintage,warm,ballad"
     },
     {
       "toneNumber": 50,
@@ -1099,7 +1181,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 6
+      "midiProgram": 6,
+      "tags": "vintage,warm,ballad,lo-fi"
     },
     {
       "toneNumber": 51,
@@ -1112,7 +1195,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 2,
-      "midiProgram": 6
+      "midiProgram": 6,
+      "tags": "vintage,warm,ballad,synthetisch,electronic"
     },
     {
       "toneNumber": 52,
@@ -1125,7 +1209,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 3,
-      "midiProgram": 6
+      "midiProgram": 6,
+      "tags": "vintage,warm,ballad,synthetisch"
     },
     {
       "toneNumber": 53,
@@ -1138,7 +1223,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 4,
-      "midiProgram": 6
+      "midiProgram": 6,
+      "tags": "vintage,warm,ballad,zwevend,electronic"
     },
     {
       "toneNumber": 54,
@@ -1151,7 +1237,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 7
+      "midiProgram": 7,
+      "tags": "vintage,sprankelend,klassiek"
     },
     {
       "toneNumber": 55,
@@ -1164,7 +1251,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 7
+      "midiProgram": 7,
+      "tags": "vintage,sprankelend,klassiek"
     },
     {
       "toneNumber": 56,
@@ -1177,7 +1265,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 2,
-      "midiProgram": 7
+      "midiProgram": 7,
+      "tags": "vintage,sprankelend,klassiek"
     },
     {
       "toneNumber": 57,
@@ -1190,7 +1279,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 3,
-      "midiProgram": 7
+      "midiProgram": 7,
+      "tags": "vintage,sprankelend,klassiek"
     },
     {
       "toneNumber": 58,
@@ -1203,7 +1293,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 8
+      "midiProgram": 8,
+      "tags": "percussief,vintage"
     },
     {
       "toneNumber": 59,
@@ -1216,7 +1307,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 8
+      "midiProgram": 8,
+      "tags": "percussief,vintage"
     },
     {
       "toneNumber": 60,
@@ -1229,7 +1321,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 9
+      "midiProgram": 9,
+      "tags": "percussief,sprankelend,metallic"
     },
     {
       "toneNumber": 61,
@@ -1242,7 +1335,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 10
+      "midiProgram": 10,
+      "tags": "percussief,sprankelend,metallic"
     },
     {
       "toneNumber": 62,
@@ -1255,7 +1349,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 11
+      "midiProgram": 11,
+      "tags": "percussief,sprankelend,metallic"
     },
     {
       "toneNumber": 63,
@@ -1268,7 +1363,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 12
+      "midiProgram": 12,
+      "tags": "percussief,sprankelend,metallic"
     },
     {
       "toneNumber": 64,
@@ -1281,7 +1377,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 12
+      "midiProgram": 12,
+      "tags": "percussief,sprankelend,metallic"
     },
     {
       "toneNumber": 65,
@@ -1294,7 +1391,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 13
+      "midiProgram": 13,
+      "tags": "percussief,aards,akoestisch"
     },
     {
       "toneNumber": 66,
@@ -1307,7 +1405,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 13
+      "midiProgram": 13,
+      "tags": "percussief,aards,akoestisch"
     },
     {
       "toneNumber": 67,
@@ -1320,7 +1419,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 14
+      "midiProgram": 14,
+      "tags": "percussief,aards,akoestisch"
     },
     {
       "toneNumber": 68,
@@ -1333,7 +1433,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 15
+      "midiProgram": 15,
+      "tags": "metallic,sprankelend,kerk/gospel"
     },
     {
       "toneNumber": 69,
@@ -1346,7 +1447,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 15
+      "midiProgram": 15,
+      "tags": "metallic,sprankelend,kerk/gospel"
     },
     {
       "toneNumber": 70,
@@ -1359,7 +1461,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 2,
-      "midiProgram": 15
+      "midiProgram": 15,
+      "tags": "metallic,sprankelend,kerk/gospel"
     },
     {
       "toneNumber": 71,
@@ -1372,7 +1475,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 16
+      "midiProgram": 16,
+      "tags": "sprankelend,metallic,wereldmuziek"
     },
     {
       "toneNumber": 72,
@@ -1385,7 +1489,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 17
+      "midiProgram": 17,
+      "tags": "warm,vintage"
     },
     {
       "toneNumber": 73,
@@ -1398,7 +1503,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 17
+      "midiProgram": 17,
+      "tags": "warm,vintage"
     },
     {
       "toneNumber": 74,
@@ -1411,7 +1517,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 2,
-      "midiProgram": 17
+      "midiProgram": 17,
+      "tags": "warm,vintage,lo-fi"
     },
     {
       "toneNumber": 75,
@@ -1424,7 +1531,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 3,
-      "midiProgram": 17
+      "midiProgram": 17,
+      "tags": "warm,vintage"
     },
     {
       "toneNumber": 76,
@@ -1437,7 +1545,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 18
+      "midiProgram": 18,
+      "tags": "warm,vintage"
     },
     {
       "toneNumber": 77,
@@ -1450,7 +1559,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 18
+      "midiProgram": 18,
+      "tags": "warm,vintage"
     },
     {
       "toneNumber": 78,
@@ -1463,7 +1573,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 2,
-      "midiProgram": 18
+      "midiProgram": 18,
+      "tags": "warm,vintage"
     },
     {
       "toneNumber": 79,
@@ -1476,7 +1587,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 19
+      "midiProgram": 19,
+      "tags": "warm,vintage"
     },
     {
       "toneNumber": 80,
@@ -1489,7 +1601,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 20
+      "midiProgram": 20,
+      "tags": "akoestisch,kerk/gospel,klassiek"
     },
     {
       "toneNumber": 81,
@@ -1502,7 +1615,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 20
+      "midiProgram": 20,
+      "tags": "akoestisch,kerk/gospel,klassiek"
     },
     {
       "toneNumber": 82,
@@ -1515,7 +1629,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 2,
-      "midiProgram": 20
+      "midiProgram": 20,
+      "tags": "akoestisch,kerk/gospel,klassiek"
     },
     {
       "toneNumber": 83,
@@ -1528,7 +1643,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 21
+      "midiProgram": 21,
+      "tags": "zacht,vintage,folk"
     },
     {
       "toneNumber": 84,
@@ -1541,7 +1657,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 21
+      "midiProgram": 21,
+      "tags": "zacht,vintage,folk"
     },
     {
       "toneNumber": 85,
@@ -1554,7 +1671,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 22
+      "midiProgram": 22,
+      "tags": "warm,akoestisch,folk,wereldmuziek"
     },
     {
       "toneNumber": 86,
@@ -1567,7 +1685,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 22
+      "midiProgram": 22,
+      "tags": "warm,akoestisch,folk,wereldmuziek"
     },
     {
       "toneNumber": 87,
@@ -1580,7 +1699,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 23
+      "midiProgram": 23,
+      "tags": "warm,akoestisch,folk"
     },
     {
       "toneNumber": 88,
@@ -1593,7 +1713,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 24
+      "midiProgram": 24,
+      "tags": "warm,akoestisch,wereldmuziek"
     },
     {
       "toneNumber": 89,
@@ -1606,7 +1727,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 25
+      "midiProgram": 25,
+      "tags": "akoestisch,warm,folk,zacht,klassiek"
     },
     {
       "toneNumber": 90,
@@ -1619,7 +1741,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 25
+      "midiProgram": 25,
+      "tags": "akoestisch,warm,folk,wereldmuziek"
     },
     {
       "toneNumber": 91,
@@ -1632,7 +1755,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 2,
-      "midiProgram": 25
+      "midiProgram": 25,
+      "tags": "akoestisch,warm,folk,zacht,klassiek"
     },
     {
       "toneNumber": 92,
@@ -1645,7 +1769,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 3,
-      "midiProgram": 25
+      "midiProgram": 25,
+      "tags": "akoestisch,warm,folk,zacht,klassiek"
     },
     {
       "toneNumber": 93,
@@ -1658,7 +1783,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 26
+      "midiProgram": 26,
+      "tags": "akoestisch,warm,folk"
     },
     {
       "toneNumber": 94,
@@ -1671,7 +1797,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 26
+      "midiProgram": 26,
+      "tags": "akoestisch,warm,folk,sprankelend"
     },
     {
       "toneNumber": 95,
@@ -1684,7 +1811,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 2,
-      "midiProgram": 26
+      "midiProgram": 26,
+      "tags": "akoestisch,warm,folk,wereldmuziek"
     },
     {
       "toneNumber": 96,
@@ -1697,7 +1825,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 3,
-      "midiProgram": 26
+      "midiProgram": 26,
+      "tags": "akoestisch,warm,folk"
     },
     {
       "toneNumber": 97,
@@ -1710,7 +1839,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 27
+      "midiProgram": 27,
+      "tags": "warm,vintage,jazz"
     },
     {
       "toneNumber": 98,
@@ -1723,7 +1853,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 27
+      "midiProgram": 27,
+      "tags": "warm,vintage,jazz,wereldmuziek"
     },
     {
       "toneNumber": 99,
@@ -1736,7 +1867,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 28
+      "midiProgram": 28,
+      "tags": "helder,percussief"
     },
     {
       "toneNumber": 100,
@@ -1749,7 +1881,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 28
+      "midiProgram": 28,
+      "tags": "helder,percussief"
     },
     {
       "toneNumber": 101,
@@ -1762,7 +1895,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 2,
-      "midiProgram": 28
+      "midiProgram": 28,
+      "tags": "helder,percussief"
     },
     {
       "toneNumber": 102,
@@ -1775,7 +1909,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 29
+      "midiProgram": 29,
+      "tags": "helder,percussief"
     },
     {
       "toneNumber": 103,
@@ -1788,7 +1923,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 29
+      "midiProgram": 29,
+      "tags": "helder,percussief"
     },
     {
       "toneNumber": 104,
@@ -1801,7 +1937,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 2,
-      "midiProgram": 29
+      "midiProgram": 29,
+      "tags": "helder,percussief"
     },
     {
       "toneNumber": 105,
@@ -1814,7 +1951,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 3,
-      "midiProgram": 29
+      "midiProgram": 29,
+      "tags": "helder,percussief"
     },
     {
       "toneNumber": 106,
@@ -1827,7 +1965,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 30
+      "midiProgram": 30,
+      "tags": "metallic,electronic"
     },
     {
       "toneNumber": 107,
@@ -1840,7 +1979,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 30
+      "midiProgram": 30,
+      "tags": "metallic,electronic"
     },
     {
       "toneNumber": 108,
@@ -1853,7 +1993,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 31
+      "midiProgram": 31,
+      "tags": "metallic,electronic"
     },
     {
       "toneNumber": 109,
@@ -1866,7 +2007,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 31
+      "midiProgram": 31,
+      "tags": "metallic,electronic,fx/cinematic"
     },
     {
       "toneNumber": 110,
@@ -1879,7 +2021,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 2,
-      "midiProgram": 31
+      "midiProgram": 31,
+      "tags": "metallic,electronic"
     },
     {
       "toneNumber": 111,
@@ -1892,7 +2035,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 32
+      "midiProgram": 32,
+      "tags": "metallic,zwevend,fx/cinematic"
     },
     {
       "toneNumber": 112,
@@ -1905,7 +2049,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 32
+      "midiProgram": 32,
+      "tags": "metallic,zwevend,fx/cinematic"
     },
     {
       "toneNumber": 113,
@@ -1918,7 +2063,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 33
+      "midiProgram": 33,
+      "tags": "akoestisch,donker,jazz"
     },
     {
       "toneNumber": 114,
@@ -1931,7 +2077,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 34
+      "midiProgram": 34,
+      "tags": "warm,donker"
     },
     {
       "toneNumber": 115,
@@ -1944,7 +2091,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 34
+      "midiProgram": 34,
+      "tags": "warm,donker"
     },
     {
       "toneNumber": 116,
@@ -1957,7 +2105,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 35
+      "midiProgram": 35,
+      "tags": "warm,donker"
     },
     {
       "toneNumber": 117,
@@ -1970,7 +2119,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 36
+      "midiProgram": 36,
+      "tags": "warm,donker,zacht,jazz"
     },
     {
       "toneNumber": 118,
@@ -1983,7 +2133,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 37
+      "midiProgram": 37,
+      "tags": "percussief,donker"
     },
     {
       "toneNumber": 119,
@@ -1996,7 +2147,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 38
+      "midiProgram": 38,
+      "tags": "percussief,donker"
     },
     {
       "toneNumber": 120,
@@ -2009,7 +2161,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 39
+      "midiProgram": 39,
+      "tags": "synthetisch,donker,electronic"
     },
     {
       "toneNumber": 121,
@@ -2022,7 +2175,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 39
+      "midiProgram": 39,
+      "tags": "synthetisch,donker,electronic"
     },
     {
       "toneNumber": 122,
@@ -2035,7 +2189,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 2,
-      "midiProgram": 39
+      "midiProgram": 39,
+      "tags": "synthetisch,donker,electronic"
     },
     {
       "toneNumber": 123,
@@ -2048,7 +2203,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 3,
-      "midiProgram": 39
+      "midiProgram": 39,
+      "tags": "synthetisch,donker,electronic"
     },
     {
       "toneNumber": 124,
@@ -2061,7 +2217,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 4,
-      "midiProgram": 39
+      "midiProgram": 39,
+      "tags": "synthetisch,donker,electronic"
     },
     {
       "toneNumber": 125,
@@ -2074,7 +2231,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 40
+      "midiProgram": 40,
+      "tags": "synthetisch,donker,electronic"
     },
     {
       "toneNumber": 126,
@@ -2087,7 +2245,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 40
+      "midiProgram": 40,
+      "tags": "synthetisch,donker,electronic"
     },
     {
       "toneNumber": 127,
@@ -2100,7 +2259,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 2,
-      "midiProgram": 40
+      "midiProgram": 40,
+      "tags": "synthetisch,donker,electronic"
     },
     {
       "toneNumber": 128,
@@ -2113,7 +2273,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 3,
-      "midiProgram": 40
+      "midiProgram": 40,
+      "tags": "synthetisch,donker,electronic"
     },
     {
       "toneNumber": 129,
@@ -2126,7 +2287,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 41
+      "midiProgram": 41,
+      "tags": "akoestisch,klassiek"
     },
     {
       "toneNumber": 130,
@@ -2139,7 +2301,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 41
+      "midiProgram": 41,
+      "tags": "akoestisch,klassiek,zacht,ballad"
     },
     {
       "toneNumber": 131,
@@ -2152,7 +2315,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 42
+      "midiProgram": 42,
+      "tags": "akoestisch,klassiek"
     },
     {
       "toneNumber": 132,
@@ -2165,7 +2329,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 43
+      "midiProgram": 43,
+      "tags": "akoestisch,klassiek"
     },
     {
       "toneNumber": 133,
@@ -2178,7 +2343,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 44
+      "midiProgram": 44,
+      "tags": "akoestisch,klassiek"
     },
     {
       "toneNumber": 134,
@@ -2191,7 +2357,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 45
+      "midiProgram": 45,
+      "tags": "zwevend,klassiek"
     },
     {
       "toneNumber": 135,
@@ -2204,7 +2371,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 46
+      "midiProgram": 46,
+      "tags": "percussief,klassiek"
     },
     {
       "toneNumber": 136,
@@ -2217,7 +2385,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 47
+      "midiProgram": 47,
+      "tags": "sprankelend,zacht,klassiek"
     },
     {
       "toneNumber": 137,
@@ -2230,7 +2399,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 47
+      "midiProgram": 47,
+      "tags": "sprankelend,zacht,klassiek,wereldmuziek"
     },
     {
       "toneNumber": 138,
@@ -2243,7 +2413,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 48
+      "midiProgram": 48,
+      "tags": "percussief,donker,klassiek"
     },
     {
       "toneNumber": 139,
@@ -2256,7 +2427,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 49
+      "midiProgram": 49,
+      "tags": "warm,zwevend,klassiek"
     },
     {
       "toneNumber": 140,
@@ -2269,7 +2441,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 49
+      "midiProgram": 49,
+      "tags": "warm,zwevend,klassiek"
     },
     {
       "toneNumber": 141,
@@ -2282,7 +2455,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 2,
-      "midiProgram": 49
+      "midiProgram": 49,
+      "tags": "warm,zwevend,klassiek,vintage,lo-fi"
     },
     {
       "toneNumber": 142,
@@ -2295,7 +2469,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 50
+      "midiProgram": 50,
+      "tags": "warm,zwevend,klassiek,zacht,ballad"
     },
     {
       "toneNumber": 143,
@@ -2308,7 +2483,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 51
+      "midiProgram": 51,
+      "tags": "synthetisch,zwevend,electronic"
     },
     {
       "toneNumber": 144,
@@ -2321,7 +2497,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 51
+      "midiProgram": 51,
+      "tags": "synthetisch,zwevend,electronic"
     },
     {
       "toneNumber": 145,
@@ -2334,7 +2511,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 52
+      "midiProgram": 52,
+      "tags": "synthetisch,zwevend,electronic"
     },
     {
       "toneNumber": 146,
@@ -2347,7 +2525,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 53
+      "midiProgram": 53,
+      "tags": "zacht,zwevend"
     },
     {
       "toneNumber": 147,
@@ -2360,7 +2539,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 53
+      "midiProgram": 53,
+      "tags": "zacht,zwevend"
     },
     {
       "toneNumber": 148,
@@ -2373,7 +2553,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 54
+      "midiProgram": 54,
+      "tags": "zacht,zwevend"
     },
     {
       "toneNumber": 149,
@@ -2386,7 +2567,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 54
+      "midiProgram": 54,
+      "tags": "zacht,zwevend"
     },
     {
       "toneNumber": 150,
@@ -2399,7 +2581,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 55
+      "midiProgram": 55,
+      "tags": "synthetisch,zwevend,electronic"
     },
     {
       "toneNumber": 151,
@@ -2412,7 +2595,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 55
+      "midiProgram": 55,
+      "tags": "synthetisch,zwevend,electronic,vintage"
     },
     {
       "toneNumber": 152,
@@ -2425,7 +2609,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 56
+      "midiProgram": 56,
+      "tags": "percussief,fx/cinematic"
     },
     {
       "toneNumber": 153,
@@ -2438,7 +2623,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 56
+      "midiProgram": 56,
+      "tags": "percussief,fx/cinematic"
     },
     {
       "toneNumber": 154,
@@ -2451,7 +2637,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 2,
-      "midiProgram": 56
+      "midiProgram": 56,
+      "tags": "percussief,fx/cinematic"
     },
     {
       "toneNumber": 155,
@@ -2464,7 +2651,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 3,
-      "midiProgram": 56
+      "midiProgram": 56,
+      "tags": "percussief,fx/cinematic"
     },
     {
       "toneNumber": 156,
@@ -2477,7 +2665,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 57
+      "midiProgram": 57,
+      "tags": "helder,klassiek"
     },
     {
       "toneNumber": 157,
@@ -2490,7 +2679,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 57
+      "midiProgram": 57,
+      "tags": "helder,klassiek,donker"
     },
     {
       "toneNumber": 158,
@@ -2503,7 +2693,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 58
+      "midiProgram": 58,
+      "tags": "helder,klassiek"
     },
     {
       "toneNumber": 159,
@@ -2516,7 +2707,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 58
+      "midiProgram": 58,
+      "tags": "helder,klassiek"
     },
     {
       "toneNumber": 160,
@@ -2529,7 +2721,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 2,
-      "midiProgram": 58
+      "midiProgram": 58,
+      "tags": "helder,klassiek"
     },
     {
       "toneNumber": 161,
@@ -2542,7 +2735,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 59
+      "midiProgram": 59,
+      "tags": "helder,klassiek"
     },
     {
       "toneNumber": 162,
@@ -2555,7 +2749,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 60
+      "midiProgram": 60,
+      "tags": "zacht,jazz"
     },
     {
       "toneNumber": 163,
@@ -2568,7 +2763,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 60
+      "midiProgram": 60,
+      "tags": "zacht,jazz"
     },
     {
       "toneNumber": 164,
@@ -2581,7 +2777,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 61
+      "midiProgram": 61,
+      "tags": "warm,klassiek,fx/cinematic"
     },
     {
       "toneNumber": 165,
@@ -2594,7 +2791,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 61
+      "midiProgram": 61,
+      "tags": "warm,klassiek,fx/cinematic"
     },
     {
       "toneNumber": 166,
@@ -2607,7 +2805,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 62
+      "midiProgram": 62,
+      "tags": "helder,jazz"
     },
     {
       "toneNumber": 167,
@@ -2620,7 +2819,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 62
+      "midiProgram": 62,
+      "tags": "helder,jazz"
     },
     {
       "toneNumber": 168,
@@ -2633,7 +2833,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 63
+      "midiProgram": 63,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 169,
@@ -2646,7 +2847,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 63
+      "midiProgram": 63,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 170,
@@ -2659,7 +2861,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 2,
-      "midiProgram": 63
+      "midiProgram": 63,
+      "tags": "synthetisch,helder,electronic,vintage"
     },
     {
       "toneNumber": 171,
@@ -2672,7 +2875,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 3,
-      "midiProgram": 63
+      "midiProgram": 63,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 172,
@@ -2685,7 +2889,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 64
+      "midiProgram": 64,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 173,
@@ -2698,7 +2903,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 64
+      "midiProgram": 64,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 174,
@@ -2711,7 +2917,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 2,
-      "midiProgram": 64
+      "midiProgram": 64,
+      "tags": "synthetisch,helder,electronic,vintage"
     },
     {
       "toneNumber": 175,
@@ -2724,7 +2931,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 65
+      "midiProgram": 65,
+      "tags": "warm,jazz"
     },
     {
       "toneNumber": 176,
@@ -2737,7 +2945,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 66
+      "midiProgram": 66,
+      "tags": "warm,jazz"
     },
     {
       "toneNumber": 177,
@@ -2750,7 +2959,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 67
+      "midiProgram": 67,
+      "tags": "warm,jazz"
     },
     {
       "toneNumber": 178,
@@ -2763,7 +2973,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 68
+      "midiProgram": 68,
+      "tags": "warm,jazz"
     },
     {
       "toneNumber": 179,
@@ -2776,7 +2987,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 69
+      "midiProgram": 69,
+      "tags": "warm,akoestisch,klassiek"
     },
     {
       "toneNumber": 180,
@@ -2789,7 +3001,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 70
+      "midiProgram": 70,
+      "tags": "warm,akoestisch,klassiek"
     },
     {
       "toneNumber": 181,
@@ -2802,7 +3015,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 71
+      "midiProgram": 71,
+      "tags": "warm,akoestisch,klassiek"
     },
     {
       "toneNumber": 182,
@@ -2815,7 +3029,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 72
+      "midiProgram": 72,
+      "tags": "warm,akoestisch,klassiek,jazz"
     },
     {
       "toneNumber": 183,
@@ -2828,7 +3043,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 73
+      "midiProgram": 73,
+      "tags": "zacht,helder,klassiek"
     },
     {
       "toneNumber": 184,
@@ -2841,7 +3057,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 74
+      "midiProgram": 74,
+      "tags": "zacht,helder,klassiek"
     },
     {
       "toneNumber": 185,
@@ -2854,7 +3071,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 75
+      "midiProgram": 75,
+      "tags": "zacht,akoestisch,folk"
     },
     {
       "toneNumber": 186,
@@ -2867,7 +3085,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 76
+      "midiProgram": 76,
+      "tags": "zacht,aards,wereldmuziek"
     },
     {
       "toneNumber": 187,
@@ -2880,7 +3099,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 77
+      "midiProgram": 77,
+      "tags": "zwevend,zacht,fx/cinematic"
     },
     {
       "toneNumber": 188,
@@ -2893,7 +3113,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 78
+      "midiProgram": 78,
+      "tags": "aards,zacht,wereldmuziek"
     },
     {
       "toneNumber": 189,
@@ -2906,7 +3127,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 79
+      "midiProgram": 79,
+      "tags": "helder,folk"
     },
     {
       "toneNumber": 190,
@@ -2919,7 +3141,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 80
+      "midiProgram": 80,
+      "tags": "zacht,aards,folk,wereldmuziek"
     },
     {
       "toneNumber": 191,
@@ -2932,7 +3155,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 81
+      "midiProgram": 81,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 192,
@@ -2945,7 +3169,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 81
+      "midiProgram": 81,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 193,
@@ -2958,7 +3183,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 2,
-      "midiProgram": 81
+      "midiProgram": 81,
+      "tags": "synthetisch,helder,electronic,zacht"
     },
     {
       "toneNumber": 194,
@@ -2971,7 +3197,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 82
+      "midiProgram": 82,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 195,
@@ -2984,7 +3211,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 82
+      "midiProgram": 82,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 196,
@@ -2997,7 +3225,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 2,
-      "midiProgram": 82
+      "midiProgram": 82,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 197,
@@ -3010,7 +3239,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 3,
-      "midiProgram": 82
+      "midiProgram": 82,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 198,
@@ -3023,7 +3253,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 4,
-      "midiProgram": 82
+      "midiProgram": 82,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 199,
@@ -3036,7 +3267,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 83
+      "midiProgram": 83,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 200,
@@ -3049,7 +3281,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 84
+      "midiProgram": 84,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 201,
@@ -3062,7 +3295,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 85
+      "midiProgram": 85,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 202,
@@ -3075,7 +3309,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 85
+      "midiProgram": 85,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 203,
@@ -3088,7 +3323,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 86
+      "midiProgram": 86,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 204,
@@ -3101,7 +3337,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 87
+      "midiProgram": 87,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 205,
@@ -3114,7 +3351,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 88
+      "midiProgram": 88,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 206,
@@ -3127,7 +3365,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 88
+      "midiProgram": 88,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 207,
@@ -3140,7 +3379,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 89
+      "midiProgram": 89,
+      "tags": "synthetisch,zwevend,zacht,electronic"
     },
     {
       "toneNumber": 208,
@@ -3153,7 +3393,8 @@
       "combinationSuggestions": "Onderlaag onder elke pianoklank voor modern-klassiek; in de mix laagpass-filteren rond 5 kHz.",
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 90
+      "midiProgram": 90,
+      "tags": "synthetisch,zwevend,zacht,electronic"
     },
     {
       "toneNumber": 209,
@@ -3166,7 +3407,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 90
+      "midiProgram": 90,
+      "tags": "synthetisch,zwevend,zacht,electronic"
     },
     {
       "toneNumber": 210,
@@ -3179,7 +3421,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 91
+      "midiProgram": 91,
+      "tags": "synthetisch,zwevend,zacht,electronic"
     },
     {
       "toneNumber": 211,
@@ -3192,7 +3435,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 92
+      "midiProgram": 92,
+      "tags": "synthetisch,zwevend,zacht,electronic"
     },
     {
       "toneNumber": 212,
@@ -3205,7 +3449,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 92
+      "midiProgram": 92,
+      "tags": "synthetisch,zwevend,zacht,electronic"
     },
     {
       "toneNumber": 213,
@@ -3218,7 +3463,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 93
+      "midiProgram": 93,
+      "tags": "synthetisch,zwevend,zacht,electronic"
     },
     {
       "toneNumber": 214,
@@ -3231,7 +3477,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 94
+      "midiProgram": 94,
+      "tags": "synthetisch,zwevend,zacht,electronic"
     },
     {
       "toneNumber": 215,
@@ -3244,7 +3491,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 95
+      "midiProgram": 95,
+      "tags": "synthetisch,zwevend,zacht,electronic"
     },
     {
       "toneNumber": 216,
@@ -3257,7 +3505,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 96
+      "midiProgram": 96,
+      "tags": "synthetisch,zwevend,zacht,electronic"
     },
     {
       "toneNumber": 217,
@@ -3270,7 +3519,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 97
+      "midiProgram": 97,
+      "tags": "synthetisch,zwevend,electronic,fx/cinematic"
     },
     {
       "toneNumber": 218,
@@ -3283,7 +3533,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 98
+      "midiProgram": 98,
+      "tags": "synthetisch,zwevend,electronic,fx/cinematic"
     },
     {
       "toneNumber": 219,
@@ -3296,7 +3547,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 99
+      "midiProgram": 99,
+      "tags": "synthetisch,zwevend,electronic,fx/cinematic"
     },
     {
       "toneNumber": 220,
@@ -3309,7 +3561,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 99
+      "midiProgram": 99,
+      "tags": "synthetisch,zwevend,electronic,fx/cinematic"
     },
     {
       "toneNumber": 221,
@@ -3322,7 +3575,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 100
+      "midiProgram": 100,
+      "tags": "synthetisch,zwevend,electronic,fx/cinematic"
     },
     {
       "toneNumber": 222,
@@ -3335,7 +3589,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 101
+      "midiProgram": 101,
+      "tags": "synthetisch,zwevend,electronic,fx/cinematic,helder"
     },
     {
       "toneNumber": 223,
@@ -3348,7 +3603,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 102
+      "midiProgram": 102,
+      "tags": "synthetisch,zwevend,electronic,fx/cinematic"
     },
     {
       "toneNumber": 224,
@@ -3361,7 +3617,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 103
+      "midiProgram": 103,
+      "tags": "synthetisch,zwevend,electronic,fx/cinematic"
     },
     {
       "toneNumber": 225,
@@ -3374,7 +3631,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 103
+      "midiProgram": 103,
+      "tags": "synthetisch,zwevend,electronic,fx/cinematic"
     },
     {
       "toneNumber": 226,
@@ -3387,7 +3645,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 2,
-      "midiProgram": 103
+      "midiProgram": 103,
+      "tags": "synthetisch,zwevend,electronic,fx/cinematic"
     },
     {
       "toneNumber": 227,
@@ -3400,7 +3659,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 104
+      "midiProgram": 104,
+      "tags": "synthetisch,zwevend,electronic,fx/cinematic"
     },
     {
       "toneNumber": 228,
@@ -3413,7 +3673,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 105
+      "midiProgram": 105,
+      "tags": "akoestisch,aards,wereldmuziek"
     },
     {
       "toneNumber": 229,
@@ -3426,7 +3687,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 105
+      "midiProgram": 105,
+      "tags": "akoestisch,aards,wereldmuziek"
     },
     {
       "toneNumber": 230,
@@ -3439,7 +3701,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 106
+      "midiProgram": 106,
+      "tags": "akoestisch,aards,wereldmuziek"
     },
     {
       "toneNumber": 231,
@@ -3452,7 +3715,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 107
+      "midiProgram": 107,
+      "tags": "akoestisch,aards,wereldmuziek"
     },
     {
       "toneNumber": 232,
@@ -3465,7 +3729,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 108
+      "midiProgram": 108,
+      "tags": "akoestisch,aards,wereldmuziek"
     },
     {
       "toneNumber": 233,
@@ -3478,7 +3743,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 108
+      "midiProgram": 108,
+      "tags": "akoestisch,aards,wereldmuziek"
     },
     {
       "toneNumber": 234,
@@ -3491,7 +3757,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 109
+      "midiProgram": 109,
+      "tags": "akoestisch,aards,wereldmuziek"
     },
     {
       "toneNumber": 235,
@@ -3504,7 +3771,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 110
+      "midiProgram": 110,
+      "tags": "akoestisch,aards,wereldmuziek"
     },
     {
       "toneNumber": 236,
@@ -3517,7 +3785,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 111
+      "midiProgram": 111,
+      "tags": "akoestisch,aards,wereldmuziek"
     },
     {
       "toneNumber": 237,
@@ -3530,7 +3799,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 112
+      "midiProgram": 112,
+      "tags": "akoestisch,aards,wereldmuziek"
     },
     {
       "toneNumber": 238,
@@ -3543,7 +3813,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 113
+      "midiProgram": 113,
+      "tags": "percussief,sprankelend,metallic"
     },
     {
       "toneNumber": 239,
@@ -3556,7 +3827,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 114
+      "midiProgram": 114,
+      "tags": "percussief,metallic,wereldmuziek"
     },
     {
       "toneNumber": 240,
@@ -3569,7 +3841,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 115
+      "midiProgram": 115,
+      "tags": "percussief,metallic,wereldmuziek"
     },
     {
       "toneNumber": 241,
@@ -3582,7 +3855,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 116
+      "midiProgram": 116,
+      "tags": "percussief,aards,wereldmuziek"
     },
     {
       "toneNumber": 242,
@@ -3595,7 +3869,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 116
+      "midiProgram": 116,
+      "tags": "percussief,aards,wereldmuziek"
     },
     {
       "toneNumber": 243,
@@ -3608,7 +3883,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 117
+      "midiProgram": 117,
+      "tags": "percussief,aards,wereldmuziek"
     },
     {
       "toneNumber": 244,
@@ -3621,7 +3897,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 117
+      "midiProgram": 117,
+      "tags": "percussief,klassiek"
     },
     {
       "toneNumber": 245,
@@ -3634,7 +3911,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 118
+      "midiProgram": 118,
+      "tags": "percussief,electronic"
     },
     {
       "toneNumber": 246,
@@ -3647,7 +3925,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 118
+      "midiProgram": 118,
+      "tags": "percussief,electronic"
     },
     {
       "toneNumber": 247,
@@ -3660,7 +3939,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 119
+      "midiProgram": 119,
+      "tags": "percussief,synthetisch,electronic"
     },
     {
       "toneNumber": 248,
@@ -3673,7 +3953,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 119
+      "midiProgram": 119,
+      "tags": "percussief,vintage,electronic"
     },
     {
       "toneNumber": 249,
@@ -3686,7 +3967,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 2,
-      "midiProgram": 119
+      "midiProgram": 119,
+      "tags": "percussief,synthetisch,electronic"
     },
     {
       "toneNumber": 250,
@@ -3699,7 +3981,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 120
+      "midiProgram": 120,
+      "tags": "zwevend,metallic,fx/cinematic"
     },
     {
       "toneNumber": 251,
@@ -3712,7 +3995,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 121
+      "midiProgram": 121,
+      "tags": "fx/cinematic,percussief"
     },
     {
       "toneNumber": 252,
@@ -3725,7 +4009,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 121
+      "midiProgram": 121,
+      "tags": "fx/cinematic,percussief"
     },
     {
       "toneNumber": 253,
@@ -3738,7 +4023,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 2,
-      "midiProgram": 121
+      "midiProgram": 121,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 254,
@@ -3751,7 +4037,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 122
+      "midiProgram": 122,
+      "tags": "fx/cinematic,percussief"
     },
     {
       "toneNumber": 255,
@@ -3764,7 +4051,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 122
+      "midiProgram": 122,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 256,
@@ -3777,7 +4065,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 123
+      "midiProgram": 123,
+      "tags": "fx/cinematic,zwevend"
     },
     {
       "toneNumber": 257,
@@ -3790,7 +4079,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 123
+      "midiProgram": 123,
+      "tags": "fx/cinematic,zwevend"
     },
     {
       "toneNumber": 258,
@@ -3803,7 +4093,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 2,
-      "midiProgram": 123
+      "midiProgram": 123,
+      "tags": "fx/cinematic,donker"
     },
     {
       "toneNumber": 259,
@@ -3816,7 +4107,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 3,
-      "midiProgram": 123
+      "midiProgram": 123,
+      "tags": "fx/cinematic,zwevend"
     },
     {
       "toneNumber": 260,
@@ -3829,7 +4121,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 4,
-      "midiProgram": 123
+      "midiProgram": 123,
+      "tags": "fx/cinematic,zwevend"
     },
     {
       "toneNumber": 261,
@@ -3842,7 +4135,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 5,
-      "midiProgram": 123
+      "midiProgram": 123,
+      "tags": "fx/cinematic,zwevend"
     },
     {
       "toneNumber": 262,
@@ -3855,7 +4149,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 124
+      "midiProgram": 124,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 263,
@@ -3868,7 +4163,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 124
+      "midiProgram": 124,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 264,
@@ -3881,7 +4177,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 2,
-      "midiProgram": 124
+      "midiProgram": 124,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 265,
@@ -3894,7 +4191,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 3,
-      "midiProgram": 124
+      "midiProgram": 124,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 266,
@@ -3907,7 +4205,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 125
+      "midiProgram": 125,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 267,
@@ -3920,7 +4219,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 125
+      "midiProgram": 125,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 268,
@@ -3933,7 +4233,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 2,
-      "midiProgram": 125
+      "midiProgram": 125,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 269,
@@ -3946,7 +4247,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 3,
-      "midiProgram": 125
+      "midiProgram": 125,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 270,
@@ -3959,7 +4261,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 4,
-      "midiProgram": 125
+      "midiProgram": 125,
+      "tags": "fx/cinematic,percussief,lo-fi"
     },
     {
       "toneNumber": 271,
@@ -3972,7 +4275,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 5,
-      "midiProgram": 125
+      "midiProgram": 125,
+      "tags": "fx/cinematic,zwevend"
     },
     {
       "toneNumber": 272,
@@ -3985,7 +4289,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 126
+      "midiProgram": 126,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 273,
@@ -3998,7 +4303,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 126
+      "midiProgram": 126,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 274,
@@ -4011,7 +4317,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 2,
-      "midiProgram": 126
+      "midiProgram": 126,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 275,
@@ -4024,7 +4331,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 3,
-      "midiProgram": 126
+      "midiProgram": 126,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 276,
@@ -4037,7 +4345,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 4,
-      "midiProgram": 126
+      "midiProgram": 126,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 277,
@@ -4050,7 +4359,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 5,
-      "midiProgram": 126
+      "midiProgram": 126,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 278,
@@ -4063,7 +4373,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 6,
-      "midiProgram": 126
+      "midiProgram": 126,
+      "tags": "fx/cinematic,zwevend"
     },
     {
       "toneNumber": 279,
@@ -4076,7 +4387,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 7,
-      "midiProgram": 126
+      "midiProgram": 126,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 280,
@@ -4089,7 +4401,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 8,
-      "midiProgram": 126
+      "midiProgram": 126,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 281,
@@ -4102,7 +4415,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 9,
-      "midiProgram": 126
+      "midiProgram": 126,
+      "tags": "fx/cinematic,percussief"
     },
     {
       "toneNumber": 282,
@@ -4115,7 +4429,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 127
+      "midiProgram": 127,
+      "tags": "fx/cinematic,percussief"
     },
     {
       "toneNumber": 283,
@@ -4128,7 +4443,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 127
+      "midiProgram": 127,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 284,
@@ -4141,7 +4457,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 2,
-      "midiProgram": 127
+      "midiProgram": 127,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 285,
@@ -4154,7 +4471,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 3,
-      "midiProgram": 127
+      "midiProgram": 127,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 286,
@@ -4167,7 +4485,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 4,
-      "midiProgram": 127
+      "midiProgram": 127,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 287,
@@ -4180,7 +4499,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 5,
-      "midiProgram": 127
+      "midiProgram": 127,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 288,
@@ -4193,7 +4513,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
-      "midiProgram": 128
+      "midiProgram": 128,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 289,
@@ -4206,7 +4527,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
-      "midiProgram": 128
+      "midiProgram": 128,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 290,
@@ -4219,7 +4541,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 2,
-      "midiProgram": 128
+      "midiProgram": 128,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 291,
@@ -4232,7 +4555,8 @@
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 3,
-      "midiProgram": 128
+      "midiProgram": 128,
+      "tags": "fx/cinematic"
     }
   ]
 }

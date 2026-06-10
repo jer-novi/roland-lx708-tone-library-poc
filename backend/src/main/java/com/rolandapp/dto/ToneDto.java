@@ -16,7 +16,8 @@ public record ToneDto(
         String shortSummary,
         Integer midiBankMsb,
         Integer midiBankLsb,
-        Integer midiProgram
+        Integer midiProgram,
+        String tags
 ) {
     public static ToneDto from(Tone tone) {
         return from(tone, null, null);
@@ -37,7 +38,8 @@ public record ToneDto(
                 shortSummary,
                 tone.getMidiBankMsb(),
                 tone.getMidiBankLsb(),
-                tone.getMidiProgram()
+                tone.getMidiProgram(),
+                tone.getTags()
         );
     }
 }
