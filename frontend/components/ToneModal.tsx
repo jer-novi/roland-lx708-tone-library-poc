@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useQuery } from "@tanstack/react-query";
 import DOMPurify from "dompurify";
 import { fetchWiki } from "@/lib/api";
@@ -134,6 +135,21 @@ export function ToneModal({ tone, onClose, onPlay, midiAvailable }: Props) {
               <p className="text-sm leading-relaxed">{tone.combinationSuggestions}</p>
             </section>
           )}
+
+          <section className="flex flex-wrap gap-3">
+            <Link
+              href="/gids#7-genre-tips"
+              className="rounded-lg border border-border-soft px-3 py-1.5 text-xs text-muted hover:text-accent"
+            >
+              📖 Zie opnametips per genre
+            </Link>
+            <Link
+              href="/studio"
+              className="rounded-lg border border-border-soft px-3 py-1.5 text-xs text-muted hover:text-accent"
+            >
+              🎛 Routing-setups voor je studio
+            </Link>
+          </section>
 
           <section>
             <h3 className="mb-1 text-xs font-semibold uppercase tracking-wider text-accent">
