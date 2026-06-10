@@ -16,6 +16,8 @@ export interface ToneDto {
   midiBankLsb: number | null;
   /** Program number 1-128 zoals in het document; verzonden wordt (midiProgram - 1) */
   midiProgram: number | null;
+  /** Nederlandse klank-tags (timbre + context), comma-separated */
+  tags: string | null;
 }
 
 export interface ToneCategoryDto {

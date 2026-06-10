@@ -67,6 +67,18 @@ class SeedAndApiSmokeTest {
     }
 
     @Test
+    void tagsAreSeededForAllTones() {
+        List<ToneDto> all = toneService.search(null, null, null);
+        assertThat(all).allSatisfy(tone -> assertThat(tone.tags()).isNotBlank());
+
+        ToneDto suitcase = toneService.search(null, null, "1976SuitCase").getFirst();
+        assertThat(suitcase.tags().split(",")).contains("vintage", "warm", "jazz", "ballad");
+
+        ToneDto warmPad = toneService.search("Other", "GM2", "Warm Pad").getFirst();
+        assertThat(warmPad.tags().split(",")).contains("synthetisch", "zwevend", "electronic");
+    }
+
+    @Test
     void gm2RangeIsComplete() {
         List<ToneDto> gm2 = toneService.search("Other", "GM2", null);
         assertThat(gm2).hasSize(256);

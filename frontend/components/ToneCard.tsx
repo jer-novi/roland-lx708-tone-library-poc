@@ -3,6 +3,7 @@
 import Image from "next/image";
 import type { ToneDto } from "@/lib/types";
 import { toneKey } from "@/lib/types";
+import { parseTags } from "@/lib/collections";
 import { PlayToneButton } from "@/components/PlayToneButton";
 
 const CATEGORY_COLORS: Record<string, string> = {
@@ -43,6 +44,8 @@ export function ToneCard({
   const key = toneKey(tone);
   const badge = CATEGORY_COLORS[tone.category] ?? CATEGORY_COLORS.Other;
   const hasSummary = Boolean(tone.shortSummary);
+  const tags = parseTags(tone.tags);
+  const visibleTags = isExpanded ? tags : tags.slice(0, 2);
 
   return (
     <div
@@ -87,6 +90,14 @@ export function ToneCard({
                 {tone.subCategory}
               </span>
             )}
+            {visibleTags.map((tag) => (
+              <span
+                key={tag}
+                className="rounded-full border border-border-soft px-2 py-0.5 text-[11px] text-muted/80"
+              >
+                {tag}
+              </span>
+            ))}
             <PlayToneButton
               tone={tone}
               onPlay={onPlay}

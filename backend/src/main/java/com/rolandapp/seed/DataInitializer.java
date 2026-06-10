@@ -105,7 +105,8 @@ public class DataInitializer implements CommandLineRunner {
                 || !Objects.equals(tone.getCombinationSuggestions(), seed.combinationSuggestions())
                 || !Objects.equals(tone.getMidiBankMsb(), seed.midiBankMsb())
                 || !Objects.equals(tone.getMidiBankLsb(), seed.midiBankLsb())
-                || !Objects.equals(tone.getMidiProgram(), seed.midiProgram());
+                || !Objects.equals(tone.getMidiProgram(), seed.midiProgram())
+                || !Objects.equals(tone.getTags(), seed.tags());
     }
 
     private void applySeed(Tone tone, ToneSeedFile.ToneSeed seed) {
@@ -118,5 +119,6 @@ public class DataInitializer implements CommandLineRunner {
         tone.setMidiBankMsb(seed.midiBankMsb());
         tone.setMidiBankLsb(seed.midiBankLsb());
         tone.setMidiProgram(seed.midiProgram());
+        tone.setTags(seed.tags());
     }
 }

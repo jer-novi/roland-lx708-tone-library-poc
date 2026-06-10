@@ -7,6 +7,8 @@ import type { ToneDto } from "@/lib/types";
 import { toneKey } from "@/lib/types";
 import { useFavorites } from "@/hooks/useFavorites";
 import { useMidi } from "@/hooks/useMidi";
+import type { Collection } from "@/lib/collections";
+import { collectionsFor, parseTags } from "@/lib/collections";
 import { FilterBar } from "@/components/FilterBar";
 import { MidiBar } from "@/components/MidiBar";
 import { ToneCard } from "@/components/ToneCard";
@@ -17,6 +19,10 @@ export default function Home() {
   const [subCategory, setSubCategory] = useState<string | null>(null);
   const [query, setQuery] = useState("");
   const [favoritesOnly, setFavoritesOnly] = useState(false);
+  const [collection, setCollection] = useState<Collection | null>(null);
+  const [selectedTags, setSelectedTags] = useState<ReadonlySet<string>>(
+    new Set()
+  );
   const [openTone, setOpenTone] = useState<ToneDto | null>(null);
   const [expandedKey, setExpandedKey] = useState<string | null>(null);
   const { favorites, toggle } = useFavorites();
@@ -34,6 +40,28 @@ export default function Home() {
     [data]
   );
 
+  const allTags = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const t of data?.tones ?? []) {
+      for (const tag of parseTags(t.tags)) {
+        counts.set(tag, (counts.get(tag) ?? 0) + 1);
+      }
+    }
+    return [...counts.entries()]
+      .sort((a, b) => b[1] - a[1])
+      .map(([tag, count]) => ({ tag, count }));
+  }, [data]);
+
+  const collectionCounts = useMemo(() => {
+    const counts: Record<string, number> = {};
+    for (const t of data?.tones ?? []) {
+      for (const col of collectionsFor(t)) {
+        counts[col] = (counts[col] ?? 0) + 1;
+      }
+    }
+    return counts;
+  }, [data]);
+
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
     return (data?.tones ?? []).filter((t) => {
@@ -41,10 +69,32 @@ export default function Home() {
       if (category === "Other" && subCategory && t.subCategory !== subCategory)
         return false;
       if (favoritesOnly && !favorites.has(toneKey(t))) return false;
+      if (collection && !collectionsFor(t).includes(collection)) return false;
+      if (selectedTags.size > 0) {
+        const tags = parseTags(t.tags);
+        if (!tags.some((tag) => selectedTags.has(tag))) return false;
+      }
       if (q && !t.name.toLowerCase().includes(q)) return false;
       return true;
     });
-  }, [data, category, subCategory, query, favoritesOnly, favorites]);
+  }, [
+    data,
+    category,
+    subCategory,
+    query,
+    favoritesOnly,
+    favorites,
+    collection,
+    selectedTags,
+  ]);
+
+  const toggleTag = (tag: string) =>
+    setSelectedTags((prev) => {
+      const next = new Set(prev);
+      if (next.has(tag)) next.delete(tag);
+      else next.add(tag);
+      return next;
+    });
 
   return (
     <div className="mx-auto w-full max-w-6xl flex-1 px-4 pb-16 sm:px-6">
@@ -80,6 +130,13 @@ export default function Home() {
         onSubCategory={setSubCategory}
         onQuery={setQuery}
         onFavoritesOnly={setFavoritesOnly}
+        activeCollection={collection}
+        collectionCounts={collectionCounts}
+        allTags={allTags}
+        selectedTags={selectedTags}
+        onCollection={setCollection}
+        onToggleTag={toggleTag}
+        onClearTags={() => setSelectedTags(new Set())}
       />
 
       <MidiBar midi={midi} />
