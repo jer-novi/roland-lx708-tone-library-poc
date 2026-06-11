@@ -73,11 +73,20 @@ def main() -> int:
                 "source": "site-instruments",
             }
 
-    # Voeg MIMO-references toe (momenteel leeg, maar plek gereserveerd)
-    for composite_key in mimo_refs.get("matches", {}):
-        if composite_key in tones_out:
-            mimo_info = mimo_refs["matches"][composite_key]
-            tones_out[composite_key]["image_refs"]["mimo"] = mimo_info
+    # Voeg MIMO-references toe (per wiki-titel, dan op alle tonen met die wiki-titel)
+    mimo_by_wiki = mimo_refs.get("matches", {})  # { "<wiki_title>": [{mimo_id, ...}, ...] }
+    for composite_key, info in tones_out.items():
+        wiki = info.get("wikipedia_page_title")
+        if wiki and wiki in mimo_by_wiki:
+            mimo_info = mimo_by_wiki[wiki]
+            tones_out[composite_key]["image_refs"]["mimo"] = {
+                "matched_via_wiki_title": wiki,
+                "mimo_id": mimo_info[0].get("mimo_id"),
+                "title": mimo_info[0].get("title"),
+                "detail_url": mimo_info[0].get("detail_url"),
+                "image_url": mimo_info[0].get("image_url"),
+                "source": "mimo-international.com",
+            }
 
     # Voeg fallback-info toe voor tonen zonder Wiki-titel
     for composite_key, info in roland_hs["matches"].items():
@@ -107,7 +116,7 @@ def main() -> int:
         "sources": {
             "hs_tree": "allthemusicalinstrumentsoftheworld.com/ClassificationofMusicalInstruments",
             "site_image_mapping": "scripts/scrape_instrument_site.py + scripts/match_instrument_images.py",
-            "mimo_image_mapping": "MIMO search skipped — site not reachable",
+            "mimo_image_mapping": "scripts/scrape_mimo.py — WCF Search.svc POST (mimo-international.com)",
         },
         "stats": stats,
         "hs_tree": hs_tree,

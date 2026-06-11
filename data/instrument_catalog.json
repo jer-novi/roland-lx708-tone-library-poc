@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-11T16:43:17.299024+00:00",
+  "generated_at": "2026-06-11T17:32:35.173714+00:00",
   "version": 1,
   "sources": {
     "hs_tree": "allthemusicalinstrumentsoftheworld.com/ClassificationofMusicalInstruments",
     "site_image_mapping": "scripts/scrape_instrument_site.py + scripts/match_instrument_images.py",
-    "mimo_image_mapping": "MIMO search skipped — site not reachable"
+    "mimo_image_mapping": "scripts/scrape_mimo.py — WCF Search.svc POST (mimo-international.com)"
   },
   "stats": {
     "total_tones": 324,
@@ -12,7 +12,7 @@
     "with_image_ref": 320,
     "with_site_image": 133,
     "with_wiki_page": 320,
-    "with_mimo_ref": 0,
+    "with_mimo_ref": 203,
     "hs_tree_total_instruments": 350
   },
   "hs_tree": {
@@ -5487,6 +5487,14 @@
           "site_name": "Grand piano",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Grand piano",
+          "mimo_id": "MINIM_UK_UEDIN_4337",
+          "title": "Grand pianoforte.",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_4337/grand-pianoforte",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/UEDIN/IMAGE/0035535c-0001.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Grand piano",
           "source": "wikipedia-summary"
@@ -5513,6 +5521,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1444611684.jpg",
           "site_name": "Grand piano",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Grand piano",
+          "mimo_id": "MINIM_UK_UEDIN_4337",
+          "title": "Grand pianoforte.",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_4337/grand-pianoforte",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/UEDIN/IMAGE/0035535c-0001.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Grand piano",
@@ -5585,6 +5601,14 @@
           "site_name": "Rhodes piano",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Rhodes piano",
+          "mimo_id": "MINIM_UK_22679",
+          "title": "electric piano",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_22679/electric-piano",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/LDHRN/IMAGE/89877609a3a15a43d65b3ccb2e9d579b.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Rhodes piano",
           "source": "wikipedia-summary"
@@ -5612,6 +5636,14 @@
           "site_name": "Rhodes piano",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Rhodes piano",
+          "mimo_id": "MINIM_UK_22679",
+          "title": "electric piano",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_22679/electric-piano",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/LDHRN/IMAGE/89877609a3a15a43d65b3ccb2e9d579b.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Rhodes piano",
           "source": "wikipedia-summary"
@@ -5634,6 +5666,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Electric piano",
+          "mimo_id": "MINIM_UK_UEDIN_3843",
+          "title": "Electric piano.",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_3843/electric-piano",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/UEDIN/IMAGE/0035247c.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Electric piano",
           "source": "wikipedia-summary"
@@ -5700,6 +5740,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Electric piano",
+          "mimo_id": "MINIM_UK_UEDIN_3843",
+          "title": "Electric piano.",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_3843/electric-piano",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/UEDIN/IMAGE/0035247c.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Electric piano",
           "source": "wikipedia-summary"
@@ -5797,6 +5845,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1407547889.jpg",
           "site_name": "Rhodes piano",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Rhodes piano",
+          "mimo_id": "MINIM_UK_22679",
+          "title": "electric piano",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_22679/electric-piano",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/LDHRN/IMAGE/89877609a3a15a43d65b3ccb2e9d579b.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Rhodes piano",
@@ -5979,6 +6035,14 @@
           "site_name": "Harp",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Harp",
+          "mimo_id": "MINIM_UK_44291",
+          "title": "Harp",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_44291/harp",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/MAM/IMAGE/4959990076f57079473251f0e0e8b688.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Harp",
           "source": "wikipedia-summary"
@@ -6001,6 +6065,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Violin",
+          "mimo_id": "MINIM_UK_5001",
+          "title": "Violin",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_5001/violin",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/CALMG/IMAGE/ad6b0ea6ce0917d73e3e896f3fe36a70.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Violin",
           "source": "wikipedia-summary"
@@ -6050,6 +6122,14 @@
           "site_name": "Flute",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Flute",
+          "mimo_id": "MINIM_UK_41114",
+          "title": "Flute.",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_41114/flute",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/RCS/IMAGE/RCS0176_20120206_Master_PREV.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Flute",
           "source": "wikipedia-summary"
@@ -6077,6 +6157,14 @@
           "site_name": "Cello",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Cello",
+          "mimo_id": "OAI_RMAH_110983_NL",
+          "title": "Cello",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110983_NL/cello",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/JT0038_1.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Cello",
           "source": "wikipedia-summary"
@@ -6099,6 +6187,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Brass section",
+          "mimo_id": "MINIM_UK_42190",
+          "title": "Section of bass drum",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_42190/section-of-bass-drum",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/NAM/IMAGE/96c8ac6306b6dc3bea1f383683c6caa2.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Brass section",
           "source": "wikipedia-summary"
@@ -6165,6 +6261,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Synthesizer",
+          "mimo_id": "OAI_KBH_2568",
+          "title": "synthesizer",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_2568/synthesizer",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/KBH/IMAGE/2002-21_1.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Synthesizer",
           "source": "wikipedia-summary"
@@ -6191,6 +6295,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1407366821.jpg",
           "site_name": "Piano",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Piano",
+          "mimo_id": "MINIM_UK_39826",
+          "title": "Pianola",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_39826/pianola",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/MILSH/IMAGE/3498af4572c71c76a244cb2eb2f98d6f.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Piano",
@@ -6267,6 +6379,14 @@
           "site_name": "Pipe organ",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Pipe organ",
+          "mimo_id": "MINIM_UK_9864",
+          "title": "Organ pipes",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_9864/organ-pipes",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/GB-Lcm/IMAGE/RCM0690_20161021_111_Web.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Pipe organ",
           "source": "wikipedia-summary"
@@ -6287,6 +6407,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Flue pipe",
+          "mimo_id": "MINIM_UK_4260",
+          "title": "Tabor Pipe;Duct Flue ;Flavio",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_4260/tabor-pipe-duct-flue-flavio",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/OXFBC/IMAGE/x046.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Flue pipe",
           "source": "wikipedia-summary"
@@ -6312,6 +6440,14 @@
           "site_name": "Hammond organ",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Hammond organ",
+          "mimo_id": "SHMT_31511",
+          "title": "HAMMOND ORGAN; ORGANOA",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/SHMT_31511/hammond-organ-organoa",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/SHMT/IMAGE/5872_1.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Hammond organ",
           "source": "wikipedia-summary"
@@ -6336,6 +6472,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1444638272.jpg",
           "site_name": "Hammond organ",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Hammond organ",
+          "mimo_id": "SHMT_31511",
+          "title": "HAMMOND ORGAN; ORGANOA",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/SHMT_31511/hammond-organ-organoa",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/SHMT/IMAGE/5872_1.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Hammond organ",
@@ -6363,6 +6507,14 @@
           "site_name": "Pipe organ",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Pipe organ",
+          "mimo_id": "MINIM_UK_9864",
+          "title": "Organ pipes",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_9864/organ-pipes",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/GB-Lcm/IMAGE/RCM0690_20161021_111_Web.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Pipe organ",
           "source": "wikipedia-summary"
@@ -6388,6 +6540,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1407367097.jpg",
           "site_name": "Pipe organ",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Pipe organ",
+          "mimo_id": "MINIM_UK_9864",
+          "title": "Organ pipes",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_9864/organ-pipes",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/GB-Lcm/IMAGE/RCM0690_20161021_111_Web.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Pipe organ",
@@ -6435,6 +6595,14 @@
           "site_name": "Pipe organ",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Pipe organ",
+          "mimo_id": "MINIM_UK_9864",
+          "title": "Organ pipes",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_9864/organ-pipes",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/GB-Lcm/IMAGE/RCM0690_20161021_111_Web.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Pipe organ",
           "source": "wikipedia-summary"
@@ -6459,6 +6627,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1444638272.jpg",
           "site_name": "Hammond organ",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Hammond organ",
+          "mimo_id": "SHMT_31511",
+          "title": "HAMMOND ORGAN; ORGANOA",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/SHMT_31511/hammond-organ-organoa",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/SHMT/IMAGE/5872_1.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Hammond organ",
@@ -6485,6 +6661,14 @@
           "site_name": "Hammond organ",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Hammond organ",
+          "mimo_id": "SHMT_31511",
+          "title": "HAMMOND ORGAN; ORGANOA",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/SHMT_31511/hammond-organ-organoa",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/SHMT/IMAGE/5872_1.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Hammond organ",
           "source": "wikipedia-summary"
@@ -6509,6 +6693,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1444638272.jpg",
           "site_name": "Hammond organ",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Hammond organ",
+          "mimo_id": "SHMT_31511",
+          "title": "HAMMOND ORGAN; ORGANOA",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/SHMT_31511/hammond-organ-organoa",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/SHMT/IMAGE/5872_1.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Hammond organ",
@@ -6550,6 +6742,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Upright piano",
+          "mimo_id": "MINIM_UK_UEDIN_3251",
+          "title": "Upright pianoforte.",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_3251/upright-pianoforte",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/UEDIN/IMAGE/0034712c-0001.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Upright piano",
           "source": "wikipedia-summary"
@@ -6570,6 +6770,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Upright piano",
+          "mimo_id": "MINIM_UK_UEDIN_3251",
+          "title": "Upright pianoforte.",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_3251/upright-pianoforte",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/UEDIN/IMAGE/0034712c-0001.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Upright piano",
           "source": "wikipedia-summary"
@@ -6590,6 +6798,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Upright piano",
+          "mimo_id": "MINIM_UK_UEDIN_3251",
+          "title": "Upright pianoforte.",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_3251/upright-pianoforte",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/UEDIN/IMAGE/0034712c-0001.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Upright piano",
           "source": "wikipedia-summary"
@@ -6655,6 +6871,14 @@
           "site_name": "Fortepiano",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Fortepiano",
+          "mimo_id": "OAI_CIMU_ALOES_0854800",
+          "title": "Fortepiano carré",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_0854800/fortepiano-carre",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/MF-NIC/IMAGE/MFIM000027002.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Fortepiano",
           "source": "wikipedia-summary"
@@ -6679,6 +6903,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1444523886.jpg",
           "site_name": "Fortepiano",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Fortepiano",
+          "mimo_id": "OAI_CIMU_ALOES_0854800",
+          "title": "Fortepiano carré",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_0854800/fortepiano-carre",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/MF-NIC/IMAGE/MFIM000027002.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Fortepiano",
@@ -6705,6 +6937,14 @@
           "site_name": "Fortepiano",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Fortepiano",
+          "mimo_id": "OAI_CIMU_ALOES_0854800",
+          "title": "Fortepiano carré",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_0854800/fortepiano-carre",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/MF-NIC/IMAGE/MFIM000027002.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Fortepiano",
           "source": "wikipedia-summary"
@@ -6730,6 +6970,14 @@
           "site_name": "Harpsichord",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Harpsichord",
+          "mimo_id": "MINIM_UK_2561",
+          "title": "Harpsichord",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_2561/harpsichord",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/RNCM/IMAGE/d84693ada86afaf38f9b62c6059464dd.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Harpsichord",
           "source": "wikipedia-summary"
@@ -6754,6 +7002,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1444638883.jpg",
           "site_name": "Harpsichord",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Harpsichord",
+          "mimo_id": "MINIM_UK_2561",
+          "title": "Harpsichord",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_2561/harpsichord",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/RNCM/IMAGE/d84693ada86afaf38f9b62c6059464dd.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Harpsichord",
@@ -6840,6 +7096,14 @@
           "site_name": "Drum kit",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Drum kit",
+          "mimo_id": "MINIM_UK_22648",
+          "title": "drum set",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_22648/drum-set",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/LDHRN/IMAGE/997a95ed4093e582c2b2e92dcb8bf846.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Drum kit",
           "source": "wikipedia-summary"
@@ -6864,6 +7128,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1444247174.jpg",
           "site_name": "Drum kit",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Drum kit",
+          "mimo_id": "MINIM_UK_22648",
+          "title": "drum set",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_22648/drum-set",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/LDHRN/IMAGE/997a95ed4093e582c2b2e92dcb8bf846.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Drum kit",
@@ -6890,6 +7162,14 @@
           "site_name": "Drum kit",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Drum kit",
+          "mimo_id": "MINIM_UK_22648",
+          "title": "drum set",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_22648/drum-set",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/LDHRN/IMAGE/997a95ed4093e582c2b2e92dcb8bf846.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Drum kit",
           "source": "wikipedia-summary"
@@ -6910,6 +7190,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Electronic drum",
+          "mimo_id": "OAI_CIMU_ALOES_1005176",
+          "title": "Boîte à rythme Linn programmable drum machine / sequencer - Unité centrale",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_1005176/boite-a-rythme-linn-programmable-drum-machine-sequencer-unite-centrale",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/CM/IMAGE/CMIM000032100.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Electronic drum",
           "source": "wikipedia-summary"
@@ -6955,6 +7243,14 @@
           "site_name": "Drum kit",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Drum kit",
+          "mimo_id": "MINIM_UK_22648",
+          "title": "drum set",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_22648/drum-set",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/LDHRN/IMAGE/997a95ed4093e582c2b2e92dcb8bf846.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Drum kit",
           "source": "wikipedia-summary"
@@ -6995,6 +7291,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Percussion section",
+          "mimo_id": "MINIM_UK_42190",
+          "title": "Section of bass drum",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_42190/section-of-bass-drum",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/NAM/IMAGE/96c8ac6306b6dc3bea1f383683c6caa2.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Percussion section",
           "source": "wikipedia-summary"
@@ -7040,6 +7344,14 @@
           "site_name": "Piano",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Piano",
+          "mimo_id": "MINIM_UK_39826",
+          "title": "Pianola",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_39826/pianola",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/MILSH/IMAGE/3498af4572c71c76a244cb2eb2f98d6f.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Piano",
           "source": "wikipedia-summary"
@@ -7064,6 +7376,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1407366821.jpg",
           "site_name": "Piano",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Piano",
+          "mimo_id": "MINIM_UK_39826",
+          "title": "Pianola",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_39826/pianola",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/MILSH/IMAGE/3498af4572c71c76a244cb2eb2f98d6f.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Piano",
@@ -7090,6 +7410,14 @@
           "site_name": "Piano",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Piano",
+          "mimo_id": "MINIM_UK_39826",
+          "title": "Pianola",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_39826/pianola",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/MILSH/IMAGE/3498af4572c71c76a244cb2eb2f98d6f.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Piano",
           "source": "wikipedia-summary"
@@ -7114,6 +7442,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1407366821.jpg",
           "site_name": "Piano",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Piano",
+          "mimo_id": "MINIM_UK_39826",
+          "title": "Pianola",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_39826/pianola",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/MILSH/IMAGE/3498af4572c71c76a244cb2eb2f98d6f.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Piano",
@@ -7140,6 +7476,14 @@
           "site_name": "Piano",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Piano",
+          "mimo_id": "MINIM_UK_39826",
+          "title": "Pianola",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_39826/pianola",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/MILSH/IMAGE/3498af4572c71c76a244cb2eb2f98d6f.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Piano",
           "source": "wikipedia-summary"
@@ -7165,6 +7509,14 @@
           "site_name": "Piano",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Piano",
+          "mimo_id": "MINIM_UK_39826",
+          "title": "Pianola",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_39826/pianola",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/MILSH/IMAGE/3498af4572c71c76a244cb2eb2f98d6f.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Piano",
           "source": "wikipedia-summary"
@@ -7189,6 +7541,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1407366821.jpg",
           "site_name": "Piano",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Piano",
+          "mimo_id": "MINIM_UK_39826",
+          "title": "Pianola",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_39826/pianola",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/MILSH/IMAGE/3498af4572c71c76a244cb2eb2f98d6f.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Piano",
@@ -7255,6 +7615,14 @@
           "site_name": "Piano",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Piano",
+          "mimo_id": "MINIM_UK_39826",
+          "title": "Pianola",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_39826/pianola",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/MILSH/IMAGE/3498af4572c71c76a244cb2eb2f98d6f.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Piano",
           "source": "wikipedia-summary"
@@ -7275,6 +7643,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Electric piano",
+          "mimo_id": "MINIM_UK_UEDIN_3843",
+          "title": "Electric piano.",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_3843/electric-piano",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/UEDIN/IMAGE/0035247c.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Electric piano",
           "source": "wikipedia-summary"
@@ -7315,6 +7691,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Electric piano",
+          "mimo_id": "MINIM_UK_UEDIN_3843",
+          "title": "Electric piano.",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_3843/electric-piano",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/UEDIN/IMAGE/0035247c.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Electric piano",
           "source": "wikipedia-summary"
@@ -7340,6 +7724,14 @@
           "site_name": "Piano",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Piano",
+          "mimo_id": "MINIM_UK_39826",
+          "title": "Pianola",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_39826/pianola",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/MILSH/IMAGE/3498af4572c71c76a244cb2eb2f98d6f.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Piano",
           "source": "wikipedia-summary"
@@ -7360,6 +7752,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Electric piano",
+          "mimo_id": "MINIM_UK_UEDIN_3843",
+          "title": "Electric piano.",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_3843/electric-piano",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/UEDIN/IMAGE/0035247c.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Electric piano",
           "source": "wikipedia-summary"
@@ -7420,6 +7820,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Electric piano",
+          "mimo_id": "MINIM_UK_UEDIN_3843",
+          "title": "Electric piano.",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_3843/electric-piano",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/UEDIN/IMAGE/0035247c.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Electric piano",
           "source": "wikipedia-summary"
@@ -7444,6 +7852,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1444638883.jpg",
           "site_name": "Harpsichord",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Harpsichord",
+          "mimo_id": "MINIM_UK_2561",
+          "title": "Harpsichord",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_2561/harpsichord",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/RNCM/IMAGE/d84693ada86afaf38f9b62c6059464dd.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Harpsichord",
@@ -7470,6 +7886,14 @@
           "site_name": "Harpsichord",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Harpsichord",
+          "mimo_id": "MINIM_UK_2561",
+          "title": "Harpsichord",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_2561/harpsichord",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/RNCM/IMAGE/d84693ada86afaf38f9b62c6059464dd.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Harpsichord",
           "source": "wikipedia-summary"
@@ -7495,6 +7919,14 @@
           "site_name": "Harpsichord",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Harpsichord",
+          "mimo_id": "MINIM_UK_2561",
+          "title": "Harpsichord",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_2561/harpsichord",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/RNCM/IMAGE/d84693ada86afaf38f9b62c6059464dd.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Harpsichord",
           "source": "wikipedia-summary"
@@ -7519,6 +7951,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1444638883.jpg",
           "site_name": "Harpsichord",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Harpsichord",
+          "mimo_id": "MINIM_UK_2561",
+          "title": "Harpsichord",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_2561/harpsichord",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/RNCM/IMAGE/d84693ada86afaf38f9b62c6059464dd.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Harpsichord",
@@ -7598,6 +8038,14 @@
           "site_name": "Celesta",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Celesta",
+          "mimo_id": "OAI_MDMB_309605",
+          "title": "celesta",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_MDMB_309605/celesta",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MDMB/IMAGE/MDMB001465_ID_20140922_000_002_02.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Celesta",
           "source": "wikipedia-summary"
@@ -7626,6 +8074,14 @@
           "site_name": "Glockenspiel",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Glockenspiel",
+          "mimo_id": "MINIM_UK_10142",
+          "title": "Glockenspiel",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_10142/glockenspiel",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/LDRAM/IMAGE/2012-481a_s.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Glockenspiel",
           "source": "wikipedia-summary"
@@ -7646,6 +8102,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Music box",
+          "mimo_id": "MINIM_UK_9907",
+          "title": "Musical box",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_9907/musical-box",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/GB-Lcm/IMAGE/RCM0738.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Music box",
           "source": "wikipedia-summary"
@@ -7673,6 +8137,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1443662295.jpg",
           "site_name": "Vibraphone",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Vibraphone",
+          "mimo_id": "MINIM_UK_UEDIN_1791",
+          "title": "Vibraphone.",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_1791/vibraphone",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/UEDIN/IMAGE/0033654c.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Vibraphone",
@@ -7702,6 +8174,14 @@
           "site_name": "Vibraphone",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Vibraphone",
+          "mimo_id": "MINIM_UK_UEDIN_1791",
+          "title": "Vibraphone.",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_1791/vibraphone",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/UEDIN/IMAGE/0033654c.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Vibraphone",
           "source": "wikipedia-summary"
@@ -7729,6 +8209,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1407636506.jpg",
           "site_name": "Marimba",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Marimba",
+          "mimo_id": "OAI_MDMB_309369",
+          "title": "marimba",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_MDMB_309369/marimba",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MDMB/IMAGE/MDMB000930_ID_20140915_000_002_02.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Marimba",
@@ -7758,6 +8246,14 @@
           "site_name": "Marimba",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Marimba",
+          "mimo_id": "OAI_MDMB_309369",
+          "title": "marimba",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_MDMB_309369/marimba",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MDMB/IMAGE/MDMB000930_ID_20140915_000_002_02.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Marimba",
           "source": "wikipedia-summary"
@@ -7786,6 +8282,14 @@
           "site_name": "Xylophone",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Xylophone",
+          "mimo_id": "MINIM_UK_44258",
+          "title": "Xylophone",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_44258/xylophone",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/MAM/IMAGE/2869c49b16e7f405dbd7943b62a0dbc5.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Xylophone",
           "source": "wikipedia-summary"
@@ -7813,6 +8317,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1443578666.jpg",
           "site_name": "Tubular bells",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Tubular bells",
+          "mimo_id": "MINIM_UK_UEDIN_1175",
+          "title": "Set of tubular bells.",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_1175/set-of-tubular-bells",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/UEDIN/IMAGE/0033115c.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Tubular bells",
@@ -7865,6 +8377,14 @@
           "site_name": "Carillon",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Carillon",
+          "mimo_id": "MINIM_UK_4863",
+          "title": "Carillon",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_4863/carillon",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/AVBGB/IMAGE/41761b42d1b38a3a7844527c39f8ab85.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Carillon",
           "source": "wikipedia-summary"
@@ -7892,6 +8412,14 @@
           "site_name": "Santur",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Santur",
+          "mimo_id": "OAI_RMAH_111609_NL",
+          "title": "Santur",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_111609_NL/santur",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1972.062_4.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Santur",
           "source": "wikipedia-summary"
@@ -7917,6 +8445,14 @@
           "site_name": "Hammond organ",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Hammond organ",
+          "mimo_id": "SHMT_31511",
+          "title": "HAMMOND ORGAN; ORGANOA",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/SHMT_31511/hammond-organ-organoa",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/SHMT/IMAGE/5872_1.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Hammond organ",
           "source": "wikipedia-summary"
@@ -7941,6 +8477,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1444638272.jpg",
           "site_name": "Hammond organ",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Hammond organ",
+          "mimo_id": "SHMT_31511",
+          "title": "HAMMOND ORGAN; ORGANOA",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/SHMT_31511/hammond-organ-organoa",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/SHMT/IMAGE/5872_1.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Hammond organ",
@@ -7987,6 +8531,14 @@
           "site_name": "Hammond organ",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Hammond organ",
+          "mimo_id": "SHMT_31511",
+          "title": "HAMMOND ORGAN; ORGANOA",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/SHMT_31511/hammond-organ-organoa",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/SHMT/IMAGE/5872_1.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Hammond organ",
           "source": "wikipedia-summary"
@@ -8011,6 +8563,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1444638272.jpg",
           "site_name": "Hammond organ",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Hammond organ",
+          "mimo_id": "SHMT_31511",
+          "title": "HAMMOND ORGAN; ORGANOA",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/SHMT_31511/hammond-organ-organoa",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/SHMT/IMAGE/5872_1.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Hammond organ",
@@ -8037,6 +8597,14 @@
           "site_name": "Hammond organ",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Hammond organ",
+          "mimo_id": "SHMT_31511",
+          "title": "HAMMOND ORGAN; ORGANOA",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/SHMT_31511/hammond-organ-organoa",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/SHMT/IMAGE/5872_1.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Hammond organ",
           "source": "wikipedia-summary"
@@ -8062,6 +8630,14 @@
           "site_name": "Hammond organ",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Hammond organ",
+          "mimo_id": "SHMT_31511",
+          "title": "HAMMOND ORGAN; ORGANOA",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/SHMT_31511/hammond-organ-organoa",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/SHMT/IMAGE/5872_1.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Hammond organ",
           "source": "wikipedia-summary"
@@ -8086,6 +8662,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1444638272.jpg",
           "site_name": "Hammond organ",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Hammond organ",
+          "mimo_id": "SHMT_31511",
+          "title": "HAMMOND ORGAN; ORGANOA",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/SHMT_31511/hammond-organ-organoa",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/SHMT/IMAGE/5872_1.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Hammond organ",
@@ -8113,6 +8697,14 @@
           "site_name": "Pipe organ",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Pipe organ",
+          "mimo_id": "MINIM_UK_9864",
+          "title": "Organ pipes",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_9864/organ-pipes",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/GB-Lcm/IMAGE/RCM0690_20161021_111_Web.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Pipe organ",
           "source": "wikipedia-summary"
@@ -8139,6 +8731,14 @@
           "site_name": "Pipe organ",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Pipe organ",
+          "mimo_id": "MINIM_UK_9864",
+          "title": "Organ pipes",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_9864/organ-pipes",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/GB-Lcm/IMAGE/RCM0690_20161021_111_Web.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Pipe organ",
           "source": "wikipedia-summary"
@@ -8164,6 +8764,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1407367097.jpg",
           "site_name": "Pipe organ",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Pipe organ",
+          "mimo_id": "MINIM_UK_9864",
+          "title": "Organ pipes",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_9864/organ-pipes",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/GB-Lcm/IMAGE/RCM0690_20161021_111_Web.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Pipe organ",
@@ -8239,6 +8847,14 @@
           "site_name": "Accordion",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Accordion",
+          "mimo_id": "MINIM_UK_UEDIN_3806",
+          "title": "Piano accordion.",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_3806/piano-accordion",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/UEDIN/IMAGE/0035213c.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Accordion",
           "source": "wikipedia-summary"
@@ -8265,6 +8881,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1407558678.jpg",
           "site_name": "Accordion",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Accordion",
+          "mimo_id": "MINIM_UK_UEDIN_3806",
+          "title": "Piano accordion.",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_3806/piano-accordion",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/UEDIN/IMAGE/0035213c.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Accordion",
@@ -8293,6 +8917,14 @@
           "site_name": "Harmonica",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Harmonica",
+          "mimo_id": "MINIM_UK_22676",
+          "title": "harmonica",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_22676/harmonica",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/LDHRN/IMAGE/f64d98f80449ce5b3bb425bc617d8e06.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Harmonica",
           "source": "wikipedia-summary"
@@ -8319,6 +8951,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1407662596.jpg",
           "site_name": "Bandoneón",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Bandoneon",
+          "mimo_id": "OAI_SMS_MM_POST_3257",
+          "title": "Bandoneon",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_SMS_MM_POST_3257/bandoneon",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/SMS-MM/IMAGE/M3255_01.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Bandoneon",
@@ -8367,6 +9007,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Ukulele",
+          "mimo_id": "OAI_CIMU_ALOES_0157878",
+          "title": "Ukulélé",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_0157878/ukulele",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/CM/IMAGE/CMIM000019377.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Ukulele",
           "source": "wikipedia-summary"
@@ -8486,6 +9134,14 @@
           "site_name": "Mandolin",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Mandolin",
+          "mimo_id": "OAI_SMS_MM_POST_4342",
+          "title": "Mandolin",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_SMS_MM_POST_4342/mandolin",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/SMS-MM/IMAGE/F408_01.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Mandolin",
           "source": "wikipedia-summary"
@@ -8526,6 +9182,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Jazz guitar",
+          "mimo_id": "OAI_CIMU_ALOES_0156173",
+          "title": "Guitare Jazz",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_0156173/guitare-jazz",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/CM/IMAGE/CMIM000019430.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Jazz guitar",
           "source": "wikipedia-summary"
@@ -8546,6 +9210,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Steel guitar",
+          "mimo_id": "MINIM_UK_UEDIN_1049",
+          "title": "Steel Guitar.",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_1049/steel-guitar",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/UEDIN/IMAGE/0032947c.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Steel guitar",
           "source": "wikipedia-summary"
@@ -8570,6 +9242,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1444522483.jpg",
           "site_name": "Electric guitar",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Electric guitar",
+          "mimo_id": "OAI_MDMB_311218",
+          "title": "baix elèctric",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_MDMB_311218/baix-electric",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MDMB/IMAGE/MDMB001692_ID_20140711_000_002_02.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Electric guitar",
@@ -8596,6 +9276,14 @@
           "site_name": "Electric guitar",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Electric guitar",
+          "mimo_id": "OAI_MDMB_311218",
+          "title": "baix elèctric",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_MDMB_311218/baix-electric",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MDMB/IMAGE/MDMB001692_ID_20140711_000_002_02.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Electric guitar",
           "source": "wikipedia-summary"
@@ -8620,6 +9308,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1444522483.jpg",
           "site_name": "Electric guitar",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Electric guitar",
+          "mimo_id": "OAI_MDMB_311218",
+          "title": "baix elèctric",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_MDMB_311218/baix-electric",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MDMB/IMAGE/MDMB001692_ID_20140711_000_002_02.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Electric guitar",
@@ -8668,6 +9364,14 @@
           "site_name": "Electric guitar",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Electric guitar",
+          "mimo_id": "OAI_MDMB_311218",
+          "title": "baix elèctric",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_MDMB_311218/baix-electric",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MDMB/IMAGE/MDMB001692_ID_20140711_000_002_02.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Electric guitar",
           "source": "wikipedia-summary"
@@ -8693,6 +9397,14 @@
           "site_name": "Electric guitar",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Electric guitar",
+          "mimo_id": "OAI_MDMB_311218",
+          "title": "baix elèctric",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_MDMB_311218/baix-electric",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MDMB/IMAGE/MDMB001692_ID_20140711_000_002_02.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Electric guitar",
           "source": "wikipedia-summary"
@@ -8717,6 +9429,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1444522483.jpg",
           "site_name": "Electric guitar",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Electric guitar",
+          "mimo_id": "OAI_MDMB_311218",
+          "title": "baix elèctric",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_MDMB_311218/baix-electric",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MDMB/IMAGE/MDMB001692_ID_20140711_000_002_02.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Electric guitar",
@@ -8763,6 +9483,14 @@
           "site_name": "Electric guitar",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Electric guitar",
+          "mimo_id": "OAI_MDMB_311218",
+          "title": "baix elèctric",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_MDMB_311218/baix-electric",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MDMB/IMAGE/MDMB001692_ID_20140711_000_002_02.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Electric guitar",
           "source": "wikipedia-summary"
@@ -8808,6 +9536,14 @@
           "site_name": "Electric guitar",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Electric guitar",
+          "mimo_id": "OAI_MDMB_311218",
+          "title": "baix elèctric",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_MDMB_311218/baix-electric",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MDMB/IMAGE/MDMB001692_ID_20140711_000_002_02.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Electric guitar",
           "source": "wikipedia-summary"
@@ -8832,6 +9568,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1444522483.jpg",
           "site_name": "Electric guitar",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Electric guitar",
+          "mimo_id": "OAI_MDMB_311218",
+          "title": "baix elèctric",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_MDMB_311218/baix-electric",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MDMB/IMAGE/MDMB001692_ID_20140711_000_002_02.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Electric guitar",
@@ -8877,6 +9621,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1444522483.jpg",
           "site_name": "Electric guitar",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Electric guitar",
+          "mimo_id": "OAI_MDMB_311218",
+          "title": "baix elèctric",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_MDMB_311218/baix-electric",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MDMB/IMAGE/MDMB001692_ID_20140711_000_002_02.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Electric guitar",
@@ -8928,6 +9680,14 @@
           "site_name": "Bass guitar",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Bass guitar",
+          "mimo_id": "OAI_CIMU_ALOES_0156648",
+          "title": "Guitare basse",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_0156648/guitare-basse",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/CM/IMAGE/CMIM000028054.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Bass guitar",
           "source": "wikipedia-summary"
@@ -8948,6 +9708,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Electric bass",
+          "mimo_id": "MINIM_UK_44040",
+          "title": "Electric bass guitar",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_44040/electric-bass-guitar",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/POMRN/IMAGE/fbf427ce35fa9f29bfc2fb657a4fbdef.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Electric bass",
           "source": "wikipedia-summary"
@@ -8972,6 +9740,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1443844983.jpg",
           "site_name": "Bass guitar",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Bass guitar",
+          "mimo_id": "OAI_CIMU_ALOES_0156648",
+          "title": "Guitare basse",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_0156648/guitare-basse",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/CM/IMAGE/CMIM000028054.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Bass guitar",
@@ -9138,6 +9914,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Electric bass",
+          "mimo_id": "MINIM_UK_44040",
+          "title": "Electric bass guitar",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_44040/electric-bass-guitar",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/POMRN/IMAGE/fbf427ce35fa9f29bfc2fb657a4fbdef.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Electric bass",
           "source": "wikipedia-summary"
@@ -9238,6 +10022,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Violin",
+          "mimo_id": "MINIM_UK_5001",
+          "title": "Violin",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_5001/violin",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/CALMG/IMAGE/ad6b0ea6ce0917d73e3e896f3fe36a70.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Violin",
           "source": "wikipedia-summary"
@@ -9258,6 +10050,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Violin",
+          "mimo_id": "MINIM_UK_5001",
+          "title": "Violin",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_5001/violin",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/CALMG/IMAGE/ad6b0ea6ce0917d73e3e896f3fe36a70.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Violin",
           "source": "wikipedia-summary"
@@ -9285,6 +10085,14 @@
           "site_name": "Viola",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Viola",
+          "mimo_id": "MINIM_UK_2473",
+          "title": "Viola bow",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_2473/viola-bow",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/RNCM/IMAGE/fdadfe1eb35fd06d0ac5cdf945b613ae.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Viola",
           "source": "wikipedia-summary"
@@ -9311,6 +10119,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1407625619.jpg",
           "site_name": "Cello",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Cello",
+          "mimo_id": "OAI_RMAH_110983_NL",
+          "title": "Cello",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110983_NL/cello",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/JT0038_1.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Cello",
@@ -9402,6 +10218,14 @@
           "site_name": "Harp",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Harp",
+          "mimo_id": "MINIM_UK_44291",
+          "title": "Harp",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_44291/harp",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/MAM/IMAGE/4959990076f57079473251f0e0e8b688.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Harp",
           "source": "wikipedia-summary"
@@ -9429,6 +10253,14 @@
           "site_name": "Yangqin",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Yangqin",
+          "mimo_id": "OAI_ULEI_M0003336",
+          "title": "Yangqin",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_ULEI_M0003336/yangqin",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/ULEI/IMAGE/3744.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Yangqin",
           "source": "wikipedia-summary"
@@ -9455,6 +10287,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1443071976.jpg",
           "site_name": "Timpani",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Timpani",
+          "mimo_id": "MINIM_UK_4507",
+          "title": "Timpani",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_4507/timpani",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/OXFBC/IMAGE/839_A.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Timpani",
@@ -9556,6 +10396,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Synthesizer",
+          "mimo_id": "OAI_KBH_2568",
+          "title": "synthesizer",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_2568/synthesizer",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/KBH/IMAGE/2002-21_1.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Synthesizer",
           "source": "wikipedia-summary"
@@ -9576,6 +10424,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Synthesizer",
+          "mimo_id": "OAI_KBH_2568",
+          "title": "synthesizer",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_2568/synthesizer",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/KBH/IMAGE/2002-21_1.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Synthesizer",
           "source": "wikipedia-summary"
@@ -9596,6 +10452,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Synthesizer",
+          "mimo_id": "OAI_KBH_2568",
+          "title": "synthesizer",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_2568/synthesizer",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/KBH/IMAGE/2002-21_1.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Synthesizer",
           "source": "wikipedia-summary"
@@ -9676,6 +10540,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Humming",
+          "mimo_id": "OAI_SMS_MM_POST_1675",
+          "title": "Humming top",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_SMS_MM_POST_1675/humming-top",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/SMS-MM/IMAGE/M1675_01.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Humming",
           "source": "wikipedia-summary"
@@ -9696,6 +10568,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Vocoder",
+          "mimo_id": "OAI_SMS_MM_POST_3743",
+          "title": "Vocoder",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_SMS_MM_POST_3743/vocoder",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/SMS-MM/IMAGE/M4028_01.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Vocoder",
           "source": "wikipedia-summary"
@@ -9716,6 +10596,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Vocoder",
+          "mimo_id": "OAI_SMS_MM_POST_3743",
+          "title": "Vocoder",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_SMS_MM_POST_3743/vocoder",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/SMS-MM/IMAGE/M4028_01.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Vocoder",
           "source": "wikipedia-summary"
@@ -9823,6 +10711,14 @@
           "site_name": "Trumpet",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Trumpet",
+          "mimo_id": "MINIM_UK_41337",
+          "title": "Trumpet.",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_41337/trumpet",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/RCS/IMAGE/RCS0920_20120203_Master_PREV.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Trumpet",
           "source": "wikipedia-summary"
@@ -9849,6 +10745,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1443578474.jpg",
           "site_name": "Trumpet",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Trumpet",
+          "mimo_id": "MINIM_UK_41337",
+          "title": "Trumpet.",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_41337/trumpet",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/RCS/IMAGE/RCS0920_20120203_Master_PREV.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Trumpet",
@@ -9877,6 +10781,14 @@
           "site_name": "Trombone",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Trombone",
+          "mimo_id": "MINIM_UK_4013",
+          "title": "Trombone",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_4013/trombone",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/OXFBC/IMAGE/741.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Trombone",
           "source": "wikipedia-summary"
@@ -9903,6 +10815,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1443578424.jpg",
           "site_name": "Trombone",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Trombone",
+          "mimo_id": "MINIM_UK_4013",
+          "title": "Trombone",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_4013/trombone",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/OXFBC/IMAGE/741.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Trombone",
@@ -9931,6 +10851,14 @@
           "site_name": "Trombone",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Trombone",
+          "mimo_id": "MINIM_UK_4013",
+          "title": "Trombone",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_4013/trombone",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/OXFBC/IMAGE/741.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Trombone",
           "source": "wikipedia-summary"
@@ -9958,6 +10886,14 @@
           "site_name": "Tuba",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Tuba",
+          "mimo_id": "OAI_RMAH_120230_NL",
+          "title": "Tuba",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_120230_NL/tuba",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1278.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Tuba",
           "source": "wikipedia-summary"
@@ -9978,6 +10914,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Mute (music)",
+          "mimo_id": "MINIM_UK_9180",
+          "title": "Mute violin",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_9180/mute-violin",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/GB-Lcm/IMAGE/RCM0043.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Mute (music)",
           "source": "wikipedia-summary"
@@ -9998,6 +10942,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Mute (music)",
+          "mimo_id": "MINIM_UK_9180",
+          "title": "Mute violin",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_9180/mute-violin",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/GB-Lcm/IMAGE/RCM0043.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Mute (music)",
           "source": "wikipedia-summary"
@@ -10024,6 +10976,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1407647809.jpg",
           "site_name": "French Horn",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "French horn",
+          "mimo_id": "MINIM_UK_4424",
+          "title": "French Horn",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_4424/french-horn",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/OXFBC/IMAGE/628.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "French horn",
@@ -10052,6 +11012,14 @@
           "site_name": "French Horn",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "French horn",
+          "mimo_id": "MINIM_UK_4424",
+          "title": "French Horn",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_4424/french-horn",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/OXFBC/IMAGE/628.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "French horn",
           "source": "wikipedia-summary"
@@ -10072,6 +11040,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Brass section",
+          "mimo_id": "MINIM_UK_42190",
+          "title": "Section of bass drum",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_42190/section-of-bass-drum",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/NAM/IMAGE/96c8ac6306b6dc3bea1f383683c6caa2.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Brass section",
           "source": "wikipedia-summary"
@@ -10092,6 +11068,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Brass section",
+          "mimo_id": "MINIM_UK_42190",
+          "title": "Section of bass drum",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_42190/section-of-bass-drum",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/NAM/IMAGE/96c8ac6306b6dc3bea1f383683c6caa2.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Brass section",
           "source": "wikipedia-summary"
@@ -10112,6 +11096,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Brass section",
+          "mimo_id": "MINIM_UK_42190",
+          "title": "Section of bass drum",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_42190/section-of-bass-drum",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/NAM/IMAGE/96c8ac6306b6dc3bea1f383683c6caa2.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Brass section",
           "source": "wikipedia-summary"
@@ -10132,6 +11124,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Brass section",
+          "mimo_id": "MINIM_UK_42190",
+          "title": "Section of bass drum",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_42190/section-of-bass-drum",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/NAM/IMAGE/96c8ac6306b6dc3bea1f383683c6caa2.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Brass section",
           "source": "wikipedia-summary"
@@ -10152,6 +11152,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Brass section",
+          "mimo_id": "MINIM_UK_42190",
+          "title": "Section of bass drum",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_42190/section-of-bass-drum",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/NAM/IMAGE/96c8ac6306b6dc3bea1f383683c6caa2.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Brass section",
           "source": "wikipedia-summary"
@@ -10172,6 +11180,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Brass section",
+          "mimo_id": "MINIM_UK_42190",
+          "title": "Section of bass drum",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_42190/section-of-bass-drum",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/NAM/IMAGE/96c8ac6306b6dc3bea1f383683c6caa2.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Brass section",
           "source": "wikipedia-summary"
@@ -10192,6 +11208,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Brass section",
+          "mimo_id": "MINIM_UK_42190",
+          "title": "Section of bass drum",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_42190/section-of-bass-drum",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/NAM/IMAGE/96c8ac6306b6dc3bea1f383683c6caa2.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Brass section",
           "source": "wikipedia-summary"
@@ -10212,6 +11236,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Brass section",
+          "mimo_id": "MINIM_UK_42190",
+          "title": "Section of bass drum",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_42190/section-of-bass-drum",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/NAM/IMAGE/96c8ac6306b6dc3bea1f383683c6caa2.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Brass section",
           "source": "wikipedia-summary"
@@ -10232,6 +11264,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Brass section",
+          "mimo_id": "MINIM_UK_42190",
+          "title": "Section of bass drum",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_42190/section-of-bass-drum",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/NAM/IMAGE/96c8ac6306b6dc3bea1f383683c6caa2.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Brass section",
           "source": "wikipedia-summary"
@@ -10258,6 +11298,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1437084042.jpg",
           "site_name": "Soprano saxophone",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Soprano saxophone",
+          "mimo_id": "OAI_CIMU_ALOES_0158921",
+          "title": "Saxophone soprano",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_0158921/saxophone-soprano",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/CM/IMAGE/CMIM000023788.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Soprano saxophone",
@@ -10286,6 +11334,14 @@
           "site_name": "Alto saxophone",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Alto saxophone",
+          "mimo_id": "OAI_CIMU_ALOES_0818491",
+          "title": "Saxophone alto",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_0818491/saxophone-alto",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/CM/IMAGE/CMIM000029892.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Alto saxophone",
           "source": "wikipedia-summary"
@@ -10312,6 +11368,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1443071838.jpg",
           "site_name": "Tenor saxophone",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Tenor saxophone",
+          "mimo_id": "OAI_CIMU_ALOES_0158918",
+          "title": "Saxophone ténor",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_0158918/saxophone-tenor",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/CM/IMAGE/CMIM000023747.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Tenor saxophone",
@@ -10340,6 +11404,14 @@
           "site_name": "Baritone saxophone",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Baritone saxophone",
+          "mimo_id": "MINIM_UK_44163",
+          "title": "Baritone saxophone",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_44163/baritone-saxophone",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/MAM/IMAGE/8fbd2eeca5cfea6060436d613f9b0b4e.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Baritone saxophone",
           "source": "wikipedia-summary"
@@ -10366,6 +11438,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1415406780.jpg",
           "site_name": "Oboe",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Oboe",
+          "mimo_id": "OAI_GNM_770811",
+          "title": "Oboe",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_GNM_770811/oboe",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/GNM/IMAGE/MI926_1273501249506_2.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Oboe",
@@ -10394,6 +11474,14 @@
           "site_name": "English horn",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Cor anglais",
+          "mimo_id": "OAI_CIMU_ALOES_0161624",
+          "title": "Cor anglais",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_0161624/cor-anglais",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/CM/IMAGE/CMIM000014294.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Cor anglais",
           "source": "wikipedia-summary"
@@ -10420,6 +11508,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1408004823.jpg",
           "site_name": "Bassoon",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Bassoon",
+          "mimo_id": "MINIM_UK_3908",
+          "title": "Bassoon",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_3908/bassoon",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/OXFBC/IMAGE/34.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Bassoon",
@@ -10448,6 +11544,14 @@
           "site_name": "Clarinet",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Clarinet",
+          "mimo_id": "MINIM_UK_3309",
+          "title": "Clarinet",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_3309/clarinet",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/OXFBC/IMAGE/4096.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Clarinet",
           "source": "wikipedia-summary"
@@ -10475,6 +11579,14 @@
           "site_name": "Piccolo",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Piccolo",
+          "mimo_id": "MINIM_UK_44323",
+          "title": "Piccolo",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_44323/piccolo",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/MAM/IMAGE/b270cd70b4ccd869d5b1045d4cdbaaf6.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Piccolo",
           "source": "wikipedia-summary"
@@ -10501,6 +11613,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1407644325.jpg",
           "site_name": "Flute",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Flute",
+          "mimo_id": "MINIM_UK_41114",
+          "title": "Flute.",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_41114/flute",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/RCS/IMAGE/RCS0176_20120206_Master_PREV.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Flute",
@@ -10549,6 +11669,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Pan flute",
+          "mimo_id": "OAI_ULEI_M0003160",
+          "title": "Panflöte",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_ULEI_M0003160/panflote",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/ULEI/IMAGE/3568.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Pan flute",
           "source": "wikipedia-summary"
@@ -10569,6 +11697,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Bottle",
+          "mimo_id": "MINIM_UK_31565",
+          "title": "Bottle-organ",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_31565/bottle-organ",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/NML/IMAGE/20aa4445feafabb70ddd7ae719da929f.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Bottle",
           "source": "wikipedia-summary"
@@ -10595,6 +11731,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1436741019.jpg",
           "site_name": "Shakuhachi",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Shakuhachi",
+          "mimo_id": "OAI_MIC_13679",
+          "title": "Shakuhachi",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_MIC_13679/shakuhachi",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MIC/IMAGE/he_1185-0A.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Shakuhachi",
@@ -10623,6 +11767,14 @@
           "site_name": "Whistle",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Whistling",
+          "mimo_id": "MINIM_UK_43423",
+          "title": "Whistling mug",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_43423/whistling-mug",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/BRFMS/IMAGE/8fe0e8ffb0606b9f84959360e8e5002e.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Whistling",
           "source": "wikipedia-summary"
@@ -10650,6 +11802,14 @@
           "site_name": "Ocarina",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Ocarina",
+          "mimo_id": "OAI_SMS_MM_POST_6951",
+          "title": "Ocarina",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_SMS_MM_POST_6951/ocarina",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/SMS-MM/IMAGE/N221088_01.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Ocarina",
           "source": "wikipedia-summary"
@@ -10670,6 +11830,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Lead synthesizer",
+          "mimo_id": "OAI_RMAH_110679_NL",
+          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -10690,6 +11858,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Lead synthesizer",
+          "mimo_id": "OAI_RMAH_110679_NL",
+          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -10710,6 +11886,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Lead synthesizer",
+          "mimo_id": "OAI_RMAH_110679_NL",
+          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -10730,6 +11914,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Lead synthesizer",
+          "mimo_id": "OAI_RMAH_110679_NL",
+          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -10750,6 +11942,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Lead synthesizer",
+          "mimo_id": "OAI_RMAH_110679_NL",
+          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -10770,6 +11970,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Lead synthesizer",
+          "mimo_id": "OAI_RMAH_110679_NL",
+          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -10790,6 +11998,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Lead synthesizer",
+          "mimo_id": "OAI_RMAH_110679_NL",
+          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -10850,6 +12066,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Lead synthesizer",
+          "mimo_id": "OAI_RMAH_110679_NL",
+          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -10870,6 +12094,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Lead synthesizer",
+          "mimo_id": "OAI_RMAH_110679_NL",
+          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -10890,6 +12122,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Lead synthesizer",
+          "mimo_id": "OAI_RMAH_110679_NL",
+          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -10930,6 +12170,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Lead synthesizer",
+          "mimo_id": "OAI_RMAH_110679_NL",
+          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -10950,6 +12198,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Lead synthesizer",
+          "mimo_id": "OAI_RMAH_110679_NL",
+          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -10970,6 +12226,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Lead synthesizer",
+          "mimo_id": "OAI_RMAH_110679_NL",
+          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -10990,6 +12254,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Lead synthesizer",
+          "mimo_id": "OAI_RMAH_110679_NL",
+          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -11070,6 +12342,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Vocoder",
+          "mimo_id": "OAI_SMS_MM_POST_3743",
+          "title": "Vocoder",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_SMS_MM_POST_3743/vocoder",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/SMS-MM/IMAGE/M4028_01.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Vocoder",
           "source": "wikipedia-summary"
@@ -11090,6 +12370,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Lead synthesizer",
+          "mimo_id": "OAI_RMAH_110679_NL",
+          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -11110,6 +12398,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Glass harmonica",
+          "mimo_id": "MINIM_UK_45005",
+          "title": "Glass armonica",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_45005/glass-armonica",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/RCS/IMAGE/ce2e707d81cead51dfe5896383560467.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Glass harmonica",
           "source": "wikipedia-summary"
@@ -11190,6 +12486,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Lead synthesizer",
+          "mimo_id": "OAI_RMAH_110679_NL",
+          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -11210,6 +12514,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Lead synthesizer",
+          "mimo_id": "OAI_RMAH_110679_NL",
+          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -11230,6 +12542,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Lead synthesizer",
+          "mimo_id": "OAI_RMAH_110679_NL",
+          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -11250,6 +12570,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Mallet percussion",
+          "mimo_id": "MINIM_UK_UEDIN_3261",
+          "title": "Mallet: chime bars.",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_3261/mallet-chime-bars",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/UEDIN/IMAGE/0034724d.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Mallet percussion",
           "source": "wikipedia-summary"
@@ -11410,6 +12738,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Sitar",
+          "mimo_id": "OAI_AZZA_57",
+          "title": "Sitar",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_AZZA_57/sitar",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/AZZA/IMAGE/IM631_1.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Sitar",
           "source": "wikipedia-summary"
@@ -11430,6 +12766,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Sitar",
+          "mimo_id": "OAI_AZZA_57",
+          "title": "Sitar",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_AZZA_57/sitar",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/AZZA/IMAGE/IM631_1.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Sitar",
           "source": "wikipedia-summary"
@@ -11457,6 +12801,14 @@
           "site_name": "Banjo",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Banjo",
+          "mimo_id": "OAI_ULEI_M0003554",
+          "title": "Banjo",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_ULEI_M0003554/banjo",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/ULEI/IMAGE/3962.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Banjo",
           "source": "wikipedia-summary"
@@ -11477,6 +12829,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Shamisen",
+          "mimo_id": "OAI_RMAH_112122_NL",
+          "title": "Shamisen",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_112122_NL/shamisen",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/3932_2.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Shamisen",
           "source": "wikipedia-summary"
@@ -11503,6 +12863,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1409629084.jpg",
           "site_name": "Koto",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Koto (instrument)",
+          "mimo_id": "OAI_RMAH_109030_NL",
+          "title": "Koto",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_109030_NL/koto",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/0764.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Koto (instrument)",
@@ -11551,6 +12919,14 @@
           "site_name": "Kalimba",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Mbira",
+          "mimo_id": "OAI_SMS_MM_POST_3816",
+          "title": "Mbira",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_SMS_MM_POST_3816/mbira",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/SMS-MM/IMAGE/M4101_01.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Mbira",
           "source": "wikipedia-summary"
@@ -11577,6 +12953,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1407889042.jpg",
           "site_name": "Bagpipes",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Bagpipes",
+          "mimo_id": "MINIM_UK_UEDIN_1512",
+          "title": "Set of Highland bagpipes.",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_1512/set-of-highland-bagpipes",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/UEDIN/IMAGE/0033394c.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Bagpipes",
@@ -11605,6 +12989,14 @@
           "site_name": "Fiddle",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Fiddle",
+          "mimo_id": "MINIM_UK_UEDIN_2368",
+          "title": "Hardanger fiddle.",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_2368/hardanger-fiddle",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/UEDIN/IMAGE/0033978c-0001.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Fiddle",
           "source": "wikipedia-summary"
@@ -11625,6 +13017,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Shehnai",
+          "mimo_id": "OAI_SMS_MM_POST_3843",
+          "title": "Shehnai",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_SMS_MM_POST_3843/shehnai",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/SMS-MM/IMAGE/M4128_01.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Shehnai",
           "source": "wikipedia-summary"
@@ -11652,6 +13052,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1408004979.jpg",
           "site_name": "Bell",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Bell",
+          "mimo_id": "MINIM_UK_42466",
+          "title": "Bell harp",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_42466/bell-harp",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/GLRCM/IMAGE/fbbd105bdc7a94f61454c1f012af2638.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Bell",
@@ -11693,6 +13101,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Steelpan",
+          "mimo_id": "SPK_BERLIN.DE_EM_OBJID_1487166",
+          "title": "Tenorpan, steelpan",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/SPK_BERLIN.DE_EM_OBJID_1487166/tenorpan-steelpan",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/SPK/IMAGE/3787720.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Steelpan",
           "source": "wikipedia-summary"
@@ -11720,6 +13136,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1407640669.jpg",
           "site_name": "Wood block",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Wood block",
+          "mimo_id": "MINIM_UK_UEDIN_1658",
+          "title": "Wood block.",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_1658/wood-block",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/UEDIN/IMAGE/0033539c.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Wood block",
@@ -11749,6 +13173,14 @@
           "site_name": "Castanets",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Castanets",
+          "mimo_id": "MINIM_UK_UEDIN_2908",
+          "title": "Mounted castanets.",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_2908/mounted-castanets",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/UEDIN/IMAGE/0034407c.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Castanets",
           "source": "wikipedia-summary"
@@ -11775,6 +13207,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1443069729.jpg",
           "site_name": "Taiko",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Taiko",
+          "mimo_id": "OAI_MDMB_309857",
+          "title": "taiko",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_MDMB_309857/taiko",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MDMB/IMAGE/MDMB000436_ID_20140801_000_002_02.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Taiko",
@@ -11803,6 +13243,14 @@
           "site_name": "Bass drum",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Bass drum",
+          "mimo_id": "MINIM_UK_44115",
+          "title": "Bass drum",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_44115/bass-drum",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/POMRN/IMAGE/372d79399da79d4939bfff9e2691c525.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Bass drum",
           "source": "wikipedia-summary"
@@ -11829,6 +13277,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1443578324.jpg",
           "site_name": "Tom-tom",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Tom-tom",
+          "mimo_id": "OAI_ULEI_M0004783",
+          "title": "Tomtom",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_ULEI_M0004783/tomtom",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/ULEI/IMAGE/5190.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Tom-tom",
@@ -11857,6 +13313,14 @@
           "site_name": "Tom-tom",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Tom-tom",
+          "mimo_id": "OAI_ULEI_M0004783",
+          "title": "Tomtom",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_ULEI_M0004783/tomtom",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/ULEI/IMAGE/5190.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Tom-tom",
           "source": "wikipedia-summary"
@@ -11877,6 +13341,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Electronic drum",
+          "mimo_id": "OAI_CIMU_ALOES_1005176",
+          "title": "Boîte à rythme Linn programmable drum machine / sequencer - Unité centrale",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_1005176/boite-a-rythme-linn-programmable-drum-machine-sequencer-unite-centrale",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/CM/IMAGE/CMIM000032100.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Electronic drum",
           "source": "wikipedia-summary"
@@ -11945,6 +13417,14 @@
           "site_name": "Cymbal",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Cymbal",
+          "mimo_id": "MINIM_UK_10167",
+          "title": "Cymbal",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_10167/cymbal",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/LDRAM/IMAGE/2012-558a_s.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Cymbal",
           "source": "wikipedia-summary"
@@ -11969,6 +13449,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1444522483.jpg",
           "site_name": "Electric guitar",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Electric guitar",
+          "mimo_id": "OAI_MDMB_311218",
+          "title": "baix elèctric",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_MDMB_311218/baix-electric",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MDMB/IMAGE/MDMB001692_ID_20140711_000_002_02.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Electric guitar",
@@ -11995,6 +13483,14 @@
           "site_name": "Electric guitar",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Electric guitar",
+          "mimo_id": "OAI_MDMB_311218",
+          "title": "baix elèctric",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_MDMB_311218/baix-electric",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MDMB/IMAGE/MDMB001692_ID_20140711_000_002_02.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Electric guitar",
           "source": "wikipedia-summary"
@@ -12019,6 +13515,14 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1443844983.jpg",
           "site_name": "Bass guitar",
           "source": "site-instruments"
+        },
+        "mimo": {
+          "matched_via_wiki_title": "Bass guitar",
+          "mimo_id": "OAI_CIMU_ALOES_0156648",
+          "title": "Guitare basse",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_0156648/guitare-basse",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/CM/IMAGE/CMIM000028054.jpg",
+          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Bass guitar",
@@ -12065,6 +13569,14 @@
           "site_name": "Piano",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Piano",
+          "mimo_id": "MINIM_UK_39826",
+          "title": "Pianola",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_39826/pianola",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/MILSH/IMAGE/3498af4572c71c76a244cb2eb2f98d6f.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Piano",
           "source": "wikipedia-summary"
@@ -12105,6 +13617,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Rain",
+          "mimo_id": "MINIM_UK_UEDIN_1170",
+          "title": "Rain machine.",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_1170/rain-machine",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/UEDIN/IMAGE/0033110c.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Rain",
           "source": "wikipedia-summary"
@@ -12205,6 +13725,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Bird vocalization",
+          "mimo_id": "MINIM_UK_41668",
+          "title": "Bird call",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_41668/bird-call",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/IABF/IMAGE/0218507d006ecbfd3230a90bcabb5d5c.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Bird vocalization",
           "source": "wikipedia-summary"
@@ -12245,6 +13773,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Horse",
+          "mimo_id": "MINIM_UK_3280",
+          "title": "Bell;Horse Ornament",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_3280/bell-horse-ornament",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/OXFBC/IMAGE/848.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Horse",
           "source": "wikipedia-summary"
@@ -12265,6 +13801,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Bird vocalization",
+          "mimo_id": "MINIM_UK_41668",
+          "title": "Bird call",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_41668/bird-call",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/IABF/IMAGE/0218507d006ecbfd3230a90bcabb5d5c.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Bird vocalization",
           "source": "wikipedia-summary"
@@ -12325,6 +13869,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Door",
+          "mimo_id": "OAI_RIJKSMUSEUM.NL_NG_475",
+          "title": "Dwarsfluit, door koning Lodewijk Napoleon geschonken aan Louis Drouet",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RIJKSMUSEUM.NL_NG_475/dwarsfluit-door-koning-lodewijk-napoleon-geschonken-aan-louis-drouet",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/RIJKS/IMAGE/NG-475.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Door",
           "source": "wikipedia-summary"
@@ -12345,6 +13897,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Door",
+          "mimo_id": "OAI_RIJKSMUSEUM.NL_NG_475",
+          "title": "Dwarsfluit, door koning Lodewijk Napoleon geschonken aan Louis Drouet",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RIJKSMUSEUM.NL_NG_475/dwarsfluit-door-koning-lodewijk-napoleon-geschonken-aan-louis-drouet",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/RIJKS/IMAGE/NG-475.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Door",
           "source": "wikipedia-summary"
@@ -12385,6 +13945,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Wind chime",
+          "mimo_id": "MINIM_UK_21186",
+          "title": "Wind chime",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_21186/wind-chime",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/LDKEW/IMAGE/9f51ead5cc79fb96756e9327d15a1186.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Wind chime",
           "source": "wikipedia-summary"
@@ -12425,6 +13993,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Car",
+          "mimo_id": "MINIM_UK_UEDIN_1196",
+          "title": "Car or motorcycle horn.",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_1196/car-or-motorcycle-horn",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/UEDIN/IMAGE/0033136c.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Car",
           "source": "wikipedia-summary"
@@ -12445,6 +14021,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Car",
+          "mimo_id": "MINIM_UK_UEDIN_1196",
+          "title": "Car or motorcycle horn.",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_1196/car-or-motorcycle-horn",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/UEDIN/IMAGE/0033136c.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Car",
           "source": "wikipedia-summary"
@@ -12465,6 +14049,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Car",
+          "mimo_id": "MINIM_UK_UEDIN_1196",
+          "title": "Car or motorcycle horn.",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_1196/car-or-motorcycle-horn",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/UEDIN/IMAGE/0033136c.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Car",
           "source": "wikipedia-summary"
@@ -12485,6 +14077,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Car",
+          "mimo_id": "MINIM_UK_UEDIN_1196",
+          "title": "Car or motorcycle horn.",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_1196/car-or-motorcycle-horn",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/UEDIN/IMAGE/0033136c.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Car",
           "source": "wikipedia-summary"
@@ -12512,6 +14112,14 @@
           "site_name": "Siren",
           "source": "site-instruments"
         },
+        "mimo": {
+          "matched_via_wiki_title": "Siren",
+          "mimo_id": "MINIM_UK_2578",
+          "title": "Siren",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_2578/siren",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/RNCM/IMAGE/870c5615ac593bf410ce189d50639aac.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Siren",
           "source": "wikipedia-summary"
@@ -12532,6 +14140,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Train",
+          "mimo_id": "SHMT_31407",
+          "title": "TRAIN WHISTLE",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/SHMT_31407/train-whistle",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/SHMT/IMAGE/1408.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Train",
           "source": "wikipedia-summary"
@@ -12712,6 +14328,14 @@
         ]
       ],
       "image_refs": {
+        "mimo": {
+          "matched_via_wiki_title": "Walking",
+          "mimo_id": "MINIM_UK_42110",
+          "title": "Walking-stick Flute",
+          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_42110/walking-stick-flute",
+          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/STGCM/IMAGE/142f20e33faac798b35b6134afa5363f.jpg",
+          "source": "mimo-international.com"
+        },
         "wikipedia": {
           "page_title": "Walking",
           "source": "wikipedia-summary"
