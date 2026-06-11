@@ -49,6 +49,9 @@ app:
     base-url: https://en.wikipedia.org/api/rest_v1
     # Be polite to the Wikipedia API: minimum delay between bulk requests (ms)
     bulk-delay-ms: 250
+    # Vul ontbrekende wiki-data (incl. kaart-thumbnails) automatisch op een
+    # achtergrondthread bij het opstarten
+    warmup-enabled: ${WIKI_WARMUP_ENABLED:true}
 
 logging:
   level:
