@@ -203,37 +203,27 @@ export function ToneModal({ tone, onClose, onPlay, midiAvailable }: Props) {
         </header>
 
         <div className="flex-1 space-y-5 overflow-y-auto p-5">
-          {/* SD/HD side-by-side image gallery (PC) / stacked (mobile).
-              Geen hover-effect: alle interactie gebeurt via de knoppen
-              eronder. */}
+          {/* Eén grote afbeelding: HD indien beschikbaar, anders SD, anders
+              de wiki-summary thumbnail. Op de cards zelf tonen we hover-zoom
+              voor een snelle blik zonder de modal te openen. */}
           <section>
-            <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider text-accent">
-              Afbeelding
-            </h3>
-            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-              <figure className="flex flex-col gap-1">
-                <ImageWithFallback
-                  src={sdUrl ?? ""}
-                  alt={`${tone.name} (standaard)`}
-                  className="aspect-square w-full"
-                  loading="eager"
-                />
-                <figcaption className="text-center text-[11px] text-muted">
-                  Standaard · {tone.thumbnailUrl ? "lokaal gecached" : "geen"}
-                </figcaption>
-              </figure>
-              <figure className="flex flex-col gap-1">
-                <ImageWithFallback
-                  src={hdUrl ?? wikiHdUrl ?? ""}
-                  alt={`${tone.name} (HD)`}
-                  className="aspect-square w-full"
-                  loading="lazy"
-                />
-                <figcaption className="text-center text-[11px] text-muted">
-                  HD · {hdUrl ? "lokaal gecached" : wikiHdUrl ? "via wiki" : "geen"}
-                </figcaption>
-              </figure>
-            </div>
+            <figure className="flex flex-col gap-1">
+              <ImageWithFallback
+                src={hdUrl ?? wikiHdUrl ?? sdUrl ?? ""}
+                alt={`${tone.name}`}
+                className="w-full max-h-80 object-contain"
+                loading="eager"
+              />
+              <figcaption className="text-center text-[11px] text-muted">
+                {hdUrl
+                  ? "HD · lokaal gecached"
+                  : wikiHdUrl
+                  ? "HD · via wiki"
+                  : sdUrl
+                  ? "Standaard"
+                  : "geen afbeelding beschikbaar"}
+              </figcaption>
+            </figure>
             {wiki?.sourceUrl && (
               <div className="mt-2 flex flex-wrap gap-2">
                 <a
