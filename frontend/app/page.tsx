@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { fetchToneLibrary } from "@/lib/api";
+import { fetchToneLibrary, offlineLibrary } from "@/lib/api";
 import type { ToneDto } from "@/lib/types";
 import { toneKey } from "@/lib/types";
 import { useFavorites } from "@/hooks/useFavorites";
@@ -29,10 +29,30 @@ export default function Home() {
   const midi = useMidi();
   const midiAvailable = midi.status !== "unsupported";
 
-  const { data, isLoading } = useQuery({
+  const {
+    data: liveData,
+    isLoading,
+    isError,
+    isFetching,
+    refetch,
+  } = useQuery({
     queryKey: ["library"],
     queryFn: fetchToneLibrary,
+    retry: 3,
+    retryDelay: (attempt) => Math.min(1000 * 2 ** attempt, 8000),
+    refetchOnWindowFocus: true,
+    // Zelfgenezend: zolang de backend onbereikbaar is, op de achtergrond
+    // elke 15s opnieuw proberen; zodra hij terug is verdwijnt de banner vanzelf.
+    refetchInterval: (query) =>
+      query.state.status === "error" ? 15000 : false,
   });
+
+  // Toon de volledige bibliotheek uit de gebundelde seed zolang de live data
+  // (nog) niet binnen is, zodat de pagina nooit leeg of geblokkeerd is.
+  const data = useMemo(
+    () => liveData ?? (isError ? offlineLibrary() : undefined),
+    [liveData, isError]
+  );
 
   const subCategories = useMemo(
     () =>
@@ -108,10 +128,20 @@ export default function Home() {
           Dual/Split-combinatietips en opname-referentie.
         </p>
         {data?.offline && (
-          <p className="mt-3 inline-block rounded-lg border border-amber-700/40 bg-amber-950/40 px-3 py-1.5 text-xs text-amber-300">
-            Backend niet bereikbaar — statische bibliotheek wordt getoond
-            (Wikipedia-artikelen tijdelijk niet beschikbaar).
-          </p>
+          <div className="mt-3 flex flex-wrap items-center gap-2 rounded-lg border border-amber-700/40 bg-amber-950/40 px-3 py-1.5 text-xs text-amber-300">
+            <span>
+              {isFetching
+                ? "Verbinden met de server…"
+                : "Server even niet bereikbaar — je ziet de offline bibliotheek. Opnieuw proberen gebeurt automatisch."}
+            </span>
+            <button
+              onClick={() => refetch()}
+              disabled={isFetching}
+              className="rounded-md border border-amber-700/50 px-2 py-0.5 font-medium text-amber-200 hover:bg-amber-900/40 disabled:opacity-50"
+            >
+              {isFetching ? "Bezig…" : "Nu opnieuw proberen"}
+            </button>
+          </div>
         )}
       </header>
 
