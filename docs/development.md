@@ -6,62 +6,54 @@ separately (see top-level `README.md`).
 
 ---
 
-## Isolated development database
+## Local dev stack (db + backend)
 
 For testing scrape-scripts, seed mutations, schema migrations, or any
-change that touches the database, use the **dev database** in
-`deploy/docker-compose.dev.yml`. It runs a separate PostgreSQL instance
-on a non-conflicting port so it never interferes with the production stack.
+change that touches the database, use the **dev stack** in
+`deploy/docker-compose.dev-full.yml`. It runs its own PostgreSQL instance
+and its own backend container on non-conflicting ports, so it never
+interferes with the production stack.
 
 ### Key differences from production
 
 | Setting | Production | Dev |
 |---|---|---|
-| Host port | 5432 | **55432** |
+| Host port (db) | not exposed (internal only) | **55432** |
+| Host port (api) | 8080 | 8080 (conflicts with prod, see below) |
 | Database name | `pianosounds` | `pianosounds_dev` |
 | User | `pianosounds_user` | `pianosounds_dev_user` |
 | Password | from `deploy/.env` | `devpass` (override via `DEV_DB_PASSWORD` env) |
 | Volume | `pgdata` | `pgdata_dev` |
-| Stack | api + caddy + db | **db only** (no api, no caddy) |
+| Stack | api + caddy + db | **api + db** (no caddy) |
+| Compose project | `tone-library-prod` | `tone-library-dev-full` |
 
 ### Usage
 
 ```bash
-# Start the dev database
-docker compose -f deploy/docker-compose.dev.yml up -d
+# Start the dev stack (db + api)
+docker compose -f deploy/docker-compose.dev-full.yml up -d
 
 # Check it's healthy
-docker compose -f deploy/docker-compose.dev.yml ps
+docker compose -f deploy/docker-compose.dev-full.yml ps
+
+# Tail backend logs
+docker compose -f deploy/docker-compose.dev-full.yml logs -f api
 
 # Connect with psql (locally or from any container that can reach 55432)
-docker compose -f deploy/docker-compose.dev.yml exec db psql -U pianosounds_dev_user -d pianosounds_dev
+docker compose -f deploy/docker-compose.dev-full.yml exec db psql -U pianosounds_dev_user -d pianosounds_dev
 
 # Stop (keeps data)
-docker compose -f deploy/docker-compose.dev.yml down
+docker compose -f deploy/docker-compose.dev-full.yml down
 
 # Stop AND wipe all data (nuclear option)
-docker compose -f deploy/docker-compose.dev.yml down -v
+docker compose -f deploy/docker-compose.dev-full.yml down -v
 ```
 
-### Connecting the backend to the dev database
+The frontend runs separately: `cd frontend && pnpm dev -- --hostname 0.0.0.0`.
 
-If you want to run the full stack against the dev database:
-
-1. Start both: `docker compose -f deploy/docker-compose.yml up -d db` and
-   `docker compose -f deploy/docker-compose.dev.yml up -d db`
-2. Override the api service's DB_URL to point at the dev container. The
-   easiest way is to set it in `deploy/.env` (don't commit!) or via the
-   `psql://` connection string in a temporary override file.
-
-```bash
-DB_URL=jdbc:postgresql://localhost:55432/pianosounds_dev \
-DB_USERNAME=pianosounds_dev_user \
-DB_PASSWORD=devpass \
-  docker compose -f deploy/docker-compose.yml up api
-```
-
-⚠️ **Always restore** the original `deploy/.env` before starting the
-production stack again.
+⚠️ Both stacks publish their `api` service on host port **8080**. The dev
+stack and the production stack (`docker-compose.yml`) can therefore not run
+at the same time — stop one before starting the other.
 
 ---
 

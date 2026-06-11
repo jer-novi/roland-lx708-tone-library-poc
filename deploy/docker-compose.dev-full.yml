@@ -10,6 +10,10 @@
 # 
 # Backend bereikbaar op: http://localhost:8080
 # Database bereikbaar op: localhost:55432 (pianosounds_dev)
+#
+# Eigen project-naam (los van docker-compose.yml) zodat containers/netwerk
+# niet overlappen met de productie-stack.
+name: tone-library-dev-full
 
 services:
   db:

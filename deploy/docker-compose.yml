@@ -1,3 +1,8 @@
+# Eigen project-naam zodat deze stack (prod-achtige db/api/caddy) nooit
+# containers, netwerk of volumes deelt met de dev-compose-bestanden
+# hieronder, ook al staan ze in dezelfde map.
+name: tone-library-prod
+
 services:
   db:
     image: postgres:16-alpine
