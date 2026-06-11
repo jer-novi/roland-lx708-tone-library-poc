@@ -83,16 +83,20 @@ public class MimoImageThumbnailSource implements ThumbnailSource {
         if (title == null || title.isBlank()) return Optional.empty();
         MimoEntry entry = byWikiTitle.get(title);
         if (entry == null) return Optional.empty();
-        // MIMO images zijn meestal al >1000px. We vragen 1200 aan zodat
-        // next/image efficient kan downscalen zonder quality-verlies.
-        return Optional.of(new Candidate(entry.imageUrl(), "mimo", 1200, 0));
+        // MIMO's image.ashx-proxy levert wat er is (gemeten: 320-1253px,
+        // mediaan ~800px); een width-parameter wordt genegeerd. De
+        // HdThumbnailResolver meet de werkelijke resolutie na download;
+        // de 800 hier is alleen een fallback-schatting voor formaten die
+        // ImageIO niet kan lezen.
+        return Optional.of(new Candidate(entry.imageUrl(), "mimo", 800, 0));
     }
 
     @Override
     public boolean hdOnly() {
-        // MIMO levert al originele museum-foto's (typisch 1000-2000px),
-        // dus dezelfde URL kan ook als HD dienen. We markeren deze bron
-        // als HD-capable; de HdThumbnailResolver gebruikt dezelfde lookup.
+        // Museum-foto's zijn vaak de enige bron voor instrumenten zonder
+        // bruikbare Wikipedia-afbeelding. Meestal <1200px, dus de
+        // HdThumbnailResolver accepteert ze pas wanneer Wikipedia (order
+        // 10) niets beters oplevert.
         return true;
     }
 

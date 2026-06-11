@@ -91,15 +91,43 @@ unless you are running against your own infrastructure.
 
 ## Image fallback ladder (dev summary)
 
-When a tone's thumbnail is requested, the backend walks this ladder:
+There are two ladders: SD (card thumbnails, `wiki_data.thumbnail_path`)
+and HD (hover-zoom/lightbox, `wiki_data.thumbnail_hd_path`). A source is
+in exactly one ladder, selected by its `hdOnly()` flag.
 
-1. **LocalFileThumbnailSource** (order=5) — reads
+**SD ladder** (`ThumbnailResolver`):
+
+1. **LocalFileThumbnailSource** (order=3) — reads
    `data/instrument-images/{cat}__{tn}.jpg` from the bundled directory.
+   These site-images are only 180-320px (fine for 48-64px cards, useless
+   as HD — that's why this source is SD-only).
 2. **WikiSummaryThumbnailSource** (order=10) — fetches
-   `en.wikipedia.org/.../page/summary/{title}` and downloads
-   `summary.thumbnail.source` to local storage.
+   `en.wikipedia.org/.../page/summary/{title}` and rewrites the
+   `originalimage` URL to a 960px Wikimedia thumb. If the original is
+   ≤960px it downloads the original itself.
 3. **WikiPageImagesThumbnailSource** (order=20) — Action API fallback
    for pages without a summary thumbnail.
+
+**HD ladder** (`HdThumbnailResolver`):
+
+1. **MimoImageThumbnailSource** (order=5) — museum photo via MIMO's
+   `image.ashx` proxy. Measured 320-1253px; the proxy ignores width
+   parameters, so this is a "best available" source.
+2. **WikiHdThumbnailSource** (order=10) — `originalimage` from the REST
+   summary endpoint, rewritten to a 1920px Wikimedia thumb when the
+   original is wider (avoids multi-MB original downloads).
+
+Sources can lie about their resolution, so both resolvers measure the
+real pixel size after download (`ImageDimensionProbe`, header-only
+ImageIO) and store the *measured* dimensions in the database. The HD
+resolver additionally keeps trying sources until one delivers ≥1200px
+real width, falling back to the best undersized candidate otherwise.
+
+Note: Wikimedia's thumb server only accepts a fixed list of widths
+(20/40/60/120/250/330/500/960/1280/1920/3840, see
+https://www.mediawiki.org/wiki/Common_thumbnail_sizes); other values
+return HTTP 400 unless an old render happens to be cached — see
+`WikimediaThumbUrl`.
 
 Stale or 404 URLs are filtered out at write time so the frontend never
 sees a broken image link.

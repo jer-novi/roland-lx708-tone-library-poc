@@ -15,17 +15,25 @@ import java.util.Optional;
  * downloadt via {@link HdThumbnailStorage} en geeft het relatieve pad
  * terug dat uiteindelijk in {@code wiki_data.thumbnail_hd_path} belandt.
  *
- * <p>Het HD-ladder is bewust klein gehouden:
+ * <p>De HD-ladder:
  * <ol>
- *   <li>3: lokaal (site-images, al hoge resolutie)</li>
- *   <li>5: MIMO (museum-foto, vaak al 1000-2000px)</li>
- *   <li>10: Wikipedia (1600px via pageimages-original)</li>
+ *   <li>5: MIMO (museum-foto, gemeten 320-1253px)</li>
+ *   <li>10: Wikipedia (1920px-thumb van de originalimage)</li>
  * </ol>
+ *
+ * <p>Bronnen kunnen liegen over hun resolutie, dus na elke download wordt
+ * de werkelijke breedte gemeten ({@link ImageDimensionProbe}). Een
+ * kandidaat onder {@link #MIN_ACCEPT_WIDTH} wordt niet meteen
+ * geaccepteerd: de resolver probeert eerst de volgende bron en valt pas
+ * op de beste te kleine kandidaat terug als niets de drempel haalt.
+ * De gemeten dimensies (niet de aangevraagde) gaan naar de database.
  */
 @Component
 public class HdThumbnailResolver {
 
     private static final Logger log = LoggerFactory.getLogger(HdThumbnailResolver.class);
+    /** Onder deze gemeten breedte zoeken we verder naar een scherpere bron. */
+    private static final int MIN_ACCEPT_WIDTH = 1200;
 
     private final List<ThumbnailSource> hdSources;
     private final HdThumbnailStorage storage;
@@ -42,6 +50,7 @@ public class HdThumbnailResolver {
     }
 
     public Optional<Resolved> resolve(Tone tone) {
+        Resolved best = null;
         for (ThumbnailSource source : hdSources) {
             Optional<ThumbnailSource.Candidate> candidate = source.lookup(tone);
             if (candidate.isEmpty()) continue;
@@ -52,13 +61,26 @@ public class HdThumbnailResolver {
                         candidate.get().sourceTag(), tone.getId());
                 continue;
             }
-            return Optional.of(new Resolved(
+            Optional<ImageDimensionProbe.Dimensions> measured = ImageDimensionProbe.probe(
+                    storage.getStorageDir().resolve(stored.get().relativePath()));
+            Resolved resolved = new Resolved(
                     stored.get().relativePath(),
                     candidate.get().sourceTag(),
-                    candidate.get().desiredWidth(),
-                    candidate.get().desiredHeight()));
+                    measured.map(ImageDimensionProbe.Dimensions::width)
+                            .orElse(candidate.get().desiredWidth()),
+                    measured.map(ImageDimensionProbe.Dimensions::height)
+                            .orElse(candidate.get().desiredHeight()));
+            // Niet-meetbaar formaat (SVG is schaalbaar): meteen accepteren.
+            if (measured.isEmpty() || resolved.width() >= MIN_ACCEPT_WIDTH) {
+                return Optional.of(resolved);
+            }
+            log.debug("HD source {} gaf maar {}px voor tone {}, probeer volgende bron",
+                    resolved.sourceTag(), resolved.width(), tone.getId());
+            if (best == null || resolved.width() > best.width()) {
+                best = resolved;
+            }
         }
-        return Optional.empty();
+        return Optional.ofNullable(best);
     }
 
     public record Resolved(String relativePath, String sourceTag, int width, int height) {}

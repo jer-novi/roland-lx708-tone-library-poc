@@ -44,11 +44,17 @@ public class ThumbnailResolver {
                         candidate.get().sourceTag(), tone.getId());
                 continue;
             }
+            // Meet de werkelijke pixels: de DB-dimensies moeten kloppen
+            // met het bestand, niet met wat de bron beloofde.
+            Optional<ImageDimensionProbe.Dimensions> measured = ImageDimensionProbe.probe(
+                    storage.getStorageDir().resolve(stored.get().relativePath()));
             return Optional.of(new Resolved(
                     stored.get().relativePath(),
                     candidate.get().sourceTag(),
-                    candidate.get().desiredWidth(),
-                    candidate.get().desiredHeight()));
+                    measured.map(ImageDimensionProbe.Dimensions::width)
+                            .orElse(candidate.get().desiredWidth()),
+                    measured.map(ImageDimensionProbe.Dimensions::height)
+                            .orElse(candidate.get().desiredHeight())));
         }
         return Optional.empty();
     }

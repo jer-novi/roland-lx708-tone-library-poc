@@ -88,10 +88,11 @@ public class LocalFileThumbnailSource implements ThumbnailSource {
 
     @Override
     public boolean hdOnly() {
-        // De lokale site-images zijn originele museum-foto's (800-1200px+);
-        // dezelfde file kan dus ook als HD dienen. De HdThumbnailResolver
-        // gebruikt dezelfde lookup() maar slaat op in de HD-storage.
-        return true;
+        // De site-images zijn maar 180-320px (zie dimensions.json) —
+        // prima voor de 48-64px card-thumbnails, maar veel te klein als
+        // HD. In de HD-ladder zouden ze bovendien (order 3) de échte
+        // HD-bronnen MIMO en Wikipedia verdringen.
+        return false;
     }
 
     private record DimensionInfo(int width, int height) {}

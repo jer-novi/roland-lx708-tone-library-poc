@@ -44,6 +44,11 @@ public class HdThumbnailStorage {
         this.downloadClient = WebClient.builder()
                 .defaultHeader(HttpHeaders.USER_AGENT,
                         "RolandLX708ToneLibrary/0.1 (https://github.com/jer-novi/roland-lx708-tone-library-poc)")
+                // WebClient buffert standaard max 256KB in memory — een
+                // 1920px JPEG is ~1MB, dus zonder deze verhoging faalde
+                // vrijwel elke échte HD-download stilletjes (dáárom waren
+                // de oude "HD"-files vrijwel allemaal <1000px).
+                .codecs(c -> c.defaultCodecs().maxInMemorySize((int) MAX_BYTES))
                 .build();
         try {
             Files.createDirectories(this.storageDir);
