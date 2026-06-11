@@ -60,6 +60,12 @@ public class WikiData {
     @Column(name = "thumbnail_hd_source", length = 32)
     private String thumbnailHdSource;
 
+    /** Optionele MIMO detail-URL (mimo-international.com/MIMO/doc/...).
+     *  Null als er geen MIMO-match is voor de wiki-titel van deze tone.
+     *  Gebruikt door de frontend "Bekijk op MIMO"-knop. */
+    @Column(name = "mimo_url", length = 512)
+    private String mimoUrl;
+
     /**
      * Welke "source" de thumbnail heeft opgeleverd. Bijv. {@code wiki-summary},
      * {@code wiki-pageimages}, of straks {@code flickr}, {@code cms-strapi},
@@ -189,6 +195,14 @@ public class WikiData {
 
     public void setThumbnailHdSource(String thumbnailHdSource) {
         this.thumbnailHdSource = thumbnailHdSource;
+    }
+
+    public String getMimoUrl() {
+        return mimoUrl;
+    }
+
+    public void setMimoUrl(String mimoUrl) {
+        this.mimoUrl = mimoUrl;
     }
 
     public Instant getLastFetchedAt() {

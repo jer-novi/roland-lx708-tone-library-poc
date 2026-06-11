@@ -52,6 +52,7 @@ public class WikiService {
     private final HdThumbnailResolver hdThumbnailResolver;
     private final ThumbnailUrlBuilder thumbnailUrlBuilder;
     private final HdThumbnailUrlBuilder hdThumbnailUrlBuilder;
+    private final MimoReferenceService mimoReferenceService;
     private final long bulkDelayMs;
 
     public WikiService(WebClient wikipediaClient,
@@ -62,6 +63,7 @@ public class WikiService {
                        HdThumbnailResolver hdThumbnailResolver,
                        ThumbnailUrlBuilder thumbnailUrlBuilder,
                        HdThumbnailUrlBuilder hdThumbnailUrlBuilder,
+                       MimoReferenceService mimoReferenceService,
                        @Value("${app.wikipedia.bulk-delay-ms:250}") long bulkDelayMs) {
         this.wikipediaClient = wikipediaClient;
         this.toneRepository = toneRepository;
@@ -71,6 +73,7 @@ public class WikiService {
         this.hdThumbnailResolver = hdThumbnailResolver;
         this.thumbnailUrlBuilder = thumbnailUrlBuilder;
         this.hdThumbnailUrlBuilder = hdThumbnailUrlBuilder;
+        this.mimoReferenceService = mimoReferenceService;
         this.bulkDelayMs = bulkDelayMs;
     }
 
@@ -212,6 +215,13 @@ public class WikiService {
             wikiData.setThumbnailHdWidth(null);
             wikiData.setThumbnailHdHeight(null);
         }
+        // MIMO detail-URL — losse lookup op de wiki-titel, onafhankelijk
+        // van of de HD-resolver een MIMO-image heeft kunnen vinden. De
+        // frontend gebruikt dit voor de "Bekijk op MIMO"-knop.
+        mimoReferenceService.findByWikiTitle(title)
+                .ifPresentOrElse(
+                        entry -> wikiData.setMimoUrl(entry.detailUrl()),
+                        () -> wikiData.setMimoUrl(null));
         wikiData.setLastFetchedAt(Instant.now());
         return wikiDataRepository.save(wikiData);
     }

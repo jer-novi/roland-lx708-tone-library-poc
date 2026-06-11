@@ -6,10 +6,12 @@ import { useQuery, useQueryClient } from "@tanstack/react-query";
 import DOMPurify from "dompurify";
 import { fetchWiki } from "@/lib/api";
 import type { ToneLibrary } from "@/lib/api";
-import type { ToneDto } from "@/lib/types";
+import type { ToneDto, WikiDataDto } from "@/lib/types";
 import { collectionsFor, parseTags } from "@/lib/collections";
 import { PlayToneButton } from "@/components/PlayToneButton";
-import { ToneThumbnail } from "@/components/ToneThumbnail";
+import { HornbostelSachsTree } from "@/components/HornbostelSachsTree";
+import { HornbostelSachsTreeFull } from "@/components/HornbostelSachsTreeFull";
+import { API_URL } from "@/lib/api";
 
 interface Props {
   tone: ToneDto;
@@ -18,7 +20,6 @@ interface Props {
   midiAvailable: boolean;
 }
 
-/** Zelfde afkapping als de backend-lijst-API: ~220 tekens op woordgrens */
 function toShortSummary(summary: string | null): string | null {
   if (!summary) return null;
   if (summary.length <= 220) return summary;
@@ -27,11 +28,60 @@ function toShortSummary(summary: string | null): string | null {
   return `${cut.slice(0, lastSpace > 0 ? lastSpace : 220)}…`;
 }
 
+/**
+ * Resolve een relatief pad uit de API (zoals "/api/wiki-thumbs/foo.jpg")
+ * naar een absolute URL door de API_URL er voor te plakken. Idem voor
+ * de HD-variant.
+ */
+function resolveImageUrl(path: string | null | undefined): string | null {
+  if (!path) return null;
+  if (path.startsWith("http://") || path.startsWith("https://")) return path;
+  return `${API_URL}${path.startsWith("/") ? "" : "/"}${path}`;
+}
+
+function ImageWithFallback({
+  src,
+  alt,
+  className,
+  loading,
+}: {
+  src: string;
+  alt: string;
+  className?: string;
+  loading?: "eager" | "lazy";
+}) {
+  const [failed, setFailed] = useState(false);
+  if (failed) {
+    return (
+      <div
+        className={`flex items-center justify-center rounded-lg border border-border-soft bg-surface-raised text-xs text-muted ${className ?? ""}`}
+        style={{ aspectRatio: "1 / 1" }}
+      >
+        geen afbeelding
+      </div>
+    );
+  }
+  // Plain <img> met onError-fallback. We gebruiken bewust geen next/image
+  // hier zodat we zowel de lokale API-URL (same-origin) als de cache-control
+  // headers van de controller kunnen respecteren zonder next/image optimalisatie.
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={src}
+      alt={alt}
+      loading={loading ?? "lazy"}
+      decoding="async"
+      onError={() => setFailed(true)}
+      className={`rounded-lg border border-border-soft object-cover ${className ?? ""}`}
+    />
+  );
+}
+
 export function ToneModal({ tone, onClose, onPlay, midiAvailable }: Props) {
   const [showFullArticle, setShowFullArticle] = useState(false);
+  const [showFullHsTree, setShowFullHsTree] = useState(false);
   const queryClient = useQueryClient();
 
-  // Fallback entries (negative id) have no backend record to fetch wiki for
   const wikiEnabled = tone.id > 0 && tone.wikipediaPageTitle !== null;
 
   const { data: wiki, isLoading, isError } = useQuery({
@@ -41,8 +91,6 @@ export function ToneModal({ tone, onClose, onPlay, midiAvailable }: Props) {
     staleTime: 24 * 60 * 60 * 1000,
   });
 
-  // Het opvragen van wiki-data vult ook de backend-cache. Werk de kaart in de
-  // lijst direct bij, zodat thumbnail + samenvatting verschijnen zonder reload.
   useEffect(() => {
     if (!wiki) return;
     queryClient.setQueryData<ToneLibrary>(["library"], (old) => {
@@ -65,14 +113,23 @@ export function ToneModal({ tone, onClose, onPlay, midiAvailable }: Props) {
   }, [wiki, tone.id, queryClient]);
 
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        if (showFullHsTree) setShowFullHsTree(false);
+        else onClose();
+      }
+    };
     document.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
     return () => {
       document.removeEventListener("keydown", onKey);
       document.body.style.overflow = "";
     };
-  }, [onClose]);
+  }, [onClose, showFullHsTree]);
+
+  const sdUrl = resolveImageUrl(tone.thumbnailUrl);
+  const hdUrl = resolveImageUrl(tone.thumbnailHdUrl);
+  const wikiHdUrl = resolveImageUrl(wiki?.thumbnailHdUrl);
 
   return (
     <div
@@ -86,7 +143,24 @@ export function ToneModal({ tone, onClose, onPlay, midiAvailable }: Props) {
       >
         <header className="flex items-start justify-between gap-4 border-b border-border-soft p-5">
           <div className="flex items-start gap-4">
-            <ToneThumbnail tone={tone} size={64} rounded="xl" />
+            <div
+              className="shrink-0 cursor-pointer overflow-hidden rounded-xl border border-border-soft"
+              style={{ width: 64, height: 64 }}
+              onClick={onClose}
+            >
+              {sdUrl ? (
+                <ImageWithFallback
+                  src={sdUrl}
+                  alt={tone.wikipediaPageTitle ?? tone.name}
+                  className="h-full w-full"
+                  loading="eager"
+                />
+              ) : (
+                <div className="flex h-full w-full items-center justify-center bg-accent-soft text-2xl text-accent">
+                  ♪
+                </div>
+              )}
+            </div>
             <div>
               <p className="font-mono text-xs text-muted">
                 {tone.category}
@@ -129,6 +203,62 @@ export function ToneModal({ tone, onClose, onPlay, midiAvailable }: Props) {
         </header>
 
         <div className="flex-1 space-y-5 overflow-y-auto p-5">
+          {/* SD/HD side-by-side image gallery (PC) / stacked (mobile).
+              Geen hover-effect: alle interactie gebeurt via de knoppen
+              eronder. */}
+          <section>
+            <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider text-accent">
+              Afbeelding
+            </h3>
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <figure className="flex flex-col gap-1">
+                <ImageWithFallback
+                  src={sdUrl ?? ""}
+                  alt={`${tone.name} (standaard)`}
+                  className="aspect-square w-full"
+                  loading="eager"
+                />
+                <figcaption className="text-center text-[11px] text-muted">
+                  Standaard · {tone.thumbnailUrl ? "lokaal gecached" : "geen"}
+                </figcaption>
+              </figure>
+              <figure className="flex flex-col gap-1">
+                <ImageWithFallback
+                  src={hdUrl ?? wikiHdUrl ?? ""}
+                  alt={`${tone.name} (HD)`}
+                  className="aspect-square w-full"
+                  loading="lazy"
+                />
+                <figcaption className="text-center text-[11px] text-muted">
+                  HD · {hdUrl ? "lokaal gecached" : wikiHdUrl ? "via wiki" : "geen"}
+                </figcaption>
+              </figure>
+            </div>
+            {wiki?.sourceUrl && (
+              <div className="mt-2 flex flex-wrap gap-2">
+                <a
+                  href={wiki.sourceUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-lg border border-border-soft px-3 py-1.5 text-[11px] text-muted hover:text-foreground"
+                >
+                  Bekijk op Wikipedia ↗
+                </a>
+                {wiki.mimoUrl && (
+                  <a
+                    href={wiki.mimoUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-lg border border-border-soft px-3 py-1.5 text-[11px] text-muted hover:text-foreground"
+                    title="Museum-object met dezelfde naam in mimo-international.com"
+                  >
+                    Bekijk op MIMO ↗
+                  </a>
+                )}
+              </div>
+            )}
+          </section>
+
           {midiAvailable && tone.midiProgram != null && (
             <section className="flex flex-wrap items-center gap-3">
               <PlayToneButton
@@ -176,6 +306,25 @@ export function ToneModal({ tone, onClose, onPlay, midiAvailable }: Props) {
               🎛 Routing-setups voor je studio
             </Link>
           </section>
+
+          {/* Hornbostel-Sachs taxonomy section — small tree with the
+              3-4 ancestor nodes + link to the full 350-node tree. */}
+          {tone.id > 0 && (
+            <section>
+              <div className="mb-2 flex items-baseline justify-between">
+                <h3 className="text-xs font-semibold uppercase tracking-wider text-accent">
+                  Hornbostel-Sachs taxonomie
+                </h3>
+                <button
+                  onClick={() => setShowFullHsTree(true)}
+                  className="text-[11px] text-muted hover:text-accent"
+                >
+                  Bekijk hele taxonomy →
+                </button>
+              </div>
+              <HornbostelSachsTree toneId={tone.id} />
+            </section>
+          )}
 
           <section>
             <h3 className="mb-1 text-xs font-semibold uppercase tracking-wider text-accent">
@@ -229,16 +378,6 @@ export function ToneModal({ tone, onClose, onPlay, midiAvailable }: Props) {
                       Lees het volledige artikel
                     </button>
                   )}
-                  {wiki.sourceUrl && (
-                    <a
-                      href={wiki.sourceUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="rounded-lg border border-border-soft px-3 py-1.5 text-xs text-muted hover:text-foreground"
-                    >
-                      Open op Wikipedia ↗
-                    </a>
-                  )}
                 </div>
               </>
             )}
@@ -264,6 +403,38 @@ export function ToneModal({ tone, onClose, onPlay, midiAvailable }: Props) {
           </section>
         </div>
       </div>
+
+      {/* Full HS-tree modal (overlay) */}
+      {showFullHsTree && (
+        <div
+          className="fixed inset-0 z-[60] flex items-center justify-center bg-black/85 p-3 sm:p-6"
+          onClick={() => setShowFullHsTree(false)}
+        >
+          <div
+            className="flex h-full max-h-[92vh] w-full max-w-6xl flex-col overflow-hidden rounded-2xl border border-border-soft bg-surface shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <header className="flex items-center justify-between border-b border-border-soft p-4">
+              <div>
+                <h2 className="text-lg font-bold">Hornbostel-Sachs taxonomie</h2>
+                <p className="text-xs text-muted">
+                  5 families · 13 sub-families · 350 museum-instrumenten
+                </p>
+              </div>
+              <button
+                onClick={() => setShowFullHsTree(false)}
+                aria-label="Sluiten"
+                className="rounded-lg border border-border-soft px-2.5 py-1 text-sm text-muted hover:text-foreground"
+              >
+                ✕
+              </button>
+            </header>
+            <div className="flex-1 overflow-hidden">
+              <HornbostelSachsTreeFull />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -19,6 +19,7 @@ public record WikiDataDto(
         Integer thumbnailHdWidth,
         Integer thumbnailHdHeight,
         String thumbnailHdSource,
+        String mimoUrl,
         Instant lastFetchedAt
 ) {
     public static WikiDataDto from(WikiData wikiData, ThumbnailUrlBuilder sdBuilder, HdThumbnailUrlBuilder hdBuilder) {
@@ -45,6 +46,7 @@ public record WikiDataDto(
                 wikiData.getThumbnailHdWidth(),
                 wikiData.getThumbnailHdHeight(),
                 wikiData.getThumbnailHdSource(),
+                wikiData.getMimoUrl(),
                 wikiData.getLastFetchedAt()
         );
     }

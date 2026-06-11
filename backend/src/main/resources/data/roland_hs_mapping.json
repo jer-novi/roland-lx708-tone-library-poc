@@ -1,0 +1,5122 @@
+{
+  "generated_at": "2026-06-11T16:40:06.927805+00:00",
+  "stats": {
+    "total_seed_tones": 324,
+    "matched": 324,
+    "unmatched": 0,
+    "match_pct": 100.0,
+    "category_default_fallback": 255,
+    "matched_via": {
+      "default:Piano": 4,
+      "default:E. Piano": 11,
+      "default:Strings": 16,
+      "hs_tree_name": 34,
+      "alias_name": 2,
+      "default:Organ": 8,
+      "alias_wiki": 10,
+      "default:Upright": 5,
+      "default:Classical": 5,
+      "default:Do Re Mi": 4,
+      "default:Drums": 9,
+      "default:GM2": 193,
+      "hs_tree_wiki": 23
+    },
+    "top_hs_codes": {
+      "5": 222,
+      "321.322": 35,
+      "211": 9,
+      "412.132": 5,
+      "321.322-71": 4,
+      "111.222": 4,
+      "422.212": 4,
+      "422.112": 4,
+      "421.121.12": 3,
+      "111.212": 3,
+      "111.242.122": 3,
+      "423.22": 3,
+      "423.232": 3,
+      "211.212.1": 3,
+      "314.122-4": 2,
+      "423.233": 2,
+      "111.24": 2,
+      "111.232": 1,
+      "211.11": 1,
+      "422.211.2": 1,
+      "421.221.12": 1,
+      "421.111.12": 1,
+      "421.221.11": 1,
+      "421.221.42": 1,
+      "321.312-5": 1
+    }
+  },
+  "matches": {
+    "Piano|1": {
+      "roland_name": "European Grand",
+      "wikipedia_page_title": "Grand piano",
+      "matched_via": "default:Piano",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "321.322"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322"
+        ]
+      ]
+    },
+    "Piano|2": {
+      "roland_name": "European v2",
+      "wikipedia_page_title": "Grand piano",
+      "matched_via": "default:Piano",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "321.322"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322"
+        ]
+      ]
+    },
+    "Piano|3": {
+      "roland_name": "American Grand",
+      "wikipedia_page_title": "Steinway & Sons",
+      "matched_via": "default:Piano",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "321.322"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322"
+        ]
+      ]
+    },
+    "Piano|4": {
+      "roland_name": "American v2",
+      "wikipedia_page_title": "Steinway & Sons",
+      "matched_via": "default:Piano",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "321.322"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322"
+        ]
+      ]
+    },
+    "E. Piano|1": {
+      "roland_name": "1976SuitCase",
+      "wikipedia_page_title": "Rhodes piano",
+      "matched_via": "default:E. Piano",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "321.322"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322"
+        ]
+      ]
+    },
+    "E. Piano|2": {
+      "roland_name": "Tremolo EP",
+      "wikipedia_page_title": "Rhodes piano",
+      "matched_via": "default:E. Piano",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "321.322"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322"
+        ]
+      ]
+    },
+    "E. Piano|3": {
+      "roland_name": "Pop EP",
+      "wikipedia_page_title": "Electric piano",
+      "matched_via": "default:E. Piano",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "321.322"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322"
+        ]
+      ]
+    },
+    "E. Piano|4": {
+      "roland_name": "Vintage EP",
+      "wikipedia_page_title": "Wurlitzer electronic piano",
+      "matched_via": "default:E. Piano",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "321.322"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322"
+        ]
+      ]
+    },
+    "E. Piano|5": {
+      "roland_name": "FM E.Piano",
+      "wikipedia_page_title": "Yamaha DX7",
+      "matched_via": "default:E. Piano",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "321.322"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322"
+        ]
+      ]
+    },
+    "E. Piano|6": {
+      "roland_name": "EP Belle",
+      "wikipedia_page_title": "Electric piano",
+      "matched_via": "default:E. Piano",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "321.322"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322"
+        ]
+      ]
+    },
+    "E. Piano|7": {
+      "roland_name": "60's EP",
+      "wikipedia_page_title": "Wurlitzer electronic piano",
+      "matched_via": "default:E. Piano",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "321.322"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322"
+        ]
+      ]
+    },
+    "E. Piano|8": {
+      "roland_name": "Clav.",
+      "wikipedia_page_title": "Clavinet",
+      "matched_via": "default:E. Piano",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "321.322"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322"
+        ]
+      ]
+    },
+    "E. Piano|9": {
+      "roland_name": "Stage Phaser",
+      "wikipedia_page_title": "Phaser (effect)",
+      "matched_via": "default:E. Piano",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "321.322"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322"
+        ]
+      ]
+    },
+    "E. Piano|10": {
+      "roland_name": "70's EP",
+      "wikipedia_page_title": "Rhodes piano",
+      "matched_via": "default:E. Piano",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "321.322"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322"
+        ]
+      ]
+    },
+    "E. Piano|11": {
+      "roland_name": "E.Grand",
+      "wikipedia_page_title": "Yamaha CP-70",
+      "matched_via": "default:E. Piano",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "321.322"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322"
+        ]
+      ]
+    },
+    "Strings|1": {
+      "roland_name": "SymphonicStr1",
+      "wikipedia_page_title": "String section",
+      "matched_via": "default:Strings",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "321.322"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322"
+        ]
+      ]
+    },
+    "Strings|2": {
+      "roland_name": "Epic Strings",
+      "wikipedia_page_title": "String section",
+      "matched_via": "default:Strings",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "321.322"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322"
+        ]
+      ]
+    },
+    "Strings|3": {
+      "roland_name": "Rich Strings",
+      "wikipedia_page_title": "String section",
+      "matched_via": "default:Strings",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "321.322"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322"
+        ]
+      ]
+    },
+    "Strings|4": {
+      "roland_name": "Orchestra Str",
+      "wikipedia_page_title": "String orchestra",
+      "matched_via": "default:Strings",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "321.322"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322"
+        ]
+      ]
+    },
+    "Strings|5": {
+      "roland_name": "Orchestra",
+      "wikipedia_page_title": "Orchestra",
+      "matched_via": "default:Strings",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "321.322"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322"
+        ]
+      ]
+    },
+    "Strings|6": {
+      "roland_name": "Chamber Winds",
+      "wikipedia_page_title": "Wind ensemble",
+      "matched_via": "default:Strings",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "321.322"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322"
+        ]
+      ]
+    },
+    "Strings|7": {
+      "roland_name": "Harp",
+      "wikipedia_page_title": "Harp",
+      "matched_via": "default:Strings",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "321.322"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322"
+        ]
+      ]
+    },
+    "Strings|8": {
+      "roland_name": "Violin",
+      "wikipedia_page_title": "Violin",
+      "matched_via": "default:Strings",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "321.322"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322"
+        ]
+      ]
+    },
+    "Strings|9": {
+      "roland_name": "Velo Strings",
+      "wikipedia_page_title": "String section",
+      "matched_via": "default:Strings",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "321.322"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322"
+        ]
+      ]
+    },
+    "Strings|10": {
+      "roland_name": "Flute",
+      "wikipedia_page_title": "Flute",
+      "matched_via": "hs_tree_name",
+      "matched_site_name": "Flute",
+      "matched_count": 1,
+      "hs_codes": [
+        "421.121.12"
+      ],
+      "hs_paths": [
+        [
+          "4",
+          "42",
+          "421.121.12"
+        ]
+      ]
+    },
+    "Strings|11": {
+      "roland_name": "Cello",
+      "wikipedia_page_title": "Cello",
+      "matched_via": "hs_tree_name",
+      "matched_site_name": "Cello",
+      "matched_count": 1,
+      "hs_codes": [
+        "321.322-71"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322-71"
+        ]
+      ]
+    },
+    "Strings|12": {
+      "roland_name": "OrchestraBrs",
+      "wikipedia_page_title": "Brass section",
+      "matched_via": "default:Strings",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "321.322"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322"
+        ]
+      ]
+    },
+    "Strings|13": {
+      "roland_name": "Pizzicato Str",
+      "wikipedia_page_title": "Pizzicato",
+      "matched_via": "default:Strings",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "321.322"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322"
+        ]
+      ]
+    },
+    "Strings|14": {
+      "roland_name": "SymphonicStr2",
+      "wikipedia_page_title": "String section",
+      "matched_via": "default:Strings",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "321.322"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322"
+        ]
+      ]
+    },
+    "Strings|15": {
+      "roland_name": "Soft Pad",
+      "wikipedia_page_title": "Synthesizer",
+      "matched_via": "default:Strings",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "321.322"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322"
+        ]
+      ]
+    },
+    "Strings|16": {
+      "roland_name": "Magical Piano",
+      "wikipedia_page_title": "Piano",
+      "matched_via": "default:Strings",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "321.322"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322"
+        ]
+      ]
+    },
+    "Strings|17": {
+      "roland_name": "Jazz Scat",
+      "wikipedia_page_title": "Scat singing",
+      "matched_via": "default:Strings",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "321.322"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322"
+        ]
+      ]
+    },
+    "Strings|18": {
+      "roland_name": "A.Bass+Cymbl",
+      "wikipedia_page_title": "Double bass",
+      "matched_via": "default:Strings",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "321.322"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322"
+        ]
+      ]
+    },
+    "Other|1": {
+      "roland_name": "Pipe Organ",
+      "wikipedia_page_title": "Pipe organ",
+      "matched_via": "alias_name",
+      "matched_site_name": "Organ",
+      "matched_count": 1,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5",
+          "5"
+        ]
+      ]
+    },
+    "Other|2": {
+      "roland_name": "Nason Flt 8'",
+      "wikipedia_page_title": "Flue pipe",
+      "matched_via": "default:Organ",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|3": {
+      "roland_name": "Combo Jz.Org",
+      "wikipedia_page_title": "Hammond organ",
+      "matched_via": "default:Organ",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|4": {
+      "roland_name": "Ballad Organ",
+      "wikipedia_page_title": "Hammond organ",
+      "matched_via": "default:Organ",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|5": {
+      "roland_name": "ChurchOrgan1",
+      "wikipedia_page_title": "Pipe organ",
+      "matched_via": "alias_wiki",
+      "matched_site_name": "Organ",
+      "matched_count": 1,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5",
+          "5"
+        ]
+      ]
+    },
+    "Other|6": {
+      "roland_name": "ChurchOrgan2",
+      "wikipedia_page_title": "Pipe organ",
+      "matched_via": "alias_wiki",
+      "matched_site_name": "Organ",
+      "matched_count": 1,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5",
+          "5"
+        ]
+      ]
+    },
+    "Other|7": {
+      "roland_name": "Gospel Spin",
+      "wikipedia_page_title": "Leslie speaker",
+      "matched_via": "default:Organ",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|8": {
+      "roland_name": "Full Stops",
+      "wikipedia_page_title": "Pipe organ",
+      "matched_via": "alias_wiki",
+      "matched_site_name": "Organ",
+      "matched_count": 1,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5",
+          "5"
+        ]
+      ]
+    },
+    "Other|9": {
+      "roland_name": "Mellow Bars",
+      "wikipedia_page_title": "Hammond organ",
+      "matched_via": "default:Organ",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|10": {
+      "roland_name": "Light Organ",
+      "wikipedia_page_title": "Hammond organ",
+      "matched_via": "default:Organ",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|11": {
+      "roland_name": "Lower Organ",
+      "wikipedia_page_title": "Hammond organ",
+      "matched_via": "default:Organ",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|12": {
+      "roland_name": "60's Organ",
+      "wikipedia_page_title": "Vox Continental",
+      "matched_via": "default:Organ",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|13": {
+      "roland_name": "Upright Piano",
+      "wikipedia_page_title": "Upright piano",
+      "matched_via": "default:Upright",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|14": {
+      "roland_name": "Mellow Upright",
+      "wikipedia_page_title": "Upright piano",
+      "matched_via": "default:Upright",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|15": {
+      "roland_name": "Bright Upright",
+      "wikipedia_page_title": "Upright piano",
+      "matched_via": "default:Upright",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|16": {
+      "roland_name": "Rock Piano",
+      "wikipedia_page_title": "Piano rock",
+      "matched_via": "default:Upright",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|17": {
+      "roland_name": "Ragtime Piano",
+      "wikipedia_page_title": "Ragtime",
+      "matched_via": "default:Upright",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|18": {
+      "roland_name": "Fortepiano",
+      "wikipedia_page_title": "Fortepiano",
+      "matched_via": "default:Classical",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|19": {
+      "roland_name": "Mellow Forte",
+      "wikipedia_page_title": "Fortepiano",
+      "matched_via": "default:Classical",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|20": {
+      "roland_name": "Bright Forte",
+      "wikipedia_page_title": "Fortepiano",
+      "matched_via": "default:Classical",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|21": {
+      "roland_name": "Harpsichord",
+      "wikipedia_page_title": "Harpsichord",
+      "matched_via": "default:Classical",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|22": {
+      "roland_name": "Harpsi 8'+4'",
+      "wikipedia_page_title": "Harpsichord",
+      "matched_via": "default:Classical",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|23": {
+      "roland_name": "Do Re Mi 1#",
+      "wikipedia_page_title": null,
+      "matched_via": "default:Do Re Mi",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|24": {
+      "roland_name": "Do Re Mi 1b",
+      "wikipedia_page_title": null,
+      "matched_via": "default:Do Re Mi",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|25": {
+      "roland_name": "Do Re Mi 2#",
+      "wikipedia_page_title": null,
+      "matched_via": "default:Do Re Mi",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|26": {
+      "roland_name": "Do Re Mi 2b",
+      "wikipedia_page_title": null,
+      "matched_via": "default:Do Re Mi",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|27": {
+      "roland_name": "STANDARD Set",
+      "wikipedia_page_title": "Drum kit",
+      "matched_via": "default:Drums",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "211"
+      ],
+      "hs_paths": [
+        [
+          "211"
+        ]
+      ]
+    },
+    "Other|28": {
+      "roland_name": "ROOM Set",
+      "wikipedia_page_title": "Drum kit",
+      "matched_via": "default:Drums",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "211"
+      ],
+      "hs_paths": [
+        [
+          "211"
+        ]
+      ]
+    },
+    "Other|29": {
+      "roland_name": "POWER Set",
+      "wikipedia_page_title": "Drum kit",
+      "matched_via": "default:Drums",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "211"
+      ],
+      "hs_paths": [
+        [
+          "211"
+        ]
+      ]
+    },
+    "Other|30": {
+      "roland_name": "ELEC.Set",
+      "wikipedia_page_title": "Electronic drum",
+      "matched_via": "default:Drums",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "211"
+      ],
+      "hs_paths": [
+        [
+          "211"
+        ]
+      ]
+    },
+    "Other|31": {
+      "roland_name": "ANALOG Set",
+      "wikipedia_page_title": "Roland TR-808",
+      "matched_via": "default:Drums",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "211"
+      ],
+      "hs_paths": [
+        [
+          "211"
+        ]
+      ]
+    },
+    "Other|32": {
+      "roland_name": "JAZZ Set",
+      "wikipedia_page_title": "Drum kit",
+      "matched_via": "default:Drums",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "211"
+      ],
+      "hs_paths": [
+        [
+          "211"
+        ]
+      ]
+    },
+    "Other|33": {
+      "roland_name": "BRUSH Set",
+      "wikipedia_page_title": "Brush (music)",
+      "matched_via": "default:Drums",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "211"
+      ],
+      "hs_paths": [
+        [
+          "211"
+        ]
+      ]
+    },
+    "Other|34": {
+      "roland_name": "ORCH.Set",
+      "wikipedia_page_title": "Percussion section",
+      "matched_via": "default:Drums",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "211"
+      ],
+      "hs_paths": [
+        [
+          "211"
+        ]
+      ]
+    },
+    "Other|35": {
+      "roland_name": "SFX Set",
+      "wikipedia_page_title": "Sound effect",
+      "matched_via": "default:Drums",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "211"
+      ],
+      "hs_paths": [
+        [
+          "211"
+        ]
+      ]
+    },
+    "Other|36": {
+      "roland_name": "Piano 1",
+      "wikipedia_page_title": "Piano",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|37": {
+      "roland_name": "Piano 1w",
+      "wikipedia_page_title": "Piano",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|38": {
+      "roland_name": "Piano 1d",
+      "wikipedia_page_title": "Piano",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|39": {
+      "roland_name": "Piano 2",
+      "wikipedia_page_title": "Piano",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|40": {
+      "roland_name": "Piano 2w",
+      "wikipedia_page_title": "Piano",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|41": {
+      "roland_name": "Piano 3",
+      "wikipedia_page_title": "Piano",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|42": {
+      "roland_name": "Piano 3w",
+      "wikipedia_page_title": "Piano",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|43": {
+      "roland_name": "Honky-tonk",
+      "wikipedia_page_title": "Honky-tonk piano",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|44": {
+      "roland_name": "Honky-tonk w",
+      "wikipedia_page_title": "Honky-tonk piano",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|45": {
+      "roland_name": "E.Piano 1",
+      "wikipedia_page_title": "Piano",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|46": {
+      "roland_name": "Detuned EP 1",
+      "wikipedia_page_title": "Electric piano",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|47": {
+      "roland_name": "Vintage EP",
+      "wikipedia_page_title": "Wurlitzer electronic piano",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|48": {
+      "roland_name": "60's E.Piano",
+      "wikipedia_page_title": "Electric piano",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|49": {
+      "roland_name": "E.Piano 2",
+      "wikipedia_page_title": "Piano",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|50": {
+      "roland_name": "Detuned EP 2",
+      "wikipedia_page_title": "Electric piano",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|51": {
+      "roland_name": "St.FM EP",
+      "wikipedia_page_title": "Frequency modulation synthesis",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|52": {
+      "roland_name": "EP Legend",
+      "wikipedia_page_title": "Yamaha DX7",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|53": {
+      "roland_name": "EP Phaser",
+      "wikipedia_page_title": "Electric piano",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|54": {
+      "roland_name": "Harpsi.",
+      "wikipedia_page_title": "Harpsichord",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|55": {
+      "roland_name": "Coupled Hps.",
+      "wikipedia_page_title": "Harpsichord",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|56": {
+      "roland_name": "Harpsi.w",
+      "wikipedia_page_title": "Harpsichord",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|57": {
+      "roland_name": "Harpsi.o",
+      "wikipedia_page_title": "Harpsichord",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|58": {
+      "roland_name": "Clav.",
+      "wikipedia_page_title": "Clavinet",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|59": {
+      "roland_name": "Pulse Clav.",
+      "wikipedia_page_title": "Clavinet",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|60": {
+      "roland_name": "Celesta",
+      "wikipedia_page_title": "Celesta",
+      "matched_via": "hs_tree_name",
+      "matched_site_name": "Celesta",
+      "matched_count": 1,
+      "hs_codes": [
+        "111.222"
+      ],
+      "hs_paths": [
+        [
+          "1",
+          "11",
+          "111",
+          "111.222"
+        ]
+      ]
+    },
+    "Other|61": {
+      "roland_name": "Glockenspiel",
+      "wikipedia_page_title": "Glockenspiel",
+      "matched_via": "hs_tree_name",
+      "matched_site_name": "Glockenspiel",
+      "matched_count": 1,
+      "hs_codes": [
+        "111.222"
+      ],
+      "hs_paths": [
+        [
+          "1",
+          "11",
+          "111",
+          "111.222"
+        ]
+      ]
+    },
+    "Other|62": {
+      "roland_name": "Music Box",
+      "wikipedia_page_title": "Music box",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|63": {
+      "roland_name": "Vibraphone",
+      "wikipedia_page_title": "Vibraphone",
+      "matched_via": "hs_tree_name",
+      "matched_site_name": "Vibraphone",
+      "matched_count": 1,
+      "hs_codes": [
+        "111.222"
+      ],
+      "hs_paths": [
+        [
+          "1",
+          "11",
+          "111",
+          "111.222"
+        ]
+      ]
+    },
+    "Other|64": {
+      "roland_name": "Vibraphone w",
+      "wikipedia_page_title": "Vibraphone",
+      "matched_via": "hs_tree_wiki",
+      "matched_site_name": "Vibraphone",
+      "matched_count": 1,
+      "hs_codes": [
+        "111.222"
+      ],
+      "hs_paths": [
+        [
+          "1",
+          "11",
+          "111",
+          "111.222"
+        ]
+      ]
+    },
+    "Other|65": {
+      "roland_name": "Marimba",
+      "wikipedia_page_title": "Marimba",
+      "matched_via": "hs_tree_name",
+      "matched_site_name": "Marimba",
+      "matched_count": 1,
+      "hs_codes": [
+        "111.212"
+      ],
+      "hs_paths": [
+        [
+          "1",
+          "11",
+          "111",
+          "111.212"
+        ]
+      ]
+    },
+    "Other|66": {
+      "roland_name": "Marimba w",
+      "wikipedia_page_title": "Marimba",
+      "matched_via": "hs_tree_wiki",
+      "matched_site_name": "Marimba",
+      "matched_count": 1,
+      "hs_codes": [
+        "111.212"
+      ],
+      "hs_paths": [
+        [
+          "1",
+          "11",
+          "111",
+          "111.212"
+        ]
+      ]
+    },
+    "Other|67": {
+      "roland_name": "Xylophone",
+      "wikipedia_page_title": "Xylophone",
+      "matched_via": "hs_tree_name",
+      "matched_site_name": "Xylophone",
+      "matched_count": 1,
+      "hs_codes": [
+        "111.212"
+      ],
+      "hs_paths": [
+        [
+          "1",
+          "11",
+          "111",
+          "111.212"
+        ]
+      ]
+    },
+    "Other|68": {
+      "roland_name": "TubularBells",
+      "wikipedia_page_title": "Tubular bells",
+      "matched_via": "hs_tree_wiki",
+      "matched_site_name": "Tubular bells",
+      "matched_count": 1,
+      "hs_codes": [
+        "111.232"
+      ],
+      "hs_paths": [
+        [
+          "1",
+          "11",
+          "111",
+          "111.232"
+        ]
+      ]
+    },
+    "Other|69": {
+      "roland_name": "Church Bell",
+      "wikipedia_page_title": "Church bell",
+      "matched_via": "alias_name",
+      "matched_site_name": "Bell",
+      "matched_count": 1,
+      "hs_codes": [
+        "111.242.122"
+      ],
+      "hs_paths": [
+        [
+          "1",
+          "11",
+          "111",
+          "111.242.122"
+        ]
+      ]
+    },
+    "Other|70": {
+      "roland_name": "Carillon",
+      "wikipedia_page_title": "Carillon",
+      "matched_via": "hs_tree_name",
+      "matched_site_name": "Carillon",
+      "matched_count": 1,
+      "hs_codes": [
+        "111.242.122"
+      ],
+      "hs_paths": [
+        [
+          "1",
+          "11",
+          "111",
+          "111.242.122"
+        ]
+      ]
+    },
+    "Other|71": {
+      "roland_name": "Santur",
+      "wikipedia_page_title": "Santur",
+      "matched_via": "hs_tree_name",
+      "matched_site_name": "Santur",
+      "matched_count": 1,
+      "hs_codes": [
+        "314.122-4"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "31",
+          "314.122-4"
+        ]
+      ]
+    },
+    "Other|72": {
+      "roland_name": "Organ 1",
+      "wikipedia_page_title": "Hammond organ",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|73": {
+      "roland_name": "TremoloOrgan",
+      "wikipedia_page_title": "Hammond organ",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|74": {
+      "roland_name": "60's Organ",
+      "wikipedia_page_title": "Vox Continental",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|75": {
+      "roland_name": "Organ 2",
+      "wikipedia_page_title": "Hammond organ",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|76": {
+      "roland_name": "Perc.Organ 1",
+      "wikipedia_page_title": "Hammond organ",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|77": {
+      "roland_name": "Chorus Organ",
+      "wikipedia_page_title": "Hammond organ",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|78": {
+      "roland_name": "Perc.Organ 2",
+      "wikipedia_page_title": "Hammond organ",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|79": {
+      "roland_name": "Rock Organ",
+      "wikipedia_page_title": "Hammond organ",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|80": {
+      "roland_name": "Church Org.1",
+      "wikipedia_page_title": "Pipe organ",
+      "matched_via": "alias_wiki",
+      "matched_site_name": "Organ",
+      "matched_count": 1,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5",
+          "5"
+        ]
+      ]
+    },
+    "Other|81": {
+      "roland_name": "Church Org.2",
+      "wikipedia_page_title": "Pipe organ",
+      "matched_via": "alias_wiki",
+      "matched_site_name": "Organ",
+      "matched_count": 1,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5",
+          "5"
+        ]
+      ]
+    },
+    "Other|82": {
+      "roland_name": "Church Org.3",
+      "wikipedia_page_title": "Pipe organ",
+      "matched_via": "alias_wiki",
+      "matched_site_name": "Organ",
+      "matched_count": 1,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5",
+          "5"
+        ]
+      ]
+    },
+    "Other|83": {
+      "roland_name": "Reed Organ",
+      "wikipedia_page_title": "Pump organ",
+      "matched_via": "hs_tree_name",
+      "matched_site_name": "Reed organ",
+      "matched_count": 1,
+      "hs_codes": [
+        "412.132"
+      ],
+      "hs_paths": [
+        [
+          "4",
+          "41",
+          "412.132"
+        ]
+      ]
+    },
+    "Other|84": {
+      "roland_name": "Puff Organ",
+      "wikipedia_page_title": "Pump organ",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|85": {
+      "roland_name": "Accordion 1",
+      "wikipedia_page_title": "Accordion",
+      "matched_via": "hs_tree_wiki",
+      "matched_site_name": "Accordion",
+      "matched_count": 1,
+      "hs_codes": [
+        "412.132"
+      ],
+      "hs_paths": [
+        [
+          "4",
+          "41",
+          "412.132"
+        ]
+      ]
+    },
+    "Other|86": {
+      "roland_name": "Accordion 2",
+      "wikipedia_page_title": "Accordion",
+      "matched_via": "hs_tree_wiki",
+      "matched_site_name": "Accordion",
+      "matched_count": 1,
+      "hs_codes": [
+        "412.132"
+      ],
+      "hs_paths": [
+        [
+          "4",
+          "41",
+          "412.132"
+        ]
+      ]
+    },
+    "Other|87": {
+      "roland_name": "Harmonica",
+      "wikipedia_page_title": "Harmonica",
+      "matched_via": "hs_tree_name",
+      "matched_site_name": "Harmonica",
+      "matched_count": 1,
+      "hs_codes": [
+        "412.132"
+      ],
+      "hs_paths": [
+        [
+          "4",
+          "41",
+          "412.132"
+        ]
+      ]
+    },
+    "Other|88": {
+      "roland_name": "Bandoneon",
+      "wikipedia_page_title": "Bandoneon",
+      "matched_via": "hs_tree_name",
+      "matched_site_name": "Bandoneón",
+      "matched_count": 1,
+      "hs_codes": [
+        "412.132"
+      ],
+      "hs_paths": [
+        [
+          "4",
+          "41",
+          "412.132"
+        ]
+      ]
+    },
+    "Other|89": {
+      "roland_name": "Nylon-str.Gt",
+      "wikipedia_page_title": "Classical guitar",
+      "matched_via": "alias_wiki",
+      "matched_site_name": "Guitar",
+      "matched_count": 1,
+      "hs_codes": [
+        "321.322"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322"
+        ]
+      ]
+    },
+    "Other|90": {
+      "roland_name": "Ukulele",
+      "wikipedia_page_title": "Ukulele",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|91": {
+      "roland_name": "Nylon Gt o",
+      "wikipedia_page_title": "Classical guitar",
+      "matched_via": "alias_wiki",
+      "matched_site_name": "Guitar",
+      "matched_count": 1,
+      "hs_codes": [
+        "321.322"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322"
+        ]
+      ]
+    },
+    "Other|92": {
+      "roland_name": "Nylon Gt 2",
+      "wikipedia_page_title": "Classical guitar",
+      "matched_via": "alias_wiki",
+      "matched_site_name": "Guitar",
+      "matched_count": 1,
+      "hs_codes": [
+        "321.322"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322"
+        ]
+      ]
+    },
+    "Other|93": {
+      "roland_name": "Steel-str.Gt",
+      "wikipedia_page_title": "Steel-string acoustic guitar",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|94": {
+      "roland_name": "12-str.Gt",
+      "wikipedia_page_title": "Twelve-string guitar",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|95": {
+      "roland_name": "Mandolin",
+      "wikipedia_page_title": "Mandolin",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|96": {
+      "roland_name": "Steel+Body",
+      "wikipedia_page_title": "Steel-string acoustic guitar",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|97": {
+      "roland_name": "Jazz Guitar",
+      "wikipedia_page_title": "Jazz guitar",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|98": {
+      "roland_name": "Hawaiian Gt",
+      "wikipedia_page_title": "Steel guitar",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|99": {
+      "roland_name": "Clean Guitar",
+      "wikipedia_page_title": "Electric guitar",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|100": {
+      "roland_name": "Chorus Gt 1",
+      "wikipedia_page_title": "Electric guitar",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|101": {
+      "roland_name": "Mid Tone Gt",
+      "wikipedia_page_title": "Electric guitar",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|102": {
+      "roland_name": "Muted Guitar",
+      "wikipedia_page_title": "Palm mute",
+      "matched_via": "alias_wiki",
+      "matched_site_name": "Guitar",
+      "matched_count": 1,
+      "hs_codes": [
+        "321.322"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322"
+        ]
+      ]
+    },
+    "Other|103": {
+      "roland_name": "Funk Guitar1",
+      "wikipedia_page_title": "Electric guitar",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|104": {
+      "roland_name": "Funk Guitar2",
+      "wikipedia_page_title": "Electric guitar",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|105": {
+      "roland_name": "Chorus Gt 2",
+      "wikipedia_page_title": "Electric guitar",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|106": {
+      "roland_name": "Overdrive Gt",
+      "wikipedia_page_title": "Distortion (music)",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|107": {
+      "roland_name": "Guitar Pinch",
+      "wikipedia_page_title": "Electric guitar",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|108": {
+      "roland_name": "DistortionGt",
+      "wikipedia_page_title": "Distortion (music)",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|109": {
+      "roland_name": "Gt Feedback1",
+      "wikipedia_page_title": "Electric guitar",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|110": {
+      "roland_name": "Dist.Rhy Gt",
+      "wikipedia_page_title": "Electric guitar",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|111": {
+      "roland_name": "Gt Harmonics",
+      "wikipedia_page_title": "Natural harmonic",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|112": {
+      "roland_name": "Gt Feedback2",
+      "wikipedia_page_title": "Electric guitar",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|113": {
+      "roland_name": "AcousticBass",
+      "wikipedia_page_title": "Double bass",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|114": {
+      "roland_name": "FingeredBass",
+      "wikipedia_page_title": "Bass guitar",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|115": {
+      "roland_name": "Finger Slap",
+      "wikipedia_page_title": "Electric bass",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|116": {
+      "roland_name": "Picked Bass",
+      "wikipedia_page_title": "Bass guitar",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|117": {
+      "roland_name": "FretlessBass",
+      "wikipedia_page_title": "Fretless guitar",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|118": {
+      "roland_name": "Slap Bass 1",
+      "wikipedia_page_title": "Slapping (music)",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|119": {
+      "roland_name": "Slap Bass 2",
+      "wikipedia_page_title": "Slapping (music)",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|120": {
+      "roland_name": "Synth Bass 1",
+      "wikipedia_page_title": "Bass synthesizer",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|121": {
+      "roland_name": "WarmSyn.Bass",
+      "wikipedia_page_title": "Bass synthesizer",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|122": {
+      "roland_name": "Synth Bass 3",
+      "wikipedia_page_title": "Bass synthesizer",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|123": {
+      "roland_name": "Clav.Bass",
+      "wikipedia_page_title": "Clavinet",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|124": {
+      "roland_name": "Hammer Bass",
+      "wikipedia_page_title": "Electric bass",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|125": {
+      "roland_name": "Synth Bass 2",
+      "wikipedia_page_title": "Bass synthesizer",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|126": {
+      "roland_name": "Synth Bass 4",
+      "wikipedia_page_title": "Bass synthesizer",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|127": {
+      "roland_name": "RubberSyn.Bs",
+      "wikipedia_page_title": "Bass synthesizer",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|128": {
+      "roland_name": "Attack Pulse",
+      "wikipedia_page_title": "Percussion",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|129": {
+      "roland_name": "Violin",
+      "wikipedia_page_title": "Violin",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|130": {
+      "roland_name": "Slow Violin",
+      "wikipedia_page_title": "Violin",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|131": {
+      "roland_name": "Viola",
+      "wikipedia_page_title": "Viola",
+      "matched_via": "hs_tree_name",
+      "matched_site_name": "Viola",
+      "matched_count": 1,
+      "hs_codes": [
+        "321.322-71"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322-71"
+        ]
+      ]
+    },
+    "Other|132": {
+      "roland_name": "Cello",
+      "wikipedia_page_title": "Cello",
+      "matched_via": "hs_tree_name",
+      "matched_site_name": "Cello",
+      "matched_count": 1,
+      "hs_codes": [
+        "321.322-71"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322-71"
+        ]
+      ]
+    },
+    "Other|133": {
+      "roland_name": "Contrabass",
+      "wikipedia_page_title": "Double bass",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|134": {
+      "roland_name": "Tremolo Str.",
+      "wikipedia_page_title": "Tremolo",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|135": {
+      "roland_name": "PizzicatoStr",
+      "wikipedia_page_title": "Pizzicato",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|136": {
+      "roland_name": "Harp",
+      "wikipedia_page_title": "Harp",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|137": {
+      "roland_name": "Yang Qin",
+      "wikipedia_page_title": "Yangqin",
+      "matched_via": "hs_tree_wiki",
+      "matched_site_name": "Yangqin",
+      "matched_count": 1,
+      "hs_codes": [
+        "314.122-4"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "31",
+          "314.122-4"
+        ]
+      ]
+    },
+    "Other|138": {
+      "roland_name": "Timpani",
+      "wikipedia_page_title": "Timpani",
+      "matched_via": "hs_tree_name",
+      "matched_site_name": "Timpani",
+      "matched_count": 1,
+      "hs_codes": [
+        "211.11"
+      ],
+      "hs_paths": [
+        [
+          "2",
+          "21",
+          "211.11"
+        ]
+      ]
+    },
+    "Other|139": {
+      "roland_name": "Strings",
+      "wikipedia_page_title": "String section",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|140": {
+      "roland_name": "Orchestra",
+      "wikipedia_page_title": "Orchestra",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|141": {
+      "roland_name": "60's Strings",
+      "wikipedia_page_title": "String section",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|142": {
+      "roland_name": "Slow Strings",
+      "wikipedia_page_title": "String section",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|143": {
+      "roland_name": "Syn.Strings1",
+      "wikipedia_page_title": "Synthesizer",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|144": {
+      "roland_name": "Syn.Strings3",
+      "wikipedia_page_title": "Synthesizer",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|145": {
+      "roland_name": "Syn.Strings2",
+      "wikipedia_page_title": "Synthesizer",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|146": {
+      "roland_name": "Choir 1",
+      "wikipedia_page_title": "Choir",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|147": {
+      "roland_name": "Choir 2",
+      "wikipedia_page_title": "Choir",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|148": {
+      "roland_name": "Voice",
+      "wikipedia_page_title": "Human voice",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|149": {
+      "roland_name": "Humming",
+      "wikipedia_page_title": "Humming",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|150": {
+      "roland_name": "Synth Voice",
+      "wikipedia_page_title": "Vocoder",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|151": {
+      "roland_name": "Analog Voice",
+      "wikipedia_page_title": "Vocoder",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|152": {
+      "roland_name": "OrchestraHit",
+      "wikipedia_page_title": "Orchestra hit",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|153": {
+      "roland_name": "Bass Hit",
+      "wikipedia_page_title": "Orchestra hit",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|154": {
+      "roland_name": "6th Hit",
+      "wikipedia_page_title": "Orchestra hit",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|155": {
+      "roland_name": "Euro Hit",
+      "wikipedia_page_title": "Orchestra hit",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|156": {
+      "roland_name": "Trumpet",
+      "wikipedia_page_title": "Trumpet",
+      "matched_via": "hs_tree_name",
+      "matched_site_name": "Trumpet",
+      "matched_count": 1,
+      "hs_codes": [
+        "423.233"
+      ],
+      "hs_paths": [
+        [
+          "4",
+          "42",
+          "423.233"
+        ]
+      ]
+    },
+    "Other|157": {
+      "roland_name": "Dark Trumpet",
+      "wikipedia_page_title": "Trumpet",
+      "matched_via": "hs_tree_wiki",
+      "matched_site_name": "Trumpet",
+      "matched_count": 1,
+      "hs_codes": [
+        "423.233"
+      ],
+      "hs_paths": [
+        [
+          "4",
+          "42",
+          "423.233"
+        ]
+      ]
+    },
+    "Other|158": {
+      "roland_name": "Trombone 1",
+      "wikipedia_page_title": "Trombone",
+      "matched_via": "hs_tree_wiki",
+      "matched_site_name": "Trombone",
+      "matched_count": 1,
+      "hs_codes": [
+        "423.22"
+      ],
+      "hs_paths": [
+        [
+          "4",
+          "42",
+          "423.22"
+        ]
+      ]
+    },
+    "Other|159": {
+      "roland_name": "Trombone 2",
+      "wikipedia_page_title": "Trombone",
+      "matched_via": "hs_tree_wiki",
+      "matched_site_name": "Trombone",
+      "matched_count": 1,
+      "hs_codes": [
+        "423.22"
+      ],
+      "hs_paths": [
+        [
+          "4",
+          "42",
+          "423.22"
+        ]
+      ]
+    },
+    "Other|160": {
+      "roland_name": "Bright Tb",
+      "wikipedia_page_title": "Trombone",
+      "matched_via": "hs_tree_wiki",
+      "matched_site_name": "Trombone",
+      "matched_count": 1,
+      "hs_codes": [
+        "423.22"
+      ],
+      "hs_paths": [
+        [
+          "4",
+          "42",
+          "423.22"
+        ]
+      ]
+    },
+    "Other|161": {
+      "roland_name": "Tuba",
+      "wikipedia_page_title": "Tuba",
+      "matched_via": "hs_tree_name",
+      "matched_site_name": "Tuba",
+      "matched_count": 1,
+      "hs_codes": [
+        "423.232"
+      ],
+      "hs_paths": [
+        [
+          "4",
+          "42",
+          "423.232"
+        ]
+      ]
+    },
+    "Other|162": {
+      "roland_name": "MuteTrumpet1",
+      "wikipedia_page_title": "Mute (music)",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|163": {
+      "roland_name": "MuteTrumpet2",
+      "wikipedia_page_title": "Mute (music)",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|164": {
+      "roland_name": "French Horn1",
+      "wikipedia_page_title": "French horn",
+      "matched_via": "hs_tree_wiki",
+      "matched_site_name": "French Horn",
+      "matched_count": 1,
+      "hs_codes": [
+        "423.232"
+      ],
+      "hs_paths": [
+        [
+          "4",
+          "42",
+          "423.232"
+        ]
+      ]
+    },
+    "Other|165": {
+      "roland_name": "French Horn2",
+      "wikipedia_page_title": "French horn",
+      "matched_via": "hs_tree_wiki",
+      "matched_site_name": "French Horn",
+      "matched_count": 1,
+      "hs_codes": [
+        "423.232"
+      ],
+      "hs_paths": [
+        [
+          "4",
+          "42",
+          "423.232"
+        ]
+      ]
+    },
+    "Other|166": {
+      "roland_name": "Brass 1",
+      "wikipedia_page_title": "Brass section",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|167": {
+      "roland_name": "Brass 2",
+      "wikipedia_page_title": "Brass section",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|168": {
+      "roland_name": "Synth Brass1",
+      "wikipedia_page_title": "Brass section",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|169": {
+      "roland_name": "Synth Brass3",
+      "wikipedia_page_title": "Brass section",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|170": {
+      "roland_name": "AnalogBrass1",
+      "wikipedia_page_title": "Brass section",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|171": {
+      "roland_name": "Jump Brass",
+      "wikipedia_page_title": "Brass section",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|172": {
+      "roland_name": "Synth Brass2",
+      "wikipedia_page_title": "Brass section",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|173": {
+      "roland_name": "Synth Brass4",
+      "wikipedia_page_title": "Brass section",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|174": {
+      "roland_name": "AnalogBrass2",
+      "wikipedia_page_title": "Brass section",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|175": {
+      "roland_name": "Soprano Sax",
+      "wikipedia_page_title": "Soprano saxophone",
+      "matched_via": "hs_tree_wiki",
+      "matched_site_name": "Soprano saxophone",
+      "matched_count": 1,
+      "hs_codes": [
+        "422.212"
+      ],
+      "hs_paths": [
+        [
+          "4",
+          "42",
+          "422.212"
+        ]
+      ]
+    },
+    "Other|176": {
+      "roland_name": "Alto Sax",
+      "wikipedia_page_title": "Alto saxophone",
+      "matched_via": "hs_tree_wiki",
+      "matched_site_name": "Alto saxophone",
+      "matched_count": 1,
+      "hs_codes": [
+        "422.212"
+      ],
+      "hs_paths": [
+        [
+          "4",
+          "42",
+          "422.212"
+        ]
+      ]
+    },
+    "Other|177": {
+      "roland_name": "Tenor Sax",
+      "wikipedia_page_title": "Tenor saxophone",
+      "matched_via": "hs_tree_wiki",
+      "matched_site_name": "Tenor saxophone",
+      "matched_count": 1,
+      "hs_codes": [
+        "422.212"
+      ],
+      "hs_paths": [
+        [
+          "4",
+          "42",
+          "422.212"
+        ]
+      ]
+    },
+    "Other|178": {
+      "roland_name": "Baritone Sax",
+      "wikipedia_page_title": "Baritone saxophone",
+      "matched_via": "hs_tree_wiki",
+      "matched_site_name": "Baritone saxophone",
+      "matched_count": 1,
+      "hs_codes": [
+        "422.212"
+      ],
+      "hs_paths": [
+        [
+          "4",
+          "42",
+          "422.212"
+        ]
+      ]
+    },
+    "Other|179": {
+      "roland_name": "Oboe",
+      "wikipedia_page_title": "Oboe",
+      "matched_via": "hs_tree_name",
+      "matched_site_name": "Oboe",
+      "matched_count": 1,
+      "hs_codes": [
+        "422.112"
+      ],
+      "hs_paths": [
+        [
+          "4",
+          "42",
+          "422.112"
+        ]
+      ]
+    },
+    "Other|180": {
+      "roland_name": "English Horn",
+      "wikipedia_page_title": "Cor anglais",
+      "matched_via": "hs_tree_name",
+      "matched_site_name": "English horn",
+      "matched_count": 1,
+      "hs_codes": [
+        "422.112"
+      ],
+      "hs_paths": [
+        [
+          "4",
+          "42",
+          "422.112"
+        ]
+      ]
+    },
+    "Other|181": {
+      "roland_name": "Bassoon",
+      "wikipedia_page_title": "Bassoon",
+      "matched_via": "hs_tree_name",
+      "matched_site_name": "Bassoon",
+      "matched_count": 1,
+      "hs_codes": [
+        "422.112"
+      ],
+      "hs_paths": [
+        [
+          "4",
+          "42",
+          "422.112"
+        ]
+      ]
+    },
+    "Other|182": {
+      "roland_name": "Clarinet",
+      "wikipedia_page_title": "Clarinet",
+      "matched_via": "hs_tree_name",
+      "matched_site_name": "Clarinet",
+      "matched_count": 1,
+      "hs_codes": [
+        "422.211.2"
+      ],
+      "hs_paths": [
+        [
+          "4",
+          "42",
+          "422.211.2"
+        ]
+      ]
+    },
+    "Other|183": {
+      "roland_name": "Piccolo",
+      "wikipedia_page_title": "Piccolo",
+      "matched_via": "hs_tree_name",
+      "matched_site_name": "Piccolo",
+      "matched_count": 1,
+      "hs_codes": [
+        "421.121.12"
+      ],
+      "hs_paths": [
+        [
+          "4",
+          "42",
+          "421.121.12"
+        ]
+      ]
+    },
+    "Other|184": {
+      "roland_name": "Flute",
+      "wikipedia_page_title": "Flute",
+      "matched_via": "hs_tree_name",
+      "matched_site_name": "Flute",
+      "matched_count": 1,
+      "hs_codes": [
+        "421.121.12"
+      ],
+      "hs_paths": [
+        [
+          "4",
+          "42",
+          "421.121.12"
+        ]
+      ]
+    },
+    "Other|185": {
+      "roland_name": "Recorder",
+      "wikipedia_page_title": "Recorder (musical instrument)",
+      "matched_via": "hs_tree_name",
+      "matched_site_name": "Recorder",
+      "matched_count": 1,
+      "hs_codes": [
+        "421.221.12"
+      ],
+      "hs_paths": [
+        [
+          "4",
+          "42",
+          "421.221.12"
+        ]
+      ]
+    },
+    "Other|186": {
+      "roland_name": "Pan Flute",
+      "wikipedia_page_title": "Pan flute",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|187": {
+      "roland_name": "Bottle Blow",
+      "wikipedia_page_title": "Bottle",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|188": {
+      "roland_name": "Shakuhachi",
+      "wikipedia_page_title": "Shakuhachi",
+      "matched_via": "hs_tree_name",
+      "matched_site_name": "Shakuhachi",
+      "matched_count": 1,
+      "hs_codes": [
+        "421.111.12"
+      ],
+      "hs_paths": [
+        [
+          "4",
+          "42",
+          "421.111.12"
+        ]
+      ]
+    },
+    "Other|189": {
+      "roland_name": "Whistle",
+      "wikipedia_page_title": "Whistling",
+      "matched_via": "hs_tree_name",
+      "matched_site_name": "Whistle",
+      "matched_count": 1,
+      "hs_codes": [
+        "421.221.11"
+      ],
+      "hs_paths": [
+        [
+          "4",
+          "42",
+          "421.221.11"
+        ]
+      ]
+    },
+    "Other|190": {
+      "roland_name": "Ocarina",
+      "wikipedia_page_title": "Ocarina",
+      "matched_via": "hs_tree_name",
+      "matched_site_name": "Ocarina",
+      "matched_count": 1,
+      "hs_codes": [
+        "421.221.42"
+      ],
+      "hs_paths": [
+        [
+          "4",
+          "42",
+          "421.221.42"
+        ]
+      ]
+    },
+    "Other|191": {
+      "roland_name": "Square Lead1",
+      "wikipedia_page_title": "Lead synthesizer",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|192": {
+      "roland_name": "Square Lead2",
+      "wikipedia_page_title": "Lead synthesizer",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|193": {
+      "roland_name": "Sine Lead",
+      "wikipedia_page_title": "Lead synthesizer",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|194": {
+      "roland_name": "Saw Lead 1",
+      "wikipedia_page_title": "Lead synthesizer",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|195": {
+      "roland_name": "Saw Lead 2",
+      "wikipedia_page_title": "Lead synthesizer",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|196": {
+      "roland_name": "Doctor Solo",
+      "wikipedia_page_title": "Lead synthesizer",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|197": {
+      "roland_name": "Natural Lead",
+      "wikipedia_page_title": "Lead synthesizer",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|198": {
+      "roland_name": "SequencedSaw",
+      "wikipedia_page_title": "Sawtooth wave",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|199": {
+      "roland_name": "Syn.Calliope",
+      "wikipedia_page_title": "Calliope (music)",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|200": {
+      "roland_name": "Chiffer Lead",
+      "wikipedia_page_title": "Lead synthesizer",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|201": {
+      "roland_name": "Charang",
+      "wikipedia_page_title": "Lead synthesizer",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|202": {
+      "roland_name": "Wire Lead",
+      "wikipedia_page_title": "Lead synthesizer",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|203": {
+      "roland_name": "Solo Vox",
+      "wikipedia_page_title": "Human voice",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|204": {
+      "roland_name": "5th Saw Lead",
+      "wikipedia_page_title": "Lead synthesizer",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|205": {
+      "roland_name": "Bass+Lead",
+      "wikipedia_page_title": "Lead synthesizer",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|206": {
+      "roland_name": "Delayed Lead",
+      "wikipedia_page_title": "Lead synthesizer",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|207": {
+      "roland_name": "Fantasia",
+      "wikipedia_page_title": "Lead synthesizer",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|208": {
+      "roland_name": "Warm Pad",
+      "wikipedia_page_title": "Synthesizer pad",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|209": {
+      "roland_name": "Sine Pad",
+      "wikipedia_page_title": "Synthesizer pad",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|210": {
+      "roland_name": "Polysynth",
+      "wikipedia_page_title": "Polysynth",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|211": {
+      "roland_name": "Space Voice",
+      "wikipedia_page_title": "Vocoder",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|212": {
+      "roland_name": "Itopia",
+      "wikipedia_page_title": "Lead synthesizer",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|213": {
+      "roland_name": "Bowed Glass",
+      "wikipedia_page_title": "Glass harmonica",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|214": {
+      "roland_name": "Metallic Pad",
+      "wikipedia_page_title": "Synthesizer pad",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|215": {
+      "roland_name": "Halo Pad",
+      "wikipedia_page_title": "Synthesizer pad",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|216": {
+      "roland_name": "Sweep Pad",
+      "wikipedia_page_title": "Synthesizer pad",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|217": {
+      "roland_name": "Ice Rain",
+      "wikipedia_page_title": "Lead synthesizer",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|218": {
+      "roland_name": "Soundtrack",
+      "wikipedia_page_title": "Lead synthesizer",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|219": {
+      "roland_name": "Crystal",
+      "wikipedia_page_title": "Lead synthesizer",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|220": {
+      "roland_name": "Synth Mallet",
+      "wikipedia_page_title": "Mallet percussion",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|221": {
+      "roland_name": "Atmosphere",
+      "wikipedia_page_title": "Synthesizer pad",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|222": {
+      "roland_name": "Brightness",
+      "wikipedia_page_title": "Synthesizer pad",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|223": {
+      "roland_name": "Goblins",
+      "wikipedia_page_title": "Synthesizer pad",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|224": {
+      "roland_name": "Echo Drops",
+      "wikipedia_page_title": "Synthesizer pad",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|225": {
+      "roland_name": "Echo Bell",
+      "wikipedia_page_title": "Synthesizer pad",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|226": {
+      "roland_name": "Echo Pan",
+      "wikipedia_page_title": "Synthesizer pad",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|227": {
+      "roland_name": "Star Theme",
+      "wikipedia_page_title": "Synthesizer pad",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|228": {
+      "roland_name": "Sitar 1",
+      "wikipedia_page_title": "Sitar",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|229": {
+      "roland_name": "Sitar 2",
+      "wikipedia_page_title": "Sitar",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|230": {
+      "roland_name": "Banjo",
+      "wikipedia_page_title": "Banjo",
+      "matched_via": "hs_tree_name",
+      "matched_site_name": "Banjo",
+      "matched_count": 1,
+      "hs_codes": [
+        "321.312-5"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.312-5"
+        ]
+      ]
+    },
+    "Other|231": {
+      "roland_name": "Shamisen",
+      "wikipedia_page_title": "Shamisen",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|232": {
+      "roland_name": "Koto",
+      "wikipedia_page_title": "Koto (instrument)",
+      "matched_via": "hs_tree_name",
+      "matched_site_name": "Koto",
+      "matched_count": 1,
+      "hs_codes": [
+        "312.22"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "31",
+          "312.22"
+        ]
+      ]
+    },
+    "Other|233": {
+      "roland_name": "Taisho Koto",
+      "wikipedia_page_title": "Taishōgoto",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|234": {
+      "roland_name": "Kalimba",
+      "wikipedia_page_title": "Mbira",
+      "matched_via": "hs_tree_name",
+      "matched_site_name": "Kalimba",
+      "matched_count": 1,
+      "hs_codes": [
+        "122.1"
+      ],
+      "hs_paths": [
+        [
+          "1",
+          "12",
+          "122.1"
+        ]
+      ]
+    },
+    "Other|235": {
+      "roland_name": "Bagpipe",
+      "wikipedia_page_title": "Bagpipes",
+      "matched_via": "hs_tree_wiki",
+      "matched_site_name": "Bagpipes",
+      "matched_count": 1,
+      "hs_codes": [
+        "422.112"
+      ],
+      "hs_paths": [
+        [
+          "4",
+          "42",
+          "422.112"
+        ]
+      ]
+    },
+    "Other|236": {
+      "roland_name": "Fiddle",
+      "wikipedia_page_title": "Fiddle",
+      "matched_via": "hs_tree_name",
+      "matched_site_name": "Fiddle",
+      "matched_count": 1,
+      "hs_codes": [
+        "321.322-71"
+      ],
+      "hs_paths": [
+        [
+          "3",
+          "32",
+          "321.322-71"
+        ]
+      ]
+    },
+    "Other|237": {
+      "roland_name": "Shanai",
+      "wikipedia_page_title": "Shehnai",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|238": {
+      "roland_name": "Tinkle Bell",
+      "wikipedia_page_title": "Bell",
+      "matched_via": "hs_tree_wiki",
+      "matched_site_name": "Bell",
+      "matched_count": 1,
+      "hs_codes": [
+        "111.242.122"
+      ],
+      "hs_paths": [
+        [
+          "1",
+          "11",
+          "111",
+          "111.242.122"
+        ]
+      ]
+    },
+    "Other|239": {
+      "roland_name": "Agogo",
+      "wikipedia_page_title": "Agogô",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|240": {
+      "roland_name": "Steel Drums",
+      "wikipedia_page_title": "Steelpan",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|241": {
+      "roland_name": "Woodblock",
+      "wikipedia_page_title": "Wood block",
+      "matched_via": "hs_tree_wiki",
+      "matched_site_name": "Wood block",
+      "matched_count": 1,
+      "hs_codes": [
+        "111.24"
+      ],
+      "hs_paths": [
+        [
+          "1",
+          "11",
+          "111",
+          "111.24"
+        ]
+      ]
+    },
+    "Other|242": {
+      "roland_name": "Castanets",
+      "wikipedia_page_title": "Castanets",
+      "matched_via": "hs_tree_name",
+      "matched_site_name": "Castanets",
+      "matched_count": 1,
+      "hs_codes": [
+        "111.141"
+      ],
+      "hs_paths": [
+        [
+          "1",
+          "11",
+          "111",
+          "111.141"
+        ]
+      ]
+    },
+    "Other|243": {
+      "roland_name": "Taiko",
+      "wikipedia_page_title": "Taiko",
+      "matched_via": "hs_tree_name",
+      "matched_site_name": "Taiko",
+      "matched_count": 1,
+      "hs_codes": [
+        "211.222.1"
+      ],
+      "hs_paths": [
+        [
+          "2",
+          "21",
+          "211.222.1"
+        ]
+      ]
+    },
+    "Other|244": {
+      "roland_name": "Concert BD",
+      "wikipedia_page_title": "Bass drum",
+      "matched_via": "hs_tree_wiki",
+      "matched_site_name": "Bass drum",
+      "matched_count": 1,
+      "hs_codes": [
+        "211.212.1"
+      ],
+      "hs_paths": [
+        [
+          "2",
+          "21",
+          "211.212.1"
+        ]
+      ]
+    },
+    "Other|245": {
+      "roland_name": "Melodic Tom1",
+      "wikipedia_page_title": "Tom-tom",
+      "matched_via": "hs_tree_wiki",
+      "matched_site_name": "Tom-tom",
+      "matched_count": 1,
+      "hs_codes": [
+        "211.212.1"
+      ],
+      "hs_paths": [
+        [
+          "2",
+          "21",
+          "211.212.1"
+        ]
+      ]
+    },
+    "Other|246": {
+      "roland_name": "Melodic Tom2",
+      "wikipedia_page_title": "Tom-tom",
+      "matched_via": "hs_tree_wiki",
+      "matched_site_name": "Tom-tom",
+      "matched_count": 1,
+      "hs_codes": [
+        "211.212.1"
+      ],
+      "hs_paths": [
+        [
+          "2",
+          "21",
+          "211.212.1"
+        ]
+      ]
+    },
+    "Other|247": {
+      "roland_name": "Synth Drum",
+      "wikipedia_page_title": "Electronic drum",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|248": {
+      "roland_name": "TR-808 Tom",
+      "wikipedia_page_title": "Roland TR-808",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|249": {
+      "roland_name": "Elec.Perc.",
+      "wikipedia_page_title": "Electronic percussion",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|250": {
+      "roland_name": "Reverse Cym.",
+      "wikipedia_page_title": "Cymbal",
+      "matched_via": "hs_tree_wiki",
+      "matched_site_name": "Cymbal",
+      "matched_count": 1,
+      "hs_codes": [
+        "111.24"
+      ],
+      "hs_paths": [
+        [
+          "1",
+          "11",
+          "111",
+          "111.24"
+        ]
+      ]
+    },
+    "Other|251": {
+      "roland_name": "Gt FretNoise",
+      "wikipedia_page_title": "Electric guitar",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|252": {
+      "roland_name": "Gt Cut Noise",
+      "wikipedia_page_title": "Electric guitar",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|253": {
+      "roland_name": "BsStringSlap",
+      "wikipedia_page_title": "Bass guitar",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|254": {
+      "roland_name": "Breath Noise",
+      "wikipedia_page_title": "Breath",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|255": {
+      "roland_name": "Fl.Key Click",
+      "wikipedia_page_title": "Piano",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|256": {
+      "roland_name": "Seashore",
+      "wikipedia_page_title": "Ocean",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|257": {
+      "roland_name": "Rain",
+      "wikipedia_page_title": "Rain",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|258": {
+      "roland_name": "Thunder",
+      "wikipedia_page_title": "Thunder",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|259": {
+      "roland_name": "Wind",
+      "wikipedia_page_title": "Wind",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|260": {
+      "roland_name": "Stream",
+      "wikipedia_page_title": "Stream",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|261": {
+      "roland_name": "Bubble",
+      "wikipedia_page_title": "Bubble",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|262": {
+      "roland_name": "Bird 1",
+      "wikipedia_page_title": "Bird vocalization",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|263": {
+      "roland_name": "Dog",
+      "wikipedia_page_title": "Dog",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|264": {
+      "roland_name": "Horse Gallop",
+      "wikipedia_page_title": "Horse",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|265": {
+      "roland_name": "Bird 2",
+      "wikipedia_page_title": "Bird vocalization",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|266": {
+      "roland_name": "Telephone 1",
+      "wikipedia_page_title": "Telephone",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|267": {
+      "roland_name": "Telephone 2",
+      "wikipedia_page_title": "Telephone",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|268": {
+      "roland_name": "DoorCreaking",
+      "wikipedia_page_title": "Door",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|269": {
+      "roland_name": "Door",
+      "wikipedia_page_title": "Door",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|270": {
+      "roland_name": "Scratch",
+      "wikipedia_page_title": "Scratching",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|271": {
+      "roland_name": "Wind Chimes",
+      "wikipedia_page_title": "Wind chime",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|272": {
+      "roland_name": "Helicopter",
+      "wikipedia_page_title": "Helicopter",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|273": {
+      "roland_name": "Car Engine",
+      "wikipedia_page_title": "Car",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|274": {
+      "roland_name": "Car Stop",
+      "wikipedia_page_title": "Car",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|275": {
+      "roland_name": "Car Pass",
+      "wikipedia_page_title": "Car",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|276": {
+      "roland_name": "Car Crash",
+      "wikipedia_page_title": "Car",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|277": {
+      "roland_name": "Siren",
+      "wikipedia_page_title": "Siren",
+      "matched_via": "hs_tree_name",
+      "matched_site_name": "Siren",
+      "matched_count": 1,
+      "hs_codes": [
+        "412.21"
+      ],
+      "hs_paths": [
+        [
+          "4",
+          "41",
+          "412.21"
+        ]
+      ]
+    },
+    "Other|278": {
+      "roland_name": "Train",
+      "wikipedia_page_title": "Train",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|279": {
+      "roland_name": "Jetplane",
+      "wikipedia_page_title": "Jet aircraft",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|280": {
+      "roland_name": "Starship",
+      "wikipedia_page_title": "Spacecraft",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|281": {
+      "roland_name": "Burst Noise",
+      "wikipedia_page_title": "Explosion",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|282": {
+      "roland_name": "Applause",
+      "wikipedia_page_title": "Applause",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|283": {
+      "roland_name": "Laughing",
+      "wikipedia_page_title": "Laughter",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|284": {
+      "roland_name": "Screaming",
+      "wikipedia_page_title": "Scream",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|285": {
+      "roland_name": "Punch",
+      "wikipedia_page_title": "Punch",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|286": {
+      "roland_name": "Heart Beat",
+      "wikipedia_page_title": "Heart",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|287": {
+      "roland_name": "Footsteps",
+      "wikipedia_page_title": "Walking",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|288": {
+      "roland_name": "Gun Shot",
+      "wikipedia_page_title": "Gunshot",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|289": {
+      "roland_name": "Machine Gun",
+      "wikipedia_page_title": "Machine gun",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|290": {
+      "roland_name": "Laser Gun",
+      "wikipedia_page_title": "Laser",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    },
+    "Other|291": {
+      "roland_name": "Explosion",
+      "wikipedia_page_title": "Explosion",
+      "matched_via": "default:GM2",
+      "matched_site_name": null,
+      "matched_count": 0,
+      "hs_codes": [
+        "5"
+      ],
+      "hs_paths": [
+        [
+          "5"
+        ]
+      ]
+    }
+  },
+  "unmatched": []
+}

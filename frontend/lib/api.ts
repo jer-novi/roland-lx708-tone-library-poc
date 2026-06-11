@@ -1,4 +1,11 @@
-import type { ToneCategoryDto, ToneDetailDto, ToneDto, WikiDataDto } from "./types";
+import type {
+  HsPathResponse,
+  HsTreeResponse,
+  ToneCategoryDto,
+  ToneDetailDto,
+  ToneDto,
+  WikiDataDto,
+} from "./types";
 import seedFallback from "./seed-fallback.json";
 
 export const API_URL =
@@ -104,4 +111,20 @@ export async function fetchWiki(
   refresh = false
 ): Promise<WikiDataDto> {
   return get<WikiDataDto>(`/api/tones/${id}/wiki?refresh=${refresh}`);
+}
+
+/**
+ * HS-taxonomy pad voor één tone (3-4 nodes van root-family tot leaf).
+ * Voor de kleine boom-grafiek in de detail-modal.
+ */
+export async function fetchHsPath(id: number): Promise<HsPathResponse> {
+  return get<HsPathResponse>(`/api/tones/${id}/hs-path`);
+}
+
+/**
+ * Volledige HS-tree (5 families, 350 instruments, ~265KB). Voor de
+ * "Bekijk hele taxonomy"-knop. Cached door de browser op Cache-Control.
+ */
+export async function fetchHsTree(): Promise<HsTreeResponse> {
+  return get<HsTreeResponse>("/api/hs-tree");
 }
