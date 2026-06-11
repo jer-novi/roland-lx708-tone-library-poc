@@ -162,42 +162,101 @@ def slug_overlap(wiki_title: str, slug: str) -> float:
     return hits / len(wt_words)
 
 
-def best_match(wiki_title: str, results: list[dict]) -> dict | None:
-    if not results:
-        return None
-    # Score each result by slug overlap
-    scored = [(slug_overlap(wiki_title, r["slug"]), r) for r in results]
+def ranked_candidates(wiki_title: str, query: str, results: list[dict]) -> list[dict]:
+    """Results above the overlap threshold, best first.
+
+    Overlap counts against the wiki title OR the query. Scoring against
+    the query matters for ALT_QUERIES: "Lead synthesizer" will never
+    overlap with slug "minimoog", but the alt-query "minimoog" does —
+    that is exactly the museum object we want for that title.
+
+    Returns a list (not a single best) because the best-scoring object
+    can have a broken image (e.g. every RMAH/Brussels object proxies
+    media from www.mimo-db.eu, which serves HTTP 500); the caller walks
+    down the list until an object with a working image is found.
+    """
+    scored = [
+        (max(slug_overlap(wiki_title, r["slug"]), slug_overlap(query, r["slug"])), r)
+        for r in results
+    ]
     scored.sort(key=lambda x: (-x[0], len(x[1]["slug"])))
-    best_score, best = scored[0]
-    if best_score < MIN_SLUG_OVERLAP:
-        return None
-    return best
+    return [r for score, r in scored if score >= MIN_SLUG_OVERLAP]
+
+
+def image_url_ok(url: str) -> bool:
+    """True als de URL daadwerkelijk een afbeelding serveert (geen
+    HTML-foutpagina of HTTP 500 zoals de kapotte mimo-db.eu media)."""
+    try:
+        req = Request(url, headers={"User-Agent": UA})
+        with urlopen(req, timeout=TIMEOUT_SEC) as r:
+            return r.status == 200 and r.headers.get("Content-Type", "").startswith("image/")
+    except Exception:
+        return False
 
 
 # For titles whose first-page results don't include any slug-overlap match
 # (e.g. "Accordion" -> Swedish "dragspel"), try these alternative queries
-# in order and keep the first result that yields a slug-overlap match.
+# in order and keep the first result that yields a slug-overlap match
+# (overlap counts against the wiki title OR the query, see best_match).
+#
+# Synth/GM2-titles map to iconic museum objects: a "Lead synthesizer"
+# card showing a Minimoog, "Orchestra hit" the Fairlight CMI, etc.
+# Pure sound-effects (Thunder, Explosion, Telephone, ...) are left out
+# on purpose: no museum has those, they get a static source later.
 ALT_QUERIES: dict[str, list[str]] = {
     "Accordion": ["piano accordion", "concertina accordion", "accordion instrument"],
+    "Agogô": ["agogo", "agogo bells"],
     "Bagpipes": ["highland bagpipes", "scottish bagpipes", "irish bagpipes"],
+    "Bass synthesizer": ["moog taurus", "bass synthesizer", "minimoog"],
     "Bell": ["church bell", "hand bell", "tubular bell", "bell instrument"],
     "Bird vocalization": ["bird song", "bird call instrument"],
     "Brass section": ["brass ensemble", "brass band", "brass instrument"],
-    "Brush (music)": ["brush snare", "drum brush"],
-    "Bubble": ["water sound instrument"],
-    "Calliope (music)": ["calliope steam organ", "steam organ"],
-    "Car": ["car horn", "automobile horn"],
+    "Brush (music)": ["drum brush", "brush snare", "snare drum"],
+    "Calliope (music)": ["calliope", "steam organ"],
     "Celesta": ["celesta piano", "keyboard celesta"],
-    "Classical guitar": ["spanish guitar", "nylon guitar"],
+    "Cello": ["violoncello"],
+    "Classical guitar": ["spanish guitar", "nylon guitar", "guitar"],
+    "Clavinet": ["clavinet", "hohner clavinet"],
+    "Church bell": ["tubular bells", "carillon"],
+    # Niet "contrabass": dat matcht MIMO's "reed-contrabass" (blaasinstrument).
+    "Double bass": ["double bass", "violone", "bass viol"],
     "Drum kit": ["drum set", "drum kit instrument", "jazz drum"],
     "Electric guitar": ["solid body guitar", "electric instrument guitar"],
+    "Electronic percussion": ["electronic drum", "drum machine", "simmons"],
+    "Fretless guitar": ["electric bass guitar", "bass guitar"],
+    "Frequency modulation synthesis": ["yamaha synthesizer", "synthesizer"],
     "Hammond organ": ["hammond b3", "tonewheel organ"],
     "Harpsichord": ["harpsichord instrument"],
+    "Honky-tonk piano": ["upright piano", "saloon piano"],
+    "Koto (instrument)": ["koto"],
+    "Lead synthesizer": ["minimoog", "moog synthesizer", "synthesizer"],
+    "Leslie speaker": ["leslie speaker", "rotary speaker"],
+    "Orchestra hit": ["fairlight", "sampler", "synthesizer"],
+    "Percussion": ["snare drum", "darbuka", "drum"],
+    "Phaser (effect)": ["electric piano", "phase shifter"],
+    "Piano rock": ["upright piano"],
     "Pipe organ": ["church organ", "pipe organ instrument"],
-    "Synthesizer pad": ["synth pad", "pad synthesizer"],
-    "Lead synthesizer": ["synthesizer lead", "monophonic synthesizer"],
+    "Polysynth": ["polymoog", "prophet-5", "polyphonic synthesizer", "synthesizer"],
+    "Pump organ": ["harmonium", "reed organ"],
+    "Recorder (musical instrument)": ["alto recorder", "recorder flute", "blockflute"],
+    "Roland TR-808": ["tr-808", "roland tr", "drum machine"],
+    "Santur": ["santur", "santoor", "hammered dulcimer"],
+    "Slapping (music)": ["electric bass guitar", "bass guitar"],
+    "Scratching": ["turntable", "gramophone"],
+    "Shamisen": ["shamisen", "samisen"],
+    "Steel-string acoustic guitar": ["acoustic guitar", "folk guitar", "guitar"],
+    "Steinway & Sons": ["steinway grand piano", "steinway"],
+    "Synthesizer pad": ["prophet-5", "polymoog", "synthesizer"],
     "String section": ["string ensemble", "string orchestra"],
+    "Taishōgoto": ["taishogoto", "taisho koto", "nagoya harp"],
+    "Tremolo": ["violin"],
+    "Tuba": ["bass tuba", "tuba instrument"],
+    "Twelve-string guitar": ["twelve string guitar", "12-string guitar", "guitar"],
     "Vocoder": ["vocoder machine", "speech synthesizer"],
+    "Vox Continental": ["vox continental", "combo organ", "electronic organ"],
+    "Wurlitzer electronic piano": ["wurlitzer electric piano", "wurlitzer piano", "electric piano"],
+    "Yamaha CP-70": ["yamaha cp-70", "electric grand piano", "yamaha piano"],
+    "Yamaha DX7": ["yamaha dx7", "dx7", "yamaha synthesizer"],
 }
 
 
@@ -223,7 +282,22 @@ def main() -> int:
     matches: dict[str, list[dict]] = existing.get("matches", {}) if isinstance(existing, dict) else {}
     unmatched: list[str] = existing.get("unmatched", []) if isinstance(existing, dict) else []
     if isinstance(matches, dict) and isinstance(unmatched, list):
+        # Valideer bestaande matches: objecten met een kapotte image-URL
+        # (RMAH/mimo-db.eu geeft HTTP 500) gaan terug de wachtrij in zodat
+        # een object van een ander museum gekozen kan worden.
+        broken = [t for t in sorted(matches)
+                  if not (matches[t] and matches[t][0].get("image_url"))
+                  or not image_url_ok(matches[t][0]["image_url"])]
+        for t in broken:
+            print(f"  broken image for {t!r} ({matches[t][0]['mimo_id']}), re-scraping", file=sys.stderr)
+            del matches[t]
+        # Retry previously-unmatched titles that now have ALT_QUERIES —
+        # new alternative queries may well find a match this time.
+        retry = {t for t in unmatched if t in ALT_QUERIES}
+        unmatched = [t for t in unmatched if t not in retry]
         done = set(matches.keys()) | set(unmatched)
+        if broken or retry:
+            print(f"Re-scraping {len(broken)} broken + {len(retry)} unmatched-with-ALT titles", file=sys.stderr)
     else:
         done = set()
         matches, unmatched = {}, []
@@ -243,10 +317,18 @@ def main() -> int:
             if not data:
                 errors += 1
                 continue
-            results = parse_results(data)
-            best = best_match(title, results)
+            # Loop de kandidaten af (beste eerst) tot er één een
+            # wérkende afbeelding heeft; RMAH-objecten scoren vaak het
+            # hoogst maar hun media-server is kapot.
+            for cand in ranked_candidates(title, q, parse_results(data)):
+                img = fetch_detail_image(cand["detail_url"])
+                time.sleep(RATE_LIMIT_SEC)
+                if img and image_url_ok(img):
+                    cand["image_url"] = img
+                    best = cand
+                    matched_query = q
+                    break
             if best:
-                matched_query = q
                 break
             time.sleep(RATE_LIMIT_SEC)
         if not best:
@@ -254,12 +336,8 @@ def main() -> int:
             unmatched.append(title)
             time.sleep(RATE_LIMIT_SEC)
             continue
-        # Fetch detail page for og:image (best quality)
-        img = fetch_detail_image(best["detail_url"])
-        if img:
-            best["image_url"] = img
         matches[title] = [best]
-        print(f"  q={matched_query!r:25s} -> {best['mimo_id']} {best['slug']} img={'Y' if img else 'N'}",
+        print(f"  q={matched_query!r:25s} -> {best['mimo_id']} {best['slug']}",
               file=sys.stderr)
         time.sleep(RATE_LIMIT_SEC)
 

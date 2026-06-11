@@ -1,69 +1,31 @@
 {
-  "generatedAt": "2026-06-11T22:22:21",
+  "generatedAt": "2026-06-11T23:48:16",
   "totals": {
     "tones": 324,
-    "sdCoverage": 267,
-    "hdCoverage": 258,
-    "hdRealWidthGte1600": 110,
-    "hdRealWidthLt1000": 98,
-    "tonesWithoutAnyImage": 52,
+    "sdCoverage": 311,
+    "hdCoverage": 309,
+    "hdRealWidthGte1600": 132,
+    "hdRealWidthLt1000": 108,
+    "tonesWithoutAnyImage": 13,
     "tonesWithDuplicateShortSummary": 191,
-    "mimoUrlCoverage": 179,
+    "mimoUrlCoverage": 258,
     "hdSourceBreakdown": {
-      "wiki-hd": 166,
-      "mimo": 92
+      "wiki-hd": 143,
+      "mimo": 166
     },
     "sdSourceBreakdown": {
       "site-instruments": 129,
+      "mimo": 62,
       "wiki-summary": 120
     }
   },
   "tonesWithoutAnyImageIds": [
-    13,
-    49,
+    32,
     56,
     57,
     58,
     59,
-    150,
-    167,
-    185,
-    186,
-    187,
-    188,
-    224,
-    225,
-    226,
-    227,
-    228,
-    229,
-    230,
-    232,
-    233,
-    234,
-    235,
-    237,
-    238,
-    239,
-    240,
-    241,
-    242,
-    243,
-    245,
-    247,
-    248,
-    249,
-    250,
-    251,
-    252,
-    254,
-    255,
-    256,
-    257,
-    258,
-    259,
-    260,
-    282,
+    289,
     291,
     293,
     294,
@@ -131,20 +93,20 @@
       "name": "American Grand",
       "wikipediaPageTitle": "Steinway & Sons",
       "sd": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Steinway_%26_Sons_concert_grand_piano%2C_model_D-274%2C_manufactured_at_Steinway%27s_factory_in_Hamburg%2C_Germany.png/330px-Steinway_%26_Sons_concert_grand_piano%2C_model_D-274%2C_manufactured_at_Steinway%27s_factory_in_Hamburg%2C_Germany.png",
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/d134d2cee268234d6d304832efca970905123490.jpg",
+        "source": "mimo",
+        "storedWidth": 800,
+        "realWidth": 800,
+        "realHeight": 400
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/d134d2cee268234d6d304832efca970905123490.jpg",
+        "source": "mimo",
+        "storedWidth": 800,
+        "realWidth": 800,
+        "realHeight": 400
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_31782/grand-pianoforte",
       "summaryLength": 421,
       "shortSummaryDuplicates": 2
     },
@@ -156,20 +118,20 @@
       "name": "American v2",
       "wikipediaPageTitle": "Steinway & Sons",
       "sd": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Steinway_%26_Sons_concert_grand_piano%2C_model_D-274%2C_manufactured_at_Steinway%27s_factory_in_Hamburg%2C_Germany.png/330px-Steinway_%26_Sons_concert_grand_piano%2C_model_D-274%2C_manufactured_at_Steinway%27s_factory_in_Hamburg%2C_Germany.png",
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/d134d2cee268234d6d304832efca970905123490.jpg",
+        "source": "mimo",
+        "storedWidth": 800,
+        "realWidth": 800,
+        "realHeight": 400
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/d134d2cee268234d6d304832efca970905123490.jpg",
+        "source": "mimo",
+        "storedWidth": 800,
+        "realWidth": 800,
+        "realHeight": 400
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_31782/grand-pianoforte",
       "summaryLength": 421,
       "shortSummaryDuplicates": 2
     },
@@ -244,7 +206,7 @@
         "realWidth": 1920,
         "realHeight": 1440
       },
-      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_3843/electric-piano",
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_22679/electric-piano",
       "summaryLength": 416,
       "shortSummaryDuplicates": 6
     },
@@ -256,20 +218,20 @@
       "name": "Vintage EP",
       "wikipediaPageTitle": "Wurlitzer electronic piano",
       "sd": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wurlitzer_Electronic_Piano_200A%2C_Museum_of_Making_Music.jpg/330px-Wurlitzer_Electronic_Piano_200A%2C_Museum_of_Making_Music.jpg",
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/c95d14ba064c3aefdc50c23a6f7351076a61148a.jpg",
+        "source": "mimo",
+        "storedWidth": 750,
+        "realWidth": 750,
+        "realHeight": 649
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/c95d14ba064c3aefdc50c23a6f7351076a61148a.jpg",
+        "source": "mimo",
+        "storedWidth": 750,
+        "realWidth": 750,
+        "realHeight": 649
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_22679/electric-piano",
       "summaryLength": 294,
       "shortSummaryDuplicates": 3
     },
@@ -288,13 +250,13 @@
         "realHeight": 1025
       },
       "hd": {
-        "url": "/api/wiki-thumbs-hd/a9bc8e4fbc2bb735d6d4c4627f9d954eb0616450.jpg",
-        "source": "wiki-hd",
-        "storedWidth": 1920,
-        "realWidth": 1920,
-        "realHeight": 2051
+        "url": "/api/wiki-thumbs-hd/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_2568/synthesizer",
       "summaryLength": 210,
       "shortSummaryDuplicates": 2
     },
@@ -319,7 +281,7 @@
         "realWidth": 1920,
         "realHeight": 1440
       },
-      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_3843/electric-piano",
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_22679/electric-piano",
       "summaryLength": 416,
       "shortSummaryDuplicates": 6
     },
@@ -331,20 +293,20 @@
       "name": "60's EP",
       "wikipediaPageTitle": "Wurlitzer electronic piano",
       "sd": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wurlitzer_Electronic_Piano_200A%2C_Museum_of_Making_Music.jpg/330px-Wurlitzer_Electronic_Piano_200A%2C_Museum_of_Making_Music.jpg",
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/c95d14ba064c3aefdc50c23a6f7351076a61148a.jpg",
+        "source": "mimo",
+        "storedWidth": 750,
+        "realWidth": 750,
+        "realHeight": 649
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/c95d14ba064c3aefdc50c23a6f7351076a61148a.jpg",
+        "source": "mimo",
+        "storedWidth": 750,
+        "realWidth": 750,
+        "realHeight": 649
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_22679/electric-piano",
       "summaryLength": 294,
       "shortSummaryDuplicates": 3
     },
@@ -381,20 +343,20 @@
       "name": "Stage Phaser",
       "wikipediaPageTitle": "Phaser (effect)",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/c95d14ba064c3aefdc50c23a6f7351076a61148a.jpg",
+        "source": "mimo",
+        "storedWidth": 750,
+        "realWidth": 750,
+        "realHeight": 649
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/c95d14ba064c3aefdc50c23a6f7351076a61148a.jpg",
+        "source": "mimo",
+        "storedWidth": 750,
+        "realWidth": 750,
+        "realHeight": 649
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_22679/electric-piano",
       "summaryLength": 323,
       "shortSummaryDuplicates": 1
     },
@@ -438,13 +400,13 @@
         "realHeight": 720
       },
       "hd": {
-        "url": "/api/wiki-thumbs-hd/689a723611544d7d60579ab04cf9b1aeedb6432c.jpg",
-        "source": "wiki-hd",
-        "storedWidth": 1024,
-        "realWidth": 1024,
-        "realHeight": 768
+        "url": "/api/wiki-thumbs-hd/3faac8482d5cf3ab57ac1ed89ee95a370c20ed60.jpg",
+        "source": "mimo",
+        "storedWidth": 3000,
+        "realWidth": 3000,
+        "realHeight": 2251
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_0774035/piano-numerique",
       "summaryLength": 286,
       "shortSummaryDuplicates": 1
     },
@@ -713,13 +675,13 @@
         "realHeight": 180
       },
       "hd": {
-        "url": "/api/wiki-thumbs-hd/ebf7d2a00b8b25fab7d2fdf1ca3577a9ec9f2e06.png",
-        "source": "wiki-hd",
-        "storedWidth": 465,
-        "realWidth": 465,
-        "realHeight": 705
+        "url": "/api/wiki-thumbs-hd/22a5285196cc963b97948861b08bf9a0990fb598.jpg",
+        "source": "mimo",
+        "storedWidth": 800,
+        "realWidth": 800,
+        "realHeight": 739
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_5000/violoncello",
       "summaryLength": 457,
       "shortSummaryDuplicates": 2
     },
@@ -856,7 +818,7 @@
       "name": "Jazz Scat",
       "wikipediaPageTitle": "Scat singing",
       "sd": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Ella_Fitzgerald%2C_Dizzy_Gillespie%2C_Ray_Brown%2C_Milt_Jackson%2C_and_Timmie_Rosenkrantz%2C_Downbeat%2C_New_York%2C_N.Y.%2C_ca._Sept._1947_%28William_P._Gottlieb%29_%28cropped%29.jpg/330px-Ella_Fitzgerald%2C_Dizzy_Gillespie%2C_Ray_Brown%2C_Milt_Jackson%2C_and_Timmie_Rosenkrantz%2C_Downbeat%2C_New_York%2C_N.Y.%2C_ca._Sept._1947_%28William_P._Gottlieb%29_%28cropped%29.jpg",
+        "url": null,
         "source": null,
         "storedWidth": null,
         "realWidth": null,
@@ -888,13 +850,13 @@
         "realHeight": 180
       },
       "hd": {
-        "url": "/api/wiki-thumbs-hd/cd51457560521bf7dbdd3ce9f2c5f283d45a105d.jpg",
-        "source": "wiki-hd",
-        "storedWidth": 1100,
-        "realWidth": 1100,
-        "realHeight": 1550
+        "url": "/api/wiki-thumbs-hd/d5286d69f1f4b26e033579db700775966ed5be8b.jpg",
+        "source": "mimo",
+        "storedWidth": 2170,
+        "realWidth": 2170,
+        "realHeight": 3000
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_0160969/basse-de-viole",
       "summaryLength": 346,
       "shortSummaryDuplicates": 3
     },
@@ -1188,13 +1150,13 @@
         "realHeight": 656
       },
       "hd": {
-        "url": "/api/wiki-thumbs-hd/2d71d840cb669f733b328c46f493fef5b29c2f3a.jpg",
-        "source": "wiki-hd",
-        "storedWidth": 640,
-        "realWidth": 640,
-        "realHeight": 656
+        "url": "/api/wiki-thumbs-hd/362678967364d7943b60a911a75ecaa57de48892.jpg",
+        "source": "mimo",
+        "storedWidth": 800,
+        "realWidth": 800,
+        "realHeight": 652
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_44079/electronic-organ",
       "summaryLength": 437,
       "shortSummaryDuplicates": 2
     },
@@ -1281,20 +1243,20 @@
       "name": "Rock Piano",
       "wikipediaPageTitle": "Piano rock",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/5d9b06ba05bed956ea095733e075d349f16b03bf.jpg",
+        "source": "mimo",
+        "storedWidth": 512,
+        "realWidth": 512,
+        "realHeight": 768
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/5d9b06ba05bed956ea095733e075d349f16b03bf.jpg",
+        "source": "mimo",
+        "storedWidth": 512,
+        "realWidth": 512,
+        "realHeight": 768
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_3251/upright-pianoforte",
       "summaryLength": 0,
       "shortSummaryDuplicates": 0
     },
@@ -1631,11 +1593,11 @@
       "name": "ELEC.Set",
       "wikipediaPageTitle": "Electronic drum",
       "sd": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/HK_TKO_%E5%B0%87%E8%BB%8D%E6%BE%B3_Tseung_Kwan_O_%E5%BA%B7%E5%9F%8E_LOHAS_Park_shopping_mall_shop_%E6%9F%8F%E6%96%AF%E7%90%B4%E8%A1%8C_Parsons_Music_November_2021_SS2_17.jpg/330px-HK_TKO_%E5%B0%87%E8%BB%8D%E6%BE%B3_Tseung_Kwan_O_%E5%BA%B7%E5%9F%8E_LOHAS_Park_shopping_mall_shop_%E6%9F%8F%E6%96%AF%E7%90%B4%E8%A1%8C_Parsons_Music_November_2021_SS2_17.jpg",
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/7ae3a991656ac96eac4ff7d219ee55fab922954c.jpg",
+        "source": "mimo",
+        "storedWidth": 3000,
+        "realWidth": 3000,
+        "realHeight": 2251
       },
       "hd": {
         "url": "/api/wiki-thumbs-hd/7ae3a991656ac96eac4ff7d219ee55fab922954c.jpg",
@@ -1656,20 +1618,20 @@
       "name": "ANALOG Set",
       "wikipediaPageTitle": "Roland TR-808",
       "sd": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/TR-808_-_MIM%2C_Phoenix_%282019-08-30_14.59.26_by_Bryan_Pocius%29_%28cropped%29.jpg/330px-TR-808_-_MIM%2C_Phoenix_%282019-08-30_14.59.26_by_Bryan_Pocius%29_%28cropped%29.jpg",
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/7ae3a991656ac96eac4ff7d219ee55fab922954c.jpg",
+        "source": "mimo",
+        "storedWidth": 3000,
+        "realWidth": 3000,
+        "realHeight": 2251
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/7ae3a991656ac96eac4ff7d219ee55fab922954c.jpg",
+        "source": "mimo",
+        "storedWidth": 3000,
+        "realWidth": 3000,
+        "realHeight": 2251
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_1005176/boite-a-rythme-linn-programmable-drum-machine-sequencer-unite-centrale",
       "summaryLength": 396,
       "shortSummaryDuplicates": 2
     },
@@ -1719,7 +1681,7 @@
         "realWidth": 1920,
         "realHeight": 1361
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_44112/snare-drum",
       "summaryLength": 547,
       "shortSummaryDuplicates": 1
     },
@@ -1969,7 +1931,7 @@
         "realWidth": 1432,
         "realHeight": 774
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_3251/upright-pianoforte",
       "summaryLength": 314,
       "shortSummaryDuplicates": 2
     },
@@ -1994,7 +1956,7 @@
         "realWidth": 1432,
         "realHeight": 774
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_3251/upright-pianoforte",
       "summaryLength": 314,
       "shortSummaryDuplicates": 2
     },
@@ -2044,7 +2006,7 @@
         "realWidth": 1920,
         "realHeight": 1440
       },
-      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_3843/electric-piano",
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_22679/electric-piano",
       "summaryLength": 416,
       "shortSummaryDuplicates": 6
     },
@@ -2056,20 +2018,20 @@
       "name": "Vintage EP",
       "wikipediaPageTitle": "Wurlitzer electronic piano",
       "sd": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wurlitzer_Electronic_Piano_200A%2C_Museum_of_Making_Music.jpg/330px-Wurlitzer_Electronic_Piano_200A%2C_Museum_of_Making_Music.jpg",
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/c95d14ba064c3aefdc50c23a6f7351076a61148a.jpg",
+        "source": "mimo",
+        "storedWidth": 750,
+        "realWidth": 750,
+        "realHeight": 649
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/c95d14ba064c3aefdc50c23a6f7351076a61148a.jpg",
+        "source": "mimo",
+        "storedWidth": 750,
+        "realWidth": 750,
+        "realHeight": 649
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_22679/electric-piano",
       "summaryLength": 294,
       "shortSummaryDuplicates": 3
     },
@@ -2094,7 +2056,7 @@
         "realWidth": 1920,
         "realHeight": 1440
       },
-      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_3843/electric-piano",
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_22679/electric-piano",
       "summaryLength": 416,
       "shortSummaryDuplicates": 6
     },
@@ -2144,7 +2106,7 @@
         "realWidth": 1920,
         "realHeight": 1440
       },
-      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_3843/electric-piano",
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_22679/electric-piano",
       "summaryLength": 416,
       "shortSummaryDuplicates": 6
     },
@@ -2163,13 +2125,13 @@
         "realHeight": 330
       },
       "hd": {
-        "url": "/api/wiki-thumbs-hd/2708589b7e05f953c2ebf750b8d9a2b60f8b12cd.png",
-        "source": "wiki-hd",
-        "storedWidth": 400,
-        "realWidth": 400,
-        "realHeight": 330
+        "url": "/api/wiki-thumbs-hd/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_2568/synthesizer",
       "summaryLength": 267,
       "shortSummaryDuplicates": 1
     },
@@ -2188,13 +2150,13 @@
         "realHeight": 1025
       },
       "hd": {
-        "url": "/api/wiki-thumbs-hd/a9bc8e4fbc2bb735d6d4c4627f9d954eb0616450.jpg",
-        "source": "wiki-hd",
-        "storedWidth": 1920,
-        "realWidth": 1920,
-        "realHeight": 2051
+        "url": "/api/wiki-thumbs-hd/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_2568/synthesizer",
       "summaryLength": 210,
       "shortSummaryDuplicates": 2
     },
@@ -2219,7 +2181,7 @@
         "realWidth": 1920,
         "realHeight": 1440
       },
-      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_3843/electric-piano",
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_22679/electric-piano",
       "summaryLength": 416,
       "shortSummaryDuplicates": 6
     },
@@ -2431,11 +2393,11 @@
       "name": "Music Box",
       "wikipediaPageTitle": "Music box",
       "sd": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Polyphon_Spieldose_%281%29.jpg/330px-Polyphon_Spieldose_%281%29.jpg",
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/af5fd6cfde6e673faeb1df043543833419f74ee5.jpg",
+        "source": "mimo",
+        "storedWidth": 800,
+        "realWidth": 800,
+        "realHeight": 533
       },
       "hd": {
         "url": "/api/wiki-thumbs-hd/af5fd6cfde6e673faeb1df043543833419f74ee5.jpg",
@@ -2619,7 +2581,7 @@
         "realWidth": 1186,
         "realHeight": 633
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_1175/set-of-tubular-bells",
       "summaryLength": 681,
       "shortSummaryDuplicates": 1
     },
@@ -2663,13 +2625,13 @@
         "realHeight": 180
       },
       "hd": {
-        "url": "/api/wiki-thumbs-hd/9ea843746e6c82f71b37fb22ba77dd548bc0df7a.png",
-        "source": "wiki-hd",
-        "storedWidth": 487,
-        "realWidth": 487,
-        "realHeight": 275
+        "url": "/api/wiki-thumbs-hd/9ae1a625d21212c2965e6901d3d1f7e283218b95.jpg",
+        "source": "mimo",
+        "storedWidth": 800,
+        "realWidth": 800,
+        "realHeight": 531
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/SPK_BERLIN.DE_EM_OBJID_257108/santur",
       "summaryLength": 52,
       "shortSummaryDuplicates": 1
     },
@@ -2738,13 +2700,13 @@
         "realHeight": 656
       },
       "hd": {
-        "url": "/api/wiki-thumbs-hd/2d71d840cb669f733b328c46f493fef5b29c2f3a.jpg",
-        "source": "wiki-hd",
-        "storedWidth": 640,
-        "realWidth": 640,
-        "realHeight": 656
+        "url": "/api/wiki-thumbs-hd/362678967364d7943b60a911a75ecaa57de48892.jpg",
+        "source": "mimo",
+        "storedWidth": 800,
+        "realWidth": 800,
+        "realHeight": 652
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_44079/electronic-organ",
       "summaryLength": 437,
       "shortSummaryDuplicates": 2
     },
@@ -2963,13 +2925,13 @@
         "realHeight": 180
       },
       "hd": {
-        "url": "/api/wiki-thumbs-hd/41fb976aa6b1d7070caa4999453d22d8e446be3b.jpg",
-        "source": "wiki-hd",
-        "storedWidth": 377,
-        "realWidth": 377,
-        "realHeight": 576
+        "url": "/api/wiki-thumbs-hd/e08172a8565c39e12b25f3bab5046d474fb1eb38.jpg",
+        "source": "mimo",
+        "storedWidth": 749,
+        "realWidth": 749,
+        "realHeight": 800
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_21312/harmonium",
       "summaryLength": 392,
       "shortSummaryDuplicates": 2
     },
@@ -2988,13 +2950,13 @@
         "realHeight": 576
       },
       "hd": {
-        "url": "/api/wiki-thumbs-hd/41fb976aa6b1d7070caa4999453d22d8e446be3b.jpg",
-        "source": "wiki-hd",
-        "storedWidth": 377,
-        "realWidth": 377,
-        "realHeight": 576
+        "url": "/api/wiki-thumbs-hd/e08172a8565c39e12b25f3bab5046d474fb1eb38.jpg",
+        "source": "mimo",
+        "storedWidth": 749,
+        "realWidth": 749,
+        "realHeight": 800
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_21312/harmonium",
       "summaryLength": 392,
       "shortSummaryDuplicates": 2
     },
@@ -3113,13 +3075,13 @@
         "realHeight": 180
       },
       "hd": {
-        "url": "/api/wiki-thumbs-hd/6efd96ed2dc5fe545a8a74209b5af9091485acfb.png",
-        "source": "wiki-hd",
-        "storedWidth": 1051,
-        "realWidth": 1051,
-        "realHeight": 1600
+        "url": "/api/wiki-thumbs-hd/2c1c9cc432ba87b1da24ceb3b0f20fb33c445985.jpg",
+        "source": "mimo",
+        "storedWidth": 2288,
+        "realWidth": 2288,
+        "realHeight": 1520
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_3314/guitar",
       "summaryLength": 617,
       "shortSummaryDuplicates": 3
     },
@@ -3163,13 +3125,13 @@
         "realHeight": 180
       },
       "hd": {
-        "url": "/api/wiki-thumbs-hd/6efd96ed2dc5fe545a8a74209b5af9091485acfb.png",
-        "source": "wiki-hd",
-        "storedWidth": 1051,
-        "realWidth": 1051,
-        "realHeight": 1600
+        "url": "/api/wiki-thumbs-hd/2c1c9cc432ba87b1da24ceb3b0f20fb33c445985.jpg",
+        "source": "mimo",
+        "storedWidth": 2288,
+        "realWidth": 2288,
+        "realHeight": 1520
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_3314/guitar",
       "summaryLength": 617,
       "shortSummaryDuplicates": 3
     },
@@ -3188,13 +3150,13 @@
         "realHeight": 180
       },
       "hd": {
-        "url": "/api/wiki-thumbs-hd/6efd96ed2dc5fe545a8a74209b5af9091485acfb.png",
-        "source": "wiki-hd",
-        "storedWidth": 1051,
-        "realWidth": 1051,
-        "realHeight": 1600
+        "url": "/api/wiki-thumbs-hd/2c1c9cc432ba87b1da24ceb3b0f20fb33c445985.jpg",
+        "source": "mimo",
+        "storedWidth": 2288,
+        "realWidth": 2288,
+        "realHeight": 1520
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_3314/guitar",
       "summaryLength": 617,
       "shortSummaryDuplicates": 3
     },
@@ -3213,13 +3175,13 @@
         "realHeight": 1280
       },
       "hd": {
-        "url": "/api/wiki-thumbs-hd/6c7c88f59fb70a664e4a2da651b4b493bb92e966.jpg",
-        "source": "wiki-hd",
-        "storedWidth": 1920,
-        "realWidth": 1920,
-        "realHeight": 2560
+        "url": "/api/wiki-thumbs-hd/c54ea0afb458cc66fe10449de6147e7431999f4f.jpg",
+        "source": "mimo",
+        "storedWidth": 1676,
+        "realWidth": 1676,
+        "realHeight": 2500
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_0156704/guitare-folk",
       "summaryLength": 292,
       "shortSummaryDuplicates": 2
     },
@@ -3238,13 +3200,13 @@
         "realHeight": 1781
       },
       "hd": {
-        "url": "/api/wiki-thumbs-hd/c35275405ba3b7e74a44d3b866812ee9885ac3d9.jpg",
-        "source": "wiki-hd",
-        "storedWidth": 1920,
-        "realWidth": 1920,
-        "realHeight": 3561
+        "url": "/api/wiki-thumbs-hd/2c1c9cc432ba87b1da24ceb3b0f20fb33c445985.jpg",
+        "source": "mimo",
+        "storedWidth": 2288,
+        "realWidth": 2288,
+        "realHeight": 1520
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_3314/guitar",
       "summaryLength": 914,
       "shortSummaryDuplicates": 1
     },
@@ -3288,13 +3250,13 @@
         "realHeight": 1280
       },
       "hd": {
-        "url": "/api/wiki-thumbs-hd/6c7c88f59fb70a664e4a2da651b4b493bb92e966.jpg",
-        "source": "wiki-hd",
-        "storedWidth": 1920,
-        "realWidth": 1920,
-        "realHeight": 2560
+        "url": "/api/wiki-thumbs-hd/c54ea0afb458cc66fe10449de6147e7431999f4f.jpg",
+        "source": "mimo",
+        "storedWidth": 1676,
+        "realWidth": 1676,
+        "realHeight": 2500
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_0156704/guitare-folk",
       "summaryLength": 292,
       "shortSummaryDuplicates": 2
     },
@@ -3713,13 +3675,13 @@
         "realHeight": 180
       },
       "hd": {
-        "url": "/api/wiki-thumbs-hd/cd51457560521bf7dbdd3ce9f2c5f283d45a105d.jpg",
-        "source": "wiki-hd",
-        "storedWidth": 1100,
-        "realWidth": 1100,
-        "realHeight": 1550
+        "url": "/api/wiki-thumbs-hd/d5286d69f1f4b26e033579db700775966ed5be8b.jpg",
+        "source": "mimo",
+        "storedWidth": 2170,
+        "realWidth": 2170,
+        "realHeight": 3000
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_0160969/basse-de-viole",
       "summaryLength": 346,
       "shortSummaryDuplicates": 3
     },
@@ -3806,20 +3768,20 @@
       "name": "FretlessBass",
       "wikipediaPageTitle": "Fretless guitar",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/e11abddd231cc9293716029adfc41db940291aa5.jpg",
+        "source": "mimo",
+        "storedWidth": 560,
+        "realWidth": 560,
+        "realHeight": 800
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/e11abddd231cc9293716029adfc41db940291aa5.jpg",
+        "source": "mimo",
+        "storedWidth": 560,
+        "realWidth": 560,
+        "realHeight": 800
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_44040/electric-bass-guitar",
       "summaryLength": 404,
       "shortSummaryDuplicates": 1
     },
@@ -3831,20 +3793,20 @@
       "name": "Slap Bass 1",
       "wikipediaPageTitle": "Slapping (music)",
       "sd": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Larry_Graham_%2810398937003%29.jpg/330px-Larry_Graham_%2810398937003%29.jpg",
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/e11abddd231cc9293716029adfc41db940291aa5.jpg",
+        "source": "mimo",
+        "storedWidth": 560,
+        "realWidth": 560,
+        "realHeight": 800
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/e11abddd231cc9293716029adfc41db940291aa5.jpg",
+        "source": "mimo",
+        "storedWidth": 560,
+        "realWidth": 560,
+        "realHeight": 800
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_44040/electric-bass-guitar",
       "summaryLength": 661,
       "shortSummaryDuplicates": 2
     },
@@ -3856,20 +3818,20 @@
       "name": "Slap Bass 2",
       "wikipediaPageTitle": "Slapping (music)",
       "sd": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Larry_Graham_%2810398937003%29.jpg/330px-Larry_Graham_%2810398937003%29.jpg",
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/e11abddd231cc9293716029adfc41db940291aa5.jpg",
+        "source": "mimo",
+        "storedWidth": 560,
+        "realWidth": 560,
+        "realHeight": 800
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/e11abddd231cc9293716029adfc41db940291aa5.jpg",
+        "source": "mimo",
+        "storedWidth": 560,
+        "realWidth": 560,
+        "realHeight": 800
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_44040/electric-bass-guitar",
       "summaryLength": 661,
       "shortSummaryDuplicates": 2
     },
@@ -4094,7 +4056,7 @@
         "realWidth": 1920,
         "realHeight": 1275
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_44112/snare-drum",
       "summaryLength": 754,
       "shortSummaryDuplicates": 1
     },
@@ -4188,13 +4150,13 @@
         "realHeight": 180
       },
       "hd": {
-        "url": "/api/wiki-thumbs-hd/ebf7d2a00b8b25fab7d2fdf1ca3577a9ec9f2e06.png",
-        "source": "wiki-hd",
-        "storedWidth": 465,
-        "realWidth": 465,
-        "realHeight": 705
+        "url": "/api/wiki-thumbs-hd/22a5285196cc963b97948861b08bf9a0990fb598.jpg",
+        "source": "mimo",
+        "storedWidth": 800,
+        "realWidth": 800,
+        "realHeight": 739
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_5000/violoncello",
       "summaryLength": 457,
       "shortSummaryDuplicates": 2
     },
@@ -4213,13 +4175,13 @@
         "realHeight": 180
       },
       "hd": {
-        "url": "/api/wiki-thumbs-hd/cd51457560521bf7dbdd3ce9f2c5f283d45a105d.jpg",
-        "source": "wiki-hd",
-        "storedWidth": 1100,
-        "realWidth": 1100,
-        "realHeight": 1550
+        "url": "/api/wiki-thumbs-hd/d5286d69f1f4b26e033579db700775966ed5be8b.jpg",
+        "source": "mimo",
+        "storedWidth": 2170,
+        "realWidth": 2170,
+        "realHeight": 3000
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_0160969/basse-de-viole",
       "summaryLength": 346,
       "shortSummaryDuplicates": 3
     },
@@ -4231,20 +4193,20 @@
       "name": "Tremolo Str.",
       "wikipediaPageTitle": "Tremolo",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/40b15527d6f9591f41c765ac8c62b2635448ab51.jpg",
+        "source": "mimo",
+        "storedWidth": 800,
+        "realWidth": 800,
+        "realHeight": 536
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/40b15527d6f9591f41c765ac8c62b2635448ab51.jpg",
+        "source": "mimo",
+        "storedWidth": 800,
+        "realWidth": 800,
+        "realHeight": 536
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_5001/violin",
       "summaryLength": 203,
       "shortSummaryDuplicates": 1
     },
@@ -4606,11 +4568,11 @@
       "name": "Humming",
       "wikipediaPageTitle": "Humming",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/e6d3f26f7a6fe8a8768bddc25dc44d13ec9669c1.jpg",
+        "source": "mimo",
+        "storedWidth": 800,
+        "realWidth": 800,
+        "realHeight": 600
       },
       "hd": {
         "url": "/api/wiki-thumbs-hd/e6d3f26f7a6fe8a8768bddc25dc44d13ec9669c1.jpg",
@@ -4681,20 +4643,20 @@
       "name": "OrchestraHit",
       "wikipediaPageTitle": "Orchestra hit",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_2568/synthesizer",
       "summaryLength": 409,
       "shortSummaryDuplicates": 4
     },
@@ -4706,20 +4668,20 @@
       "name": "Bass Hit",
       "wikipediaPageTitle": "Orchestra hit",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_2568/synthesizer",
       "summaryLength": 409,
       "shortSummaryDuplicates": 4
     },
@@ -4731,20 +4693,20 @@
       "name": "6th Hit",
       "wikipediaPageTitle": "Orchestra hit",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_2568/synthesizer",
       "summaryLength": 409,
       "shortSummaryDuplicates": 4
     },
@@ -4756,20 +4718,20 @@
       "name": "Euro Hit",
       "wikipediaPageTitle": "Orchestra hit",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_2568/synthesizer",
       "summaryLength": 409,
       "shortSummaryDuplicates": 4
     },
@@ -4913,13 +4875,13 @@
         "realHeight": 180
       },
       "hd": {
-        "url": "/api/wiki-thumbs-hd/e1ba4a1af5b6e2b9c10273f29fd911d1fab5c3da.jpg",
-        "source": "wiki-hd",
-        "storedWidth": 500,
-        "realWidth": 500,
-        "realHeight": 812
+        "url": "/api/wiki-thumbs-hd/f86ad9e73a5ee7cabc6f6295f35664ca0b9a5412.jpg",
+        "source": "mimo",
+        "storedWidth": 640,
+        "realWidth": 640,
+        "realHeight": 640
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_22623/bass-tuba",
       "summaryLength": 1087,
       "shortSummaryDuplicates": 1
     },
@@ -5519,7 +5481,7 @@
         "realWidth": 792,
         "realHeight": 593
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_22553/treble-recorder",
       "summaryLength": 397,
       "shortSummaryDuplicates": 1
     },
@@ -5531,11 +5493,11 @@
       "name": "Pan Flute",
       "wikipediaPageTitle": "Pan flute",
       "sd": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Flute_de_pan_MHNT_ETH_AC_NH_31_Sav%C3%A8s.jpg/330px-Flute_de_pan_MHNT_ETH_AC_NH_31_Sav%C3%A8s.jpg",
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/32178e2506854f0a280b87fc4e6100c2bc414e8e.jpg",
+        "source": "mimo",
+        "storedWidth": 800,
+        "realWidth": 800,
+        "realHeight": 440
       },
       "hd": {
         "url": "/api/wiki-thumbs-hd/32178e2506854f0a280b87fc4e6100c2bc414e8e.jpg",
@@ -5656,20 +5618,20 @@
       "name": "Square Lead1",
       "wikipediaPageTitle": "Lead synthesizer",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_2568/synthesizer",
       "summaryLength": 0,
       "shortSummaryDuplicates": 0
     },
@@ -5681,20 +5643,20 @@
       "name": "Square Lead2",
       "wikipediaPageTitle": "Lead synthesizer",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_2568/synthesizer",
       "summaryLength": 0,
       "shortSummaryDuplicates": 0
     },
@@ -5706,20 +5668,20 @@
       "name": "Sine Lead",
       "wikipediaPageTitle": "Lead synthesizer",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_2568/synthesizer",
       "summaryLength": 0,
       "shortSummaryDuplicates": 0
     },
@@ -5731,20 +5693,20 @@
       "name": "Saw Lead 1",
       "wikipediaPageTitle": "Lead synthesizer",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_2568/synthesizer",
       "summaryLength": 0,
       "shortSummaryDuplicates": 0
     },
@@ -5756,20 +5718,20 @@
       "name": "Saw Lead 2",
       "wikipediaPageTitle": "Lead synthesizer",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_2568/synthesizer",
       "summaryLength": 0,
       "shortSummaryDuplicates": 0
     },
@@ -5781,20 +5743,20 @@
       "name": "Doctor Solo",
       "wikipediaPageTitle": "Lead synthesizer",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_2568/synthesizer",
       "summaryLength": 0,
       "shortSummaryDuplicates": 0
     },
@@ -5806,20 +5768,20 @@
       "name": "Natural Lead",
       "wikipediaPageTitle": "Lead synthesizer",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_2568/synthesizer",
       "summaryLength": 0,
       "shortSummaryDuplicates": 0
     },
@@ -5856,20 +5818,20 @@
       "name": "Syn.Calliope",
       "wikipediaPageTitle": "Calliope (music)",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/b31c8c589221ba05f777769fa622ba9a9d31e292.jpg",
+        "source": "mimo",
+        "storedWidth": 801,
+        "realWidth": 801,
+        "realHeight": 1200
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/b31c8c589221ba05f777769fa622ba9a9d31e292.jpg",
+        "source": "mimo",
+        "storedWidth": 801,
+        "realWidth": 801,
+        "realHeight": 1200
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_0967244/calliope",
       "summaryLength": 189,
       "shortSummaryDuplicates": 1
     },
@@ -5881,20 +5843,20 @@
       "name": "Chiffer Lead",
       "wikipediaPageTitle": "Lead synthesizer",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_2568/synthesizer",
       "summaryLength": 0,
       "shortSummaryDuplicates": 0
     },
@@ -5906,20 +5868,20 @@
       "name": "Charang",
       "wikipediaPageTitle": "Lead synthesizer",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_2568/synthesizer",
       "summaryLength": 0,
       "shortSummaryDuplicates": 0
     },
@@ -5931,20 +5893,20 @@
       "name": "Wire Lead",
       "wikipediaPageTitle": "Lead synthesizer",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_2568/synthesizer",
       "summaryLength": 0,
       "shortSummaryDuplicates": 0
     },
@@ -5981,20 +5943,20 @@
       "name": "5th Saw Lead",
       "wikipediaPageTitle": "Lead synthesizer",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_2568/synthesizer",
       "summaryLength": 0,
       "shortSummaryDuplicates": 0
     },
@@ -6006,20 +5968,20 @@
       "name": "Bass+Lead",
       "wikipediaPageTitle": "Lead synthesizer",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_2568/synthesizer",
       "summaryLength": 0,
       "shortSummaryDuplicates": 0
     },
@@ -6031,20 +5993,20 @@
       "name": "Delayed Lead",
       "wikipediaPageTitle": "Lead synthesizer",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_2568/synthesizer",
       "summaryLength": 0,
       "shortSummaryDuplicates": 0
     },
@@ -6056,20 +6018,20 @@
       "name": "Fantasia",
       "wikipediaPageTitle": "Lead synthesizer",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_2568/synthesizer",
       "summaryLength": 0,
       "shortSummaryDuplicates": 0
     },
@@ -6081,20 +6043,20 @@
       "name": "Warm Pad",
       "wikipediaPageTitle": "Synthesizer pad",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/bc2cddac6f1c04e1657a66318b0ae6fe3d9f9b38.jpg",
+        "source": "mimo",
+        "storedWidth": 4000,
+        "realWidth": 4000,
+        "realHeight": 2976
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/bc2cddac6f1c04e1657a66318b0ae6fe3d9f9b38.jpg",
+        "source": "mimo",
+        "storedWidth": 4000,
+        "realWidth": 4000,
+        "realHeight": 2976
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_1107584/synthetiseur-prophet-5",
       "summaryLength": 0,
       "shortSummaryDuplicates": 0
     },
@@ -6106,20 +6068,20 @@
       "name": "Sine Pad",
       "wikipediaPageTitle": "Synthesizer pad",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/bc2cddac6f1c04e1657a66318b0ae6fe3d9f9b38.jpg",
+        "source": "mimo",
+        "storedWidth": 4000,
+        "realWidth": 4000,
+        "realHeight": 2976
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/bc2cddac6f1c04e1657a66318b0ae6fe3d9f9b38.jpg",
+        "source": "mimo",
+        "storedWidth": 4000,
+        "realWidth": 4000,
+        "realHeight": 2976
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_1107584/synthetiseur-prophet-5",
       "summaryLength": 0,
       "shortSummaryDuplicates": 0
     },
@@ -6131,20 +6093,20 @@
       "name": "Polysynth",
       "wikipediaPageTitle": "Polysynth",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/bc2cddac6f1c04e1657a66318b0ae6fe3d9f9b38.jpg",
+        "source": "mimo",
+        "storedWidth": 4000,
+        "realWidth": 4000,
+        "realHeight": 2976
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/bc2cddac6f1c04e1657a66318b0ae6fe3d9f9b38.jpg",
+        "source": "mimo",
+        "storedWidth": 4000,
+        "realWidth": 4000,
+        "realHeight": 2976
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_1107584/synthetiseur-prophet-5",
       "summaryLength": 261,
       "shortSummaryDuplicates": 1
     },
@@ -6181,20 +6143,20 @@
       "name": "Itopia",
       "wikipediaPageTitle": "Lead synthesizer",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_2568/synthesizer",
       "summaryLength": 0,
       "shortSummaryDuplicates": 0
     },
@@ -6206,11 +6168,11 @@
       "name": "Bowed Glass",
       "wikipediaPageTitle": "Glass harmonica",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/3d80c0058687924260fcac223f29674bc2bae83c.jpg",
+        "source": "mimo",
+        "storedWidth": 800,
+        "realWidth": 800,
+        "realHeight": 477
       },
       "hd": {
         "url": "/api/wiki-thumbs-hd/3d80c0058687924260fcac223f29674bc2bae83c.jpg",
@@ -6231,20 +6193,20 @@
       "name": "Metallic Pad",
       "wikipediaPageTitle": "Synthesizer pad",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/bc2cddac6f1c04e1657a66318b0ae6fe3d9f9b38.jpg",
+        "source": "mimo",
+        "storedWidth": 4000,
+        "realWidth": 4000,
+        "realHeight": 2976
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/bc2cddac6f1c04e1657a66318b0ae6fe3d9f9b38.jpg",
+        "source": "mimo",
+        "storedWidth": 4000,
+        "realWidth": 4000,
+        "realHeight": 2976
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_1107584/synthetiseur-prophet-5",
       "summaryLength": 0,
       "shortSummaryDuplicates": 0
     },
@@ -6256,20 +6218,20 @@
       "name": "Halo Pad",
       "wikipediaPageTitle": "Synthesizer pad",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/bc2cddac6f1c04e1657a66318b0ae6fe3d9f9b38.jpg",
+        "source": "mimo",
+        "storedWidth": 4000,
+        "realWidth": 4000,
+        "realHeight": 2976
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/bc2cddac6f1c04e1657a66318b0ae6fe3d9f9b38.jpg",
+        "source": "mimo",
+        "storedWidth": 4000,
+        "realWidth": 4000,
+        "realHeight": 2976
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_1107584/synthetiseur-prophet-5",
       "summaryLength": 0,
       "shortSummaryDuplicates": 0
     },
@@ -6281,20 +6243,20 @@
       "name": "Sweep Pad",
       "wikipediaPageTitle": "Synthesizer pad",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/bc2cddac6f1c04e1657a66318b0ae6fe3d9f9b38.jpg",
+        "source": "mimo",
+        "storedWidth": 4000,
+        "realWidth": 4000,
+        "realHeight": 2976
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/bc2cddac6f1c04e1657a66318b0ae6fe3d9f9b38.jpg",
+        "source": "mimo",
+        "storedWidth": 4000,
+        "realWidth": 4000,
+        "realHeight": 2976
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_1107584/synthetiseur-prophet-5",
       "summaryLength": 0,
       "shortSummaryDuplicates": 0
     },
@@ -6306,20 +6268,20 @@
       "name": "Ice Rain",
       "wikipediaPageTitle": "Lead synthesizer",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_2568/synthesizer",
       "summaryLength": 0,
       "shortSummaryDuplicates": 0
     },
@@ -6331,20 +6293,20 @@
       "name": "Soundtrack",
       "wikipediaPageTitle": "Lead synthesizer",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_2568/synthesizer",
       "summaryLength": 0,
       "shortSummaryDuplicates": 0
     },
@@ -6356,20 +6318,20 @@
       "name": "Crystal",
       "wikipediaPageTitle": "Lead synthesizer",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/61c8e2006ba16d1db052ce7a4f76ef2cb7eb47a8.jpg",
+        "source": "mimo",
+        "storedWidth": 1253,
+        "realWidth": 1253,
+        "realHeight": 801
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_2568/synthesizer",
       "summaryLength": 0,
       "shortSummaryDuplicates": 0
     },
@@ -6406,20 +6368,20 @@
       "name": "Atmosphere",
       "wikipediaPageTitle": "Synthesizer pad",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/bc2cddac6f1c04e1657a66318b0ae6fe3d9f9b38.jpg",
+        "source": "mimo",
+        "storedWidth": 4000,
+        "realWidth": 4000,
+        "realHeight": 2976
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/bc2cddac6f1c04e1657a66318b0ae6fe3d9f9b38.jpg",
+        "source": "mimo",
+        "storedWidth": 4000,
+        "realWidth": 4000,
+        "realHeight": 2976
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_1107584/synthetiseur-prophet-5",
       "summaryLength": 0,
       "shortSummaryDuplicates": 0
     },
@@ -6431,20 +6393,20 @@
       "name": "Brightness",
       "wikipediaPageTitle": "Synthesizer pad",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/bc2cddac6f1c04e1657a66318b0ae6fe3d9f9b38.jpg",
+        "source": "mimo",
+        "storedWidth": 4000,
+        "realWidth": 4000,
+        "realHeight": 2976
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/bc2cddac6f1c04e1657a66318b0ae6fe3d9f9b38.jpg",
+        "source": "mimo",
+        "storedWidth": 4000,
+        "realWidth": 4000,
+        "realHeight": 2976
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_1107584/synthetiseur-prophet-5",
       "summaryLength": 0,
       "shortSummaryDuplicates": 0
     },
@@ -6456,20 +6418,20 @@
       "name": "Goblins",
       "wikipediaPageTitle": "Synthesizer pad",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/bc2cddac6f1c04e1657a66318b0ae6fe3d9f9b38.jpg",
+        "source": "mimo",
+        "storedWidth": 4000,
+        "realWidth": 4000,
+        "realHeight": 2976
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/bc2cddac6f1c04e1657a66318b0ae6fe3d9f9b38.jpg",
+        "source": "mimo",
+        "storedWidth": 4000,
+        "realWidth": 4000,
+        "realHeight": 2976
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_1107584/synthetiseur-prophet-5",
       "summaryLength": 0,
       "shortSummaryDuplicates": 0
     },
@@ -6481,20 +6443,20 @@
       "name": "Echo Drops",
       "wikipediaPageTitle": "Synthesizer pad",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/bc2cddac6f1c04e1657a66318b0ae6fe3d9f9b38.jpg",
+        "source": "mimo",
+        "storedWidth": 4000,
+        "realWidth": 4000,
+        "realHeight": 2976
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/bc2cddac6f1c04e1657a66318b0ae6fe3d9f9b38.jpg",
+        "source": "mimo",
+        "storedWidth": 4000,
+        "realWidth": 4000,
+        "realHeight": 2976
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_1107584/synthetiseur-prophet-5",
       "summaryLength": 0,
       "shortSummaryDuplicates": 0
     },
@@ -6506,20 +6468,20 @@
       "name": "Echo Bell",
       "wikipediaPageTitle": "Synthesizer pad",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/bc2cddac6f1c04e1657a66318b0ae6fe3d9f9b38.jpg",
+        "source": "mimo",
+        "storedWidth": 4000,
+        "realWidth": 4000,
+        "realHeight": 2976
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/bc2cddac6f1c04e1657a66318b0ae6fe3d9f9b38.jpg",
+        "source": "mimo",
+        "storedWidth": 4000,
+        "realWidth": 4000,
+        "realHeight": 2976
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_1107584/synthetiseur-prophet-5",
       "summaryLength": 0,
       "shortSummaryDuplicates": 0
     },
@@ -6531,20 +6493,20 @@
       "name": "Echo Pan",
       "wikipediaPageTitle": "Synthesizer pad",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/bc2cddac6f1c04e1657a66318b0ae6fe3d9f9b38.jpg",
+        "source": "mimo",
+        "storedWidth": 4000,
+        "realWidth": 4000,
+        "realHeight": 2976
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/bc2cddac6f1c04e1657a66318b0ae6fe3d9f9b38.jpg",
+        "source": "mimo",
+        "storedWidth": 4000,
+        "realWidth": 4000,
+        "realHeight": 2976
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_1107584/synthetiseur-prophet-5",
       "summaryLength": 0,
       "shortSummaryDuplicates": 0
     },
@@ -6556,20 +6518,20 @@
       "name": "Star Theme",
       "wikipediaPageTitle": "Synthesizer pad",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/bc2cddac6f1c04e1657a66318b0ae6fe3d9f9b38.jpg",
+        "source": "mimo",
+        "storedWidth": 4000,
+        "realWidth": 4000,
+        "realHeight": 2976
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/bc2cddac6f1c04e1657a66318b0ae6fe3d9f9b38.jpg",
+        "source": "mimo",
+        "storedWidth": 4000,
+        "realWidth": 4000,
+        "realHeight": 2976
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_1107584/synthetiseur-prophet-5",
       "summaryLength": 0,
       "shortSummaryDuplicates": 0
     },
@@ -6581,11 +6543,11 @@
       "name": "Sitar 1",
       "wikipediaPageTitle": "Sitar",
       "sd": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Sitar%2C_late_19th_Century.jpg/330px-Sitar%2C_late_19th_Century.jpg",
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/d2d040cc1d7ab45bdcff140cfda329d6df189aac.jpg",
+        "source": "mimo",
+        "storedWidth": 2928,
+        "realWidth": 2928,
+        "realHeight": 5184
       },
       "hd": {
         "url": "/api/wiki-thumbs-hd/d2d040cc1d7ab45bdcff140cfda329d6df189aac.jpg",
@@ -6606,11 +6568,11 @@
       "name": "Sitar 2",
       "wikipediaPageTitle": "Sitar",
       "sd": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Sitar%2C_late_19th_Century.jpg/330px-Sitar%2C_late_19th_Century.jpg",
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/d2d040cc1d7ab45bdcff140cfda329d6df189aac.jpg",
+        "source": "mimo",
+        "storedWidth": 2928,
+        "realWidth": 2928,
+        "realHeight": 5184
       },
       "hd": {
         "url": "/api/wiki-thumbs-hd/d2d040cc1d7ab45bdcff140cfda329d6df189aac.jpg",
@@ -6656,20 +6618,20 @@
       "name": "Shamisen",
       "wikipediaPageTitle": "Shamisen",
       "sd": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Tokyo_Geisha_with_Shamisen_c1870s%2C.jpg/330px-Tokyo_Geisha_with_Shamisen_c1870s%2C.jpg",
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/b1392c73ec0ff298c4204ddc9d8199ee5b060d49.jpg",
+        "source": "mimo",
+        "storedWidth": 2096,
+        "realWidth": 2096,
+        "realHeight": 3048
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/b1392c73ec0ff298c4204ddc9d8199ee5b060d49.jpg",
+        "source": "mimo",
+        "storedWidth": 2096,
+        "realWidth": 2096,
+        "realHeight": 3048
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_MDMB_309508/shamisen",
       "summaryLength": 229,
       "shortSummaryDuplicates": 1
     },
@@ -6688,13 +6650,13 @@
         "realHeight": 180
       },
       "hd": {
-        "url": "/api/wiki-thumbs-hd/0d19e57fbf25c54b38551b83b3aa65b0866a6bb6.jpg",
-        "source": "wiki-hd",
-        "storedWidth": 1900,
-        "realWidth": 1900,
-        "realHeight": 1200
+        "url": "/api/wiki-thumbs-hd/cebc4aab8d2e5299711f2c09edcc4b947e4dbae8.jpg",
+        "source": "mimo",
+        "storedWidth": 6211,
+        "realWidth": 6211,
+        "realHeight": 4114
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_MDMB_309509/koto",
       "summaryLength": 679,
       "shortSummaryDuplicates": 1
     },
@@ -6794,7 +6756,7 @@
         "realWidth": null,
         "realHeight": null
       },
-      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_2368/hardanger-fiddle",
+      "mimoUrl": null,
       "summaryLength": 869,
       "shortSummaryDuplicates": 1
     },
@@ -6869,7 +6831,7 @@
         "realWidth": 1920,
         "realHeight": 1044
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/SPK_BERLIN.DE_EM_OBJID_257807/agogo",
       "summaryLength": 240,
       "shortSummaryDuplicates": 1
     },
@@ -6944,7 +6906,7 @@
         "realWidth": null,
         "realHeight": null
       },
-      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_2908/mounted-castanets",
+      "mimoUrl": null,
       "summaryLength": 302,
       "shortSummaryDuplicates": 1
     },
@@ -7056,11 +7018,11 @@
       "name": "Synth Drum",
       "wikipediaPageTitle": "Electronic drum",
       "sd": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/HK_TKO_%E5%B0%87%E8%BB%8D%E6%BE%B3_Tseung_Kwan_O_%E5%BA%B7%E5%9F%8E_LOHAS_Park_shopping_mall_shop_%E6%9F%8F%E6%96%AF%E7%90%B4%E8%A1%8C_Parsons_Music_November_2021_SS2_17.jpg/330px-HK_TKO_%E5%B0%87%E8%BB%8D%E6%BE%B3_Tseung_Kwan_O_%E5%BA%B7%E5%9F%8E_LOHAS_Park_shopping_mall_shop_%E6%9F%8F%E6%96%AF%E7%90%B4%E8%A1%8C_Parsons_Music_November_2021_SS2_17.jpg",
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/7ae3a991656ac96eac4ff7d219ee55fab922954c.jpg",
+        "source": "mimo",
+        "storedWidth": 3000,
+        "realWidth": 3000,
+        "realHeight": 2251
       },
       "hd": {
         "url": "/api/wiki-thumbs-hd/7ae3a991656ac96eac4ff7d219ee55fab922954c.jpg",
@@ -7081,20 +7043,20 @@
       "name": "TR-808 Tom",
       "wikipediaPageTitle": "Roland TR-808",
       "sd": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/TR-808_-_MIM%2C_Phoenix_%282019-08-30_14.59.26_by_Bryan_Pocius%29_%28cropped%29.jpg/330px-TR-808_-_MIM%2C_Phoenix_%282019-08-30_14.59.26_by_Bryan_Pocius%29_%28cropped%29.jpg",
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/7ae3a991656ac96eac4ff7d219ee55fab922954c.jpg",
+        "source": "mimo",
+        "storedWidth": 3000,
+        "realWidth": 3000,
+        "realHeight": 2251
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/7ae3a991656ac96eac4ff7d219ee55fab922954c.jpg",
+        "source": "mimo",
+        "storedWidth": 3000,
+        "realWidth": 3000,
+        "realHeight": 2251
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_1005176/boite-a-rythme-linn-programmable-drum-machine-sequencer-unite-centrale",
       "summaryLength": 396,
       "shortSummaryDuplicates": 2
     },
@@ -7106,20 +7068,20 @@
       "name": "Elec.Perc.",
       "wikipediaPageTitle": "Electronic percussion",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/7ae3a991656ac96eac4ff7d219ee55fab922954c.jpg",
+        "source": "mimo",
+        "storedWidth": 3000,
+        "realWidth": 3000,
+        "realHeight": 2251
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs-hd/7ae3a991656ac96eac4ff7d219ee55fab922954c.jpg",
+        "source": "mimo",
+        "storedWidth": 3000,
+        "realWidth": 3000,
+        "realHeight": 2251
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_1005176/boite-a-rythme-linn-programmable-drum-machine-sequencer-unite-centrale",
       "summaryLength": 630,
       "shortSummaryDuplicates": 3
     },
@@ -7281,7 +7243,7 @@
       "name": "Seashore",
       "wikipediaPageTitle": "Ocean",
       "sd": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Pacific_Ocean_as_viewed_from_GOES-18_on_September_23%2C_2023.jpg/330px-Pacific_Ocean_as_viewed_from_GOES-18_on_September_23%2C_2023.jpg",
+        "url": null,
         "source": null,
         "storedWidth": null,
         "realWidth": null,
@@ -7431,11 +7393,11 @@
       "name": "Bird 1",
       "wikipediaPageTitle": "Bird vocalization",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/e1cf1048fb98af73a49f900422132947bfdba1cf.jpg",
+        "source": "mimo",
+        "storedWidth": 800,
+        "realWidth": 800,
+        "realHeight": 608
       },
       "hd": {
         "url": "/api/wiki-thumbs-hd/e1cf1048fb98af73a49f900422132947bfdba1cf.jpg",
@@ -7506,11 +7468,11 @@
       "name": "Bird 2",
       "wikipediaPageTitle": "Bird vocalization",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/e1cf1048fb98af73a49f900422132947bfdba1cf.jpg",
+        "source": "mimo",
+        "storedWidth": 800,
+        "realWidth": 800,
+        "realHeight": 608
       },
       "hd": {
         "url": "/api/wiki-thumbs-hd/e1cf1048fb98af73a49f900422132947bfdba1cf.jpg",
@@ -7638,13 +7600,13 @@
         "realHeight": 283
       },
       "hd": {
-        "url": "/api/wiki-thumbs-hd/f1520161ded3e55a37740b9705fc32ff86339106.jpg",
-        "source": "wiki-hd",
-        "storedWidth": 350,
-        "realWidth": 350,
-        "realHeight": 283
+        "url": "/api/wiki-thumbs-hd/6879198f3a1aee91a1a75b6009ca4385f3f5b51b.jpg",
+        "source": "mimo",
+        "storedWidth": 1200,
+        "realWidth": 1200,
+        "realHeight": 798
       },
-      "mimoUrl": null,
+      "mimoUrl": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_0847472/gramophone",
       "summaryLength": 261,
       "shortSummaryDuplicates": 1
     },
@@ -7831,11 +7793,11 @@
       "name": "Train",
       "wikipediaPageTitle": "Train",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
-        "realWidth": null,
-        "realHeight": null
+        "url": "/api/wiki-thumbs/f5517c808f6633f588d5d9d3ceea30221b966e3e.jpg",
+        "source": "mimo",
+        "storedWidth": 279,
+        "realWidth": 279,
+        "realHeight": 400
       },
       "hd": {
         "url": "/api/wiki-thumbs-hd/f5517c808f6633f588d5d9d3ceea30221b966e3e.jpg",

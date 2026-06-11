@@ -204,17 +204,21 @@ export function ToneModal({ tone, onClose, onPlay, midiAvailable }: Props) {
 
         <div className="flex-1 space-y-5 overflow-y-auto p-5">
           {/* Geen full-size afbeelding meer in de body: de header-thumbnail
-              toont 'm op hover en opent de lightbox bij klik. */}
-          {wiki?.sourceUrl && (
+              toont 'm op hover en opent de lightbox bij klik. De MIMO-knop
+              staat los van sourceUrl: tonen zonder (bestaande)
+              Wikipedia-pagina kunnen wél een museum-object hebben. */}
+          {(wiki?.sourceUrl || wiki?.mimoUrl) && (
             <section className="flex flex-wrap gap-2">
-              <a
-                href={wiki.sourceUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-lg border border-border-soft px-3 py-1.5 text-[11px] text-muted hover:text-foreground"
-              >
-                Bekijk op Wikipedia ↗
-              </a>
+              {wiki.sourceUrl && (
+                <a
+                  href={wiki.sourceUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-lg border border-border-soft px-3 py-1.5 text-[11px] text-muted hover:text-foreground"
+                >
+                  Bekijk op Wikipedia ↗
+                </a>
+              )}
               {wiki.mimoUrl && (
                 <a
                   href={wiki.mimoUrl}

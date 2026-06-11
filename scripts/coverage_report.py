@@ -26,10 +26,30 @@ from collections import Counter
 from pathlib import Path
 
 API_URL = "http://localhost:8080"
-DB_CONTAINER = "deploy-db-1"
-API_CONTAINER = "deploy-api-1"
 REPO_ROOT = Path(__file__).resolve().parent.parent
 OUTPUT = REPO_ROOT / "data" / "coverage_report.json"
+
+# (db-container, api-container, db-naam, db-user) per compose-stack;
+# de eerste waarvan de db-container draait wint.
+STACKS = [
+    ("tone-library-dev-full-db-1", "tone-library-dev-full-api-1",
+     "pianosounds_dev", "pianosounds_dev_user"),
+    ("tone-library-prod-db-1", "tone-library-prod-api-1",
+     "pianosounds", "pianosounds_user"),
+    ("deploy-db-1", "deploy-api-1", "pianosounds", "pianosounds_user"),
+]
+
+
+def detect_stack() -> tuple[str, str, str, str]:
+    running = subprocess.run(
+        ["docker", "ps", "--format", "{{.Names}}"],
+        capture_output=True, text=True, check=True,
+    ).stdout.split()
+    for stack in STACKS:
+        if stack[0] in running:
+            return stack
+    raise SystemExit(f"Geen bekende db-container actief (gezocht: "
+                     f"{[s[0] for s in STACKS]})")
 
 
 def image_dimensions(path: Path) -> tuple[int, int] | None:
@@ -75,7 +95,7 @@ def fetch_tones() -> list[dict]:
         return json.load(resp)
 
 
-def fetch_wiki_data() -> dict[int, dict]:
+def fetch_wiki_data(db_container: str, db_name: str, db_user: str) -> dict[int, dict]:
     """wiki_data per tone_id, rechtstreeks uit Postgres (geen fetch-side-effects)."""
     sql = (
         "SELECT tone_id, thumbnail_path, thumbnail_source, thumbnail_width,"
@@ -83,8 +103,8 @@ def fetch_wiki_data() -> dict[int, dict]:
         " mimo_url, coalesce(length(summary), 0) FROM wiki_data"
     )
     out = subprocess.run(
-        ["docker", "exec", DB_CONTAINER, "psql", "-U", "pianosounds_user",
-         "-d", "pianosounds", "-A", "-t", "-F", "\t", "-c", sql],
+        ["docker", "exec", db_container, "psql", "-U", db_user,
+         "-d", db_name, "-A", "-t", "-F", "\t", "-c", sql],
         capture_output=True, text=True, check=True,
     ).stdout
     rows: dict[int, dict] = {}
@@ -103,20 +123,22 @@ def fetch_wiki_data() -> dict[int, dict]:
     return rows
 
 
-def copy_thumbs(tmp: Path) -> tuple[Path, Path]:
+def copy_thumbs(tmp: Path, api_container: str) -> tuple[Path, Path]:
     sd_dir, hd_dir = tmp / "sd", tmp / "hd"
-    for src, dst in ((f"{API_CONTAINER}:/var/data/wiki-thumbs", sd_dir),
-                     (f"{API_CONTAINER}:/var/data/wiki-thumbs-hd", hd_dir)):
+    for src, dst in ((f"{api_container}:/var/data/wiki-thumbs", sd_dir),
+                     (f"{api_container}:/var/data/wiki-thumbs-hd", hd_dir)):
         subprocess.run(["docker", "cp", src, str(dst)],
                        capture_output=True, check=True)
     return sd_dir, hd_dir
 
 
 def main() -> None:
+    db_container, api_container, db_name, db_user = detect_stack()
+    print(f"Stack: {api_container} / {db_container} ({db_name})")
     tones = fetch_tones()
-    wiki = fetch_wiki_data()
+    wiki = fetch_wiki_data(db_container, db_name, db_user)
     with tempfile.TemporaryDirectory() as tmp:
-        sd_dir, hd_dir = copy_thumbs(Path(tmp))
+        sd_dir, hd_dir = copy_thumbs(Path(tmp), api_container)
         sd_dims = {p.name: image_dimensions(p) for p in sd_dir.iterdir()}
         hd_dims = {p.name: image_dimensions(p) for p in hd_dir.iterdir()}
 

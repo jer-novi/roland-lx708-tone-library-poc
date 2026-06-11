@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T17:31:49.371376+00:00",
+  "generated_at": "2026-06-11T21:46:56.470784+00:00",
   "status": "ok",
   "source": "https://mimo-international.com/MIMO/Ermes/Recherche/Search.svc/Search",
   "matches": {
@@ -138,15 +138,6 @@
         "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/AVBGB/IMAGE/41761b42d1b38a3a7844527c39f8ab85.jpg"
       }
     ],
-    "Castanets": [
-      {
-        "mimo_id": "MINIM_UK_UEDIN_2908",
-        "title": "Mounted castanets.",
-        "slug": "mounted-castanets",
-        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_2908/mounted-castanets",
-        "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/UEDIN/IMAGE/0034407c.jpg"
-      }
-    ],
     "Celesta": [
       {
         "mimo_id": "OAI_MDMB_309605",
@@ -219,15 +210,6 @@
         "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MDMB/IMAGE/MDMB001692_ID_20140711_000_002_02.jpg"
       }
     ],
-    "Electric piano": [
-      {
-        "mimo_id": "MINIM_UK_UEDIN_3843",
-        "title": "Electric piano.",
-        "slug": "electric-piano",
-        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_3843/electric-piano",
-        "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/UEDIN/IMAGE/0035247c.jpg"
-      }
-    ],
     "Electronic drum": [
       {
         "mimo_id": "OAI_CIMU_ALOES_1005176",
@@ -235,15 +217,6 @@
         "slug": "boite-a-rythme-linn-programmable-drum-machine-sequencer-unite-centrale",
         "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_1005176/boite-a-rythme-linn-programmable-drum-machine-sequencer-unite-centrale",
         "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/CM/IMAGE/CMIM000032100.jpg"
-      }
-    ],
-    "Fiddle": [
-      {
-        "mimo_id": "MINIM_UK_UEDIN_2368",
-        "title": "Hardanger fiddle.",
-        "slug": "hardanger-fiddle",
-        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_2368/hardanger-fiddle",
-        "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/UEDIN/IMAGE/0033978c-0001.jpg"
       }
     ],
     "Flue pipe": [
@@ -758,87 +731,378 @@
         "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_ULEI_M0003336/yangqin",
         "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/ULEI/IMAGE/3744.jpg"
       }
+    ],
+    "Agogô": [
+      {
+        "mimo_id": "SPK_BERLIN.DE_EM_OBJID_257807",
+        "title": "agogo",
+        "slug": "agogo",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/SPK_BERLIN.DE_EM_OBJID_257807/agogo",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/SPK/IMAGE/3466174.jpg"
+      }
+    ],
+    "Brush (music)": [
+      {
+        "mimo_id": "MINIM_UK_44112",
+        "title": "Snare drum",
+        "slug": "snare-drum",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_44112/snare-drum",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/POMRN/IMAGE/a97a798e0ce20017017e3868241b04bc.jpg"
+      }
+    ],
+    "Calliope (music)": [
+      {
+        "mimo_id": "OAI_CIMU_ALOES_0967244",
+        "title": "Calliope",
+        "slug": "calliope",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_0967244/calliope",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/MF-GET/IMAGE/MFIM000024534.jpg"
+      }
+    ],
+    "Classical guitar": [
+      {
+        "mimo_id": "OAI_KBH_3314",
+        "title": "guitar",
+        "slug": "guitar",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_3314/guitar",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/KBH/IMAGE/CL183_2.jpg"
+      }
+    ],
+    "Electronic percussion": [
+      {
+        "mimo_id": "OAI_CIMU_ALOES_1005176",
+        "title": "Boîte à rythme Linn programmable drum machine / sequencer - Unité centrale",
+        "slug": "boite-a-rythme-linn-programmable-drum-machine-sequencer-unite-centrale",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_1005176/boite-a-rythme-linn-programmable-drum-machine-sequencer-unite-centrale",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/CM/IMAGE/CMIM000032100.jpg"
+      }
+    ],
+    "Honky-tonk piano": [
+      {
+        "mimo_id": "MINIM_UK_UEDIN_3251",
+        "title": "Upright pianoforte.",
+        "slug": "upright-pianoforte",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_3251/upright-pianoforte",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/UEDIN/IMAGE/0034712c-0001.jpg"
+      }
+    ],
+    "Piano rock": [
+      {
+        "mimo_id": "MINIM_UK_UEDIN_3251",
+        "title": "Upright pianoforte.",
+        "slug": "upright-pianoforte",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_3251/upright-pianoforte",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/UEDIN/IMAGE/0034712c-0001.jpg"
+      }
+    ],
+    "Polysynth": [
+      {
+        "mimo_id": "OAI_CIMU_ALOES_1107584",
+        "title": "Synthétiseur Prophet 5",
+        "slug": "synthetiseur-prophet-5",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_1107584/synthetiseur-prophet-5",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/CM/IMAGE/CMIM000035103.jpg"
+      }
+    ],
+    "Pump organ": [
+      {
+        "mimo_id": "MINIM_UK_21312",
+        "title": "Harmonium",
+        "slug": "harmonium",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_21312/harmonium",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/CHARE/IMAGE/cd9f4875e8b4fd254457be24d3a80bbc.jpg"
+      }
+    ],
+    "Recorder (musical instrument)": [
+      {
+        "mimo_id": "MINIM_UK_22553",
+        "title": "treble recorder",
+        "slug": "treble-recorder",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_22553/treble-recorder",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/LDHRN/IMAGE/94464bfcc1ced6f8128ec3ee973a5dd5.jpg"
+      }
+    ],
+    "Roland TR-808": [
+      {
+        "mimo_id": "OAI_CIMU_ALOES_1005176",
+        "title": "Boîte à rythme Linn programmable drum machine / sequencer - Unité centrale",
+        "slug": "boite-a-rythme-linn-programmable-drum-machine-sequencer-unite-centrale",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_1005176/boite-a-rythme-linn-programmable-drum-machine-sequencer-unite-centrale",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/CM/IMAGE/CMIM000032100.jpg"
+      }
+    ],
+    "Scratching": [
+      {
+        "mimo_id": "OAI_CIMU_ALOES_0847472",
+        "title": "Gramophone",
+        "slug": "gramophone",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_0847472/gramophone",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/MF-THO/IMAGE/MFIM000004813.jpg"
+      }
+    ],
+    "Steel-string acoustic guitar": [
+      {
+        "mimo_id": "OAI_CIMU_ALOES_0156704",
+        "title": "Guitare folk",
+        "slug": "guitare-folk",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_0156704/guitare-folk",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/CM/IMAGE/CMIM000023368.jpg"
+      }
+    ],
+    "Steinway & Sons": [
+      {
+        "mimo_id": "MINIM_UK_31782",
+        "title": "Grand pianoforte",
+        "slug": "grand-pianoforte",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_31782/grand-pianoforte",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/NTHAT/IMAGE/9bd95b229320657b7a6ed1926ed4d603.jpg"
+      }
+    ],
+    "Synthesizer pad": [
+      {
+        "mimo_id": "OAI_CIMU_ALOES_1107584",
+        "title": "Synthétiseur Prophet 5",
+        "slug": "synthetiseur-prophet-5",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_1107584/synthetiseur-prophet-5",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/CM/IMAGE/CMIM000035103.jpg"
+      }
+    ],
+    "Tremolo": [
+      {
+        "mimo_id": "MINIM_UK_5001",
+        "title": "Violin",
+        "slug": "violin",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_5001/violin",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/CALMG/IMAGE/ad6b0ea6ce0917d73e3e896f3fe36a70.jpg"
+      }
+    ],
+    "Twelve-string guitar": [
+      {
+        "mimo_id": "OAI_KBH_3314",
+        "title": "guitar",
+        "slug": "guitar",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_3314/guitar",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/KBH/IMAGE/CL183_2.jpg"
+      }
+    ],
+    "Vox Continental": [
+      {
+        "mimo_id": "MINIM_UK_44079",
+        "title": "Electronic organ",
+        "slug": "electronic-organ",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_44079/electronic-organ",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/POMRN/IMAGE/6ef2fc44df7397a15d5b09a1e8180b48.jpg"
+      }
+    ],
+    "Yamaha CP-70": [
+      {
+        "mimo_id": "OAI_CIMU_ALOES_0774035",
+        "title": "Piano numérique",
+        "slug": "piano-numerique",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_0774035/piano-numerique",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/CM/IMAGE/CMIM000032440.jpg"
+      }
+    ],
+    "Yamaha DX7": [
+      {
+        "mimo_id": "OAI_KBH_2568",
+        "title": "synthesizer",
+        "slug": "synthesizer",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_2568/synthesizer",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/KBH/IMAGE/2002-21_1.jpg"
+      }
+    ],
+    "Church bell": [
+      {
+        "mimo_id": "MINIM_UK_UEDIN_1175",
+        "title": "Set of tubular bells.",
+        "slug": "set-of-tubular-bells",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_UEDIN_1175/set-of-tubular-bells",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/UEDIN/IMAGE/0033115c.jpg"
+      }
+    ],
+    "Double bass": [
+      {
+        "mimo_id": "OAI_CIMU_ALOES_0160969",
+        "title": "Basse de viole",
+        "slug": "basse-de-viole",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_CIMU_ALOES_0160969/basse-de-viole",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/CM/IMAGE/CMIM000027421.jpg"
+      }
+    ],
+    "Frequency modulation synthesis": [
+      {
+        "mimo_id": "OAI_KBH_2568",
+        "title": "synthesizer",
+        "slug": "synthesizer",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_2568/synthesizer",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/KBH/IMAGE/2002-21_1.jpg"
+      }
+    ],
+    "Fretless guitar": [
+      {
+        "mimo_id": "MINIM_UK_44040",
+        "title": "Electric bass guitar",
+        "slug": "electric-bass-guitar",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_44040/electric-bass-guitar",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/POMRN/IMAGE/fbf427ce35fa9f29bfc2fb657a4fbdef.jpg"
+      }
+    ],
+    "Percussion": [
+      {
+        "mimo_id": "MINIM_UK_44112",
+        "title": "Snare drum",
+        "slug": "snare-drum",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_44112/snare-drum",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/POMRN/IMAGE/a97a798e0ce20017017e3868241b04bc.jpg"
+      }
+    ],
+    "Cello": [
+      {
+        "mimo_id": "MINIM_UK_5000",
+        "title": "Violoncello",
+        "slug": "violoncello",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_5000/violoncello",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/CALMG/IMAGE/6dc6eb4bd2f957a281ce8e417d753082.jpg"
+      }
+    ],
+    "Electric piano": [
+      {
+        "mimo_id": "MINIM_UK_22679",
+        "title": "electric piano",
+        "slug": "electric-piano",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_22679/electric-piano",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/LDHRN/IMAGE/89877609a3a15a43d65b3ccb2e9d579b.jpg"
+      }
+    ],
+    "Koto (instrument)": [
+      {
+        "mimo_id": "OAI_MDMB_309509",
+        "title": "koto",
+        "slug": "koto",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_MDMB_309509/koto",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MDMB/IMAGE/MDMB000706_ID_20140709_000_002_02.jpg"
+      }
+    ],
+    "Lead synthesizer": [
+      {
+        "mimo_id": "OAI_KBH_2568",
+        "title": "synthesizer",
+        "slug": "synthesizer",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_2568/synthesizer",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/KBH/IMAGE/2002-21_1.jpg"
+      }
+    ],
+    "Orchestra hit": [
+      {
+        "mimo_id": "OAI_KBH_2568",
+        "title": "synthesizer",
+        "slug": "synthesizer",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_KBH_2568/synthesizer",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=https://mimo-international.com/media/KBH/IMAGE/2002-21_1.jpg"
+      }
+    ],
+    "Phaser (effect)": [
+      {
+        "mimo_id": "MINIM_UK_22679",
+        "title": "electric piano",
+        "slug": "electric-piano",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_22679/electric-piano",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/LDHRN/IMAGE/89877609a3a15a43d65b3ccb2e9d579b.jpg"
+      }
+    ],
+    "Santur": [
+      {
+        "mimo_id": "SPK_BERLIN.DE_EM_OBJID_257108",
+        "title": "santur",
+        "slug": "santur",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/SPK_BERLIN.DE_EM_OBJID_257108/santur",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/SPK/IMAGE/3466483.jpg"
+      }
+    ],
+    "Shamisen": [
+      {
+        "mimo_id": "OAI_MDMB_309508",
+        "title": "shamisen",
+        "slug": "shamisen",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_MDMB_309508/shamisen",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MDMB/IMAGE/MDMB000705_ID_20140709_000_002_02.jpg"
+      }
+    ],
+    "Tuba": [
+      {
+        "mimo_id": "MINIM_UK_22623",
+        "title": "bass tuba",
+        "slug": "bass-tuba",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_22623/bass-tuba",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/LDHRN/IMAGE/4742e93c669c281e4ecdabd45844c1c1.jpg"
+      }
+    ],
+    "Wurlitzer electronic piano": [
+      {
+        "mimo_id": "MINIM_UK_22679",
+        "title": "electric piano",
+        "slug": "electric-piano",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_22679/electric-piano",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/LDHRN/IMAGE/89877609a3a15a43d65b3ccb2e9d579b.jpg"
+      }
+    ],
+    "Slapping (music)": [
+      {
+        "mimo_id": "MINIM_UK_44040",
+        "title": "Electric bass guitar",
+        "slug": "electric-bass-guitar",
+        "detail_url": "https://mimo-international.com/MIMO/doc/IFD/MINIM_UK_44040/electric-bass-guitar",
+        "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-international.com/media/MINIM/POMRN/IMAGE/fbf427ce35fa9f29bfc2fb657a4fbdef.jpg"
+      }
     ]
   },
   "unmatched": [
-    "Agogô",
     "Applause",
-    "Bass synthesizer",
     "Breath",
-    "Brush (music)",
     "Bubble",
-    "Calliope (music)",
     "Choir",
-    "Church bell",
-    "Classical guitar",
-    "Clavinet",
     "Distortion (music)",
     "Dog",
-    "Double bass",
-    "Electronic percussion",
     "Explosion",
-    "Frequency modulation synthesis",
-    "Fretless guitar",
     "Gunshot",
     "Heart",
     "Helicopter",
-    "Honky-tonk piano",
     "Human voice",
     "Jet aircraft",
     "Laser",
     "Laughter",
-    "Leslie speaker",
     "Machine gun",
     "Natural harmonic",
     "Ocean",
     "Orchestra",
-    "Orchestra hit",
     "Palm mute",
-    "Percussion",
-    "Phaser (effect)",
-    "Piano rock",
     "Pizzicato",
-    "Polysynth",
-    "Pump organ",
     "Punch",
     "Ragtime",
-    "Recorder (musical instrument)",
-    "Roland TR-808",
     "Sawtooth wave",
-    "Scat singing",
-    "Scratching",
     "Scream",
-    "Slapping (music)",
     "Sound effect",
     "Spacecraft",
-    "Steel-string acoustic guitar",
-    "Steinway & Sons",
     "Stream",
     "String orchestra",
-    "String section",
-    "Synthesizer pad",
-    "Taishōgoto",
     "Telephone",
     "Thunder",
-    "Tremolo",
-    "Twelve-string guitar",
-    "Vox Continental",
     "Wind",
     "Wind ensemble",
-    "Wurlitzer electronic piano",
-    "Yamaha CP-70",
-    "Yamaha DX7",
-    "Cello",
-    "Koto (instrument)",
-    "Lead synthesizer",
-    "Santur",
-    "Shamisen",
-    "Tuba"
+    "Castanets",
+    "Fiddle",
+    "Bass synthesizer",
+    "Clavinet",
+    "Leslie speaker",
+    "String section",
+    "Taishōgoto",
+    "Scat singing"
   ],
   "stats": {
     "wiki_titles": 157,
-    "matched": 84,
-    "unmatched": 73,
+    "matched": 117,
+    "unmatched": 40,
     "errors": 0
   }
 }

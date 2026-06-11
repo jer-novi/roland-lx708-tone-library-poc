@@ -99,6 +99,9 @@ in exactly one ladder, selected by its `hdOnly()` flag.
    ≤960px it downloads the original itself.
 3. **WikiPageImagesThumbnailSource** (order=20) — Action API fallback
    for pages without a summary thumbnail.
+4. **MimoSdFallbackSource** (order=30) — the same MIMO museum photo the
+   HD ladder uses, as a last resort for tones whose Wikipedia page has
+   no image at all (or no longer exists — e.g. "Lead synthesizer").
 
 **HD ladder** (`HdThumbnailResolver`):
 
@@ -122,7 +125,18 @@ return HTTP 400 unless an old render happens to be cached — see
 `WikimediaThumbUrl`.
 
 Stale or 404 URLs are filtered out at write time so the frontend never
-sees a broken image link.
+sees a broken image link. A Wikipedia page that no longer exists (404
+on the summary endpoint) does not abort the pipeline: `WikiService`
+stores a wiki_data row without content so the thumbnail ladder and
+`mimo_url` still resolve.
+
+MIMO notes (`scripts/scrape_mimo.py`): matches are scored against the
+wiki title *or* the search query (so ALT_QUERIES like "minimoog" can
+match for "Lead synthesizer"), and every image URL is validated before
+being stored — all RMAH/Brussels objects proxy their media from
+`www.mimo-db.eu`, which serves HTTP 500, so the scraper walks down the
+result list until it finds an object whose image actually loads. Re-runs
+re-validate existing matches and self-heal broken ones.
 
 ### Image-UX pattern (frontend)
 

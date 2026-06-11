@@ -179,8 +179,22 @@ public class WikiService {
 
     private WikiData fetchAndStore(Tone tone, WikiData existing) {
         String title = tone.getWikipediaPageTitle();
-        JsonNode summary = fetchSummary(title);
-        String html = fetchHtml(title);
+        JsonNode summary;
+        String html;
+        try {
+            summary = fetchSummary(title);
+            html = fetchHtml(title);
+        } catch (NotFoundException e) {
+            // De pagina bestaat niet (meer) — bv. 'Lead synthesizer' is van
+            // Wikipedia verdwenen. Geen wiki-content dus, maar de
+            // thumbnail-ladder (MIMO-museumfoto's!) en de mimo_url moeten
+            // wél gewoon draaien; anders blijven juist de tonen waarvoor
+            // de fallback bestaat zonder afbeelding.
+            log.info("Wikipedia page '{}' not found; storing wiki_data without content for tone {}",
+                    title, tone.getId());
+            summary = com.fasterxml.jackson.databind.node.MissingNode.getInstance();
+            html = null;
+        }
         Optional<ThumbnailResolver.Resolved> thumbnail = thumbnailResolver.resolve(tone);
         Optional<HdThumbnailResolver.Resolved> hdThumbnail = hdThumbnailResolver.resolve(tone);
 
