@@ -16,8 +16,11 @@ public class CorsConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
+        // allowedOriginPatterns (i.p.v. allowedOrigins) ondersteunt "*"
+        // wildcards, zodat het Tailscale-subnet (100.x.x.x) als
+        // http://100.*.*.*:3000 toegelaten kan worden.
         registry.addMapping("/api/**")
-                .allowedOrigins(allowedOrigins)
+                .allowedOriginPatterns(allowedOrigins)
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS");
     }
 }

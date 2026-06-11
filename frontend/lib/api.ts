@@ -8,8 +8,18 @@ import type {
 } from "./types";
 import seedFallback from "./seed-fallback.json";
 
+/**
+ * API-basis-URL. Als NEXT_PUBLIC_API_URL niet is gezet, gebruiken we in de
+ * browser de hostname van de huidige pagina met poort 8080. Zo werkt dev
+ * zowel via localhost:3000 als via een Tailscale-IP (bv. 100.x.x.x:3000)
+ * zonder dat de browser "localhost:8080" op het verkeerde toestel opzoekt.
+ * Op de server (SSR/build) valt dit terug op localhost:8080.
+ */
 export const API_URL =
-  process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8080";
+  process.env.NEXT_PUBLIC_API_URL ??
+  (typeof window !== "undefined"
+    ? `http://${window.location.hostname}:8080`
+    : "http://localhost:8080");
 
 class ApiError extends Error {
   constructor(message: string, readonly status?: number) {

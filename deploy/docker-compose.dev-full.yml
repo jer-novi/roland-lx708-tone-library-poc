@@ -1,0 +1,62 @@
+# Full development stack: database + backend (no Caddy - access via direct localhost ports)
+# 
+# Gebruik:
+#   docker compose -f deploy/docker-compose.dev-full.yml up -d
+#   docker compose -f deploy/docker-compose.dev-full.yml logs -f api
+#   docker compose -f deploy/docker-compose.dev-full.yml down
+#   docker compose -f deploy/docker-compose.dev-full.yml down -v    # stop + data wissen
+#
+# Frontend draait apart: cd frontend && pnpm dev -- --hostname 0.0.0.0
+# 
+# Backend bereikbaar op: http://localhost:8080
+# Database bereikbaar op: localhost:55432 (pianosounds_dev)
+
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: pianosounds_dev
+      POSTGRES_USER: pianosounds_dev_user
+      POSTGRES_PASSWORD: ${DEV_DB_PASSWORD:-devpass}
+    ports:
+      - "55432:5432"
+    volumes:
+      - pgdata_dev:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U pianosounds_dev_user -d pianosounds_dev" ]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  api:
+    build: ../backend
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      # Dev database (poort 5432 is interne Docker-poort; 55432 is host-poort)
+      DB_URL: jdbc:postgresql://db:5432/pianosounds_dev
+      DB_USERNAME: pianosounds_dev_user
+      DB_PASSWORD: ${DEV_DB_PASSWORD:-devpass}
+      # Allow frontend dev server + vercel deployments + Tailscale-subnet (100.x.x.x:3000)
+      CORS_ALLOWED_ORIGINS: http://localhost:3000,http://localhost:3001,http://100.*.*.*:3000,https://roland-lx708-tone-library-poc.vercel.app,https://roland-lx708-tone-library-poc-git-main-jer-novis-projects.vercel.app
+      # Thumbnail storage
+      THUMBNAILS_DIR: /var/data/wiki-thumbs
+      HD_THUMBNAILS_DIR: /var/data/wiki-thumbs-hd
+      # Enable seeding
+      SEED_ENABLED: "true"
+      # Enable wiki-warmup (laadt thumbnails bij startup)
+      WIKI_WARMUP_ENABLED: "true"
+    volumes:
+      - wiki_thumbs_dev:/var/data/wiki-thumbs
+      - wiki_thumbs_hd_dev:/var/data/wiki-thumbs-hd
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  pgdata_dev:
+  wiki_thumbs_dev:
+  wiki_thumbs_hd_dev:
+

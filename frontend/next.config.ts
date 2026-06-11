@@ -4,12 +4,13 @@ const nextConfig: NextConfig = {
   // Allow Docker containers to connect to webpack-hmr for hot-reload.
   // Next 16 promoted this from experimental.allowedDevOrigins to a
   // top-level option. Alleen strings hier (geen RegExp, Next 16 strict).
-  // De 100.x.x.x Tailscale-subnet gebruikt `100.*` als wildcard.
+  // `*` matcht hier maar één hostname-segment (geen punten), dus voor het
+  // 100.x.x.x Tailscale-subnet zijn drie wildcards nodig (100.*.*.*).
   allowedDevOrigins: [
     "0.0.0.0",
     "localhost",
     "127.0.0.1",
-    "100.*",     // Tailscale (en Docker-bridge) subnet
+    "100.*.*.*", // Tailscale (en Docker-bridge) subnet
   ],
   images: {
     // Lokale dev-backend: API_URL wijst naar http://localhost:8080 in dev.
