@@ -76,6 +76,10 @@ app:
     # Keyed by wikipediaPageTitle; value is de og:image URL van het
     # museum-object plus de detail-URL voor een "Bekijk op MIMO"-knop.
     mimo-refs: ${MIMO_REFS_FILE:./data/mimo_image_references.json}
+    # Statische emoji-iconen (SVG) voor tonen zonder enige foto-bron
+    # (GM2 sound-effects, Do Re Mi-demotonen). Gegenereerd door
+    # scripts/generate_static_icons.py, gebundeld in de Docker-image.
+    static-icons-dir: ${STATIC_ICONS_DIR:./data/static-icons}
     # HD-storage: tweede directory met hogere-resolutie varianten,
     # geserveerd onder /api/wiki-thumbs-hd/. Maximale bestandsgrootte
     # is hoger dan SD (12MB vs 5MB) omdat HD-JPEGs 1600-2560px kunnen zijn.

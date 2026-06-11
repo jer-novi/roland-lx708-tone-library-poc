@@ -1,39 +1,27 @@
 {
-  "generatedAt": "2026-06-11T23:48:16",
+  "generatedAt": "2026-06-12T00:01:25",
   "totals": {
     "tones": 324,
-    "sdCoverage": 311,
-    "hdCoverage": 309,
+    "sdCoverage": 324,
+    "hdCoverage": 322,
     "hdRealWidthGte1600": 132,
-    "hdRealWidthLt1000": 108,
-    "tonesWithoutAnyImage": 13,
+    "hdRealWidthLt1000": 121,
+    "tonesWithoutAnyImage": 0,
     "tonesWithDuplicateShortSummary": 191,
     "mimoUrlCoverage": 258,
     "hdSourceBreakdown": {
       "wiki-hd": 143,
-      "mimo": 166
+      "mimo": 166,
+      "static-icon": 13
     },
     "sdSourceBreakdown": {
       "site-instruments": 129,
       "mimo": 62,
-      "wiki-summary": 120
+      "wiki-summary": 120,
+      "static-icon": 13
     }
   },
-  "tonesWithoutAnyImageIds": [
-    32,
-    56,
-    57,
-    58,
-    59,
-    289,
-    291,
-    293,
-    294,
-    314,
-    317,
-    318,
-    324
-  ],
+  "tonesWithoutAnyImageIds": [],
   "tones": [
     {
       "id": 1,
@@ -818,16 +806,16 @@
       "name": "Jazz Scat",
       "wikipediaPageTitle": "Scat singing",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
+        "url": "/api/wiki-thumbs/ad13d85590d6cc65c671e28efe478f3944e53c27.svg",
+        "source": "static-icon",
+        "storedWidth": 512,
         "realWidth": null,
         "realHeight": null
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
+        "url": "/api/wiki-thumbs-hd/ad13d85590d6cc65c671e28efe478f3944e53c27.svg",
+        "source": "static-icon",
+        "storedWidth": 512,
         "realWidth": null,
         "realHeight": null
       },
@@ -1418,16 +1406,16 @@
       "name": "Do Re Mi 1#",
       "wikipediaPageTitle": null,
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
+        "url": "/api/wiki-thumbs/0b5ae1b8ebe4ae0cf3a5d339056dc05c47a5de78.svg",
+        "source": "static-icon",
+        "storedWidth": 512,
         "realWidth": null,
         "realHeight": null
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
+        "url": "/api/wiki-thumbs-hd/0b5ae1b8ebe4ae0cf3a5d339056dc05c47a5de78.svg",
+        "source": "static-icon",
+        "storedWidth": 512,
         "realWidth": null,
         "realHeight": null
       },
@@ -1443,16 +1431,16 @@
       "name": "Do Re Mi 1b",
       "wikipediaPageTitle": null,
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
+        "url": "/api/wiki-thumbs/0b5ae1b8ebe4ae0cf3a5d339056dc05c47a5de78.svg",
+        "source": "static-icon",
+        "storedWidth": 512,
         "realWidth": null,
         "realHeight": null
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
+        "url": "/api/wiki-thumbs-hd/0b5ae1b8ebe4ae0cf3a5d339056dc05c47a5de78.svg",
+        "source": "static-icon",
+        "storedWidth": 512,
         "realWidth": null,
         "realHeight": null
       },
@@ -1468,16 +1456,16 @@
       "name": "Do Re Mi 2#",
       "wikipediaPageTitle": null,
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
+        "url": "/api/wiki-thumbs/0b5ae1b8ebe4ae0cf3a5d339056dc05c47a5de78.svg",
+        "source": "static-icon",
+        "storedWidth": 512,
         "realWidth": null,
         "realHeight": null
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
+        "url": "/api/wiki-thumbs-hd/0b5ae1b8ebe4ae0cf3a5d339056dc05c47a5de78.svg",
+        "source": "static-icon",
+        "storedWidth": 512,
         "realWidth": null,
         "realHeight": null
       },
@@ -1493,16 +1481,16 @@
       "name": "Do Re Mi 2b",
       "wikipediaPageTitle": null,
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
+        "url": "/api/wiki-thumbs/0b5ae1b8ebe4ae0cf3a5d339056dc05c47a5de78.svg",
+        "source": "static-icon",
+        "storedWidth": 512,
         "realWidth": null,
         "realHeight": null
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
+        "url": "/api/wiki-thumbs-hd/0b5ae1b8ebe4ae0cf3a5d339056dc05c47a5de78.svg",
+        "source": "static-icon",
+        "storedWidth": 512,
         "realWidth": null,
         "realHeight": null
       },
@@ -7243,16 +7231,16 @@
       "name": "Seashore",
       "wikipediaPageTitle": "Ocean",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
+        "url": "/api/wiki-thumbs/ba630cf543c0f70093c51f4574fcc6f36250c260.svg",
+        "source": "static-icon",
+        "storedWidth": 512,
         "realWidth": null,
         "realHeight": null
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
+        "url": "/api/wiki-thumbs-hd/ba630cf543c0f70093c51f4574fcc6f36250c260.svg",
+        "source": "static-icon",
+        "storedWidth": 512,
         "realWidth": null,
         "realHeight": null
       },
@@ -7293,16 +7281,16 @@
       "name": "Thunder",
       "wikipediaPageTitle": "Thunder",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
+        "url": "/api/wiki-thumbs/f809207e13595104906aca337622d16d640d3575.svg",
+        "source": "static-icon",
+        "storedWidth": 512,
         "realWidth": null,
         "realHeight": null
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
+        "url": "/api/wiki-thumbs-hd/f809207e13595104906aca337622d16d640d3575.svg",
+        "source": "static-icon",
+        "storedWidth": 512,
         "realWidth": null,
         "realHeight": null
       },
@@ -7343,16 +7331,16 @@
       "name": "Stream",
       "wikipediaPageTitle": "Stream",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
+        "url": "/api/wiki-thumbs/712a5c4d77b0f436022cc6fe17505546b2d58a2a.svg",
+        "source": "static-icon",
+        "storedWidth": 512,
         "realWidth": null,
         "realHeight": null
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
+        "url": "/api/wiki-thumbs-hd/712a5c4d77b0f436022cc6fe17505546b2d58a2a.svg",
+        "source": "static-icon",
+        "storedWidth": 512,
         "realWidth": null,
         "realHeight": null
       },
@@ -7368,16 +7356,16 @@
       "name": "Bubble",
       "wikipediaPageTitle": "Bubble",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
+        "url": "/api/wiki-thumbs/7eb2271d56403e198f1fc78ac42b29ed289a1d4e.svg",
+        "source": "static-icon",
+        "storedWidth": 512,
         "realWidth": null,
         "realHeight": null
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
+        "url": "/api/wiki-thumbs-hd/7eb2271d56403e198f1fc78ac42b29ed289a1d4e.svg",
+        "source": "static-icon",
+        "storedWidth": 512,
         "realWidth": null,
         "realHeight": null
       },
@@ -7868,16 +7856,16 @@
       "name": "Burst Noise",
       "wikipediaPageTitle": "Explosion",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
+        "url": "/api/wiki-thumbs/47436002fea69de61a7111d86a21791408f437a7.svg",
+        "source": "static-icon",
+        "storedWidth": 512,
         "realWidth": null,
         "realHeight": null
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
+        "url": "/api/wiki-thumbs-hd/47436002fea69de61a7111d86a21791408f437a7.svg",
+        "source": "static-icon",
+        "storedWidth": 512,
         "realWidth": null,
         "realHeight": null
       },
@@ -7943,16 +7931,16 @@
       "name": "Screaming",
       "wikipediaPageTitle": "Scream",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
+        "url": "/api/wiki-thumbs/c3ddf6c15309afe1c10841ed3a9922fddb0e91a5.svg",
+        "source": "static-icon",
+        "storedWidth": 512,
         "realWidth": null,
         "realHeight": null
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
+        "url": "/api/wiki-thumbs-hd/c3ddf6c15309afe1c10841ed3a9922fddb0e91a5.svg",
+        "source": "static-icon",
+        "storedWidth": 512,
         "realWidth": null,
         "realHeight": null
       },
@@ -7968,16 +7956,16 @@
       "name": "Punch",
       "wikipediaPageTitle": "Punch",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
+        "url": "/api/wiki-thumbs/6f0a43dd374cf73cd38c9c2383ec30a1358cded7.svg",
+        "source": "static-icon",
+        "storedWidth": 512,
         "realWidth": null,
         "realHeight": null
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
+        "url": "/api/wiki-thumbs-hd/6f0a43dd374cf73cd38c9c2383ec30a1358cded7.svg",
+        "source": "static-icon",
+        "storedWidth": 512,
         "realWidth": null,
         "realHeight": null
       },
@@ -8118,16 +8106,16 @@
       "name": "Explosion",
       "wikipediaPageTitle": "Explosion",
       "sd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
+        "url": "/api/wiki-thumbs/47436002fea69de61a7111d86a21791408f437a7.svg",
+        "source": "static-icon",
+        "storedWidth": 512,
         "realWidth": null,
         "realHeight": null
       },
       "hd": {
-        "url": null,
-        "source": null,
-        "storedWidth": null,
+        "url": "/api/wiki-thumbs-hd/47436002fea69de61a7111d86a21791408f437a7.svg",
+        "source": "static-icon",
+        "storedWidth": 512,
         "realWidth": null,
         "realHeight": null
       },

@@ -111,7 +111,7 @@ public class WikiService {
             try {
                 Boolean stored = transactionTemplate.execute(status -> {
                     Tone tone = toneRepository.findById(toneId).orElse(null);
-                    if (tone == null || tone.getWikipediaPageTitle() == null) {
+                    if (tone == null) {
                         return false;
                     }
                     WikiData existing = wikiDataRepository.findByToneId(toneId).orElse(null);
@@ -167,11 +167,14 @@ public class WikiService {
         return refreshed;
     }
 
-    /** Tone-ids met een Wikipedia-mapping waarvoor nog geen wiki-data is opgeslagen. */
+    /**
+     * Tone-ids waarvoor nog geen wiki-data is opgeslagen. Ook tonen
+     * zónder Wikipedia-titel tellen mee: die krijgen een rij zonder
+     * content zodat de thumbnail-ladder (statische iconen) kan landen.
+     */
     @Transactional(readOnly = true)
     public List<Long> findMissingToneIds() {
         return toneRepository.findAll().stream()
-                .filter(t -> t.getWikipediaPageTitle() != null)
                 .filter(t -> wikiDataRepository.findByToneId(t.getId()).isEmpty())
                 .map(Tone::getId)
                 .toList();
@@ -181,25 +184,36 @@ public class WikiService {
         String title = tone.getWikipediaPageTitle();
         JsonNode summary;
         String html;
-        try {
-            summary = fetchSummary(title);
-            html = fetchHtml(title);
-        } catch (NotFoundException e) {
-            // De pagina bestaat niet (meer) — bv. 'Lead synthesizer' is van
-            // Wikipedia verdwenen. Geen wiki-content dus, maar de
-            // thumbnail-ladder (MIMO-museumfoto's!) en de mimo_url moeten
-            // wél gewoon draaien; anders blijven juist de tonen waarvoor
-            // de fallback bestaat zonder afbeelding.
-            log.info("Wikipedia page '{}' not found; storing wiki_data without content for tone {}",
-                    title, tone.getId());
+        if (title == null || title.isBlank()) {
+            // Tonen zonder Wikipedia-mapping (de Do Re Mi-demotonen):
+            // niets te fetchen, maar de thumbnail-ladder (statische
+            // iconen) heeft wél een wiki_data-rij nodig om het pad in
+            // op te slaan.
             summary = com.fasterxml.jackson.databind.node.MissingNode.getInstance();
             html = null;
+        } else {
+            try {
+                summary = fetchSummary(title);
+                html = fetchHtml(title);
+            } catch (NotFoundException e) {
+                // De pagina bestaat niet (meer) — bv. 'Lead synthesizer' is van
+                // Wikipedia verdwenen. Geen wiki-content dus, maar de
+                // thumbnail-ladder (MIMO-museumfoto's!) en de mimo_url moeten
+                // wél gewoon draaien; anders blijven juist de tonen waarvoor
+                // de fallback bestaat zonder afbeelding.
+                log.info("Wikipedia page '{}' not found; storing wiki_data without content for tone {}",
+                        title, tone.getId());
+                summary = com.fasterxml.jackson.databind.node.MissingNode.getInstance();
+                html = null;
+            }
         }
         Optional<ThumbnailResolver.Resolved> thumbnail = thumbnailResolver.resolve(tone);
         Optional<HdThumbnailResolver.Resolved> hdThumbnail = hdThumbnailResolver.resolve(tone);
 
-        WikiData wikiData = existing != null ? existing : new WikiData(tone, title);
-        wikiData.setPageTitle(title);
+        // page_title is NOT NULL in het schema; titel-loze tonen krijgen "".
+        String storedTitle = title != null ? title : "";
+        WikiData wikiData = existing != null ? existing : new WikiData(tone, storedTitle);
+        wikiData.setPageTitle(storedTitle);
         wikiData.setSummary(summary.path("extract").asText(null));
         wikiData.setFullHtml(html);
         wikiData.setSourceUrl(summary.path("content_urls").path("desktop").path("page").asText(null));

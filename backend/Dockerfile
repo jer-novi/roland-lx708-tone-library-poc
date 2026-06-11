@@ -27,6 +27,9 @@ COPY src/main/resources/data/mimo_image_references.json /app/data/mimo_image_ref
 # Wordt ook via de classpath ingeladen door HsTreeService, dus dubbele
 # opslag; we laten 'm staan voor de toekomstige "export all data"-tools.
 COPY src/main/resources/data/horn_bostel_sachs_tree.json /app/data/horn_bostel_sachs_tree.json
+# Bundel de statische emoji-iconen (SVG, gegenereerd door
+# scripts/generate_static_icons.py) voor tonen zonder enige foto-bron.
+COPY src/main/resources/data/static-icons /app/data/static-icons
 # Render free tier has 512MB RAM; cap the JVM well below that
 ENV JAVA_TOOL_OPTIONS="-XX:MaxRAMPercentage=70"
 EXPOSE 8080

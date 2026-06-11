@@ -102,6 +102,11 @@ in exactly one ladder, selected by its `hdOnly()` flag.
 4. **MimoSdFallbackSource** (order=30) — the same MIMO museum photo the
    HD ladder uses, as a last resort for tones whose Wikipedia page has
    no image at all (or no longer exists — e.g. "Lead synthesizer").
+5. **StaticIconThumbnailSource** (order=40) — generated emoji SVG for
+   tones no photo source covers: GM2 sound effects ("Thunder",
+   "Explosion") and the Do Re Mi demo tones (matched on tone-name
+   prefix since they have no Wikipedia title). Icons + mapping come
+   from `scripts/generate_static_icons.py`.
 
 **HD ladder** (`HdThumbnailResolver`):
 
@@ -111,6 +116,8 @@ in exactly one ladder, selected by its `hdOnly()` flag.
 2. **WikiHdThumbnailSource** (order=10) — `originalimage` from the REST
    summary endpoint, rewritten to a 1920px Wikimedia thumb when the
    original is wider (avoids multi-MB original downloads).
+3. **StaticIconHdSource** (order=40) — the same emoji SVG as the SD
+   ladder; SVG is vector so hover-preview and lightbox stay sharp.
 
 Sources can lie about their resolution, so both resolvers measure the
 real pixel size after download (`ImageDimensionProbe`, header-only
