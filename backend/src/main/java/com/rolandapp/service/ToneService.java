@@ -26,15 +26,18 @@ public class ToneService {
     private final ToneCategoryRepository categoryRepository;
     private final WikiDataRepository wikiDataRepository;
     private final ThumbnailUrlBuilder thumbnailUrlBuilder;
+    private final HdThumbnailUrlBuilder hdThumbnailUrlBuilder;
 
     public ToneService(ToneRepository toneRepository,
                        ToneCategoryRepository categoryRepository,
                        WikiDataRepository wikiDataRepository,
-                       ThumbnailUrlBuilder thumbnailUrlBuilder) {
+                       ThumbnailUrlBuilder thumbnailUrlBuilder,
+                       HdThumbnailUrlBuilder hdThumbnailUrlBuilder) {
         this.toneRepository = toneRepository;
         this.categoryRepository = categoryRepository;
         this.wikiDataRepository = wikiDataRepository;
         this.thumbnailUrlBuilder = thumbnailUrlBuilder;
+        this.hdThumbnailUrlBuilder = hdThumbnailUrlBuilder;
     }
 
     /**
@@ -59,10 +62,11 @@ public class ToneService {
                 .map(t -> {
                     WikiDataRepository.WikiCardData card = cardData.get(t.getId());
                     String url = resolveThumbnailUrl(card);
+                    String hdUrl = resolveHdThumbnailUrl(card);
                     Integer width = card != null ? card.getThumbnailWidth() : null;
                     Integer height = card != null ? card.getThumbnailHeight() : null;
                     return ToneDto.from(t, url, width, height,
-                            card != null ? truncateAtWord(card.getSummary()) : null);
+                            card != null ? truncateAtWord(card.getSummary()) : null, hdUrl);
                 })
                 .toList();
     }
@@ -81,6 +85,15 @@ public class ToneService {
         return card.getThumbnailUrl();
     }
 
+    /** HD-tegenhanger van {@link #resolveThumbnailUrl}. */
+    String resolveHdThumbnailUrl(WikiDataRepository.WikiCardData card) {
+        if (card == null) return null;
+        if (card.getThumbnailHdPath() != null && !card.getThumbnailHdPath().isBlank()) {
+            return hdThumbnailUrlBuilder.urlFor(card.getThumbnailHdPath());
+        }
+        return null;
+    }
+
     static String truncateAtWord(String text) {
         if (text == null || text.length() <= SHORT_SUMMARY_LENGTH) {
             return text;
@@ -92,7 +105,7 @@ public class ToneService {
     public ToneDetailDto getDetail(Long id) {
         Tone tone = toneRepository.findById(id)
                 .orElseThrow(() -> new NotFoundException("Tone " + id + " not found"));
-        return ToneDetailDto.from(tone, thumbnailUrlBuilder);
+        return ToneDetailDto.from(tone, thumbnailUrlBuilder, hdThumbnailUrlBuilder);
     }
 
     public List<ToneCategoryDto> getCategories() {

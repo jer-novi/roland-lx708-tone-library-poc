@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T17:32:35.173714+00:00",
+  "generated_at": "2026-06-11T17:47:53.557814+00:00",
   "version": 1,
   "sources": {
     "hs_tree": "allthemusicalinstrumentsoftheworld.com/ClassificationofMusicalInstruments",
@@ -12,7 +12,7 @@
     "with_image_ref": 320,
     "with_site_image": 133,
     "with_wiki_page": 320,
-    "with_mimo_ref": 203,
+    "with_mimo_ref": 179,
     "hs_tree_total_instruments": 350
   },
   "hs_tree": {
@@ -6157,14 +6157,6 @@
           "site_name": "Cello",
           "source": "site-instruments"
         },
-        "mimo": {
-          "matched_via_wiki_title": "Cello",
-          "mimo_id": "OAI_RMAH_110983_NL",
-          "title": "Cello",
-          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110983_NL/cello",
-          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/JT0038_1.jpg",
-          "source": "mimo-international.com"
-        },
         "wikipedia": {
           "page_title": "Cello",
           "source": "wikipedia-summary"
@@ -8412,14 +8404,6 @@
           "site_name": "Santur",
           "source": "site-instruments"
         },
-        "mimo": {
-          "matched_via_wiki_title": "Santur",
-          "mimo_id": "OAI_RMAH_111609_NL",
-          "title": "Santur",
-          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_111609_NL/santur",
-          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1972.062_4.jpg",
-          "source": "mimo-international.com"
-        },
         "wikipedia": {
           "page_title": "Santur",
           "source": "wikipedia-summary"
@@ -10120,14 +10104,6 @@
           "site_name": "Cello",
           "source": "site-instruments"
         },
-        "mimo": {
-          "matched_via_wiki_title": "Cello",
-          "mimo_id": "OAI_RMAH_110983_NL",
-          "title": "Cello",
-          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110983_NL/cello",
-          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/JT0038_1.jpg",
-          "source": "mimo-international.com"
-        },
         "wikipedia": {
           "page_title": "Cello",
           "source": "wikipedia-summary"
@@ -10885,14 +10861,6 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1443578523.jpg",
           "site_name": "Tuba",
           "source": "site-instruments"
-        },
-        "mimo": {
-          "matched_via_wiki_title": "Tuba",
-          "mimo_id": "OAI_RMAH_120230_NL",
-          "title": "Tuba",
-          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_120230_NL/tuba",
-          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1278.jpg",
-          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Tuba",
@@ -11830,14 +11798,6 @@
         ]
       ],
       "image_refs": {
-        "mimo": {
-          "matched_via_wiki_title": "Lead synthesizer",
-          "mimo_id": "OAI_RMAH_110679_NL",
-          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
-          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
-          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
-          "source": "mimo-international.com"
-        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -11858,14 +11818,6 @@
         ]
       ],
       "image_refs": {
-        "mimo": {
-          "matched_via_wiki_title": "Lead synthesizer",
-          "mimo_id": "OAI_RMAH_110679_NL",
-          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
-          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
-          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
-          "source": "mimo-international.com"
-        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -11886,14 +11838,6 @@
         ]
       ],
       "image_refs": {
-        "mimo": {
-          "matched_via_wiki_title": "Lead synthesizer",
-          "mimo_id": "OAI_RMAH_110679_NL",
-          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
-          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
-          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
-          "source": "mimo-international.com"
-        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -11914,14 +11858,6 @@
         ]
       ],
       "image_refs": {
-        "mimo": {
-          "matched_via_wiki_title": "Lead synthesizer",
-          "mimo_id": "OAI_RMAH_110679_NL",
-          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
-          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
-          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
-          "source": "mimo-international.com"
-        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -11942,14 +11878,6 @@
         ]
       ],
       "image_refs": {
-        "mimo": {
-          "matched_via_wiki_title": "Lead synthesizer",
-          "mimo_id": "OAI_RMAH_110679_NL",
-          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
-          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
-          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
-          "source": "mimo-international.com"
-        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -11970,14 +11898,6 @@
         ]
       ],
       "image_refs": {
-        "mimo": {
-          "matched_via_wiki_title": "Lead synthesizer",
-          "mimo_id": "OAI_RMAH_110679_NL",
-          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
-          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
-          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
-          "source": "mimo-international.com"
-        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -11998,14 +11918,6 @@
         ]
       ],
       "image_refs": {
-        "mimo": {
-          "matched_via_wiki_title": "Lead synthesizer",
-          "mimo_id": "OAI_RMAH_110679_NL",
-          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
-          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
-          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
-          "source": "mimo-international.com"
-        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -12066,14 +11978,6 @@
         ]
       ],
       "image_refs": {
-        "mimo": {
-          "matched_via_wiki_title": "Lead synthesizer",
-          "mimo_id": "OAI_RMAH_110679_NL",
-          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
-          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
-          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
-          "source": "mimo-international.com"
-        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -12094,14 +11998,6 @@
         ]
       ],
       "image_refs": {
-        "mimo": {
-          "matched_via_wiki_title": "Lead synthesizer",
-          "mimo_id": "OAI_RMAH_110679_NL",
-          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
-          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
-          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
-          "source": "mimo-international.com"
-        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -12122,14 +12018,6 @@
         ]
       ],
       "image_refs": {
-        "mimo": {
-          "matched_via_wiki_title": "Lead synthesizer",
-          "mimo_id": "OAI_RMAH_110679_NL",
-          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
-          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
-          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
-          "source": "mimo-international.com"
-        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -12170,14 +12058,6 @@
         ]
       ],
       "image_refs": {
-        "mimo": {
-          "matched_via_wiki_title": "Lead synthesizer",
-          "mimo_id": "OAI_RMAH_110679_NL",
-          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
-          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
-          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
-          "source": "mimo-international.com"
-        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -12198,14 +12078,6 @@
         ]
       ],
       "image_refs": {
-        "mimo": {
-          "matched_via_wiki_title": "Lead synthesizer",
-          "mimo_id": "OAI_RMAH_110679_NL",
-          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
-          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
-          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
-          "source": "mimo-international.com"
-        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -12226,14 +12098,6 @@
         ]
       ],
       "image_refs": {
-        "mimo": {
-          "matched_via_wiki_title": "Lead synthesizer",
-          "mimo_id": "OAI_RMAH_110679_NL",
-          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
-          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
-          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
-          "source": "mimo-international.com"
-        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -12254,14 +12118,6 @@
         ]
       ],
       "image_refs": {
-        "mimo": {
-          "matched_via_wiki_title": "Lead synthesizer",
-          "mimo_id": "OAI_RMAH_110679_NL",
-          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
-          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
-          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
-          "source": "mimo-international.com"
-        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -12370,14 +12226,6 @@
         ]
       ],
       "image_refs": {
-        "mimo": {
-          "matched_via_wiki_title": "Lead synthesizer",
-          "mimo_id": "OAI_RMAH_110679_NL",
-          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
-          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
-          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
-          "source": "mimo-international.com"
-        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -12486,14 +12334,6 @@
         ]
       ],
       "image_refs": {
-        "mimo": {
-          "matched_via_wiki_title": "Lead synthesizer",
-          "mimo_id": "OAI_RMAH_110679_NL",
-          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
-          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
-          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
-          "source": "mimo-international.com"
-        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -12514,14 +12354,6 @@
         ]
       ],
       "image_refs": {
-        "mimo": {
-          "matched_via_wiki_title": "Lead synthesizer",
-          "mimo_id": "OAI_RMAH_110679_NL",
-          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
-          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
-          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
-          "source": "mimo-international.com"
-        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -12542,14 +12374,6 @@
         ]
       ],
       "image_refs": {
-        "mimo": {
-          "matched_via_wiki_title": "Lead synthesizer",
-          "mimo_id": "OAI_RMAH_110679_NL",
-          "title": "Korg MS-20 - Analogue, (semi-) modular, monophonic synthesizer (subtractive synthesis)",
-          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_110679_NL/korg-ms-20-analogue-semi-modular-monophonic-synthesizer-subtractive-synthesis",
-          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/1983.045-01_2.jpg",
-          "source": "mimo-international.com"
-        },
         "wikipedia": {
           "page_title": "Lead synthesizer",
           "source": "wikipedia-summary"
@@ -12829,14 +12653,6 @@
         ]
       ],
       "image_refs": {
-        "mimo": {
-          "matched_via_wiki_title": "Shamisen",
-          "mimo_id": "OAI_RMAH_112122_NL",
-          "title": "Shamisen",
-          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_112122_NL/shamisen",
-          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/3932_2.jpg",
-          "source": "mimo-international.com"
-        },
         "wikipedia": {
           "page_title": "Shamisen",
           "source": "wikipedia-summary"
@@ -12863,14 +12679,6 @@
           "url": "https://www.allthemusicalinstrumentsoftheworld.com/pics/ourbusinesses--thumb-1409629084.jpg",
           "site_name": "Koto",
           "source": "site-instruments"
-        },
-        "mimo": {
-          "matched_via_wiki_title": "Koto (instrument)",
-          "mimo_id": "OAI_RMAH_109030_NL",
-          "title": "Koto",
-          "detail_url": "https://mimo-international.com/MIMO/doc/IFD/OAI_RMAH_109030_NL/koto",
-          "image_url": "https://mimo-international.com/mimo/image.ashx?q=http://www.mimo-db.eu/media/KMKG-MRAH/IMAGE/0764.jpg",
-          "source": "mimo-international.com"
         },
         "wikipedia": {
           "page_title": "Koto (instrument)",

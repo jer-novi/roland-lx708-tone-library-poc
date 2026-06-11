@@ -10,6 +10,11 @@ export interface ToneDto {
   funFacts: string | null;
   thumbnailUrl: string | null;
   shortSummary: string | null;
+  /** HD-variant van de thumbnail (geserveerd onder /api/wiki-thumbs-hd/).
+   *  Alleen aanwezig als de HD-resolver een match vond — typisch bij
+   *  een MIMO museum-foto of een 1600px+ Wikipedia-image. Null betekent
+   *  niet "geen HD beschikbaar" maar liever "val terug op thumbnailUrl". */
+  thumbnailHdUrl?: string | null;
   /** Bank Select MSB (CC0) uit de officiële MIDI Implementation */
   midiBankMsb: number | null;
   /** Bank Select LSB (CC32) */
@@ -35,6 +40,11 @@ export interface WikiDataDto {
   sourceUrl: string | null;
   thumbnailUrl: string | null;
   lastFetchedAt: string | null;
+  /** HD-variant van de detail-page thumbnail, geserveerd onder
+   *  /api/wiki-thumbs-hd/. Null als de HD-resolver geen match vond. */
+  thumbnailHdUrl: string | null;
+  /** Bron van de HD-image, bv. "mimo-hd", "site-instruments-hd", "wiki-hd". */
+  thumbnailHdSource: string | null;
 }
 
 export interface AudioSampleDto {

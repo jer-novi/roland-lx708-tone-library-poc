@@ -33,8 +33,13 @@ services:
       # een herstart. De wiki-warmup slaat hier ~470 bestanden op van ~50kB
       # elk, dus totaal ~25MB — verwaarloosbaar.
       THUMBNAILS_DIR: /var/data/wiki-thumbs
+      # HD-opslag: tweede volume voor 1600px+ varianten, geserveerd
+      # onder /api/wiki-thumbs-hd/. Geschat volume: ~30MB voor 470
+      # bestanden (groter dan SD door hogere resolutie).
+      HD_THUMBNAILS_DIR: /var/data/wiki-thumbs-hd
     volumes:
       - wiki_thumbs:/var/data/wiki-thumbs
+      - wiki_thumbs_hd:/var/data/wiki-thumbs-hd
     depends_on:
       db:
         condition: service_healthy
@@ -58,3 +63,4 @@ volumes:
   pgdata:
   caddy_data:
   wiki_thumbs:
+  wiki_thumbs_hd:

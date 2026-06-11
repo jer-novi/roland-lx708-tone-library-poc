@@ -43,6 +43,23 @@ public class WikiData {
     @Column(name = "thumbnail_height")
     private Integer thumbnailHeight;
 
+    /** HD-variant: relatief pad onder de HD-storage directory. Null als niet
+     *  opgeslagen of niet beschikbaar via een HD-bron. */
+    @Column(name = "thumbnail_hd_path", length = 512)
+    private String thumbnailHdPath;
+
+    /** Originele breedte van de HD-image (typisch 1600+). */
+    @Column(name = "thumbnail_hd_width")
+    private Integer thumbnailHdWidth;
+
+    /** Originele hoogte van de HD-image. */
+    @Column(name = "thumbnail_hd_height")
+    private Integer thumbnailHdHeight;
+
+    /** Welke bron de HD-image heeft opgeleverd, bv. {@code mimo}, {@code local-hd}, {@code wiki-hd}. */
+    @Column(name = "thumbnail_hd_source", length = 32)
+    private String thumbnailHdSource;
+
     /**
      * Welke "source" de thumbnail heeft opgeleverd. Bijv. {@code wiki-summary},
      * {@code wiki-pageimages}, of straks {@code flickr}, {@code cms-strapi},
@@ -140,6 +157,38 @@ public class WikiData {
 
     public void setThumbnailSource(String thumbnailSource) {
         this.thumbnailSource = thumbnailSource;
+    }
+
+    public String getThumbnailHdPath() {
+        return thumbnailHdPath;
+    }
+
+    public void setThumbnailHdPath(String thumbnailHdPath) {
+        this.thumbnailHdPath = thumbnailHdPath;
+    }
+
+    public Integer getThumbnailHdWidth() {
+        return thumbnailHdWidth;
+    }
+
+    public void setThumbnailHdWidth(Integer thumbnailHdWidth) {
+        this.thumbnailHdWidth = thumbnailHdWidth;
+    }
+
+    public Integer getThumbnailHdHeight() {
+        return thumbnailHdHeight;
+    }
+
+    public void setThumbnailHdHeight(Integer thumbnailHdHeight) {
+        this.thumbnailHdHeight = thumbnailHdHeight;
+    }
+
+    public String getThumbnailHdSource() {
+        return thumbnailHdSource;
+    }
+
+    public void setThumbnailHdSource(String thumbnailHdSource) {
+        this.thumbnailHdSource = thumbnailHdSource;
     }
 
     public Instant getLastFetchedAt() {

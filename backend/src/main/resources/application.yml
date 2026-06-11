@@ -6,7 +6,7 @@ spring:
     # Production/server example:
     # DB_URL=jdbc:postgresql://<hostname>:5432/pianosounds
     # Docker Compose uses: jdbc:postgresql://db:5432/pianosounds
-    url: ${DB_URL:jdbc:postgresql://localhost:5432/pianosounds}
+    url: ${DB_URL:jdbc:postgresql://localhost:55432/pianosounds_dev}
     username: ${DB_USERNAME:pianosounds_user}
     password: ${DB_PASSWORD:}
     hikari:
@@ -71,6 +71,15 @@ app:
     # worden in de repo gebundeld of gemount als volume, en hebben voorrang
     # op de Wikipedia-lookup. Per tone één bestand: "{category}__{tn}.jpg".
     local-images-dir: ${LOCAL_THUMBNAILS_DIR:./data/instrument-images}
+    # MIMO fallback mapping (gegenereerd door scripts/scrape_mimo.py).
+    # Keyed by wikipediaPageTitle; value is de og:image URL van het
+    # museum-object plus de detail-URL voor een "Bekijk op MIMO"-knop.
+    mimo-refs: ${MIMO_REFS_FILE:./data/mimo_image_references.json}
+    # HD-storage: tweede directory met hogere-resolutie varianten,
+    # geserveerd onder /api/wiki-thumbs-hd/. Maximale bestandsgrootte
+    # is hoger dan SD (12MB vs 5MB) omdat HD-JPEGs 1600-2560px kunnen zijn.
+    hd-storage-dir: ${HD_THUMBNAILS_DIR:./data/wiki-thumbs-hd}
+    hd-url-prefix: ${HD_THUMBNAILS_URL_PREFIX:/api/wiki-thumbs-hd/}
 
 logging:
   level:

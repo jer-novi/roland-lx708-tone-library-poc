@@ -27,6 +27,7 @@ public class ThumbnailResolver {
 
     public ThumbnailResolver(List<ThumbnailSource> sources, ThumbnailStorage storage) {
         this.sources = sources.stream()
+                .filter(s -> !s.hdOnly())
                 .sorted(Comparator.comparingInt(ThumbnailSource::order))
                 .toList();
         this.storage = storage;

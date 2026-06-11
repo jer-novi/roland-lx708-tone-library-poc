@@ -8,6 +8,7 @@ import com.rolandapp.model.Tone;
 import com.rolandapp.model.WikiData;
 import com.rolandapp.repository.ToneRepository;
 import com.rolandapp.repository.WikiDataRepository;
+import com.rolandapp.service.thumbnail.HdThumbnailResolver;
 import com.rolandapp.service.thumbnail.ThumbnailResolver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,11 +31,12 @@ import java.util.Optional;
  * in the wiki_data table. Content older than {@link #STALE_AFTER_DAYS} days is
  * refreshed on the next request; a manual refresh can be forced per tone.
  *
- * <p>Thumbnail resolution is delegated to {@link ThumbnailResolver}, which
+ * <p>SD-thumbnail resolution is delegated to {@link ThumbnailResolver}, which
  * tries each registered {@code ThumbnailSource} in order and downloads a
- * copy of the best candidate to local disk. The resulting relative path
- * is stored in {@code wiki_data.thumbnail_path} and served by
- * {@code ThumbnailController}.
+ * copy of the best candidate to local disk. HD-thumbnail resolution goes
+ * through {@link HdThumbnailResolver}. The resulting relative paths are
+ * stored in {@code wiki_data.thumbnail_path} / {@code thumbnail_hd_path}
+ * and served by {@code ThumbnailController} / {@code HdThumbnailController}.
  */
 @Service
 public class WikiService {
@@ -47,7 +49,9 @@ public class WikiService {
     private final WikiDataRepository wikiDataRepository;
     private final TransactionTemplate transactionTemplate;
     private final ThumbnailResolver thumbnailResolver;
+    private final HdThumbnailResolver hdThumbnailResolver;
     private final ThumbnailUrlBuilder thumbnailUrlBuilder;
+    private final HdThumbnailUrlBuilder hdThumbnailUrlBuilder;
     private final long bulkDelayMs;
 
     public WikiService(WebClient wikipediaClient,
@@ -55,14 +59,18 @@ public class WikiService {
                        WikiDataRepository wikiDataRepository,
                        TransactionTemplate transactionTemplate,
                        ThumbnailResolver thumbnailResolver,
+                       HdThumbnailResolver hdThumbnailResolver,
                        ThumbnailUrlBuilder thumbnailUrlBuilder,
+                       HdThumbnailUrlBuilder hdThumbnailUrlBuilder,
                        @Value("${app.wikipedia.bulk-delay-ms:250}") long bulkDelayMs) {
         this.wikipediaClient = wikipediaClient;
         this.toneRepository = toneRepository;
         this.wikiDataRepository = wikiDataRepository;
         this.transactionTemplate = transactionTemplate;
         this.thumbnailResolver = thumbnailResolver;
+        this.hdThumbnailResolver = hdThumbnailResolver;
         this.thumbnailUrlBuilder = thumbnailUrlBuilder;
+        this.hdThumbnailUrlBuilder = hdThumbnailUrlBuilder;
         this.bulkDelayMs = bulkDelayMs;
     }
 
@@ -83,7 +91,7 @@ public class WikiService {
         if (forceRefresh || stale) {
             wikiData = fetchAndStore(tone, wikiData);
         }
-        return WikiDataDto.from(wikiData, thumbnailUrlBuilder);
+        return WikiDataDto.from(wikiData, thumbnailUrlBuilder, hdThumbnailUrlBuilder);
     }
 
     /**
@@ -171,6 +179,7 @@ public class WikiService {
         JsonNode summary = fetchSummary(title);
         String html = fetchHtml(title);
         Optional<ThumbnailResolver.Resolved> thumbnail = thumbnailResolver.resolve(tone);
+        Optional<HdThumbnailResolver.Resolved> hdThumbnail = hdThumbnailResolver.resolve(tone);
 
         WikiData wikiData = existing != null ? existing : new WikiData(tone, title);
         wikiData.setPageTitle(title);
@@ -190,6 +199,18 @@ public class WikiService {
             wikiData.setThumbnailSource(null);
             wikiData.setThumbnailWidth(null);
             wikiData.setThumbnailHeight(null);
+        }
+        if (hdThumbnail.isPresent()) {
+            HdThumbnailResolver.Resolved h = hdThumbnail.get();
+            wikiData.setThumbnailHdPath(h.relativePath());
+            wikiData.setThumbnailHdSource(h.sourceTag());
+            wikiData.setThumbnailHdWidth(h.width());
+            wikiData.setThumbnailHdHeight(h.height() > 0 ? h.height() : null);
+        } else {
+            wikiData.setThumbnailHdPath(null);
+            wikiData.setThumbnailHdSource(null);
+            wikiData.setThumbnailHdWidth(null);
+            wikiData.setThumbnailHdHeight(null);
         }
         wikiData.setLastFetchedAt(Instant.now());
         return wikiDataRepository.save(wikiData);

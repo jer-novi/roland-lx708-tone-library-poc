@@ -67,7 +67,7 @@ public class LocalFileThumbnailSource implements ThumbnailSource {
 
     @Override
     public int order() {
-        return 5;
+        return 3;
     }
 
     @Override
@@ -84,6 +84,14 @@ public class LocalFileThumbnailSource implements ThumbnailSource {
         int height = dim != null ? dim.height() : 0;
         String fileUrl = file.toUri().toString();
         return Optional.of(new Candidate(fileUrl, "site-instruments", width, height));
+    }
+
+    @Override
+    public boolean hdOnly() {
+        // De lokale site-images zijn originele museum-foto's (800-1200px+);
+        // dezelfde file kan dus ook als HD dienen. De HdThumbnailResolver
+        // gebruikt dezelfde lookup() maar slaat op in de HD-storage.
+        return true;
     }
 
     private record DimensionInfo(int width, int height) {}
