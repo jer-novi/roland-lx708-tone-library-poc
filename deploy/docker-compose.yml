@@ -30,8 +30,11 @@ services:
     image: caddy:2-alpine
     restart: unless-stopped
     ports:
-      - "80:80"
-      - "443:443"
+      # Bind aan een specifiek host-IP via BIND_IP in deploy/.env wanneer een
+      # andere dienst (bv. mission control) al op 0.0.0.0:443 luistert.
+      # Leeg laten = 0.0.0.0 (alle interfaces).
+      - "${BIND_IP:-0.0.0.0}:80:80"
+      - "${BIND_IP:-0.0.0.0}:443:443"
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
       - caddy_data:/data
