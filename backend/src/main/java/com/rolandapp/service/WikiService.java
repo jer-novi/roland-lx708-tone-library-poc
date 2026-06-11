@@ -8,6 +8,7 @@ import com.rolandapp.model.Tone;
 import com.rolandapp.model.WikiData;
 import com.rolandapp.repository.ToneRepository;
 import com.rolandapp.repository.WikiDataRepository;
+import com.rolandapp.service.thumbnail.ThumbnailResolver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -22,11 +23,18 @@ import java.time.Duration;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Fetches instrument background info from the Wikipedia REST API and caches it
  * in the wiki_data table. Content older than {@link #STALE_AFTER_DAYS} days is
  * refreshed on the next request; a manual refresh can be forced per tone.
+ *
+ * <p>Thumbnail resolution is delegated to {@link ThumbnailResolver}, which
+ * tries each registered {@code ThumbnailSource} in order and downloads a
+ * copy of the best candidate to local disk. The resulting relative path
+ * is stored in {@code wiki_data.thumbnail_path} and served by
+ * {@code ThumbnailController}.
  */
 @Service
 public class WikiService {
@@ -38,17 +46,23 @@ public class WikiService {
     private final ToneRepository toneRepository;
     private final WikiDataRepository wikiDataRepository;
     private final TransactionTemplate transactionTemplate;
+    private final ThumbnailResolver thumbnailResolver;
+    private final ThumbnailUrlBuilder thumbnailUrlBuilder;
     private final long bulkDelayMs;
 
     public WikiService(WebClient wikipediaClient,
                        ToneRepository toneRepository,
                        WikiDataRepository wikiDataRepository,
                        TransactionTemplate transactionTemplate,
+                       ThumbnailResolver thumbnailResolver,
+                       ThumbnailUrlBuilder thumbnailUrlBuilder,
                        @Value("${app.wikipedia.bulk-delay-ms:250}") long bulkDelayMs) {
         this.wikipediaClient = wikipediaClient;
         this.toneRepository = toneRepository;
         this.wikiDataRepository = wikiDataRepository;
         this.transactionTemplate = transactionTemplate;
+        this.thumbnailResolver = thumbnailResolver;
+        this.thumbnailUrlBuilder = thumbnailUrlBuilder;
         this.bulkDelayMs = bulkDelayMs;
     }
 
@@ -69,7 +83,7 @@ public class WikiService {
         if (forceRefresh || stale) {
             wikiData = fetchAndStore(tone, wikiData);
         }
-        return WikiDataDto.from(wikiData);
+        return WikiDataDto.from(wikiData, thumbnailUrlBuilder);
     }
 
     /**
@@ -108,6 +122,40 @@ public class WikiService {
         return refreshed;
     }
 
+    /**
+     * Voor élke tone met een Wikipedia-titel óf een lokale image: draai de
+     * thumbnail-resolver opnieuw en sla het resultaat op. Handig na een
+     * schema-migratie of wanneer er een nieuwe {@link com.rolandapp.service.thumbnail.ThumbnailSource}
+     * bij komt (bv. de lokale site-images).
+     */
+    public int refreshAllThumbnails() {
+        List<Tone> all = toneRepository.findAll();
+        int refreshed = 0;
+        for (Tone tone : all) {
+            try {
+                // Vernieuw binnen een eigen transaction, anders is
+                // tone.getCategory() (LAZY) onbereikbaar zodra de outer
+                // request-transactie gesloten is.
+                transactionTemplate.execute(status -> {
+                    Tone attached = toneRepository.findById(tone.getId()).orElse(null);
+                    if (attached == null) return null;
+                    WikiData existing = wikiDataRepository.findByToneId(attached.getId()).orElse(null);
+                    fetchAndStore(attached, existing);
+                    return null;
+                });
+                refreshed++;
+                Thread.sleep(bulkDelayMs);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                break;
+            } catch (Exception e) {
+                log.warn("Skipping thumbnail refresh for tone id {}: {}", tone.getId(), e.getMessage());
+            }
+        }
+        log.info("Bulk thumbnail refresh done: {}/{} tones refreshed", refreshed, all.size());
+        return refreshed;
+    }
+
     /** Tone-ids met een Wikipedia-mapping waarvoor nog geen wiki-data is opgeslagen. */
     @Transactional(readOnly = true)
     public List<Long> findMissingToneIds() {
@@ -122,13 +170,27 @@ public class WikiService {
         String title = tone.getWikipediaPageTitle();
         JsonNode summary = fetchSummary(title);
         String html = fetchHtml(title);
+        Optional<ThumbnailResolver.Resolved> thumbnail = thumbnailResolver.resolve(tone);
 
         WikiData wikiData = existing != null ? existing : new WikiData(tone, title);
         wikiData.setPageTitle(title);
         wikiData.setSummary(summary.path("extract").asText(null));
         wikiData.setFullHtml(html);
         wikiData.setSourceUrl(summary.path("content_urls").path("desktop").path("page").asText(null));
-        wikiData.setThumbnailUrl(summary.path("thumbnail").path("source").asText(null));
+        if (thumbnail.isPresent()) {
+            ThumbnailResolver.Resolved t = thumbnail.get();
+            wikiData.setThumbnailPath(t.relativePath());
+            wikiData.setThumbnailSource(t.sourceTag());
+            wikiData.setThumbnailWidth(t.width());
+            wikiData.setThumbnailHeight(t.height() > 0 ? t.height() : null);
+            // Behoud de oude externe URL als reference (niet meer door frontend gebruikt).
+            wikiData.setThumbnailUrl(null);
+        } else {
+            wikiData.setThumbnailPath(null);
+            wikiData.setThumbnailSource(null);
+            wikiData.setThumbnailWidth(null);
+            wikiData.setThumbnailHeight(null);
+        }
         wikiData.setLastFetchedAt(Instant.now());
         return wikiDataRepository.save(wikiData);
     }

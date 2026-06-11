@@ -13,6 +13,8 @@ public record ToneDto(
         String combinationSuggestions,
         String funFacts,
         String thumbnailUrl,
+        Integer thumbnailWidth,
+        Integer thumbnailHeight,
         String shortSummary,
         Integer midiBankMsb,
         Integer midiBankLsb,
@@ -20,10 +22,14 @@ public record ToneDto(
         String tags
 ) {
     public static ToneDto from(Tone tone) {
-        return from(tone, null, null);
+        return from(tone, null, null, null, null);
     }
 
     public static ToneDto from(Tone tone, String thumbnailUrl, String shortSummary) {
+        return from(tone, thumbnailUrl, null, null, shortSummary);
+    }
+
+    public static ToneDto from(Tone tone, String thumbnailUrl, Integer thumbnailWidth, Integer thumbnailHeight, String shortSummary) {
         return new ToneDto(
                 tone.getId(),
                 tone.getToneNumber(),
@@ -35,6 +41,8 @@ public record ToneDto(
                 tone.getCombinationSuggestions(),
                 tone.getFunFacts(),
                 thumbnailUrl,
+                thumbnailWidth,
+                thumbnailHeight,
                 shortSummary,
                 tone.getMidiBankMsb(),
                 tone.getMidiBankLsb(),

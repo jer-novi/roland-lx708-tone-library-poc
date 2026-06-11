@@ -31,6 +31,26 @@ public class WikiData {
     @Column(name = "thumbnail_url", length = 512)
     private String thumbnailUrl;
 
+    /** Relatief pad onder de thumbnail storage directory (zie {@code app.thumbnails.storage-dir}). */
+    @Column(name = "thumbnail_path", length = 512)
+    private String thumbnailPath;
+
+    /** Originele breedte in pixels (van de Wikimedia response). Null voor oudere rijen. */
+    @Column(name = "thumbnail_width")
+    private Integer thumbnailWidth;
+
+    /** Originele hoogte in pixels. */
+    @Column(name = "thumbnail_height")
+    private Integer thumbnailHeight;
+
+    /**
+     * Welke "source" de thumbnail heeft opgeleverd. Bijv. {@code wiki-summary},
+     * {@code wiki-pageimages}, of straks {@code flickr}, {@code cms-strapi},
+     * {@code ai-generated}, {@code static-fallback}.
+     */
+    @Column(name = "thumbnail_source", length = 32)
+    private String thumbnailSource;
+
     @Column(name = "last_fetched_at")
     private Instant lastFetchedAt;
 
@@ -88,6 +108,38 @@ public class WikiData {
 
     public void setThumbnailUrl(String thumbnailUrl) {
         this.thumbnailUrl = thumbnailUrl;
+    }
+
+    public String getThumbnailPath() {
+        return thumbnailPath;
+    }
+
+    public void setThumbnailPath(String thumbnailPath) {
+        this.thumbnailPath = thumbnailPath;
+    }
+
+    public Integer getThumbnailWidth() {
+        return thumbnailWidth;
+    }
+
+    public void setThumbnailWidth(Integer thumbnailWidth) {
+        this.thumbnailWidth = thumbnailWidth;
+    }
+
+    public Integer getThumbnailHeight() {
+        return thumbnailHeight;
+    }
+
+    public void setThumbnailHeight(Integer thumbnailHeight) {
+        this.thumbnailHeight = thumbnailHeight;
+    }
+
+    public String getThumbnailSource() {
+        return thumbnailSource;
+    }
+
+    public void setThumbnailSource(String thumbnailSource) {
+        this.thumbnailSource = thumbnailSource;
     }
 
     public Instant getLastFetchedAt() {

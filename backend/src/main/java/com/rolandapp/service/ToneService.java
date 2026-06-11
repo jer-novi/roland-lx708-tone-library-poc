@@ -25,13 +25,16 @@ public class ToneService {
     private final ToneRepository toneRepository;
     private final ToneCategoryRepository categoryRepository;
     private final WikiDataRepository wikiDataRepository;
+    private final ThumbnailUrlBuilder thumbnailUrlBuilder;
 
     public ToneService(ToneRepository toneRepository,
                        ToneCategoryRepository categoryRepository,
-                       WikiDataRepository wikiDataRepository) {
+                       WikiDataRepository wikiDataRepository,
+                       ThumbnailUrlBuilder thumbnailUrlBuilder) {
         this.toneRepository = toneRepository;
         this.categoryRepository = categoryRepository;
         this.wikiDataRepository = wikiDataRepository;
+        this.thumbnailUrlBuilder = thumbnailUrlBuilder;
     }
 
     /**
@@ -55,11 +58,27 @@ public class ToneService {
                 .filter(t -> q == null || t.getName().toLowerCase(Locale.ROOT).contains(q))
                 .map(t -> {
                     WikiDataRepository.WikiCardData card = cardData.get(t.getId());
-                    return ToneDto.from(t,
-                            card != null ? card.getThumbnailUrl() : null,
+                    String url = resolveThumbnailUrl(card);
+                    Integer width = card != null ? card.getThumbnailWidth() : null;
+                    Integer height = card != null ? card.getThumbnailHeight() : null;
+                    return ToneDto.from(t, url, width, height,
                             card != null ? truncateAtWord(card.getSummary()) : null);
                 })
                 .toList();
+    }
+
+    /**
+     * Kiest de beste thumbnail-URL: voorkeur voor lokaal opgeslagen
+     * {@code thumbnail_path} (eigen kopie, scherp op alle formaten), valt
+     * terug op de oude {@code thumbnail_url} voor rijen die nog via de
+     * vorige pipeline zijn opgeslagen.
+     */
+    String resolveThumbnailUrl(WikiDataRepository.WikiCardData card) {
+        if (card == null) return null;
+        if (card.getThumbnailPath() != null && !card.getThumbnailPath().isBlank()) {
+            return thumbnailUrlBuilder.urlFor(card.getThumbnailPath());
+        }
+        return card.getThumbnailUrl();
     }
 
     static String truncateAtWord(String text) {
@@ -73,7 +92,7 @@ public class ToneService {
     public ToneDetailDto getDetail(Long id) {
         Tone tone = toneRepository.findById(id)
                 .orElseThrow(() -> new NotFoundException("Tone " + id + " not found"));
-        return ToneDetailDto.from(tone);
+        return ToneDetailDto.from(tone, thumbnailUrlBuilder);
     }
 
     public List<ToneCategoryDto> getCategories() {
