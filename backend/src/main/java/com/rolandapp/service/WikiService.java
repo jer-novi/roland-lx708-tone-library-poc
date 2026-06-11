@@ -13,6 +13,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.support.TransactionTemplate;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.reactive.function.client.WebClientResponseException;
 import reactor.util.retry.Retry;
@@ -36,15 +37,18 @@ public class WikiService {
     private final WebClient wikipediaClient;
     private final ToneRepository toneRepository;
     private final WikiDataRepository wikiDataRepository;
+    private final TransactionTemplate transactionTemplate;
     private final long bulkDelayMs;
 
     public WikiService(WebClient wikipediaClient,
                        ToneRepository toneRepository,
                        WikiDataRepository wikiDataRepository,
+                       TransactionTemplate transactionTemplate,
                        @Value("${app.wikipedia.bulk-delay-ms:250}") long bulkDelayMs) {
         this.wikipediaClient = wikipediaClient;
         this.toneRepository = toneRepository;
         this.wikiDataRepository = wikiDataRepository;
+        this.transactionTemplate = transactionTemplate;
         this.bulkDelayMs = bulkDelayMs;
     }
 
@@ -71,30 +75,47 @@ public class WikiService {
     /**
      * Fetches wiki data for every tone that has a page title but no stored
      * content yet. Sequential with a small delay so we stay well within
-     * Wikipedia's rate limits. Returns the number of tones refreshed.
+     * Wikipedia's rate limits; each tone commits in its own transaction so an
+     * interrupted run keeps everything fetched so far. Returns the number of
+     * tones refreshed.
      */
-    @Transactional
     public int refreshMissing() {
-        List<Tone> tones = toneRepository.findAll().stream()
-                .filter(t -> t.getWikipediaPageTitle() != null)
-                .filter(t -> wikiDataRepository.findByToneId(t.getId()).isEmpty())
-                .toList();
+        List<Long> missingIds = findMissingToneIds();
         int refreshed = 0;
-        for (Tone tone : tones) {
+        for (Long toneId : missingIds) {
             try {
-                fetchAndStore(tone, null);
-                refreshed++;
+                Boolean stored = transactionTemplate.execute(status -> {
+                    Tone tone = toneRepository.findById(toneId).orElse(null);
+                    if (tone == null || tone.getWikipediaPageTitle() == null) {
+                        return false;
+                    }
+                    WikiData existing = wikiDataRepository.findByToneId(toneId).orElse(null);
+                    fetchAndStore(tone, existing);
+                    return true;
+                });
+                if (Boolean.TRUE.equals(stored)) {
+                    refreshed++;
+                }
                 Thread.sleep(bulkDelayMs);
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
                 break;
             } catch (Exception e) {
-                log.warn("Skipping wiki refresh for tone '{}' ({}): {}",
-                        tone.getName(), tone.getWikipediaPageTitle(), e.getMessage());
+                log.warn("Skipping wiki refresh for tone id {}: {}", toneId, e.getMessage());
             }
         }
-        log.info("Bulk wiki refresh done: {}/{} tones refreshed", refreshed, tones.size());
+        log.info("Bulk wiki refresh done: {}/{} tones refreshed", refreshed, missingIds.size());
         return refreshed;
+    }
+
+    /** Tone-ids met een Wikipedia-mapping waarvoor nog geen wiki-data is opgeslagen. */
+    @Transactional(readOnly = true)
+    public List<Long> findMissingToneIds() {
+        return toneRepository.findAll().stream()
+                .filter(t -> t.getWikipediaPageTitle() != null)
+                .filter(t -> wikiDataRepository.findByToneId(t.getId()).isEmpty())
+                .map(Tone::getId)
+                .toList();
     }
 
     private WikiData fetchAndStore(Tone tone, WikiData existing) {

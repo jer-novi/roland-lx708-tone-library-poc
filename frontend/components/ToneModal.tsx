@@ -3,9 +3,10 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import DOMPurify from "dompurify";
 import { fetchWiki } from "@/lib/api";
+import type { ToneLibrary } from "@/lib/api";
 import type { ToneDto } from "@/lib/types";
 import { collectionsFor, parseTags } from "@/lib/collections";
 import { PlayToneButton } from "@/components/PlayToneButton";
@@ -17,8 +18,18 @@ interface Props {
   midiAvailable: boolean;
 }
 
+/** Zelfde afkapping als de backend-lijst-API: ~220 tekens op woordgrens */
+function toShortSummary(summary: string | null): string | null {
+  if (!summary) return null;
+  if (summary.length <= 220) return summary;
+  const cut = summary.slice(0, 220);
+  const lastSpace = cut.lastIndexOf(" ");
+  return `${cut.slice(0, lastSpace > 0 ? lastSpace : 220)}…`;
+}
+
 export function ToneModal({ tone, onClose, onPlay, midiAvailable }: Props) {
   const [showFullArticle, setShowFullArticle] = useState(false);
+  const queryClient = useQueryClient();
 
   // Fallback entries (negative id) have no backend record to fetch wiki for
   const wikiEnabled = tone.id > 0 && tone.wikipediaPageTitle !== null;
@@ -29,6 +40,29 @@ export function ToneModal({ tone, onClose, onPlay, midiAvailable }: Props) {
     enabled: wikiEnabled,
     staleTime: 24 * 60 * 60 * 1000,
   });
+
+  // Het opvragen van wiki-data vult ook de backend-cache. Werk de kaart in de
+  // lijst direct bij, zodat thumbnail + samenvatting verschijnen zonder reload.
+  useEffect(() => {
+    if (!wiki) return;
+    queryClient.setQueryData<ToneLibrary>(["library"], (old) => {
+      if (!old) return old;
+      const current = old.tones.find((t) => t.id === tone.id);
+      if (!current || (current.thumbnailUrl && current.shortSummary)) return old;
+      return {
+        ...old,
+        tones: old.tones.map((t) =>
+          t.id === tone.id
+            ? {
+                ...t,
+                thumbnailUrl: t.thumbnailUrl ?? wiki.thumbnailUrl,
+                shortSummary: t.shortSummary ?? toShortSummary(wiki.summary),
+              }
+            : t
+        ),
+      };
+    });
+  }, [wiki, tone.id, queryClient]);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
