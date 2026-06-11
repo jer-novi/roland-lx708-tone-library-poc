@@ -73,21 +73,26 @@ export interface ToneLibrary {
   offline: boolean;
 }
 
+/**
+ * Fetches the live library. Throws on any network/backend failure so the
+ * caller (React Query) can retry and self-heal; use {@link offlineLibrary}
+ * for the bundled-seed fallback when retries are exhausted.
+ */
 export async function fetchToneLibrary(): Promise<ToneLibrary> {
-  try {
-    const [categories, tones] = await Promise.all([
-      get<ToneCategoryDto[]>("/api/categories"),
-      get<ToneDto[]>("/api/tones"),
-    ]);
-    return { categories, tones, offline: false };
-  } catch (e) {
-    console.warn("Backend unreachable, using bundled seed data", e);
-    return {
-      categories: fallbackCategories(),
-      tones: fallbackTones(),
-      offline: true,
-    };
-  }
+  const [categories, tones] = await Promise.all([
+    get<ToneCategoryDto[]>("/api/categories"),
+    get<ToneDto[]>("/api/tones"),
+  ]);
+  return { categories, tones, offline: false };
+}
+
+/** Bundled-seed fallback so the full tone list still renders when offline. */
+export function offlineLibrary(): ToneLibrary {
+  return {
+    categories: fallbackCategories(),
+    tones: fallbackTones(),
+    offline: true,
+  };
 }
 
 export async function fetchToneDetail(id: number): Promise<ToneDetailDto> {
