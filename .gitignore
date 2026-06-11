@@ -1,0 +1,9 @@
+# Secrets — nooit committen
+.env
+.env.*
+!.env.example
+deploy/.env
+
+# OS / editor
+.DS_Store
+*.swp
