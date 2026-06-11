@@ -59,6 +59,18 @@ app:
     # Vul ontbrekende wiki-data (incl. kaart-thumbnails) automatisch op een
     # achtergrondthread bij het opstarten
     warmup-enabled: ${WIKI_WARMUP_ENABLED:true}
+  thumbnails:
+    # Lokale opslag voor gedownloade thumbnails (per tone één bestand).
+    # In Docker wordt dit volume-gemount zodat bestanden bewaard blijven
+    # na een herstart van de api-container.
+    storage-dir: ${THUMBNAILS_DIR:./data/wiki-thumbs}
+    # URL-prefix waaronder de ThumbnailController de bestanden serveert.
+    # Past dit aan wanneer we later naar een dedicated image host gaan.
+    url-prefix: ${THUMBNAILS_URL_PREFIX:/api/wiki-thumbs/}
+    # Voor lokale images (van allthemusicalinstrumentsoftheworld.com) — deze
+    # worden in de repo gebundeld of gemount als volume, en hebben voorrang
+    # op de Wikipedia-lookup. Per tone één bestand: "{category}__{tn}.jpg".
+    local-images-dir: ${LOCAL_THUMBNAILS_DIR:./data/instrument-images}
 
 logging:
   level:
