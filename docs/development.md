@@ -132,6 +132,15 @@ return HTTP 400 unless an old render happens to be cached — see
 Stale or 404 URLs are filtered out at write time so the frontend never
 sees a broken image link.
 
+### Image-UX pattern (frontend)
+
+Cards and the detail-modal share one pattern via `ToneThumbnail.tsx`:
+a small SD thumbnail (48/64px), a 4× HD preview popup on hover, and —
+in the modal header — a click opens a fullscreen lightbox (click/Esc
+closes it). The modal body intentionally contains no full-size image;
+the "Bekijk op Wikipedia/MIMO" links sit directly below the header.
+The modal passes the (fresher) `wiki.thumbnailHdUrl` as HD override.
+
 ---
 
 ## Testing the full stack locally

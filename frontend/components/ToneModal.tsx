@@ -11,6 +11,7 @@ import { collectionsFor, parseTags } from "@/lib/collections";
 import { PlayToneButton } from "@/components/PlayToneButton";
 import { HornbostelSachsTree } from "@/components/HornbostelSachsTree";
 import { HornbostelSachsTreeFull } from "@/components/HornbostelSachsTreeFull";
+import { ToneThumbnail } from "@/components/ToneThumbnail";
 import { API_URL } from "@/lib/api";
 
 interface Props {
@@ -80,6 +81,7 @@ function ImageWithFallback({
 export function ToneModal({ tone, onClose, onPlay, midiAvailable }: Props) {
   const [showFullArticle, setShowFullArticle] = useState(false);
   const [showFullHsTree, setShowFullHsTree] = useState(false);
+  const [showLightbox, setShowLightbox] = useState(false);
   const queryClient = useQueryClient();
 
   const wikiEnabled = tone.id > 0 && tone.wikipediaPageTitle !== null;
@@ -115,7 +117,8 @@ export function ToneModal({ tone, onClose, onPlay, midiAvailable }: Props) {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
-        if (showFullHsTree) setShowFullHsTree(false);
+        if (showLightbox) setShowLightbox(false);
+        else if (showFullHsTree) setShowFullHsTree(false);
         else onClose();
       }
     };
@@ -125,11 +128,14 @@ export function ToneModal({ tone, onClose, onPlay, midiAvailable }: Props) {
       document.removeEventListener("keydown", onKey);
       document.body.style.overflow = "";
     };
-  }, [onClose, showFullHsTree]);
+  }, [onClose, showFullHsTree, showLightbox]);
 
   const sdUrl = resolveImageUrl(tone.thumbnailUrl);
   const hdUrl = resolveImageUrl(tone.thumbnailHdUrl);
   const wikiHdUrl = resolveImageUrl(wiki?.thumbnailHdUrl);
+  // Beste beschikbare grote afbeelding voor de lightbox; null = geen
+  // afbeelding, dan is de thumbnail ook niet klikbaar.
+  const lightboxUrl = hdUrl ?? wikiHdUrl ?? sdUrl;
 
   return (
     <div
@@ -143,23 +149,17 @@ export function ToneModal({ tone, onClose, onPlay, midiAvailable }: Props) {
       >
         <header className="flex items-start justify-between gap-4 border-b border-border-soft p-5">
           <div className="flex items-start gap-4">
-            <div
-              className="shrink-0 cursor-pointer overflow-hidden rounded-xl border border-border-soft"
-              style={{ width: 64, height: 64 }}
-              onClick={onClose}
-            >
-              {sdUrl ? (
-                <ImageWithFallback
-                  src={sdUrl}
-                  alt={tone.wikipediaPageTitle ?? tone.name}
-                  className="h-full w-full"
-                  loading="eager"
-                />
-              ) : (
-                <div className="flex h-full w-full items-center justify-center bg-accent-soft text-2xl text-accent">
-                  ♪
-                </div>
-              )}
+            {/* Zelfde patroon als op de cards: kleine SD-thumbnail, op
+                hover een grote HD-preview, en klik opent de fullscreen
+                lightbox (i.p.v. de vroegere full-size image in de body). */}
+            <div title={lightboxUrl ? "Klik voor grote weergave" : undefined}>
+              <ToneThumbnail
+                tone={tone}
+                size={64}
+                rounded="xl"
+                hdUrl={wiki?.thumbnailHdUrl ?? tone.thumbnailHdUrl}
+                onClick={lightboxUrl ? () => setShowLightbox(true) : undefined}
+              />
             </div>
             <div>
               <p className="font-mono text-xs text-muted">
@@ -203,51 +203,31 @@ export function ToneModal({ tone, onClose, onPlay, midiAvailable }: Props) {
         </header>
 
         <div className="flex-1 space-y-5 overflow-y-auto p-5">
-          {/* Eén grote afbeelding: HD indien beschikbaar, anders SD, anders
-              de wiki-summary thumbnail. Op de cards zelf tonen we hover-zoom
-              voor een snelle blik zonder de modal te openen. */}
-          <section>
-            <figure className="flex flex-col gap-1">
-              <ImageWithFallback
-                src={hdUrl ?? wikiHdUrl ?? sdUrl ?? ""}
-                alt={`${tone.name}`}
-                className="w-full max-h-80 object-contain"
-                loading="eager"
-              />
-              <figcaption className="text-center text-[11px] text-muted">
-                {hdUrl
-                  ? "HD · lokaal gecached"
-                  : wikiHdUrl
-                  ? "HD · via wiki"
-                  : sdUrl
-                  ? "Standaard"
-                  : "geen afbeelding beschikbaar"}
-              </figcaption>
-            </figure>
-            {wiki?.sourceUrl && (
-              <div className="mt-2 flex flex-wrap gap-2">
+          {/* Geen full-size afbeelding meer in de body: de header-thumbnail
+              toont 'm op hover en opent de lightbox bij klik. */}
+          {wiki?.sourceUrl && (
+            <section className="flex flex-wrap gap-2">
+              <a
+                href={wiki.sourceUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-lg border border-border-soft px-3 py-1.5 text-[11px] text-muted hover:text-foreground"
+              >
+                Bekijk op Wikipedia ↗
+              </a>
+              {wiki.mimoUrl && (
                 <a
-                  href={wiki.sourceUrl}
+                  href={wiki.mimoUrl}
                   target="_blank"
                   rel="noreferrer"
                   className="rounded-lg border border-border-soft px-3 py-1.5 text-[11px] text-muted hover:text-foreground"
+                  title="Museum-object met dezelfde naam in mimo-international.com"
                 >
-                  Bekijk op Wikipedia ↗
+                  Bekijk op MIMO ↗
                 </a>
-                {wiki.mimoUrl && (
-                  <a
-                    href={wiki.mimoUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="rounded-lg border border-border-soft px-3 py-1.5 text-[11px] text-muted hover:text-foreground"
-                    title="Museum-object met dezelfde naam in mimo-international.com"
-                  >
-                    Bekijk op MIMO ↗
-                  </a>
-                )}
-              </div>
-            )}
-          </section>
+              )}
+            </section>
+          )}
 
           {midiAvailable && tone.midiProgram != null && (
             <section className="flex flex-wrap items-center gap-3">
@@ -393,6 +373,31 @@ export function ToneModal({ tone, onClose, onPlay, midiAvailable }: Props) {
           </section>
         </div>
       </div>
+
+      {/* Fullscreen lightbox: beste beschikbare afbeelding op klik van de
+          header-thumbnail. Boven de HS-tree overlay (z-60). */}
+      {showLightbox && lightboxUrl && (
+        <div
+          className="fixed inset-0 z-[70] flex cursor-zoom-out flex-col items-center justify-center gap-3 bg-black/90 p-4 sm:p-8"
+          onClick={(e) => {
+            e.stopPropagation();
+            setShowLightbox(false);
+          }}
+        >
+          <ImageWithFallback
+            src={lightboxUrl}
+            alt={tone.wikipediaPageTitle ?? tone.name}
+            className="max-h-[85vh] max-w-full object-contain"
+            loading="eager"
+          />
+          <p className="text-center text-xs text-white/70">
+            {tone.name}
+            {" · "}
+            {hdUrl ? "HD · lokaal gecached" : wikiHdUrl ? "HD · via wiki" : "Standaard"}
+            {" · klik of Esc om te sluiten"}
+          </p>
+        </div>
+      )}
 
       {/* Full HS-tree modal (overlay) */}
       {showFullHsTree && (

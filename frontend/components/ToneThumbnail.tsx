@@ -21,6 +21,12 @@ interface Props {
   size: 48 | 64;
   onClick?: () => void;
   rounded?: "lg" | "xl";
+  /**
+   * Override voor de HD-preview-URL. De detail-modal heeft via de
+   * wiki-query vaak een versere HD-URL dan tone.thumbnailHdUrl uit de
+   * lijst-response.
+   */
+  hdUrl?: string | null;
 }
 
 /**
@@ -33,11 +39,10 @@ interface Props {
  * <p>Pad-only URLs uit de backend worden geplakt aan de API_URL zodat
  * dezelfde code werkt in dev (localhost:8080) en productie.
  */
-export function ToneThumbnail({ tone, size, onClick, rounded = "lg" }: Props) {
+export function ToneThumbnail({ tone, size, onClick, rounded = "lg", hdUrl }: Props) {
   const [failed, setFailed] = useState(false);
   const [hovering, setHovering] = useState(false);
   const hasImage = tone.thumbnailUrl != null && !failed;
-  const hasHd = tone.thumbnailHdUrl != null;
   const radiusClass = rounded === "xl" ? "rounded-xl" : "rounded-lg";
   const dimensionStyle = { width: size, height: size };
 
@@ -59,7 +64,7 @@ export function ToneThumbnail({ tone, size, onClick, rounded = "lg" }: Props) {
     ? raw
     : `${API_URL}${raw.startsWith("/") ? "" : "/"}${raw}`;
 
-  const rawHd = tone.thumbnailHdUrl;
+  const rawHd = hdUrl ?? tone.thumbnailHdUrl;
   const hdSrc = rawHd
     ? rawHd.startsWith("http://") || rawHd.startsWith("https://")
       ? rawHd
