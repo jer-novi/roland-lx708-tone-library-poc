@@ -4,12 +4,12 @@ services:
     restart: unless-stopped
     environment:
       POSTGRES_DB: pianosounds
-      POSTGRES_USER: pianosounds_user
+      POSTGRES_USER: ${DB_USERNAME:-pianosounds_user}
       POSTGRES_PASSWORD: ${DB_PASSWORD:?Set DB_PASSWORD in deploy/.env}
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U pianosounds_user -d pianosounds"]
+      test: [ "CMD-SHELL", "pg_isready -U pianosounds_user -d pianosounds" ]
       interval: 5s
       timeout: 3s
       retries: 10
@@ -17,9 +17,11 @@ services:
   api:
     build: ../backend
     restart: unless-stopped
+    ports:
+      - "8080:8080"
     environment:
       DB_URL: jdbc:postgresql://db:5432/pianosounds
-      DB_USERNAME: pianosounds_user
+      DB_USERNAME: ${DB_USERNAME:-pianosounds_user}
       DB_PASSWORD: ${DB_PASSWORD}
       CORS_ALLOWED_ORIGINS: ${CORS_ALLOWED_ORIGINS:-https://roland-lx708-tone-library-poc.vercel.app,http://localhost:3000}
     depends_on:

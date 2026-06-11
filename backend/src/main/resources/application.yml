@@ -3,7 +3,9 @@ spring:
     name: roland-tone-library
 
   datasource:
-    # On Render set: DB_URL=jdbc:postgresql://<hostname>:5432/pianosounds
+    # Production/server example:
+    # DB_URL=jdbc:postgresql://<hostname>:5432/pianosounds
+    # Docker Compose uses: jdbc:postgresql://db:5432/pianosounds
     url: ${DB_URL:jdbc:postgresql://localhost:5432/pianosounds}
     username: ${DB_USERNAME:pianosounds_user}
     password: ${DB_PASSWORD:}
@@ -40,11 +42,16 @@ management:
 
 app:
   seed:
-    # Set SEED_ENABLED=false to skip seeding at startup (it is idempotent either way)
+    # Set SEED_ENABLED=false to skip seeding at startup.
+    # Seeding is idempotent, so restarting will not create duplicates.
     enabled: ${SEED_ENABLED:true}
   cors:
-    # Comma separated, e.g. "https://your-app.vercel.app,http://localhost:3000"
-    allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:3000}
+    # Comma-separated frontend origins allowed to call this API.
+    # Override this on the server with CORS_ALLOWED_ORIGINS.
+    # Include every public frontend URL that calls the backend.
+    # Do not use "*" when credentials are enabled.
+    # Do not add a trailing comma.
+    allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:3000,http://localhost:3001,https://roland-lx708-tone-library-poc.vercel.app,https://roland-lx708-tone-library-poc-git-main-jer-novis-projects.vercel.app}
   wikipedia:
     base-url: https://en.wikipedia.org/api/rest_v1
     # Be polite to the Wikipedia API: minimum delay between bulk requests (ms)
