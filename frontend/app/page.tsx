@@ -1,16 +1,18 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { fetchToneLibrary, offlineLibrary } from "@/lib/api";
 import type { ToneDto } from "@/lib/types";
 import { toneKey } from "@/lib/types";
 import { useFavorites } from "@/hooks/useFavorites";
 import { useMidi } from "@/hooks/useMidi";
+import { useRecentlyPlayed } from "@/hooks/useRecentlyPlayed";
 import type { Collection } from "@/lib/collections";
-import { collectionsFor, parseTags } from "@/lib/collections";
+import { COLLECTIONS, collectionsFor, parseTags } from "@/lib/collections";
 import { FilterBar } from "@/components/FilterBar";
 import { MidiBar } from "@/components/MidiBar";
+import { RecentlyPlayedRow } from "@/components/RecentlyPlayedRow";
 import { ToneCard } from "@/components/ToneCard";
 import { ToneModal } from "@/components/ToneModal";
 
@@ -26,8 +28,50 @@ export default function Home() {
   const [openTone, setOpenTone] = useState<ToneDto | null>(null);
   const [expandedKey, setExpandedKey] = useState<string | null>(null);
   const { favorites, toggle } = useFavorites();
+  const { recent, record, clear: clearRecent } = useRecentlyPlayed();
   const midi = useMidi();
   const midiAvailable = midi.status !== "unsupported";
+
+  // --- Filters in de URL: bij laden uitlezen, bij wijzigen spiegelen ---
+  const [urlApplied, setUrlApplied] = useState(false);
+
+  useEffect(() => {
+    const p = new URLSearchParams(window.location.search);
+    /* eslint-disable react-hooks/set-state-in-effect --
+       one-time hydration-safe load van de URL-filters na mount */
+    const cat = p.get("cat");
+    if (cat) setCategory(cat);
+    const sub = p.get("sub");
+    if (sub) setSubCategory(sub);
+    const q = p.get("q");
+    if (q) setQuery(q);
+    if (p.get("fav") === "1") setFavoritesOnly(true);
+    const col = p.get("col");
+    if (col && (COLLECTIONS as readonly string[]).includes(col)) {
+      setCollection(col as Collection);
+    }
+    const tags = p.get("tags");
+    if (tags) setSelectedTags(new Set(tags.split(",").filter(Boolean)));
+    setUrlApplied(true);
+    /* eslint-enable react-hooks/set-state-in-effect */
+  }, []);
+
+  useEffect(() => {
+    if (!urlApplied) return;
+    const p = new URLSearchParams();
+    if (category) p.set("cat", category);
+    if (category === "Other" && subCategory) p.set("sub", subCategory);
+    if (query.trim()) p.set("q", query.trim());
+    if (favoritesOnly) p.set("fav", "1");
+    if (collection) p.set("col", collection);
+    if (selectedTags.size > 0) p.set("tags", [...selectedTags].join(","));
+    const qs = p.toString();
+    window.history.replaceState(
+      null,
+      "",
+      qs ? `${window.location.pathname}?${qs}` : window.location.pathname
+    );
+  }, [urlApplied, category, subCategory, query, favoritesOnly, collection, selectedTags]);
 
   const {
     data: liveData,
@@ -116,6 +160,79 @@ export default function Home() {
       return next;
     });
 
+  // ▶ spelen + bijhouden in "Recent gespeeld"
+  const { sendTone } = midi;
+  const playAndRecord = useCallback(
+    async (tone: ToneDto): Promise<boolean> => {
+      const ok = await sendTone(tone);
+      if (ok) record(toneKey(tone));
+      return ok;
+    },
+    [sendTone, record]
+  );
+
+  // --- Toetsenbordnavigatie door de grid (pijltjes, Enter = speel, O = details) ---
+  const [focusIdx, setFocusIdx] = useState(-1);
+  const gridRef = useRef<HTMLDivElement | null>(null);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  const focusCard = useCallback(
+    (i: number) => {
+      if (filtered.length === 0) return;
+      const clamped = Math.max(0, Math.min(i, filtered.length - 1));
+      setFocusIdx(clamped);
+      const el = cardRefs.current[clamped];
+      el?.focus({ preventScroll: true });
+      el?.scrollIntoView({ block: "nearest" });
+    },
+    [filtered.length]
+  );
+
+  const onGridKeyDown = (e: React.KeyboardEvent) => {
+    const idxAttr = (e.target as HTMLElement).dataset?.cardIndex;
+    if (idxAttr == null) return; // focus staat op een knop ín de kaart
+    const idx = Number(idxAttr);
+    const cols = gridRef.current
+      ? getComputedStyle(gridRef.current).gridTemplateColumns.split(" ").length
+      : 1;
+    switch (e.key) {
+      case "ArrowRight":
+        e.preventDefault();
+        focusCard(idx + 1);
+        break;
+      case "ArrowLeft":
+        e.preventDefault();
+        focusCard(idx - 1);
+        break;
+      case "ArrowDown":
+        e.preventDefault();
+        focusCard(idx + cols);
+        break;
+      case "ArrowUp":
+        e.preventDefault();
+        focusCard(idx - cols);
+        break;
+      case "Home":
+        e.preventDefault();
+        focusCard(0);
+        break;
+      case "End":
+        e.preventDefault();
+        focusCard(filtered.length - 1);
+        break;
+      case "Enter":
+        e.preventDefault();
+        void playAndRecord(filtered[idx]);
+        break;
+      case " ":
+      case "o":
+      case "O":
+        e.preventDefault();
+        setOpenTone(filtered[idx]);
+        break;
+    }
+  };
+
   return (
     <div className="mx-auto w-full max-w-6xl flex-1 px-4 pb-16 sm:px-6">
       <header className="py-8 sm:py-12">
@@ -171,6 +288,14 @@ export default function Home() {
 
       <MidiBar midi={midi} />
 
+      <RecentlyPlayedRow
+        recent={recent}
+        tones={data?.tones ?? []}
+        onPlay={playAndRecord}
+        onOpen={setOpenTone}
+        onClear={clearRecent}
+      />
+
       <main className="mt-6">
         {isLoading ? (
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -189,20 +314,40 @@ export default function Home() {
           <>
             <p className="mb-3 text-xs text-muted">
               {filtered.length} {filtered.length === 1 ? "tone" : "tones"}
+              <span className="ml-3 hidden text-muted/60 sm:inline">
+                ⌨ klik een kaart · pijltjes = bladeren · Enter = speel op de
+                piano · O = details
+              </span>
             </p>
-            <div className="grid grid-cols-1 items-start gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-              {filtered.map((tone) => (
-                <ToneCard
+            <div
+              ref={gridRef}
+              role="grid"
+              aria-label="Tone-bibliotheek"
+              onKeyDown={onGridKeyDown}
+              className="grid grid-cols-1 items-start gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+            >
+              {filtered.map((tone, i) => (
+                <div
                   key={toneKey(tone)}
-                  tone={tone}
-                  isFavorite={favorites.has(toneKey(tone))}
-                  isExpanded={expandedKey === toneKey(tone)}
-                  onToggleFavorite={toggle}
-                  onToggleExpand={setExpandedKey}
-                  onOpen={setOpenTone}
-                  onPlay={midi.sendTone}
-                  midiAvailable={midiAvailable}
-                />
+                  ref={(el) => {
+                    cardRefs.current[i] = el;
+                  }}
+                  data-card-index={i}
+                  tabIndex={(focusIdx === -1 ? i === 0 : i === focusIdx) ? 0 : -1}
+                  onFocus={() => setFocusIdx(i)}
+                  className="rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-accent/70"
+                >
+                  <ToneCard
+                    tone={tone}
+                    isFavorite={favorites.has(toneKey(tone))}
+                    isExpanded={expandedKey === toneKey(tone)}
+                    onToggleFavorite={toggle}
+                    onToggleExpand={setExpandedKey}
+                    onOpen={setOpenTone}
+                    onPlay={playAndRecord}
+                    midiAvailable={midiAvailable}
+                  />
+                </div>
               ))}
             </div>
           </>
@@ -213,7 +358,7 @@ export default function Home() {
         <ToneModal
           tone={openTone}
           onClose={() => setOpenTone(null)}
-          onPlay={midi.sendTone}
+          onPlay={playAndRecord}
           midiAvailable={midiAvailable}
         />
       )}
