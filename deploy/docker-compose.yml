@@ -1,7 +1,10 @@
 services:
   db:
     image: postgres:16-alpine
-    restart: unless-stopped
+    # "always" in plaats van "unless-stopped": ook na een Docker Desktop
+    # restart wordt de container automatisch opnieuw gestart, zodat de
+    # backend nooit een UnknownHostException op 'db' krijgt.
+    restart: always
     environment:
       POSTGRES_DB: pianosounds
       POSTGRES_USER: ${DB_USERNAME:-pianosounds_user}
@@ -13,6 +16,8 @@ services:
       interval: 5s
       timeout: 3s
       retries: 10
+      # Geef de healthcheck even de tijd om te starten bij eerste boot
+      start_period: 30s
 
   api:
     build: ../backend
