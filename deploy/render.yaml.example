@@ -20,6 +20,6 @@ services:
       - key: DB_PASSWORD
         sync: false
       - key: CORS_ALLOWED_ORIGINS
-        value: https://roland-lx708-tone-library-poc.vercel.app,http://localhost:3000
+        value: https://roland-lx708-tone-library-poc.vercel.app,https://roland-lx708-tone-library-poc-git-main-jer-novis-projects.vercel.app,http://localhost:3000,http://localhost:3001,
       - key: SEED_ENABLED
         value: "true"

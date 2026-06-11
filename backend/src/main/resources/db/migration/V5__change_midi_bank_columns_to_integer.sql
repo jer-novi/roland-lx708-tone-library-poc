@@ -1,0 +1,2 @@
+ALTER TABLE tones ALTER COLUMN midi_bank_msb TYPE INTEGER;
+ALTER TABLE tones ALTER COLUMN midi_bank_lsb TYPE INTEGER;
