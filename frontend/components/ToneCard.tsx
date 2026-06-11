@@ -1,23 +1,16 @@
 "use client";
 
-import Image from "next/image";
 import type { ToneDto } from "@/lib/types";
 import { toneKey } from "@/lib/types";
 import { parseTags } from "@/lib/collections";
 import { PlayToneButton } from "@/components/PlayToneButton";
+import { ToneThumbnail } from "@/components/ToneThumbnail";
 
 const CATEGORY_COLORS: Record<string, string> = {
   Piano: "bg-amber-500/15 text-amber-300",
   "E. Piano": "bg-rose-500/15 text-rose-300",
   Strings: "bg-sky-500/15 text-sky-300",
   Other: "bg-emerald-500/15 text-emerald-300",
-};
-
-const CATEGORY_ICONS: Record<string, string> = {
-  Piano: "♪",
-  "E. Piano": "⚡",
-  Strings: "𝄢",
-  Other: "♬",
 };
 
 interface Props {
@@ -56,25 +49,7 @@ export function ToneCard({
       }`}
     >
       <div className="flex items-start gap-3">
-        {tone.thumbnailUrl ? (
-          <Image
-            src={tone.thumbnailUrl}
-            alt={tone.wikipediaPageTitle ?? tone.name}
-            width={48}
-            height={48}
-            className="size-12 shrink-0 cursor-pointer rounded-lg border border-border-soft object-cover"
-            onClick={() => onOpen(tone)}
-          />
-        ) : (
-          <div
-            className="flex size-12 shrink-0 cursor-pointer items-center justify-center rounded-lg
-                       bg-accent-soft text-lg text-accent"
-            onClick={() => onOpen(tone)}
-            aria-hidden
-          >
-            {CATEGORY_ICONS[tone.category] ?? "♬"}
-          </div>
-        )}
+        <ToneThumbnail tone={tone} size={48} onClick={() => onOpen(tone)} />
 
         <div className="min-w-0 flex-1 cursor-pointer" onClick={() => onOpen(tone)}>
           <p className="font-mono text-[11px] text-muted">#{tone.toneNumber}</p>

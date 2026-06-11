@@ -60,4 +60,9 @@ public class ToneController {
     public Map<String, Integer> refreshMissingWiki() {
         return Map.of("refreshed", wikiService.refreshMissing());
     }
+
+    @PostMapping("/wiki/refresh-thumbnails")
+    public Map<String, Integer> refreshAllThumbnails() {
+        return Map.of("refreshed", wikiService.refreshAllThumbnails());
+    }
 }

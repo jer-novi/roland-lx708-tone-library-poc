@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import DOMPurify from "dompurify";
@@ -10,6 +9,7 @@ import type { ToneLibrary } from "@/lib/api";
 import type { ToneDto } from "@/lib/types";
 import { collectionsFor, parseTags } from "@/lib/collections";
 import { PlayToneButton } from "@/components/PlayToneButton";
+import { ToneThumbnail } from "@/components/ToneThumbnail";
 
 interface Props {
   tone: ToneDto;
@@ -86,15 +86,7 @@ export function ToneModal({ tone, onClose, onPlay, midiAvailable }: Props) {
       >
         <header className="flex items-start justify-between gap-4 border-b border-border-soft p-5">
           <div className="flex items-start gap-4">
-            {tone.thumbnailUrl && (
-              <Image
-                src={tone.thumbnailUrl}
-                alt={tone.wikipediaPageTitle ?? tone.name}
-                width={64}
-                height={64}
-                className="size-16 shrink-0 rounded-xl border border-border-soft object-cover"
-              />
-            )}
+            <ToneThumbnail tone={tone} size={64} rounded="xl" />
             <div>
               <p className="font-mono text-xs text-muted">
                 {tone.category}
