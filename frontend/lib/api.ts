@@ -4,6 +4,7 @@ import type {
   ToneCategoryDto,
   ToneDetailDto,
   ToneDto,
+  WarmupStatus,
   WikiDataDto,
 } from "./types";
 import seedFallback from "./seed-fallback.json";
@@ -114,6 +115,15 @@ export function offlineLibrary(): ToneLibrary {
 
 export async function fetchToneDetail(id: number): Promise<ToneDetailDto> {
   return get<ToneDetailDto>(`/api/tones/${id}`);
+}
+
+/**
+ * Voortgang van de wiki-warmup. Wordt gepollt zolang de backend nog
+ * thumbnails aan het ophalen is, zodat de UI een indicator kan tonen en de
+ * tone-lijst kan verversen zodra er nieuwe afbeeldingen klaarstaan.
+ */
+export async function fetchWarmupStatus(): Promise<WarmupStatus> {
+  return get<WarmupStatus>("/api/wiki/status");
 }
 
 export async function fetchWiki(

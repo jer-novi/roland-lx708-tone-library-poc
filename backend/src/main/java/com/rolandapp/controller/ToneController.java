@@ -3,6 +3,7 @@ package com.rolandapp.controller;
 import com.rolandapp.dto.ToneCategoryDto;
 import com.rolandapp.dto.ToneDetailDto;
 import com.rolandapp.dto.ToneDto;
+import com.rolandapp.dto.WarmupStatusDto;
 import com.rolandapp.dto.WikiDataDto;
 import com.rolandapp.exception.NotFoundException;
 import com.rolandapp.model.Tone;
@@ -105,6 +106,16 @@ public class ToneController {
     @PutMapping("/tones/{id}/wiki-title")
     public ToneDto overrideWikiTitle(@PathVariable Long id, @RequestBody Map<String, String> body) {
         return toneService.overrideWikipediaTitle(id, body.get("pageTitle"));
+    }
+
+    /**
+     * Voortgang van de wiki-warmup. De frontend pollt dit terwijl
+     * {@code complete} false is, toont een laad-indicator en ververst de
+     * tone-lijst zodra er nieuwe thumbnails klaarstaan.
+     */
+    @GetMapping("/wiki/status")
+    public WarmupStatusDto wikiStatus() {
+        return wikiService.warmupStatus();
     }
 
     @PostMapping("/wiki/refresh-missing")

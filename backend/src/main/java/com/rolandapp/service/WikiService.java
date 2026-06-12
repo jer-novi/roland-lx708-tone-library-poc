@@ -1,6 +1,7 @@
 package com.rolandapp.service;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import com.rolandapp.dto.WarmupStatusDto;
 import com.rolandapp.dto.WikiDataDto;
 import com.rolandapp.exception.NotFoundException;
 import com.rolandapp.exception.UpstreamException;
@@ -178,6 +179,21 @@ public class WikiService {
                 .filter(t -> wikiDataRepository.findByToneId(t.getId()).isEmpty())
                 .map(Tone::getId)
                 .toList();
+    }
+
+    /**
+     * Lichte voortgangsmeting voor de warmup: twee COUNT-queries. Een tone
+     * geldt als "verwerkt" zodra hij een wiki_data-rij heeft (dezelfde
+     * definitie als {@link #findMissingToneIds()}), dus {@code remaining}
+     * loopt tijdens de warmup naar 0. Bedoeld om elke paar seconden gepollt
+     * te worden door de frontend.
+     */
+    @Transactional(readOnly = true)
+    public WarmupStatusDto warmupStatus() {
+        long total = toneRepository.count();
+        long withData = wikiDataRepository.count();
+        long remaining = Math.max(0, total - withData);
+        return new WarmupStatusDto(total, withData, remaining, remaining == 0);
     }
 
     private WikiData fetchAndStore(Tone tone, WikiData existing) {

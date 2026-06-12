@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { fetchToneLibrary, offlineLibrary } from "@/lib/api";
+import { fetchToneLibrary, fetchWarmupStatus, offlineLibrary } from "@/lib/api";
 import type { ToneDto } from "@/lib/types";
 import { toneKey } from "@/lib/types";
 import { useFavorites } from "@/hooks/useFavorites";
@@ -73,6 +73,22 @@ export default function Home() {
     );
   }, [urlApplied, category, subCategory, query, favoritesOnly, collection, selectedTags]);
 
+  // Warmup-voortgang: de backend vult thumbnails op een achtergrondthread.
+  // Pollt elke 3s tot het klaar is — stuurt zowel de laad-indicator (header)
+  // als het automatisch verversen van de bibliotheek hieronder aan.
+  const { data: warmup } = useQuery({
+    queryKey: ["wiki-status"],
+    queryFn: fetchWarmupStatus,
+    // Blijf elke 3s pollen tijdens de boot/seed-fase (total nog 0) én de
+    // warmup; stop pas als er tones zijn én alles verwerkt is. Zo missen we
+    // de complete→false→complete-overgang van een verse start niet.
+    refetchInterval: (query) => {
+      const s = query.state.data;
+      return s && s.complete && s.total > 0 ? false : 3000;
+    },
+  });
+  const warmupActive = warmup ? !warmup.complete : false;
+
   const {
     data: liveData,
     isLoading,
@@ -85,10 +101,12 @@ export default function Home() {
     retry: 3,
     retryDelay: (attempt) => Math.min(1000 * 2 ** attempt, 8000),
     refetchOnWindowFocus: true,
-    // Zelfgenezend: zolang de backend onbereikbaar is, op de achtergrond
-    // elke 15s opnieuw proberen; zodra hij terug is verdwijnt de banner vanzelf.
-    refetchInterval: (query) =>
-      query.state.status === "error" ? 15000 : false,
+    // Zelfgenezend bij een dode backend (elke 15s opnieuw), én tijdens de
+    // warmup elke 4s verversen zodat nieuwe thumbnails per-card binnenkomen.
+    refetchInterval: (query) => {
+      if (query.state.status === "error") return 15000;
+      return warmupActive ? 4000 : false;
+    },
   });
 
   // Toon de volledige bibliotheek uit de gebundelde seed zolang de live data
@@ -258,6 +276,31 @@ export default function Home() {
             >
               {isFetching ? "Bezig…" : "Nu opnieuw proberen"}
             </button>
+          </div>
+        )}
+
+        {/* Warmup-indicator: tijdens het ophalen van thumbnails op de
+            achtergrond. De cards verschijnen al; afbeeldingen poppen er per
+            stuk bij. Verdwijnt vanzelf zodra alles geladen is. */}
+        {warmup && !warmup.complete && !data?.offline && (
+          <div className="mt-3 max-w-md" aria-live="polite">
+            <div className="flex items-center gap-2 text-xs text-muted">
+              <span className="inline-block h-2 w-2 animate-pulse rounded-full bg-accent" />
+              <span>
+                Afbeeldingen laden op de achtergrond… {warmup.withData}/
+                {warmup.total}
+              </span>
+            </div>
+            <div className="mt-1 h-1 w-full overflow-hidden rounded-full bg-surface">
+              <div
+                className="h-full rounded-full bg-accent transition-all duration-500"
+                style={{
+                  width: `${Math.round(
+                    (warmup.withData / Math.max(1, warmup.total)) * 100
+                  )}%`,
+                }}
+              />
+            </div>
           </div>
         )}
       </header>

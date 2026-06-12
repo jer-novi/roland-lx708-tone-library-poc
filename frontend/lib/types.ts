@@ -25,6 +25,15 @@ export interface ToneDto {
   tags: string | null;
 }
 
+/** Voortgang van de wiki-warmup (achtergrondvulling van thumbnails). */
+export interface WarmupStatus {
+  total: number;
+  /** tones die de warmup al heeft verwerkt (= met thumbnail) */
+  withData: number;
+  remaining: number;
+  complete: boolean;
+}
+
 export interface ToneCategoryDto {
   id: number;
   name: string;
