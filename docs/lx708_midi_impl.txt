@@ -1,0 +1,1554 @@
+=== PAGE 1 ===
+MIDI Implementation
+  Model： LX708／LX706／LX705
+  Date： Aug. 19. 2021
+ Version： 1.00
+1.Receive Data
+■Channel Voice Messages
+●Note Off
+Status              2nd byte            3rd byte
+8nH                 kkH                 vvH
+9nH                 kkH                 00H
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+kk = note number:                       00H–7FH (0–127)
+vv = note off velocity:                 00H–7FH (0–127)
+* For the drum part, this message is not received by certain instruments.
+●Note On
+Status              2nd byte            3rd byte
+9nH                 kkH                 vvH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+kk = note number:                       00H–7FH (0–127)
+vv = note on velocity:                  01H–7FH (1–127)
+●Control Change
+* The value specified by a Control Change message will not be reset even by a Program Change, etc.
+○Bank Select (Controller Number 0, 32)
+Status              2nd byte            3rd byte
+BnH                 00H                 mmH
+BnH                 20H                 llH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+mm, ll = Bank number:                   00H, 00H–7FH, 7FH (bank.1–bank.16384), 
+                                        Initial Value = 00 00H (bank.1)
+* If “GM1 System On” is received, Bank Select is not received.
+* Bank Select is transmitted at power-on and when “GM2 System On” is received.
+* Bank Select processing will be suspended until a Program Change message is received.
+○Modulation (Controller Number 1)
+Status              2nd byte            3rd byte
+BnH                 01H                 vvH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+vv = Modulation depth:                  00H–7FH (0–127)
+* The resulting effect is determined by System Exclusive messages. With the initial settings, this is Pitch Modulation Depth.
+○Portamento Time (Controller Number 5)
+Status              2nd byte            3rd byte
+BnH                 05H                 vvH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+vv = Portamento Time:                   00H–7FH (0–127), Initial value = 00H (0)
+* This adjusts the rate of pitch change when Portamento is ON or when using the Portamento Control. A value of 0 results in the 
+fastest change.
+○Data Entry (Controller Number 6, 38)
+Status              2nd byte            3rd byte
+BnH                 06H                 mmH
+BnH                 26H                 llH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+mm, ll = the value of the parameter specified by RPN
+mm = MSB, ll = LSB
+○Volume (Controller Number 7)
+Status              2nd byte            3rd byte
+BnH                 07H                 vvH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+vv = Volume:                            00H–7FH (0–127), Initial Value = 64H (100)
+* Volume messages are used to adjust the volume balance of each Part.
+○Pan (Controller Number 10)
+Status              2nd byte            3rd byte
+BnH                 0AH                 vvH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+vv = pan:                               00H–40H–7FH (Left–Center–Right), 
+                                        Initial Value = 40H (Center)
+* For Rhythm Parts, this is a relative adjustment of each Instrument’s pan setting.
+* Some Tones might not be capable of being panned all the way to the left or right, or might not be able to respond to this message.
+○Expression (Controller Number 11)
+Status              2nd byte            3rd byte
+BnH                 0BH                 vvH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+vv = Expression:                        00H–7FH (0–127), Initial Value = 7FH (127)
+* This adjusts the volume of a Part. It can be used independently from Volume messages. Expression messages are used for musical 
+expression within a performance; e.g., expression pedal movements, crescendo and decrescendo.
+○Hold 1 (Controller Number 64)
+Status              2nd byte            3rd byte
+BnH                 40H                 vvH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+vv = Control value:                     00H–7FH (0–127)
+○Portamento (Controller Number 65)
+Status              2nd byte            3rd byte
+1
+=== PAGE 2 ===
+BnH                 41H                 vvH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+vv = Control value:                     00H–7FH (0–127)
+                                        0–63 = OFF, 64–127 = ON
+○Sostenuto (Controller Number 66)
+Status              2nd byte            3rd byte
+BnH                 42H                 vvH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+vv = Control value:                     00H–7FH (0–127)
+                                        0–63 = OFF, 64–127 = ON
+○Soft (Controller Number 67)
+Status              2nd byte            3rd byte
+BnH                 43H                 vvH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+vv = Control value:                     00H–7FH (0–127)
+* Some Tones will not exhibit any change.
+○Resonance (Controller Number 71)
+Status              2nd byte            3rd byte
+BnH                 47H                 vvH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+vv= Resonance value (relative change):  00H–7FH(-64–0–+63),
+                                        Initial value = 40H (no change)
+* Some Tones will not exhibit any change.
+○Release Time (Controller Number 72)
+Status              2nd byte            3rd byte
+BnH                 48H                 vvH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+vv = Release Time value (relative change): 00H–7FH(-64–0–+63), 
+                                        Initial value = 40H (no change)
+* Some Tones will not exhibit any change.
+○Attack Time (Controller Number 73)
+Status              2nd byte            3rd byte
+BnH                 49H                 vvH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+vv = Attack time value (relative change): 00H–7FH(-64–0–+63),
+                                        Initial value=40H (no change)
+* Some Tones will not exhibit any change.
+○Cutoff (Controller Number 74)
+Status              2nd byte            3rd byte
+BnH                 4AH                 vvH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+vv = Cutoff value (relative change):    00H–7FH(-64–0–+63),
+                                        Initial value = 40H (no change)
+* Some Tones will not exhibit any change.
+○Decay Time (Controller Number 75)
+Status              2nd byte            3rd byte
+BnH                 4BH                 vvH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+vv = Decay Time value (relative change): 00H–7FH(-64–0–+63),
+                                        Initial value = 40H (no change)
+* Some Tones will not exhibit any change.
+○Vibrato Rate (Controller Number 76)
+Status              2nd byte            3rd byte
+BnH                 4CH                 vvH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+vv = Vibrato Rate value (relative change): 00H–7FH(-64–0–+63),
+                                        Initial value = 40H (no change)
+* Some Tones will not exhibit any change.
+○Vibrato Depth (Controller Number 77)
+Status              2nd byte            3rd byte
+BnH                 4DH                 vvH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+vv = Vibrato Depth Value (relative change): 00H–7FH(-64–0–+63),
+                                        Initial Value = 40H (no change)
+* Some Tones will not exhibit any change.
+○Vibrato Delay (Controller Number 78)
+Status              2nd byte            3rd byte
+BnH                 4EH                 vvH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+vv = Vibrato Delay value (relative change): 00H–7FH(-64–0–+63),
+                                        Initial value=40H (no change)
+* Some Tones will not exhibit any change.
+○Effect 1 (Reverb Send Level) (Controller Number 91)
+Status              2nd byte            3rd byte
+BnH                 5BH                 vvH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+vv = Control value:                     00H–7FH (0–127), Initial Value = 28H (40)
+* This message adjusts the Reverb Send Level of each Part.
+○Effect 3 (Chorus Send Level) (Controller Number 93)
+Status              2nd byte            3rd byte
+BnH                 5DH                 vvH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+vv = Control value:                     00H–7FH (0–127), Initial Value = 00H (0)
+2
+=== PAGE 3 ===
+* This message adjusts the Chorus Send Level of each Part.
+○RPN MSB/LSB (Controller Number 100, 101)
+Status              2nd byte            3rd byte
+BnH                 65H                 mmH
+BnH                 64H                 llH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+mm = upper byte (MSB) of parameter number specified by RPN
+ll = lower byte (LSB) of parameter number specified by RPN
+* The value specified by RPN will not be reset even by messages such as Program Change or Reset All Controller.
+**RPN**
+The RPN (Registered Parameter Number) messages are expanded control changes, and each function of an RPN is described by the MIDI 
+Standard.
+To use these messages, you must first use RPN MSB and RPN LSB messages to specify the parameter to be controlled, and then use Data 
+Entry messages to specify the value of the specified parameter. Once an RPN parameter has been specified, all Data Entry messages 
+received on that channel will modify the value of that parameter. To prevent accidents, it is recommended that you set RPN Null (RPN 
+Number = 7FH 7FH) when you have finished setting the value of the desired parameter. Refer to Section 4. “Examples of actual MIDI 
+messages” <Example 4>
+On this instrument, RPN can be used to modify the following parameters.
+RPN                 Data entry
+MSB LSB             MSB LSB             Explanation
+00H 00H             mmH ---             Pitch Bend Sensitivity
+                                        mm: 00H–18H (0–24 semitones),
+                                        Initial Value = 02H (2 semitones)
+                                        ll: ignored (processed as 00h)
+                                        specify up to 2 octaves in semitone steps
+00H 01H             mmH llH             Master Fine Tuning
+                                        mm, ll: 00 00H–40 00H–7F 7FH
+                                        (-100–0–+99.99 cents),
+                                        Refer to 4. Supplementary Material,
+                                        “About Tuning” 
+00H 02H             mmH ---             Master Coarse Tuning
+                                        mm: 00H–40H–7FH
+                                        (-64–0–+63 semitones),
+                                        ll: ignored (processed as 00h)
+00H 05H             mmH llH             Modulation Depth Range
+                                        mm: 00H–04H (0–4 semitones)
+                                        ll: 00H–7FH (0–100 cents)
+                                        100/128 Cent/Value
+7FH 7FH             --- ---             RPN null
+                                        Set a condition in which RPN is not 
+                                        specified. The data entry messages
+                                        after set RPN null will be ignored.
+                                        (No Data entry messages are required
+                                        after RPN null).
+                                        Settings already made will not change.
+                                        mm, ll: ignored
+●Program Change
+Status              2nd byte
+CnH                 ppH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+pp = Program number:                    00H–7FH (prog.1–prog.128)
+* The sound will change beginning with the next note-on after the Program Change is received.
+●Channel Pressure
+Status              2nd byte
+DnH                 vvH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+vv = Channel Pressure:                  00H–7FH (0–127)
+* The resulting effect is determined by System Exclusive messages. With the initial settings there will be no effect.
+●Pitch Bend Change
+Status              2nd byte            3rd byte
+EnH                 llH                 mmH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+mm, ll = Pitch Bend value:              00 00H–40 00H–7F 7FH
+                                        (-8192–0–+8191)
+* The resulting effect is determined by System Exclusive messages. With the initial settings the effect is Pitch Bend.
+■Channel Mode Messages
+●All Sounds Off (Controller Number 120)
+Status              2nd byte            3rd byte
+BnH                 78H                 00H
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+* When this message is received, all currently-sounding notes on the corresponding channel will be turned off immediately.
+●Reset All Controllers (Controller Number 121)
+Status              2nd byte            3rd byte
+BnH                 79H                 00H
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+* When this message is received, the following controllers will be set to their reset values.
+Controller                         Reset value
+Pitch Bend Change                  ±0 (Center)
+Channel Pressure                   0 (off)
+Modulation                         0 (off)
+Expression                         127 (max)
+Hold 1                             0 (off)
+Portamento                         0 (off)
+3
+=== PAGE 4 ===
+Sostenuto                          0 (off)
+Soft                               0 (off)
+RPN                                unset; previously set data will not change
+●All Notes Off (Controller Number 123)
+Status              2nd byte            3rd byte
+BnH                 7BH                 00H
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+* When All Notes Off is received, all notes on the corresponding channel will be turned off.
+  However if Hold 1 or Sostenuto is ON, the sound will be continued until these are turned off.
+●OMNI OFF (Controller Number 124)
+Status              2nd byte            3rd byte
+BnH                 7CH                 00H
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+* The same processing will be carried out as when All Notes Off is received.
+●OMNI ON (Controller Number 125)
+Status              2nd byte            3rd byte
+BnH                 7DH                 00H
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+* OMNI ON is only recognized as “All notes off”; the Mode doesn’t change (OMNI OFF remains).
+●MONO (Controller Number 126)
+Status              2nd byte            3rd byte
+BnH                 7EH                 mmH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+mm = mono number:                       01H (1)
+* The same processing will be carried out as when All Notes Off is received, and the corresponding channel will be set to Mode 4 
+(M=1). Only M=1 is supported.
+●POLY (Controller Number 127)
+Status              2nd byte            3rd byte
+BnH                 7FH                 00H
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+* The same processing will be carried out as when All Notes Off is received, and the corresponding channel will be set to Mode 3.
+■System Exclusive Message
+Status         Data byte                                   Status
+F0H            iiH, ddH, ......, eeH                       F7H
+F0H:                    System Exclusive Message status
+ii = ID number:         An ID number (manufacturer ID) to indicate the
+                        manufacturer whose Exclusive message this is.
+                        Roland’s manufacturer ID is 41H.
+                        ID numbers 7EH and 7FH are extensions of the
+                        MIDI standard; Universal Non-realtime Messages
+                        (7EH) and Universal Realtime Messages (7FH).
+dd,...,ee = data:       00H–7FH (0–127)
+F7H:                    EOX (End Of Exclusive)
+The System Exclusive Messages received by this instrument are; messages related to mode settings, Universal Realtime System Exclusive
+messages, and Universal Non-realtime System Exclusive messages.
+●System Exclusive Messages Related to Mode Settings
+These messages are used to initialize a device to GM mode.
+When creating performance data, you should insert “GM1 System On” at the beginning of a GM1 score, or “GM2 System On” at the 
+beginning of a GM2 score. However, each song should contain only the single mode message that is appropriate for that song. (Do not 
+insert multiple mode setting messages in the same song.)
+“GM System On” uses Universal Non-realtime Message format.
+○GM1 System On
+This is a command message that resets the internal settings of the unit to the General MIDI initial state (General MIDI System-Level 
+1). After receiving this message, this instrument will automatically be set to the proper condition for correctly playing a GM1 
+score.
+Status         Data byte                                Status
+F0H            7EH, 7FH, 09H, 01H                       F7H
+Byte           Explanation
+F0H            Exclusive status
+7EH            ID number (Universal Non-realtime Message)
+7FH            Device ID (Broadcast)
+09H            Sub ID#1 (General MIDI Message)
+01H            Sub ID#2 (General MIDI 1 On)
+F7H            EOX (End Of Exclusive)
+* Once this message is received, Bank Select is no longer received.
+* There must be an interval of at least 50 ms between this message and the next.
+○GM2 System On
+This is a command message that resets the internal settings of the unit to the General MIDI initial state (General MIDI System-Level 
+2). After receiving this message, this instrument will automatically be set to the proper condition for correctly playing a GM2 
+score.
+Status         Data byte                             Status
+F0H            7EH 7FH 09H 03H                       F7H
+Byte           Explanation
+F0H            Exclusive status
+7EH            ID number (Universal Non-realtime Message)
+7FH            Device ID (Broadcast)
+09H            Sub ID#1 (General MIDI Message)
+03H            Sub ID#2 (General MIDI 2 On)
+F7H            EOX (End Of Exclusive)
+4
+=== PAGE 5 ===
+* When this message is received, this instrument will be able to receive the messages specified by General MIDI 2, and use the 
+General MIDI 2 soundmap.
+* There must be an interval of at least 50 ms between this message and the next.
+●Universal Realtime System Exclusive Messages
+○Master Volume
+Status         Data byte                               Status 
+F0H            7FH, 7FH, 04H, 01H, llH, mmH            F7H
+Byte           Explanation
+F0H            Exclusive status
+7FH            ID number (universal realtime message)
+7FH            Device ID (Broadcast)
+04H            Sub ID#1 (Device Control messages)
+01H            Sub ID#2 (Master Volume)
+llH            Master volume lower byte
+mmH            Master volume upper byte
+F7H            EOX (End Of Exclusive)
+llH: ignored (processed as 00H)
+mmH: 00H–7FH   0–127
+* The lower byte (llH) of Master Volume will be handled as 00H.
+○Master Fine Tuning
+Status         Data byte                               Status 
+F0H            7FH, 7FH, 04H, 03H, llH, mmH            F7H
+Byte           Explanation
+F0H            Exclusive status
+7FH            ID number (Universal Realtime Message)
+7FH            Device ID (Broadcast)
+04H            Sub ID#1 (Device Control)
+03H            Sub ID#2 (Master Fine Tuning)
+llH            Master Fine Tuning LSB
+mmH            Master Fine Tuning MSB
+F7H            EOX (End Of Exclusive)
+llH, mmH: 00 00H–40 00H–7F 7FH (-100–0–+99.9 [cents])
+○Master Coarse Tuning
+Status         Data byte                               Status 
+F0H            7FH, 7FH, 04H, 04H, llH, mmH            F7H
+Byte           Explanation
+F0H            Exclusive status
+7FH            ID number (Universal Realtime Message)
+7FH            Device ID (Broadcast)
+04H            Sub ID#1 (Device Control)
+04H            Sub ID#2 (Master Coarse Tuning)
+llH            Master Coarse Tuning LSB
+mmH            Master Coarse Tuning MSB
+F7H            EOX (End Of Exclusive)
+llH:           ignored (processed as 00H)
+mmH:           28H–40H–58H (-24–0–+24 [semitones])
+●Global Parameter Control
+Parameters of the Global Parameter Control are newly provided for the General MIDI 2.
+○Reverb Parameters
+Status         Data byte                                Status 
+F0H            7FH, 7FH, 04H, 05H, 01H, 01H,            F7H
+               01H, 01H, 01H, ppH, vvH
+Byte           Explanation
+F0H            Exclusive status
+7FH            ID number (Universal Realtime Message)
+7FH            Device ID (Broadcast)
+04H            Sub ID#1 (Device Control)
+05H            Sub ID#2 (Global Parameter Control)
+01H            Slot path length
+01H            Parameter ID width
+01H            Value width
+01H            Slot path MSB
+01H            Slot path LSB (Effect 0101: Reverb)
+ppH            Parameter to be controlled.
+vvH            Value for the parameter.
+F7H            EOX (End Of Exclusive)
+pp=0           Reverb Type
+               vv = 00H        Small Room (Room1)
+               vv = 01H        Medium Room (Room2)
+               vv = 02H        Large Room (Room3)
+               vv = 03H        Medium Hall (Hall1)
+               vv = 04H        Large Hall (Hall2)
+               vv = 08H        Plate (Plate)
+pp=1           Reverb Time
+               vv = 00H–7FH    0–127
+○Chorus Parameters
+Status         Data byte                                Status 
+F0H            7FH, 7FH, 04H, 05H, 01H, 01H,            F7H
+5
+=== PAGE 6 ===
+                   01H, 01H, 02H, ppH, vvH
+Byte           Explanation
+F0H            Exclusive status
+7FH            ID number (Universal Realtime Message)
+7FH            Device ID (Broadcast)
+04H            Sub ID#1 (Device Control)
+05H            Sub ID#2 (Global Parameter Control)
+01H            Slot path length
+01H            Parameter ID width
+01H            Value width
+01H            Slot path MSB
+02H            Slot path LSB (Effect 0102: Chorus)
+ppH            Parameter to be controlled.
+vvH            Value for the parameter.
+F7H            EOX (End Of Exclusive)
+pp=0           Chorus Type
+               vv = 00H        Chorus1
+               vv = 01H        Chorus2
+               vv = 02H        Chorus3
+               vv = 03H        Chorus4
+               vv = 04H        FB Chorus
+               vv = 05H        Flanger
+pp=1           Mod Rate
+               vv = 00H–7FH    0–127
+pp=2           Mod Depth
+               vv = 00H–7FH    0–127
+pp=3           Feedback
+               vv = 00H–7FH    0–127
+pp=4           Send To Reverb
+               vv = 00H–7FH    0–127
+○Channel Pressure
+Status         Data byte                                   Status 
+F0H            7FH, 7FH, 09H, 01H, 0nH, ppH, rrH           F7H
+Byte           Explanation
+F0H            Exclusive status
+7FH            ID number (Universal Realtime Message)
+7FH            Device ID (Broadcast)
+09H            Sub ID#1 (Controller Destination Setting)
+01H            Sub ID#2 (Channel Pressure)
+0nH            MIDI Channel (00H–0FH)
+ppH            Controlled parameter
+rrH            Controlled range
+F7H            EOX (End Of Exclusive)
+pp=0           Pitch Control
+               rr = 28H–58H    -24–+24 [semitones]
+pp=1           Filter Cutoff Control
+               rr = 00H–7FH    -9600–+9450 [cents]
+pp=2           Amplitude Control
+               rr = 00H–7FH    0–200 [%]
+pp=3           LFO Pitch Depth
+               rr = 00H–7FH    0–600 [cents]
+pp=4           LFO Filter Depth
+               rr = 00H–7FH    0–2400 [cents]
+pp=5           LFO Amplitude Depth
+               rr = 00H–7FH    0–100 [%]
+○Controller
+Status         Data byte                                Status 
+F0H            7FH, 7FH, 09H, 03H, 0nH, ccH,            F7H
+               ppH, rrH
+Byte           Explanation
+F0H            Exclusive status
+7FH            ID number (Universal Realtime Message)
+7FH            Device ID (Broadcast)
+09H            Sub ID#1 (Controller Destination Setting)
+03H            Sub ID#2 (Control Change)
+0nH            MIDI Channel (00H–0FH)
+ccH            Controller number (00–1FH, 40–5FH)
+ppH            Controlled parameter
+rrH            Controlled range
+F7H            EOX (End Of Exclusive)
+pp=0           Pitch Control
+               rr = 28H–58H    -24–+24 [semitones]
+pp=1           Filter Cutoff Control
+               rr = 00H–7FH    -9600–+9450 [cents]
+pp=2           Amplitude Control
+               rr = 00H–7FH    0–200 [%]
+pp=3           LFO Pitch Depth
+               rr = 00H–7FH    0–600 [cents]
+pp=4           LFO Filter Depth
+               rr = 00H–7FH    0–2400 [cents]
+pp=5           LFO Amplitude Depth
+               rr = 00H–7FH    0–100 [%]
+○Scale/Octave Tuning Adjust
+Status         Data byte                                Status 
+F0H            7EH, 7FH, 08H, 08H, ffH, ggH,            F7H
+6
+=== PAGE 7 ===
+               hhH, ssH...
+Byte           Explanation
+F0H            Exclusive status
+7EH            ID number (Universal Non-realtime Message)
+7FH            Device ID (Broadcast)
+08H            Sub ID#1 (MIDI Tuning Standard)
+08H            Sub ID#2 (scale/octave tuning 1-byte form)
+ffH            Channel/Option byte1
+               bits 0 to 1 = channel 15 to 16
+               bits 2 to 6 = Undefined
+ggH            Channel byte2
+               bits 0 to 6 = channel 8 to 14
+hhH            Channel byte3
+               bits 0 to 6 = channel 1 to 7
+ssH            12 byte tuning offset of 12 semitones from C to B
+               00H = -64 [cents]
+               40H = 0 [cents] (equal temperament)
+               7FH = +63 [cents]
+F7H            EOX (End Of Exclusive)
+○Key-Based Instrument Controllers
+Status         Data byte                           Status 
+F0H            7FH, 7FH, 0AH, 01H, 0nH,            F7H
+               kkH, nnH, vvH...
+Byte           Explanation
+F0H            Exclusive status
+7FH            ID number (Universal Realtime Message)
+7FH            Device ID (Broadcast)
+0AH            Sub ID#1 (Key-Based Instrument Control)
+01H            Sub ID#2 (Controller)
+0nH            MIDI Channel (00–0FH)
+kkH            Key Number
+nnH            Controller Number
+vvH            Value
+F7H            EOX (End Of Exclusive)
+nn=07H         Level
+               vv = 00H–7FH    0–200 [%] (Relative)
+nn=0AH         Pan
+               vv = 00H–7FH    Left–Right (Absolute)
+nn=5BH         Reverb Send
+               vv = 00H–7FH    0–127 (Absolute)
+nn=5DH         Chorus Send
+               vv = 00H–7FH    0–127 (Absolute)
+* This parameter effects drum instruments only.
+●Universal Non-realtime System Exclusive Messages
+○Identity Request Message
+Status         Data byte                                Status 
+F0H            7EH, 10H, 06H, 01H                       F7H
+Byte           Explanation
+F0H            Exclusive status
+7EH            ID number (Universal Non-realtime Message)
+10H            Device ID
+06H            Sub ID#1 (General Information)
+01H            Sub ID#2 (Identity Request)
+F7H            EOX (End Of Exclusive)
+* Device ID = 10H or 7FH
+2.Transmit Data
+■Channel Voice Messages
+●Note Off
+Status              2nd byte            3rd byte
+8nH                 kkH                 vvH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+kk = note number:                       00H–7FH (0–127)
+vv = note off velocity:                 00H–7FH (0–127)
+●Note On
+Status              2nd byte            3rd byte
+9nH                 kkH                 vvH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+kk = note number:                       00H–7FH (0–127)
+vv = note on velocity:                  01H–7FH (1–127)
+●Control Change
+○Bank Select (Controller Number 0, 32)
+Status              2nd byte            3rd byte
+BnH                 00H                 mmH
+BnH                 20H                 llH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+mm, ll = Bank number:                   00H, 00H–7FH, 7FH (bank.1–bank.16384)
+○Volume (Controller Number 7)
+Status              2nd byte            3rd byte
+7
+=== PAGE 8 ===
+BnH                 07H                 vvH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+vv = Volume:                            00H–7FH (0–127), Initial Value = 64H (100)
+○Expression (Controller Number 11)
+Status              2nd byte            3rd byte
+BnH                 0BH                 vvH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+vv = Expression:                        00H–7FH (0–127), Initial Value = 7FH (127)
+○Hold 1 (Controller Number 64)
+Status              2nd byte            3rd byte
+BnH                 40H                 vvH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+vv = Control value:                     00H–7FH (0–127)
+○Sostenuto (Controller Number 66)
+Status              2nd byte            3rd byte
+BnH                 42H                 vvH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+vv = Control value:                     00H-7FH (0-127)
+                                        0 = OFF, 127 = ON
+○Soft (Controller Number 67)
+Status              2nd byte            3rd byte
+BnH                 43H                 vvH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+vv = Control value:                     00H–7FH (0–127)
+○Effect 1 (Reverb Send Level) (Controller Number 91)
+Status              2nd byte            3rd byte
+BnH                 5BH                 vvH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+vv = Control value:                     00H–7FH (0–127)
+●Program Change
+Status              2nd byte
+CnH                 ppH
+n = MIDI channel number:                0H–FH (ch.1–ch.16)
+pp = Program number:                    00H–7FH (prog.1–prog.128)
+■System Exclusive Messages
+○Identity Reply
+LX708
+Status         Data byte                                   Status 
+F0H            7EH, 10H, 06H, 02H, 41H, 19H, 03H,          F7H
+               00H, 00H, 11H, 01H, 00H, 00H
+Byte           Explanation
+F0H            Exclusive status
+7EH            ID number (Universal Non-realtime Message)
+10H            Device ID
+06H            Sub ID#1 (General Information)
+02H            Sub ID#2 (Identity Reply)
+41H            ID number (Roland)
+19H            Device family code (LSB)
+03H            Device family code (MSB)
+00H            Device family number code (LSB)
+00H            Device family number code (MSB)
+11H            Software revision level
+01H            Software revision level
+00H            Software revision level
+00H            Software revision level
+F7H            EOX (End of Exclusive)
+LX706
+Status         Data byte                                   Status 
+F0H            7EH, 10H, 06H, 02H, 41H, 19H, 03H,          F7H
+               00H, 00H, 12H, 01H, 00H, 00H
+Byte           Explanation
+F0H            Exclusive status
+7EH            ID number (Universal Non-realtime Message)
+10H            Device ID
+06H            Sub ID#1 (General Information)
+02H            Sub ID#2 (Identity Reply)
+41H            ID number (Roland)
+19H            Device family code (LSB)
+03H            Device family code (MSB)
+00H            Device family number code (LSB)
+00H            Device family number code (MSB)
+12H            Software revision level
+01H            Software revision level
+00H            Software revision level
+00H            Software revision level
+F7H            EOX (End of Exclusive)
+LX705
+Status         Data byte                                   Status 
+F0H            7EH, 10H, 06H, 02H, 41H, 19H, 03H,          F7H
+8
+=== PAGE 9 ===
+               00H, 00H, 13H, 01H, 00H, 00H
+Byte           Explanation
+F0H            Exclusive status
+7EH            ID number (Universal Non-realtime Message)
+10H            Device ID
+06H            Sub ID#1 (General Information)
+02H            Sub ID#2 (Identity Reply)
+41H            ID number (Roland)
+19H            Device family code (LSB)
+03H            Device family code (MSB)
+00H            Device family number code (LSB)
+00H            Device family number code (MSB)
+13H            Software revision level
+01H            Software revision level
+00H            Software revision level
+00H            Software revision level
+F7H            EOX (End of Exclusive)
+3.Supplementary Material
+●Decimal and Hexadecimal Table
+In MIDI documentation, data values and addresses/sizes of exclusive messages etc. are expressed as hexadecimal values for each 7 
+bits.
+The following table shows how these correspond to decimal numbers.
++------+------++------+------++------+------++------+------+
+|  D   |  H   ||  D   |  H   ||  D   |  H   ||  D   |  H   |
++------+------++------+------++------+------++------+------+
+|    0 |  00H ||   32 |  20H ||   64 |  40H ||   96 |  60H |
+|    1 |  01H ||   33 |  21H ||   65 |  41H ||   97 |  61H |
+|    2 |  02H ||   34 |  22H ||   66 |  42H ||   98 |  62H |
+|    3 |  03H ||   35 |  23H ||   67 |  43H ||   99 |  63H |
+|    4 |  04H ||   36 |  24H ||   68 |  44H ||  100 |  64H |
+|    5 |  05H ||   37 |  25H ||   69 |  45H ||  101 |  65H |
+|    6 |  06H ||   38 |  26H ||   70 |  46H ||  102 |  66H |
+|    7 |  07H ||   39 |  27H ||   71 |  47H ||  103 |  67H |
+|    8 |  08H ||   40 |  28H ||   72 |  48H ||  104 |  68H |
+|    9 |  09H ||   41 |  29H ||   73 |  49H ||  105 |  69H |
+|   10 |  0AH ||   42 |  2AH ||   74 |  4AH ||  106 |  6AH |
+|   11 |  0BH ||   43 |  2BH ||   75 |  4BH ||  107 |  6BH |
+|   12 |  0CH ||   44 |  2CH ||   76 |  4CH ||  108 |  6CH |
+|   13 |  0DH ||   45 |  2DH ||   77 |  4DH ||  109 |  6DH |
+|   14 |  0EH ||   46 |  2EH ||   78 |  4EH ||  110 |  6EH |
+|   15 |  0FH ||   47 |  2FH ||   79 |  4FH ||  111 |  6FH |
+|   16 |  10H ||   48 |  30H ||   80 |  50H ||  112 |  70H |
+|   17 |  11H ||   49 |  31H ||   81 |  51H ||  113 |  71H |
+|   18 |  12H ||   50 |  32H ||   82 |  52H ||  114 |  72H |
+|   19 |  13H ||   51 |  33H ||   83 |  53H ||  115 |  73H |
+|   20 |  14H ||   52 |  34H ||   84 |  54H ||  116 |  74H |
+|   21 |  15H ||   53 |  35H ||   85 |  55H ||  117 |  75H |
+|   22 |  16H ||   54 |  36H ||   86 |  56H ||  118 |  76H |
+|   23 |  17H ||   55 |  37H ||   87 |  57H ||  119 |  77H |
+|   24 |  18H ||   56 |  38H ||   88 |  58H ||  120 |  78H |
+|   25 |  19H ||   57 |  39H ||   89 |  59H ||  121 |  79H |
+|   26 |  1AH ||   58 |  3AH ||   90 |  5AH ||  122 |  7AH |
+|   27 |  1BH ||   59 |  3BH ||   91 |  5BH ||  123 |  7BH |
+|   28 |  1CH ||   60 |  3CH ||   92 |  5CH ||  124 |  7CH |
+|   29 |  1DH ||   61 |  3DH ||   93 |  5DH ||  125 |  7DH |
+|   30 |  1EH ||   62 |  3EH ||   94 |  5EH ||  126 |  7EH |
+|   31 |  1FH ||   63 |  3FH ||   95 |  5FH ||  127 |  7FH |
++------+------++------+------++------+------++------+------+
+D: decimal
+H: hexadecimal
+* Decimal values such as MIDI channel, bank select, and program change are listed as one (1) greater than the values given in the 
+above table.
+* A 7-bits byte can express data in the range of 128 steps. For data where greater precision is required, we must use two or more 
+bytes. For example, two hexadecimal numbers aa bbH expressing two 7-bits bytes would indicate a value of aa x 128 + bb.
+* In the case of values which have a ± sign, 00H = -64, 40H = ±0, and 7FH = +63, so that the decimal expression would be 64 less 
+than the value given in the above chart. In the case of two types, 00 00H = -8192, 40 00H = ±0, and 7F 7FH = +8191. For example if 
+aa bbH were expressed as decimal, this would be aa bbH - 40 00H = aa x 128 + bb - 64 x 128.
+* Data marked “nibbled” is expressed in hexadecimal in 4-bits units. A value expressed as a 2-byte nibble 0a 0bH has the value of a
+x 16 + b.
+<Example 1> 
+What is the decimal expression of 5AH?
+>From the preceding table, 5AH = 90
+<Example 2> 
+What is the decimal expression of the value 12 34H given as hexadecimal for each 7 bits?
+>From the preceding table, since 12H = 18 and 34H = 52
+18 x 128 + 52 = 2356
+<Example 3> 
+What is the decimal expression of the nibbled value 0A 03 09 0D?
+>From the preceding table, since 0AH = 10, 03H = 3, 09H = 9, 0DH = 13
+((10 x 16 + 3) x 16 + 9) x 16 + 13 = 41885
+<Example 4> 
+What is the nibbled expression of the decimal value 1258?
+16) 1258
+9
+=== PAGE 10 ===
+16)   78... 10
+16)    4... 14
+---------------
+       0... 4
+Since from the preceding table, 0 = 00H, 4 = 04H, 14 = 0EH, 10 = 0AH, the answer is 00 04 0E 0AH.
+●Examples of Actual MIDI Messages
+<Example 1> 92 3E 5F
+9n is the Note-on status, and n is the MIDI channel number. Since 2H = 2, 3EH = 62, and 5FH = 95, this is a Note-on message with MIDI
+CH = 3, note number 62 (note name is D4), and velocity 95.
+<Example 2> CE 49
+CnH is the Program Change status, and n is the MIDI channel number. Since EH = 14 and 49H = 73, this is a Program Change message with
+MIDI CH = 15, program number 74 (Flute in GS).
+<Example 3> EA 00 28
+EnH is the Pitch Bend Change status, and n is the MIDI channel number. The 2nd byte (00H = 0) is the LSB and the 3rd byte (28H = 40) 
+is the MSB, but Pitch Bend Value is a signed number in which 40 00H (= 64 x 128 + 0 = 8192) is 0, so this Pitch Bend Value is 28 00H 
+- 40 00H = 40 x 128 + 0 - (64 x 128 + 0) = 5120 - 8192 = -3072
+If the Pitch Bend Sensitivity is set to 2 semitones, -8192 (00 00H) will cause the pitch to change 200 cents, so in this case -200 x 
+(-3072) / (-8192) = -75 cents of Pitch Bend is being applied to MIDI channel 11.
+<Example 4> B3 64 00 65 00 06 0C 26 00 64 7F 65 7F
+BnH is the Control Change status, and n is the MIDI channel number. For Control Changes, the 2nd byte is the controller number, and 
+the 3rd byte is the value. In a case in which two or more messages consecutive messages have the same status, MIDI has a provision 
+called “running status” which allows the status byte of the second and following messages to be omitted. Thus, the above messages 
+have the following meaning.
+ B3   64 00    MIDI ch.4, lower byte of RPN parameter number:   00H
+(B3)  65 00   (MIDI ch.4) upper byte of RPN parameter number:   00H
+(B3)  06 0C   (MIDI ch.4) upper byte of parameter value:   0CH
+(B3)  26 00   (MIDI ch.4) lower byte of parameter value:   00H
+(B3)  64 7F   (MIDI ch.4) lower byte of RPN parameter number:   7FH
+(B3)  65 7F   (MIDI ch.4) upper byte of RPN parameter number:   7FH
+In other words, the above messages specify a value of 0C 00H for RPN parameter number 00 00H on MIDI channel 4, and then set the RPN 
+parameter number to 7F 7FH.
+RPN parameter number 00 00H is Pitch Bend Sensitivity, and the MSB of the value indicates semitone units, so a value of 0CH = 12 sets
+the maximum pitch bend range to +/- 12 semitones (1 octave). (On GS sound sources the LSB of Pitch Bend Sensitivity is ignored, but 
+the LSB should be transmitted anyway (with a value of 0) so that operation will be correct on any device.)
+Once the parameter number has been specified for RPN, all Data Entry messages transmitted on that same channel will be valid, so 
+after the desired value has been transmitted, it is a good idea to set the parameter number to 7F 7FH to prevent accidents. This is 
+the reason for the (B3) 64 7F (B3) 65 7F at the end.
+It is not desirable for performance data (such as Standard MIDI File data) to contain many events with running status as given in 
+<Example 4>. This is because if playback is halted during the song and then rewound or fast-forwarded, the sequencer may not be able 
+to transmit the correct status, and the sound source will then misinterpret the data. Take care to give each event its own status.
+It is also necessary that the RPN parameter number setting and the value setting be done in the proper order. On some sequencers, 
+events occurring in the same (or consecutive) clock may be transmitted in an order different than the order in which they were 
+received. For this reason it is a good idea to slightly skew the time of each event (about 1 tick for TPQN = 96, and about 5 ticks 
+for TPQN = 480).
+* TPQN: Ticks Per Quarter Note
+●About Tuning
+In MIDI, individual Parts are tuned by sending RPN #1 (Master Fine Tuning) to the appropriate MIDI channel.
+In MIDI, all parts can be tuned by sending RPN#1 to each of the MIDI channels that you are using.
+RPN#1 allows you to specify the tuning with an accuracy of approximately 0.012 cents (to be precise, 100/8192 cents). 
+One cent is 1/100th of a semitone.
+Frequently used tuning values are given in the following table for your reference. Values are in hexadecimal (decimal in 
+parentheses).
++----------+--------+---------------+
+| Hz in A4 |  cent  |     RPN #1    |
++----------+--------+---------------+
+|   445.0  | +19.56 | 4C 43 (+1603) |
+|   444.0  | +15.67 | 4A 03 (+1283) |
+|   443.0  | +11.76 | 47 44 (+ 964) |
+|   442.0  |  +7.85 | 45 03 (+ 643) |
+|   441.0  |  +3.93 | 42 42 (+ 322) |
+|   440.0  |   0.00 | 40 00 (    0) |
+|   439.0  |  -3.94 | 3D 3D (- 323) |
+|   438.0  |  -7.89 | 3A 7A (- 646) |
++----------+--------+---------------+
+<Example> Set the tuning of MIDI channel 3 to A4 = 442.0 Hz
+Send RPN#1 to MIDI channel 3. From the above table, the value is 45 03H.
+ B2   64 01    MIDI ch.3, lower byte of RPN parameter number:   01H
+(B2)  65 00   (MIDI ch.3) upper byte of RPN parameter number:   00H
+(B2)  06 45   (MIDI ch.3) upper byte of parameter value:   45H
+(B2)  26 03   (MIDI ch.3) lower byte of parameter value:   03H
+(B2)  64 7F   (MIDI ch.3) lower byte of RPN parameter number:   7FH
+(B2)  65 7F   (MIDI ch.3) upper byte of RPN parameter number:   7FH
+10
+=== PAGE 11 ===
+4.Tone List
+Piano
+No.|Name                   |MSB|LSB|PC
+--------------------------------------------
+1  | European Grand        |  0| 68|  1
+2  | European v2           |  0| 69|  1
+3  | American Grand        |  1| 68|  1
+4  | American v2           |  1| 69|  1
+E. Piano
+No.|Name                   |MSB|LSB|PC
+--------------------------------------------
+1  | 1976SuitCase          |  8| 71|  5
+2  | Tremolo EP            |  0| 69|  5
+3  | Pop EP                | 16| 67|  5
+4  | Vintage EP            |  0| 67|  5
+5  | FM E.Piano            |  0| 70|  6
+6  | EP Belle              |  8| 68|  6
+7  | 60's EP               | 24| 65|  5
+8  | Clav.                 |  0| 67|  8
+9  | Stage Phaser          |  0| 68|  5
+10 | 70's EP               | 16| 66|  5
+11 | E.Grand               |  0| 69|  3
+Strings
+No.|Name                   |MSB|LSB|PC
+--------------------------------------------
+1  | SymphonicStr1         |  1| 67| 50
+2  | Epic Strings          |  1| 67| 49
+3  | Rich Strings          |  0| 71| 50
+4  | Orchestra Str         |  0| 64| 49
+5  | Orchestra             |  8| 66| 49
+6  | Chamber Winds         |  0| 67| 69
+7  | Harp                  |  0| 68| 47
+8  | Violin                |  0|  0| 41
+9  | Velo Strings          |  1| 65| 49
+10 | Flute                 |  0| 64| 74
+11 | Cello                 |  0|  0| 43
+12 | OrchestraBrs          |  1| 66| 61
+13 | Pizzicato Str         |  0|  0| 46
+14 | SymphonicStr2         |  1| 65| 50
+15 | Soft Pad              |  0| 64| 90
+16 | Magical Piano         | 47| 65|  3
+17 | Jazz Scat             |  0| 65| 55
+18 | A.Bass+Cymbl          |  0| 66| 33
+Organ
+No.|Name                   |MSB|LSB|PC
+--------------------------------------------
+1  | Pipe Organ            |  8| 70| 20
+2  | Nason Flt 8'          | 16| 66| 20
+3  | Combo Jz.Org          |  0| 70| 19
+4  | Ballad Organ          |  0| 69| 19
+5  | ChurchOrgan1          |  0| 66| 20
+6  | ChurchOrgan2          |  8| 69| 20
+7  | Gospel Spin           |  0| 71| 17
+8  | Full Stops            |  0| 69| 17
+9  | Mellow Bars           | 32| 68| 17
+10 | Light Organ           | 32| 69| 17
+11 | Lower Organ           |  0| 66| 17
+12 | 60's Organ            | 16| 64| 17
+Upright
+No.|Name                   |MSB|LSB|PC
+--------------------------------------------
+13 | Upright Piano         | 16| 64|  1
+14 | Mellow Upright        |  1| 65|  1
+15 | Bright Upright        |  1| 66|  1
+16 | Rock Piano            |  8| 64|  3
+17 | Ragtime Piano         |  0| 64|  4
+Classical
+No.|Name                   |MSB|LSB|PC
+--------------------------------------------
+18 | Fortepiano            |  2| 64|  1
+19 | Mellow Forte          |  2| 65|  1
+20 | Bright Forte          |  2| 66|  1
+21 | Harpsichord           |  0| 67|  7
+22 | Harpsi 8'+4'          |  8| 67|  7
+Do Re Mi
+No.|Name                   |MSB|LSB|PC
+--------------------------------------------
+23 | Do Re Mi 1#           |121| 10| 54
+24 | Do Re Mi 1b           |121| 11| 54
+25 | Do Re Mi 2#           |121| 12| 54
+26 | Do Re Mi 2b           |121| 13| 54
+Drums
+No.|Name                   |MSB|LSB|PC
+--------------------------------------------
+27 | STANDARD Set          |120|  0|  1
+28 | ROOM Set              |120|  0|  9
+29 | POWER Set             |120|  0| 17
+11
+=== PAGE 12 ===
+30 | ELEC.Set              |120|  0| 25
+31 | ANALOG Set            |120|  0| 26
+32 | JAZZ Set              |120|  0| 33
+33 | BRUSH Set             |120|  0| 41
+34 | ORCH.Set              |120|  0| 49
+35 | SFX Set               |120|  0| 57
+GM2
+No.|Name                   |MSB|LSB|PC
+--------------------------------------------
+36 | Piano 1               |121|  0|  1
+37 | Piano 1w              |121|  1|  1
+38 | Piano 1d              |121|  2|  1
+39 | Piano 2               |121|  0|  2
+40 | Piano 2w              |121|  1|  2
+41 | Piano 3               |121|  0|  3
+42 | Piano 3w              |121|  1|  3
+43 | Honky-tonk            |121|  0|  4
+44 | Honky-tonk w          |121|  1|  4
+45 | E.Piano 1             |121|  0|  5
+46 | Detuned EP 1          |121|  1|  5
+47 | Vintage EP            |121|  2|  5
+48 | 60's E.Piano          |121|  3|  5
+49 | E.Piano 2             |121|  0|  6
+50 | Detuned EP 2          |121|  1|  6
+51 | St.FM EP              |121|  2|  6
+52 | EP Legend             |121|  3|  6
+53 | EP Phaser             |121|  4|  6
+54 | Harpsi.               |121|  0|  7
+55 | Coupled Hps.          |121|  1|  7
+56 | Harpsi.w              |121|  2|  7
+57 | Harpsi.o              |121|  3|  7
+58 | Clav.                 |121|  0|  8
+59 | Pulse Clav.           |121|  1|  8
+60 | Celesta               |121|  0|  9
+61 | Glockenspiel          |121|  0| 10
+62 | Music Box             |121|  0| 11
+63 | Vibraphone            |121|  0| 12
+64 | Vibraphone w          |121|  1| 12
+65 | Marimba               |121|  0| 13
+66 | Marimba w             |121|  1| 13
+67 | Xylophone             |121|  0| 14
+68 | TubularBells          |121|  0| 15
+69 | Church Bell           |121|  1| 15
+70 | Carillon              |121|  2| 15
+71 | Santur                |121|  0| 16
+72 | Organ 1               |121|  0| 17
+73 | TremoloOrgan          |121|  1| 17
+74 | 60's Organ            |121|  2| 17
+75 | Organ 2               |121|  3| 17
+76 | Perc.Organ 1          |121|  0| 18
+77 | Chorus Organ          |121|  1| 18
+78 | Perc.Organ 2          |121|  2| 18
+79 | Rock Organ            |121|  0| 19
+80 | Church Org.1          |121|  0| 20
+81 | Church Org.2          |121|  1| 20
+82 | Church Org.3          |121|  2| 20
+83 | Reed Organ            |121|  0| 21
+84 | Puff Organ            |121|  1| 21
+85 | Accordion 1           |121|  0| 22
+86 | Accordion 2           |121|  1| 22
+87 | Harmonica             |121|  0| 23
+88 | Bandoneon             |121|  0| 24
+89 | Nylon-str.Gt          |121|  0| 25
+90 | Ukulele               |121|  1| 25
+91 | Nylon Gt o            |121|  2| 25
+92 | Nylon Gt 2            |121|  3| 25
+93 | Steel-str.Gt          |121|  0| 26
+94 | 12-str.Gt             |121|  1| 26
+95 | Mandolin              |121|  2| 26
+96 | Steel+Body            |121|  3| 26
+97 | Jazz Guitar           |121|  0| 27
+98 | Hawaiian Gt           |121|  1| 27
+99 | Clean Guitar          |121|  0| 28
+100| Chorus Gt 1           |121|  1| 28
+101| Mid Tone Gt           |121|  2| 28
+102| Muted Guitar          |121|  0| 29
+103| Funk Guitar1          |121|  1| 29
+104| Funk Guitar2          |121|  2| 29
+105| Chorus Gt 2           |121|  3| 29
+106| Overdrive Gt          |121|  0| 30
+107| Guitar Pinch          |121|  1| 30
+108| DistortionGt          |121|  0| 31
+109| Gt Feedback1          |121|  1| 31
+110| Dist.Rhy Gt           |121|  2| 31
+111| Gt Harmonics          |121|  0| 32
+112| Gt Feedback2          |121|  1| 32
+113| AcousticBass          |121|  0| 33
+114| FingeredBass          |121|  0| 34
+115| Finger Slap           |121|  1| 34
+116| Picked Bass           |121|  0| 35
+117| FretlessBass          |121|  0| 36
+118| Slap Bass 1           |121|  0| 37
+119| Slap Bass 2           |121|  0| 38
+120| Synth Bass 1          |121|  0| 39
+12
+=== PAGE 13 ===
+121| WarmSyn.Bass          |121|  1| 39
+122| Synth Bass 3          |121|  2| 39
+123| Clav.Bass             |121|  3| 39
+124| Hammer Bass           |121|  4| 39
+125| Synth Bass 2          |121|  0| 40
+126| Synth Bass 4          |121|  1| 40
+127| RubberSyn.Bs          |121|  2| 40
+128| Attack Pulse          |121|  3| 40
+129| Violin                |121|  0| 41
+130| Slow Violin           |121|  1| 41
+131| Viola                 |121|  0| 42
+132| Cello                 |121|  0| 43
+133| Contrabass            |121|  0| 44
+134| Tremolo Str.          |121|  0| 45
+135| PizzicatoStr          |121|  0| 46
+136| Harp                  |121|  0| 47
+137| Yang Qin              |121|  1| 47
+138| Timpani               |121|  0| 48
+139| Strings               |121|  0| 49
+140| Orchestra             |121|  1| 49
+141| 60's Strings          |121|  2| 49
+142| Slow Strings          |121|  0| 50
+143| Syn.Strings1          |121|  0| 51
+144| Syn.Strings3          |121|  1| 51
+145| Syn.Strings2          |121|  0| 52
+146| Choir 1               |121|  0| 53
+147| Choir 2               |121|  1| 53
+148| Voice                 |121|  0| 54
+149| Humming               |121|  1| 54
+150| Synth Voice           |121|  0| 55
+151| Analog Voice          |121|  1| 55
+152| OrchestraHit          |121|  0| 56
+153| Bass Hit              |121|  1| 56
+154| 6th Hit               |121|  2| 56
+155| Euro Hit              |121|  3| 56
+156| Trumpet               |121|  0| 57
+157| Dark Trumpet          |121|  1| 57
+158| Trombone 1            |121|  0| 58
+159| Trombone 2            |121|  1| 58
+160| Bright Tb             |121|  2| 58
+161| Tuba                  |121|  0| 59
+162| MuteTrumpet1          |121|  0| 60
+163| MuteTrumpet2          |121|  1| 60
+164| French Horn1          |121|  0| 61
+165| French Horn2          |121|  1| 61
+166| Brass 1               |121|  0| 62
+167| Brass 2               |121|  1| 62
+168| Synth Brass1          |121|  0| 63
+169| Synth Brass3          |121|  1| 63
+170| AnalogBrass1          |121|  2| 63
+171| Jump Brass            |121|  3| 63
+172| Synth Brass2          |121|  0| 64
+173| Synth Brass4          |121|  1| 64
+174| AnalogBrass2          |121|  2| 64
+175| Soprano Sax           |121|  0| 65
+176| Alto Sax              |121|  0| 66
+177| Tenor Sax             |121|  0| 67
+178| Baritone Sax          |121|  0| 68
+179| Oboe                  |121|  0| 69
+180| English Horn          |121|  0| 70
+181| Bassoon               |121|  0| 71
+182| Clarinet              |121|  0| 72
+183| Piccolo               |121|  0| 73
+184| Flute                 |121|  0| 74
+185| Recorder              |121|  0| 75
+186| Pan Flute             |121|  0| 76
+187| Bottle Blow           |121|  0| 77
+188| Shakuhachi            |121|  0| 78
+189| Whistle               |121|  0| 79
+190| Ocarina               |121|  0| 80
+191| Square Lead1          |121|  0| 81
+192| Square Lead2          |121|  1| 81
+193| Sine Lead             |121|  2| 81
+194| Saw Lead 1            |121|  0| 82
+195| Saw Lead 2            |121|  1| 82
+196| Doctor Solo           |121|  2| 82
+197| Natural Lead          |121|  3| 82
+198| SequencedSaw          |121|  4| 82
+199| Syn.Calliope          |121|  0| 83
+200| Chiffer Lead          |121|  0| 84
+201| Charang               |121|  0| 85
+202| Wire Lead             |121|  1| 85
+203| Solo Vox              |121|  0| 86
+204| 5th Saw Lead          |121|  0| 87
+205| Bass+Lead             |121|  0| 88
+206| Delayed Lead          |121|  1| 88
+207| Fantasia              |121|  0| 89
+208| Warm Pad              |121|  0| 90
+209| Sine Pad              |121|  1| 90
+210| Polysynth             |121|  0| 91
+211| Space Voice           |121|  0| 92
+212| Itopia                |121|  1| 92
+213| Bowed Glass           |121|  0| 93
+214| Metallic Pad          |121|  0| 94
+215| Halo Pad              |121|  0| 95
+13
+=== PAGE 14 ===
+216| Sweep Pad             |121|  0| 96
+217| Ice Rain              |121|  0| 97
+218| Soundtrack            |121|  0| 98
+219| Crystal               |121|  0| 99
+220| Synth Mallet          |121|  1| 99
+221| Atmosphere            |121|  0|100
+222| Brightness            |121|  0|101
+223| Goblins               |121|  0|102
+224| Echo Drops            |121|  0|103
+225| Echo Bell             |121|  1|103
+226| Echo Pan              |121|  2|103
+227| Star Theme            |121|  0|104
+228| Sitar 1               |121|  0|105
+229| Sitar 2               |121|  1|105
+230| Banjo                 |121|  0|106
+231| Shamisen              |121|  0|107
+232| Koto                  |121|  0|108
+233| Taisho Koto           |121|  1|108
+234| Kalimba               |121|  0|109
+235| Bagpipe               |121|  0|110
+236| Fiddle                |121|  0|111
+237| Shanai                |121|  0|112
+238| Tinkle Bell           |121|  0|113
+239| Agogo                 |121|  0|114
+240| Steel Drums           |121|  0|115
+241| Woodblock             |121|  0|116
+242| Castanets             |121|  1|116
+243| Taiko                 |121|  0|117
+244| Concert BD            |121|  1|117
+245| Melodic Tom1          |121|  0|118
+246| Melodic Tom2          |121|  1|118
+247| Synth Drum            |121|  0|119
+248| TR-808 Tom            |121|  1|119
+249| Elec.Perc.            |121|  2|119
+250| Reverse Cym.          |121|  0|120
+251| Gt FretNoise          |121|  0|121
+252| Gt Cut Noise          |121|  1|121
+253| BsStringSlap          |121|  2|121
+254| Breath Noise          |121|  0|122
+255| Fl.Key Click          |121|  1|122
+256| Seashore              |121|  0|123
+257| Rain                  |121|  1|123
+258| Thunder               |121|  2|123
+259| Wind                  |121|  3|123
+260| Stream                |121|  4|123
+261| Bubble                |121|  5|123
+262| Bird 1                |121|  0|124
+263| Dog                   |121|  1|124
+264| Horse Gallop          |121|  2|124
+265| Bird 2                |121|  3|124
+266| Telephone 1           |121|  0|125
+267| Telephone 2           |121|  1|125
+268| DoorCreaking          |121|  2|125
+269| Door                  |121|  3|125
+270| Scratch               |121|  4|125
+271| Wind Chimes           |121|  5|125
+272| Helicopter            |121|  0|126
+273| Car Engine            |121|  1|126
+274| Car Stop              |121|  2|126
+275| Car Pass              |121|  3|126
+276| Car Crash             |121|  4|126
+277| Siren                 |121|  5|126
+278| Train                 |121|  6|126
+279| Jetplane              |121|  7|126
+280| Starship              |121|  8|126
+281| Burst Noise           |121|  9|126
+282| Applause              |121|  0|127
+283| Laughing              |121|  1|127
+284| Screaming             |121|  2|127
+285| Punch                 |121|  3|127
+286| Heart Beat            |121|  4|127
+287| Footsteps             |121|  5|127
+288| Gun Shot              |121|  0|128
+289| Machine Gun           |121|  1|128
+290| Laser Gun             |121|  2|128
+291| Explosion             |121|  3|128
+5.Rhythm Set List
+    |    |Standard Set                |Room Set                    |Power Set                   |Electric Set                
+----+----+----------------------------+----------------------------+----------------------------+----------------------------
+A0  |21  |TR-808 Kick 1aP             |TR-808 Kick 1aP             |TR-808 Kick 1aP             |TR-808 Kick 1aP             
+A#0 |22  |Pop Kick 2                  |Pop Kick 2                  |Pop Kick 2                  |Pop Kick 2                  
+B0  |23  |Pop Kick 1                  |Pop Kick 1                  |Pop Kick 1                  |Pop Kick 1                  
+----+----+----------------------------+----------------------------+----------------------------+----------------------------
+C1  |24  |Lo-Bit Kick 1 P             |Lo-Bit Kick 1 P             |Lo-Bit Kick 1 P             |Lo-Bit Kick 1 P             
+C#1 |25  |TM-2 Kick                   |TM-2 Kick                   |TM-2 Kick                   |TM-2 Kick                   
+D1  |26  |TR-909 Kick 4               |TR-909 Kick 4               |TR-909 Kick 4               |TR-909 Kick 4               
+D#1 |27  |High Q                      |High Q                      |High Q                      |High Q                      
+E1  |28  |Elec Slap                   |Elec Slap                   |Elec Slap                   |Elec Slap                   
+F1  |29  |Scratch Push                |Scratch Push                |Scratch Push                |Scratch Push                
+F#1 |30  |Scratch Pull                |Scratch Pull                |Scratch Pull                |Scratch Pull                
+G1  |31  |Side Stick 2                |Side Stick 2                |Side Stick 2                |Side Stick 2                
+G#1 |32  |Square Click                |Square Click                |Square Click                |Square Click                
+14
+=== PAGE 15 ===
+A1  |33  |Metronome Click             |Metronome Click             |Metronome Click             |Metronome Click             
+A#1 |34  |Metronome Bell              |Metronome Bell              |Metronome Bell              |Metronome Bell              
+B1  |35  |Kick Drum 1                 |Kick Drum 4                 |Kick Drum 5                 |Kick Drum 8                 
+----+----+----------------------------+----------------------------+----------------------------+----------------------------
+C2  |36  |Kick Drum 2                 |Kick Drum 3                 |Kick Drum 9                 |Elec.Kick                   
+C#2 |37  |Side Stick 1                |Side Stick 1                |Side Stick 1                |Side Stick 1                
+D2  |38  |Reg.Snr 1                   |Room Snr 1                  |Elec Snr 4                  |Elec Snr 2                  
+D#2 |39  |TR-808 Clap 1               |TR-808 Clap 1               |TR-808 Clap 1               |TR-808 Clap 1               
+E2  |40  |Reg.Snr 3                   |Room Snr 3                  |Elec Snr 5                  |Elec Snr 3                  
+F2  |41  |Low Tom 1                   |Room LowTom 2               |PowerLowTom 1               |Deep Tom 2                  
+F#2 |42  |Closed Hi-hat 1             |Closed Hi-hat 1             |Closed Hi-hat 1             |Closed Hi-hat 1             
+G2  |43  |Low Tom 4                   |Room LowTom 1               |PowerLowTom 2               |Deep Tom 1                  
+G#2 |44  |Pedal Hi-hat 1              |Pedal Hi-hat 1              |Pedal Hi-hat 1              |Pedal Hi-hat 1              
+A2  |45  |Mid Tom 1                   |Room MidTom 1               |PowerMidTom 1               |Deep Tom 3                  
+A#2 |46  |Open Hi-hat 1               |Open Hi-hat 1               |Open Hi-hat 1               |Open Hi-hat 1               
+B2  |47  |Mid Tom 5                   |Room MidTom 2               |PowerMidTom 3               |Deep Tom 4                  
+----+----+----------------------------+----------------------------+----------------------------+----------------------------
+C3  |48  |High Tom 1                  |Room Hi Tom 1               |Power HiTom 1               |Deep Tom 6                  
+C#3 |49  |Crash Cym 1                 |Crash Cym 1                 |Crash Cym 1                 |Crash Cym 1                 
+D3  |50  |High Tom 5                  |Room Hi Tom 2               |Power HiTom 2               |Deep Tom 5                  
+D#3 |51  |Ride Cymbal 2               |Ride Cymbal 2               |Ride Cymbal 2               |Ride Cymbal 2               
+E3  |52  |China Cym 1                 |China Cym 1                 |China Cym 1                 |Reverse Cym                 
+F3  |53  |Ride Bell                   |Ride Bell                   |Ride Bell                   |Ride Bell                   
+F#3 |54  |Tamborine 3                 |Tamborine 3                 |Tamborine 3                 |Tamborine 3                 
+G3  |55  |SplashCymbal 1              |SplashCymbal 1              |SplashCymbal 1              |SplashCymbal 1              
+G#3 |56  |Cowbell 2                   |Cowbell 2                   |Cowbell 2                   |Cowbell 2                   
+A3  |57  |Crash Cym 3                 |Crash Cym 3                 |Crash Cym 3                 |Crash Cym 3                 
+A#3 |58  |Vibra-slap                  |Vibra-slap                  |Vibra-slap                  |Vibra-slap                  
+B3  |59  |Ride Cymbal 3               |Ride Cymbal 3               |Ride Cymbal 3               |Ride Cymbal 3               
+----+----+----------------------------+----------------------------+----------------------------+----------------------------
+C4  |60  |High Bongo                  |High Bongo                  |High Bongo                  |High Bongo                  
+C#4 |61  |Low Bongo                   |Low Bongo                   |Low Bongo                   |Low Bongo                   
+D4  |62  |Conga Hi Mt 1               |Conga Hi Mt 1               |Conga Hi Mt 1               |Conga Hi Mt 1               
+D#4 |63  |Conga Hi Op 2               |Conga Hi Op 2               |Conga Hi Op 2               |Conga Hi Op 2               
+E4  |64  |Conga Lo Op 2               |Conga Lo Op 2               |Conga Lo Op 2               |Conga Lo Op 2               
+F4  |65  |High Timbale 2              |High Timbale 2              |High Timbale 2              |High Timbale 2              
+F#4 |66  |Low Timbale 2               |Low Timbale 2               |Low Timbale 2               |Low Timbale 2               
+G4  |67  |Agogo Hi                    |Agogo Hi                    |Agogo Hi                    |Agogo Hi                    
+G#4 |68  |Agogo Lo                    |Agogo Lo                    |Agogo Lo                    |Agogo Lo                    
+A4  |69  |Cabasa 1                    |Cabasa 1                    |Cabasa 1                    |Cabasa 1                    
+A#4 |70  |Maracas 1                   |Maracas 1                   |Maracas 1                   |Maracas 1                   
+B4  |71  |Short Whistle               |Short Whistle               |Short Whistle               |Short Whistle               
+----+----+----------------------------+----------------------------+----------------------------+----------------------------
+C5  |72  |Long Whistle                |Long Whistle                |Long Whistle                |Long Whistle                
+C#5 |73  |Guiro 1                     |Guiro 1                     |Guiro 1                     |Guiro 1                     
+D5  |74  |Guiro 2                     |Guiro 2                     |Guiro 2                     |Guiro 2                     
+D#5 |75  |Claves 2                    |Claves 2                    |Claves 2                    |Claves 2                    
+E5  |76  |Wood Block Hi               |Wood Block Hi               |Wood Block Hi               |Wood Block Hi               
+F5  |77  |Wood Block Lo               |Wood Block Lo               |Wood Block Lo               |Wood Block Lo               
+F#5 |78  |Cuica Hi                    |Cuica Hi                    |Cuica Hi                    |Cuica Hi                    
+G5  |79  |Cuica Lo                    |Cuica Lo                    |Cuica Lo                    |Cuica Lo                    
+G#5 |80  |Triangle Mt 1               |Triangle Mt 1               |Triangle Mt 1               |Triangle Mt 1               
+A5  |81  |Triangle Op                 |Triangle Op                 |Triangle Op                 |Triangle Op                 
+A#5 |82  |Shaker 1                    |Shaker 1                    |Shaker 1                    |Shaker 1                    
+B5  |83  |Jingle Bell 1               |Jingle Bell 1               |Jingle Bell 1               |Jingle Bell 1               
+----+----+----------------------------+----------------------------+----------------------------+----------------------------
+C6  |84  |Bell Tree                   |Bell Tree                   |Bell Tree                   |Bell Tree                   
+C#6 |85  |Castanets 1                 |Castanets 1                 |Castanets 1                 |Castanets 1                 
+D6  |86  |Mute Surdo                  |Mute Surdo                  |Mute Surdo                  |Mute Surdo                  
+D#6 |87  |Open Surdo                  |Open Surdo                  |Open Surdo                  |Open Surdo                  
+E6  |88  |Applause                    |Applause                    |Applause                    |Applause                    
+F6  |89  |Studio Clap                 |Studio Clap                 |Studio Clap                 |Studio Clap                 
+F#6 |90  |Real Clap                   |Real Clap                   |Real Clap                   |Real Clap                   
+G6  |91  |R8 Clap 2                   |R8 Clap 2                   |R8 Clap 2                   |R8 Clap 2                   
+G#6 |92  |Club FinSnap w              |Club FinSnap w              |Club FinSnap w              |Club FinSnap w              
+A6  |93  |El.Bass Nz 1 w              |El.Bass Nz 1 w              |El.Bass Nz 1 w              |El.Bass Nz 1 w              
+A#6 |94  |El.Bass Nz 1 wRv            |El.Bass Nz 1 wRv            |El.Bass Nz 1 wRv            |El.Bass Nz 1 wRv            
+B6  |95  |El.Bass Nz 2 w              |El.Bass Nz 2 w              |El.Bass Nz 2 w              |El.Bass Nz 2 w              
+----+----+----------------------------+----------------------------+----------------------------+----------------------------
+C7  |96  |El.Bass Nz 2 wRv            |El.Bass Nz 2 wRv            |El.Bass Nz 2 wRv            |El.Bass Nz 2 wRv            
+C#7 |97  |SteelGtrNz 5 w              |SteelGtrNz 5 w              |SteelGtrNz 5 w              |SteelGtrNz 5 w              
+D7  |98  |Jingle Bell 2               |Jingle Bell 2               |Jingle Bell 2               |Jingle Bell 2               
+D#7 |99  |TR-626 Shaker w             |TR-626 Shaker w             |TR-626 Shaker w             |TR-626 Shaker w             
+E7  |100 |Shaker w                    |Shaker w                    |Shaker w                    |Shaker w                    
+F7  |101 |Pop Nz 1                    |Pop Nz 1                    |Pop Nz 1                    |Pop Nz 1                    
+F#7 |102 |Pop Nz 3                    |Pop Nz 3                    |Pop Nz 3                    |Pop Nz 3                    
+G7  |103 |Pop Nz 6                    |Pop Nz 6                    |Pop Nz 6                    |Pop Nz 6                    
+G#7 |104 |MG Nz Rev Cym               |MG Nz Rev Cym               |MG Nz Rev Cym               |MG Nz Rev Cym               
+A7  |105 |TR-909 Ride Rev2            |TR-909 Ride Rev2            |TR-909 Ride Rev2            |TR-909 Ride Rev2            
+A#7 |106 |White Nz 3                  |White Nz 3                  |White Nz 3                  |White Nz 3                  
+B7  |107 |White Nz 2                  |White Nz 2                  |White Nz 2                  |White Nz 2                  
+----+----+----------------------------+----------------------------+----------------------------+----------------------------
+C8  |108 |White Nz 4                  |White Nz 4                  |White Nz 4                  |White Nz 4                  
+    |    |Analog Set                  |Jazz Set                    |Brush Set                   |Orchestra Set               
+----+----+----------------------------|----------------------------|----------------------------|----------------------------
+A0  |21  |TR-808 Kick 1aP             |TR-808 Kick 1aP             |TR-808 Kick 1aP             |TR-808 Kick 1aP             
+A#0 |22  |Pop Kick 2                  |Pop Kick 2                  |Pop Kick 2                  |Pop Kick 2                  
+B0  |23  |Pop Kick 1                  |Pop Kick 1                  |Pop Kick 1                  |Pop Kick 1                  
+----+----+----------------------------|----------------------------|----------------------------|----------------------------
+C1  |24  |Lo-Bit Kick 1 P             |Lo-Bit Kick 1 P             |Lo-Bit Kick 1 P             |Lo-Bit Kick 1 P             
+C#1 |25  |TM-2 Kick                   |TM-2 Kick                   |TM-2 Kick                   |TM-2 Kick                   
+D1  |26  |TR-909 Kick 4               |TR-909 Kick 4               |TR-909 Kick 4               |TR-909 Kick 4               
+D#1 |27  |High Q                      |High Q                      |High Q                      |Closed Hi-hat 1             
+15
+=== PAGE 16 ===
+E1  |28  |Elec Slap                   |Elec Slap                   |Elec Slap                   |Pedal Hi-hat 1              
+F1  |29  |Scratch Push                |Scratch Push                |Scratch Push                |Open Hi-hat 1               
+F#1 |30  |Scratch Pull                |Scratch Pull                |Scratch Pull                |Ride Cymbal 2               
+G1  |31  |Side Stick 2                |Side Stick 2                |Side Stick 2                |Side Stick 2                
+G#1 |32  |Square Click                |Square Click                |Square Click                |Square Click                
+A1  |33  |Metronome Click             |Metronome Click             |Metronome Click             |Metronome Click             
+A#1 |34  |Metronome Bell              |Metronome Bell              |Metronome Bell              |Metronome Bell              
+B1  |35  |Kick Drum 11                |Kick Drum 6                 |Kick Drum 7                 |Concert BD 2                
+----+----+----------------------------|----------------------------|----------------------------|----------------------------
+C2  |36  |Kick Drum 10                |Jazz Kick 1                 |Jazz Kick 2                 |Concert BD 1                
+C#2 |37  |Elec Stick 5                |Side Stick 1                |Side Stick 1                |Side Stick 1                
+D2  |38  |Elec Snr 1                  |Jazz Snr 2                  |Brush Swish                 |Concert SD 1                
+D#2 |39  |TR-808 Clap 1               |TR-808 Clap 1               |Brush Tap                   |Castanets 2                 
+E2  |40  |Elec Snr 6                  |Jazz Snr 1                  |Swish&Turn                  |Concert SD 2                
+F2  |41  |Elec Tom 1                  |Low Tom 2                   |Low Tom 3                   |Timpani F                   
+F#2 |42  |TR-808 ClHH 4               |Closed Hi-hat 1             |Closed Hi-hat 2             |Timpani F#                  
+G2  |43  |Elec Tom 2                  |Low Tom 4                   |Low Tom 5                   |Timpani G                   
+G#2 |44  |Elec PHH 2                  |Pedal Hi-hat 1              |Pedal Hi-hat 1              |Timpani G#                  
+A2  |45  |Elec Tom 3                  |Mid Tom 2                   |Mid Tom 3                   |Timpani A                   
+A#2 |46  |Elec OpHH 2                 |Open Hi-hat 1               |Open Hi-hat 2               |Timpani A#                  
+B2  |47  |Elec Tom 4                  |Mid Tom 5                   |Mid Tom 6                   |Timpani B                   
+----+----+----------------------------|----------------------------|----------------------------|----------------------------
+C3  |48  |Elec Tom 5                  |High Tom 3                  |High Tom 4                  |Timpani c                   
+C#3 |49  |TR-808 Cymbal 7             |Crash Cym 1                 |Crash Cym 2                 |Timpani c#                  
+D3  |50  |Elec Tom 6                  |High Tom 7                  |High Tom 8                  |Timpani d                   
+D#3 |51  |Ride Cymbal 2               |Ride Cymbal 2               |Ride Cymbal 4               |Timpani d#                  
+E3  |52  |China Cym 1                 |China Cym 1                 |China Cym 2                 |Timpani e                   
+F3  |53  |Ride Bell                   |Ride Bell                   |Ride Cymbal 6               |Timpani f                   
+F#3 |54  |Tamborine 3                 |Tamborine 3                 |Tamborine 3                 |Tamborine 3                 
+G3  |55  |SplashCymbal 1              |SplashCymbal 1              |SplashCymbal 2              |SplashCymbal 3              
+G#3 |56  |TR-808 Cowbell 2            |Cowbell 2                   |Cowbell 2                   |Cowbell 2                   
+A3  |57  |Crash Cym 3                 |Crash Cym 3                 |Crash Cym 4                 |Concert Cym2                
+A#3 |58  |Vibra-slap                  |Vibra-slap                  |Vibra-slap                  |Vibra-slap                  
+B3  |59  |Ride Cymbal 3               |Ride Cymbal 3               |Ride Cymbal 5               |Concert Cym1                
+----+----+----------------------------|----------------------------|----------------------------|----------------------------
+C4  |60  |High Bongo                  |High Bongo                  |High Bongo                  |High Bongo                  
+C#4 |61  |Low Bongo                   |Low Bongo                   |Low Bongo                   |Low Bongo                   
+D4  |62  |Elec Conga 3                |Conga Hi Mt 1               |Conga Hi Mt 1               |Conga Hi Mt 1               
+D#4 |63  |Elec Conga 2                |Conga Hi Op 2               |Conga Hi Op 2               |Conga Hi Op 2               
+E4  |64  |Elec Conga 1                |Conga Lo Op 2               |Conga Lo Op 2               |Conga Lo Op 2               
+F4  |65  |High Timbale 2              |High Timbale 2              |High Timbale 2              |High Timbale 2              
+F#4 |66  |Low Timbale 2               |Low Timbale 2               |Low Timbale 2               |Low Timbale 2               
+G4  |67  |Agogo Hi                    |Agogo Hi                    |Agogo Hi                    |Agogo Hi                    
+G#4 |68  |Agogo Lo                    |Agogo Lo                    |Agogo Lo                    |Agogo Lo                    
+A4  |69  |Cabasa 1                    |Cabasa 1                    |Cabasa 1                    |Cabasa 1                    
+A#4 |70  |Maracas 2                   |Maracas 1                   |Maracas 1                   |Maracas 1                   
+B4  |71  |Short Whistle               |Short Whistle               |Short Whistle               |Short Whistle               
+----+----+----------------------------|----------------------------|----------------------------|----------------------------
+C5  |72  |Long Whistle                |Long Whistle                |Long Whistle                |Long Whistle                
+C#5 |73  |Guiro 1                     |Guiro 1                     |Guiro 1                     |Guiro 1                     
+D5  |74  |Guiro 2                     |Guiro 2                     |Guiro 2                     |Guiro 2                     
+D#5 |75  |Claves 1                    |Claves 2                    |Claves 2                    |Claves 2                    
+E5  |76  |Wood Block Hi               |Wood Block Hi               |Wood Block Hi               |Wood Block Hi               
+F5  |77  |Wood Block Lo               |Wood Block Lo               |Wood Block Lo               |Wood Block Lo               
+F#5 |78  |Cuica Hi                    |Cuica Hi                    |Cuica Hi                    |Cuica Hi                    
+G5  |79  |Cuica Lo                    |Cuica Lo                    |Cuica Lo                    |Cuica Lo                    
+G#5 |80  |Triangle Mt 1               |Triangle Mt 1               |Triangle Mt 1               |Triangle Mt 1               
+A5  |81  |Triangle Op                 |Triangle Op                 |Triangle Op                 |Triangle Op                 
+A#5 |82  |Shaker 1                    |Shaker 1                    |Shaker 1                    |Shaker 1                    
+B5  |83  |Jingle Bell 1               |Jingle Bell 1               |Jingle Bell 1               |Jingle Bell 1               
+----+----+----------------------------|----------------------------|----------------------------|----------------------------
+C6  |84  |Bell Tree                   |Bell Tree                   |Bell Tree                   |Bell Tree                   
+C#6 |85  |Castanets 1                 |Castanets 1                 |Castanets 1                 |Castanets 1                 
+D6  |86  |Mute Surdo                  |Mute Surdo                  |Mute Surdo                  |Mute Surdo                  
+D#6 |87  |Open Surdo                  |Open Surdo                  |Open Surdo                  |Open Surdo                  
+E6  |88  |Applause                    |Applause                    |Applause                    |Applause                    
+F6  |89  |Studio Clap                 |Studio Clap                 |Studio Clap                 |Studio Clap                 
+F#6 |90  |Real Clap                   |Real Clap                   |Real Clap                   |Real Clap                   
+G6  |91  |R8 Clap 2                   |R8 Clap 2                   |R8 Clap 2                   |R8 Clap 2                   
+G#6 |92  |Club FinSnap w              |Club FinSnap w              |Club FinSnap w              |Club FinSnap w              
+A6  |93  |El.Bass Nz 1 w              |El.Bass Nz 1 w              |El.Bass Nz 1 w              |El.Bass Nz 1 w              
+A#6 |94  |El.Bass Nz 1 wRv            |El.Bass Nz 1 wRv            |El.Bass Nz 1 wRv            |El.Bass Nz 1 wRv            
+B6  |95  |El.Bass Nz 2 w              |El.Bass Nz 2 w              |El.Bass Nz 2 w              |El.Bass Nz 2 w              
+----+----+----------------------------|----------------------------|----------------------------|----------------------------
+C7  |96  |El.Bass Nz 2 wRv            |El.Bass Nz 2 wRv            |El.Bass Nz 2 wRv            |El.Bass Nz 2 wRv            
+C#7 |97  |SteelGtrNz 5 w              |SteelGtrNz 5 w              |SteelGtrNz 5 w              |SteelGtrNz 5 w              
+D7  |98  |Jingle Bell 2               |Jingle Bell 2               |Jingle Bell 2               |Jingle Bell 2               
+D#7 |99  |TR-626 Shaker w             |TR-626 Shaker w             |TR-626 Shaker w             |TR-626 Shaker w             
+E7  |100 |Shaker w                    |Shaker w                    |Shaker w                    |Shaker w                    
+F7  |101 |Pop Nz 1                    |Pop Nz 1                    |Pop Nz 1                    |Pop Nz 1                    
+F#7 |102 |Pop Nz 3                    |Pop Nz 3                    |Pop Nz 3                    |Pop Nz 3                    
+G7  |103 |Pop Nz 6                    |Pop Nz 6                    |Pop Nz 6                    |Pop Nz 6                    
+G#7 |104 |MG Nz Rev Cym               |MG Nz Rev Cym               |MG Nz Rev Cym               |MG Nz Rev Cym               
+A7  |105 |TR-909 Ride Rev2            |TR-909 Ride Rev2            |TR-909 Ride Rev2            |TR-909 Ride Rev2            
+A#7 |106 |White Nz 3                  |White Nz 3                  |White Nz 3                  |White Nz 3                  
+B7  |107 |White Nz 2                  |White Nz 2                  |White Nz 2                  |White Nz 2                  
+----+----+----------------------------|----------------------------|----------------------------|----------------------------
+C8  |108 |White Nz 4                  |White Nz 4                  |White Nz 4                  |White Nz 4                  
+* -----: No sound.
+    |    |SFX Set                     
+----+----+----------------------------
+A0  |21  |-----                       
+16
+=== PAGE 17 ===
+A#0 |22  |-----                       
+B0  |23  |-----                       
+----+----+----------------------------
+C1  |24  |-----                       
+C#1 |25  |-----                       
+D1  |26  |-----                       
+D#1 |27  |-----                       
+E1  |28  |-----                       
+F1  |29  |-----                       
+F#1 |30  |-----                       
+G1  |31  |-----                       
+G#1 |32  |-----                       
+A1  |33  |-----                       
+A#1 |34  |-----                       
+B1  |35  |-----                       
+----+----+----------------------------
+C2  |36  |-----                       
+C#2 |37  |-----                       
+D2  |38  |-----                       
+D#2 |39  |High Q                      
+E2  |40  |Elec Slap                   
+F2  |41  |Scratch Push                
+F#2 |42  |Scratch Pull                
+G2  |43  |Side Stick 2                
+G#2 |44  |Square Click                
+A2  |45  |Metronome Click             
+A#2 |46  |Metronome Bell              
+B2  |47  |GtFret Noise                
+----+----+----------------------------
+C3  |48  |Cut Noise Up                
+C#3 |49  |Cut Noise Dw                
+D3  |50  |Slap St.Bass                
+D#3 |51  |Fl.Key Click                
+E3  |52  |Laughing                    
+F3  |53  |Scream                      
+F#3 |54  |Punch                       
+G3  |55  |Heart Beat                  
+G#3 |56  |Footsteps 1                 
+A3  |57  |Footsteps 2                 
+A#3 |58  |Applause                    
+B3  |59  |Door Creak                  
+----+----+----------------------------
+C4  |60  |Door                        
+C#4 |61  |Scratch 1                   
+D4  |62  |Wind Chimes                 
+D#4 |63  |Car Engine                  
+E4  |64  |Car Stop                    
+F4  |65  |Car Pass                    
+F#4 |66  |Car Crash                   
+G4  |67  |Siren                       
+G#4 |68  |Train                       
+A4  |69  |Jetplane                    
+A#4 |70  |Helicopter                  
+B4  |71  |Starship                    
+----+----+----------------------------
+C5  |72  |Gun Shot                    
+C#5 |73  |Machine Gun                 
+D5  |74  |Lasergun                    
+D#5 |75  |Explosion                   
+E5  |76  |Dog                         
+F5  |77  |Horse Gallop                
+F#5 |78  |Birds                       
+G5  |79  |Rain                        
+G#5 |80  |Thunder                     
+A5  |81  |Wind                        
+A#5 |82  |Seashore                    
+B5  |83  |Stream                      
+----+----+----------------------------
+C6  |84  |Bubble                      
+C#6 |85  |-----                       
+D6  |86  |-----                       
+D#6 |87  |-----                       
+E6  |88  |-----                       
+F6  |89  |-----                       
+F#6 |90  |-----                       
+G6  |91  |-----                       
+G#6 |92  |-----                       
+A6  |93  |-----                       
+A#6 |94  |-----                       
+B6  |95  |-----                       
+----+----+----------------------------
+C7  |96  |-----                       
+C#7 |97  |-----                       
+D7  |98  |-----                       
+D#7 |99  |-----                       
+E7  |100 |-----                       
+F7  |101 |-----                       
+F#7 |102 |-----                       
+G7  |103 |-----                       
+G#7 |104 |-----                       
+A7  |105 |-----                       
+A#7 |106 |-----                       
+B7  |107 |-----                       
+----+----+----------------------------
+C8  |108 |-----                       
+17
+=== PAGE 18 ===
+Digital Piano                                MIDI Implementation Chart                              Date: Aug. 1. 2021
+Model：LX708／LX706／LX705                                                                           Version：1.00
++------------------------------------------+-------------------+--------------------+---------------------------------+
+| Function...                              | Transmitted       | Recognized         | Remarks                         |
++------------------------------------------+-------------------+--------------------+---------------------------------+
+| Basic Channel    Default                 | 1                 | 1–16               |                                 |
+|                  Changed                 | 1–16              | 1–16               |                                 |
++------------------------------------------+-------------------+--------------------+---------------------------------+
+| Mode             Default                 | Mode 3            | Mode 3             | *1                              |
+|                  Messages                | X                 | Mode 3,4 (M = 1)   |                                 |
+|                  Altered                 | **************    |                    |                                 |
++------------------------------------------+-------------------+--------------------+---------------------------------+
+| Note Number :                            | 15–113            | 0–127              |                                 |
+|                  True Voice              | **************    | 0–127              |                                 |
++------------------------------------------+-------------------+--------------------+---------------------------------+
+| Velocity         Note On                 | O                 | O                  |                                 |
+|                  Note Off                | O                 | O                  |                                 |
++------------------------------------------+-------------------+--------------------+---------------------------------+
+| After Touch      Key’s                  | X                 | X                  |                                 |
+|                  Channel’s              | X                 | O                  |                                 |
++------------------------------------------+-------------------+--------------------+---------------------------------+
+| Pitch Bend                               | X                 | O                  |                                 |
++------------------------------------------+-------------------+--------------------+---------------------------------+
+| Control Change                      0,32 | O                 | O                  | Bank select                     |
+|                                        1 | X                 | O                  | Modulation                      |
+|                                        5 | X                 | O                  | Portamento time                 |
+|                                     6,38 | X                 | O                  | Data entry                      |
+|                                        7 | X                 | O                  | Volume                          |
+|                                       10 | X                 | O                  | Panpot                          |
+|                                       11 | X                 | O                  | Expression                      |
+|                                       64 | O                 | O                  | Hold 1                          |
+|                                       65 | X                 | O                  | Portamento                      |
+|                                       66 | O                 | O                  | Sostenuto                       |
+|                                       67 | O                 | O                  | Soft                            |
+|                                       71 | X                 | O                  | Resonance                       |
+|                                       72 | X                 | O                  | Release time                    |
+|                                       73 | X                 | O                  | Attack time                     |
+|                                       74 | X                 | O                  | Cutoff                          |
+|                                       75 | X                 | O                  | Decay time                      |
+|                                       76 | X                 | O                  | Vibrato rate                    |
+|                                       77 | X                 | O                  | Vibrato depth                   |
+|                                       78 | X                 | O                  | Vibrato delay                   |
+|                                       84 | X                 | O                  | Portamento control              |
+|                                       91 | O                 | O (Reverb)         | General purpose effects 1 depth |
+|                                       93 | X                 | O (Chorus)         | General purpose effects 3 depth |
+|                                  100,101 | X                 | O                  | RPN LSB, MSB                    |
++------------------------------------------+-------------------+--------------------+---------------------------------+
+| Program Change                           | O                 | O                  |                                 |
+|                  : True Number           | **************    | 0–127              | Program No. 1–128               |
++------------------------------------------+-------------------+--------------------+---------------------------------+
+| System Exclusive                         | O                 | O                  |                                 |
++------------------------------------------+-------------------+--------------------+---------------------------------+
+| System Common    : Song Position         | X                 | X                  |                                 |
+|                  : Song Select           | X                 | X                  |                                 |
+|                  : Tune Request          | X                 | X                  |                                 |
++------------------------------------------+-------------------+--------------------+---------------------------------+
+| System Real Time : Clock                 | X                 | X                  |                                 |
+|                  : Commands              | X                 | X                  |                                 |
++------------------------------------------+-------------------+--------------------+---------------------------------+
+| Aux Messages     : All Sound Off         | X                 | O                  |                                 |
+|                  : Reset All Controllers | X                 | O                  |                                 |
+|                  : Local On/Off          | O                 | X                  |                                 |
+|                  : All Notes Off         | X                 | O (123–127)        |                                 |
+|                  : Active Sensing        | X                 | X                  |                                 |
+|                  : System Reset          | X                 | X                  |                                 |
++------------------------------------------+-------------------+--------------------+---------------------------------+
+| Notes                                    | *1 Only M=1 is supported                                                 |
++------------------------------------------+--------------------------------------------------------------------------+
+Mode 1 : OMNI ON, POLY     Mode 2 : OMNI ON, MONO                                                              O : Yes
+Mode 3 : OMNI OFF, POLY    Mode 4 : OMNI OFF, MONO                                                             X : No
+18
