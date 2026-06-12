@@ -3,12 +3,14 @@ spring:
     name: roland-tone-library
 
   datasource:
-    # Production/server example:
-    # DB_URL=jdbc:postgresql://<hostname>:5432/pianosounds
-    # Docker Compose uses: jdbc:postgresql://db:5432/pianosounds
+    # Defaults = de lokale dev-DB uit deploy/docker-compose.dev.yml, zodat een
+    # native/IntelliJ-run zonder env-vars meteen verbindt. Prod en de Docker-
+    # stacks zetten DB_URL/DB_USERNAME/DB_PASSWORD altijd expliciet via env.
+    #   Prod/server:    DB_URL=jdbc:postgresql://<hostname>:5432/pianosounds
+    #   Docker Compose: jdbc:postgresql://db:5432/pianosounds(_dev)
     url: ${DB_URL:jdbc:postgresql://localhost:55432/pianosounds_dev}
-    username: ${DB_USERNAME:pianosounds_user}
-    password: ${DB_PASSWORD:}
+    username: ${DB_USERNAME:pianosounds_dev_user}
+    password: ${DB_PASSWORD:devpass}
     hikari:
       maximum-pool-size: ${DB_POOL_SIZE:5}
 

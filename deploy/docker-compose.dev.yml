@@ -1,19 +1,21 @@
-# Full development stack: database + backend (no Caddy - access via direct localhost ports)
-# 
-# Gebruik:
-#   docker compose -f deploy/docker-compose.dev-full.yml up -d
-#   docker compose -f deploy/docker-compose.dev-full.yml logs -f api
-#   docker compose -f deploy/docker-compose.dev-full.yml down
-#   docker compose -f deploy/docker-compose.dev-full.yml down -v    # stop + data wissen
+# De lokale dev-omgeving: database + backend in Docker (geen Caddy — direct
+# via localhost-poorten). Dit is de ENIGE manier om lokaal te draaien; de
+# productie-stack (docker-compose.yml) draait alleen op de server.
+#
+# Gebruik (draai vanuit de repo-root):
+#   docker compose -f deploy/docker-compose.dev.yml up -d --build   # start (herbouwt na code-wijziging)
+#   docker compose -f deploy/docker-compose.dev.yml logs -f api      # backend-logs volgen
+#   docker compose -f deploy/docker-compose.dev.yml down             # stoppen (data blijft)
+#   docker compose -f deploy/docker-compose.dev.yml down -v          # stoppen + data wissen
 #
 # Frontend draait apart: cd frontend && pnpm dev -- --hostname 0.0.0.0
-# 
+#
 # Backend bereikbaar op: http://localhost:8080
-# Database bereikbaar op: localhost:55432 (pianosounds_dev)
+# Database bereikbaar op: localhost:55432 (db pianosounds_dev, user pianosounds_dev_user, pass devpass)
 #
 # Eigen project-naam (los van docker-compose.yml) zodat containers/netwerk
 # niet overlappen met de productie-stack.
-name: tone-library-dev-full
+name: tone-library-dev
 
 services:
   db:

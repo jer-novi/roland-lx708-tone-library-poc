@@ -8,11 +8,12 @@ separately (see top-level `README.md`).
 
 ## Local dev stack (db + backend)
 
-For testing scrape-scripts, seed mutations, schema migrations, or any
-change that touches the database, use the **dev stack** in
-`deploy/docker-compose.dev-full.yml`. It runs its own PostgreSQL instance
-and its own backend container on non-conflicting ports, so it never
-interferes with the production stack.
+The local development environment runs entirely in Docker via
+`deploy/docker-compose.dev.yml`: one PostgreSQL instance plus the backend
+container. This is the **only** way to run locally — the production stack
+(`docker-compose.yml`, with Caddy/HTTPS) runs only on the server. The dev
+stack uses its own database name, user, volume and compose project name, so
+it never interferes with production, even on the same machine.
 
 ### Key differences from production
 
@@ -25,29 +26,41 @@ interferes with the production stack.
 | Password | from `deploy/.env` | `devpass` (override via `DEV_DB_PASSWORD` env) |
 | Volume | `pgdata` | `pgdata_dev` |
 | Stack | api + caddy + db | **api + db** (no caddy) |
-| Compose project | `tone-library-prod` | `tone-library-dev-full` |
+| Compose project | `tone-library-prod` | `tone-library-dev` |
 
 ### Usage
 
+Run these from the repo root:
+
 ```bash
-# Start the dev stack (db + api)
-docker compose -f deploy/docker-compose.dev-full.yml up -d
+# Start the dev stack (db + api). --build rebuilds the api image after code changes.
+docker compose -f deploy/docker-compose.dev.yml up -d --build
 
 # Check it's healthy
-docker compose -f deploy/docker-compose.dev-full.yml ps
+docker compose -f deploy/docker-compose.dev.yml ps
 
 # Tail backend logs
-docker compose -f deploy/docker-compose.dev-full.yml logs -f api
+docker compose -f deploy/docker-compose.dev.yml logs -f api
 
 # Connect with psql (locally or from any container that can reach 55432)
-docker compose -f deploy/docker-compose.dev-full.yml exec db psql -U pianosounds_dev_user -d pianosounds_dev
+docker compose -f deploy/docker-compose.dev.yml exec db psql -U pianosounds_dev_user -d pianosounds_dev
 
 # Stop (keeps data)
-docker compose -f deploy/docker-compose.dev-full.yml down
+docker compose -f deploy/docker-compose.dev.yml down
 
 # Stop AND wipe all data (nuclear option)
-docker compose -f deploy/docker-compose.dev-full.yml down -v
+docker compose -f deploy/docker-compose.dev.yml down -v
 ```
+
+> **Debugging the backend in IntelliJ?** Start only the database
+> (`docker compose -f deploy/docker-compose.dev.yml up -d db`) and run
+> `RolandToneLibraryApplication` from the IDE. The `application.yml`
+> defaults already point at this dev DB (`pianosounds_dev_user` / `devpass`
+> on `localhost:55432`), so no env vars are needed for the database. To
+> also serve the bundled instrument photos and emoji icons, set the working
+> directory to the repo root **or** provide `LOCAL_THUMBNAILS_DIR`,
+> `STATIC_ICONS_DIR` and `MIMO_REFS_FILE` — those paths are tuned for the
+> Docker image (`/app/data/...`), not for a native run.
 
 The frontend runs separately: `cd frontend && pnpm dev -- --hostname 0.0.0.0`.
 
