@@ -225,6 +225,24 @@ export const GENRE_TIPS: GenreTip[] = [
     heading: "Other signature sounds",
     blurb: "Eigenzinnige handtekening-combo's: Magical Piano, Star Theme, Goblins — durf vreemd te gaan.",
   },
+
+  // ── Artiest-signatuur ──
+  {
+    id: "artist-signature",
+    section: "Artiest-signatuur",
+    title: "Artiest-signatuur",
+    heading: "Artiest-signaturen",
+    blurb: "Herkenbare klanken van beroemde toetsenisten en producers — zet de combo en speel hun signature-sound na.",
+  },
+
+  // ── Filmscore ──
+  {
+    id: "filmscore",
+    section: "Filmscore",
+    title: "Filmscore",
+    heading: "Filmscore & soundtracks",
+    blurb: "Iconische filmmuziek-texturen: stapel orgel, strijkers, koor en pads voor cinematische grandeur.",
+  },
 ];
 
 export const genreById = new Map(GENRE_TIPS.map((g) => [g.id, g]));

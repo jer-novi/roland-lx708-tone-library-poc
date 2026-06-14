@@ -12,6 +12,8 @@ interface Props {
   /** Nu klinkende noten (MIDI-input + app-echo) → velocity, voor de overlay. */
   liveNotes?: ReadonlyMap<number, number>;
   height?: number;
+  /** "auto" = compacte C2–C6-as (breidt uit); "full88" = twee 44-toetsen-lanes (A0–C8). */
+  layout?: "auto" | "full88";
 }
 
 // Vaste, klavier-uitgelijnde toonhoogte-as (C2–C6); breidt alleen uit als de
@@ -37,6 +39,7 @@ export function PianoRoll({
   onSeek,
   liveNotes,
   height = 140,
+  layout = "auto",
 }: Props) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const widthRef = useRef(0);
@@ -63,75 +66,100 @@ export function PianoRoll({
     ctx.fillStyle = "rgba(255,255,255,0.03)";
     ctx.fillRect(0, 0, w, h);
 
-    // toonhoogte-bereik: vast C2–C6, uitgebreid voor uitschieters
-    let lo = DEFAULT_LO;
-    let hi = DEFAULT_HI;
-    for (const n of notes) {
-      if (n.midi < lo) lo = n.midi;
-      if (n.midi > hi) hi = n.midi;
-    }
-    if (liveNotes) {
-      for (const m of liveNotes.keys()) {
-        if (m < lo) lo = m;
-        if (m > hi) hi = m;
-      }
-    }
-    lo = Math.max(MIN_NOTE, lo);
-    hi = Math.min(MAX_NOTE, hi);
-
-    const pad = 3;
-    const range = Math.max(1, hi - lo);
-    const rowH = (h - pad * 2) / (range + 1);
-    // y van de bovenkant van de rij voor een noot (hoog = boven).
-    const yOf = (midi: number) => pad + (hi - midi) * rowH;
     const dur = Math.max(0.001, duration);
     const xOf = (t: number) => (t / dur) * w;
 
-    // C-gridlijnen + labels als toonhoogte-referentie
-    ctx.font = "9px ui-monospace, monospace";
-    ctx.textBaseline = "bottom";
-    for (let m = Math.ceil(lo / 12) * 12; m <= hi; m += 12) {
-      const y = yOf(m) + rowH;
-      ctx.strokeStyle = "rgba(255,255,255,0.12)";
+    // Tekent één toonhoogte-lane (loN..hiN) tussen yTop en yBottom.
+    const drawLane = (loN: number, hiN: number, yTop: number, yBottom: number) => {
+      const pad = 3;
+      const laneH = yBottom - yTop;
+      const range = Math.max(1, hiN - loN);
+      const rowH = (laneH - pad * 2) / (range + 1);
+      const yOf = (midi: number) => yTop + pad + (hiN - midi) * rowH;
+
+      // C-gridlijnen + labels als toonhoogte-referentie
+      ctx.font = "9px ui-monospace, monospace";
+      ctx.textBaseline = "bottom";
+      for (let m = Math.ceil(loN / 12) * 12; m <= hiN; m += 12) {
+        const y = yOf(m) + rowH;
+        ctx.strokeStyle = "rgba(255,255,255,0.12)";
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(w, y);
+        ctx.stroke();
+        ctx.fillStyle = "rgba(255,255,255,0.4)";
+        ctx.fillText(octaveName(m), 2, y - 1);
+      }
+
+      // overlay: nu klinkende noten (MIDI-input/echo) als volle-breedte band
+      if (liveNotes) {
+        ctx.fillStyle = "rgba(110,231,183,0.18)"; // emerald
+        liveNotes.forEach((_vel, m) => {
+          if (m < loN || m > hiN) return;
+          ctx.fillRect(0, yOf(m), w, Math.max(2, rowH));
+        });
+      }
+
+      // track-noten — noten die nu klinken (afspeelkop er middenin) lichten op
+      const noteH = Math.max(2, rowH - 0.5);
+      for (const n of notes) {
+        if (n.midi < loN || n.midi > hiN) continue;
+        const x = xOf(n.time);
+        const bw = Math.max(1.5, xOf(n.time + n.duration) - x);
+        const sounding = n.time <= position && position < n.time + n.duration;
+        if (sounding) {
+          ctx.fillStyle = "rgba(255,255,255,0.95)";
+          ctx.globalAlpha = 1;
+        } else {
+          ctx.fillStyle = accent;
+          ctx.globalAlpha = 0.5 + n.velocity * 0.5;
+        }
+        ctx.fillRect(x, yOf(n.midi), bw, noteH);
+      }
+      ctx.globalAlpha = 1;
+
+      // live-noot-markers aan de linkerrand (bovenop de band)
+      if (liveNotes) {
+        ctx.fillStyle = "rgba(110,231,183,0.95)";
+        liveNotes.forEach((_vel, m) => {
+          if (m < loN || m > hiN) return;
+          ctx.fillRect(0, yOf(m), 4, Math.max(2, rowH));
+        });
+      }
+    };
+
+    if (layout === "full88") {
+      // Twee gestapelde lanes: hoog boven (65–108), laag onder (21–64).
+      const mid = Math.round(h / 2);
+      drawLane(65, MAX_NOTE, 0, mid);
+      drawLane(MIN_NOTE, 64, mid, h);
+      ctx.strokeStyle = "rgba(255,255,255,0.18)";
       ctx.lineWidth = 1;
       ctx.beginPath();
-      ctx.moveTo(0, y);
-      ctx.lineTo(w, y);
+      ctx.moveTo(0, mid);
+      ctx.lineTo(w, mid);
       ctx.stroke();
-      ctx.fillStyle = "rgba(255,255,255,0.4)";
-      ctx.fillText(octaveName(m), 2, y - 1);
+    } else {
+      // Compacte as: vast C2–C6, uitgebreid voor uitschieters.
+      let lo = DEFAULT_LO;
+      let hi = DEFAULT_HI;
+      for (const n of notes) {
+        if (n.midi < lo) lo = n.midi;
+        if (n.midi > hi) hi = n.midi;
+      }
+      if (liveNotes) {
+        for (const m of liveNotes.keys()) {
+          if (m < lo) lo = m;
+          if (m > hi) hi = m;
+        }
+      }
+      lo = Math.max(MIN_NOTE, lo);
+      hi = Math.min(MAX_NOTE, hi);
+      drawLane(lo, hi, 0, h);
     }
 
-    // overlay: nu klinkende noten als volle-breedte band op de juiste rij
-    if (liveNotes) {
-      ctx.fillStyle = "rgba(110,231,183,0.18)"; // emerald
-      liveNotes.forEach((_vel, m) => {
-        if (m < lo || m > hi) return;
-        ctx.fillRect(0, yOf(m), w, Math.max(2, rowH));
-      });
-    }
-
-    // track-noten
-    const noteH = Math.max(2, rowH - 0.5);
-    for (const n of notes) {
-      const x = xOf(n.time);
-      const bw = Math.max(1.5, xOf(n.time + n.duration) - x);
-      ctx.fillStyle = accent;
-      ctx.globalAlpha = 0.5 + n.velocity * 0.5;
-      ctx.fillRect(x, yOf(n.midi), bw, noteH);
-    }
-    ctx.globalAlpha = 1;
-
-    // live-noot-markers aan de linkerrand (bovenop de band)
-    if (liveNotes) {
-      ctx.fillStyle = "rgba(110,231,183,0.95)";
-      liveNotes.forEach((_vel, m) => {
-        if (m < lo || m > hi) return;
-        ctx.fillRect(0, yOf(m), 4, Math.max(2, rowH));
-      });
-    }
-
-    // afspeelkop
+    // afspeelkop (volledige hoogte)
     const px = xOf(Math.min(dur, Math.max(0, position)));
     ctx.strokeStyle = "rgba(255,255,255,0.85)";
     ctx.lineWidth = 1.5;
@@ -139,7 +167,7 @@ export function PianoRoll({
     ctx.moveTo(px, 0);
     ctx.lineTo(px, h);
     ctx.stroke();
-  }, [notes, duration, position, liveNotes, height]);
+  }, [notes, duration, position, liveNotes, height, layout]);
 
   useEffect(() => {
     draw();

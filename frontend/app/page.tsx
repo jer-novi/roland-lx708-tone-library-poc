@@ -19,6 +19,8 @@ import { CombosTab } from "@/components/CombosTab";
 import { RecentlyPlayedRow } from "@/components/RecentlyPlayedRow";
 import { ToneCard } from "@/components/ToneCard";
 import { ToneModal } from "@/components/ToneModal";
+import { ShortcutsOverlay } from "@/components/ShortcutsOverlay";
+import { LayerSpike } from "@/components/LayerSpike";
 
 export default function Home() {
   const [category, setCategory] = useState<string | null>(null);
@@ -31,11 +33,31 @@ export default function Home() {
   );
   const [openTone, setOpenTone] = useState<ToneDto | null>(null);
   const [expandedKey, setExpandedKey] = useState<string | null>(null);
+  const [showShortcuts, setShowShortcuts] = useState(false);
   const [studioTab, setStudioTab] = useState<"zones" | "combos">("zones");
   const { favorites, toggle } = useFavorites();
   const { recent, record, clear: clearRecent } = useRecentlyPlayed();
   const midi = useMidi();
   const midiAvailable = midi.status !== "unsupported";
+
+  // "?" opent het sneltoetsen-overzicht (niet tijdens typen in een veld).
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== "?") return;
+      const el = e.target as HTMLElement;
+      if (
+        el.tagName === "INPUT" ||
+        el.tagName === "TEXTAREA" ||
+        el.tagName === "SELECT" ||
+        el.isContentEditable
+      )
+        return;
+      e.preventDefault();
+      setShowShortcuts(true);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
 
   // --- Filters in de URL: bij laden uitlezen, bij wijzigen spiegelen ---
   const [urlApplied, setUrlApplied] = useState(false);
@@ -341,7 +363,9 @@ export default function Home() {
 
       <StudioPanel studio={studio} hidden={!midiAvailable} />
 
-      {midiAvailable && <SpeelLab midi={midi} />}
+      {midiAvailable && <SpeelLab midi={midi} studio={studio} />}
+
+      {midiAvailable && <LayerSpike midi={midi} tones={data?.tones ?? []} />}
 
       <RecentlyPlayedRow
         recent={recent}
@@ -446,6 +470,11 @@ export default function Home() {
           midiAvailable={midiAvailable}
         />
       )}
+
+      <ShortcutsOverlay
+        open={showShortcuts}
+        onClose={() => setShowShortcuts(false)}
+      />
 
       <footer className="mt-16 border-t border-border-soft pt-6 text-xs text-muted">
         Gebaseerd op de officiële Roland LX708 Tone List · Wikipedia-content

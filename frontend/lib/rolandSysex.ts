@@ -110,17 +110,20 @@ export const ADDR = {
   ambience: [0x01, 0x00, 0x02, 0x1a],
   headphones3D: [0x01, 0x00, 0x02, 0x1b],
   brilliance: [0x01, 0x00, 0x02, 0x1c], // value−64
+  transposeMode: [0x01, 0x00, 0x02, 0x1e], // 0=kbd+song 1=kbd 2=song
   metronomeBeat: [0x01, 0x00, 0x02, 0x1f],
   metronomePattern: [0x01, 0x00, 0x02, 0x20],
   metronomeVolume: [0x01, 0x00, 0x02, 0x21],
   metronomeTone: [0x01, 0x00, 0x02, 0x22],
 
   // Status (01 00 01 xx) — read-only
+  keyTransposeRead: [0x01, 0x00, 0x01, 0x01], // value−64 = halve tonen
   sequencerStatus: [0x01, 0x00, 0x01, 0x03],
   sequencerTempo: [0x01, 0x00, 0x01, 0x08], // 2 bytes: hi*128+lo
   metronomeStatus: [0x01, 0x00, 0x01, 0x0f], // 0/1
 
   // Transport / metronoom (01 00 03 / 05 xx)
+  keyTranspose: [0x01, 0x00, 0x03, 0x07], // write: value = halve tonen + 64
   sequencerTempoWrite: [0x01, 0x00, 0x03, 0x09], // 2 bytes [bpm>>7, bpm&127]
   recordStandby: [0x01, 0x00, 0x03, 0x1b], // 0=annuleer 1=standby
   metronomeSwitch: [0x01, 0x00, 0x03, 0x1a], // 0/1/2
@@ -155,6 +158,44 @@ export const encodeTempo = (bpm: number): number[] => [
   (bpm >> 7) & 0x7f,
   bpm & 0x7f,
 ];
+
+// ---- Key transpose ----
+// De LX708-knop loopt van −6 t/m +5 halve tonen; dat zijn precies 12 waarden,
+// dus één per grondtoon (tritonus-split rond midden C = MIDI 60).
+export const TRANSPOSE_MIN = -6;
+export const TRANSPOSE_MAX = 5;
+export const MIDDLE_C = 60;
+
+export const clampTranspose = (t: number): number =>
+  Math.max(TRANSPOSE_MIN, Math.min(TRANSPOSE_MAX, Math.round(t)));
+
+/** Codeert key transpose (DT1 keyTranspose): byte = halve tonen + 64. */
+export const encodeTranspose = (semitones: number): number[] => [
+  (clampTranspose(semitones) + 64) & 0x7f,
+];
+
+/** Decodeert key transpose (RQ1 keyTransposeRead): halve tonen = byte − 64. */
+export const decodeTranspose = (byte: number): number => byte - 64;
+
+/** Klinkende grondtoon-MIDI bij transpose `t`, gemeten vanaf midden C. */
+export const transposeToRootMidi = (t: number): number =>
+  MIDDLE_C + clampTranspose(t);
+
+// ---- Octaaf-shift per zone (Split/Dual) ----
+// Bevestigd op de LX708 (capture 2026-06-14): bereik −3..+3, byte = octaven + 64.
+export const OCTAVE_MIN = -3;
+export const OCTAVE_MAX = 3;
+
+export const clampOctaveShift = (o: number): number =>
+  Math.max(OCTAVE_MIN, Math.min(OCTAVE_MAX, Math.round(o)));
+
+/** Codeert octaaf-shift: byte = octaven + 64. */
+export const encodeOctaveShift = (octaves: number): number[] => [
+  (clampOctaveShift(octaves) + 64) & 0x7f,
+];
+
+/** Decodeert octaaf-shift: octaven = byte − 64. */
+export const decodeOctaveShift = (byte: number): number => byte - 64;
 
 /**
  * Vertaalt een catalogus-tone naar `[categorie, numHi, numLo]`.

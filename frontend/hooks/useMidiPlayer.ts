@@ -30,6 +30,8 @@ const TAIL_S = 0.4; // naloop na de laatste noot voor we automatisch stoppen
 
 type PlayerMidi = Pick<MidiState, "sendRaw" | "panic" | "channel">;
 
+const clampNote = (n: number) => Math.max(0, Math.min(127, n));
+
 /**
  * Speelt een geparset MIDI-bestand af op de piano met een look-ahead scheduler
  * (zelfde patroon als Web-Audio-timing): er staat nooit meer dan ~100 ms in de
@@ -39,11 +41,20 @@ type PlayerMidi = Pick<MidiState, "sendRaw" | "panic" | "channel">;
  * worden niet in de keyboard-echo gespiegeld — daarvoor is de piano-roll; dat
  * voorkomt re-renders op noot-tempo.)
  */
-export function useMidiPlayer(midi: PlayerMidi) {
+export function useMidiPlayer(midi: PlayerMidi, transpose = 0) {
   const midiRef = useRef(midi);
   useEffect(() => {
     midiRef.current = midi;
   }, [midi]);
+
+  // Huidige key-transpose (volgt het wiel). De waarde wordt per afspeel-run
+  // bevroren (runTransposeRef) zodat het draaien aan het wiel midden in een
+  // song geen frase over twee toonsoorten splitst of noten laat hangen.
+  const transposeRef = useRef(transpose);
+  useEffect(() => {
+    transposeRef.current = transpose;
+  }, [transpose]);
+  const runTransposeRef = useRef(transpose);
 
   const [song, setSong] = useState<LoadedSong | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -103,12 +114,13 @@ export function useMidiPlayer(midi: PlayerMidi) {
     while (idxRef.current < evs.length && evs[idxRef.current].t <= horizon) {
       const e = evs[idxRef.current++];
       const ts = startPerfRef.current + e.t * 1000;
+      const note = clampNote(e.midi + runTransposeRef.current);
       if (e.type === 1) {
-        m.sendRaw([0x90 | c, e.midi, e.vel], ts);
-        activeRef.current.add(e.midi);
+        m.sendRaw([0x90 | c, note, e.vel], ts);
+        activeRef.current.add(note);
       } else {
-        m.sendRaw([0x80 | c, e.midi, 0], ts);
-        activeRef.current.delete(e.midi);
+        m.sendRaw([0x80 | c, note, 0], ts);
+        activeRef.current.delete(note);
       }
     }
     const dur = songRef.current?.duration ?? 0;
@@ -122,6 +134,7 @@ export function useMidiPlayer(midi: PlayerMidi) {
   const startClock = useCallback(
     (fromSec: number) => {
       const evs = eventsRef.current;
+      runTransposeRef.current = transposeRef.current; // bevries de transpose voor deze run
       startPerfRef.current = performance.now() - fromSec * 1000;
       let i = 0;
       while (i < evs.length && evs[i].t < fromSec) i++;

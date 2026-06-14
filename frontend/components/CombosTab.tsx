@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import Link from "next/link";
 import type { ToneDto } from "@/lib/types";
 import type { Studio } from "@/hooks/useStudio";
@@ -8,11 +8,19 @@ import { TONE_COMBOS, resolveCombo, type ResolvedCombo } from "@/lib/toneCombos"
 import { genreById, gidsAnchor } from "@/lib/genreTips";
 
 const SECTION_ORDER = [
+  "Artiest-signatuur",
+  "Filmscore",
   "Elektronisch",
   "Gitaar & ukelele",
   "Akoestisch & klassiek",
   "Experimenteel & creatief",
 ];
+
+const sectionOf = (genreId: string) => genreById.get(genreId)?.section ?? "Overig";
+const bySectionOrder = (a: string, b: string) =>
+  SECTION_ORDER.indexOf(a) - SECTION_ORDER.indexOf(b);
+
+type TypeFilter = "all" | "dual" | "split";
 
 interface Props {
   studio: Studio;
@@ -20,26 +28,52 @@ interface Props {
 }
 
 export function CombosTab({ studio, tones }: Props) {
+  const [typeFilter, setTypeFilter] = useState<TypeFilter>("all");
+  const [hiddenSections, setHiddenSections] = useState<ReadonlySet<string>>(new Set());
+  const [collapsed, setCollapsed] = useState<ReadonlySet<string>>(new Set());
+
+  // Alle sectienamen (stabiel, los van de filters) voor de categorie-chips.
+  const allSections = useMemo(() => {
+    const s = new Set<string>();
+    for (const def of TONE_COMBOS) s.add(sectionOf(def.genreId));
+    return [...s].sort(bySectionOrder);
+  }, []);
+
+  // Gegroepeerd per sectie, gefilterd op type + verborgen categorieën.
   const bySection = useMemo(() => {
     const groups = new Map<string, ResolvedCombo[]>();
     for (const def of TONE_COMBOS) {
-      const section = genreById.get(def.genreId)?.section ?? "Overig";
+      if (typeFilter !== "all" && def.type !== typeFilter) continue;
+      const section = sectionOf(def.genreId);
+      if (hiddenSections.has(section)) continue;
       const list = groups.get(section) ?? [];
       list.push(resolveCombo(def, tones));
       groups.set(section, list);
     }
-    return [...groups.entries()].sort(
-      (a, b) => SECTION_ORDER.indexOf(a[0]) - SECTION_ORDER.indexOf(b[0])
-    );
-  }, [tones]);
+    return [...groups.entries()].sort((a, b) => bySectionOrder(a[0], b[0]));
+  }, [tones, typeFilter, hiddenSections]);
 
+  const shownCount = bySection.reduce((n, [, c]) => n + c.length, 0);
+
+  const toggleInSet = (
+    setter: typeof setHiddenSections,
+    value: string
+  ) =>
+    setter((prev) => {
+      const next = new Set(prev);
+      if (next.has(value)) next.delete(value);
+      else next.add(value);
+      return next;
+    });
+
+  // Verras me: kies willekeurig uit de nu zichtbare (gefilterde) combinaties.
+  // (AI-gestuurde slimme suggesties zijn een aparte, latere feature.)
   const randomize = () => {
-    const playable = TONE_COMBOS.map((d) => resolveCombo(d, tones)).filter(
-      (c) => c.tone1 && c.tone2
-    );
-    if (playable.length === 0) return;
-    const pick = playable[Math.floor(Math.random() * playable.length)];
-    applyCombo(studio, pick);
+    const pool = bySection
+      .flatMap(([, combos]) => combos)
+      .filter((c) => c.tone1 && c.tone2);
+    if (pool.length === 0) return;
+    applyCombo(studio, pool[Math.floor(Math.random() * pool.length)]);
   };
 
   if (tones.length === 0) {
@@ -47,33 +81,86 @@ export function CombosTab({ studio, tones }: Props) {
   }
 
   return (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between gap-3">
-        <p className="text-xs text-muted">
-          {TONE_COMBOS.length} kant-en-klare combinaties — één klik zet modus, beide klanken,
-          splitpunt en balans.
-        </p>
+    <div className="space-y-5">
+      <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+        <div className="flex gap-1" role="group" aria-label="Type-filter">
+          {(["all", "split", "dual"] as const).map((t) => (
+            <button
+              key={t}
+              onClick={() => setTypeFilter(t)}
+              aria-pressed={typeFilter === t}
+              className={`rounded-lg px-2.5 py-1 text-xs font-medium transition ${
+                typeFilter === t
+                  ? "bg-accent text-[#06121f]"
+                  : "border border-border-soft text-muted hover:text-foreground"
+              }`}
+            >
+              {t === "all" ? "Alle" : t === "split" ? "Split" : "Dual"}
+            </button>
+          ))}
+        </div>
+
+        <span className="text-border-soft">|</span>
+
+        <div className="flex flex-wrap gap-1" role="group" aria-label="Categorie-filter">
+          {allSections.map((s) => {
+            const on = !hiddenSections.has(s);
+            return (
+              <button
+                key={s}
+                onClick={() => toggleInSet(setHiddenSections, s)}
+                aria-pressed={on}
+                className={`rounded-full px-2.5 py-1 text-[11px] font-medium transition ${
+                  on
+                    ? "bg-accent-soft text-accent"
+                    : "border border-border-soft text-muted/60 hover:text-foreground"
+                }`}
+              >
+                {s}
+              </button>
+            );
+          })}
+        </div>
+
         <button
           onClick={randomize}
-          disabled={!studio.ready}
-          className="shrink-0 rounded-lg bg-accent-soft px-3 py-1.5 text-xs font-medium text-accent transition hover:brightness-125 disabled:opacity-40"
+          disabled={!studio.ready || shownCount === 0}
+          className="ml-auto shrink-0 rounded-lg bg-accent-soft px-3 py-1.5 text-xs font-medium text-accent transition hover:brightness-125 disabled:opacity-40"
         >
           🎲 Verras me
         </button>
       </div>
 
-      {bySection.map(([section, combos]) => (
-        <section key={section}>
-          <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-accent">
-            {section}
-          </h3>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {combos.map((c) => (
-              <ComboCard key={c.def.id} combo={c} studio={studio} />
-            ))}
-          </div>
-        </section>
-      ))}
+      <p className="text-xs text-muted">
+        {shownCount} {shownCount === 1 ? "combinatie" : "combinaties"} — één klik zet modus,
+        beide klanken, splitpunt en balans.
+      </p>
+
+      {bySection.map(([section, combos]) => {
+        const isCollapsed = collapsed.has(section);
+        return (
+          <section key={section}>
+            <button
+              onClick={() => toggleInSet(setCollapsed, section)}
+              aria-expanded={!isCollapsed}
+              className="mb-2 flex w-full items-center gap-2 text-xs font-semibold uppercase tracking-wide text-accent"
+            >
+              <span className="text-[10px]">{isCollapsed ? "▸" : "▾"}</span>
+              {section}
+              <span className="rounded-full bg-white/5 px-1.5 py-0.5 text-[10px] font-normal text-muted">
+                {combos.length}
+              </span>
+            </button>
+            {!isCollapsed && (
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                {combos.map((c) => (
+                  <ComboCard key={c.def.id} combo={c} studio={studio} />
+                ))}
+              </div>
+            )}
+          </section>
+        );
+      })}
     </div>
   );
 }

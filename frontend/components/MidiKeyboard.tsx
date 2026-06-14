@@ -67,6 +67,24 @@ export function MidiKeyboard({
   }, []);
   const whiteWidth = 100 / whiteCount;
 
+  // Positie (links %) van de splitlijn = linkerrand van de eerste witte toets
+  // met note >= splitPoint (de start van de rechterzone).
+  const splitLeftPct = useMemo(() => {
+    if (splitPoint == null) return null;
+    const firstRight = keys.find((k) => !k.black && k.note >= splitPoint);
+    return firstRight ? firstRight.whiteIndex * whiteWidth : null;
+  }, [splitPoint, keys, whiteWidth]);
+
+  // Roze flits zodra het splitpunt verandert (of bij openen in split).
+  const [splitFlash, setSplitFlash] = useState(false);
+  useEffect(() => {
+    if (splitPoint == null) return;
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- korte visuele flits bij wijziging
+    setSplitFlash(true);
+    const id = window.setTimeout(() => setSplitFlash(false), 800);
+    return () => clearTimeout(id);
+  }, [splitPoint]);
+
   const press = useCallback(
     (note: number) => {
       setPressed((prev) => {
@@ -179,7 +197,9 @@ export function MidiKeyboard({
                   velocity ? "bg-accent" : "bg-zinc-900"
                 } ${interactive ? "cursor-pointer" : ""}`}
                 style={{
-                  left: `${(k.whiteIndex + 0.68) * whiteWidth}%`,
+                  // whiteIndex = aantal witte toetsen vóór deze zwarte = de slot
+                  // van de witte toets rechts ervan; centreer op die grens.
+                  left: `${(k.whiteIndex - 0.32) * whiteWidth}%`,
                   width: `${whiteWidth * 0.64}%`,
                   opacity: velocity ? 0.45 + (velocity / 127) * 0.55 : 1,
                 }}
@@ -187,6 +207,34 @@ export function MidiKeyboard({
               />
             );
           })}
+
+        {splitLeftPct != null && (
+          <>
+            <div
+              className="pointer-events-none absolute inset-y-0 left-0"
+              style={{ width: `${splitLeftPct}%`, zIndex: 5, background: "rgba(56,189,248,0.10)" }}
+              aria-hidden
+            />
+            <div
+              className="pointer-events-none absolute inset-y-0 right-0"
+              style={{ left: `${splitLeftPct}%`, zIndex: 5, background: "rgba(16,185,129,0.08)" }}
+              aria-hidden
+            />
+            <div
+              className="pointer-events-none absolute inset-y-0"
+              style={{
+                left: `${splitLeftPct}%`,
+                width: 2,
+                marginLeft: -1,
+                zIndex: 20,
+                background: splitFlash ? "#f472b6" : "rgba(255,255,255,0.55)",
+                boxShadow: splitFlash ? "0 0 8px 1px #f472b6" : "none",
+                transition: "background 200ms ease, box-shadow 200ms ease",
+              }}
+              aria-hidden
+            />
+          </>
+        )}
       </div>
 
       <div className="mt-2 flex min-h-5 flex-wrap items-center gap-x-3 gap-y-1 font-mono text-xs text-muted">

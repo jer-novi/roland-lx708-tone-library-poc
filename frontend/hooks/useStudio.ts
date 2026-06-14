@@ -4,7 +4,13 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import type { MidiState } from "@/hooks/useMidi";
 import type { ToneDto } from "@/lib/types";
 import { useRolandSysex, type ToneZone } from "@/hooks/useRolandSysex";
-import { ADDR, ToneCategory, type KeyboardModeName } from "@/lib/rolandSysex";
+import {
+  ADDR,
+  ToneCategory,
+  clampTranspose,
+  clampOctaveShift,
+  type KeyboardModeName,
+} from "@/lib/rolandSysex";
 
 const catIdx = (t: ToneDto) => ToneCategory[t.category] ?? 99;
 
@@ -35,7 +41,19 @@ export function useStudio(midi: MidiState, tones: ToneDto[]) {
   // bereik per modus nog te bevestigen met de probe (adres 03 split / 05 dual).
   const [balanceStep, setBalanceStepState] = useState(0);
   const BALANCE_CENTER = 64;
+  // Octaaf-shift per zone (−3..+3). De "right"-zone deelt state tussen split/dual
+  // maar stuurt naar een modus-afhankelijk adres (zie useRolandSysex).
+  const [zoneOctave, setZoneOctaveState] = useState<Record<ToneZone, number>>({
+    right: 0,
+    splitLeft: 0,
+    dual2: 0,
+  });
   const [masterVolume, setMasterVolumeState] = useState(60); // 0–100 (paneelschaal)
+  // Key transpose (−6..+5 halve tonen) + sync-modus. Sync aan: het wiel stuurt
+  // de hardware én de Speel-lab-grondtonen volgen mee. Sync uit (vrije modus):
+  // transpose = 0 en de octaaf-keuze in het lab is weer actief.
+  const [transpose, setTransposeState] = useState(0);
+  const [syncMode, setSyncModeState] = useState(true);
 
   const ready = midi.status === "ready" && midi.outputs.length > 0;
   const isZoneMode = mode === "split" || mode === "dual";
@@ -145,6 +163,68 @@ export function useStudio(midi: MidiState, tones: ToneDto[]) {
     };
   }, [ready, syncVolume]);
 
+  /**
+   * Zet de key transpose (−6..+5) op de piano en schakelt sync-modus in
+   * ("wiel aanraken → sync aan"). Aangeroepen door het wiel én de grondtoon-
+   * dropdown in het Speel-lab.
+   */
+  const setTranspose = useCallback(
+    (t: number) => {
+      const v = clampTranspose(t);
+      setTransposeState(v);
+      setSyncModeState(true);
+      sysex.setTranspose(v);
+    },
+    [sysex]
+  );
+
+  /**
+   * Wisselt tussen sync-modus (transpose actief) en vrije modus (octaven actief).
+   * Naar vrij → hardware-transpose terug op 0 zodat het klavier concert speelt.
+   */
+  const setSyncMode = useCallback(
+    (on: boolean) => {
+      setSyncModeState(on);
+      if (!on) {
+        setTransposeState(0);
+        sysex.setTranspose(0);
+      }
+    },
+    [sysex]
+  );
+
+  /**
+   * Leest de key transpose van de piano (RQ1) en zet de schuif daarop — de
+   * fysieke transpose-knop zendt niets uit. Een waarde ≠ 0 betekent dat de
+   * transpose in gebruik is, dus dan ook sync-modus aan. Zelfde on-demand-
+   * patroon als {@link syncVolume}.
+   */
+  const syncTranspose = useCallback(async () => {
+    const t = await sysex.readTranspose();
+    if (t == null) return;
+    setTransposeState(clampTranspose(t));
+    if (t !== 0) setSyncModeState(true);
+  }, [sysex]);
+
+  // Lees transpose mee bij (her)verbinden en bij tab-focus, net als het volume.
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- eenmalige RQ1-uitlezing bij (her)verbinden
+    if (ready) void syncTranspose();
+  }, [ready, midi.selectedOutputId, midi.outputs.length, syncTranspose]);
+
+  useEffect(() => {
+    if (!ready) return;
+    const resync = () => {
+      if (document.visibilityState === "visible") void syncTranspose();
+    };
+    window.addEventListener("focus", resync);
+    document.addEventListener("visibilitychange", resync);
+    return () => {
+      window.removeEventListener("focus", resync);
+      document.removeEventListener("visibilitychange", resync);
+    };
+  }, [ready, syncTranspose]);
+
   /** Zet de balans-stap (−8..+8); stuurt byte = 64 + stap naar de actieve modus. */
   const changeBalance = useCallback(
     (step: number) => {
@@ -157,6 +237,18 @@ export function useStudio(midi: MidiState, tones: ToneDto[]) {
     [mode, sysex]
   );
 
+  /** Verstelt de octaaf-shift (−3..+3) van een zone naar het juiste modus-adres. */
+  const changeZoneOctave = useCallback(
+    (zone: ToneZone, delta: number) => {
+      setZoneOctaveState((prev) => {
+        const next = clampOctaveShift((prev[zone] ?? 0) + delta);
+        sysex.setZoneOctave(zone, mode === "split", next);
+        return { ...prev, [zone]: next };
+      });
+    },
+    [mode, sysex]
+  );
+
   const syncFromPiano = useCallback(async () => {
     const s = await sysex.readStatus();
     if (s.keyboardMode != null) {
@@ -164,6 +256,10 @@ export function useStudio(midi: MidiState, tones: ToneDto[]) {
       if (name) setMode(name);
     }
     if (s.masterVolume != null) setMasterVolumeState(s.masterVolume);
+    if (s.transpose != null) {
+      setTransposeState(clampTranspose(s.transpose));
+      if (s.transpose !== 0) setSyncModeState(true);
+    }
     const match = (z: { category: number; num: number } | null) =>
       z ? ordered.find((t) => ToneCategory[t.category] === z.category && t.toneNumber - 1 === z.num) ?? null : null;
     setZoneTone((zt) => ({
@@ -171,6 +267,20 @@ export function useStudio(midi: MidiState, tones: ToneDto[]) {
       right: match(s.toneRight) ?? zt.right,
       dual2: match(s.toneDual2) ?? zt.dual2,
     }));
+    // Octaaf-shift van de actieve zones meelezen (alleen in split/dual).
+    if (s.keyboardMode === 1 || s.keyboardMode === 2) {
+      const split = s.keyboardMode === 1;
+      const other: ToneZone = split ? "splitLeft" : "dual2";
+      const [rightOct, otherOct] = await Promise.all([
+        sysex.readZoneOctave("right", split),
+        sysex.readZoneOctave(other, split),
+      ]);
+      setZoneOctaveState((prev) => ({
+        ...prev,
+        right: rightOct ?? prev.right,
+        [other]: otherOct ?? prev[other],
+      }));
+    }
   }, [sysex, ordered]);
 
   /** Past een kant-en-klare combinatie in één keer toe (modus + beide zones + split/balans). */
@@ -227,9 +337,16 @@ export function useStudio(midi: MidiState, tones: ToneDto[]) {
     setSplitPointAbs,
     balanceStep,
     changeBalance,
+    zoneOctave,
+    changeZoneOctave,
     masterVolume,
     setMasterVolume,
     syncVolume,
+    transpose,
+    setTranspose,
+    syncMode,
+    setSyncMode,
+    syncTranspose,
     applyCombo,
     syncFromPiano,
   };

@@ -10,6 +10,10 @@ import {
   buildRQ1,
   encodeTone,
   encodeTempo,
+  encodeTranspose,
+  decodeTranspose,
+  encodeOctaveShift,
+  decodeOctaveShift,
   parseDT1,
 } from "@/lib/rolandSysex";
 
@@ -20,6 +24,19 @@ const ZONE_ADDR: Record<ToneZone, readonly number[]> = {
   splitLeft: ADDR.toneSplitLeft,
   dual2: ADDR.toneDual2,
 };
+
+/**
+ * Octaaf-shift-adres per zone, modus-afhankelijk (bevestigd op de LX708):
+ * de "right"-zone gebruikt in split `splitRightOctave` (16) en in dual
+ * `dualTone1Octave` (17); links → `splitOctaveShift` (02); tone 2 →
+ * `dualOctaveShift` (04).
+ */
+function zoneOctaveAddr(zone: ToneZone, split: boolean): readonly number[] | null {
+  if (zone === "right") return split ? ADDR.splitRightOctave : ADDR.dualTone1Octave;
+  if (zone === "splitLeft") return ADDR.splitOctaveShift;
+  if (zone === "dual2") return ADDR.dualOctaveShift;
+  return null;
+}
 
 /**
  * Bestuurt de LX708 via de ongedocumenteerde Roland DT1/RQ1-adresmap.
@@ -103,6 +120,27 @@ export function useRolandSysex(
     [write]
   );
 
+  /** Octaaf-shift (−3..+3) van een zone; `split` = of we in split-modus zitten. */
+  const setZoneOctave = useCallback(
+    (zone: ToneZone, split: boolean, octaves: number) => {
+      const addr = zoneOctaveAddr(zone, split);
+      if (!addr) return false;
+      return write(addr, encodeOctaveShift(octaves));
+    },
+    [write]
+  );
+
+  /** Leest de octaaf-shift van een zone (RQ1). */
+  const readZoneOctave = useCallback(
+    async (zone: ToneZone, split: boolean): Promise<number | null> => {
+      const addr = zoneOctaveAddr(zone, split);
+      if (!addr) return null;
+      const r = await read(addr, 1);
+      return r && r[0] != null ? decodeOctaveShift(r[0]) : null;
+    },
+    [read]
+  );
+
   /** Balans 0–127 (midden = 64). */
   const setSplitBalance = useCallback(
     (value: number) => write(ADDR.splitBalance, [value & 0x7f]),
@@ -124,6 +162,12 @@ export function useRolandSysex(
     [write]
   );
 
+  /** Zet de key transpose (−6..+5 halve tonen) op de piano. */
+  const setTranspose = useCallback(
+    (semitones: number) => write(ADDR.keyTranspose, encodeTranspose(semitones)),
+    [write]
+  );
+
   // ---- Transport / metronoom (knop-simulatie) ----
   const playStop = useCallback(() => write(ADDR.btnPlayStop, [0x00]), [write]);
   const recordStandby = useCallback(
@@ -135,21 +179,30 @@ export function useRolandSysex(
     [write]
   );
 
+  /** Leest enkel de key transpose (RQ1) — voor on-demand resync. */
+  const readTranspose = useCallback(async (): Promise<number | null> => {
+    const t = await read(ADDR.keyTransposeRead, 1);
+    return t && t[0] != null ? decodeTranspose(t[0]) : null;
+  }, [read]);
+
   // ---- Status uitlezen ----
   const readStatus = useCallback(async () => {
-    const [mode, metronome, tempo, volume, toneRight, toneDual2] = await Promise.all([
-      read(ADDR.keyboardMode, 1),
-      read(ADDR.metronomeStatus, 1),
-      read(ADDR.sequencerTempo, 2),
-      read(ADDR.masterVolume, 1),
-      read(ADDR.toneRight, 3),
-      read(ADDR.toneDual2, 3),
-    ]);
+    const [mode, metronome, tempo, volume, transpose, toneRight, toneDual2] =
+      await Promise.all([
+        read(ADDR.keyboardMode, 1),
+        read(ADDR.metronomeStatus, 1),
+        read(ADDR.sequencerTempo, 2),
+        read(ADDR.masterVolume, 1),
+        read(ADDR.keyTransposeRead, 1),
+        read(ADDR.toneRight, 3),
+        read(ADDR.toneDual2, 3),
+      ]);
     return {
       keyboardMode: mode?.[0] ?? null,
       metronomeOn: metronome ? metronome[0] === 1 : null,
       tempoBpm: tempo ? tempo[0] * 128 + tempo[1] : null,
       masterVolume: volume?.[0] ?? null,
+      transpose: transpose?.[0] != null ? decodeTranspose(transpose[0]) : null,
       toneRight: toneRight ? { category: toneRight[0], num: toneRight[1] * 128 + toneRight[2] } : null,
       toneDual2: toneDual2 ? { category: toneDual2[0], num: toneDual2[1] * 128 + toneDual2[2] } : null,
     };
@@ -163,10 +216,14 @@ export function useRolandSysex(
     setKeyboardMode,
     setZoneTone,
     setSplitPoint,
+    setZoneOctave,
+    readZoneOctave,
     setSplitBalance,
     setDualBalance,
     setMasterVolume,
     setTempo,
+    setTranspose,
+    readTranspose,
     playStop,
     recordStandby,
     metronomeToggle,

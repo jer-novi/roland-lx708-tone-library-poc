@@ -55,9 +55,9 @@ F0 41 <devID> 00 00 00 28 <cmd> <adres: 4 bytes> <data/lengte> <checksum> F7
 |---|---|---|---|
 | 01 00 02 00 | **Keyboard-modus** | 1 | 0=single, 1=split, 2=dual, 3=twin |
 | 01 00 02 01 | Split point | 1 | MIDI-notenummer |
-| 01 00 02 02 | Split octave shift | 1 | `waarde − 64` = octaven |
+| 01 00 02 02 | Split octave shift (links) | 1 | `waarde − 64`; bereik −3..+3 (bevestigd 2026-06-14) |
 | 01 00 02 03 | Split balance | 1 | direct |
-| 01 00 02 04 | Dual octave shift | 1 | `waarde − 64` = octaven |
+| 01 00 02 04 | Dual octave shift (tone 2) | 1 | `waarde − 64`; bereik −3..+3 (bevestigd 2026-06-14) |
 | 01 00 02 05 | Dual balance | 1 | midden=64 |
 | 01 00 02 06 | Twin-piano-modus | 1 | direct |
 | 01 00 02 07 | **Tone (single)** | 3 | `[categorie, num÷128, num%128]` |
@@ -65,6 +65,8 @@ F0 41 <devID> 00 00 00 28 <cmd> <adres: 4 bytes> <data/lengte> <checksum> F7
 | 01 00 02 0D | Tone (dual) | 3 | idem |
 | 01 00 02 10 | Song-nummer | 3 | idem |
 | 01 00 02 13 | **Master volume** | 1 | 0–100 (paneelschaal) |
+| 01 00 02 16 | Split octave shift (rechts) | 1 | `waarde − 64`; bereik −3..+3 (bevestigd 2026-06-14) |
+| 01 00 02 17 | Dual octave shift (tone 1) | 1 | `waarde − 64`; bereik −3..+3 (bevestigd 2026-06-14) |
 | 01 00 02 18 | Master tuning | 2 | `Hz = (4144 + raw)/10`; A4=440 → raw=256 |
 | 01 00 02 1A | Ambience level | 1 | direct |
 | 01 00 02 1C | Brilliance | 1 | direct |

@@ -1,16 +1,85 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Chord, Scale, Note } from "tonal";
 import type { MidiState } from "@/hooks/useMidi";
+import type { Studio } from "@/hooks/useStudio";
 import { useMidiPlayer } from "@/hooks/useMidiPlayer";
 import { useChartPlayer } from "@/hooks/useChartPlayer";
 import { MidiTracksTab } from "@/components/MidiTracksTab";
 import { PROGRESSIONS, resolveProgression } from "@/lib/progressions";
 import { progressionToChart } from "@/lib/chordChart";
 import type { CompStyle } from "@/lib/chordVoicing";
+import {
+  TRANSPOSE_MIN,
+  TRANSPOSE_MAX,
+  transposeToRootMidi,
+} from "@/lib/rolandSysex";
 
 const ROOTS = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+
+// Transpose-stappen oplopend vanaf de laagste klank (−6 = F#3) t/m +5 = F4.
+const TRANSPOSE_STEPS = Array.from(
+  { length: TRANSPOSE_MAX - TRANSPOSE_MIN + 1 },
+  (_, i) => TRANSPOSE_MIN + i
+);
+
+/** Pitch-class (0–11) → kleinste transpose binnen −6..+5 (tritonus-split). */
+const pcToTranspose = (pc: number) => (pc <= 5 ? pc : pc - 12);
+
+/**
+ * Grondtoon-keuze. In sync-modus gekoppeld aan het transpose-wiel (beperkt tot
+ * −6..+5, oplopend vanaf de laagste klank); in vrije modus een gewone
+ * grondtoon-keuze die met de octaaf-knop samenwerkt.
+ */
+function GrondtoonSelect({
+  studio,
+  freeRoot,
+  onFreeRoot,
+}: {
+  studio: Studio;
+  freeRoot: string;
+  onFreeRoot: (r: string) => void;
+}) {
+  if (studio.syncMode) {
+    return (
+      <label
+        className="flex items-center gap-1.5"
+        title="Gekoppeld aan het transpose-wiel — kies een octaaf via de vrije modus"
+      >
+        🔗 Grondtoon
+        <select
+          value={studio.transpose}
+          onChange={(e) => studio.setTranspose(Number(e.target.value))}
+          className="rounded-lg border border-border-soft bg-surface px-2 py-1 text-foreground"
+        >
+          {TRANSPOSE_STEPS.map((t) => (
+            <option key={t} value={t}>
+              {Note.fromMidi(transposeToRootMidi(t))} ({t > 0 ? "+" : ""}
+              {t})
+            </option>
+          ))}
+        </select>
+      </label>
+    );
+  }
+  return (
+    <label className="flex items-center gap-1.5">
+      Grondtoon
+      <select
+        value={freeRoot}
+        onChange={(e) => onFreeRoot(e.target.value)}
+        className="rounded-lg border border-border-soft bg-surface px-2 py-1 text-foreground"
+      >
+        {ROOTS.map((r) => (
+          <option key={r} value={r}>
+            {r}
+          </option>
+        ))}
+      </select>
+    </label>
+  );
+}
 
 const CHORD_TYPES: { label: string; sym: string }[] = [
   { label: "Majeur", sym: "" },
@@ -55,7 +124,7 @@ function notesToMidi(names: string[], octave: number): number[] {
 
 type Tab = "chords" | "progressions" | "scales" | "midi";
 
-export function SpeelLab({ midi }: { midi: MidiState }) {
+export function SpeelLab({ midi, studio }: { midi: MidiState; studio: Studio }) {
   // Stabiele ref naar de (per render nieuwe) midi-state, zodat de
   // opruim-effecten niet bij elke render afvuren en lopende ladders/akkoorden
   // afkappen.
@@ -64,7 +133,7 @@ export function SpeelLab({ midi }: { midi: MidiState }) {
     midiRef.current = midi;
   }, [midi]);
 
-  const player = useMidiPlayer(midi);
+  const player = useMidiPlayer(midi, studio.transpose);
   const chart = useChartPlayer(midi);
 
   const [open, setOpen] = useState(false);
@@ -114,13 +183,52 @@ export function SpeelLab({ midi }: { midi: MidiState }) {
     []
   );
 
-  const chordNames = Chord.get(`${root}${chordSym}`).notes;
-  const scaleNames = Scale.get(`${root} ${scaleName}`).notes;
+  // Klinkende grondtoon in sync-modus = afgeleid van de transpose (vaste band
+  // rond midden C). In vrije modus gelden de lokale grondtoon + octaaf.
+  const syncRootName = useMemo(
+    () => Note.pitchClass(Note.fromMidi(transposeToRootMidi(studio.transpose))),
+    [studio.transpose]
+  );
+  const effRoot = studio.syncMode ? syncRootName : root;
+  const effProgRoot = studio.syncMode ? syncRootName : progRoot;
+  // Octaaf van de gesynchroniseerde grondtoon: F#3..B3 (negatief) of C4..F4.
+  const effOctave = studio.syncMode ? (studio.transpose < 0 ? 3 : 4) : octave;
+
+  // Overgang sync ⟷ vrij: grondtoon meenemen zodat de toonsoort niet verspringt.
+  const prevSync = useRef(studio.syncMode);
+  const prevTranspose = useRef(studio.transpose);
+  useEffect(() => {
+    if (studio.syncMode !== prevSync.current) {
+      if (studio.syncMode) {
+        // Vrij → sync via de schakelaar (wiel onveranderd): map de lokale
+        // grondtoon naar transpose. Via het wiel wijzigt transpose juist wél,
+        // dus dan niet overschrijven.
+        if (studio.transpose === prevTranspose.current) {
+          const pc = Note.chroma(root);
+          if (pc != null) studio.setTranspose(pcToTranspose(pc));
+        }
+      } else {
+        // Sync → vrij: zet de lokale grondtoon op de laatst klinkende toon,
+        // op het referentie-octaaf; klavier speelt weer concert.
+        const name = Note.pitchClass(
+          Note.fromMidi(transposeToRootMidi(prevTranspose.current))
+        );
+        setRoot(name);
+        setProgRoot(name);
+        setOctave(4);
+      }
+    }
+    prevSync.current = studio.syncMode;
+    prevTranspose.current = studio.transpose;
+  }, [studio.syncMode, studio.transpose, root, studio]);
+
+  const chordNames = Chord.get(`${effRoot}${chordSym}`).notes;
+  const scaleNames = Scale.get(`${effRoot} ${scaleName}`).notes;
 
   // ---- Akkoorden (vasthouden = aangehouden spelen) ----
   const playChord = () => {
     stopAll();
-    const mids = notesToMidi(chordNames, octave);
+    const mids = notesToMidi(chordNames, effOctave);
     mids.forEach((n) => midiRef.current.noteOn(n, 80));
     held.current = mids;
   };
@@ -132,7 +240,7 @@ export function SpeelLab({ midi }: { midi: MidiState }) {
   // ---- Toonladder (op en neer) ----
   const playScale = () => {
     stopAll();
-    const base = notesToMidi(scaleNames, octave);
+    const base = notesToMidi(scaleNames, effOctave);
     if (base.length === 0) return;
     const seq = [...base, base[0] + 12, ...[...base].reverse()];
     const step = 220;
@@ -152,7 +260,7 @@ export function SpeelLab({ midi }: { midi: MidiState }) {
     const prog = PROGRESSIONS.find((p) => p.id === progId);
     if (!prog) return;
     stopAll();
-    const ch = progressionToChart(prog, progRoot, { bpm, feel, loop });
+    const ch = progressionToChart(prog, effProgRoot, { bpm, feel, loop });
     chart.play(ch, { style: compStyle });
   };
 
@@ -198,38 +306,35 @@ export function SpeelLab({ midi }: { midi: MidiState }) {
           {/* Gedeelde grondtoon + octaaf (alleen akkoorden/ladders) */}
           {(tab === "chords" || tab === "scales") && (
             <div className="mt-3 flex flex-wrap items-center gap-3 text-xs text-muted">
-              <label className="flex items-center gap-1.5">
-                Grondtoon
-                <select
-                  value={root}
-                  onChange={(e) => setRoot(e.target.value)}
-                  className="rounded-lg border border-border-soft bg-surface px-2 py-1 text-foreground"
-                >
-                  {ROOTS.map((r) => (
-                    <option key={r} value={r}>
-                      {r}
-                    </option>
-                  ))}
-                </select>
-              </label>
-              <label className="flex items-center gap-1.5">
-                Octaaf
-                <button
-                  onClick={() => setOctave((o) => Math.max(2, o - 1))}
-                  className="rounded border border-border-soft px-2 py-0.5 hover:text-foreground"
-                  aria-label="Octaaf omlaag"
-                >
-                  −
-                </button>
-                <span className="w-4 text-center font-mono text-foreground">{octave}</span>
-                <button
-                  onClick={() => setOctave((o) => Math.min(6, o + 1))}
-                  className="rounded border border-border-soft px-2 py-0.5 hover:text-foreground"
-                  aria-label="Octaaf omhoog"
-                >
-                  +
-                </button>
-              </label>
+              <GrondtoonSelect
+                studio={studio}
+                freeRoot={root}
+                onFreeRoot={setRoot}
+              />
+              {studio.syncMode ? (
+                <span className="text-[11px] text-muted/70">
+                  Octaaf via transpose-wiel — zet Sync uit voor vrije octaven
+                </span>
+              ) : (
+                <label className="flex items-center gap-1.5">
+                  Octaaf
+                  <button
+                    onClick={() => setOctave((o) => Math.max(2, o - 1))}
+                    className="rounded border border-border-soft px-2 py-0.5 hover:text-foreground"
+                    aria-label="Octaaf omlaag"
+                  >
+                    −
+                  </button>
+                  <span className="w-4 text-center font-mono text-foreground">{octave}</span>
+                  <button
+                    onClick={() => setOctave((o) => Math.min(6, o + 1))}
+                    className="rounded border border-border-soft px-2 py-0.5 hover:text-foreground"
+                    aria-label="Octaaf omhoog"
+                  >
+                    +
+                  </button>
+                </label>
+              )}
             </div>
           )}
 
@@ -284,20 +389,11 @@ export function SpeelLab({ midi }: { midi: MidiState }) {
             <div className="mt-3 space-y-3">
               {/* Engine-transport */}
               <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-muted">
-                <label className="flex items-center gap-1.5">
-                  Grondtoon
-                  <select
-                    value={progRoot}
-                    onChange={(e) => setProgRoot(e.target.value)}
-                    className="rounded-lg border border-border-soft bg-surface px-2 py-1 text-foreground"
-                  >
-                    {ROOTS.map((r) => (
-                      <option key={r} value={r}>
-                        {r}
-                      </option>
-                    ))}
-                  </select>
-                </label>
+                <GrondtoonSelect
+                  studio={studio}
+                  freeRoot={progRoot}
+                  onFreeRoot={setProgRoot}
+                />
                 <label className="flex items-center gap-1.5">
                   Tempo
                   <input
@@ -352,8 +448,8 @@ export function SpeelLab({ midi }: { midi: MidiState }) {
 
               <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
                 {PROGRESSIONS.map((p) => {
-                  const resolved = resolveProgression(p, progRoot);
-                  const isActive = playingChartId === `prog-${p.id}-${progRoot}`;
+                  const resolved = resolveProgression(p, effProgRoot);
+                  const isActive = playingChartId === `prog-${p.id}-${effProgRoot}`;
                   return (
                     <button
                       key={p.id}
@@ -437,7 +533,12 @@ export function SpeelLab({ midi }: { midi: MidiState }) {
 
           {/* MIDI-tracks */}
           {tab === "midi" && (
-            <MidiTracksTab midi={midi} player={player} onBeforePlay={stopLab} />
+            <MidiTracksTab
+              midi={midi}
+              player={player}
+              onBeforePlay={stopLab}
+              transpose={studio.transpose}
+            />
           )}
 
           {!ready && tab !== "midi" && (

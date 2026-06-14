@@ -111,6 +111,39 @@ export const TONE_COMBOS: ToneComboDef[] = [
   { id: "si-magical-soft", type: "dual", tone1: "Magical Piano", tone2: "Soft Pad", genreId: "signature-sounds", name: "Sprookje", why: "Magical Piano met pad — betoverend en uniek." },
   { id: "si-startheme-warm", type: "dual", tone1: "Star Theme", tone2: "Warm Pad", genreId: "signature-sounds", name: "Ruimtereis", why: "Star Theme over een warme pad — cosmisch." },
   { id: "si-vibraphone-warm", type: "dual", tone1: "Vibraphone", tone2: "Warm Pad", genreId: "signature-sounds", name: "Vibes & pad", why: "Vibrafoon met pad — koel en zwevend." },
+
+  // ── Artiest-signatuur ──
+  { id: "as-vangelis-cs80", type: "dual", tone1: "AnalogBrass1", tone2: "Halo Pad", genreId: "artist-signature", name: "Vangelis — CS-80", why: "Brede analoge brass over een halo-pad: de zwevende CS-80-handtekening van Blade Runner/Chariots of Fire." },
+  { id: "as-janhammer-miami", type: "split", tone1: "AnalogBrass1", tone2: "Synth Bass 2", splitPoint: 48, genreId: "artist-signature", name: "Jan Hammer — Miami Vice", why: "Analoge brass-lead rechts, fat synthbas links — speel de Miami Vice-soundtrack in één take." },
+  { id: "as-stevie-clav", type: "dual", tone1: "Clav.", tone2: "1976SuitCase", genreId: "artist-signature", name: "Stevie Wonder — funky keys", why: "Clavinet met Rhodes eronder; speel 16e-funk met veel ghost-notes (Superstition-territorium)." },
+  { id: "as-herbie-chameleon", type: "split", tone1: "FM E.Piano", tone2: "Synth Bass 2", splitPoint: 48, genreId: "artist-signature", name: "Herbie Hancock — Chameleon", why: "FM-EP rechts, synthbas links — de Headhunters-funkgreep onder één paar handen." },
+  { id: "as-frahm-felt", type: "dual", tone1: "Upright Piano", tone2: "Warm Pad", genreId: "artist-signature", name: "Nils Frahm — felt & pad", why: "Intieme upright met een heel zachte pad eronder; speel dicht en zacht, pedaal halverwege." },
+  { id: "as-einaudi-minimal", type: "dual", tone1: "Mellow Upright", tone2: "Soft Pad", genreId: "artist-signature", name: "Einaudi — minimal", why: "Zachte upright met dunne pad voor repetitieve, melancholische arpeggio's." },
+  { id: "as-jonlord-hammond", type: "dual", tone1: "Combo Jz.Org", tone2: "Overdrive Gt", genreId: "artist-signature", name: "Jon Lord — Hammond rock", why: "Jazz-orgel met een vuile gitaarlaag — de Deep Purple-aanval." },
+  { id: "as-wakeman-prog", type: "dual", tone1: "Pipe Organ", tone2: "Saw Lead 1", genreId: "artist-signature", name: "Rick Wakeman — prog stack", why: "Pijporgel met een snijdende saw-lead erbovenop voor symfonische prog-soli." },
+  { id: "as-eno-ambient", type: "dual", tone1: "Atmosphere", tone2: "Bowed Glass", genreId: "artist-signature", name: "Brian Eno — ambient", why: "Twee trage texturen die in elkaar smelten; sustain vasthouden en laten drijven." },
+  { id: "as-raycharles-gospel", type: "dual", tone1: "Rock Piano", tone2: "Gospel Spin", genreId: "artist-signature", name: "Ray Charles — soul", why: "Vette piano met een Leslie-orgel eronder; triolen en blue notes." },
+  { id: "as-zawinul-rhodes", type: "dual", tone1: "FM E.Piano", tone2: "Halo Pad", genreId: "artist-signature", name: "Zawinul — Rhodes pad", why: "Glazige FM-EP op een brede pad — de Weather Report-zweef." },
+  { id: "as-clayderman-romantic", type: "dual", tone1: "American Grand", tone2: "Slow Strings", genreId: "artist-signature", name: "Clayderman — romantisch", why: "Heldere vleugel met trage strijkers; speel zwierige arpeggio's en rubato." },
+  { id: "as-emerson-elp", type: "dual", tone1: "Full Stops", tone2: "Saw Lead 1", genreId: "artist-signature", name: "Keith Emerson — ELP", why: "Vol orgel met agressieve saw-lead — bombastische prog van ELP." },
+  { id: "as-toto-africa", type: "dual", tone1: "FM E.Piano", tone2: "Warm Pad", genreId: "artist-signature", name: "Toto — 80s keys", why: "FM-EP met warme pad voor de gladde jaren-80 sessie-sound (Africa/Rosanna)." },
+  { id: "as-guaraldi-peanuts", type: "dual", tone1: "European Grand", tone2: "Vibraphone", genreId: "artist-signature", name: "Vince Guaraldi — Peanuts", why: "Jazzvleugel met vibrafoon-sprankel; swingende ballad zoals Charlie Brown." },
+
+  // ── Filmscore ──
+  { id: "fs-interstellar-organ", type: "dual", tone1: "Pipe Organ", tone2: "Epic Strings", genreId: "filmscore", name: "Interstellar — orgel", why: "Pijporgel met epische strijkers — de Zimmer-grandeur van Interstellar." },
+  { id: "fs-inception-braam", type: "dual", tone1: "Brass 1", tone2: "Epic Strings", genreId: "filmscore", name: "Inception — braaam", why: "Lage brass-stoten met epische strijkers; speel trage hele noten voor de trailer-impact." },
+  { id: "fs-bladerunner", type: "dual", tone1: "AnalogBrass1", tone2: "Atmosphere", genreId: "filmscore", name: "Blade Runner", why: "Analoge brass over een donkere atmosfeer-pad — neon-noir van Vangelis." },
+  { id: "fs-amelie", type: "dual", tone1: "Mellow Upright", tone2: "Accordion 1", genreId: "filmscore", name: "Amélie", why: "Zachte upright met accordeon — de Parijse wals van Yann Tiersen." },
+  { id: "fs-schindler", type: "dual", tone1: "Violin", tone2: "Slow Strings", genreId: "filmscore", name: "Schindler's List", why: "Solo-viool boven een strijkersbed; speel zangerig en rubato (John Williams)." },
+  { id: "fs-halloween", type: "dual", tone1: "Music Box", tone2: "Atmosphere", genreId: "filmscore", name: "Halloween — eng", why: "Music box met een kille atmosfeer eronder — onheilspellend en minimaal." },
+  { id: "fs-morricone-western", type: "dual", tone1: "Whistle", tone2: "Rich Strings", genreId: "filmscore", name: "Morricone — western", why: "Fluittoon boven rijke strijkers — The Good, the Bad and the Ugly." },
+  { id: "fs-scifi-space", type: "dual", tone1: "Star Theme", tone2: "Space Voice", genreId: "filmscore", name: "Sci-fi — ruimte", why: "Star Theme met stemmig laag — eindeloze ruimte en verwondering." },
+  { id: "fs-lotr-shire", type: "dual", tone1: "Pan Flute", tone2: "Rich Strings", genreId: "filmscore", name: "LOTR — de Shire", why: "Panfluit-melodie boven warme strijkers — pastorale fantasy." },
+  { id: "fs-choir-finale", type: "dual", tone1: "Choir 2", tone2: "Orchestra", genreId: "filmscore", name: "Koor-finale", why: "Breed koor met vol orkest voor de emotionele climax." },
+  { id: "fs-burton-fairytale", type: "dual", tone1: "Celesta", tone2: "Choir 2", genreId: "filmscore", name: "Burton — sprookje", why: "Celesta-sprankel met een ijl koor — de Danny Elfman-magie." },
+  { id: "fs-bond-spy", type: "split", tone1: "Brass 2", tone2: "Jazz Guitar", splitPoint: 48, genreId: "filmscore", name: "Bond — spionage", why: "Brass-stoten rechts, tremolo-jazzgitaar links — het surf-noir Bond-thema." },
+  { id: "fs-pirates-adventure", type: "dual", tone1: "OrchestraBrs", tone2: "Epic Strings", genreId: "filmscore", name: "Pirates — avontuur", why: "Heroïsche orkestbrass met epische strijkers — volle zeilen vooruit." },
+  { id: "fs-spielberg-wonder", type: "dual", tone1: "American Grand", tone2: "Epic Strings", genreId: "filmscore", name: "Spielberg — wonder", why: "Vleugel met epische strijkers; speel een stijgende melodie voor pure verwondering." },
 ];
 
 export interface ResolvedCombo {

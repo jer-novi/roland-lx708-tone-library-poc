@@ -8,6 +8,7 @@ deploy/.env
 .DS_Store
 *.swp
 .idea/
+*.iml
 
 # Build artifacts
 __pycache__/

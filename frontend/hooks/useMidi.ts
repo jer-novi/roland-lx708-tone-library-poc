@@ -47,6 +47,19 @@ export interface MidiState {
   noteOff: (note: number) => boolean;
   /** Abonneer op binnenkomende SysEx-berichten; geeft een unsubscribe terug. */
   onSysex: (listener: (data: Uint8Array) => void) => () => void;
+  /**
+   * Abonneer op binnenkomende noot-events (note-on/off) van de MIDI-inputs, voor
+   * live routing/layering met lage latency (los van de `activeNotes`-state, die
+   * re-renders veroorzaakt). Geeft een unsubscribe terug.
+   */
+  onNote: (
+    listener: (ev: {
+      type: "on" | "off";
+      note: number;
+      velocity: number;
+      channel: number;
+    }) => void
+  ) => () => void;
   /** Actieve noten op de aangesloten MIDI-inputs: noot -> velocity (1-127). */
   activeNotes: ReadonlyMap<number, number>;
   /** Sustainpedaal (CC64) ingedrukt op een input */
@@ -140,6 +153,9 @@ export function useMidi(): MidiState {
   const accessRef = useRef<MIDIAccess | null>(null);
   const userPickedOutput = useRef(false);
   const sysexListeners = useRef<Set<(data: Uint8Array) => void>>(new Set());
+  const noteListeners = useRef<
+    Set<(ev: { type: "on" | "off"; note: number; velocity: number; channel: number }) => void>
+  >(new Set());
   const supported = useMidiSupported();
 
   const handleMidiMessage = useCallback((e: MIDIMessageEvent) => {
@@ -152,10 +168,14 @@ export function useMidi(): MidiState {
     }
     if (data.length < 3) return;
     const command = data[0] & 0xf0;
+    const channel = data[0] & 0x0f;
     const note = data[1];
     const value = data[2];
     if (command === NOTE_ON && value > 0) {
       setActiveNotes((prev) => new Map(prev).set(note, value));
+      noteListeners.current.forEach((fn) =>
+        fn({ type: "on", note, velocity: value, channel })
+      );
     } else if (command === NOTE_OFF || (command === NOTE_ON && value === 0)) {
       setActiveNotes((prev) => {
         if (!prev.has(note)) return prev;
@@ -163,6 +183,9 @@ export function useMidi(): MidiState {
         next.delete(note);
         return next;
       });
+      noteListeners.current.forEach((fn) =>
+        fn({ type: "off", note, velocity: 0, channel })
+      );
     } else if (command === CONTROL_CHANGE && note === CC_SUSTAIN) {
       setSustainOn(value >= 64);
     }
@@ -361,6 +384,23 @@ export function useMidi(): MidiState {
     };
   }, []);
 
+  const onNote = useCallback(
+    (
+      listener: (ev: {
+        type: "on" | "off";
+        note: number;
+        velocity: number;
+        channel: number;
+      }) => void
+    ) => {
+      noteListeners.current.add(listener);
+      return () => {
+        noteListeners.current.delete(listener);
+      };
+    },
+    []
+  );
+
   return {
     status: supported ? status : "unsupported",
     outputs,
@@ -376,6 +416,7 @@ export function useMidi(): MidiState {
     noteOn,
     noteOff,
     onSysex,
+    onNote,
     activeNotes,
     sustainOn,
     echoNotes,

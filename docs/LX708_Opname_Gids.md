@@ -163,6 +163,22 @@ Resultaat is direct bruikbaar in Ableton, voor een cd of online.
 - Dual: piano + **Soft Pad** of **Choir 1**, laag in de mix.
 - Dubbel opnemen (audio + MIDI tegelijk via Rubix22 + USB-MIDI): MIDI als vangnet om later noten te fixen en een VST-laag toe te voegen.
 
+### Artiest & film
+
+#### Artiest-signaturen
+- Herkenbare klanken van beroemde toetsenisten, in één klik via de **Combinaties → Artiest-signatuur**.
+- **Vangelis** (AnalogBrass1 + Halo Pad) en **Jan Hammer** (AnalogBrass1 + Synth Bass 2 split) = de analoge CS-80/Prophet-zweef; speel brede, trage akkoorden.
+- **Stevie Wonder** (Clav. + Rhodes) en **Herbie Hancock** (FM E.Piano + synthbas) = funk: 16e-feel, ghost-notes, achter de beat.
+- **Nils Frahm / Einaudi** (upright + zachte pad) = intiem en repetitief; zacht aanslaan, pedaal halverwege.
+- **Jon Lord / Keith Emerson / Rick Wakeman** = orgel-prog; stapel orgel met een snijdende lead of vuile gitaar.
+
+#### Filmscore & soundtracks
+- Cinematische texturen via **Combinaties → Filmscore**.
+- **Interstellar** (Pipe Organ + Epic Strings) en **Inception** (Brass 1 + Epic Strings) = Zimmer-grandeur; trage hele noten, laat de galm het werk doen.
+- **Blade Runner** (AnalogBrass1 + Atmosphere) = neon-noir; **Amélie** (upright + accordeon) = Parijse wals.
+- **Schindler's List** (Violin + Slow Strings) en **Morricone-western** (Whistle + Rich Strings) = één zangerige melodielijn boven een strijkersbed.
+- **Koor-finale** (Choir 2 + Orchestra) en **Pirates/Spielberg** (orkestbrass/vleugel + Epic Strings) = de grote climax.
+
 ## 7b. Productietips (mix & workflow)
 
 **Opnemen**

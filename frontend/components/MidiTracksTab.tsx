@@ -53,15 +53,19 @@ interface Props {
   player: MidiPlayer;
   /** Stop andere lab-geluiden (akkoorden/ladders) voor we een track starten. */
   onBeforePlay: () => void;
+  /** Key-transpose (halve tonen) — de speler verschuift de noten, dus de
+   *  piano-roll moet hetzelfde schuiven zodat beeld = klank. */
+  transpose: number;
 }
 
-export function MidiTracksTab({ midi, player, onBeforePlay }: Props) {
+export function MidiTracksTab({ midi, player, onBeforePlay, transpose }: Props) {
   const [q, setQ] = useState("");
   const [results, setResults] = useState<BitMidiResult[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const fileInput = useRef<HTMLInputElement | null>(null);
   const history = useTrackHistory();
+  const [full88, setFull88] = useState(false);
 
   const ready = midi.status === "ready" && midi.outputs.length > 0;
 
@@ -123,6 +127,19 @@ export function MidiTracksTab({ midi, player, onBeforePlay }: Props) {
 
   const song = player.song;
 
+  // Verschuif de getekende noten met de transpose zodat de piano-roll laat zien
+  // wat er werkelijk klinkt (de speler verschuift de verzonden noten net zo).
+  const displayNotes = useMemo(
+    () =>
+      transpose === 0 || !song
+        ? (song?.notes ?? [])
+        : song.notes.map((n) => ({
+            ...n,
+            midi: Math.max(0, Math.min(127, n.midi + transpose)),
+          })),
+    [song, transpose]
+  );
+
   return (
     <div className="mt-3 space-y-3">
       {!ready && (
@@ -178,11 +195,13 @@ export function MidiTracksTab({ midi, player, onBeforePlay }: Props) {
 
           <div className="mt-2">
             <PianoRoll
-              notes={song.notes}
+              notes={displayNotes}
               duration={song.duration}
               position={player.position}
               onSeek={player.seek}
               liveNotes={liveNotes}
+              layout={full88 ? "full88" : "auto"}
+              height={full88 ? 260 : 140}
             />
           </div>
 
@@ -208,6 +227,14 @@ export function MidiTracksTab({ midi, player, onBeforePlay }: Props) {
               className="rounded-lg border border-border-soft px-3 py-1 text-[11px] text-muted hover:text-foreground"
             >
               ■ Stop
+            </button>
+            <button
+              onClick={() => setFull88((v) => !v)}
+              aria-pressed={full88}
+              title="Wissel tussen compacte weergave en de volledige 88 toetsen (2 rijen)"
+              className="ml-auto rounded-lg border border-border-soft px-3 py-1 text-[11px] text-muted hover:text-foreground"
+            >
+              {full88 ? "↕ Compact" : "↕ 88 toetsen"}
             </button>
           </div>
         </div>
