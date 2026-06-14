@@ -17,6 +17,9 @@ importers:
       dompurify:
         specifier: ^3.4.8
         version: 3.4.9
+      github-slugger:
+        specifier: ^2.0.0
+        version: 2.0.0
       next:
         specifier: ^16.2.7
         version: 16.2.9(@babel/core@7.29.7)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
