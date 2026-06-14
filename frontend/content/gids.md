@@ -163,6 +163,53 @@ Resultaat is direct bruikbaar in Ableton, voor een cd of online.
 - Dual: piano + **Soft Pad** of **Choir 1**, laag in de mix.
 - Dubbel opnemen (audio + MIDI tegelijk via Rubix22 + USB-MIDI): MIDI als vangnet om later noten te fixen en een VST-laag toe te voegen.
 
+### Experimenteel & creatief
+
+> Deze secties horen bij de "✨ Combinaties"-tab in de webapp: kies een sfeer, één klik zet
+> modus + beide klanken + splitpunt + balans op de LX708.
+
+#### Cinematic & filmscore
+- Stapel groot: **European Grand + Epic Strings**, of **Rich Strings + Choir 1** voor de emotionele climax.
+- **Soundtrack + Pipe Organ** geeft een donker, episch fundament; **Orchestra + Choir 2** is je main theme.
+- Speel langzaam, lange noten, veel sustain — laat de strijkers en het koor zwellen.
+
+#### Sound design & texturen
+- Leg sprankel op een bed: **Crystal + Warm Pad**, **Celesta + Soft Pad**, **Ice Rain + Sweep Pad**.
+- **Atmosphere + Bowed Glass** = twee evoluerende texturen die ademen; opnemen en in Ableton 2–4× time-stretchen.
+- Houd de sustain vast en automatiseer een low-pass over de gestackte lagen.
+
+#### Retro & game
+- **Square Lead1 + Synth Bass 2** (split) voor chiptune; **Saw Lead 1 + Synth Bass 1** voor arcade-energie.
+- **AnalogBrass1 + Halo Pad** (dual) = 80s-game-boss-drama; kwantiseer arpeggio's naar 1/16.
+
+#### Sacraal, meditatie & drone
+- **ChurchOrgan1 + Choir 1** of **Pipe Organ + Space Voice**: sacraal en groot.
+- **Halo Pad + Choir 2** met sustainpedaal vast = een rustig, ademend meditatiebed.
+
+#### NL volksmuziek & après-ski
+- **Accordion 1 + Honky-tonk** voor de kroeg; **Brass 1 + Honky-tonk** voor oompah-stoten.
+- **Accordion 2 + Bandoneon** stapelt twee trekzakken — vol en nostalgisch. Maximaal meezing-gehalte.
+
+#### Blends (folktronica)
+- Akoestisch warm met een elektronische onderlaag (denk Blanco White): **Nylon-str.Gt + Sine Pad**, **Mandolin + Soft Pad**.
+- Split **Nylon-str.Gt + Synth Bass 1**: fingerpicking rechts, warme sub links.
+
+#### Eastern & Japanese
+- **Koto + Shakuhachi** over een splitpunt; **Sitar 1 + Warm Pad** als raga-drone; **Koto + Pizzicato Str** voor dubbel getokkel.
+- Speel pentatonisch (zwarte toetsen vanaf F#) voor een directe oosterse klank.
+
+#### Rhythm work & groove
+- Split met bas links + percussieve comping rechts: **Clav. + FingeredBass** (funk), **Rock Piano + AcousticBass** (groove).
+- **Marimba + Pizzicato Str** (dual) voor een strak, staccato ritme. Oefen timing tegen de metronoom.
+
+#### Fun party mixes
+- **Rock Piano + Brass 1** (disco), **Clav. + Slap Bass 1** (slap-funk), **Square Lead1 + Synth Bass 1** (synth-party).
+- Geen regels — dik aanzetten en plezier maken.
+
+#### Other signature sounds
+- Eigenzinnige handtekening-combo's: **Magical Piano + Soft Pad**, **Star Theme + Warm Pad**, **Vibraphone + Warm Pad**.
+- Durf vreemd te gaan: deze combinaties klinken nergens anders zo.
+
 ## 7b. Productietips (mix & workflow)
 
 **Opnemen**

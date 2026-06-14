@@ -3,8 +3,15 @@
 import type { ToneDto } from "@/lib/types";
 import { toneKey } from "@/lib/types";
 import { parseTags } from "@/lib/collections";
+import type { ToneZone } from "@/hooks/useRolandSysex";
 import { PlayToneButton } from "@/components/PlayToneButton";
 import { ToneThumbnail } from "@/components/ToneThumbnail";
+
+export interface ZoneButton {
+  zone: ToneZone;
+  label: string;
+  isActive: boolean;
+}
 
 const CATEGORY_COLORS: Record<string, string> = {
   Piano: "bg-amber-500/15 text-amber-300",
@@ -22,6 +29,9 @@ interface Props {
   onOpen: (tone: ToneDto) => void;
   onPlay: (tone: ToneDto) => Promise<boolean>;
   midiAvailable: boolean;
+  /** In Split/Dual-modus: knoppen om deze klank aan een zone toe te wijzen. */
+  zoneButtons?: ZoneButton[];
+  onAssignZone?: (tone: ToneDto, zone: ToneZone) => void;
 }
 
 export function ToneCard({
@@ -33,6 +43,8 @@ export function ToneCard({
   onOpen,
   onPlay,
   midiAvailable,
+  zoneButtons,
+  onAssignZone,
 }: Props) {
   const key = toneKey(tone);
   const badge = CATEGORY_COLORS[tone.category] ?? CATEGORY_COLORS.Other;
@@ -73,11 +85,31 @@ export function ToneCard({
                 {tag}
               </span>
             ))}
-            <PlayToneButton
-              tone={tone}
-              onPlay={onPlay}
-              midiAvailable={midiAvailable}
-            />
+            {zoneButtons && zoneButtons.length > 0 ? (
+              <span className="flex items-center gap-1">
+                {zoneButtons.map((zb) => (
+                  <button
+                    key={zb.zone}
+                    onClick={() => onAssignZone?.(tone, zb.zone)}
+                    aria-pressed={zb.isActive}
+                    title={`Zet deze klank op zone "${zb.label}"`}
+                    className={`rounded-full px-2 py-0.5 text-[11px] font-medium transition ${
+                      zb.isActive
+                        ? "bg-accent text-[#06121f]"
+                        : "bg-accent-soft text-accent hover:brightness-125"
+                    }`}
+                  >
+                    {zb.label}
+                  </button>
+                ))}
+              </span>
+            ) : (
+              <PlayToneButton
+                tone={tone}
+                onPlay={onPlay}
+                midiAvailable={midiAvailable}
+              />
+            )}
           </div>
         </div>
 
