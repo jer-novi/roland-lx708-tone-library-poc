@@ -7,11 +7,15 @@ import type { ToneDto } from "@/lib/types";
 import { toneKey } from "@/lib/types";
 import { useFavorites } from "@/hooks/useFavorites";
 import { useMidi } from "@/hooks/useMidi";
+import { useStudio, sameTone } from "@/hooks/useStudio";
 import { useRecentlyPlayed } from "@/hooks/useRecentlyPlayed";
 import type { Collection } from "@/lib/collections";
 import { COLLECTIONS, collectionsFor, parseTags } from "@/lib/collections";
 import { FilterBar } from "@/components/FilterBar";
 import { MidiBar } from "@/components/MidiBar";
+import { StudioPanel } from "@/components/StudioPanel";
+import { SpeelLab } from "@/components/SpeelLab";
+import { CombosTab } from "@/components/CombosTab";
 import { RecentlyPlayedRow } from "@/components/RecentlyPlayedRow";
 import { ToneCard } from "@/components/ToneCard";
 import { ToneModal } from "@/components/ToneModal";
@@ -27,6 +31,7 @@ export default function Home() {
   );
   const [openTone, setOpenTone] = useState<ToneDto | null>(null);
   const [expandedKey, setExpandedKey] = useState<string | null>(null);
+  const [studioTab, setStudioTab] = useState<"zones" | "combos">("zones");
   const { favorites, toggle } = useFavorites();
   const { recent, record, clear: clearRecent } = useRecentlyPlayed();
   const midi = useMidi();
@@ -115,6 +120,9 @@ export default function Home() {
     () => liveData ?? (isError ? offlineLibrary() : undefined),
     [liveData, isError]
   );
+
+  // Studio-state (Split/Dual + zone-tones), gedeeld met de tone-grid.
+  const studio = useStudio(midi, data?.tones ?? []);
 
   const subCategories = useMemo(
     () =>
@@ -329,7 +337,11 @@ export default function Home() {
         onClearTags={() => setSelectedTags(new Set())}
       />
 
-      <MidiBar midi={midi} />
+      <MidiBar midi={midi} studio={studio} />
+
+      <StudioPanel studio={studio} hidden={!midiAvailable} />
+
+      {midiAvailable && <SpeelLab midi={midi} />}
 
       <RecentlyPlayedRow
         recent={recent}
@@ -340,7 +352,27 @@ export default function Home() {
       />
 
       <main className="mt-6">
-        {isLoading ? (
+        {studio.isZoneMode && (
+          <div className="mb-4 flex gap-1">
+            {(["zones", "combos"] as const).map((t) => (
+              <button
+                key={t}
+                onClick={() => setStudioTab(t)}
+                aria-pressed={studioTab === t}
+                className={`rounded-lg px-3 py-1.5 text-xs font-medium transition ${
+                  studioTab === t
+                    ? "bg-accent text-[#06121f]"
+                    : "border border-border-soft text-muted hover:text-foreground"
+                }`}
+              >
+                {t === "zones" ? "Per zone kiezen" : "✨ Combinaties"}
+              </button>
+            ))}
+          </div>
+        )}
+        {studio.isZoneMode && studioTab === "combos" ? (
+          <CombosTab studio={studio} tones={data?.tones ?? []} />
+        ) : isLoading ? (
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {Array.from({ length: 12 }).map((_, i) => (
               <div
@@ -389,6 +421,15 @@ export default function Home() {
                     onOpen={setOpenTone}
                     onPlay={playAndRecord}
                     midiAvailable={midiAvailable}
+                    zoneButtons={
+                      studio.isZoneMode
+                        ? studio.zones.map((z) => ({
+                            ...z,
+                            isActive: sameTone(studio.effectiveTone(z.zone), tone),
+                          }))
+                        : undefined
+                    }
+                    onAssignZone={(t, z) => studio.applyZone(z, t)}
                   />
                 </div>
               ))}

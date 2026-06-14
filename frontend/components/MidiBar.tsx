@@ -1,15 +1,29 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import type { MidiState } from "@/hooks/useMidi";
+import type { Studio } from "@/hooks/useStudio";
 import { MidiKeyboard } from "@/components/MidiKeyboard";
 
 interface Props {
   midi: MidiState;
+  studio?: Studio;
 }
 
-export function MidiBar({ midi }: Props) {
+export function MidiBar({ midi, studio }: Props) {
   const [showKeyboard, setShowKeyboard] = useState(false);
+
+  // Noten van de MIDI-inputs (fysiek gespeeld) samenvoegen met de noten die de
+  // app zelf naar de piano stuurt (speler/akkoorden/ladders/progressies), zodat
+  // het klavier álles toont wat klinkt.
+  const sounding = useMemo(() => {
+    if (midi.echoNotes.size === 0) return midi.activeNotes;
+    const merged = new Map(midi.activeNotes);
+    midi.echoNotes.forEach((vel, note) => {
+      if (!merged.has(note)) merged.set(note, vel);
+    });
+    return merged;
+  }, [midi.activeNotes, midi.echoNotes]);
 
   if (midi.status === "unsupported") {
     return (
@@ -91,6 +105,23 @@ export function MidiBar({ midi }: Props) {
         )}
 
         {midi.status === "ready" && (
+          <label className="flex items-center gap-2 text-xs text-muted">
+            Kanaal:
+            <select
+              value={midi.channel}
+              onChange={(e) => midi.setChannel(Number(e.target.value))}
+              className="rounded-lg border border-border-soft bg-surface-raised px-2 py-1 text-xs tabular-nums text-foreground"
+            >
+              {Array.from({ length: 16 }, (_, i) => (
+                <option key={i} value={i}>
+                  {i + 1}
+                </option>
+              ))}
+            </select>
+          </label>
+        )}
+
+        {midi.status === "ready" && (
           <button
             onClick={() => setShowKeyboard((v) => !v)}
             className="ml-auto rounded-lg border border-border-soft px-3 py-1.5 text-xs text-muted hover:text-foreground"
@@ -103,7 +134,15 @@ export function MidiBar({ midi }: Props) {
 
       {midi.status === "ready" && showKeyboard && (
         <div className="mt-3">
-          <MidiKeyboard activeNotes={midi.activeNotes} sustainOn={midi.sustainOn} />
+          <MidiKeyboard
+            activeNotes={sounding}
+            sustainOn={midi.sustainOn}
+            onNoteOn={midi.noteOn}
+            onNoteOff={midi.noteOff}
+            splitPoint={studio?.mode === "split" ? studio.splitPoint : null}
+            leftTone={studio?.effectiveTone("splitLeft")?.name}
+            rightTone={studio?.effectiveTone("right")?.name}
+          />
         </div>
       )}
     </div>
