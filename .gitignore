@@ -20,3 +20,6 @@ deploy/wheels/
 # Local node modules / lock files (PNPM)
 node_modules/
 
+# Gegenereerde diagnose-output (lokale device-IDs/IPs, hoort niet in git)
+scripts/midi-diagnose-rapport.txt
+
