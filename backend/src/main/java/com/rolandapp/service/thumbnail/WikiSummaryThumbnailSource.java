@@ -15,15 +15,18 @@ import java.time.Duration;
 import java.util.Optional;
 
 /**
- * Eerste poging in de ladder: het standaard Wikipedia-summary-endpoint.
- * Geeft de {@code thumbnail.source} uit de JSON terug (meestal ~300px
- * breed). De eigenlijke download + format-conversie naar een grotere
- * versie gebeurt in {@code ThumbnailStorage}.
+ * Wikipedia-bron in de SD-ladder, via het standaard summary-endpoint.
+ * Het {@code thumbnail.source} veld is maar ~330px; voor een scherpe
+ * card-thumbnail herschrijven we de URL naar een 960px-thumb (een
+ * whitelisted maat, zie {@link WikimediaThumbUrl}) op basis van
+ * {@code originalimage}. Is de original zelf ≤960px, dan downloaden we
+ * die direct.
  */
 @Component
 public class WikiSummaryThumbnailSource implements ThumbnailSource {
 
     private static final Logger log = LoggerFactory.getLogger(WikiSummaryThumbnailSource.class);
+    private static final int SD_WIDTH = 960;
 
     private final WebClient wikipediaClient;
     private final String actionBaseUrl;
@@ -53,16 +56,33 @@ public class WikiSummaryThumbnailSource implements ThumbnailSource {
                     .retryWhen(Retry.backoff(2, Duration.ofSeconds(1)))
                     .block(Duration.ofSeconds(15));
             if (summary == null) return Optional.empty();
+            JsonNode original = summary.path("originalimage");
+            String origUrl = original.path("source").asText(null);
+            int origWidth = original.path("width").asInt(0);
+            int origHeight = original.path("height").asInt(0);
+            if (origUrl != null && origWidth > SD_WIDTH) {
+                String thumbUrl = WikimediaThumbUrl.forWidth(origUrl, SD_WIDTH);
+                if (thumbUrl != null) {
+                    int scaledHeight = origHeight > 0
+                            ? Math.round(origHeight * (SD_WIDTH / (float) origWidth))
+                            : 0;
+                    return Optional.of(new Candidate(thumbUrl, "wiki-summary", SD_WIDTH, scaledHeight));
+                }
+            }
+            if (origUrl != null && origWidth > 0) {
+                // Original is al ≤960px (of niet herschrijfbaar, bv. SVG):
+                // download de original zelf.
+                return Optional.of(new Candidate(origUrl, "wiki-summary", origWidth, origHeight));
+            }
+            // Geen originalimage: val terug op de kleine summary-thumbnail
+            // met de dimensies die Wikipedia zelf opgeeft.
             JsonNode thumb = summary.path("thumbnail");
             String url = thumb.path("source").asText(null);
             if (url == null || url.isBlank()) {
                 return Optional.empty();
             }
-            int width = thumb.path("width").asInt(800);
-            int height = thumb.path("height").asInt(0);
-            // Vraag 800px aan zodat de opslag direct een bruikbaar HD-formaat
-            // binnenhaalt — next/image schaalt 'm efficient terug.
-            return Optional.of(new Candidate(url, "wiki-summary", Math.max(width, 800), height));
+            return Optional.of(new Candidate(url, "wiki-summary",
+                    thumb.path("width").asInt(0), thumb.path("height").asInt(0)));
         } catch (WebClientResponseException e) {
             log.debug("wiki-summary lookup failed for tone {}: HTTP {}", tone.getId(), e.getStatusCode());
             return Optional.empty();

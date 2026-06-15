@@ -67,7 +67,7 @@ public class LocalFileThumbnailSource implements ThumbnailSource {
 
     @Override
     public int order() {
-        return 5;
+        return 3;
     }
 
     @Override
@@ -84,6 +84,15 @@ public class LocalFileThumbnailSource implements ThumbnailSource {
         int height = dim != null ? dim.height() : 0;
         String fileUrl = file.toUri().toString();
         return Optional.of(new Candidate(fileUrl, "site-instruments", width, height));
+    }
+
+    @Override
+    public boolean hdOnly() {
+        // De site-images zijn maar 180-320px (zie dimensions.json) —
+        // prima voor de 48-64px card-thumbnails, maar veel te klein als
+        // HD. In de HD-ladder zouden ze bovendien (order 3) de échte
+        // HD-bronnen MIMO en Wikipedia verdringen.
+        return false;
     }
 
     private record DimensionInfo(int width, int height) {}

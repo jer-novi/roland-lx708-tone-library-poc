@@ -1,0 +1,34 @@
+{
+  "byWikiTitle": {
+    "Scat singing": "scat-singing.svg",
+    "Ocean": "ocean.svg",
+    "Thunder": "thunder.svg",
+    "Stream": "stream.svg",
+    "Bubble": "bubble.svg",
+    "Explosion": "explosion.svg",
+    "Scream": "scream.svg",
+    "Punch": "punch.svg",
+    "Applause": "applause.svg",
+    "Bird vocalization": "bird-vocalization.svg",
+    "Breath": "breath.svg",
+    "Car": "car.svg",
+    "Dog": "dog.svg",
+    "Gunshot": "gunshot.svg",
+    "Heart": "heart.svg",
+    "Helicopter": "helicopter.svg",
+    "Human voice": "human-voice.svg",
+    "Jet aircraft": "jet-aircraft.svg",
+    "Laser": "laser.svg",
+    "Laughter": "laughter.svg",
+    "Machine gun": "machine-gun.svg",
+    "Siren": "siren.svg",
+    "Sound effect": "sound-effect.svg",
+    "Spacecraft": "spacecraft.svg",
+    "Telephone": "telephone.svg",
+    "Train": "train.svg",
+    "Wind": "wind.svg"
+  },
+  "byNamePrefix": {
+    "Do Re Mi": "do-re-mi.svg"
+  }
+}

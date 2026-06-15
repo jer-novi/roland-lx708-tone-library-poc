@@ -14,6 +14,12 @@ public interface ToneRepository extends JpaRepository<Tone, Long> {
     @Query("SELECT t FROM Tone t JOIN FETCH t.category c ORDER BY c.displayOrder, t.toneNumber")
     List<Tone> findAllWithCategory();
 
+    /** Eager-loaded fetch van één tone incl. category (voor endpoints
+     *  die buiten een @Transactional context de category-naam nodig
+     *  hebben, bv. /api/tones/{id}/hs-path). */
+    @Query("SELECT t FROM Tone t JOIN FETCH t.category WHERE t.id = :id")
+    Optional<Tone> findByIdWithCategory(Long id);
+
     long countByCategoryId(Long categoryId);
 
     @Query("SELECT DISTINCT t.subCategory FROM Tone t WHERE t.subCategory IS NOT NULL ORDER BY t.subCategory")

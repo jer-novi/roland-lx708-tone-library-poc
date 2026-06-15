@@ -14,7 +14,8 @@ public interface WikiDataRepository extends JpaRepository<WikiData, Long> {
     /** Lightweight card data for the tone list; avoids loading full_html. */
     @Query("SELECT w.tone.id AS toneId, w.thumbnailUrl AS thumbnailUrl, " +
             "w.thumbnailPath AS thumbnailPath, w.thumbnailWidth AS thumbnailWidth, " +
-            "w.thumbnailHeight AS thumbnailHeight, w.summary AS summary FROM WikiData w")
+            "w.thumbnailHeight AS thumbnailHeight, w.summary AS summary, " +
+            "w.thumbnailHdPath AS thumbnailHdPath FROM WikiData w")
     List<WikiCardData> findAllCardData();
 
     interface WikiCardData {
@@ -29,5 +30,7 @@ public interface WikiDataRepository extends JpaRepository<WikiData, Long> {
         Integer getThumbnailHeight();
 
         String getSummary();
+
+        String getThumbnailHdPath();
     }
 }

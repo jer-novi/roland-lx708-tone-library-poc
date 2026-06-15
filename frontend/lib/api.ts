@@ -1,8 +1,26 @@
-import type { ToneCategoryDto, ToneDetailDto, ToneDto, WikiDataDto } from "./types";
+import type {
+  HsPathResponse,
+  HsTreeResponse,
+  ToneCategoryDto,
+  ToneDetailDto,
+  ToneDto,
+  WarmupStatus,
+  WikiDataDto,
+} from "./types";
 import seedFallback from "./seed-fallback.json";
 
+/**
+ * API-basis-URL. Als NEXT_PUBLIC_API_URL niet is gezet, gebruiken we in de
+ * browser de hostname van de huidige pagina met poort 8080. Zo werkt dev
+ * zowel via localhost:3000 als via een Tailscale-IP (bv. 100.x.x.x:3000)
+ * zonder dat de browser "localhost:8080" op het verkeerde toestel opzoekt.
+ * Op de server (SSR/build) valt dit terug op localhost:8080.
+ */
 export const API_URL =
-  process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8080";
+  process.env.NEXT_PUBLIC_API_URL ??
+  (typeof window !== "undefined"
+    ? `http://${window.location.hostname}:8080`
+    : "http://localhost:8080");
 
 class ApiError extends Error {
   constructor(message: string, readonly status?: number) {
@@ -99,9 +117,34 @@ export async function fetchToneDetail(id: number): Promise<ToneDetailDto> {
   return get<ToneDetailDto>(`/api/tones/${id}`);
 }
 
+/**
+ * Voortgang van de wiki-warmup. Wordt gepollt zolang de backend nog
+ * thumbnails aan het ophalen is, zodat de UI een indicator kan tonen en de
+ * tone-lijst kan verversen zodra er nieuwe afbeeldingen klaarstaan.
+ */
+export async function fetchWarmupStatus(): Promise<WarmupStatus> {
+  return get<WarmupStatus>("/api/wiki/status");
+}
+
 export async function fetchWiki(
   id: number,
   refresh = false
 ): Promise<WikiDataDto> {
   return get<WikiDataDto>(`/api/tones/${id}/wiki?refresh=${refresh}`);
+}
+
+/**
+ * HS-taxonomy pad voor één tone (3-4 nodes van root-family tot leaf).
+ * Voor de kleine boom-grafiek in de detail-modal.
+ */
+export async function fetchHsPath(id: number): Promise<HsPathResponse> {
+  return get<HsPathResponse>(`/api/tones/${id}/hs-path`);
+}
+
+/**
+ * Volledige HS-tree (5 families, 350 instruments, ~265KB). Voor de
+ * "Bekijk hele taxonomy"-knop. Cached door de browser op Cache-Control.
+ */
+export async function fetchHsTree(): Promise<HsTreeResponse> {
+  return get<HsTreeResponse>("/api/hs-tree");
 }

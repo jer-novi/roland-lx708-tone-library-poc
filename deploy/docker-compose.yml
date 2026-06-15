@@ -1,7 +1,15 @@
+# Eigen project-naam zodat deze stack (prod-achtige db/api/caddy) nooit
+# containers, netwerk of volumes deelt met de dev-compose-bestanden
+# hieronder, ook al staan ze in dezelfde map.
+name: tone-library-prod
+
 services:
   db:
     image: postgres:16-alpine
-    restart: unless-stopped
+    # "always" in plaats van "unless-stopped": ook na een Docker Desktop
+    # restart wordt de container automatisch opnieuw gestart, zodat de
+    # backend nooit een UnknownHostException op 'db' krijgt.
+    restart: always
     environment:
       POSTGRES_DB: pianosounds
       POSTGRES_USER: ${DB_USERNAME:-pianosounds_user}
@@ -13,6 +21,8 @@ services:
       interval: 5s
       timeout: 3s
       retries: 10
+      # Geef de healthcheck even de tijd om te starten bij eerste boot
+      start_period: 30s
 
   api:
     build: ../backend
@@ -28,8 +38,13 @@ services:
       # een herstart. De wiki-warmup slaat hier ~470 bestanden op van ~50kB
       # elk, dus totaal ~25MB — verwaarloosbaar.
       THUMBNAILS_DIR: /var/data/wiki-thumbs
+      # HD-opslag: tweede volume voor 1600px+ varianten, geserveerd
+      # onder /api/wiki-thumbs-hd/. Geschat volume: ~30MB voor 470
+      # bestanden (groter dan SD door hogere resolutie).
+      HD_THUMBNAILS_DIR: /var/data/wiki-thumbs-hd
     volumes:
       - wiki_thumbs:/var/data/wiki-thumbs
+      - wiki_thumbs_hd:/var/data/wiki-thumbs-hd
     depends_on:
       db:
         condition: service_healthy
@@ -53,3 +68,4 @@ volumes:
   pgdata:
   caddy_data:
   wiki_thumbs:
+  wiki_thumbs_hd:

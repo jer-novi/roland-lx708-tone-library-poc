@@ -21,19 +21,27 @@ interface Props {
   size: 48 | 64;
   onClick?: () => void;
   rounded?: "lg" | "xl";
+  /**
+   * Override voor de HD-preview-URL. De detail-modal heeft via de
+   * wiki-query vaak een versere HD-URL dan tone.thumbnailHdUrl uit de
+   * lijst-response.
+   */
+  hdUrl?: string | null;
 }
 
 /**
- * Tumbnail with graceful fallback. Renders the locally-stored Wikipedia
- * image (or a future AI/static-fallback image) when available, and falls
- * back to a category icon when the URL is missing OR fails to load
- * (404, blocked CDN, etc.). Path-only URLs from the backend are resolved
- * against the configured API_URL so the same code works in dev (where
- * the API is on localhost:8080) and in production (where the API is on
- * its own host).
+ * Tumbnail met graceful fallback. Toont de SD-thumbnail (lokaal gecached
+ * door de backend) als kleine card-afbeelding. Op hover toont het een
+ * grotere versie van de HD-image (wanneer beschikbaar) rechtsboven als
+ * preview — geeft de gebruiker een blik op het instrument zonder de
+ * detail-modal te openen.
+ *
+ * <p>Pad-only URLs uit de backend worden geplakt aan de API_URL zodat
+ * dezelfde code werkt in dev (localhost:8080) en productie.
  */
-export function ToneThumbnail({ tone, size, onClick, rounded = "lg" }: Props) {
+export function ToneThumbnail({ tone, size, onClick, rounded = "lg", hdUrl }: Props) {
   const [failed, setFailed] = useState(false);
+  const [hovering, setHovering] = useState(false);
   const hasImage = tone.thumbnailUrl != null && !failed;
   const radiusClass = rounded === "xl" ? "rounded-xl" : "rounded-lg";
   const dimensionStyle = { width: size, height: size };
@@ -56,17 +64,49 @@ export function ToneThumbnail({ tone, size, onClick, rounded = "lg" }: Props) {
     ? raw
     : `${API_URL}${raw.startsWith("/") ? "" : "/"}${raw}`;
 
+  const rawHd = hdUrl ?? tone.thumbnailHdUrl;
+  const hdSrc = rawHd
+    ? rawHd.startsWith("http://") || rawHd.startsWith("https://")
+      ? rawHd
+      : `${API_URL}${rawHd.startsWith("/") ? "" : "/"}${rawHd}`
+    : null;
+
   return (
-    <Image
-      src={src}
-      alt={tone.wikipediaPageTitle ?? tone.name}
-      width={size}
-      height={size}
-      className={`${radiusClass} shrink-0 cursor-pointer border border-border-soft object-cover`}
+    <div
+      className="relative shrink-0"
       style={dimensionStyle}
-      onClick={onClick}
-      onError={() => setFailed(true)}
-      unoptimized
-    />
+      onMouseEnter={() => setHovering(true)}
+      onMouseLeave={() => setHovering(false)}
+    >
+      <Image
+        src={src}
+        alt={tone.wikipediaPageTitle ?? tone.name}
+        width={size}
+        height={size}
+        className={`${radiusClass} cursor-pointer border border-border-soft object-cover`}
+        style={dimensionStyle}
+        onClick={onClick}
+        onError={() => setFailed(true)}
+        unoptimized
+      />
+      {hovering && hdSrc && (
+        // Hover-preview: toon de HD-image op 4x het card-formaat
+        // rechtsboven, met accent-border en schaduw. Pointer-events: none
+        // zodat de hover niet "breekt" als de muis over de preview beweegt.
+        <div
+          className="pointer-events-none absolute left-full top-0 z-30 ml-3"
+          style={{ width: size * 4, height: size * 4 }}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={hdSrc}
+            alt={`${tone.name} (HD preview)`}
+            className={`${radiusClass} h-full w-full border-2 border-accent/60 bg-surface object-cover shadow-2xl`}
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      )}
+    </div>
   );
 }

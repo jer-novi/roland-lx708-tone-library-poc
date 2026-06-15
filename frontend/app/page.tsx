@@ -2,19 +2,25 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { fetchToneLibrary, offlineLibrary } from "@/lib/api";
+import { fetchToneLibrary, fetchWarmupStatus, offlineLibrary } from "@/lib/api";
 import type { ToneDto } from "@/lib/types";
 import { toneKey } from "@/lib/types";
 import { useFavorites } from "@/hooks/useFavorites";
 import { useMidi } from "@/hooks/useMidi";
+import { useStudio, sameTone } from "@/hooks/useStudio";
 import { useRecentlyPlayed } from "@/hooks/useRecentlyPlayed";
 import type { Collection } from "@/lib/collections";
 import { COLLECTIONS, collectionsFor, parseTags } from "@/lib/collections";
 import { FilterBar } from "@/components/FilterBar";
 import { MidiBar } from "@/components/MidiBar";
+import { StudioPanel } from "@/components/StudioPanel";
+import { SpeelLab } from "@/components/SpeelLab";
+import { CombosTab } from "@/components/CombosTab";
 import { RecentlyPlayedRow } from "@/components/RecentlyPlayedRow";
 import { ToneCard } from "@/components/ToneCard";
 import { ToneModal } from "@/components/ToneModal";
+import { ShortcutsOverlay } from "@/components/ShortcutsOverlay";
+import { LayerSpike } from "@/components/LayerSpike";
 
 export default function Home() {
   const [category, setCategory] = useState<string | null>(null);
@@ -27,10 +33,31 @@ export default function Home() {
   );
   const [openTone, setOpenTone] = useState<ToneDto | null>(null);
   const [expandedKey, setExpandedKey] = useState<string | null>(null);
+  const [showShortcuts, setShowShortcuts] = useState(false);
+  const [studioTab, setStudioTab] = useState<"zones" | "combos">("zones");
   const { favorites, toggle } = useFavorites();
   const { recent, record, clear: clearRecent } = useRecentlyPlayed();
   const midi = useMidi();
   const midiAvailable = midi.status !== "unsupported";
+
+  // "?" opent het sneltoetsen-overzicht (niet tijdens typen in een veld).
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== "?") return;
+      const el = e.target as HTMLElement;
+      if (
+        el.tagName === "INPUT" ||
+        el.tagName === "TEXTAREA" ||
+        el.tagName === "SELECT" ||
+        el.isContentEditable
+      )
+        return;
+      e.preventDefault();
+      setShowShortcuts(true);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
 
   // --- Filters in de URL: bij laden uitlezen, bij wijzigen spiegelen ---
   const [urlApplied, setUrlApplied] = useState(false);
@@ -73,6 +100,22 @@ export default function Home() {
     );
   }, [urlApplied, category, subCategory, query, favoritesOnly, collection, selectedTags]);
 
+  // Warmup-voortgang: de backend vult thumbnails op een achtergrondthread.
+  // Pollt elke 3s tot het klaar is — stuurt zowel de laad-indicator (header)
+  // als het automatisch verversen van de bibliotheek hieronder aan.
+  const { data: warmup } = useQuery({
+    queryKey: ["wiki-status"],
+    queryFn: fetchWarmupStatus,
+    // Blijf elke 3s pollen tijdens de boot/seed-fase (total nog 0) én de
+    // warmup; stop pas als er tones zijn én alles verwerkt is. Zo missen we
+    // de complete→false→complete-overgang van een verse start niet.
+    refetchInterval: (query) => {
+      const s = query.state.data;
+      return s && s.complete && s.total > 0 ? false : 3000;
+    },
+  });
+  const warmupActive = warmup ? !warmup.complete : false;
+
   const {
     data: liveData,
     isLoading,
@@ -85,10 +128,12 @@ export default function Home() {
     retry: 3,
     retryDelay: (attempt) => Math.min(1000 * 2 ** attempt, 8000),
     refetchOnWindowFocus: true,
-    // Zelfgenezend: zolang de backend onbereikbaar is, op de achtergrond
-    // elke 15s opnieuw proberen; zodra hij terug is verdwijnt de banner vanzelf.
-    refetchInterval: (query) =>
-      query.state.status === "error" ? 15000 : false,
+    // Zelfgenezend bij een dode backend (elke 15s opnieuw), én tijdens de
+    // warmup elke 4s verversen zodat nieuwe thumbnails per-card binnenkomen.
+    refetchInterval: (query) => {
+      if (query.state.status === "error") return 15000;
+      return warmupActive ? 4000 : false;
+    },
   });
 
   // Toon de volledige bibliotheek uit de gebundelde seed zolang de live data
@@ -97,6 +142,9 @@ export default function Home() {
     () => liveData ?? (isError ? offlineLibrary() : undefined),
     [liveData, isError]
   );
+
+  // Studio-state (Split/Dual + zone-tones), gedeeld met de tone-grid.
+  const studio = useStudio(midi, data?.tones ?? []);
 
   const subCategories = useMemo(
     () =>
@@ -260,6 +308,31 @@ export default function Home() {
             </button>
           </div>
         )}
+
+        {/* Warmup-indicator: tijdens het ophalen van thumbnails op de
+            achtergrond. De cards verschijnen al; afbeeldingen poppen er per
+            stuk bij. Verdwijnt vanzelf zodra alles geladen is. */}
+        {warmup && !warmup.complete && !data?.offline && (
+          <div className="mt-3 max-w-md" aria-live="polite">
+            <div className="flex items-center gap-2 text-xs text-muted">
+              <span className="inline-block h-2 w-2 animate-pulse rounded-full bg-accent" />
+              <span>
+                Afbeeldingen laden op de achtergrond… {warmup.withData}/
+                {warmup.total}
+              </span>
+            </div>
+            <div className="mt-1 h-1 w-full overflow-hidden rounded-full bg-surface">
+              <div
+                className="h-full rounded-full bg-accent transition-all duration-500"
+                style={{
+                  width: `${Math.round(
+                    (warmup.withData / Math.max(1, warmup.total)) * 100
+                  )}%`,
+                }}
+              />
+            </div>
+          </div>
+        )}
       </header>
 
       <FilterBar
@@ -286,7 +359,13 @@ export default function Home() {
         onClearTags={() => setSelectedTags(new Set())}
       />
 
-      <MidiBar midi={midi} />
+      <MidiBar midi={midi} studio={studio} />
+
+      <StudioPanel studio={studio} hidden={!midiAvailable} />
+
+      {midiAvailable && <SpeelLab midi={midi} studio={studio} />}
+
+      {midiAvailable && <LayerSpike midi={midi} tones={data?.tones ?? []} />}
 
       <RecentlyPlayedRow
         recent={recent}
@@ -297,7 +376,27 @@ export default function Home() {
       />
 
       <main className="mt-6">
-        {isLoading ? (
+        {studio.isZoneMode && (
+          <div className="mb-4 flex gap-1">
+            {(["zones", "combos"] as const).map((t) => (
+              <button
+                key={t}
+                onClick={() => setStudioTab(t)}
+                aria-pressed={studioTab === t}
+                className={`rounded-lg px-3 py-1.5 text-xs font-medium transition ${
+                  studioTab === t
+                    ? "bg-accent text-[#06121f]"
+                    : "border border-border-soft text-muted hover:text-foreground"
+                }`}
+              >
+                {t === "zones" ? "Per zone kiezen" : "✨ Combinaties"}
+              </button>
+            ))}
+          </div>
+        )}
+        {studio.isZoneMode && studioTab === "combos" ? (
+          <CombosTab studio={studio} tones={data?.tones ?? []} />
+        ) : isLoading ? (
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {Array.from({ length: 12 }).map((_, i) => (
               <div
@@ -346,6 +445,15 @@ export default function Home() {
                     onOpen={setOpenTone}
                     onPlay={playAndRecord}
                     midiAvailable={midiAvailable}
+                    zoneButtons={
+                      studio.isZoneMode
+                        ? studio.zones.map((z) => ({
+                            ...z,
+                            isActive: sameTone(studio.effectiveTone(z.zone), tone),
+                          }))
+                        : undefined
+                    }
+                    onAssignZone={(t, z) => studio.applyZone(z, t)}
                   />
                 </div>
               ))}
@@ -362,6 +470,11 @@ export default function Home() {
           midiAvailable={midiAvailable}
         />
       )}
+
+      <ShortcutsOverlay
+        open={showShortcuts}
+        onClose={() => setShowShortcuts(false)}
+      />
 
       <footer className="mt-16 border-t border-border-soft pt-6 text-xs text-muted">
         Gebaseerd op de officiële Roland LX708 Tone List · Wikipedia-content

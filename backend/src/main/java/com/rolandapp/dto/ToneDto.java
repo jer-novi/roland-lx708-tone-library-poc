@@ -15,6 +15,7 @@ public record ToneDto(
         String thumbnailUrl,
         Integer thumbnailWidth,
         Integer thumbnailHeight,
+        String thumbnailHdUrl,
         String shortSummary,
         Integer midiBankMsb,
         Integer midiBankLsb,
@@ -22,14 +23,15 @@ public record ToneDto(
         String tags
 ) {
     public static ToneDto from(Tone tone) {
-        return from(tone, null, null, null, null);
+        return from(tone, null, null, null, null, null);
     }
 
     public static ToneDto from(Tone tone, String thumbnailUrl, String shortSummary) {
-        return from(tone, thumbnailUrl, null, null, shortSummary);
+        return from(tone, thumbnailUrl, null, null, shortSummary, null);
     }
 
-    public static ToneDto from(Tone tone, String thumbnailUrl, Integer thumbnailWidth, Integer thumbnailHeight, String shortSummary) {
+    public static ToneDto from(Tone tone, String thumbnailUrl, Integer thumbnailWidth,
+                               Integer thumbnailHeight, String shortSummary, String thumbnailHdUrl) {
         return new ToneDto(
                 tone.getId(),
                 tone.getToneNumber(),
@@ -43,6 +45,7 @@ public record ToneDto(
                 thumbnailUrl,
                 thumbnailWidth,
                 thumbnailHeight,
+                thumbnailHdUrl,
                 shortSummary,
                 tone.getMidiBankMsb(),
                 tone.getMidiBankLsb(),

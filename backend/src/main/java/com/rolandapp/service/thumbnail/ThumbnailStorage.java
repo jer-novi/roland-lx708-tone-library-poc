@@ -41,6 +41,10 @@ public class ThumbnailStorage {
         this.downloadClient = WebClient.builder()
                 .defaultHeader(HttpHeaders.USER_AGENT,
                         "RolandLX708ToneLibrary/0.1 (https://github.com/jer-novi/roland-lx708-tone-library-poc)")
+                // WebClient buffert standaard max 256KB in memory; een
+                // 800px JPEG is al snel groter. Zonder deze verhoging
+                // faalt elke grotere download stilletjes.
+                .codecs(c -> c.defaultCodecs().maxInMemorySize((int) MAX_BYTES))
                 .build();
         try {
             Files.createDirectories(this.storageDir);
