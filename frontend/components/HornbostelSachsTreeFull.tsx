@@ -170,7 +170,6 @@ function buildGraph(tree: HsTreeResponse) {
       },
     });
     // Subs (column 1)
-    let firstSubY: number | null = null;
     (family.subfamilies ?? []).forEach((sub) => {
       const subId = `S-${family.hs_code}-${sub.hs_code}`;
       const subYRow = (colCounts[1] ?? 0);
