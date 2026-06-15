@@ -51,6 +51,40 @@ naar een server-engine kan verhuizen zonder de UI te raken.
 
 ---
 
+## Live-performance & hardware-track
+
+Eigen faselijn (los van de search/score-fases hierboven) voor het Studio/Speel-lab +
+externe hardware. **Detail-uitwerking, layer-spike, openstaande vragen en stap-voor-stap:
+zie [`Live_Layering_en_RA30_Arranger.md`](./Live_Layering_en_RA30_Arranger.md).**
+
+### LP-Fase 1 — Combo-content ✅ (gebouwd)
+29 nieuwe combo's met twee filterbare/inklapbare categorieën **Artiest-signatuur** (15:
+Vangelis, Jan Hammer, Stevie Wonder, Herbie Hancock, Nils Frahm, Einaudi, Jon Lord,
+Wakeman, Eno, Ray Charles, Zawinul, Clayderman, Emerson, Toto, Guaraldi) en **Filmscore**
+(14: Interstellar, Inception, Blade Runner, Amélie, Schindler's List, Halloween,
+Morricone, Sci-fi, LOTR, koor-finale, Burton, Bond, Pirates, Spielberg). Hergebruikt
+`toneCombos.ts` + `genreTips.ts` + gids-secties.
+
+### LP-Fase 2 — Multi-kanaals layering (GM2) — spike gebouwd, engine te bouwen
+Helft van het klavier met 2 klanken + andere helft met 2 andere, via de multitimbrale
+GM2-engine over losse MIDI-kanalen + software-note-router.
+- **2a (✅):** layer-spike (`components/LayerSpike.tsx` + `useMidi.onNote`) om GM2-
+  multitimbraal, Local Control en live-routing-latency op de echte LX708 te testen.
+- **2b/2c (⏳):** `useLayerEngine` + `LayerPanel` zodra de spike-vragen beantwoord zijn.
+
+### LP-Fase 3 — RA-30-arranger + multi-device hub
+RA-30 als derde GS-geluidsbron én auto-accompaniment-band. Stijl = PC op CH1, akkoord op
+CH1 → Sync Start, tempo via MIDI-clock. Vereist eerst `useMidi`-uitbreiding naar
+**meerdere uitgangen** (LX708 + RA-30 via de 2×2-hub). Beste plek: een **Band/Arranger-tab
+in het Speel-lab**, gevoed door de progressie-engine of live LX708-akkoorddetectie;
+nanoKONTROL voor transport.
+
+### Geparkeerd — "Verras me" met AI
+Slimme combinatie-suggesties met tekst & uitleg (API-route + model-call + resultaat-UI).
+Aparte iteratie; de huidige `randomize()` (willekeurig binnen de filters) blijft voorlopig.
+
+---
+
 ## Architectuurbesluiten
 
 1. **Zoek-engine: Postgres eerst, dedicated engine later.** Postgres FTS
