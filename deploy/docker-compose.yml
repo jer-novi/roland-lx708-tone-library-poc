@@ -31,7 +31,9 @@ services:
       DB_URL: jdbc:postgresql://db:5432/pianosounds
       DB_USERNAME: ${DB_USERNAME:-pianosounds_user}
       DB_PASSWORD: ${DB_PASSWORD}
-      CORS_ALLOWED_ORIGINS: ${CORS_ALLOWED_ORIGINS:-https://roland-lx708-tone-library-poc.vercel.app,http://localhost:3000}
+      # Wildcard-patroon dekt alle Vercel preview-deployments van dit project
+      # (elke branch/PR krijgt een eigen *-jer-novis-projects.vercel.app URL).
+      CORS_ALLOWED_ORIGINS: ${CORS_ALLOWED_ORIGINS:-https://roland-lx708-tone-library-poc.vercel.app,https://roland-lx708-tone-library-*-jer-novis-projects.vercel.app,http://localhost:3000}
       # Thumbnail-opslag: eigen volume zodat bestanden bewaard blijven na
       # een herstart. De wiki-warmup slaat hier ~470 bestanden op van ~50kB
       # elk, dus totaal ~25MB — verwaarloosbaar.
