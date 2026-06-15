@@ -1,7 +1,11 @@
 import type { NextRequest } from "next/server";
 
-/** Toegestane sorteervelden — alleen deze worden naar BitMidi doorgegeven. */
-const ORDER_BY = new Set(["plays", "views", "createdAt"]);
+/**
+ * Toegestane sorteervelden — alleen deze worden naar BitMidi doorgegeven.
+ * `createdAt` zit hier bewust niet bij: vrijwel de hele catalogus deelt één
+ * bulk-import-datum (2018-07-13), dus sorteren op datum is betekenisloos.
+ */
+const ORDER_BY = new Set(["plays", "views"]);
 
 /**
  * Proxy voor de publieke BitMidi-API (vermijdt CORS in de browser).

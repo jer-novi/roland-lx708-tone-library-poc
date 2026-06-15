@@ -24,13 +24,14 @@ interface SchedEvent {
   vel: number; // 1–127
 }
 
-// Vangnet-buffer: ruim vooruit plannen zodat de Web-MIDI-backend de track op tijd
-// blijft afspelen, óók als de scheduler-tick een keer geknepen wordt (verborgen
-// tabblad → timer tot ~1 s geklemd). Stop/seek blijven direct dankzij
-// `clearScheduled()` in `allNotesOff()`, dus een diepe wachtrij kost geen latency.
-const LOOKAHEAD_S = 0.6; // hoever vooruit we events inplannen
+// Look-ahead: hoe ver vooruit we events met een Web-MIDI-timestamp inplannen.
+// De achtergrond-playback wordt door de Web Worker-tick draaiende gehouden (niet
+// door deze buffer), dus we houden 'm klein → minder reeds-geplande note-ons die
+// na een stop nog "naijlen". De mop-up in `allNotesOff` dekt die laatste ≤LOOKAHEAD.
+const LOOKAHEAD_S = 0.25; // hoever vooruit we events inplannen
 const TICK_MS = 25; // scheduler-interval (tevens afspeelkop-update ≈40 fps)
 const TAIL_S = 0.4; // naloop na de laatste noot voor we automatisch stoppen
+const MOPUP_MS = LOOKAHEAD_S * 1000 + 80; // tweede All-Notes-Off net ná het venster
 
 type PlayerMidi = Pick<MidiState, "sendRaw" | "panic" | "clearScheduled" | "channel">;
 
@@ -76,8 +77,28 @@ export function useMidiPlayer(midi: PlayerMidi, transpose = 0) {
   // met een main-thread `setInterval` als fallback (SSR/oude browser).
   const workerRef = useRef<Worker | null>(null);
   const fallbackIntervalRef = useRef<number | null>(null);
+  // Vertraagde "tweede stop" (mop-up) voor note-ons die ná een stop nog naijlen.
+  const mopUpRef = useRef<number | null>(null);
 
   const channel = () => midiRef.current.channel & 0x0f;
+
+  const clearMopUp = useCallback(() => {
+    if (mopUpRef.current != null) {
+      clearTimeout(mopUpRef.current);
+      mopUpRef.current = null;
+    }
+  }, []);
+
+  /** Stuurt nu meteen alles uit op het speler-kanaal (clear + ANO + ASO + tracked offs). */
+  const sendAllOff = useCallback(() => {
+    const c = channel();
+    const m = midiRef.current;
+    m.clearScheduled(); // best-effort: annuleer geplande (getimede) berichten
+    m.sendRaw([0xb0 | c, 0x7b, 0]); // All Notes Off (CC123)
+    m.sendRaw([0xb0 | c, 0x78, 0]); // All Sound Off (CC120)
+    activeRef.current.forEach((note) => m.sendRaw([0x80 | c, note, 0]));
+    activeRef.current.clear();
+  }, []);
 
   // De worker roept altijd de meest recente `tick` aan zonder opnieuw te worden
   // gemaakt; `tick` wisselt namelijk van identiteit (hangt af van `stop`).
@@ -111,21 +132,21 @@ export function useMidiPlayer(midi: PlayerMidi, transpose = 0) {
 
   /**
    * Zet alles wat wíj afspelen stil — sluitend, ook met de look-ahead-wachtrij.
-   * Eerst de geplande (toekomstig-getimede) note-ons/offs annuleren via
-   * `clearScheduled()`; anders klinkt een al-ingeplande note-on ná de stop en
-   * blijft hangen (de directe note-off arriveert er immers vóór). Daarna een
-   * expliciete All Notes Off + All Sound Off op het speler-kanaal, zodat álles
-   * zwijgt los van de `activeRef`-boekhouding; de `activeRef`-offs zijn vangnet.
+   * `sendAllOff()` annuleert (best-effort) geplande berichten en stuurt All Notes/
+   * Sound Off. Omdat `MIDIOutput.clear()` niet in alle browsers werkt, kunnen er
+   * tóch al-geplande note-ons ná deze stop vuren en blijven hangen (symptoom: een
+   * 2e keer stop nodig). Daarom plannen we een **automatische mop-up** kort ná het
+   * look-ahead-venster — maar alléén als we niet inmiddels weer spelen (seek/play
+   * annuleren 'm via {@link clearMopUp} in `startClock`). Geen knop-delay nodig.
    */
   const allNotesOff = useCallback(() => {
-    const c = channel();
-    const m = midiRef.current;
-    m.clearScheduled();
-    m.sendRaw([0xb0 | c, 0x7b, 0]); // All Notes Off (CC123)
-    m.sendRaw([0xb0 | c, 0x78, 0]); // All Sound Off (CC120)
-    activeRef.current.forEach((note) => m.sendRaw([0x80 | c, note, 0]));
-    activeRef.current.clear();
-  }, []);
+    sendAllOff();
+    clearMopUp();
+    mopUpRef.current = window.setTimeout(() => {
+      mopUpRef.current = null;
+      if (!playingRef.current) sendAllOff();
+    }, MOPUP_MS);
+  }, [sendAllOff, clearMopUp]);
 
   const stop = useCallback(() => {
     playingRef.current = false;
@@ -179,6 +200,7 @@ export function useMidiPlayer(midi: PlayerMidi, transpose = 0) {
 
   const startClock = useCallback(
     (fromSec: number) => {
+      clearMopUp(); // we (her)starten → een lopende mop-up mag de nieuwe noten niet doven
       const evs = eventsRef.current;
       runTransposeRef.current = transposeRef.current; // bevries de transpose voor deze run
       startPerfRef.current = performance.now() - fromSec * 1000;
@@ -191,7 +213,7 @@ export function useMidiPlayer(midi: PlayerMidi, transpose = 0) {
       startTimer();
       tick(); // direct eerste venster inplannen
     },
-    [tick, startTimer]
+    [tick, startTimer, clearMopUp]
   );
 
   const play = useCallback(() => {
@@ -278,12 +300,13 @@ export function useMidiPlayer(midi: PlayerMidi, transpose = 0) {
   useEffect(
     () => () => {
       stopTimer();
+      clearMopUp();
       workerRef.current?.terminate();
       workerRef.current = null;
       playingRef.current = false;
       midiRef.current.panic();
     },
-    [stopTimer]
+    [stopTimer, clearMopUp]
   );
 
   return { song, isPlaying, position, play, pause, stop, seek, load, loadAndPlay };

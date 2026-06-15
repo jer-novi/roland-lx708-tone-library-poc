@@ -14,6 +14,10 @@ export interface MidiChip {
   /** Zoekterm die in BitMidi wordt gezet (kan afwijken van het label). */
   query: string;
   group: string;
+  /** Optioneel: thema (`lib/soundThemes.ts`) met bijpassende klanken voor de mini-picker. */
+  themeId?: string;
+  /** Karakteristieke klanken die voor deze chip bovenaan de singles horen (Zelda → Ocarina). */
+  featured?: string[];
 }
 
 /** Artiestnamen uit de "Artiest-signatuur"-combo's: "Naam — beschrijving". */
@@ -25,28 +29,29 @@ function keyboardistsFromCombos(): MidiChip[] {
     const name = c.name.split("—")[0].trim();
     if (!name || seen.has(name)) continue;
     seen.add(name);
-    chips.push({ label: name, query: name, group: "Toetsenisten" });
+    // Het artiest-thema is afgeleid van dezelfde combo (zie soundThemes.ts).
+    chips.push({ label: name, query: name, group: "Toetsenisten", themeId: `artist:${c.id}` });
   }
   return chips;
 }
 
 const CURATED: MidiChip[] = [
-  // ── Klassiek ──
-  { label: "Beethoven", query: "Beethoven", group: "Klassiek" },
-  { label: "Mozart", query: "Mozart", group: "Klassiek" },
-  { label: "Bach", query: "Bach", group: "Klassiek" },
-  { label: "Chopin", query: "Chopin", group: "Klassiek" },
-  { label: "Debussy", query: "Debussy", group: "Klassiek" },
-  { label: "Liszt", query: "Liszt", group: "Klassiek" },
-  { label: "Satie", query: "Satie", group: "Klassiek" },
-  // ── Film & game ──
-  { label: "Hans Zimmer", query: "Zimmer", group: "Film & game" },
-  { label: "John Williams", query: "John Williams", group: "Film & game" },
-  { label: "Star Wars", query: "Star Wars", group: "Film & game" },
-  { label: "Final Fantasy", query: "Final Fantasy", group: "Film & game" },
-  { label: "Zelda", query: "Zelda", group: "Film & game" },
-  { label: "Mario", query: "Super Mario", group: "Film & game" },
-  { label: "Pokémon", query: "Pokemon", group: "Film & game" },
+  // ── Klassiek (per componist een periode-passende klank vooraan) ──
+  { label: "Beethoven", query: "Beethoven", group: "Klassiek", themeId: "klassiek", featured: ["Fortepiano", "European Grand"] },
+  { label: "Mozart", query: "Mozart", group: "Klassiek", themeId: "klassiek", featured: ["Fortepiano", "European Grand"] },
+  { label: "Bach", query: "Bach", group: "Klassiek", themeId: "klassiek", featured: ["Harpsichord", "Fortepiano"] },
+  { label: "Chopin", query: "Chopin", group: "Klassiek", themeId: "klassiek", featured: ["European Grand", "Mellow Upright"] },
+  { label: "Debussy", query: "Debussy", group: "Klassiek", themeId: "klassiek", featured: ["European Grand"] },
+  { label: "Liszt", query: "Liszt", group: "Klassiek", themeId: "klassiek", featured: ["European Grand"] },
+  { label: "Satie", query: "Satie", group: "Klassiek", themeId: "klassiek", featured: ["Mellow Upright", "European Grand"] },
+  // ── Film & game (karakteristieke klank vooraan) ──
+  { label: "Hans Zimmer", query: "Zimmer", group: "Film & game", themeId: "filmscore-game", featured: ["Orchestra", "Epic Strings", "Brass 1"] },
+  { label: "John Williams", query: "John Williams", group: "Film & game", themeId: "filmscore-game", featured: ["Orchestra", "Epic Strings", "Brass 1"] },
+  { label: "Star Wars", query: "Star Wars", group: "Film & game", themeId: "filmscore-game", featured: ["Orchestra", "Brass 1", "Epic Strings"] },
+  { label: "Final Fantasy", query: "Final Fantasy", group: "Film & game", themeId: "filmscore-game", featured: ["Harp", "Celesta", "Pan Flute"] },
+  { label: "Zelda", query: "Zelda", group: "Film & game", themeId: "filmscore-game", featured: ["Ocarina", "Pan Flute", "Harp", "Music Box"] },
+  { label: "Mario", query: "Super Mario", group: "Film & game", themeId: "filmscore-game", featured: ["Square Lead1", "Marimba", "Steel Drums"] },
+  { label: "Pokémon", query: "Pokemon", group: "Film & game", themeId: "filmscore-game", featured: ["Square Lead1", "Celesta", "Music Box"] },
 ];
 
 /** Ingebouwde chips, gegroepeerd op `group` in invoegvolgorde. */

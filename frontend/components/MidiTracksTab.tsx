@@ -3,8 +3,11 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { MidiState } from "@/hooks/useMidi";
 import type { MidiPlayer } from "@/hooks/useMidiPlayer";
+import type { Studio } from "@/hooks/useStudio";
 import { PianoRoll } from "@/components/PianoRoll";
+import { TrackSoundPicker } from "@/components/TrackSoundPicker";
 import { BUILTIN_CHIPS, chipsByGroup, type MidiChip } from "@/lib/midiChips";
+import { themeById } from "@/lib/soundThemes";
 
 interface BitMidiResult {
   id: number;
@@ -12,7 +15,6 @@ interface BitMidiResult {
   downloadUrl: string;
   plays?: number;
   views?: number;
-  createdAt?: string;
 }
 
 interface HistItem {
@@ -20,12 +22,11 @@ interface HistItem {
   downloadUrl: string;
 }
 
-type OrderBy = "plays" | "views" | "createdAt";
+type OrderBy = "plays" | "views";
 
 const ORDER_LABELS: { id: OrderBy; label: string }[] = [
   { id: "plays", label: "Populair" },
   { id: "views", label: "Meest bekeken" },
-  { id: "createdAt", label: "Nieuwste" },
 ];
 
 const HIST_KEY = "lx708.trackHistory";
@@ -34,45 +35,15 @@ const CHIPS_KEY = "lx708.midiChips";
 const fmt = (s: number) =>
   `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
 
-const REL = new Intl.RelativeTimeFormat("nl", { numeric: "auto" });
-const REL_UNITS: [Intl.RelativeTimeFormatUnit, number][] = [
-  ["year", 31536000],
-  ["month", 2592000],
-  ["week", 604800],
-  ["day", 86400],
-  ["hour", 3600],
-  ["minute", 60],
-];
-
-/** Relatieve datum ("3 jaar geleden") uit BitMidi's `createdAt`. */
-function relTime(iso?: string): string | null {
-  if (!iso) return null;
-  const t = new Date(iso.replace(" ", "T")).getTime();
-  if (Number.isNaN(t)) return null;
-  const diff = (t - Date.now()) / 1000;
-  for (const [unit, secs] of REL_UNITS) {
-    if (Math.abs(diff) >= secs || unit === "minute") {
-      return REL.format(Math.round(diff / secs), unit);
-    }
-  }
-  return null;
-}
-
 /**
  * Sorteert de geladen resultaten client-side. Nodig omdat BitMidi's `/search`
  * (zodra er een zoekterm is) `orderBy` negeert en alleen op full-text-relevantie
  * sorteert; alleen `/all` (browse) sorteert server-side. Client-side sorteren maakt
  * de sorteerknoppen overal werkend en is in browse-modus consistent met de server.
+ * (Sorteren op datum is bewust weggelaten: de catalogus deelt één bulk-import-datum.)
  */
 function sortResults(list: BitMidiResult[], orderBy: OrderBy): BitMidiResult[] {
-  const value = (r: BitMidiResult): number => {
-    if (orderBy === "createdAt") {
-      const t = r.createdAt ? new Date(r.createdAt.replace(" ", "T")).getTime() : 0;
-      return Number.isNaN(t) ? 0 : t;
-    }
-    return r[orderBy] ?? 0;
-  };
-  return [...list].sort((a, b) => value(b) - value(a));
+  return [...list].sort((a, b) => (b[orderBy] ?? 0) - (a[orderBy] ?? 0));
 }
 
 /** Persistente lijst met recent gespeelde BitMidi-tracks (één-klik herladen). */
@@ -144,6 +115,8 @@ function useCustomChips() {
 interface Props {
   midi: MidiState;
   player: MidiPlayer;
+  /** Studio-state om bijpassende klanken meteen op de piano te zetten. */
+  studio: Studio;
   /** Stop andere lab-geluiden (akkoorden/ladders) voor we een track starten. */
   onBeforePlay: () => void;
   /** Key-transpose (halve tonen) — de speler verschuift de noten, dus de
@@ -151,7 +124,7 @@ interface Props {
   transpose: number;
 }
 
-export function MidiTracksTab({ midi, player, onBeforePlay, transpose }: Props) {
+export function MidiTracksTab({ midi, player, studio, onBeforePlay, transpose }: Props) {
   const [q, setQ] = useState("");
   const [orderBy, setOrderBy] = useState<OrderBy>("plays");
   const [results, setResults] = useState<BitMidiResult[]>([]);
@@ -164,6 +137,7 @@ export function MidiTracksTab({ midi, player, onBeforePlay, transpose }: Props) 
   const history = useTrackHistory();
   const customChips = useCustomChips();
   const [full88, setFull88] = useState(false);
+  const [activeChip, setActiveChip] = useState<MidiChip | null>(null);
 
   const ready = midi.status === "ready" && midi.outputs.length > 0;
 
@@ -214,6 +188,12 @@ export function MidiTracksTab({ midi, player, onBeforePlay, transpose }: Props) 
     setQ(query);
     runFetch(query, orderBy, 0, false);
   };
+  // Chip-klik: zoek + (als de chip een thema heeft) open de bijpassende-klanken-picker.
+  const onChip = (chip: MidiChip) => {
+    submit(chip.query);
+    setActiveChip(chip.themeId ? chip : null);
+  };
+  const activeTheme = activeChip?.themeId ? themeById.get(activeChip.themeId) ?? null : null;
   const changeOrder = (order: OrderBy) => {
     setOrderBy(order);
     runFetch(q, order, 0, false);
@@ -347,7 +327,7 @@ export function MidiTracksTab({ midi, player, onBeforePlay, transpose }: Props) 
             {chips.map((chip) => (
               <span key={`${group}-${chip.query}`} className="inline-flex items-center">
                 <button
-                  onClick={() => submit(chip.query)}
+                  onClick={() => onChip(chip)}
                   className={`rounded-full px-2.5 py-1 text-[11px] font-medium transition ${
                     q.trim().toLowerCase() === chip.query.toLowerCase()
                       ? "bg-accent text-[#06121f]"
@@ -355,6 +335,7 @@ export function MidiTracksTab({ midi, player, onBeforePlay, transpose }: Props) 
                   }`}
                 >
                   {chip.label}
+                  {chip.themeId && <span className="ml-1 text-[9px] opacity-70" title="bijpassende klanken beschikbaar">🎚</span>}
                 </button>
                 {chip.group === "Eigen" && (
                   <button
@@ -379,6 +360,16 @@ export function MidiTracksTab({ midi, player, onBeforePlay, transpose }: Props) 
           + Chip van zoekterm
         </button>
       </div>
+
+      {/* Bijpassende klanken bij de gekozen chip (zonder weg te navigeren) */}
+      {activeTheme && (
+        <TrackSoundPicker
+          studio={studio}
+          theme={activeTheme}
+          featured={activeChip?.featured}
+          onClose={() => setActiveChip(null)}
+        />
+      )}
 
       {error && <p className="text-xs text-amber-300">{error}</p>}
 
@@ -446,26 +437,22 @@ export function MidiTracksTab({ midi, player, onBeforePlay, transpose }: Props) 
       {results.length > 0 && (
         <>
           <ul className="divide-y divide-border-soft overflow-hidden rounded-lg border border-border-soft">
-            {shown.map((r) => {
-              const rel = relTime(r.createdAt);
-              return (
-                <li key={r.id} className="flex items-center justify-between gap-3 px-3 py-2">
-                  <span className="min-w-0 flex-1 truncate text-xs">{r.name}</span>
-                  <span className="flex shrink-0 items-center gap-2 font-mono text-[10px] text-muted/70">
-                    {typeof r.plays === "number" && <span title="afspeelacties">▶ {r.plays.toLocaleString("nl-NL")}</span>}
-                    {typeof r.views === "number" && <span title="weergaven">👁 {r.views.toLocaleString("nl-NL")}</span>}
-                    {rel && <span title="toegevoegd aan BitMidi">{rel}</span>}
-                  </span>
-                  <button
-                    onClick={() => playFrom(r.name, r.downloadUrl)}
-                    disabled={!ready}
-                    className="shrink-0 rounded-lg bg-accent-soft px-2.5 py-1 text-[11px] font-medium text-accent transition hover:brightness-125 disabled:opacity-40"
-                  >
-                    ▶ Speel
-                  </button>
-                </li>
-              );
-            })}
+            {shown.map((r) => (
+              <li key={r.id} className="flex items-center justify-between gap-3 px-3 py-2">
+                <span className="min-w-0 flex-1 truncate text-xs">{r.name}</span>
+                <span className="flex shrink-0 items-center gap-2 font-mono text-[10px] text-muted/70">
+                  {typeof r.plays === "number" && <span title="afspeelacties">▶ {r.plays.toLocaleString("nl-NL")}</span>}
+                  {typeof r.views === "number" && <span title="weergaven">👁 {r.views.toLocaleString("nl-NL")}</span>}
+                </span>
+                <button
+                  onClick={() => playFrom(r.name, r.downloadUrl)}
+                  disabled={!ready}
+                  className="shrink-0 rounded-lg bg-accent-soft px-2.5 py-1 text-[11px] font-medium text-accent transition hover:brightness-125 disabled:opacity-40"
+                >
+                  ▶ Speel
+                </button>
+              </li>
+            ))}
           </ul>
           {hasMore && (
             <button

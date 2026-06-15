@@ -536,6 +536,7 @@ export function SpeelLab({ midi, studio }: { midi: MidiState; studio: Studio }) 
             <MidiTracksTab
               midi={midi}
               player={player}
+              studio={studio}
               onBeforePlay={stopLab}
               transpose={studio.transpose}
             />
