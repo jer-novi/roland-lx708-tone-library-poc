@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { MidiState } from "@/hooks/useMidi";
 import type { ToneDto } from "@/lib/types";
 import { useRolandSysex, type ToneZone } from "@/hooks/useRolandSysex";
@@ -57,6 +57,16 @@ export function useStudio(midi: MidiState, tones: ToneDto[]) {
 
   const ready = midi.status === "ready" && midi.outputs.length > 0;
   const isZoneMode = mode === "split" || mode === "dual";
+
+  // Stuur de remote-handshake proactief zodra de piano klaar is, ruim vóór de
+  // eerste moduswissel. Anders komt de handshake-burst pas bij de eerste klik op
+  // Split/Dual en dropt de LX708 het moduscommando dat er direct achteraan komt
+  // (symptoom: je moest eerst fysiek op Split/Dual drukken). Idempotent dankzij
+  // de handshake-vlag in useRolandSysex; her-vuurt bij (her)verbinden.
+  useEffect(() => {
+    if (ready) sysex.ensureHandshake();
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- eenmalig per (her)verbinding; ensureHandshake is idempotent
+  }, [ready, midi.selectedOutputId, midi.outputs.length]);
 
   const ordered = useMemo(
     () => [...tones].sort((a, b) => catIdx(a) - catIdx(b) || a.toneNumber - b.toneNumber),
@@ -140,29 +150,6 @@ export function useStudio(midi: MidiState, tones: ToneDto[]) {
     if (v && v[0] != null) setMasterVolumeState(v[0]);
   }, [sysex]);
 
-  // Lees het volume zodra de piano (opnieuw) herkend is: bij verbinden én elke
-  // keer dat de actieve output wijzigt (her-herkenning na uit/in pluggen). Zo
-  // begint de schuif altijd op de echte paneelwaarde.
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- eenmalige RQ1-uitlezing bij (her)verbinden
-    if (ready) void syncVolume();
-  }, [ready, midi.selectedOutputId, midi.outputs.length, syncVolume]);
-
-  // …en zodra de gebruiker terugkeert naar het tabblad (de fysieke volumeknop of
-  // de piano-menu's kunnen het ondertussen gewijzigd hebben). Geen polling.
-  useEffect(() => {
-    if (!ready) return;
-    const resync = () => {
-      if (document.visibilityState === "visible") void syncVolume();
-    };
-    window.addEventListener("focus", resync);
-    document.addEventListener("visibilitychange", resync);
-    return () => {
-      window.removeEventListener("focus", resync);
-      document.removeEventListener("visibilitychange", resync);
-    };
-  }, [ready, syncVolume]);
-
   /**
    * Zet de key transpose (−6..+5) op de piano en schakelt sync-modus in
    * ("wiel aanraken → sync aan"). Aangeroepen door het wiel én de grondtoon-
@@ -206,25 +193,6 @@ export function useStudio(midi: MidiState, tones: ToneDto[]) {
     if (t !== 0) setSyncModeState(true);
   }, [sysex]);
 
-  // Lees transpose mee bij (her)verbinden en bij tab-focus, net als het volume.
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- eenmalige RQ1-uitlezing bij (her)verbinden
-    if (ready) void syncTranspose();
-  }, [ready, midi.selectedOutputId, midi.outputs.length, syncTranspose]);
-
-  useEffect(() => {
-    if (!ready) return;
-    const resync = () => {
-      if (document.visibilityState === "visible") void syncTranspose();
-    };
-    window.addEventListener("focus", resync);
-    document.addEventListener("visibilitychange", resync);
-    return () => {
-      window.removeEventListener("focus", resync);
-      document.removeEventListener("visibilitychange", resync);
-    };
-  }, [ready, syncTranspose]);
-
   /** Zet de balans-stap (−8..+8); stuurt byte = 64 + stap naar de actieve modus. */
   const changeBalance = useCallback(
     (step: number) => {
@@ -260,6 +228,7 @@ export function useStudio(midi: MidiState, tones: ToneDto[]) {
       setTransposeState(clampTranspose(s.transpose));
       if (s.transpose !== 0) setSyncModeState(true);
     }
+    if (s.splitPoint != null) setSplitPointState(Math.max(21, Math.min(108, s.splitPoint)));
     const match = (z: { category: number; num: number } | null) =>
       z ? ordered.find((t) => ToneCategory[t.category] === z.category && t.toneNumber - 1 === z.num) ?? null : null;
     setZoneTone((zt) => ({
@@ -282,6 +251,43 @@ export function useStudio(midi: MidiState, tones: ToneDto[]) {
       }));
     }
   }, [sysex, ordered]);
+
+  // Houd de laatste syncFromPiano in een ref, zodat de focus/visibility-handlers
+  // stabiel blijven (syncFromPiano wisselt elke render van identiteit).
+  const syncFromPianoRef = useRef(syncFromPiano);
+  useEffect(() => {
+    syncFromPianoRef.current = syncFromPiano;
+  }, [syncFromPiano]);
+
+  // Lees de volledige pianostatus (modus, klanken, splitpunt, volume, transpose)
+  // één keer per (her)verbinding — gated op de output zodat dit niet elke render
+  // opnieuw vuurt. Zo klopt het Studio-paneel met wat er fysiek op de piano staat.
+  const syncedOutputRef = useRef<string | null>(null);
+  useEffect(() => {
+    if (!ready) {
+      syncedOutputRef.current = null;
+      return;
+    }
+    const key = midi.selectedOutputId ?? "";
+    if (syncedOutputRef.current === key) return;
+    syncedOutputRef.current = key;
+    void syncFromPianoRef.current();
+  }, [ready, midi.selectedOutputId, midi.outputs.length]);
+
+  // …en opnieuw zodra het venster weer in beeld komt: de gebruiker kan ondertussen
+  // fysiek op de piano hebben gewerkt (modus, klanken, volume, transpose). Geen polling.
+  useEffect(() => {
+    if (!ready) return;
+    const resync = () => {
+      if (document.visibilityState === "visible") void syncFromPianoRef.current();
+    };
+    window.addEventListener("focus", resync);
+    document.addEventListener("visibilitychange", resync);
+    return () => {
+      window.removeEventListener("focus", resync);
+      document.removeEventListener("visibilitychange", resync);
+    };
+  }, [ready]);
 
   /** Past een kant-en-klare combinatie in één keer toe (modus + beide zones + split/balans). */
   const applyCombo = useCallback(

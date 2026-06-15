@@ -24,11 +24,15 @@ interface SchedEvent {
   vel: number; // 1–127
 }
 
-const LOOKAHEAD_S = 0.1; // hoever vooruit we events inplannen
+// Vangnet-buffer: ruim vooruit plannen zodat de Web-MIDI-backend de track op tijd
+// blijft afspelen, óók als de scheduler-tick een keer geknepen wordt (verborgen
+// tabblad → timer tot ~1 s geklemd). Stop/seek blijven direct dankzij
+// `clearScheduled()` in `allNotesOff()`, dus een diepe wachtrij kost geen latency.
+const LOOKAHEAD_S = 0.6; // hoever vooruit we events inplannen
 const TICK_MS = 25; // scheduler-interval (tevens afspeelkop-update ≈40 fps)
 const TAIL_S = 0.4; // naloop na de laatste noot voor we automatisch stoppen
 
-type PlayerMidi = Pick<MidiState, "sendRaw" | "panic" | "channel">;
+type PlayerMidi = Pick<MidiState, "sendRaw" | "panic" | "clearScheduled" | "channel">;
 
 const clampNote = (n: number) => Math.max(0, Math.min(127, n));
 
@@ -67,42 +71,79 @@ export function useMidiPlayer(midi: PlayerMidi, transpose = 0) {
   const positionRef = useRef(0);
   const playingRef = useRef(false);
   const activeRef = useRef<Set<number>>(new Set()); // klinkende noten (voor note-off bij seek/stop)
-  const intervalRef = useRef<number | null>(null);
+
+  // Scheduler-timer: bij voorkeur een Web Worker (ontwijkt achtergrond-throttling),
+  // met een main-thread `setInterval` als fallback (SSR/oude browser).
+  const workerRef = useRef<Worker | null>(null);
+  const fallbackIntervalRef = useRef<number | null>(null);
 
   const channel = () => midiRef.current.channel & 0x0f;
 
-  const clearTimer = () => {
-    if (intervalRef.current != null) {
-      clearInterval(intervalRef.current);
-      intervalRef.current = null;
-    }
-  };
+  // De worker roept altijd de meest recente `tick` aan zonder opnieuw te worden
+  // gemaakt; `tick` wisselt namelijk van identiteit (hangt af van `stop`).
+  const tickRef = useRef<() => void>(() => {});
 
-  /** Zet alle (door ons) klinkende noten uit. */
+  const stopTimer = useCallback(() => {
+    workerRef.current?.postMessage({ type: "stop" });
+    if (fallbackIntervalRef.current != null) {
+      clearInterval(fallbackIntervalRef.current);
+      fallbackIntervalRef.current = null;
+    }
+  }, []);
+
+  const startTimer = useCallback(() => {
+    stopTimer();
+    if (typeof Worker !== "undefined") {
+      if (!workerRef.current) {
+        workerRef.current = new Worker(
+          new URL("../lib/schedulerWorker.ts", import.meta.url)
+        );
+        workerRef.current.onmessage = () => tickRef.current();
+      }
+      workerRef.current.postMessage({ type: "start", interval: TICK_MS });
+    } else {
+      fallbackIntervalRef.current = window.setInterval(
+        () => tickRef.current(),
+        TICK_MS
+      );
+    }
+  }, [stopTimer]);
+
+  /**
+   * Zet alles wat wíj afspelen stil — sluitend, ook met de look-ahead-wachtrij.
+   * Eerst de geplande (toekomstig-getimede) note-ons/offs annuleren via
+   * `clearScheduled()`; anders klinkt een al-ingeplande note-on ná de stop en
+   * blijft hangen (de directe note-off arriveert er immers vóór). Daarna een
+   * expliciete All Notes Off + All Sound Off op het speler-kanaal, zodat álles
+   * zwijgt los van de `activeRef`-boekhouding; de `activeRef`-offs zijn vangnet.
+   */
   const allNotesOff = useCallback(() => {
     const c = channel();
     const m = midiRef.current;
+    m.clearScheduled();
+    m.sendRaw([0xb0 | c, 0x7b, 0]); // All Notes Off (CC123)
+    m.sendRaw([0xb0 | c, 0x78, 0]); // All Sound Off (CC120)
     activeRef.current.forEach((note) => m.sendRaw([0x80 | c, note, 0]));
     activeRef.current.clear();
   }, []);
 
   const stop = useCallback(() => {
     playingRef.current = false;
-    clearTimer();
+    stopTimer();
     allNotesOff();
     setIsPlaying(false);
     positionRef.current = 0;
     setPosition(0);
-  }, [allNotesOff]);
+  }, [allNotesOff, stopTimer]);
 
   const pause = useCallback(() => {
     if (!playingRef.current) return;
     playingRef.current = false;
-    clearTimer();
+    stopTimer();
     allNotesOff();
     setIsPlaying(false);
     // positionRef blijft staan → play() hervat hier
-  }, [allNotesOff]);
+  }, [allNotesOff, stopTimer]);
 
   const tick = useCallback(() => {
     const evs = eventsRef.current;
@@ -131,6 +172,11 @@ export function useMidiPlayer(midi: PlayerMidi, transpose = 0) {
     }
   }, [stop]);
 
+  // Houd de worker-callback op de actuele `tick` zonder de worker te recreëren.
+  useEffect(() => {
+    tickRef.current = tick;
+  }, [tick]);
+
   const startClock = useCallback(
     (fromSec: number) => {
       const evs = eventsRef.current;
@@ -142,11 +188,10 @@ export function useMidiPlayer(midi: PlayerMidi, transpose = 0) {
       positionRef.current = fromSec;
       playingRef.current = true;
       setIsPlaying(true);
-      clearTimer();
-      intervalRef.current = window.setInterval(tick, TICK_MS);
+      startTimer();
       tick(); // direct eerste venster inplannen
     },
-    [tick]
+    [tick, startTimer]
   );
 
   const play = useCallback(() => {
@@ -232,11 +277,13 @@ export function useMidiPlayer(midi: PlayerMidi, transpose = 0) {
 
   useEffect(
     () => () => {
-      clearTimer();
+      stopTimer();
+      workerRef.current?.terminate();
+      workerRef.current = null;
       playingRef.current = false;
       midiRef.current.panic();
     },
-    []
+    [stopTimer]
   );
 
   return { song, isPlaying, position, play, pause, stop, seek, load, loadAndPlay };

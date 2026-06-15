@@ -41,6 +41,13 @@ export interface MidiState {
   sendRaw: (bytes: number[], timestamp?: number) => boolean;
   /** Annuleert geplande berichten en zet alle noten uit (stop/paniek). */
   panic: () => void;
+  /**
+   * Annuleert alléén nog-niet-verstuurde, getimede berichten in de hardware-
+   * wachtrij (`MIDIOutput.clear()`), zonder noten uit te zetten. De MIDI-speler
+   * gebruikt dit zodat een stop/seek de vooruit-ingeplande note-ons niet alsnog
+   * laat klinken (en blijven hangen).
+   */
+  clearScheduled: () => void;
   /** Speelt een noot op de piano (klikbaar klavier) op het ingestelde kanaal. */
   noteOn: (note: number, velocity?: number) => boolean;
   /** Laat een noot los. */
@@ -349,17 +356,22 @@ export function useMidi(): MidiState {
     setEchoNotes((prev) => (prev.size ? new Map() : prev));
   }, []);
 
+  const clearScheduled = useCallback(() => {
+    const output = getOutput();
+    // clear() annuleert geplande (getimede) berichten; nog niet in alle TS-libs.
+    (output as (MIDIOutput & { clear?: () => void }) | undefined)?.clear?.();
+  }, [getOutput]);
+
   const panic = useCallback(() => {
     echoClear();
     const output = getOutput();
     if (!output) return;
-    // clear() annuleert geplande (getimede) berichten; nog niet in alle TS-libs.
-    (output as MIDIOutput & { clear?: () => void }).clear?.();
+    clearScheduled();
     for (let ch = 0; ch < 16; ch++) {
       output.send([0xb0 | ch, 0x7b, 0]); // All Notes Off
       output.send([0xb0 | ch, 0x78, 0]); // All Sound Off
     }
-  }, [getOutput, echoClear]);
+  }, [getOutput, echoClear, clearScheduled]);
 
   const noteOn = useCallback(
     (note: number, velocity = 80): boolean => {
@@ -413,6 +425,7 @@ export function useMidi(): MidiState {
     sendTone,
     sendRaw,
     panic,
+    clearScheduled,
     noteOn,
     noteOff,
     onSysex,

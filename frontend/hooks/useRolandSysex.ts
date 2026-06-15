@@ -43,33 +43,61 @@ function zoneOctaveAddr(zone: ToneZone, split: boolean): readonly number[] | nul
  * Bouwt op `useMidi` (alleen `sendRaw` + `onSysex` nodig) en de pure laag in
  * `lib/rolandSysex.ts`. Zie `docs/LX708_SysEx_Adresmap.md`.
  */
+// De LX708 dropt SysEx-frames die te dicht op elkaar (of direct na de
+// enable-remote-handshake) binnenkomen — dan landt een moduswissel niet en moet
+// je eerst fysiek op Split/Dual drukken. We spreiden DT1-frames daarom met een
+// vaste tussenruimte via Web-MIDI-timestamps, en geven de handshake extra marge.
+const GAP_MS = 25; // minimale tussenruimte tussen opeenvolgende DT1-frames
+const HANDSHAKE_SETTLE_MS = 45; // extra marge ná de handshake vóór het eerste commando
+
+const hex = (bytes: readonly number[]) =>
+  bytes.map((b) => b.toString(16).padStart(2, "0")).join(" ");
+
 export function useRolandSysex(
   midi: Pick<MidiState, "sendRaw" | "onSysex">
 ) {
   // De "enable remote control"-handshake hoeft maar één keer per sessie; vaker
   // sturen toont telkens "application connected" op het display.
   const handshakeDone = useRef(false);
+  // Volgende toegestane verzendtijd (performance.now()-domein) voor pacing.
+  const nextSendRef = useRef(0);
+
+  /** Reserveert het volgende verzend-slot (met spacing) en geeft de timestamp. */
+  const reserveSlot = useCallback((gap = GAP_MS): number => {
+    const at = Math.max(performance.now(), nextSendRef.current);
+    nextSendRef.current = at + gap;
+    return at;
+  }, []);
 
   const ensureHandshake = useCallback(() => {
     if (handshakeDone.current) return;
-    const ok = midi.sendRaw(buildDT1(ADDR.enableRemote, [0x01]));
-    if (!ok) return; // geen output — niet als gedaan markeren
-    midi.sendRaw(buildDT1(ADDR.enableNotify, [0x01]));
+    const ok = midi.sendRaw(buildDT1(ADDR.enableRemote, [0x01]), reserveSlot());
+    if (!ok) {
+      nextSendRef.current = 0; // niets verstuurd — pacing terugzetten
+      return; // geen output — niet als gedaan markeren
+    }
+    // Extra marge zodat de piano remote-control "zet" vóór het eerste commando.
+    midi.sendRaw(buildDT1(ADDR.enableNotify, [0x01]), reserveSlot(HANDSHAKE_SETTLE_MS));
     handshakeDone.current = true;
-  }, [midi]);
+  }, [midi, reserveSlot]);
 
   /** Reset de handshake-vlag (bv. na opnieuw verbinden van de piano). */
   const resetSession = useCallback(() => {
     handshakeDone.current = false;
+    nextSendRef.current = 0;
   }, []);
 
-  /** Schrijft databytes naar een adres (DT1), met eenmalige handshake. */
+  /** Schrijft databytes naar een adres (DT1), met eenmalige handshake + pacing. */
   const write = useCallback(
     (address: readonly number[], data: readonly number[]): boolean => {
       ensureHandshake();
-      return midi.sendRaw(buildDT1(address, data));
+      const at = reserveSlot();
+      if (process.env.NODE_ENV !== "production") {
+        console.debug(`🎛 DT1 ${hex(address)} = [${hex(data)}] @+${Math.round(at - performance.now())}ms`);
+      }
+      return midi.sendRaw(buildDT1(address, data), at);
     },
-    [midi, ensureHandshake]
+    [midi, ensureHandshake, reserveSlot]
   );
 
   /** Leest een adres (RQ1) en wacht op het bijbehorende DT1-antwoord. */
@@ -187,13 +215,14 @@ export function useRolandSysex(
 
   // ---- Status uitlezen ----
   const readStatus = useCallback(async () => {
-    const [mode, metronome, tempo, volume, transpose, toneRight, toneDual2] =
+    const [mode, metronome, tempo, volume, transpose, splitPoint, toneRight, toneDual2] =
       await Promise.all([
         read(ADDR.keyboardMode, 1),
         read(ADDR.metronomeStatus, 1),
         read(ADDR.sequencerTempo, 2),
         read(ADDR.masterVolume, 1),
         read(ADDR.keyTransposeRead, 1),
+        read(ADDR.splitPoint, 1),
         read(ADDR.toneRight, 3),
         read(ADDR.toneDual2, 3),
       ]);
@@ -203,6 +232,7 @@ export function useRolandSysex(
       tempoBpm: tempo ? tempo[0] * 128 + tempo[1] : null,
       masterVolume: volume?.[0] ?? null,
       transpose: transpose?.[0] != null ? decodeTranspose(transpose[0]) : null,
+      splitPoint: splitPoint?.[0] ?? null,
       toneRight: toneRight ? { category: toneRight[0], num: toneRight[1] * 128 + toneRight[2] } : null,
       toneDual2: toneDual2 ? { category: toneDual2[0], num: toneDual2[1] * 128 + toneDual2[2] } : null,
     };
