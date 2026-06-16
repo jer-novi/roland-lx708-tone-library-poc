@@ -51,6 +51,8 @@ interface SeedTone {
   midiBankLsb: number | null;
   midiProgram: number | null;
   tags: string | null;
+  oneLinerNl?: string | null;
+  oneLinerEn?: string | null;
 }
 
 interface SeedFile {
@@ -71,6 +73,8 @@ function fallbackTones(): ToneDto[] {
     ...t,
     thumbnailUrl: null,
     shortSummary: null,
+    // Offline voorlopig NL; volledige taalwissel komt met de i18n-laag (Fase 3).
+    oneLiner: t.oneLinerNl ?? null,
   }));
 }
 
@@ -113,8 +117,11 @@ export function offlineLibrary(): ToneLibrary {
   };
 }
 
-export async function fetchToneDetail(id: number): Promise<ToneDetailDto> {
-  return get<ToneDetailDto>(`/api/tones/${id}`);
+export async function fetchToneDetail(
+  id: number,
+  lang = "nl"
+): Promise<ToneDetailDto> {
+  return get<ToneDetailDto>(`/api/tones/${id}?lang=${lang}`);
 }
 
 /**

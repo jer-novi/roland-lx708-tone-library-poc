@@ -468,6 +468,10 @@ export default function Home() {
           onClose={() => setOpenTone(null)}
           onPlay={playAndRecord}
           midiAvailable={midiAvailable}
+          onSelectRelated={(toneId) => {
+            const next = data?.tones.find((t) => t.id === toneId);
+            if (next) setOpenTone(next);
+          }}
         />
       )}
 

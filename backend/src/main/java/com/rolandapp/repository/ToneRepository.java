@@ -20,6 +20,10 @@ public interface ToneRepository extends JpaRepository<Tone, Long> {
     @Query("SELECT t FROM Tone t JOIN FETCH t.category WHERE t.id = :id")
     Optional<Tone> findByIdWithCategory(Long id);
 
+    /** Tonen die hetzelfde Wikipedia-artikel (instrument) delen — voor de "Verwante klanken"-slide. */
+    @Query("SELECT t FROM Tone t JOIN FETCH t.category WHERE t.wikipediaPageTitle = :pageTitle ORDER BY t.id")
+    List<Tone> findByWikipediaPageTitleWithCategory(String pageTitle);
+
     long countByCategoryId(Long categoryId);
 
     @Query("SELECT DISTINCT t.subCategory FROM Tone t WHERE t.subCategory IS NOT NULL ORDER BY t.subCategory")

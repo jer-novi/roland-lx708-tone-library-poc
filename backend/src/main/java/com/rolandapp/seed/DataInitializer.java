@@ -1,8 +1,10 @@
 package com.rolandapp.seed;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.rolandapp.model.InstrumentBackground;
 import com.rolandapp.model.Tone;
 import com.rolandapp.model.ToneCategory;
+import com.rolandapp.repository.InstrumentBackgroundRepository;
 import com.rolandapp.repository.ToneCategoryRepository;
 import com.rolandapp.repository.ToneRepository;
 import org.slf4j.Logger;
@@ -14,8 +16,11 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.io.IOException;
 import java.io.InputStream;
+import java.time.Instant;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
@@ -31,16 +36,20 @@ public class DataInitializer implements CommandLineRunner {
 
     private static final Logger log = LoggerFactory.getLogger(DataInitializer.class);
     private static final String SEED_RESOURCE = "data/tones_seed.json";
+    private static final String BACKGROUND_RESOURCE = "data/instrument_backgrounds.json";
 
     private final ToneCategoryRepository categoryRepository;
     private final ToneRepository toneRepository;
+    private final InstrumentBackgroundRepository backgroundRepository;
     private final ObjectMapper objectMapper;
 
     public DataInitializer(ToneCategoryRepository categoryRepository,
                            ToneRepository toneRepository,
+                           InstrumentBackgroundRepository backgroundRepository,
                            ObjectMapper objectMapper) {
         this.categoryRepository = categoryRepository;
         this.toneRepository = toneRepository;
+        this.backgroundRepository = backgroundRepository;
         this.objectMapper = objectMapper;
     }
 
@@ -84,6 +93,62 @@ public class DataInitializer implements CommandLineRunner {
 
         log.info("Tone seeding finished: {} created, {} updated, {} total in seed file",
                 created, updated, seedFile.tones().size());
+
+        loadInstrumentBackgrounds();
+    }
+
+    /**
+     * Laadt data/instrument_backgrounds.json (classpath) idempotent in de
+     * {@code instrument_background}-tabel, gekoppeld op page_title. De facts
+     * worden als JSON-array opgeslagen. Ontbreekt het bestand, dan slaan we
+     * over (de samenvattingen-agent vult het later).
+     */
+    private void loadInstrumentBackgrounds() throws IOException {
+        ClassPathResource resource = new ClassPathResource(BACKGROUND_RESOURCE);
+        if (!resource.exists()) {
+            log.info("Background file {} not on classpath, skipping", BACKGROUND_RESOURCE);
+            return;
+        }
+
+        InstrumentBackgroundSeedFile file;
+        try (InputStream in = resource.getInputStream()) {
+            file = objectMapper.readValue(in, InstrumentBackgroundSeedFile.class);
+        }
+        if (file.instruments() == null) {
+            return;
+        }
+
+        int created = 0;
+        int updated = 0;
+        for (Map.Entry<String, InstrumentBackgroundSeedFile.Entry> e : file.instruments().entrySet()) {
+            String title = e.getKey();
+            InstrumentBackgroundSeedFile.Entry seed = e.getValue();
+            String summaryNl = seed.summary() != null ? seed.summary().nl() : null;
+            String summaryEn = seed.summary() != null ? seed.summary().en() : null;
+            List<InstrumentBackgroundSeedFile.Fact> facts = seed.facts() != null ? seed.facts() : List.of();
+            String factsJson = objectMapper.writeValueAsString(facts);
+
+            InstrumentBackground bg = backgroundRepository.findByPageTitle(title).orElse(null);
+            if (bg == null) {
+                bg = new InstrumentBackground(title);
+                bg.setSummaryNl(summaryNl);
+                bg.setSummaryEn(summaryEn);
+                bg.setFactsJson(factsJson);
+                bg.setLastGeneratedAt(Instant.now());
+                backgroundRepository.save(bg);
+                created++;
+            } else if (!Objects.equals(bg.getSummaryNl(), summaryNl)
+                    || !Objects.equals(bg.getSummaryEn(), summaryEn)
+                    || !Objects.equals(bg.getFactsJson(), factsJson)) {
+                bg.setSummaryNl(summaryNl);
+                bg.setSummaryEn(summaryEn);
+                bg.setFactsJson(factsJson);
+                bg.setLastGeneratedAt(Instant.now());
+                updated++;
+            }
+        }
+        log.info("Instrument background seeding finished: {} created, {} updated, {} total",
+                created, updated, file.instruments().size());
     }
 
     private Map<String, ToneCategory> upsertCategories(ToneSeedFile seedFile) {
@@ -108,7 +173,9 @@ public class DataInitializer implements CommandLineRunner {
                 || !Objects.equals(tone.getMidiBankMsb(), seed.midiBankMsb())
                 || !Objects.equals(tone.getMidiBankLsb(), seed.midiBankLsb())
                 || !Objects.equals(tone.getMidiProgram(), seed.midiProgram())
-                || !Objects.equals(tone.getTags(), seed.tags());
+                || !Objects.equals(tone.getTags(), seed.tags())
+                || !Objects.equals(tone.getOneLinerNl(), seed.oneLinerNl())
+                || !Objects.equals(tone.getOneLinerEn(), seed.oneLinerEn());
     }
 
     private void applySeed(Tone tone, ToneSeedFile.ToneSeed seed) {
@@ -122,5 +189,7 @@ public class DataInitializer implements CommandLineRunner {
         tone.setMidiBankLsb(seed.midiBankLsb());
         tone.setMidiProgram(seed.midiProgram());
         tone.setTags(seed.tags());
+        tone.setOneLinerNl(seed.oneLinerNl());
+        tone.setOneLinerEn(seed.oneLinerEn());
     }
 }

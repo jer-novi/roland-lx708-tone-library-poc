@@ -4,11 +4,12 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import DOMPurify from "dompurify";
-import { fetchWiki } from "@/lib/api";
+import { fetchWiki, fetchToneDetail } from "@/lib/api";
 import type { ToneLibrary } from "@/lib/api";
 import type { ToneDto, WikiDataDto } from "@/lib/types";
 import { collectionsFor, parseTags } from "@/lib/collections";
 import { PlayToneButton } from "@/components/PlayToneButton";
+import { ToneFactCarousel } from "@/components/ToneFactCarousel";
 import { HornbostelSachsTree } from "@/components/HornbostelSachsTree";
 import { HornbostelSachsTreeFull } from "@/components/HornbostelSachsTreeFull";
 import { ToneThumbnail } from "@/components/ToneThumbnail";
@@ -19,6 +20,8 @@ interface Props {
   onClose: () => void;
   onPlay: (tone: ToneDto) => Promise<boolean>;
   midiAvailable: boolean;
+  /** Open een verwante klank vanuit de carousel (optioneel). */
+  onSelectRelated?: (toneId: number) => void;
 }
 
 function toShortSummary(summary: string | null): string | null {
@@ -78,7 +81,7 @@ function ImageWithFallback({
   );
 }
 
-export function ToneModal({ tone, onClose, onPlay, midiAvailable }: Props) {
+export function ToneModal({ tone, onClose, onPlay, midiAvailable, onSelectRelated }: Props) {
   const [showFullArticle, setShowFullArticle] = useState(false);
   const [showFullHsTree, setShowFullHsTree] = useState(false);
   const [showLightbox, setShowLightbox] = useState(false);
@@ -90,6 +93,15 @@ export function ToneModal({ tone, onClose, onPlay, midiAvailable }: Props) {
     queryKey: ["wiki", tone.id],
     queryFn: () => fetchWiki(tone.id),
     enabled: wikiEnabled,
+    staleTime: 24 * 60 * 60 * 1000,
+  });
+
+  // Gecureerde carousel-content (one-liner + samenvatting + facts + verwante
+  // klanken). Backend levert de tekst al taal-geselecteerd; voorlopig NL.
+  const { data: detail } = useQuery({
+    queryKey: ["toneDetail", tone.id],
+    queryFn: () => fetchToneDetail(tone.id),
+    enabled: tone.id > 0,
     staleTime: 24 * 60 * 60 * 1000,
   });
 
@@ -245,6 +257,22 @@ export function ToneModal({ tone, onClose, onPlay, midiAvailable }: Props) {
                 MIDI: bank {tone.midiBankMsb}/{tone.midiBankLsb} · program{" "}
                 {tone.midiProgram}
               </span>
+            </section>
+          )}
+
+          {(detail?.oneLiner ||
+            detail?.background ||
+            (detail?.relatedTones?.length ?? 0) > 0) && (
+            <section>
+              <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider text-accent">
+                Over deze klank
+              </h3>
+              <ToneFactCarousel
+                oneLiner={detail?.oneLiner ?? tone.oneLiner ?? null}
+                background={detail?.background ?? null}
+                relatedTones={detail?.relatedTones ?? []}
+                onSelectRelated={onSelectRelated}
+              />
             </section>
           )}
 
