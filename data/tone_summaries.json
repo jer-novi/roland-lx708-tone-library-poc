@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "schema": 1,
+    "purpose": "Pakkende one-liner per TOON (NL+EN). Slide 1 van de kaart-carousel.",
+    "key": "<category>|<toneNumber>  (bijv. 'Piano|1', 'E. Piano|1', 'Other|273')",
+    "voice": "Nederlands eerst, kort en pakkend (1 zin, <= ~140 tekens), evocatief maar feitelijk; EN idiomatisch, niet letterlijk vertaald.",
+    "status": "Bevat 4 golden voorbeelden. De samenvattingen-agent vult de overige tonen aan en laat bestaande sleutels ongemoeid."
+  },
+  "tones": {
+    "Piano|1": {
+      "name": "European Grand",
+      "oneLiner": {
+        "nl": "Het kloppend hart van de LX708: een Hamburg-vleugel, noot voor noot gemodelleerd in plaats van gesampled.",
+        "en": "The beating heart of the LX708: a Hamburg-style grand, modelled note by note rather than sampled."
+      }
+    },
+    "Piano|3": {
+      "name": "American Grand",
+      "oneLiner": {
+        "nl": "New Yorks staal: vollere bas, directe aanslag, gebouwd voor jazz, pop en singer-songwriter.",
+        "en": "New York steel: fuller bass and immediate attack, built for jazz, pop and singer-songwriter work."
+      }
+    },
+    "E. Piano|1": {
+      "name": "1976SuitCase",
+      "oneLiner": {
+        "nl": "De fluwelen Rhodes uit 1976: belachtige tines die onder elke ballad blijven zweven.",
+        "en": "The velvet '76 Rhodes: bell-like tines that hover beneath any ballad."
+      }
+    },
+    "Other|273": {
+      "name": "Car Engine",
+      "oneLiner": {
+        "nl": "Contact aan, motor brult: het GM2-effect voor je eigen filmscene.",
+        "en": "Ignition on, engine roars: the GM2 effect for your own movie scene."
+      }
+    }
+  }
+}

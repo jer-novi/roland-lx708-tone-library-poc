@@ -34,7 +34,9 @@
       "midiBankMsb": 0,
       "midiBankLsb": 68,
       "midiProgram": 1,
-      "tags": "akoestisch,warm,klassiek,ballad"
+      "tags": "akoestisch,warm,klassiek,ballad",
+      "oneLinerNl": "Het kloppend hart van de LX708: een Hamburg-vleugel, noot voor noot gemodelleerd in plaats van gesampled.",
+      "oneLinerEn": "The beating heart of the LX708: a Hamburg-style grand, modelled note by note rather than sampled."
     },
     {
       "toneNumber": 2,
@@ -62,7 +64,9 @@
       "midiBankMsb": 1,
       "midiBankLsb": 68,
       "midiProgram": 1,
-      "tags": "akoestisch,helder,jazz,ballad"
+      "tags": "akoestisch,helder,jazz,ballad",
+      "oneLinerNl": "New Yorks staal: vollere bas, directe aanslag, gebouwd voor jazz, pop en singer-songwriter.",
+      "oneLinerEn": "New York steel: fuller bass and immediate attack, built for jazz, pop and singer-songwriter work."
     },
     {
       "toneNumber": 4,
@@ -90,7 +94,9 @@
       "midiBankMsb": 8,
       "midiBankLsb": 71,
       "midiProgram": 5,
-      "tags": "vintage,warm,jazz,ballad"
+      "tags": "vintage,warm,jazz,ballad",
+      "oneLinerNl": "De fluwelen Rhodes uit 1976: belachtige tines die onder elke ballad blijven zweven.",
+      "oneLinerEn": "The velvet '76 Rhodes: bell-like tines that hover beneath any ballad."
     },
     {
       "toneNumber": 2,
@@ -798,7 +804,7 @@
       "category": "Other",
       "subCategory": "Do Re Mi",
       "origin": "Roland SuperNATURAL",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Solfège",
       "funFacts": null,
       "combinationSuggestions": null,
       "midiBankMsb": 121,
@@ -812,7 +818,7 @@
       "category": "Other",
       "subCategory": "Do Re Mi",
       "origin": "Roland SuperNATURAL",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Solfège",
       "funFacts": null,
       "combinationSuggestions": null,
       "midiBankMsb": 121,
@@ -826,7 +832,7 @@
       "category": "Other",
       "subCategory": "Do Re Mi",
       "origin": "Roland SuperNATURAL",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Solfège",
       "funFacts": null,
       "combinationSuggestions": null,
       "midiBankMsb": 121,
@@ -840,7 +846,7 @@
       "category": "Other",
       "subCategory": "Do Re Mi",
       "origin": "Roland SuperNATURAL",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Solfège",
       "funFacts": null,
       "combinationSuggestions": null,
       "midiBankMsb": 121,
@@ -2478,7 +2484,7 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": "Synthesizer",
+      "wikipediaPageTitle": "String synthesizer",
       "funFacts": null,
       "combinationSuggestions": null,
       "midiBankMsb": 121,
@@ -2492,7 +2498,7 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": "Synthesizer",
+      "wikipediaPageTitle": "String synthesizer",
       "funFacts": null,
       "combinationSuggestions": null,
       "midiBankMsb": 121,
@@ -2506,7 +2512,7 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": "Synthesizer",
+      "wikipediaPageTitle": "String synthesizer",
       "funFacts": null,
       "combinationSuggestions": null,
       "midiBankMsb": 121,
@@ -4046,7 +4052,7 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Flute",
       "funFacts": null,
       "combinationSuggestions": null,
       "midiBankMsb": 121,
@@ -4304,7 +4310,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 126,
-      "tags": "fx/cinematic"
+      "tags": "fx/cinematic",
+      "oneLinerNl": "Contact aan, motor brult: het GM2-effect voor je eigen filmscene.",
+      "oneLinerEn": "Ignition on, engine roars: the GM2 effect for your own movie scene."
     },
     {
       "toneNumber": 274,

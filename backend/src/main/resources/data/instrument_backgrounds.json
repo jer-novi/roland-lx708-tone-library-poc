@@ -1,0 +1,96 @@
+{
+  "_meta": {
+    "schema": 1,
+    "purpose": "Uitgebreide samenvatting + 5-7 gecategoriseerde fact-blokken per INSTRUMENT (NL+EN). Slides 2..N van de kaart-carousel.",
+    "key": "exacte wikipediaPageTitle uit data/tones_seed.json (bijv. 'Grand piano', 'Rhodes piano')",
+    "factCategories": {
+      "technical": "Mechaniek/akoestiek/synthese/MIDI-GM. VERPLICHT.",
+      "history": "Uitvinding, jaartal, maker, evolutie; droog en feitelijk. VERPLICHT.",
+      "playful": "Luchtig, leuk weetje. VERPLICHT.",
+      "exotic": "Verrassend/curiosa/wereldmuziek/ongewone toepassing. VERPLICHT.",
+      "culture": "Beroemde nummers, artiesten, films. Optioneel.",
+      "usage": "Speeltip op de LX708 (split/dual/combo). Optioneel."
+    },
+    "rules": "Minimaal 5 facts, streef 6-7. De 4 verplichte categorieen altijd aanwezig. SFX/geluidseffecten (Car, Telephone, Door, Explosion, Bird, ...) mogen 3-4 facts hebben en 'history'/'technical' overslaan als die niet zinvol zijn.",
+    "voice": "Nederlands eerst, warm en toegankelijk; samenvatting ~70-120 woorden; elk fact 1-2 zinnen (<= ~240 tekens). EN idiomatisch. Feiten paraphraseren, niet letterlijk uit Wikipedia overnemen.",
+    "status": "Bevat 2 golden voorbeelden. De samenvattingen-agent vult de overige instrumenten aan en laat bestaande sleutels ongemoeid."
+  },
+  "instruments": {
+    "Grand piano": {
+      "summary": {
+        "nl": "De vleugel is het vlaggenschip onder de toetsinstrumenten: een snaarinstrument waarbij hamertjes de snaren aanslaan, een 'struck chordophone' in de Hornbostel-Sachs-indeling. Sinds Cristofori rond 1700 de hamermechaniek uitvond, groeide het uit tot de gouden standaard voor klassiek, jazz en pop. De horizontale 'grand'-vorm biedt de langste bassnaren en het grootste klankbord, vandaar het brede dynamische bereik en de rijke boventonen. De LX708 reproduceert dit niet met samples maar met PureAcoustic-modeling: elke noot, resonantie en pedaalnuance wordt live berekend.",
+        "en": "The grand piano is the flagship of keyboard instruments: a stringed instrument whose hammers strike the strings, a 'struck chordophone' in the Hornbostel-Sachs scheme. Ever since Cristofori invented the hammer action around 1700, it became the gold standard for classical, jazz and pop. The horizontal 'grand' shape allows the longest bass strings and largest soundboard, hence its wide dynamic range and rich overtones. The LX708 recreates this not with samples but with PureAcoustic modelling: every note, resonance and pedal nuance is computed live."
+      },
+      "facts": [
+        {
+          "category": "technical",
+          "nl": "Een moderne concertvleugel heeft zo'n 230 snaren onder een gezamenlijke spanning van bijna 20 ton; daarom is het gietijzeren frame onmisbaar.",
+          "en": "A modern concert grand carries around 230 strings under nearly 20 tons of combined tension, which is why the cast-iron frame is indispensable."
+        },
+        {
+          "category": "history",
+          "nl": "Bartolomeo Cristofori bouwde rond 1700 de eerste piano, het 'gravicembalo col piano e forte', het eerste klavier dat zowel zacht als hard kon klinken.",
+          "en": "Bartolomeo Cristofori built the first piano around 1700, the 'gravicembalo col piano e forte', the first keyboard able to play both soft and loud."
+        },
+        {
+          "category": "playful",
+          "nl": "Trap het rechterpedaal in en je tilt alle dempers tegelijk op; de hele snarenbank zingt mee en daar komt die grote galm vandaan.",
+          "en": "Press the right pedal and you lift every damper at once; the whole string bank rings along, and that is where the big bloom comes from."
+        },
+        {
+          "category": "exotic",
+          "nl": "De langste bassnaren zijn ruim twee meter; daarom is een echte concertvleugel tot bijna drie meter lang.",
+          "en": "The longest bass strings run over two metres, which is why a true concert grand stretches to nearly three metres long."
+        },
+        {
+          "category": "culture",
+          "nl": "Van Beethovens sonates tot Elton John: de vleugel is al drie eeuwen het referentie-instrument van de westerse muziek.",
+          "en": "From Beethoven's sonatas to Elton John, the grand has been the reference instrument of Western music for three centuries."
+        },
+        {
+          "category": "usage",
+          "nl": "Op de LX708 is dit de hoofdklank; leg er met Dual een strijkerspad onder voor filmische ballads.",
+          "en": "On the LX708 this is the main voice; layer a string pad underneath with Dual for cinematic ballads."
+        }
+      ]
+    },
+    "Rhodes piano": {
+      "summary": {
+        "nl": "De Fender Rhodes is een elektrische piano waarbij hamertjes op metalen staafjes ('tines') slaan; elektromagnetische pickups vangen de trilling op, net als bij een elektrische gitaar. Harold Rhodes ontwikkelde het instrument uit een lesinstrumentje voor gewonde soldaten in de Tweede Wereldoorlog. De belachtige, zwevende klank werd het handelsmerk van jaren-70 soul, jazz-fusion en pop. Anders dan een akoestische piano produceert de Rhodes geen snaartoon maar een 'bell-tone' die zacht uitsterft, ideaal onder zang en in ballads.",
+        "en": "The Fender Rhodes is an electric piano whose hammers strike metal rods ('tines'); electromagnetic pickups capture the vibration, just like an electric guitar. Harold Rhodes developed it from a small teaching instrument for wounded soldiers in World War II. Its bell-like, floating tone became the signature of 1970s soul, jazz-fusion and pop. Unlike an acoustic piano, the Rhodes produces no string tone but a soft, decaying 'bell-tone', ideal under vocals and in ballads."
+      },
+      "facts": [
+        {
+          "category": "technical",
+          "nl": "Geen snaren maar 'tines': stemvork-achtige staafjes die door pickups worden afgetast, daarom klinkt een Rhodes meer als een elektrische gitaar dan als een piano.",
+          "en": "No strings but 'tines': tuning-fork-like rods read by pickups, which is why a Rhodes sounds more like an electric guitar than a piano."
+        },
+        {
+          "category": "history",
+          "nl": "Harold Rhodes bouwde zijn eerste model uit vliegtuigonderdelen om gewonde soldaten in de Tweede Wereldoorlog piano te leren spelen.",
+          "en": "Harold Rhodes built his first model from aircraft parts to teach wounded World War II soldiers to play piano."
+        },
+        {
+          "category": "playful",
+          "nl": "Hoe harder je aanslaat, hoe meer 'bark' (vervorming) je hoort; die growl is precies waarom funk- en soultoetsenisten van de Rhodes houden.",
+          "en": "The harder you hit, the more 'bark' (overdrive) you get; that growl is exactly why funk and soul players love the Rhodes."
+        },
+        {
+          "category": "exotic",
+          "nl": "De 'suitcase'-versie had een ingebouwde versterker en luidspreker in de onderkant; de 'stage'-versie stond simpelweg op vier schroefpoten.",
+          "en": "The 'suitcase' version had a built-in amplifier and speaker in its base; the 'stage' version simply stood on four screw-in legs."
+        },
+        {
+          "category": "culture",
+          "nl": "Stevie Wonders 'You Are the Sunshine of My Life' en talloze jazz-fusion-platen van Herbie Hancock drijven op de Rhodes-klank.",
+          "en": "Stevie Wonder's 'You Are the Sunshine of My Life' and countless Herbie Hancock jazz-fusion records ride on the Rhodes sound."
+        },
+        {
+          "category": "usage",
+          "nl": "Op de LX708 zweeft dit '1976 SuitCase'-preset onder elke ballad; combineer met een lichte tremolo of pad.",
+          "en": "On the LX708 this '1976 SuitCase' preset floats under any ballad; pair it with a touch of tremolo or a pad."
+        }
+      ]
+    }
+  }
+}
