@@ -34,6 +34,2246 @@
         "nl": "Contact aan, motor brult: het GM2-effect voor je eigen filmscene.",
         "en": "Ignition on, engine roars: the GM2 effect for your own movie scene."
       }
+    },
+    "Piano|2": {
+      "name": "European v2",
+      "oneLiner": {
+        "nl": "Dezelfde Europese vleugel, nu net iets ronder en intiemer afgeregeld voor zachtere passages.",
+        "en": "The same European grand, now voiced a touch rounder and more intimate for softer passages."
+      }
+    },
+    "Piano|4": {
+      "name": "American v2",
+      "oneLiner": {
+        "nl": "De Amerikaanse vleugel in een warmere variant, met iets minder bite en meer body.",
+        "en": "The American grand in a warmer guise, with a little less bite and more body."
+      }
+    },
+    "E. Piano|2": {
+      "name": "Tremolo EP",
+      "oneLiner": {
+        "nl": "Een Rhodes met deinende tremolo: het stereo-zwabberen dat soulballads laat ademen.",
+        "en": "A Rhodes drenched in tremolo: the stereo sway that lets soul ballads breathe."
+      }
+    },
+    "E. Piano|10": {
+      "name": "70's EP",
+      "oneLiner": {
+        "nl": "Warme jaren-70 elektrische piano: rond, donker en gemaakt voor smeuïge fusion-akkoorden.",
+        "en": "Warm 1970s electric piano: round, dark and made for mellow fusion chords."
+      }
+    },
+    "E. Piano|3": {
+      "name": "Pop EP",
+      "oneLiner": {
+        "nl": "Heldere, sprankelende elektrische piano die meteen vooraan in de mix glanst.",
+        "en": "A bright, sparkling electric piano that shines right at the front of the mix."
+      }
+    },
+    "E. Piano|6": {
+      "name": "EP Belle",
+      "oneLiner": {
+        "nl": "Een zachte, klokachtige EP die als een belletje boven trage ballads hangt.",
+        "en": "A soft, bell-like EP that chimes gently above slow ballads."
+      }
+    },
+    "Other|46": {
+      "name": "Detuned EP 1",
+      "oneLiner": {
+        "nl": "GM2-Rhodes met een lichte ontstemming: dat zwevende, lo-fi chorus-effect zit ingebakken.",
+        "en": "A GM2 Rhodes with slight detuning baked in: that floating, lo-fi chorus shimmer."
+      }
+    },
+    "Other|48": {
+      "name": "60's E.Piano",
+      "oneLiner": {
+        "nl": "De vintage jaren-60 elektrische piano uit de GM2-set: warm, simpel en nostalgisch.",
+        "en": "The vintage 1960s electric piano from the GM2 set: warm, simple and nostalgic."
+      }
+    },
+    "Other|50": {
+      "name": "Detuned EP 2",
+      "oneLiner": {
+        "nl": "Een tweede ontstemde GM2-EP, iets voller dan zijn broertje en net zo lo-fi-warm.",
+        "en": "A second detuned GM2 EP, a touch fuller than its sibling and just as lo-fi warm."
+      }
+    },
+    "Other|53": {
+      "name": "EP Phaser",
+      "oneLiner": {
+        "nl": "Elektrische piano door een phaser gehaald: dat ronddraaiende, ruimtelijke jaren-70 zwiep.",
+        "en": "Electric piano pushed through a phaser: that swirling, spacey 1970s sweep."
+      }
+    },
+    "E. Piano|4": {
+      "name": "Vintage EP",
+      "oneLiner": {
+        "nl": "De rietige Wurlitzer-klank: knokig, warm en met een vleugje overstuur in de aanslag.",
+        "en": "The reedy Wurlitzer voice: gritty, warm and with a hint of overdrive in the attack."
+      }
+    },
+    "E. Piano|7": {
+      "name": "60's EP",
+      "oneLiner": {
+        "nl": "Een Wurlitzer-EP in jaren-60 sferen: rond, lo-fi en perfect voor retro-pop.",
+        "en": "A Wurlitzer EP in 1960s spirit: round, lo-fi and perfect for retro pop."
+      }
+    },
+    "Other|47": {
+      "name": "Vintage EP",
+      "oneLiner": {
+        "nl": "De GM2-versie van de vintage Wurlitzer: warm reed-geluid voor multitimbraal werk.",
+        "en": "The GM2 take on the vintage Wurlitzer: warm reed tone for multitimbral work."
+      }
+    },
+    "E. Piano|5": {
+      "name": "FM E.Piano",
+      "oneLiner": {
+        "nl": "Het glasheldere DX7 FM-piano: hét belletjes-geluid onder vrijwel elke jaren-80 ballad.",
+        "en": "The glassy DX7 FM piano: the chime behind nearly every 1980s ballad."
+      }
+    },
+    "Other|52": {
+      "name": "EP Legend",
+      "oneLiner": {
+        "nl": "De GM2-FM-piano: dat onmiskenbare digitale jaren-80 belgeluid, klaar voor de mix.",
+        "en": "The GM2 FM piano: that unmistakable digital '80s bell tone, ready for the mix."
+      }
+    },
+    "E. Piano|8": {
+      "name": "Clav.",
+      "oneLiner": {
+        "nl": "De knappende Hohner Clavinet: funky en percussief, het riff-geluid van 'Superstition'.",
+        "en": "The snappy Hohner Clavinet: funky and percussive, the riff sound of 'Superstition'."
+      }
+    },
+    "Other|58": {
+      "name": "Clav.",
+      "oneLiner": {
+        "nl": "De GM2-Clavinet: dezelfde percussieve funk-bite, klaar voor multitimbraal gebruik.",
+        "en": "The GM2 Clavinet: the same percussive funk bite, ready for multitimbral use."
+      }
+    },
+    "Other|59": {
+      "name": "Pulse Clav.",
+      "oneLiner": {
+        "nl": "Een Clavinet met pulserende beweging: het funk-knetteren krijgt een ritmische puls.",
+        "en": "A Clavinet with pulsing movement: the funky snap gets a rhythmic throb."
+      }
+    },
+    "Other|123": {
+      "name": "Clav.Bass",
+      "oneLiner": {
+        "nl": "De Clavinet getransponeerd naar de kelder: een donkere, synthetische funk-bas.",
+        "en": "The Clavinet dropped to the basement: a dark, synthetic funk bass."
+      }
+    },
+    "E. Piano|9": {
+      "name": "Stage Phaser",
+      "oneLiner": {
+        "nl": "Een elektrische piano die door een phaser zwiept: zwevend, wervelend en heerlijk vintage.",
+        "en": "An electric piano swept through a phaser: swirling, undulating and gloriously vintage."
+      }
+    },
+    "E. Piano|11": {
+      "name": "E.Grand",
+      "oneLiner": {
+        "nl": "De Yamaha CP-70 in geest: echte snaren met pickups, helder en perfect voor pop-ballads.",
+        "en": "The Yamaha CP-70 in spirit: real strings with pickups, bright and made for pop ballads."
+      }
+    },
+    "Strings|1": {
+      "name": "SymphonicStr1",
+      "oneLiner": {
+        "nl": "Een vol symfonisch strijkerstapijt: warm, breed en meteen klaar voor klassiek en cinema.",
+        "en": "A full symphonic string bed: warm, broad and instantly ready for classical and cinema."
+      }
+    },
+    "Strings|2": {
+      "name": "Epic Strings",
+      "oneLiner": {
+        "nl": "Grootse, trailer-waardige strijkers die elke melodie naar het filmdoek tillen.",
+        "en": "Grand, trailer-worthy strings that lift any melody onto the silver screen."
+      }
+    },
+    "Strings|3": {
+      "name": "Rich Strings",
+      "oneLiner": {
+        "nl": "Een dikke, warme strijkerslaag, ideaal als zacht fundament onder ballads.",
+        "en": "A thick, warm string layer, ideal as a soft foundation beneath ballads."
+      }
+    },
+    "Strings|9": {
+      "name": "Velo Strings",
+      "oneLiner": {
+        "nl": "Strijkers die op je aanslag reageren: zacht strijken of fel inzetten, jij bepaalt.",
+        "en": "Strings that answer your touch: gentle bowing or a sharp attack, you decide."
+      }
+    },
+    "Strings|14": {
+      "name": "SymphonicStr2",
+      "oneLiner": {
+        "nl": "Een tweede symfonische variant: nog warmer en ronder voor brede orkestklanken.",
+        "en": "A second symphonic take: warmer and rounder for broad orchestral textures."
+      }
+    },
+    "Other|139": {
+      "name": "Strings",
+      "oneLiner": {
+        "nl": "De standaard GM2-strijkerssectie: warm en betrouwbaar voor multitimbraal werk.",
+        "en": "The standard GM2 string section: warm and dependable for multitimbral work."
+      }
+    },
+    "Other|141": {
+      "name": "60's Strings",
+      "oneLiner": {
+        "nl": "Lo-fi strijkers met een nostalgische jaren-60 gloed, alsof ze van vinyl komen.",
+        "en": "Lo-fi strings with a nostalgic 1960s glow, as if lifted straight off vinyl."
+      }
+    },
+    "Other|142": {
+      "name": "Slow Strings",
+      "oneLiner": {
+        "nl": "Strijkers met een trage, zachte inzet die langzaam opzwelt onder zang.",
+        "en": "Strings with a slow, soft attack that swells gently beneath vocals."
+      }
+    },
+    "Strings|4": {
+      "name": "Orchestra Str",
+      "oneLiner": {
+        "nl": "Akoestische orkeststrijkers met de natuurlijke ademing van een concertzaal.",
+        "en": "Acoustic orchestral strings with the natural breath of a concert hall."
+      }
+    },
+    "Strings|5": {
+      "name": "Orchestra",
+      "oneLiner": {
+        "nl": "Een compleet orkest in één klank: strijkers, blazers en glans voor filmische pracht.",
+        "en": "A whole orchestra in one voice: strings, winds and sheen for cinematic splendour."
+      }
+    },
+    "Other|140": {
+      "name": "Orchestra",
+      "oneLiner": {
+        "nl": "De GM2-orkestklank: een breed ensemble klaar voor multitimbrale arrangementen.",
+        "en": "The GM2 orchestra voice: a broad ensemble ready for multitimbral arrangements."
+      }
+    },
+    "Strings|6": {
+      "name": "Chamber Winds",
+      "oneLiner": {
+        "nl": "Een intiem houtblazersensemble: zacht, pastoraal en op kamermuziek-schaal.",
+        "en": "An intimate woodwind ensemble: soft, pastoral and on a chamber-music scale."
+      }
+    },
+    "Strings|7": {
+      "name": "Harp",
+      "oneLiner": {
+        "nl": "Sprankelende harpklanken die als waterdruppels door je arpeggio's glijden.",
+        "en": "Sparkling harp tones that glide like water drops through your arpeggios."
+      }
+    },
+    "Other|136": {
+      "name": "Harp",
+      "oneLiner": {
+        "nl": "De GM2-harp: helder en zacht, ideaal voor glissando's in multitimbraal werk.",
+        "en": "The GM2 harp: bright and gentle, perfect for glissandos in multitimbral work."
+      }
+    },
+    "Strings|8": {
+      "name": "Violin",
+      "oneLiner": {
+        "nl": "Een solo-viool met heldere, zingende streek voor klassiek en folk.",
+        "en": "A solo violin with a bright, singing bow for classical and folk."
+      }
+    },
+    "Other|129": {
+      "name": "Violin",
+      "oneLiner": {
+        "nl": "De GM2-soloviool: akoestisch en helder voor klassieke melodielijnen.",
+        "en": "The GM2 solo violin: acoustic and bright for classical melodic lines."
+      }
+    },
+    "Other|130": {
+      "name": "Slow Violin",
+      "oneLiner": {
+        "nl": "Een viool met trage, zwoele inzet die zacht opzwelt in ballads.",
+        "en": "A violin with a slow, sultry attack that swells softly through ballads."
+      }
+    },
+    "Strings|10": {
+      "name": "Flute",
+      "oneLiner": {
+        "nl": "Een ademende dwarsfluit: zacht, helder en luchtig voor pastorale lijnen.",
+        "en": "A breathy transverse flute: soft, bright and airy for pastoral lines."
+      }
+    },
+    "Other|184": {
+      "name": "Flute",
+      "oneLiner": {
+        "nl": "De GM2-dwarsfluit: zacht en helder voor melodieën in multitimbrale sets.",
+        "en": "The GM2 transverse flute: soft and bright for melodies in multitimbral sets."
+      }
+    },
+    "Other|255": {
+      "name": "Fl.Key Click",
+      "oneLiner": {
+        "nl": "Het tikkende kleppengeluid van een fluit: een subtiel akoestisch FX-detail.",
+        "en": "The clicking key noise of a flute: a subtle acoustic FX detail."
+      }
+    },
+    "Strings|11": {
+      "name": "Cello",
+      "oneLiner": {
+        "nl": "De warme, donkere tenorstem van het strijkkwartet, met SuperNATURAL-realisme tot in elke streek.",
+        "en": "The warm, dark tenor voice of the string quartet, rendered with SuperNATURAL realism in every bow stroke."
+      }
+    },
+    "Other|132": {
+      "name": "Cello",
+      "oneLiner": {
+        "nl": "De GM2-cello: een akoestische, klassieke strijkklank voor betrouwbaar General MIDI-werk.",
+        "en": "The GM2 cello: an acoustic, classical bowed tone for reliable General MIDI playback."
+      }
+    },
+    "Strings|12": {
+      "name": "OrchestraBrs",
+      "oneLiner": {
+        "nl": "Een heldere, brede orkestkoper-sectie; bouwt direct die filmische fanfare-grandeur op.",
+        "en": "A bright, broad orchestral brass section that instantly builds cinematic fanfare grandeur."
+      }
+    },
+    "Other|166": {
+      "name": "Brass 1",
+      "oneLiner": {
+        "nl": "De heldere GM2-bigband-sectie: strakke unisono stabs voor jazz en funk.",
+        "en": "The bright GM2 big-band section: tight unison stabs for jazz and funk."
+      }
+    },
+    "Other|167": {
+      "name": "Brass 2",
+      "oneLiner": {
+        "nl": "Een tweede, iets dikkere kopersectie-variant voor stevigere jazz-arrangementen.",
+        "en": "A second, slightly fatter brass-section variant for beefier jazz arrangements."
+      }
+    },
+    "Other|168": {
+      "name": "Synth Brass1",
+      "oneLiner": {
+        "nl": "Synthkoper met punch: de helder snerpende stab die jaren-80 funk en pop kleurt.",
+        "en": "Synth brass with punch: the bright, snarling stab that colours '80s funk and pop."
+      }
+    },
+    "Other|169": {
+      "name": "Synth Brass3",
+      "oneLiner": {
+        "nl": "Een agressievere synthkoper-variant met extra bite voor dance en electro.",
+        "en": "A more aggressive synth-brass variant with extra bite for dance and electro."
+      }
+    },
+    "Other|170": {
+      "name": "AnalogBrass1",
+      "oneLiner": {
+        "nl": "Warme analoge synthkoper: de vintage zaag-saw die naar oude polysynths ruikt.",
+        "en": "Warm analogue synth brass: the vintage sawtooth swell that smells of old polysynths."
+      }
+    },
+    "Other|171": {
+      "name": "Jump Brass",
+      "oneLiner": {
+        "nl": "De explosieve 'jump'-koperstab uit de rave- en hardhouse-toolkit.",
+        "en": "The explosive 'jump' brass stab straight from the rave and hard-house toolkit."
+      }
+    },
+    "Other|172": {
+      "name": "Synth Brass2",
+      "oneLiner": {
+        "nl": "Een vollere synthkoper-laag, ideaal voor brede akkoordstabs en pads.",
+        "en": "A fuller synth-brass layer, ideal for wide chord stabs and pads."
+      }
+    },
+    "Other|173": {
+      "name": "Synth Brass4",
+      "oneLiner": {
+        "nl": "Nog een synthkoper-smaak met scherpe attack voor stevige electro-hooks.",
+        "en": "Another synth-brass flavour with a sharp attack for punchy electro hooks."
+      }
+    },
+    "Other|174": {
+      "name": "AnalogBrass2",
+      "oneLiner": {
+        "nl": "De tweede analoge synthkoper: warm, vintage en breed uitgesmeerd.",
+        "en": "The second analogue synth brass: warm, vintage and broadly spread."
+      }
+    },
+    "Strings|13": {
+      "name": "Pizzicato Str",
+      "oneLiner": {
+        "nl": "Geplukte strijkers: korte, percussieve plukjes die een arrangement van lichte tred geven.",
+        "en": "Plucked strings: short, percussive pizzicato that gives an arrangement a light, springy step."
+      }
+    },
+    "Other|135": {
+      "name": "PizzicatoStr",
+      "oneLiner": {
+        "nl": "De GM2-pizzicato: dezelfde geplukte strijkerstik, klaar voor General MIDI-songs.",
+        "en": "The GM2 pizzicato: the same plucked-string tick, ready for General MIDI songs."
+      }
+    },
+    "Strings|15": {
+      "name": "Soft Pad",
+      "oneLiner": {
+        "nl": "Een zacht, zwevend synthpad dat als wolkendek onder elke melodie schuift.",
+        "en": "A soft, floating synth pad that slides like a cloud bed beneath any melody."
+      }
+    },
+    "Strings|16": {
+      "name": "Magical Piano",
+      "oneLiner": {
+        "nl": "Een sprankelende piano met zwevende, klokachtige laag: vleugel met een vleugje fee.",
+        "en": "A sparkling piano with a shimmering, bell-like layer: a grand with a touch of fairy dust."
+      }
+    },
+    "Other|36": {
+      "name": "Piano 1",
+      "oneLiner": {
+        "nl": "De standaard GM2-vleugel: helder, akoestisch en universeel inzetbaar.",
+        "en": "The standard GM2 grand: bright, acoustic and good for anything."
+      }
+    },
+    "Other|37": {
+      "name": "Piano 1w",
+      "oneLiner": {
+        "nl": "Piano 1 met 'wide'-stereospreiding: dezelfde vleugel, breder over het stereobeeld.",
+        "en": "Piano 1 with 'wide' stereo spread: the same grand, opened up across the stereo field."
+      }
+    },
+    "Other|38": {
+      "name": "Piano 1d",
+      "oneLiner": {
+        "nl": "Piano 1 'detuned': licht ontstemd voor een warme, honky-tonk-achtige zweving.",
+        "en": "Piano 1 'detuned': slightly mistuned for a warm, honky-tonk-style shimmer."
+      }
+    },
+    "Other|39": {
+      "name": "Piano 2",
+      "oneLiner": {
+        "nl": "Een tweede GM2-vleugel met iets ander karakter voor afwisseling in je mix.",
+        "en": "A second GM2 grand with a slightly different character for variety in your mix."
+      }
+    },
+    "Other|40": {
+      "name": "Piano 2w",
+      "oneLiner": {
+        "nl": "Piano 2 in 'wide'-stereo: breder uitgesmeerd voor een ruimer klankbeeld.",
+        "en": "Piano 2 in 'wide' stereo: spread wider for a roomier sound."
+      }
+    },
+    "Other|41": {
+      "name": "Piano 3",
+      "oneLiner": {
+        "nl": "De derde GM2-vleugel: een helder, direct alternatief voor pop en song.",
+        "en": "The third GM2 grand: a bright, direct alternative for pop and song work."
+      }
+    },
+    "Other|42": {
+      "name": "Piano 3w",
+      "oneLiner": {
+        "nl": "Piano 3 'wide': dezelfde directe vleugel met een ruimere stereospreiding.",
+        "en": "Piano 3 'wide': the same direct grand with a roomier stereo spread."
+      }
+    },
+    "Other|45": {
+      "name": "E.Piano 1",
+      "oneLiner": {
+        "nl": "De warme GM2-Rhodes: belachtige tines die zacht onder elke ballad zweven.",
+        "en": "The warm GM2 Rhodes: bell-like tines that float gently beneath any ballad."
+      }
+    },
+    "Other|49": {
+      "name": "E.Piano 2",
+      "oneLiner": {
+        "nl": "De GM2-FM-piano: glasheldere, DX-achtige bel voor jaren-80 pop en ballads.",
+        "en": "The GM2 FM piano: a glassy, DX-style bell for '80s pop and ballads."
+      }
+    },
+    "Strings|17": {
+      "name": "Jazz Scat",
+      "oneLiner": {
+        "nl": "Een wordeloze jazzstem die 'doe-ba-dap' meeswingt; speel je melodie en de scat zingt mee.",
+        "en": "A wordless jazz voice that swings along in 'doo-ba-dap'; play a line and the scat sings it back."
+      }
+    },
+    "Strings|18": {
+      "name": "A.Bass+Cymbl",
+      "oneLiner": {
+        "nl": "Akoestische contrabas met een tikje bekken erbij: een compleet ritmesectie-fundament onder je linkerhand.",
+        "en": "Upright bass with a brush of cymbal on top: a whole rhythm-section foundation under your left hand."
+      }
+    },
+    "Other|113": {
+      "name": "AcousticBass",
+      "oneLiner": {
+        "nl": "De warme, houten thump van een gestreken contrabas: het walking-bass-fundament van elke jazzclub.",
+        "en": "The warm, woody thump of a plucked upright bass: the walking-bass backbone of any jazz club."
+      }
+    },
+    "Other|133": {
+      "name": "Contrabass",
+      "oneLiner": {
+        "nl": "De gestreken contrabas uit het symfonieorkest: dieper en klassieker dan zijn jazz-broertje.",
+        "en": "The bowed double bass of the symphony orchestra: deeper and more classical than its jazz sibling."
+      }
+    },
+    "Other|1": {
+      "name": "Pipe Organ",
+      "oneLiner": {
+        "nl": "Het volle pijporgel dat een hele kathedraal vult; majestueus, ademend en eindeloos aanhoudend.",
+        "en": "The full pipe organ that fills a whole cathedral; majestic, breathing and endlessly sustaining."
+      }
+    },
+    "Other|5": {
+      "name": "ChurchOrgan1",
+      "oneLiner": {
+        "nl": "Een ronder, voller kerkorgelregister: ideaal voor koraal en plechtige hymnen.",
+        "en": "A rounder, fuller church-organ registration: ideal for chorales and solemn hymns."
+      }
+    },
+    "Other|6": {
+      "name": "ChurchOrgan2",
+      "oneLiner": {
+        "nl": "Helderder en scherper kerkorgel dan variant 1, met meer bovenstem voor contrapunt.",
+        "en": "A brighter, more cutting church organ than variant 1, with extra upper voice for counterpoint."
+      }
+    },
+    "Other|8": {
+      "name": "Full Stops",
+      "oneLiner": {
+        "nl": "Alle registers open: het oorverdovende tutti van het pijporgel in volle glorie.",
+        "en": "Every stop pulled out: the thunderous full tutti of the pipe organ in all its glory."
+      }
+    },
+    "Other|80": {
+      "name": "Church Org.1",
+      "oneLiner": {
+        "nl": "Het standaard GM2-kerkorgel: warm en breed inzetbaar voor sacrale begeleiding.",
+        "en": "The standard GM2 church organ: warm and broadly useful for sacred accompaniment."
+      }
+    },
+    "Other|81": {
+      "name": "Church Org.2",
+      "oneLiner": {
+        "nl": "GM2-kerkorgel met een ander registermengsel: net iets helderder dan variant 1.",
+        "en": "A GM2 church organ with a different stop blend: just a touch brighter than variant 1."
+      }
+    },
+    "Other|82": {
+      "name": "Church Org.3",
+      "oneLiner": {
+        "nl": "De derde GM2-kerkorgelvariant: voller en plechtiger voor grote slotakkoorden.",
+        "en": "The third GM2 church-organ variant: fuller and grander for big closing chords."
+      }
+    },
+    "Other|2": {
+      "name": "Nason Flt 8'",
+      "oneLiner": {
+        "nl": "De zachte Nason-fluit op 8'-voet: een lieflijk, holpijpachtig orgelregister voor ingetogen passages.",
+        "en": "The gentle Nason flute at 8' pitch: a sweet, stopped-flute organ voice for intimate passages."
+      }
+    },
+    "Other|3": {
+      "name": "Combo Jz.Org",
+      "oneLiner": {
+        "nl": "De knisperende combo-jazzorgel met percussieve klik: rechtstreeks uit de kelderclub van de jaren zestig.",
+        "en": "The crisp combo jazz organ with percussive click: straight out of a 1960s basement club."
+      }
+    },
+    "Other|4": {
+      "name": "Ballad Organ",
+      "oneLiner": {
+        "nl": "Zacht en zwevend orgel met traag leslie-zweven: gemaakt om onder ballads te ademen.",
+        "en": "A soft, floating organ with slow Leslie swirl: made to breathe beneath ballads."
+      }
+    },
+    "Other|9": {
+      "name": "Mellow Bars",
+      "oneLiner": {
+        "nl": "Ronde, donkere drawbar-instelling: warm en gedempt, zonder scherpe randjes.",
+        "en": "A round, dark drawbar setting: warm and mellow, with no sharp edges."
+      }
+    },
+    "Other|10": {
+      "name": "Light Organ",
+      "oneLiner": {
+        "nl": "Lichte, ijle orgelklank voor luchtige akkoorden hoog in het klavier.",
+        "en": "A light, airy organ voice for breezy chords high up the keyboard."
+      }
+    },
+    "Other|11": {
+      "name": "Lower Organ",
+      "oneLiner": {
+        "nl": "Donker, gronderig orgelregister voor de linkerhand: het zware fundament onder een solo.",
+        "en": "A dark, grounded organ voice for the left hand: the heavy bed beneath a solo."
+      }
+    },
+    "Other|72": {
+      "name": "Organ 1",
+      "oneLiner": {
+        "nl": "Het standaard GM2-trekkenorgel: warm en vintage, klaar voor pop en rock.",
+        "en": "The standard GM2 drawbar organ: warm and vintage, ready for pop and rock."
+      }
+    },
+    "Other|73": {
+      "name": "TremoloOrgan",
+      "oneLiner": {
+        "nl": "GM2-orgel met ingebouwde tremolo: dat golvende, pulserende zweven zit er al in.",
+        "en": "A GM2 organ with built-in tremolo: that wavering, pulsing swirl is baked right in."
+      }
+    },
+    "Other|75": {
+      "name": "Organ 2",
+      "oneLiner": {
+        "nl": "Tweede GM2-orgelvariant: een ander drawbar-mengsel met iets meer body.",
+        "en": "A second GM2 organ variant: a different drawbar blend with a touch more body."
+      }
+    },
+    "Other|76": {
+      "name": "Perc.Organ 1",
+      "oneLiner": {
+        "nl": "GM2-orgel met percussie-aanslag: die korte tik op elke noot geeft het bite.",
+        "en": "A GM2 organ with percussion attack: that short click on each note gives it bite."
+      }
+    },
+    "Other|77": {
+      "name": "Chorus Organ",
+      "oneLiner": {
+        "nl": "GM2-orgel met chorus-effect: breder en glanzender door de licht ontstemde lagen.",
+        "en": "A GM2 organ with chorus: wider and shinier thanks to its slightly detuned layers."
+      }
+    },
+    "Other|78": {
+      "name": "Perc.Organ 2",
+      "oneLiner": {
+        "nl": "Tweede percussie-orgelvariant: een scherpere tik voor funky stabs en riffs.",
+        "en": "A second percussion-organ variant: a sharper click for funky stabs and riffs."
+      }
+    },
+    "Other|79": {
+      "name": "Rock Organ",
+      "oneLiner": {
+        "nl": "Het overstuurde rockorgel met overdrive-bite: gemaakt om boven een band uit te schreeuwen.",
+        "en": "The overdriven rock organ with grit: built to scream out over a full band."
+      }
+    },
+    "Other|7": {
+      "name": "Gospel Spin",
+      "oneLiner": {
+        "nl": "Hammond-orgel door een draaiende Leslie: de zwiepende hoorn geeft die typische gospel-swirl die elke kerkdienst optilt.",
+        "en": "Hammond organ through a spinning Leslie: the whirling horn gives that gospel swirl that lifts any Sunday service."
+      }
+    },
+    "Other|12": {
+      "name": "60's Organ",
+      "oneLiner": {
+        "nl": "De rietachtige bite van een Vox Continental: het knisperende combo-orgel dat de Britse beat van de sixties kleurde.",
+        "en": "The reedy bite of a Vox Continental: the crisp combo organ that coloured the British beat of the sixties."
+      }
+    },
+    "Other|74": {
+      "name": "60's Organ",
+      "oneLiner": {
+        "nl": "GM2-versie van het sixties combo-orgel: iets warmer en ronder, klaar voor multitimbrale tracks.",
+        "en": "GM2 take on the sixties combo organ: a touch warmer and rounder, ready for multitimbral tracks."
+      }
+    },
+    "Other|13": {
+      "name": "Upright Piano",
+      "oneLiner": {
+        "nl": "De huiskamerpiano: intiem, houtig en net iets minder strak dan een vleugel — perfect voor indie en folk.",
+        "en": "The living-room piano: intimate, woody and a touch looser than a grand, perfect for indie and folk."
+      }
+    },
+    "Other|14": {
+      "name": "Mellow Upright",
+      "oneLiner": {
+        "nl": "Een zachtere buurman van de buffetpiano: gedempte aanslag en ronde toon, gemaakt voor stille ballads.",
+        "en": "A softer cousin of the upright: muted attack and rounded tone, made for hushed ballads."
+      }
+    },
+    "Other|15": {
+      "name": "Bright Upright",
+      "oneLiner": {
+        "nl": "De buffetpiano met meer glans: helder en doordringend zodat hij boven een bandje uitkomt.",
+        "en": "The upright with extra sparkle: bright and cutting so it sits on top of a band."
+      }
+    },
+    "Other|16": {
+      "name": "Rock Piano",
+      "oneLiner": {
+        "nl": "Een percussieve buffetpiano met bite: hard aangeslagen akkoorden die door een rocknummer beuken.",
+        "en": "A percussive upright with bite: hammered chords built to pound through a rock track."
+      }
+    },
+    "Other|17": {
+      "name": "Ragtime Piano",
+      "oneLiner": {
+        "nl": "De honky-tonk klank van een ontstemde saloonpiano: lo-fi en dansbaar, recht uit de ragtime-era.",
+        "en": "The honky-tonk twang of a detuned saloon piano: lo-fi and danceable, straight from the ragtime era."
+      }
+    },
+    "Other|18": {
+      "name": "Fortepiano",
+      "oneLiner": {
+        "nl": "De piano zoals Mozart hem kende: lichter, helderder en sneller uitstervend dan zijn moderne nazaat.",
+        "en": "The piano as Mozart knew it: lighter, clearer and quicker to fade than its modern descendant."
+      }
+    },
+    "Other|19": {
+      "name": "Mellow Forte",
+      "oneLiner": {
+        "nl": "Een zachtere fortepiano: de klassieke aanslag blijft, maar de toon is ronder en intiemer.",
+        "en": "A mellower fortepiano: the classical attack stays, but the tone turns rounder and more intimate."
+      }
+    },
+    "Other|20": {
+      "name": "Bright Forte",
+      "oneLiner": {
+        "nl": "Een fellere fortepiano: extra glans en bite voor sprankelende klassieke loopjes.",
+        "en": "A brighter fortepiano: added sparkle and bite for crisp classical runs."
+      }
+    },
+    "Other|21": {
+      "name": "Harpsichord",
+      "oneLiner": {
+        "nl": "Het klavecimbel: getokkelde snaren met dat sprankelende, mechanische tjingel uit de barok.",
+        "en": "The harpsichord: plucked strings with that sparkling, mechanical jingle of the Baroque."
+      }
+    },
+    "Other|22": {
+      "name": "Harpsi 8'+4'",
+      "oneLiner": {
+        "nl": "Klavecimbel met twee koren tegelijk: het 4'-register voegt een octaaf glans toe voor een voller, briljanter geluid.",
+        "en": "Harpsichord with two ranks at once: the 4' stop adds an octave of shimmer for a fuller, brighter sound."
+      }
+    },
+    "Other|54": {
+      "name": "Harpsi.",
+      "oneLiner": {
+        "nl": "Het standaard GM2-klavecimbel: getokkeld en sprankelend, klaar voor barokke MIDI-arrangementen.",
+        "en": "The standard GM2 harpsichord: plucked and sparkling, ready for Baroque MIDI arrangements."
+      }
+    },
+    "Other|55": {
+      "name": "Coupled Hps.",
+      "oneLiner": {
+        "nl": "GM2-klavecimbel met gekoppelde manualen: extra koren tegelijk voor een vol, briljant tutti-geluid.",
+        "en": "GM2 harpsichord with coupled manuals: extra ranks together for a full, brilliant tutti sound."
+      }
+    },
+    "Other|56": {
+      "name": "Harpsi.w",
+      "oneLiner": {
+        "nl": "GM2-klavecimbel met meer aanzet-'tjak': het mechanische geluid van de plectra staat wat prominenter voorop.",
+        "en": "GM2 harpsichord with more attack 'click': the mechanical pluck of the quills sits more up front."
+      }
+    },
+    "Other|57": {
+      "name": "Harpsi.o",
+      "oneLiner": {
+        "nl": "Een open GM2-klavecimbelvariant: net iets andere kleur en galm op hetzelfde getokkelde principe.",
+        "en": "An open GM2 harpsichord variant: a slightly different colour and bloom on the same plucked principle."
+      }
+    },
+    "Other|23": {
+      "name": "Do Re Mi 1#",
+      "oneLiner": {
+        "nl": "Zacht zwevende solfège-stemmen die 'do re mi' zingen, hier in een toonsoort met één kruis.",
+        "en": "Soft, floating solfège voices singing 'do re mi', here in a key with one sharp."
+      }
+    },
+    "Other|24": {
+      "name": "Do Re Mi 1b",
+      "oneLiner": {
+        "nl": "Dezelfde zwevende solfège-stemmen, afgestemd op een toonsoort met één mol.",
+        "en": "The same floating solfège voices, tuned to a key with one flat."
+      }
+    },
+    "Other|25": {
+      "name": "Do Re Mi 2#",
+      "oneLiner": {
+        "nl": "Zachte solfège-stemmen in een toonsoort met twee kruisen — voor het oefenen van toonladders.",
+        "en": "Gentle solfège voices in a key with two sharps, made for practising scales."
+      }
+    },
+    "Other|26": {
+      "name": "Do Re Mi 2b",
+      "oneLiner": {
+        "nl": "Zwevende solfège-stemmen, nu in een toonsoort met twee mollen voor je gehoortraining.",
+        "en": "Floating solfège voices, now in a key with two flats for your ear training."
+      }
+    },
+    "Other|27": {
+      "name": "STANDARD Set",
+      "oneLiner": {
+        "nl": "De allround drumkit van de LX708: strakke snare, ronde toms en een crashende ride voor elk genre.",
+        "en": "The LX708's all-round drum kit: tight snare, round toms and a crashing ride for any genre."
+      }
+    },
+    "Other|28": {
+      "name": "ROOM Set",
+      "oneLiner": {
+        "nl": "Dezelfde kit, maar opgenomen met kamergalm: een warme, ademende drumsound met natuurlijke ruimte.",
+        "en": "The same kit recorded with room ambience: a warm, breathing drum sound with natural space."
+      }
+    },
+    "Other|29": {
+      "name": "POWER Set",
+      "oneLiner": {
+        "nl": "Dikke, gecomprimeerde stadionklap: de bombastische jaren-80 drumsound met maximale punch.",
+        "en": "Thick, compressed stadium thump: the bombastic 1980s drum sound with maximum punch."
+      }
+    },
+    "Other|32": {
+      "name": "JAZZ Set",
+      "oneLiner": {
+        "nl": "Lichte, soepele akoestische kit met strakke ride: gemaakt voor swing en brushwork.",
+        "en": "A light, supple acoustic kit with a crisp ride, made for swing and brushwork."
+      }
+    },
+    "Other|30": {
+      "name": "ELEC.Set",
+      "oneLiner": {
+        "nl": "Volledig elektronische drumklanken: knallende synthetische kicks en snares voor dance en pop.",
+        "en": "Fully electronic drum sounds: punchy synthetic kicks and snares for dance and pop."
+      }
+    },
+    "Other|247": {
+      "name": "Synth Drum",
+      "oneLiner": {
+        "nl": "De GM2-synthdrum: dalende elektronische toms met dat onmiskenbare retro-glijgeluid.",
+        "en": "The GM2 synth drum: descending electronic toms with that unmistakable retro pitch-bend."
+      }
+    },
+    "Other|31": {
+      "name": "ANALOG Set",
+      "oneLiner": {
+        "nl": "De legendarische TR-808: boomende kick, klikkende snare en die eindeloze tom-toon.",
+        "en": "The legendary TR-808: booming kick, clicking snare and that endless sliding tom."
+      }
+    },
+    "Other|248": {
+      "name": "TR-808 Tom",
+      "oneLiner": {
+        "nl": "Alleen de iconische 808-toms: diepe, glijdende analoge dreun van electro en oldschool hiphop.",
+        "en": "Just the iconic 808 toms: deep, gliding analog boom of electro and old-school hip-hop."
+      }
+    },
+    "Other|33": {
+      "name": "BRUSH Set",
+      "oneLiner": {
+        "nl": "Met bezems bespeeld: het zachte, ruisende vegen over de snare dat jazzballads ademt.",
+        "en": "Played with brushes: the soft, swishing sweep across the snare that breathes jazz ballads."
+      }
+    },
+    "Other|34": {
+      "name": "ORCH.Set",
+      "oneLiner": {
+        "nl": "Het orkestslagwerk: pauken, bekkens en concertbasdrum voor filmische, klassieke kracht.",
+        "en": "The orchestral percussion: timpani, cymbals and concert bass drum for cinematic, classical power."
+      }
+    },
+    "Other|35": {
+      "name": "SFX Set",
+      "oneLiner": {
+        "nl": "Een toetsenbord vol geluidseffecten: van applaus tot voetstappen, klaar voor je eigen scene.",
+        "en": "A keyboard full of sound effects: from applause to footsteps, ready for your own scene."
+      }
+    },
+    "Other|43": {
+      "name": "Honky-tonk",
+      "oneLiner": {
+        "nl": "De bewust ontstemde saloonpiano: twee uiteen gestemde lagen geven die rinkelende cafégalm.",
+        "en": "The deliberately detuned saloon piano: two mistuned layers give that jangly barroom ring."
+      }
+    },
+    "Other|44": {
+      "name": "Honky-tonk w",
+      "oneLiner": {
+        "nl": "Variant van de saloonpiano met breder, voller klankbeeld: nog meer rinkelende ragtime-charme.",
+        "en": "A fuller, wider take on the saloon piano: even more jangly ragtime charm."
+      }
+    },
+    "Other|51": {
+      "name": "St.FM EP",
+      "oneLiner": {
+        "nl": "De FM-elektrische piano in stereo: glasheldere, belachtige DX-klank uit de jaren 80.",
+        "en": "The FM electric piano in stereo: glassy, bell-like DX tone straight from the 1980s."
+      }
+    },
+    "Other|60": {
+      "name": "Celesta",
+      "oneLiner": {
+        "nl": "Hamertjes op stalen staafjes: het tere, hemelse geklingel van de Suikerfee.",
+        "en": "Hammers on steel bars: the delicate, heavenly chime of the Sugar Plum Fairy."
+      }
+    },
+    "Other|61": {
+      "name": "Glockenspiel",
+      "oneLiner": {
+        "nl": "Heldere, doordringende metalen plaatjes: het sprankelende klokkenspel van fanfare en orkest.",
+        "en": "Bright, piercing metal bars: the sparkling bells of marching band and orchestra."
+      }
+    },
+    "Other|62": {
+      "name": "Music Box",
+      "oneLiner": {
+        "nl": "Het breekbare, nostalgische tingelen van een opwindbaar speeldoosje.",
+        "en": "The fragile, nostalgic tinkle of a wind-up music box."
+      }
+    },
+    "Other|63": {
+      "name": "Vibraphone",
+      "oneLiner": {
+        "nl": "Warme metalen platen met motorgedreven vibrato: de zwevende glans van coole jazz.",
+        "en": "Warm metal bars with motor-driven vibrato: the floating shimmer of cool jazz."
+      }
+    },
+    "Other|64": {
+      "name": "Vibraphone w",
+      "oneLiner": {
+        "nl": "Vollere variant van de vibrafoon: rijkere resonantie en een nog dromeriger zweving.",
+        "en": "A fuller take on the vibraphone: richer resonance and an even dreamier shimmer."
+      }
+    },
+    "Other|65": {
+      "name": "Marimba",
+      "oneLiner": {
+        "nl": "Houten staven met diepe resonatoren: de warme, aardse en houten toon van Midden-Amerika.",
+        "en": "Wooden bars over deep resonators: the warm, earthy, woody tone of Central America."
+      }
+    },
+    "Other|66": {
+      "name": "Marimba w",
+      "oneLiner": {
+        "nl": "Vollere marimba-variant: rondere, dieper resonerende houten klank.",
+        "en": "A fuller marimba variant: a rounder, more deeply resonant woody sound."
+      }
+    },
+    "Other|67": {
+      "name": "Xylophone",
+      "oneLiner": {
+        "nl": "Houten staven, droge klap: heldere, percussieve tonen die kort opspringen en meteen weer stil zijn.",
+        "en": "Wooden bars, dry strike: bright, percussive notes that pop up and fall silent at once."
+      }
+    },
+    "Other|68": {
+      "name": "TubularBells",
+      "oneLiner": {
+        "nl": "Lange metalen buizen die galmen als kerkklokken: plechtig, sprankelend en eindeloos uitklinkend.",
+        "en": "Long metal tubes ringing like church bells: solemn, shimmering and endlessly resonant."
+      }
+    },
+    "Other|69": {
+      "name": "Church Bell",
+      "oneLiner": {
+        "nl": "Een diepe bronzen luidklok: zware aanslag met brede, trage galm die de hele ruimte vult.",
+        "en": "A deep bronze tolling bell: heavy strike with a broad, slow bloom that fills the room."
+      }
+    },
+    "Other|70": {
+      "name": "Carillon",
+      "oneLiner": {
+        "nl": "Een toren vol klokken: heldere beiaardklanken die als een melodie over de daken zweven.",
+        "en": "A tower full of bells: bright carillon tones drifting like a melody over the rooftops."
+      }
+    },
+    "Other|71": {
+      "name": "Santur",
+      "oneLiner": {
+        "nl": "Het Perzische hakkebord: sprankelende, metallic tonen aangeslagen met fijne houten hamertjes.",
+        "en": "The Persian hammered dulcimer: shimmering, metallic notes struck with delicate wooden mallets."
+      }
+    },
+    "Other|83": {
+      "name": "Reed Organ",
+      "oneLiner": {
+        "nl": "Het trapharmonium uit de huiskamer: zachte, rietige tonen met die typische ademende folkklank.",
+        "en": "The parlour harmonium: soft, reedy tones with that characteristic breathing folk warmth."
+      }
+    },
+    "Other|84": {
+      "name": "Puff Organ",
+      "oneLiner": {
+        "nl": "Een luchtiger harmoniumvariant: kleiner, ademend en wat hijgerig, ideaal voor speelse folkdeuntjes.",
+        "en": "A lighter harmonium variant: small, breathy and slightly puffing, perfect for playful folk tunes."
+      }
+    },
+    "Other|85": {
+      "name": "Accordion 1",
+      "oneLiner": {
+        "nl": "De klassieke trekzak: warme, ademende akkoorden die meteen naar café en straatmuziek ruiken.",
+        "en": "The classic squeezebox: warm, breathing chords that instantly evoke cafe and street music."
+      }
+    },
+    "Other|86": {
+      "name": "Accordion 2",
+      "oneLiner": {
+        "nl": "Een tweede accordeonkleur: net iets feller en musettiger, geknipt voor Franse en folkbalsfeer.",
+        "en": "A second accordion colour: a touch brighter and more musette, made for French and folk-dance moods."
+      }
+    },
+    "Other|87": {
+      "name": "Harmonica",
+      "oneLiner": {
+        "nl": "Het mondharmonica-riet: warm, hees en bluesy, met die onmiskenbare ademende zucht.",
+        "en": "The harmonica reed: warm, raspy and bluesy, with that unmistakable breathy sigh."
+      }
+    },
+    "Other|88": {
+      "name": "Bandoneon",
+      "oneLiner": {
+        "nl": "De ziel van de tango: een melancholische trekharmonica die snikt en zucht in Buenos Aires-stijl.",
+        "en": "The soul of tango: a melancholic squeezebox that sobs and sighs in Buenos Aires style."
+      }
+    },
+    "Other|89": {
+      "name": "Nylon-str.Gt",
+      "oneLiner": {
+        "nl": "De klassieke gitaar met nylonsnaren: zacht, warm en rond, perfect voor Spaanse en intieme stukken.",
+        "en": "The classical guitar with nylon strings: soft, warm and round, perfect for Spanish and intimate pieces."
+      }
+    },
+    "Other|91": {
+      "name": "Nylon Gt o",
+      "oneLiner": {
+        "nl": "Nylongitaar met meer open ruimte: ademende variant waarin het aanslag- en lichaamsgeluid duidelijker meekomt.",
+        "en": "A more open nylon guitar: a breathier variant where pluck and body noise come through more clearly."
+      }
+    },
+    "Other|92": {
+      "name": "Nylon Gt 2",
+      "oneLiner": {
+        "nl": "Een tweede nylongitaarkleur: net iets voller en directer, geknipt voor solo- en begeleidingswerk.",
+        "en": "A second nylon-guitar colour: a touch fuller and more direct, suited to solo and accompaniment work."
+      }
+    },
+    "Other|90": {
+      "name": "Ukulele",
+      "oneLiner": {
+        "nl": "De vrolijke Hawaiiaanse mini-gitaar: licht, tokkelend en zonnig met vier nylonsnaren.",
+        "en": "The cheerful Hawaiian mini-guitar: light, strummy and sunny on four nylon strings."
+      }
+    },
+    "Other|93": {
+      "name": "Steel-str.Gt",
+      "oneLiner": {
+        "nl": "De westerngitaar met stalen snaren: helder, rinkelend en stevig, de ruggengraat van folk en pop.",
+        "en": "The steel-string acoustic: bright, ringing and sturdy, the backbone of folk and pop."
+      }
+    },
+    "Other|96": {
+      "name": "Steel+Body",
+      "oneLiner": {
+        "nl": "Stalen gitaar met extra body-resonantie: voller, houtiger geluid waarin de kast hoorbaar meeklinkt.",
+        "en": "Steel guitar with extra body resonance: a fuller, woodier sound where the soundbox audibly rings along."
+      }
+    },
+    "Other|94": {
+      "name": "12-str.Gt",
+      "oneLiner": {
+        "nl": "De twaalfsnarige gitaar: gekoppelde snaren geven een sprankelende, koorachtige glans aan elk akkoord.",
+        "en": "The twelve-string guitar: paired strings lend every chord a shimmering, choir-like jangle."
+      }
+    },
+    "Other|95": {
+      "name": "Mandolin",
+      "oneLiner": {
+        "nl": "De mandoline met dubbele snaren: helder, tremolerend en springerig, hart van folk en bluegrass.",
+        "en": "The double-strung mandolin: bright, tremolo-rich and springy, the heart of folk and bluegrass."
+      }
+    },
+    "Other|97": {
+      "name": "Jazz Guitar",
+      "oneLiner": {
+        "nl": "De warme hollow-body jazzgitaar: rond, donker en rokerig, gemaakt voor smooth akkoorden en walking lines.",
+        "en": "The warm hollow-body jazz guitar: round, dark and smoky, made for smooth chords and walking lines."
+      }
+    },
+    "Other|98": {
+      "name": "Hawaiian Gt",
+      "oneLiner": {
+        "nl": "De glijdende Hawaiiaanse steelgitaar: zwoele, zingende glissando's die tussen noten in smelten.",
+        "en": "The sliding Hawaiian steel guitar: sultry, singing glissandos that melt between the notes."
+      }
+    },
+    "Other|99": {
+      "name": "Clean Guitar",
+      "oneLiner": {
+        "nl": "Onbewerkte elektrische gitaar: helder, percussief en strak, klaar voor funkakkoorden of clean arpeggio's.",
+        "en": "An untreated electric guitar: bright, percussive and tight, ready for funk chords or clean arpeggios."
+      }
+    },
+    "Other|100": {
+      "name": "Chorus Gt 1",
+      "oneLiner": {
+        "nl": "Clean gitaar met een vleugje chorus: glinsterend en breed, de pop-rhythm-sound van de jaren 80.",
+        "en": "Clean guitar with a touch of chorus: shimmering and wide, the 1980s pop rhythm sound."
+      }
+    },
+    "Other|101": {
+      "name": "Mid Tone Gt",
+      "oneLiner": {
+        "nl": "Een midden-getunede gitaar: warmer dan clean, nog zonder vervorming, ideaal voor begeleiding.",
+        "en": "A mid-toned guitar: warmer than fully clean, still undistorted, ideal for backing parts."
+      }
+    },
+    "Other|103": {
+      "name": "Funk Guitar1",
+      "oneLiner": {
+        "nl": "Korte, percussieve funk-aanslag: knisperende sechtiende noten die schreeuwen om een wah-pedaal.",
+        "en": "Short, percussive funk attack: crisp sixteenth-note chops that beg for a wah pedal."
+      }
+    },
+    "Other|104": {
+      "name": "Funk Guitar2",
+      "oneLiner": {
+        "nl": "Tweede funk-variant met meer bite: scherpere muting voor strakke, ritmische riffs.",
+        "en": "A second funk variant with more bite: sharper muting for tight, rhythmic riffs."
+      }
+    },
+    "Other|105": {
+      "name": "Chorus Gt 2",
+      "oneLiner": {
+        "nl": "Dichtere choruslaag op een clean gitaar: dromeriger en zwevender dan Chorus Gt 1.",
+        "en": "A denser chorus layer over a clean guitar: dreamier and more floating than Chorus Gt 1."
+      }
+    },
+    "Other|107": {
+      "name": "Guitar Pinch",
+      "oneLiner": {
+        "nl": "De gillende pinch harmonic: metalen squeal die rock- en metal-solo's hun bite geeft.",
+        "en": "The squealing pinch harmonic: a metallic squeal that gives rock and metal solos their bite."
+      }
+    },
+    "Other|109": {
+      "name": "Gt Feedback1",
+      "oneLiner": {
+        "nl": "Aanhoudende gitaarfeedback: die zwevende, gillende sustain als de versterker terugkoppelt.",
+        "en": "Sustained guitar feedback: that floating, screaming sustain when the amp howls back."
+      }
+    },
+    "Other|110": {
+      "name": "Dist.Rhy Gt",
+      "oneLiner": {
+        "nl": "Vervormde rhythm-gitaar: stevige powerchords met grit, het fundament van hardrock.",
+        "en": "Distorted rhythm guitar: chunky power chords with grit, the backbone of hard rock."
+      }
+    },
+    "Other|112": {
+      "name": "Gt Feedback2",
+      "oneLiner": {
+        "nl": "Tweede feedbackvariant: hoger en metalliger, een zwevende toon voor cinematische lagen.",
+        "en": "A second feedback variant: higher and more metallic, a floating tone for cinematic layers."
+      }
+    },
+    "Other|251": {
+      "name": "Gt FretNoise",
+      "oneLiner": {
+        "nl": "Het knerpen van vingers die over de snaren glijden: realistisch fretgeluid voor extra leven.",
+        "en": "The squeak of fingers sliding over strings: realistic fret noise for added realism."
+      }
+    },
+    "Other|252": {
+      "name": "Gt Cut Noise",
+      "oneLiner": {
+        "nl": "De korte 'tik' van een afgekapte snaar: percussief snaargeluid om riffs ademend te maken.",
+        "en": "The short 'tick' of a cut-off string: a percussive string noise that makes riffs breathe."
+      }
+    },
+    "Other|102": {
+      "name": "Muted Guitar",
+      "oneLiner": {
+        "nl": "Palm-muted gitaar: gedempte, percussieve plukken die ritmisch en strak in de mix zitten.",
+        "en": "Palm-muted guitar: muffled, percussive plucks that sit tight and rhythmic in the mix."
+      }
+    },
+    "Other|106": {
+      "name": "Overdrive Gt",
+      "oneLiner": {
+        "nl": "Warme overdrive: een licht overstuurde buizenversterker, zangerig genoeg voor bluesy solo's.",
+        "en": "Warm overdrive: a gently pushed tube amp, singing enough for bluesy solos."
+      }
+    },
+    "Other|108": {
+      "name": "DistortionGt",
+      "oneLiner": {
+        "nl": "Volle distortion: agressieve, sustainrijke leadtoon voor rock- en metal-riffs.",
+        "en": "Full-on distortion: an aggressive, sustain-rich lead tone for rock and metal riffs."
+      }
+    },
+    "Other|111": {
+      "name": "Gt Harmonics",
+      "oneLiner": {
+        "nl": "Belheldere natuurlijke flageoletten: zwevende, metalen boventonen die ijl wegklinken.",
+        "en": "Bell-clear natural harmonics: floating, metallic overtones that ring away into air."
+      }
+    },
+    "Other|114": {
+      "name": "FingeredBass",
+      "oneLiner": {
+        "nl": "Met de vingers getokkelde elektrische bas: warm, rond en donker, het groove-fundament.",
+        "en": "A finger-plucked electric bass: warm, round and dark, the foundation of the groove."
+      }
+    },
+    "Other|116": {
+      "name": "Picked Bass",
+      "oneLiner": {
+        "nl": "Bas met plectrum: stugger en bijtender dan vingerbas, met meer aanslag voor rock.",
+        "en": "Bass played with a pick: stiffer and punchier than fingered bass, with more attack for rock."
+      }
+    },
+    "Other|253": {
+      "name": "BsStringSlap",
+      "oneLiner": {
+        "nl": "Het kletterende slap-geluid: de bassnaar die tegen de fretten klapt, puur ritmisch effect.",
+        "en": "The snapping slap sound: the bass string clacking against the frets, a pure rhythmic effect."
+      }
+    },
+    "Other|115": {
+      "name": "Finger Slap",
+      "oneLiner": {
+        "nl": "Slap-en-pop bas: percussief duimslag en gepopte snaren, de funk- en disco-groove.",
+        "en": "Slap-and-pop bass: percussive thumb thumps and popped strings, the funk and disco groove."
+      }
+    },
+    "Other|124": {
+      "name": "Hammer Bass",
+      "oneLiner": {
+        "nl": "Synth-bas met harde hammer-aanslag: donker, electronisch en strak voor dance en hiphop.",
+        "en": "A synth bass with a hard hammer attack: dark, electronic and tight for dance and hip-hop."
+      }
+    },
+    "Other|117": {
+      "name": "FretlessBass",
+      "oneLiner": {
+        "nl": "Fretloze basgitaar: glijdende glissando's en een warme, zingende toon voor jazz en ballads.",
+        "en": "Fretless bass: gliding slides and a warm, singing tone made for jazz and ballads."
+      }
+    },
+    "Other|118": {
+      "name": "Slap Bass 1",
+      "oneLiner": {
+        "nl": "Funky slapbas: duim die de snaar laat knallen, met die typische percussieve tik.",
+        "en": "Funky slap bass: thumb-popped strings with that signature percussive snap."
+      }
+    },
+    "Other|119": {
+      "name": "Slap Bass 2",
+      "oneLiner": {
+        "nl": "Een tweede slapbas-variant: scherper en agressiever, klaar voor strakke funkgrooves.",
+        "en": "A second slap-bass variant: brighter and punchier, ready for tight funk grooves."
+      }
+    },
+    "Other|120": {
+      "name": "Synth Bass 1",
+      "oneLiner": {
+        "nl": "De klassieke analoge synthbas: rond, vet en het fundament van menig electro-track.",
+        "en": "The classic analogue synth bass: round, fat and the foundation of countless electro tracks."
+      }
+    },
+    "Other|121": {
+      "name": "WarmSyn.Bass",
+      "oneLiner": {
+        "nl": "Een warmere synthbas-variant: zachtere aanzet en afgeronde toppen, minder bijtend.",
+        "en": "A warmer synth-bass variant: softer attack and rounded highs, less bite."
+      }
+    },
+    "Other|122": {
+      "name": "Synth Bass 3",
+      "oneLiner": {
+        "nl": "Een derde synthbas-smaak: dikker en dieper, voor zware electronic onderlagen.",
+        "en": "A third synth-bass flavour: thicker and deeper, for heavy electronic underpinnings."
+      }
+    },
+    "Other|125": {
+      "name": "Synth Bass 2",
+      "oneLiner": {
+        "nl": "Strakke, helderdere synthbas: bijtende aanslag die door de mix snijdt.",
+        "en": "Tight, brighter synth bass: a biting attack that cuts through the mix."
+      }
+    },
+    "Other|126": {
+      "name": "Synth Bass 4",
+      "oneLiner": {
+        "nl": "Een vierde synthbas-variant: extra resonant en kleurrijk voor moderne dancegrooves.",
+        "en": "A fourth synth-bass variant: extra resonant and colourful for modern dance grooves."
+      }
+    },
+    "Other|127": {
+      "name": "RubberSyn.Bs",
+      "oneLiner": {
+        "nl": "Rubberachtige synthbas: elastische, stuiterende toon die meeveert met de groove.",
+        "en": "Rubbery synth bass: an elastic, bouncing tone that springs along with the groove."
+      }
+    },
+    "Other|128": {
+      "name": "Attack Pulse",
+      "oneLiner": {
+        "nl": "Een korte synthpuls met scherpe aanzet: percussief accent voor electronic ritmes.",
+        "en": "A short synth pulse with a sharp attack: a percussive accent for electronic rhythms."
+      }
+    },
+    "Other|131": {
+      "name": "Viola",
+      "oneLiner": {
+        "nl": "De altviool: donkerder en warmer dan de viool, het fluwelen midden van het strijkkwartet.",
+        "en": "The viola: darker and warmer than the violin, the velvet middle of the string quartet."
+      }
+    },
+    "Other|134": {
+      "name": "Tremolo Str.",
+      "oneLiner": {
+        "nl": "Trillende strijkers: snel heen-en-weer strijken voor spanning en filmische dreiging.",
+        "en": "Trembling strings: rapid back-and-forth bowing for suspense and cinematic dread."
+      }
+    },
+    "Other|137": {
+      "name": "Yang Qin",
+      "oneLiner": {
+        "nl": "De yangqin: een Chinees hakkebord vol sprankelende, tinkelende snaartonen.",
+        "en": "The yangqin: a Chinese hammered dulcimer full of sparkling, shimmering string tones."
+      }
+    },
+    "Other|138": {
+      "name": "Timpani",
+      "oneLiner": {
+        "nl": "Pauken: stembare keteltrommels die het orkest hun donderende, dramatische fundament geven.",
+        "en": "Timpani: tunable kettledrums that give the orchestra its thundering, dramatic foundation."
+      }
+    },
+    "Other|143": {
+      "name": "Syn.Strings1",
+      "oneLiner": {
+        "nl": "Zwevende synthstrijkers: warme padklank die hele akkoorden in een waas hult.",
+        "en": "Floating synth strings: a warm pad that wraps whole chords in a soft haze."
+      }
+    },
+    "Other|144": {
+      "name": "Syn.Strings3",
+      "oneLiner": {
+        "nl": "Een derde synthstrijker-variant: rijker en breder, met meer beweging in de klank.",
+        "en": "A third synth-string variant: richer and broader, with more movement in the tone."
+      }
+    },
+    "Other|145": {
+      "name": "Syn.Strings2",
+      "oneLiner": {
+        "nl": "Een tweede synthstrijker-variant: voller en dromeriger, ideaal als sfeervol tapijt.",
+        "en": "A second synth-string variant: fuller and dreamier, perfect as an atmospheric bed."
+      }
+    },
+    "Other|146": {
+      "name": "Choir 1",
+      "oneLiner": {
+        "nl": "Zwevend 'aah'-koor: zachte stemmen die een hemelse gloed over je akkoorden leggen.",
+        "en": "Floating 'aah' choir: soft voices that lay a heavenly glow over your chords."
+      }
+    },
+    "Other|147": {
+      "name": "Choir 2",
+      "oneLiner": {
+        "nl": "Een tweede koorvariant: warmer en voller, met meer body in de gezongen klank.",
+        "en": "A second choir variant: warmer and fuller, with more body in the sung tone."
+      }
+    },
+    "Other|148": {
+      "name": "Voice",
+      "oneLiner": {
+        "nl": "Eén zwevende stem: een wordeloze 'oeh' die boven je akkoorden blijft hangen.",
+        "en": "A single floating voice: a wordless 'ooh' that hovers above your chords."
+      }
+    },
+    "Other|203": {
+      "name": "Solo Vox",
+      "oneLiner": {
+        "nl": "Synthetische solostem: helder en expressief, met een vocale lead die door de mix zweeft.",
+        "en": "Synthetic solo voice: bright and expressive, a vocal lead that soars through the mix."
+      }
+    },
+    "Other|149": {
+      "name": "Humming",
+      "oneLiner": {
+        "nl": "Een gesloten-mond 'mmm'-koor: zacht en zwevend, ideaal als warme onderlaag onder een melodie.",
+        "en": "A closed-mouth 'mmm' choir: soft and floating, perfect as a warm pad beneath a melody."
+      }
+    },
+    "Other|150": {
+      "name": "Synth Voice",
+      "oneLiner": {
+        "nl": "Een synthetisch 'aah'-koor: gladde, elektronische stemmen die zweven over elk akkoord.",
+        "en": "A synthetic 'aah' choir: smooth electronic voices drifting over any chord."
+      }
+    },
+    "Other|151": {
+      "name": "Analog Voice",
+      "oneLiner": {
+        "nl": "De vintage analoge variant van Synth Voice: warmer, korreliger, met een retro-synthrandje.",
+        "en": "The vintage analogue take on Synth Voice: warmer and grainier, with a retro-synth edge."
+      }
+    },
+    "Other|211": {
+      "name": "Space Voice",
+      "oneLiner": {
+        "nl": "Een ijl, ruimtelijk koor: zachte stemmen die wegdrijven in galm, gemaakt voor sferische pads.",
+        "en": "An airy, spacious choir: soft voices dissolving into reverb, made for atmospheric pads."
+      }
+    },
+    "Other|152": {
+      "name": "OrchestraHit",
+      "oneLiner": {
+        "nl": "De legendarische sampled orkest-klap: een korte, percussieve 'BAM' van het hele ensemble.",
+        "en": "The legendary sampled orchestra stab: one short, percussive 'BAM' from the whole ensemble."
+      }
+    },
+    "Other|153": {
+      "name": "Bass Hit",
+      "oneLiner": {
+        "nl": "De donkere, lage variant van de orkest-klap: een diepe stoot die onder een groove ploft.",
+        "en": "The dark, low-register orchestra stab: a deep punch that drops under a groove."
+      }
+    },
+    "Other|154": {
+      "name": "6th Hit",
+      "oneLiner": {
+        "nl": "Een orkest-klap met een sext-akkoordkleur: brutaler en jazzier dan de standaard hit.",
+        "en": "An orchestra stab with a sixth-chord colour: brasher and jazzier than the standard hit."
+      }
+    },
+    "Other|155": {
+      "name": "Euro Hit",
+      "oneLiner": {
+        "nl": "De Euro-dance variant van de orkest-klap: scherp en synthetisch, recht uit de jaren 90.",
+        "en": "The Euro-dance flavour of the orchestra stab: sharp and synthetic, straight out of the '90s."
+      }
+    },
+    "Other|156": {
+      "name": "Trumpet",
+      "oneLiner": {
+        "nl": "Heldere, doordringende trompet: het stralende leadkoper van fanfare, jazz en pop.",
+        "en": "Bright, piercing trumpet: the radiant lead brass of marching band, jazz and pop."
+      }
+    },
+    "Other|157": {
+      "name": "Dark Trumpet",
+      "oneLiner": {
+        "nl": "Een zachtere, donkerder trompet: rondere toon met minder schittering, ideaal voor balladen.",
+        "en": "A softer, darker trumpet: a rounder tone with less glare, ideal for ballads."
+      }
+    },
+    "Other|158": {
+      "name": "Trombone 1",
+      "oneLiner": {
+        "nl": "Warme, gladde schuiftrombone: het zingende middenkoper van big band en orkest.",
+        "en": "Warm, smooth slide trombone: the singing middle voice of big band and orchestra."
+      }
+    },
+    "Other|159": {
+      "name": "Trombone 2",
+      "oneLiner": {
+        "nl": "Een alternatieve trombone-stem: net even anders van aanzet, fijn voor sectiestapeling.",
+        "en": "An alternate trombone voice: slightly different in attack, handy for stacking sections."
+      }
+    },
+    "Other|160": {
+      "name": "Bright Tb",
+      "oneLiner": {
+        "nl": "De felle trombone-variant: meer rand en kracht, snijdt door een drukke mix heen.",
+        "en": "The bright trombone variant: more edge and power, cutting through a busy mix."
+      }
+    },
+    "Other|161": {
+      "name": "Tuba",
+      "oneLiner": {
+        "nl": "Het diepste koper: een ronde, brommende basstem die het hele koperregister fundeert.",
+        "en": "The deepest brass: a round, rumbling bass voice that anchors the entire brass section."
+      }
+    },
+    "Other|162": {
+      "name": "MuteTrumpet1",
+      "oneLiner": {
+        "nl": "Gedempte trompet met demper in de beker: ingetogen, nasaal en doortrokken van jazz-noir.",
+        "en": "Muted trumpet with a mute in the bell: intimate, nasal and steeped in jazz-noir."
+      }
+    },
+    "Other|163": {
+      "name": "MuteTrumpet2",
+      "oneLiner": {
+        "nl": "Een tweede gedempte trompet: net iets ander timbre, voor afwisseling in de jazzsectie.",
+        "en": "A second muted trumpet: a slightly different timbre, for variety in the jazz section."
+      }
+    },
+    "Other|164": {
+      "name": "French Horn1",
+      "oneLiner": {
+        "nl": "Warme, ronde hoorn: het edele, filmische koper dat orkestthema's plechtig optilt.",
+        "en": "Warm, rounded horn: the noble, cinematic brass that lifts orchestral themes aloft."
+      }
+    },
+    "Other|165": {
+      "name": "French Horn2",
+      "oneLiner": {
+        "nl": "Een tweede hoornstem: subtiel ander karakter, fijn voor hoornsecties en harmonieën.",
+        "en": "A second horn voice: a subtly different character, great for horn sections and harmonies."
+      }
+    },
+    "Other|175": {
+      "name": "Soprano Sax",
+      "oneLiner": {
+        "nl": "De hoogste saxofoon: rechte buis, helder en vocaal, beroemd uit smooth jazz.",
+        "en": "The highest saxophone: a straight horn, bright and vocal, famed from smooth jazz."
+      }
+    },
+    "Other|176": {
+      "name": "Alto Sax",
+      "oneLiner": {
+        "nl": "De altsaxofoon: warm en expressief, de meest gespeelde sax in jazz en pop.",
+        "en": "The alto saxophone: warm and expressive, the most-played sax in jazz and pop."
+      }
+    },
+    "Other|177": {
+      "name": "Tenor Sax",
+      "oneLiner": {
+        "nl": "De tenorsaxofoon: vol en rokerig, de robuuste leadstem van jazz en soul.",
+        "en": "The tenor saxophone: full and smoky, the robust lead voice of jazz and soul."
+      }
+    },
+    "Other|178": {
+      "name": "Baritone Sax",
+      "oneLiner": {
+        "nl": "De grommende kelder van de saxofoonfamilie: warm, rond en gemaakt voor jazzy baslijnen en riffs.",
+        "en": "The growling cellar of the sax family: warm, round and made for jazzy bass lines and riffs."
+      }
+    },
+    "Other|179": {
+      "name": "Oboe",
+      "oneLiner": {
+        "nl": "De nasale, melancholische sopraan van het orkest, die bovendien de stemtoon voor alle musici geeft.",
+        "en": "The nasal, plaintive soprano of the orchestra that also gives every musician the tuning note."
+      }
+    },
+    "Other|180": {
+      "name": "English Horn",
+      "oneLiner": {
+        "nl": "De donkere, weemoedige neef van de hobo: warmer en lager, beroemd om zijn smachtende solo's.",
+        "en": "The dark, wistful cousin of the oboe: warmer and lower, famed for its yearning solos."
+      }
+    },
+    "Other|181": {
+      "name": "Bassoon",
+      "oneLiner": {
+        "nl": "De houten bas van het orkest: knorrig en komisch in de hoogte, plechtig en rond in de diepte.",
+        "en": "The orchestra's wooden bass: comic and reedy up high, solemn and round down low."
+      }
+    },
+    "Other|182": {
+      "name": "Clarinet",
+      "oneLiner": {
+        "nl": "Soepel van zacht tot fel: de klarinet glijdt moeiteloos van klassieke kamermuziek naar swingende jazz.",
+        "en": "Smooth from soft to bold: the clarinet glides effortlessly from classical chamber music to swinging jazz."
+      }
+    },
+    "Other|183": {
+      "name": "Piccolo",
+      "oneLiner": {
+        "nl": "Het kleinste fluitje met de hoogste stem: schril, glashelder en zo over een heel orkest heen te horen.",
+        "en": "The tiniest flute with the highest voice: shrill, crystal-clear and able to cut over a full orchestra."
+      }
+    },
+    "Other|185": {
+      "name": "Recorder",
+      "oneLiner": {
+        "nl": "De zachte, houten blokfluit van de oude muziek: simpel, intiem en bij iedereen bekend van schoolbankjes.",
+        "en": "The soft, wooden recorder of early music: simple, intimate and known to everyone from school."
+      }
+    },
+    "Other|186": {
+      "name": "Pan Flute",
+      "oneLiner": {
+        "nl": "Een rij gestemde rietpijpjes met een ademende, weemoedige toon uit de Andes-traditie.",
+        "en": "A row of tuned cane pipes with a breathy, wistful tone from the Andean tradition."
+      }
+    },
+    "Other|187": {
+      "name": "Bottle Blow",
+      "oneLiner": {
+        "nl": "De holle, zwevende toon van blazen over een flessenhals: zacht, mistig en filmisch.",
+        "en": "The hollow, floating note of blowing across a bottle's neck: soft, misty and cinematic."
+      }
+    },
+    "Other|188": {
+      "name": "Shakuhachi",
+      "oneLiner": {
+        "nl": "De Japanse bamboefluit van zenmonniken: aards, ademend en vol stilte tussen de noten.",
+        "en": "The Japanese bamboo flute of Zen monks: earthy, breathy and full of silence between the notes."
+      }
+    },
+    "Other|189": {
+      "name": "Whistle",
+      "oneLiner": {
+        "nl": "Een vrolijk, helder gefluit: het meest menselijke instrument dat je altijd bij je draagt.",
+        "en": "A cheerful, bright whistle: the most human instrument you always carry with you."
+      }
+    },
+    "Other|190": {
+      "name": "Ocarina",
+      "oneLiner": {
+        "nl": "Het ronde aarden fluitje met een zachte, holle toon, beroemd uit volksmuziek en games.",
+        "en": "The round clay flute with a soft, hollow tone, famous from folk music and video games."
+      }
+    },
+    "Other|191": {
+      "name": "Square Lead1",
+      "oneLiner": {
+        "nl": "De holle blokgolf-lead: het 8-bit hart van vroege synthpop en retro game-melodieën.",
+        "en": "The hollow square-wave lead: the 8-bit heart of early synth-pop and retro game tunes."
+      }
+    },
+    "Other|192": {
+      "name": "Square Lead2",
+      "oneLiner": {
+        "nl": "Een dikkere, breder gestemde blokgolf-lead: voller en gelaagder dan de eerste variant.",
+        "en": "A thicker, broader square-wave lead: fuller and more layered than the first variant."
+      }
+    },
+    "Other|193": {
+      "name": "Sine Lead",
+      "oneLiner": {
+        "nl": "De zuiverste golfvorm denkbaar: een ronde, fluitachtige lead zonder enige boventoon.",
+        "en": "The purest waveform imaginable: a round, flute-like lead with no overtones at all."
+      }
+    },
+    "Other|194": {
+      "name": "Saw Lead 1",
+      "oneLiner": {
+        "nl": "De rauwe, boventoonrijke zaagtand-lead: het scherpe handelsmerk van dance en synthrock.",
+        "en": "The raw, overtone-rich sawtooth lead: the cutting signature of dance and synth-rock."
+      }
+    },
+    "Other|195": {
+      "name": "Saw Lead 2",
+      "oneLiner": {
+        "nl": "Een dikkere zaagtand-lead met meer body: brutaler en doordringender dan variant 1.",
+        "en": "A fatter sawtooth lead with more body: bolder and more piercing than variant 1."
+      }
+    },
+    "Other|196": {
+      "name": "Doctor Solo",
+      "oneLiner": {
+        "nl": "Een gladde, zingende solo-lead met portamento: gebouwd om expressief overheen te soleren.",
+        "en": "A smooth, singing solo lead with portamento: built to wail expressively on top."
+      }
+    },
+    "Other|197": {
+      "name": "Natural Lead",
+      "oneLiner": {
+        "nl": "Een warme, organische synth-lead die net iets akoestischer en ademender klinkt dan de rest.",
+        "en": "A warm, organic synth lead that sounds slightly more acoustic and breathy than the rest."
+      }
+    },
+    "Other|200": {
+      "name": "Chiffer Lead",
+      "oneLiner": {
+        "nl": "Een lead met 'chiff': een hoorbare ademstoot aan het begin van elke noot, als een fluitaanzet.",
+        "en": "A lead with 'chiff': an audible puff of air at the start of each note, like a flute's onset."
+      }
+    },
+    "Other|201": {
+      "name": "Charang",
+      "oneLiner": {
+        "nl": "Een vervormde, gitaarachtige synth-lead met bite: ruig genoeg om rocksolo's mee te spelen.",
+        "en": "A distorted, guitar-like synth lead with bite: gritty enough for rock solos."
+      }
+    },
+    "Other|202": {
+      "name": "Wire Lead",
+      "oneLiner": {
+        "nl": "Een strak, draadachtig dunne lead met scherpe rand: spannend en metalig in de hoogte.",
+        "en": "A tight, wiry thin lead with a sharp edge: tense and metallic up high."
+      }
+    },
+    "Other|204": {
+      "name": "5th Saw Lead",
+      "oneLiner": {
+        "nl": "Een zaagtand-lead met een vaste kwint erbij: instant heroïsch en breed, zonder akkoorden.",
+        "en": "A sawtooth lead with a fixed fifth stacked on: instantly heroic and wide, no chords needed."
+      }
+    },
+    "Other|205": {
+      "name": "Bass+Lead",
+      "oneLiner": {
+        "nl": "Bas en lead in één klank: een dikke, doordringende toon die laag fundeert en hoog snijdt.",
+        "en": "Bass and lead in one voice: a thick, cutting tone that anchors low and slices high."
+      }
+    },
+    "Other|206": {
+      "name": "Delayed Lead",
+      "oneLiner": {
+        "nl": "Een lead met ingebouwde echo: elke noot galmt na in ritmische herhalingen.",
+        "en": "A lead with built-in echo: every note trails off in rhythmic repeats."
+      }
+    },
+    "Other|207": {
+      "name": "Fantasia",
+      "oneLiner": {
+        "nl": "Een dromerige pad-lead vol bellen en zweving: het sprookjesachtige geluid van de jaren 80.",
+        "en": "A dreamy pad-lead full of bells and shimmer: the fairy-tale sound of the 1980s."
+      }
+    },
+    "Other|212": {
+      "name": "Itopia",
+      "oneLiner": {
+        "nl": "Een warme, koorachtige pad-lead: zwevend en sferisch, gemaakt om akkoorden in te laten baden.",
+        "en": "A warm, choir-like pad-lead: floating and atmospheric, made to bathe chords in."
+      }
+    },
+    "Other|217": {
+      "name": "Ice Rain",
+      "oneLiner": {
+        "nl": "Glinsterende, vallende druppels van klank: een ijzige, sprankelende texture-lead.",
+        "en": "Glistening, falling droplets of sound: an icy, sparkling texture lead."
+      }
+    },
+    "Other|218": {
+      "name": "Soundtrack",
+      "oneLiner": {
+        "nl": "Een brede, filmische sweep-pad: instant spanning en grootsheid voor cinematische scènes.",
+        "en": "A broad, cinematic sweep pad: instant tension and grandeur for film scenes."
+      }
+    },
+    "Other|219": {
+      "name": "Crystal",
+      "oneLiner": {
+        "nl": "Heldere, glasachtige bellen met een lange nagalm: sprankelend en bevroren in de tijd.",
+        "en": "Bright, glassy bells with a long tail: sparkling and frozen in time."
+      }
+    },
+    "Other|198": {
+      "name": "SequencedSaw",
+      "oneLiner": {
+        "nl": "Een ritmisch geknipte zaagtand die zichzelf voortstuwt: arpeggio-achtige puls voor strakke synthlijnen.",
+        "en": "A rhythmically chopped sawtooth that drives itself forward: an arp-like pulse for tight synth lines."
+      }
+    },
+    "Other|199": {
+      "name": "Syn.Calliope",
+      "oneLiner": {
+        "nl": "De stoomorgel uit de kermis, nu synthetisch: helder fluitend en vrolijk circus-achtig.",
+        "en": "The fairground steam organ, now synthetic: bright, whistling and cheerfully circus-like."
+      }
+    },
+    "Other|208": {
+      "name": "Warm Pad",
+      "oneLiner": {
+        "nl": "De klassieke zwevende synthlaag: zacht, warm en ideaal als kussen onder elke akkoord.",
+        "en": "The classic floating synth layer: soft, warm and the perfect cushion beneath any chord."
+      }
+    },
+    "Other|209": {
+      "name": "Sine Pad",
+      "oneLiner": {
+        "nl": "Een pad zonder scherpe randen: pure sinusronding, fluweelzacht en bijna ademend.",
+        "en": "A pad without sharp edges: pure sine roundness, velvet-soft and almost breathing."
+      }
+    },
+    "Other|214": {
+      "name": "Metallic Pad",
+      "oneLiner": {
+        "nl": "Zwevend pad met een koele metaalglans: glanzend, licht gespannen en sci-fi-achtig.",
+        "en": "A floating pad with a cool metallic sheen: glassy, slightly tense and sci-fi tinged."
+      }
+    },
+    "Other|215": {
+      "name": "Halo Pad",
+      "oneLiner": {
+        "nl": "Een stralenkrans van klank: koorachtig, sereen en boven alles uit zwevend.",
+        "en": "A halo of sound: choir-like, serene and hovering above everything else."
+      }
+    },
+    "Other|216": {
+      "name": "Sweep Pad",
+      "oneLiner": {
+        "nl": "Pad met een traag openend filter: de klank veegt langzaam helder, dramatisch en filmisch.",
+        "en": "A pad with a slowly opening filter: the sound sweeps gradually bright, dramatic and cinematic."
+      }
+    },
+    "Other|221": {
+      "name": "Atmosphere",
+      "oneLiner": {
+        "nl": "Een wijde, dromerige ruimteklank: ijl en sferisch, gemaakt om scenes mee te schilderen.",
+        "en": "A wide, dreamy spatial texture: airy and atmospheric, made for painting whole scenes."
+      }
+    },
+    "Other|222": {
+      "name": "Brightness",
+      "oneLiner": {
+        "nl": "Een glinsterend, kristalhelder pad: hoog oplichtend en sprankelend boven de mix.",
+        "en": "A glittering, crystal-clear pad: high, gleaming and sparkling above the mix."
+      }
+    },
+    "Other|223": {
+      "name": "Goblins",
+      "oneLiner": {
+        "nl": "Een grillig, schimmig fluisterpad: onrustig en spookachtig, perfect voor spanning.",
+        "en": "A restless, shadowy whispering pad: eerie and ghostly, perfect for suspense."
+      }
+    },
+    "Other|224": {
+      "name": "Echo Drops",
+      "oneLiner": {
+        "nl": "Druppels klank die in echo's wegvallen: ritmisch tikkend en dromerig nagalmend.",
+        "en": "Drops of sound falling away in echoes: rhythmically ticking and dreamily trailing off."
+      }
+    },
+    "Other|225": {
+      "name": "Echo Bell",
+      "oneLiner": {
+        "nl": "Belheldere tonen die zichzelf eindeloos herhalen: glinsterend en hypnotisch echoënd.",
+        "en": "Bell-clear tones repeating themselves endlessly: glistening and hypnotically echoing."
+      }
+    },
+    "Other|226": {
+      "name": "Echo Pan",
+      "oneLiner": {
+        "nl": "Echo's die van links naar rechts dansen: breed pannend en ruimtelijk in beweging.",
+        "en": "Echoes dancing from left to right: wide-panning and spatially in motion."
+      }
+    },
+    "Other|227": {
+      "name": "Star Theme",
+      "oneLiner": {
+        "nl": "Een groots, sterrenstelsel-pad: episch en zwevend, gemaakt voor het grote ruimte-thema.",
+        "en": "A grand, galaxy-sized pad: epic and floating, made for the big space theme."
+      }
+    },
+    "Other|210": {
+      "name": "Polysynth",
+      "oneLiner": {
+        "nl": "De brede meerstemmige synthlaag: vol, warm en stuwend, het werkpaard van de jaren-80 leads.",
+        "en": "The broad polyphonic synth layer: full, warm and driving, the workhorse of '80s leads."
+      }
+    },
+    "Other|213": {
+      "name": "Bowed Glass",
+      "oneLiner": {
+        "nl": "Een gestreken glasklank: ijl, glazig en zingend, alsof natte vingers over kristal glijden.",
+        "en": "A bowed-glass voice: thin, glassy and singing, like wet fingers gliding over crystal."
+      }
+    },
+    "Other|220": {
+      "name": "Synth Mallet",
+      "oneLiner": {
+        "nl": "Een synthetische aanslag-percussie: helder tikkend, klokachtig en kort nazingend.",
+        "en": "A synthetic mallet percussion: bright, struck and bell-like with a short ring."
+      }
+    },
+    "Other|228": {
+      "name": "Sitar 1",
+      "oneLiner": {
+        "nl": "De gonzende sitar van Noord-India: snerpend, resonant en vol meeklinkende boventonen.",
+        "en": "The buzzing sitar of North India: twangy, resonant and full of sympathetic overtones."
+      }
+    },
+    "Other|229": {
+      "name": "Sitar 2",
+      "oneLiner": {
+        "nl": "Een tweede, ronder sitar-karakter: zachter aangezet maar even raga-rijk en gonzend.",
+        "en": "A second, rounder sitar voice: softer in attack but just as raga-rich and droning."
+      }
+    },
+    "Other|230": {
+      "name": "Banjo",
+      "oneLiner": {
+        "nl": "De pittige bluegrass-banjo: helder pingelend, snel en vol Appalachen-energie.",
+        "en": "The peppy bluegrass banjo: bright, plinking, fast and full of Appalachian energy."
+      }
+    },
+    "Other|231": {
+      "name": "Shamisen",
+      "oneLiner": {
+        "nl": "De Japanse driesnarige luit: scherp getokkeld met een karakteristieke snerpende 'sawari'-buzz.",
+        "en": "The Japanese three-stringed lute: sharply plucked with its signature buzzing 'sawari' twang."
+      }
+    },
+    "Other|232": {
+      "name": "Koto",
+      "oneLiner": {
+        "nl": "De Japanse koto: glijdende, pentatonische snaartonen die meteen een Zen-tuin oproepen.",
+        "en": "The Japanese koto: gliding, pentatonic string tones that instantly conjure a Zen garden."
+      }
+    },
+    "Other|233": {
+      "name": "Taisho Koto",
+      "oneLiner": {
+        "nl": "De taisho-koto: een toetsen-citer met een nasaal, mechanisch tokkelend timbre uit het vroeg-moderne Japan.",
+        "en": "The taisho koto: a keyed zither with a nasal, mechanically plucked timbre from early-modern Japan."
+      }
+    },
+    "Other|234": {
+      "name": "Kalimba",
+      "oneLiner": {
+        "nl": "De Afrikaanse duimpiano: ronde, kabbelende metalen lamellen met een hypnotiserende sprankel.",
+        "en": "The African thumb piano: round, rippling metal tines with a hypnotic sparkle."
+      }
+    },
+    "Other|235": {
+      "name": "Bagpipe",
+      "oneLiner": {
+        "nl": "De doedelzak: een doordringende rietklank boven een eindeloze bourdon-toon.",
+        "en": "The bagpipe: a piercing reed voice riding over an endless drone."
+      }
+    },
+    "Other|236": {
+      "name": "Fiddle",
+      "oneLiner": {
+        "nl": "De fiddle: dezelfde viool, maar dansend en ruig voor folk, country en bluegrass.",
+        "en": "The fiddle: the same violin, but dancing and rough for folk, country and bluegrass."
+      }
+    },
+    "Other|237": {
+      "name": "Shanai",
+      "oneLiner": {
+        "nl": "De Indiase shehnai: een schel, feestelijk dubbelriet dat bruiloften en tempels begeleidt.",
+        "en": "The Indian shehnai: a shrill, festive double reed that accompanies weddings and temples."
+      }
+    },
+    "Other|238": {
+      "name": "Tinkle Bell",
+      "oneLiner": {
+        "nl": "Tinkle Bell: heldere, ijle belletjes die als sneeuwvlokken door je arrangement dwarrelen.",
+        "en": "Tinkle Bell: bright, airy chimes that drift through your arrangement like snowflakes."
+      }
+    },
+    "Other|239": {
+      "name": "Agogo",
+      "oneLiner": {
+        "nl": "De agogô: dubbele Braziliaanse klokjes met een scherpe, ritmische tik voor samba.",
+        "en": "The agogô: twin Brazilian bells with a sharp, rhythmic clack for samba."
+      }
+    },
+    "Other|240": {
+      "name": "Steel Drums",
+      "oneLiner": {
+        "nl": "De steelpan: warme, zoemende tropentonen geslagen uit een olievat van Trinidad.",
+        "en": "The steel drum: warm, buzzing tropical tones hammered from a Trinidad oil barrel."
+      }
+    },
+    "Other|241": {
+      "name": "Woodblock",
+      "oneLiner": {
+        "nl": "Het woodblock: een droge, houten 'tok' die elk ritme strak op de tel zet.",
+        "en": "The woodblock: a dry, wooden 'tock' that locks any rhythm onto the beat."
+      }
+    },
+    "Other|242": {
+      "name": "Castanets",
+      "oneLiner": {
+        "nl": "Castagnetten: ratelende houten schelpjes met het hart van de flamenco.",
+        "en": "Castanets: rattling wooden shells with the heart of flamenco."
+      }
+    },
+    "Other|243": {
+      "name": "Taiko",
+      "oneLiner": {
+        "nl": "De taiko: een diepe, dreunende Japanse tromslag die de borstkas laat trillen.",
+        "en": "The taiko: a deep, thundering Japanese drum hit you feel in your chest."
+      }
+    },
+    "Other|244": {
+      "name": "Concert BD",
+      "oneLiner": {
+        "nl": "De concertbasdrum: een zware, galmende orkestdreun voor dramatische crescendo's.",
+        "en": "The concert bass drum: a heavy, booming orchestral boom for dramatic crescendos."
+      }
+    },
+    "Other|245": {
+      "name": "Melodic Tom1",
+      "oneLiner": {
+        "nl": "Melodische tom 1: stembare roto-toms met een ronde, zingende dreun.",
+        "en": "Melodic tom 1: tunable roto-toms with a round, singing thump."
+      }
+    },
+    "Other|246": {
+      "name": "Melodic Tom2",
+      "oneLiner": {
+        "nl": "Melodische tom 2: een donkerder, dieper tom-timbre voor zware fills.",
+        "en": "Melodic tom 2: a darker, deeper tom timbre for heavy fills."
+      }
+    },
+    "Other|249": {
+      "name": "Elec.Perc.",
+      "oneLiner": {
+        "nl": "Elektronische percussie: synthetische drumtonen met de punch van een drumcomputer.",
+        "en": "Electronic percussion: synthetic drum tones with the punch of a drum machine."
+      }
+    },
+    "Other|250": {
+      "name": "Reverse Cym.",
+      "oneLiner": {
+        "nl": "Reversed cymbal: een achteruit zwellende bekkenruis die elke overgang inluidt.",
+        "en": "Reverse cymbal: a backwards-swelling crash that announces any transition."
+      }
+    },
+    "Other|254": {
+      "name": "Breath Noise",
+      "oneLiner": {
+        "nl": "Breath Noise: de hoorbare ademhaal van een blazer, ruisend en intiem als FX.",
+        "en": "Breath Noise: the audible inhale of a wind player, hissing and intimate as an effect."
+      }
+    },
+    "Other|256": {
+      "name": "Seashore",
+      "oneLiner": {
+        "nl": "Seashore: rollende branding en ruisende golven voor een rustgevende achtergrond.",
+        "en": "Seashore: rolling surf and hissing waves for a soothing backdrop."
+      }
+    },
+    "Other|257": {
+      "name": "Rain",
+      "oneLiner": {
+        "nl": "Rain: een zacht tikkende regenbui die elke ballad een grijze hemel geeft.",
+        "en": "Rain: a softly pattering shower that lends any ballad a grey sky."
+      }
+    },
+    "Other|258": {
+      "name": "Thunder",
+      "oneLiner": {
+        "nl": "Thunder: een rommelende donderslag die je arrangement een onweersbui inrolt.",
+        "en": "Thunder: a rumbling thunderclap that rolls a storm into your arrangement."
+      }
+    },
+    "Other|259": {
+      "name": "Wind",
+      "oneLiner": {
+        "nl": "Een zacht ruisende windvlaag: het GM2-effect dat een scene meteen winters en weids maakt.",
+        "en": "A softly hissing gust of wind: the GM2 effect that instantly makes a scene wintry and wide."
+      }
+    },
+    "Other|260": {
+      "name": "Stream",
+      "oneLiner": {
+        "nl": "Een kabbelend beekje: borrelend stromend water dat rust en buitenlucht in je mix brengt.",
+        "en": "A babbling brook: bubbling running water that brings calm and open air to your mix."
+      }
+    },
+    "Other|261": {
+      "name": "Bubble",
+      "oneLiner": {
+        "nl": "Plop-plop onder water: speelse luchtbelletjes, perfect voor aquarium- of cartoonmomenten.",
+        "en": "Plop-plop underwater: playful air bubbles, perfect for aquarium or cartoon moments."
+      }
+    },
+    "Other|262": {
+      "name": "Bird 1",
+      "oneLiner": {
+        "nl": "Een vrolijk fluitend vogeltje: het eerste GM2-vogeltjwitter voor zonnige ochtendscenes.",
+        "en": "A cheerfully whistling bird: the first GM2 chirp for sunny morning scenes."
+      }
+    },
+    "Other|265": {
+      "name": "Bird 2",
+      "oneLiner": {
+        "nl": "Een tweede vogelroep: andere soort, ander timbre, voor een vollere voliere in je arrangement.",
+        "en": "A second birdcall: different species, different timbre, for a fuller aviary in your arrangement."
+      }
+    },
+    "Other|263": {
+      "name": "Dog",
+      "oneLiner": {
+        "nl": "Woef! Een geblafte hond als GM2-effect, voor komische timing of een levendige straatscene.",
+        "en": "Woof! A barking dog as a GM2 effect, for comic timing or a lively street scene."
+      }
+    },
+    "Other|264": {
+      "name": "Horse Gallop",
+      "oneLiner": {
+        "nl": "Klipklop in galop: ritmische hoefslagen die je zo in een western laat draven.",
+        "en": "Clip-clop at a gallop: rhythmic hoofbeats that carry you straight into a western."
+      }
+    },
+    "Other|266": {
+      "name": "Telephone 1",
+      "oneLiner": {
+        "nl": "Rinkelende vaste telefoon: het klassieke belgeluid voor een scene die om aandacht vraagt.",
+        "en": "A ringing landline phone: the classic bell sound for a scene that demands attention."
+      }
+    },
+    "Other|267": {
+      "name": "Telephone 2",
+      "oneLiner": {
+        "nl": "Een tweede telefoonbel: andere ring, dezelfde dramatische timing voor je verhaal.",
+        "en": "A second phone bell: a different ring, the same dramatic timing for your story."
+      }
+    },
+    "Other|268": {
+      "name": "DoorCreaking",
+      "oneLiner": {
+        "nl": "Een krakende deur die langzaam opengaat: kippenvel-effect voor elke spannende scene.",
+        "en": "A creaking door swinging slowly open: a goosebump effect for any suspenseful scene."
+      }
+    },
+    "Other|269": {
+      "name": "Door",
+      "oneLiner": {
+        "nl": "Een dichtslaande deur: de korte klap die een scene afsluit of iemand laat vertrekken.",
+        "en": "A slamming door: the short bang that ends a scene or sends someone off."
+      }
+    },
+    "Other|270": {
+      "name": "Scratch",
+      "oneLiner": {
+        "nl": "Vinyl onder de naald: een lo-fi DJ-scratch, percussief en kant-en-klaar voor hiphop-grooves.",
+        "en": "Vinyl under the needle: a lo-fi DJ scratch, percussive and ready-made for hip-hop grooves."
+      }
+    },
+    "Other|271": {
+      "name": "Wind Chimes",
+      "oneLiner": {
+        "nl": "Zacht tinkelende windgong: zwevende belletjes voor een dromerige, magische overgang.",
+        "en": "A softly tinkling wind chime: floating bells for a dreamy, magical transition."
+      }
+    },
+    "Other|272": {
+      "name": "Helicopter",
+      "oneLiner": {
+        "nl": "Wiekende rotorbladen: het dreunende GM2-effect dat een helikopter laag overkomen laat lijken.",
+        "en": "Whirring rotor blades: the thudding GM2 effect of a helicopter passing low overhead."
+      }
+    },
+    "Other|274": {
+      "name": "Car Stop",
+      "oneLiner": {
+        "nl": "Gierende remmen tot stilstand: de piepende stop die elke achtervolging afsluit.",
+        "en": "Screeching brakes to a halt: the squealing stop that ends any chase."
+      }
+    },
+    "Other|275": {
+      "name": "Car Pass",
+      "oneLiner": {
+        "nl": "Een auto die voorbijscheurt: het zoevende doppler-effect van langsrazend verkeer.",
+        "en": "A car tearing past: the whooshing Doppler effect of traffic racing by."
+      }
+    },
+    "Other|276": {
+      "name": "Car Crash",
+      "oneLiner": {
+        "nl": "Krakende botsing van metaal: het GM2-effect voor een dramatische ongelukscene.",
+        "en": "The crunching impact of metal: the GM2 effect for a dramatic crash scene."
+      }
+    },
+    "Other|277": {
+      "name": "Siren",
+      "oneLiner": {
+        "nl": "Loeiende sirene: de op- en neergaande toon van politie of brandweer in volle vaart.",
+        "en": "A wailing siren: the rising-and-falling tone of police or fire trucks at full speed."
+      }
+    },
+    "Other|278": {
+      "name": "Train",
+      "oneLiner": {
+        "nl": "Een dreunende trein die voorbijdendert: ritmisch geratel met een nostalgische reisstemming.",
+        "en": "A rumbling train thundering by: rhythmic clatter with a nostalgic travelling mood."
+      }
+    },
+    "Other|279": {
+      "name": "Jetplane",
+      "oneLiner": {
+        "nl": "Een straaljager die overvliegt: het brullende GM2-effect van een opstijgende jet.",
+        "en": "A jet flying over: the roaring GM2 effect of an aircraft taking off."
+      }
+    },
+    "Other|280": {
+      "name": "Starship",
+      "oneLiner": {
+        "nl": "Sciencefiction-zoom: een opstijgend ruimteschip in één GM2-veeg, klaar voor je eigen lanceringsscene.",
+        "en": "Sci-fi swoosh: a rising starship in a single GM2 sweep, ready for your own launch scene."
+      }
+    },
+    "Other|281": {
+      "name": "Burst Noise",
+      "oneLiner": {
+        "nl": "Een korte ruisexplosie: percussieve knal voor inslagen, hits en plotselinge accenten.",
+        "en": "A short noise burst: a percussive crack for impacts, hits and sudden accents."
+      }
+    },
+    "Other|291": {
+      "name": "Explosion",
+      "oneLiner": {
+        "nl": "Voluit knallende detonatie: de grote filmische klap voor climax en chaos.",
+        "en": "A full-blown detonation: the big cinematic blast for climax and chaos."
+      }
+    },
+    "Other|282": {
+      "name": "Applause",
+      "oneLiner": {
+        "nl": "Een zaal vol klappende handen: instant publiek voor je grote slotakkoord.",
+        "en": "A hall full of clapping hands: instant audience for your big closing chord."
+      }
+    },
+    "Other|283": {
+      "name": "Laughing",
+      "oneLiner": {
+        "nl": "Aanstekelijke lach uit het GM2-effectrek: een vrolijke onderbreking tussen de noten.",
+        "en": "Infectious laughter from the GM2 effects rack: a cheerful interruption between the notes."
+      }
+    },
+    "Other|284": {
+      "name": "Screaming",
+      "oneLiner": {
+        "nl": "Een doordringende gil: het horror-effect voor de schrikmomenten in je verhaal.",
+        "en": "A piercing scream: the horror effect for the jump-scares in your story."
+      }
+    },
+    "Other|285": {
+      "name": "Punch",
+      "oneLiner": {
+        "nl": "De droge dreun van een rake klap: cartoonesk geweld in één toets.",
+        "en": "The dry thud of a landed blow: cartoon violence in a single key."
+      }
+    },
+    "Other|286": {
+      "name": "Heart Beat",
+      "oneLiner": {
+        "nl": "Doffe boem-boem: een kloppend hart dat spanning opbouwt onder elke scene.",
+        "en": "A muffled lub-dub: a beating heart that builds tension beneath any scene."
+      }
+    },
+    "Other|287": {
+      "name": "Footsteps",
+      "oneLiner": {
+        "nl": "Naderende voetstappen: het GM2-effect dat iemand de kamer in laat lopen.",
+        "en": "Approaching footsteps: the GM2 effect that walks someone into the room."
+      }
+    },
+    "Other|288": {
+      "name": "Gun Shot",
+      "oneLiner": {
+        "nl": "Eén scherp schot: de klassieke filmknal voor het beslissende moment.",
+        "en": "One sharp shot: the classic film bang for the decisive moment."
+      }
+    },
+    "Other|289": {
+      "name": "Machine Gun",
+      "oneLiner": {
+        "nl": "Ratelend salvo: een snelvuurketen van schoten voor actiescenes vol adrenaline.",
+        "en": "A rattling volley: a rapid-fire chain of shots for adrenaline-fuelled action scenes."
+      }
+    },
+    "Other|290": {
+      "name": "Laser Gun",
+      "oneLiner": {
+        "nl": "Pew-pew uit de ruimte: het zoevende laserschot recht uit elke retro-sciencefiction.",
+        "en": "Pew-pew from space: the zapping laser shot straight out of any retro sci-fi."
+      }
     }
   }
 }
