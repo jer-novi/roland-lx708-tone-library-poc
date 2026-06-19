@@ -1,6 +1,3 @@
-# sslip.io resolves this hostname to 188.166.80.4 automatically;
-# Caddy fetches a Let's Encrypt certificate on first request.
-# Replace with your own domain whenever you get one.
-188-166-80-4.sslip.io {
+lx708.jvdz.me {
     reverse_proxy api:8080
 }
