@@ -74,10 +74,10 @@ systemctl enable --now lx708-deploy.timer
 
 echo ""
 echo "==> Done. Within ~2 minutes the API is live at:"
-echo "    https://188-166-80-4.sslip.io/actuator/health"
-echo "    https://188-166-80-4.sslip.io/api/tones?category=Piano"
+echo "    https://lx708.jvdz.me/actuator/health"
+echo "    https://lx708.jvdz.me/api/tones?category=Piano"
 echo ""
 echo "Seed the Wikipedia data once with:"
-echo "    curl -X POST https://188-166-80-4.sslip.io/api/wiki/refresh-missing"
+echo "    curl -X POST https://lx708.jvdz.me/api/wiki/refresh-missing"
 echo ""
 echo "New commits on main now deploy automatically within 5 minutes."
