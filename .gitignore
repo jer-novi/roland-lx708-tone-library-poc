@@ -1,0 +1,22 @@
+# Secrets — nooit committen
+.env
+.env.*
+!.env.example
+deploy/.env
+
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+*.iml
+
+# Build artifacts
+__pycache__/
+*.pyc
+target/
+.mvn/
+deploy/wheels/
+
+# Local node modules / lock files (PNPM)
+node_modules/
+

@@ -40,6 +40,45 @@ class SeedAndApiSmokeTest {
     }
 
     @Test
+    void midiMappingIsSeededForAllTones() {
+        List<ToneDto> all = toneService.search(null, null, null);
+        assertThat(all).hasSize(324);
+        assertThat(all).allSatisfy(tone -> {
+            assertThat(tone.midiBankMsb()).isBetween(0, 127);
+            assertThat(tone.midiBankLsb()).isBetween(0, 127);
+            assertThat(tone.midiProgram()).isBetween(1, 128);
+        });
+
+        // Steekproef tegen de officiële MIDI Implementation (sectie 4. Tone List)
+        ToneDto europeanGrand = toneService.search("Piano", null, "European Grand").getFirst();
+        assertThat(europeanGrand.midiBankMsb()).isEqualTo(0);
+        assertThat(europeanGrand.midiBankLsb()).isEqualTo(68);
+        assertThat(europeanGrand.midiProgram()).isEqualTo(1);
+
+        ToneDto suitcase = toneService.search(null, null, "1976SuitCase").getFirst();
+        assertThat(suitcase.midiBankMsb()).isEqualTo(8);
+        assertThat(suitcase.midiBankLsb()).isEqualTo(71);
+        assertThat(suitcase.midiProgram()).isEqualTo(5);
+
+        ToneDto explosion = toneService.search("Other", "GM2", "Explosion").getFirst();
+        assertThat(explosion.midiBankMsb()).isEqualTo(121);
+        assertThat(explosion.midiBankLsb()).isEqualTo(3);
+        assertThat(explosion.midiProgram()).isEqualTo(128);
+    }
+
+    @Test
+    void tagsAreSeededForAllTones() {
+        List<ToneDto> all = toneService.search(null, null, null);
+        assertThat(all).allSatisfy(tone -> assertThat(tone.tags()).isNotBlank());
+
+        ToneDto suitcase = toneService.search(null, null, "1976SuitCase").getFirst();
+        assertThat(suitcase.tags().split(",")).contains("vintage", "warm", "jazz", "ballad");
+
+        ToneDto warmPad = toneService.search("Other", "GM2", "Warm Pad").getFirst();
+        assertThat(warmPad.tags().split(",")).contains("synthetisch", "zwevend", "electronic");
+    }
+
+    @Test
     void gm2RangeIsComplete() {
         List<ToneDto> gm2 = toneService.search("Other", "GM2", null);
         assertThat(gm2).hasSize(256);

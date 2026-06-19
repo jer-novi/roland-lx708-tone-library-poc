@@ -16,7 +16,11 @@ public record ToneSeedFile(List<CategorySeed> categories, List<ToneSeed> tones) 
             String origin,
             String wikipediaPageTitle,
             String funFacts,
-            String combinationSuggestions
+            String combinationSuggestions,
+            Integer midiBankMsb,
+            Integer midiBankLsb,
+            Integer midiProgram,
+            String tags
     ) {
     }
 }

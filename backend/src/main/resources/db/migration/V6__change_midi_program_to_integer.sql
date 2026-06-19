@@ -1,0 +1,1 @@
+ALTER TABLE tones ALTER COLUMN midi_program TYPE INTEGER;

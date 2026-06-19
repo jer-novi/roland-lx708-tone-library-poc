@@ -1,27 +1,50 @@
+# Eigen project-naam zodat deze stack (prod-achtige db/api/caddy) nooit
+# containers, netwerk of volumes deelt met de dev-compose-bestanden
+# hieronder, ook al staan ze in dezelfde map.
+name: tone-library-prod
+
 services:
   db:
     image: postgres:16-alpine
-    restart: unless-stopped
+    # "always" in plaats van "unless-stopped": ook na een Docker Desktop
+    # restart wordt de container automatisch opnieuw gestart, zodat de
+    # backend nooit een UnknownHostException op 'db' krijgt.
+    restart: always
     environment:
       POSTGRES_DB: pianosounds
-      POSTGRES_USER: pianosounds_user
+      POSTGRES_USER: ${DB_USERNAME:-pianosounds_user}
       POSTGRES_PASSWORD: ${DB_PASSWORD:?Set DB_PASSWORD in deploy/.env}
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U pianosounds_user -d pianosounds"]
+      test: [ "CMD-SHELL", "pg_isready -U pianosounds_user -d pianosounds" ]
       interval: 5s
       timeout: 3s
       retries: 10
+      # Geef de healthcheck even de tijd om te starten bij eerste boot
+      start_period: 30s
 
   api:
     build: ../backend
     restart: unless-stopped
     environment:
       DB_URL: jdbc:postgresql://db:5432/pianosounds
-      DB_USERNAME: pianosounds_user
+      DB_USERNAME: ${DB_USERNAME:-pianosounds_user}
       DB_PASSWORD: ${DB_PASSWORD}
-      CORS_ALLOWED_ORIGINS: ${CORS_ALLOWED_ORIGINS:-https://roland-lx708-tone-library-poc.vercel.app,http://localhost:3000}
+      # Wildcard-patroon dekt alle Vercel preview-deployments van dit project
+      # (elke branch/PR krijgt een eigen *-jer-novis-projects.vercel.app URL).
+      CORS_ALLOWED_ORIGINS: ${CORS_ALLOWED_ORIGINS:-https://roland-lx708-tone-library-poc.vercel.app,https://roland-lx708-tone-library-*-jer-novis-projects.vercel.app,http://localhost:3000}
+      # Thumbnail-opslag: eigen volume zodat bestanden bewaard blijven na
+      # een herstart. De wiki-warmup slaat hier ~470 bestanden op van ~50kB
+      # elk, dus totaal ~25MB — verwaarloosbaar.
+      THUMBNAILS_DIR: /var/data/wiki-thumbs
+      # HD-opslag: tweede volume voor 1600px+ varianten, geserveerd
+      # onder /api/wiki-thumbs-hd/. Geschat volume: ~30MB voor 470
+      # bestanden (groter dan SD door hogere resolutie).
+      HD_THUMBNAILS_DIR: /var/data/wiki-thumbs-hd
+    volumes:
+      - wiki_thumbs:/var/data/wiki-thumbs
+      - wiki_thumbs_hd:/var/data/wiki-thumbs-hd
     depends_on:
       db:
         condition: service_healthy
@@ -30,8 +53,11 @@ services:
     image: caddy:2-alpine
     restart: unless-stopped
     ports:
-      - "188.166.80.4:80:80"
-      - "188.166.80.4:443:443"
+      # Bind aan een specifiek host-IP via BIND_IP in deploy/.env wanneer een
+      # andere dienst (bv. mission control) al op 0.0.0.0:443 luistert.
+      # Leeg laten = 0.0.0.0 (alle interfaces).
+      - "${BIND_IP:-0.0.0.0}:80:80"
+      - "${BIND_IP:-0.0.0.0}:443:443"
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
       - caddy_data:/data
@@ -41,3 +67,5 @@ services:
 volumes:
   pgdata:
   caddy_data:
+  wiki_thumbs:
+  wiki_thumbs_hd:

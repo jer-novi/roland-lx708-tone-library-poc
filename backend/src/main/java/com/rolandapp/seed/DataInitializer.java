@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.core.annotation.Order;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -25,6 +26,7 @@ import java.util.Objects;
  */
 @Component
 @ConditionalOnProperty(name = "app.seed.enabled", havingValue = "true", matchIfMissing = true)
+@Order(1) // vóór WikiWarmup
 public class DataInitializer implements CommandLineRunner {
 
     private static final Logger log = LoggerFactory.getLogger(DataInitializer.class);
@@ -102,7 +104,11 @@ public class DataInitializer implements CommandLineRunner {
                 || !Objects.equals(tone.getOrigin(), seed.origin())
                 || !Objects.equals(tone.getWikipediaPageTitle(), seed.wikipediaPageTitle())
                 || !Objects.equals(tone.getFunFacts(), seed.funFacts())
-                || !Objects.equals(tone.getCombinationSuggestions(), seed.combinationSuggestions());
+                || !Objects.equals(tone.getCombinationSuggestions(), seed.combinationSuggestions())
+                || !Objects.equals(tone.getMidiBankMsb(), seed.midiBankMsb())
+                || !Objects.equals(tone.getMidiBankLsb(), seed.midiBankLsb())
+                || !Objects.equals(tone.getMidiProgram(), seed.midiProgram())
+                || !Objects.equals(tone.getTags(), seed.tags());
     }
 
     private void applySeed(Tone tone, ToneSeedFile.ToneSeed seed) {
@@ -112,5 +118,9 @@ public class DataInitializer implements CommandLineRunner {
         tone.setWikipediaPageTitle(seed.wikipediaPageTitle());
         tone.setFunFacts(seed.funFacts());
         tone.setCombinationSuggestions(seed.combinationSuggestions());
+        tone.setMidiBankMsb(seed.midiBankMsb());
+        tone.setMidiBankLsb(seed.midiBankLsb());
+        tone.setMidiProgram(seed.midiProgram());
+        tone.setTags(seed.tags());
     }
 }

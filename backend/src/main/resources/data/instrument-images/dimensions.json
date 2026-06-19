@@ -1,0 +1,667 @@
+{
+  "Piano|1": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Grand piano"
+  },
+  "Piano|2": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Grand piano"
+  },
+  "E. Piano|1": {
+    "width": 320,
+    "height": 257,
+    "site_name": "Rhodes piano"
+  },
+  "E. Piano|2": {
+    "width": 320,
+    "height": 257,
+    "site_name": "Rhodes piano"
+  },
+  "E. Piano|8": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Clavinet"
+  },
+  "E. Piano|10": {
+    "width": 320,
+    "height": 257,
+    "site_name": "Rhodes piano"
+  },
+  "Strings|7": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Harp"
+  },
+  "Strings|10": {
+    "width": 180,
+    "height": 179,
+    "site_name": "Flute"
+  },
+  "Strings|11": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Cello"
+  },
+  "Strings|16": {
+    "width": 320,
+    "height": 277,
+    "site_name": "Piano"
+  },
+  "Strings|18": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Double bass"
+  },
+  "Other|1": {
+    "width": 320,
+    "height": 213,
+    "site_name": "Pipe organ"
+  },
+  "Other|3": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Hammond organ"
+  },
+  "Other|4": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Hammond organ"
+  },
+  "Other|5": {
+    "width": 320,
+    "height": 213,
+    "site_name": "Pipe organ"
+  },
+  "Other|6": {
+    "width": 320,
+    "height": 213,
+    "site_name": "Pipe organ"
+  },
+  "Other|8": {
+    "width": 320,
+    "height": 213,
+    "site_name": "Pipe organ"
+  },
+  "Other|9": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Hammond organ"
+  },
+  "Other|10": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Hammond organ"
+  },
+  "Other|11": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Hammond organ"
+  },
+  "Other|18": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Fortepiano"
+  },
+  "Other|19": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Fortepiano"
+  },
+  "Other|20": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Fortepiano"
+  },
+  "Other|21": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Harpsichord"
+  },
+  "Other|22": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Harpsichord"
+  },
+  "Other|27": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Drum kit"
+  },
+  "Other|28": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Drum kit"
+  },
+  "Other|29": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Drum kit"
+  },
+  "Other|32": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Drum kit"
+  },
+  "Other|36": {
+    "width": 320,
+    "height": 277,
+    "site_name": "Piano"
+  },
+  "Other|37": {
+    "width": 320,
+    "height": 277,
+    "site_name": "Piano"
+  },
+  "Other|38": {
+    "width": 320,
+    "height": 277,
+    "site_name": "Piano"
+  },
+  "Other|39": {
+    "width": 320,
+    "height": 277,
+    "site_name": "Piano"
+  },
+  "Other|40": {
+    "width": 320,
+    "height": 277,
+    "site_name": "Piano"
+  },
+  "Other|41": {
+    "width": 320,
+    "height": 277,
+    "site_name": "Piano"
+  },
+  "Other|42": {
+    "width": 320,
+    "height": 277,
+    "site_name": "Piano"
+  },
+  "Other|45": {
+    "width": 320,
+    "height": 277,
+    "site_name": "Piano"
+  },
+  "Other|49": {
+    "width": 320,
+    "height": 277,
+    "site_name": "Piano"
+  },
+  "Other|54": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Harpsichord"
+  },
+  "Other|55": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Harpsichord"
+  },
+  "Other|56": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Harpsichord"
+  },
+  "Other|57": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Harpsichord"
+  },
+  "Other|58": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Clavinet"
+  },
+  "Other|60": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Celesta"
+  },
+  "Other|61": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Glockenspiel"
+  },
+  "Other|63": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Vibraphone"
+  },
+  "Other|64": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Vibraphone"
+  },
+  "Other|65": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Marimba"
+  },
+  "Other|66": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Marimba"
+  },
+  "Other|67": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Xylophone"
+  },
+  "Other|68": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Tubular bells"
+  },
+  "Other|70": {
+    "width": 180,
+    "height": 178,
+    "site_name": "Carillon"
+  },
+  "Other|71": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Santur"
+  },
+  "Other|72": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Hammond organ"
+  },
+  "Other|73": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Hammond organ"
+  },
+  "Other|75": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Hammond organ"
+  },
+  "Other|76": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Hammond organ"
+  },
+  "Other|77": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Hammond organ"
+  },
+  "Other|78": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Hammond organ"
+  },
+  "Other|79": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Hammond organ"
+  },
+  "Other|80": {
+    "width": 320,
+    "height": 213,
+    "site_name": "Pipe organ"
+  },
+  "Other|81": {
+    "width": 320,
+    "height": 213,
+    "site_name": "Pipe organ"
+  },
+  "Other|82": {
+    "width": 320,
+    "height": 213,
+    "site_name": "Pipe organ"
+  },
+  "Other|83": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Reed organ"
+  },
+  "Other|85": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Accordion"
+  },
+  "Other|86": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Accordion"
+  },
+  "Other|87": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Harmonica"
+  },
+  "Other|88": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Bandoneón"
+  },
+  "Other|89": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Classical guitar"
+  },
+  "Other|91": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Classical guitar"
+  },
+  "Other|92": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Classical guitar"
+  },
+  "Other|95": {
+    "width": 320,
+    "height": 121,
+    "site_name": "Mandolin"
+  },
+  "Other|99": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Electric guitar"
+  },
+  "Other|100": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Electric guitar"
+  },
+  "Other|101": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Electric guitar"
+  },
+  "Other|103": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Electric guitar"
+  },
+  "Other|104": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Electric guitar"
+  },
+  "Other|105": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Electric guitar"
+  },
+  "Other|107": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Electric guitar"
+  },
+  "Other|109": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Electric guitar"
+  },
+  "Other|110": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Electric guitar"
+  },
+  "Other|112": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Electric guitar"
+  },
+  "Other|113": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Double bass"
+  },
+  "Other|114": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Bass guitar"
+  },
+  "Other|116": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Bass guitar"
+  },
+  "Other|123": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Clavinet"
+  },
+  "Other|131": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Viola"
+  },
+  "Other|132": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Cello"
+  },
+  "Other|133": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Double bass"
+  },
+  "Other|136": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Harp"
+  },
+  "Other|137": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Yangqin"
+  },
+  "Other|138": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Timpani"
+  },
+  "Other|156": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Trumpet"
+  },
+  "Other|157": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Trumpet"
+  },
+  "Other|158": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Trombone"
+  },
+  "Other|159": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Trombone"
+  },
+  "Other|160": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Trombone"
+  },
+  "Other|161": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Tuba"
+  },
+  "Other|164": {
+    "width": 180,
+    "height": 180,
+    "site_name": "French Horn"
+  },
+  "Other|165": {
+    "width": 180,
+    "height": 180,
+    "site_name": "French Horn"
+  },
+  "Other|175": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Soprano saxophone"
+  },
+  "Other|176": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Alto saxophone"
+  },
+  "Other|177": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Tenor saxophone"
+  },
+  "Other|178": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Baritone saxophone"
+  },
+  "Other|179": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Oboe"
+  },
+  "Other|180": {
+    "width": 180,
+    "height": 178,
+    "site_name": "English horn"
+  },
+  "Other|181": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Bassoon"
+  },
+  "Other|182": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Clarinet"
+  },
+  "Other|183": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Piccolo"
+  },
+  "Other|184": {
+    "width": 180,
+    "height": 179,
+    "site_name": "Flute"
+  },
+  "Other|185": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Recorder"
+  },
+  "Other|188": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Shakuhachi"
+  },
+  "Other|189": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Whistle"
+  },
+  "Other|190": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Ocarina"
+  },
+  "Other|230": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Banjo"
+  },
+  "Other|232": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Koto"
+  },
+  "Other|234": {
+    "width": 180,
+    "height": 179,
+    "site_name": "Kalimba"
+  },
+  "Other|235": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Bagpipes"
+  },
+  "Other|236": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Fiddle"
+  },
+  "Other|238": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Bell"
+  },
+  "Other|241": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Wood block"
+  },
+  "Other|242": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Castanets"
+  },
+  "Other|243": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Taiko"
+  },
+  "Other|244": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Bass drum"
+  },
+  "Other|245": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Tom-tom"
+  },
+  "Other|246": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Tom-tom"
+  },
+  "Other|250": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Cymbal"
+  },
+  "Other|251": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Electric guitar"
+  },
+  "Other|252": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Electric guitar"
+  },
+  "Other|253": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Bass guitar"
+  },
+  "Other|255": {
+    "width": 320,
+    "height": 277,
+    "site_name": "Piano"
+  },
+  "Other|277": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Siren"
+  },
+  "Other|59": {
+    "width": 180,
+    "height": 180,
+    "site_name": "Clavinet"
+  }
+}

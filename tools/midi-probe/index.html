@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>LX708 MIDI Probe — Roland SysEx reverse-engineering</title>
+<style>
+  :root {
+    --bg: #14161a; --panel: #1c1f26; --line: #2b303b; --fg: #e7e9ee;
+    --muted: #8b93a7; --accent: #59b0ff; --ok: #5fd08a; --warn: #ffcc66; --err: #ff6b6b;
+    --tx: #ffd479; --rx: #8fd6ff; --mono: ui-monospace, "Cascadia Code", Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 14px/1.5 system-ui, sans-serif; }
+  header { padding: 14px 18px; border-bottom: 1px solid var(--line); }
+  header h1 { margin: 0; font-size: 16px; }
+  header p { margin: 4px 0 0; color: var(--muted); font-size: 12px; }
+  main { display: grid; grid-template-columns: 380px 1fr; gap: 0; height: calc(100vh - 64px); }
+  .left { border-right: 1px solid var(--line); overflow-y: auto; }
+  .right { display: flex; flex-direction: column; min-width: 0; }
+  fieldset { border: 1px solid var(--line); border-radius: 8px; margin: 12px; padding: 12px; }
+  legend { color: var(--accent); font-weight: 600; padding: 0 6px; font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+  label { display: block; color: var(--muted); font-size: 12px; margin: 8px 0 2px; }
+  input, select, button { font: inherit; }
+  input[type=text], select { width: 100%; background: var(--panel); color: var(--fg); border: 1px solid var(--line); border-radius: 6px; padding: 6px 8px; }
+  input.mono { font-family: var(--mono); }
+  button { background: var(--accent); color: #06121f; border: 0; border-radius: 6px; padding: 7px 12px; font-weight: 600; cursor: pointer; margin: 6px 6px 0 0; }
+  button.secondary { background: var(--panel); color: var(--fg); border: 1px solid var(--line); }
+  button:disabled { opacity: .45; cursor: not-allowed; }
+  .row { display: flex; gap: 8px; }
+  .row > * { flex: 1; }
+  .status { font-size: 12px; color: var(--muted); margin: 6px 12px; }
+  .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--muted); margin-right: 6px; }
+  .dot.ok { background: var(--ok); } .dot.err { background: var(--err); }
+  #log { flex: 1; overflow-y: auto; margin: 0; padding: 10px 14px; font-family: var(--mono); font-size: 12.5px; white-space: pre-wrap; word-break: break-word; }
+  .logbar { display: flex; gap: 8px; align-items: center; padding: 8px 14px; border-bottom: 1px solid var(--line); }
+  .logbar .grow { flex: 1; }
+  .le { padding: 1px 0; }
+  .le .t { color: var(--muted); }
+  .le.tx .d { color: var(--tx); } .le.rx .d { color: var(--rx); }
+  .le .tag { font-weight: 700; }
+  .le.info { color: var(--muted); } .le.ok { color: var(--ok); } .le.warn { color: var(--warn); } .le.err { color: var(--err); }
+  .hint { color: var(--muted); font-size: 11.5px; margin-top: 8px; }
+  code { background: var(--panel); padding: 1px 5px; border-radius: 4px; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <h1>🎹 LX708 MIDI Probe</h1>
+  <p>Roland DT1/RQ1 SysEx reverse-engineering. Werkt alleen in een Chromium-browser (Chrome/Edge) met Web MIDI + SysEx-permissie.</p>
+</header>
+<main>
+  <div class="left">
+    <fieldset>
+      <legend>1 · Verbinding</legend>
+      <button id="connect">Verbind met MIDI</button>
+      <div class="status"><span id="dot" class="dot"></span><span id="connStatus">Niet verbonden</span></div>
+      <label for="output">Output (naar piano)</label>
+      <select id="output"></select>
+      <label for="input">Input (van piano)</label>
+      <select id="input"></select>
+      <label for="devid">Device ID (hex, default 10)</label>
+      <input id="devid" class="mono" type="text" value="10" />
+      <div class="hint">De LX708 heet meestal <code>LX708 MIDI</code> / <code>Roland Digital Piano</code>. Auto-geselecteerd indien gevonden.</div>
+    </fieldset>
+
+    <fieldset>
+      <legend>2 · Sanity check</legend>
+      <button id="identity">Identity Request</button>
+      <div class="hint">Stuurt <code>F0 7E 7F 06 01 F7</code> (universeel, ongevaarlijk). Verwacht reply <code>F0 7E 10 06 02 41 19 03 …</code> — bevestigt LX708 + tweeweg-comms.</div>
+    </fieldset>
+
+    <fieldset>
+      <legend>3 · Roland SysEx (DT1 / RQ1)</legend>
+      <label for="modelid">Model-ID (4 bytes hex)</label>
+      <input id="modelid" class="mono" type="text" value="00 00 00 28" />
+      <div class="hint">FP-30 = <code>00 00 00 28</code> (gok-startpunt). LX708 is onbekend → zie sectie 4.</div>
+      <div class="row">
+        <div>
+          <label for="cmd">Command</label>
+          <select id="cmd">
+            <option value="0x11">RQ1 — lezen (0x11)</option>
+            <option value="0x12">DT1 — schrijven (0x12)</option>
+          </select>
+        </div>
+        <div>
+          <label for="addr">Adres (4 bytes hex)</label>
+          <input id="addr" class="mono" type="text" value="01 00 00 00" />
+        </div>
+      </div>
+      <label for="payload"><span id="payloadLabel">Lengte (4 bytes hex, voor RQ1)</span></label>
+      <input id="payload" class="mono" type="text" value="00 00 00 01" />
+      <button id="send">Verstuur</button>
+      <button id="enable" class="secondary">Enable remote (handshake)</button>
+      <div class="hint">Handshake = DT1 naar <code>01 00 03 06</code> = <code>01</code> en <code>01 00 03 00</code> = <code>01</code>. Bij FP-30 vereist vóór elke DT1. Adres kan op LX708 afwijken.</div>
+    </fieldset>
+
+    <fieldset>
+      <legend>4 · Model-ID auto-discovery</legend>
+      <div class="row">
+        <div>
+          <label for="sweepFrom">Van (hex laatste byte)</label>
+          <input id="sweepFrom" class="mono" type="text" value="00" />
+        </div>
+        <div>
+          <label for="sweepTo">Tot</label>
+          <input id="sweepTo" class="mono" type="text" value="7F" />
+        </div>
+      </div>
+      <label for="sweepProbe">Probe-adres (RQ1, len 1)</label>
+      <input id="sweepProbe" class="mono" type="text" value="01 00 00 00" />
+      <button id="sweep">Start sweep</button>
+      <button id="sweepStop" class="secondary" disabled>Stop</button>
+      <div class="hint">Sweept <code>00 00 00 NN</code>. Per kandidaat: handshake → RQ1. Een <em>antwoord</em> (DT1) = treffer. Geen antwoord = waarschijnlijk verkeerd ID óf verkeerd adres.</div>
+    </fieldset>
+
+    <fieldset>
+      <legend>5 · Test-flows (read-only, veilig)</legend>
+      <button id="verify">▶ Verificatie-checklist</button>
+      <div class="hint">Leest 8 bekende adressen uit en toont ze gedecodeerd. Verander iets op het paneel (bijv. Split aan) en draai opnieuw — de waarde hoort mee te bewegen.</div>
+      <hr style="border:0;border-top:1px solid var(--line);margin:12px 0" />
+      <label for="sweepBase">Adres-sweep — basis (3 bytes hex)</label>
+      <input id="sweepBase" class="mono" type="text" value="01 00 02" />
+      <div class="row">
+        <div>
+          <label for="addrFrom">Van (laatste byte)</label>
+          <input id="addrFrom" class="mono" type="text" value="00" />
+        </div>
+        <div>
+          <label for="addrTo">Tot</label>
+          <input id="addrTo" class="mono" type="text" value="7F" />
+        </div>
+      </div>
+      <button id="addrSweep">Sweep adressen</button>
+      <button id="addrSweepStop" class="secondary" disabled>Stop</button>
+      <div class="hint">Leest <code>basis + NN</code> (len 1) en logt alleen de adressen die antwoorden, met hun waarde. Non-destructief. Blokken: <code>01 00 01</code> (status), <code>01 00 02</code> (instellingen), <code>01 00 08</code> (device-info).</div>
+      <hr style="border:0;border-top:1px solid var(--line);margin:12px 0" />
+      <button id="scanBlocks" class="secondary">Scan blokken (01 00 BB)</button>
+      <div class="hint">Probeert <code>01 00 BB 00</code> voor BB=00–7F en logt welke blokken bestaan. Zo vinden we waar Piano Designer leeft (voorbij <code>01 00 02</code>).</div>
+    </fieldset>
+
+    <fieldset>
+      <legend>6 · Bedieningspaneel — genoemde adressen</legend>
+      <button id="readAll">Lees alle parameters</button>
+      <div class="hint">Leest het hele bekende <code>01 00 02</code>-blok + status uit, met labels en gedecodeerde waarden.</div>
+      <div id="paramTable" style="margin-top:10px"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>7 · Watch-modus (live diff)</legend>
+      <div class="row">
+        <div>
+          <label for="watchBase">Basis (3 bytes)</label>
+          <input id="watchBase" class="mono" type="text" value="01 00 02" />
+        </div>
+        <div>
+          <label for="watchTo">Tot byte</label>
+          <input id="watchTo" class="mono" type="text" value="30" />
+        </div>
+      </div>
+      <button id="watch">Start watch</button>
+      <button id="watchStop" class="secondary" disabled>Stop</button>
+      <div class="hint">Pollt het blok continu. Verander <em>één</em> ding op de piano → de tool logt welk adres veranderde (van → naar). Dé manier om Piano Designer-params te identificeren.</div>
+    </fieldset>
+
+    <fieldset>
+      <legend>8 · DT1 schrijven (⚠ wijzigt de piano)</legend>
+      <div class="row">
+        <div>
+          <label for="writeAddr">Adres (4 bytes)</label>
+          <input id="writeAddr" class="mono" type="text" value="01 00 05 09" />
+        </div>
+        <div>
+          <label for="writeData">Data (bytes)</label>
+          <input id="writeData" class="mono" type="text" value="00" />
+        </div>
+      </div>
+      <button id="writeBtn" style="background:var(--warn)">Schrijf (na handshake)</button>
+      <div class="hint">Stuurt eerst de handshake, dan DT1. Default = metronoom-toggle (<code>01 00 05 09</code>), de onschuldigste test. Verifieer daarna met "Lees alle parameters".</div>
+    </fieldset>
+
+    <fieldset>
+      <legend>9 · Bank/PC zenden (tone-zone test)</legend>
+      <div class="row">
+        <div>
+          <label for="bpChannel">Kanaal (1–16)</label>
+          <input id="bpChannel" class="mono" type="text" value="3" />
+        </div>
+        <div>
+          <label for="bpMsb">Bank MSB</label>
+          <input id="bpMsb" class="mono" type="text" value="0" />
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <label for="bpLsb">Bank LSB</label>
+          <input id="bpLsb" class="mono" type="text" value="68" />
+        </div>
+        <div>
+          <label for="bpPc">Program (1–128)</label>
+          <input id="bpPc" class="mono" type="text" value="1" />
+        </div>
+      </div>
+      <button id="bpSend">Stuur Bank/PC</button>
+      <div class="hint">Test of de piano in dual/split een zone-tone zet bij ontvangst van Bank/PC. Tone 1 = kanaal 3, tone 2 = kanaal 6 (zoals de piano zélf uitzendt). Waarden zijn decimaal.</div>
+    </fieldset>
+  </div>
+
+  <div class="right">
+    <div class="logbar">
+      <strong>Log</strong>
+      <span class="grow"></span>
+      <label style="margin:0"><input type="checkbox" id="autoscroll" checked /> autoscroll</label>
+      <button class="secondary" id="clear">Wis</button>
+      <button class="secondary" id="copy">Kopieer</button>
+    </div>
+    <pre id="log"></pre>
+  </div>
+</main>
+
+<script>
+"use strict";
+
+// ---- DOM ----
+const $ = (id) => document.getElementById(id);
+const logEl = $("log");
+
+// ---- Hex helpers ----
+const parseHex = (s) => (s.trim().match(/[0-9a-fA-F]{1,2}/g) || []).map((b) => parseInt(b, 16) & 0xff);
+const hex = (n) => n.toString(16).toUpperCase().padStart(2, "0");
+const hexBytes = (arr) => Array.from(arr).map(hex).join(" ");
+
+// ---- Roland checksum: (128 - (sum % 128)) % 128 over address + data ----
+function rolandChecksum(bytes) {
+  let sum = 0;
+  for (const b of bytes) sum = (sum + b) & 0x7f;
+  return (128 - sum) & 0x7f;
+}
+
+// ---- Logger ----
+function log(kind, msg, bytes) {
+  const div = document.createElement("div");
+  div.className = "le " + kind;
+  const ts = new Date().toLocaleTimeString("nl-NL", { hour12: false }) + "." +
+             String(Date.now() % 1000).padStart(3, "0");
+  let html = `<span class="t">${ts}</span> `;
+  if (kind === "tx") html += `<span class="tag">▶ TX</span> `;
+  else if (kind === "rx") html += `<span class="tag">◀ RX</span> `;
+  html += escapeHtml(msg);
+  if (bytes) html += ` <span class="d">[${escapeHtml(hexBytes(bytes))}]</span>`;
+  div.innerHTML = html;
+  logEl.appendChild(div);
+  if ($("autoscroll").checked) logEl.scrollTop = logEl.scrollHeight;
+}
+const escapeHtml = (s) => String(s).replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
+
+// ---- State ----
+let access = null;
+let outPort = null;
+let inPort = null;
+
+// ---- Connect ----
+$("connect").onclick = async () => {
+  if (!("requestMIDIAccess" in navigator)) {
+    log("err", "Web MIDI niet ondersteund. Gebruik Chrome of Edge.");
+    return;
+  }
+  try {
+    access = await navigator.requestMIDIAccess({ sysex: true });
+    log("ok", "Web MIDI met SysEx-toegang verkregen.");
+    access.onstatechange = refreshPorts;
+    refreshPorts();
+    $("dot").className = "dot ok";
+    $("connStatus").textContent = "Verbonden";
+  } catch (e) {
+    $("dot").className = "dot err";
+    $("connStatus").textContent = "Geweigerd";
+    log("err", "Toegang geweigerd: " + e.message);
+  }
+};
+
+function scoreName(name) {
+  const n = (name || "").toLowerCase();
+  if (/lx-?70[5-8]/.test(n)) return 3;
+  if (n.includes("roland")) return 2;
+  if (n.includes("piano")) return 1;
+  return 0;
+}
+
+function refreshPorts() {
+  if (!access) return;
+  const outSel = $("output"), inSel = $("input");
+  const fill = (sel, ports) => {
+    const prev = sel.value;
+    sel.innerHTML = "";
+    let best = null, bestScore = -1;
+    for (const p of ports) {
+      const o = document.createElement("option");
+      o.value = p.id; o.textContent = `${p.name} (${p.manufacturer || "?"})`;
+      sel.appendChild(o);
+      const s = scoreName(p.name);
+      if (s > bestScore) { best = p.id; bestScore = s; }
+    }
+    sel.value = [...sel.options].some((o) => o.value === prev) ? prev : (best || "");
+    return sel.value;
+  };
+  fill(outSel, [...access.outputs.values()]);
+  fill(inSel, [...access.inputs.values()]);
+  bindPorts();
+}
+
+function bindPorts() {
+  outPort = access.outputs.get($("output").value) || null;
+  if (inPort) inPort.onmidimessage = null;
+  inPort = access.inputs.get($("input").value) || null;
+  if (inPort) inPort.onmidimessage = onMidi;
+}
+$("output").onchange = bindPorts;
+$("input").onchange = bindPorts;
+
+// ---- Inkomende MIDI decoderen ----
+const pendingReads = new Map(); // "a,b,c,d" -> { resolve, timer }
+let quiet = false;              // onderdruk per-bericht logging tijdens flows/sweeps
+
+function onMidi(e) {
+  const d = e.data;
+  // Correleer DT1-antwoorden met een lopende readAddr() — altijd, ook in quiet-modus
+  if (d[0] === 0xf0 && d[1] === 0x41 && d[7] === 0x12) {
+    const key = `${d[8]},${d[9]},${d[10]},${d[11]}`;
+    const p = pendingReads.get(key);
+    if (p) {
+      clearTimeout(p.timer);
+      pendingReads.delete(key);
+      p.resolve(Array.from(d.slice(12, d.length - 2)));
+    }
+  }
+  if (quiet) return;
+  if (d[0] !== 0xf0) {
+    // korte channel-message — alleen loggen als het geen klok/active-sensing ruis is
+    if (d[0] !== 0xfe && d[0] !== 0xf8) log("rx", "MIDI", d);
+    return;
+  }
+  log("rx", decodeSysex(d), d);
+}
+
+// Stuur een RQ1 en wacht op het DT1-antwoord. Geeft de data-bytes terug, of null bij timeout.
+function readAddr(addr, len, { logTx = true, timeoutMs = 300 } = {}) {
+  return new Promise((resolve) => {
+    if (!requireOut()) { resolve(null); return; }
+    const lenBytes = typeof len === "number" ? [0, 0, 0, len] : len;
+    const key = addr.join(",");
+    const timer = setTimeout(() => { pendingReads.delete(key); resolve(null); }, timeoutMs);
+    pendingReads.set(key, { resolve, timer });
+    const msg = buildRoland(0x11, addr, lenBytes);
+    outPort.send(msg);
+    if (logTx) log("tx", `RQ1 ${hexBytes(addr)}`, msg);
+  });
+}
+
+// MIDI-notenummer -> naam (C-1 .. G9)
+const NOTE_NAMES = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+const noteName = (n) => `${NOTE_NAMES[n % 12]}${Math.floor(n / 12) - 1}`;
+
+function decodeSysex(d) {
+  // Universal Identity Reply: F0 7E <dev> 06 02 <mfr> <famLSB> <famMSB> <numLSB> <numMSB> <rev..>
+  if (d[1] === 0x7e && d[3] === 0x06 && d[4] === 0x02) {
+    const mfr = hex(d[5]); // 41 = Roland
+    const fam = `${hex(d[7])} ${hex(d[6])}`; // family code MSB LSB
+    const rev = d.length > 10 ? hex(d[10]) : "?";
+    let model = "onbekend";
+    if (d[5] === 0x41 && d[6] === 0x19 && d[7] === 0x03) {
+      model = { 0x11: "LX708", 0x12: "LX706", 0x13: "LX705" }[d[10]] || "LX700-serie?";
+    }
+    return `Identity Reply — mfr ${mfr}, family ${fam}, rev ${rev} → ${model}`;
+  }
+  // Roland DT1/RQ1: F0 41 <dev> <model 4b> <cmd> ...
+  if (d[1] === 0x41) {
+    const cmd = d[7];
+    const name = cmd === 0x12 ? "DT1 (data set)" : cmd === 0x11 ? "RQ1 (request)" : `cmd ${hex(cmd)}`;
+    const model = `${hex(d[3])} ${hex(d[4])} ${hex(d[5])} ${hex(d[6])}`;
+    const addr = `${hex(d[8])} ${hex(d[9])} ${hex(d[10])} ${hex(d[11])}`;
+    const data = d.slice(12, d.length - 2);
+    return `Roland ${name} — model ${model}, adres ${addr}, data [${hexBytes(data)}]`;
+  }
+  return "SysEx (onbekend)";
+}
+
+// ---- Versturen ----
+function requireOut() {
+  if (!outPort) { log("err", "Geen output geselecteerd."); return false; }
+  return true;
+}
+function sendRaw(bytes, label) {
+  if (!requireOut()) return;
+  outPort.send(bytes);
+  log("tx", label, bytes);
+}
+
+$("identity").onclick = () => sendRaw([0xf0, 0x7e, 0x7f, 0x06, 0x01, 0xf7], "Identity Request");
+
+function buildRoland(cmd, addr, payload) {
+  const dev = parseHex($("devid").value)[0] ?? 0x10;
+  const model = parseHex($("modelid").value);
+  const body = [...addr, ...payload];
+  const sum = rolandChecksum(body);
+  return [0xf0, 0x41, dev, ...model, cmd, ...body, sum, 0xf7];
+}
+
+// label wisselt mee met command
+function syncPayloadLabel() {
+  const isRq = $("cmd").value === "0x11";
+  $("payloadLabel").textContent = isRq ? "Lengte (4 bytes hex, voor RQ1)" : "Data (bytes hex, voor DT1)";
+  if (isRq && parseHex($("payload").value).length !== 4) $("payload").value = "00 00 00 01";
+}
+$("cmd").onchange = syncPayloadLabel;
+syncPayloadLabel();
+
+$("send").onclick = () => {
+  const cmd = parseInt($("cmd").value, 16);
+  const addr = parseHex($("addr").value);
+  if (addr.length !== 4) { log("err", "Adres moet exact 4 bytes zijn."); return; }
+  const payload = parseHex($("payload").value);
+  const msg = buildRoland(cmd, addr, payload);
+  sendRaw(msg, `${cmd === 0x11 ? "RQ1" : "DT1"} adres ${hexBytes(addr)}`);
+};
+
+$("enable").onclick = () => {
+  sendRaw(buildRoland(0x12, [0x01, 0x00, 0x03, 0x06], [0x01]), "Handshake: enable remote control");
+  setTimeout(() => sendRaw(buildRoland(0x12, [0x01, 0x00, 0x03, 0x00], [0x01]), "Handshake: enable notifications"), 60);
+};
+
+// ---- Model-ID sweep ----
+let sweeping = false;
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+$("sweep").onclick = async () => {
+  if (!requireOut() || !inPort) { log("err", "Verbind eerst input én output."); return; }
+  const from = parseHex($("sweepFrom").value)[0] ?? 0x00;
+  const to = parseHex($("sweepTo").value)[0] ?? 0x7f;
+  const probe = parseHex($("sweepProbe").value);
+  if (probe.length !== 4) { log("err", "Probe-adres moet 4 bytes zijn."); return; }
+  const dev = parseHex($("devid").value)[0] ?? 0x10;
+
+  sweeping = true; $("sweep").disabled = true; $("sweepStop").disabled = false;
+  log("info", `Sweep van 00 00 00 ${hex(from)} t/m 00 00 00 ${hex(to)} …`);
+
+  let lastRx = 0;
+  const watcher = (e) => { if (e.data[0] === 0xf0 && e.data[1] === 0x41 && e.data[7] === 0x12) lastRx = Date.now(); };
+  const prevHandler = inPort.onmidimessage;
+  inPort.onmidimessage = (e) => { watcher(e); prevHandler && prevHandler(e); };
+
+  const hits = [];
+  for (let nn = from; nn <= to && sweeping; nn++) {
+    const model = [0x00, 0x00, 0x00, nn];
+    const mk = (cmd, addr, pl) => {
+      const body = [...addr, ...pl];
+      return [0xf0, 0x41, dev, ...model, cmd, ...body, rolandChecksum(body), 0xf7];
+    };
+    // handshake + probe
+    outPort.send(mk(0x12, [0x01, 0x00, 0x03, 0x06], [0x01]));
+    await sleep(15);
+    const before = lastRx;
+    outPort.send(mk(0x11, probe, [0x00, 0x00, 0x00, 0x01]));
+    await sleep(110);
+    if (lastRx > before) {
+      hits.push(nn);
+      log("ok", `★ TREFFER: model-ID 00 00 00 ${hex(nn)} gaf een DT1-antwoord!`);
+    }
+  }
+  inPort.onmidimessage = prevHandler;
+  sweeping = false; $("sweep").disabled = false; $("sweepStop").disabled = true;
+  log("info", hits.length
+    ? `Klaar. Treffers: ${hits.map((n) => "00 00 00 " + hex(n)).join(", ")}`
+    : "Klaar. Geen treffers — probeer een ander probe-adres of vang het model-ID via app-sniffing (Bluetooth HCI-log).");
+};
+$("sweepStop").onclick = () => { sweeping = false; };
+
+// ---- Test-flow 1: verificatie-checklist ----
+const CHECKS = [
+  { addr: [0x01, 0x00, 0x08, 0x01], len: 1, name: "Alive check",      decode: (b) => `${b[0]} (verwacht 0)` },
+  { addr: [0x01, 0x00, 0x02, 0x00], len: 1, name: "Keyboard-modus",   decode: (b) => ({ 0: "single", 1: "split", 2: "dual", 3: "twin" }[b[0]] ?? b[0]) },
+  { addr: [0x01, 0x00, 0x02, 0x01], len: 1, name: "Split point",      decode: (b) => `noot ${b[0]} (${noteName(b[0])})` },
+  { addr: [0x01, 0x00, 0x02, 0x07], len: 3, name: "Tone (single)",    decode: (b) => `categorie ${b[0]}, nummer ${b[1] * 128 + b[2]}` },
+  { addr: [0x01, 0x00, 0x01, 0x0f], len: 1, name: "Metronoom-status", decode: (b) => (b[0] ? "aan" : "uit") },
+  { addr: [0x01, 0x00, 0x01, 0x08], len: 2, name: "Tempo",            decode: (b) => `${b[0] * 128 + b[1]} bpm` },
+  { addr: [0x01, 0x00, 0x02, 0x13], len: 1, name: "Master volume",    decode: (b) => `${b[0]} / 100` },
+  { addr: [0x01, 0x00, 0x01, 0x03], len: 1, name: "Sequencer-status", decode: (b) => `${b[0]}` },
+];
+
+$("verify").onclick = async () => {
+  if (!requireOut() || !inPort) { log("err", "Verbind eerst input én output."); return; }
+  log("info", "── Verificatie-checklist (read-only) ──");
+  quiet = true;
+  let ok = 0;
+  for (const c of CHECKS) {
+    const data = await readAddr(c.addr, c.len, { logTx: false });
+    if (data) { log("ok", `✓ ${c.name} [${hexBytes(c.addr)}] = ${c.decode(data)}`); ok++; }
+    else log("warn", `✗ ${c.name} [${hexBytes(c.addr)}] — geen antwoord (adres mogelijk anders op LX708)`);
+    await sleep(120);
+  }
+  quiet = false;
+  log("info", `── Klaar: ${ok}/${CHECKS.length} adressen bevestigd ──`);
+};
+
+// ---- Test-flow 2: adres-sweep (non-destructief) ----
+let addrSweeping = false;
+$("addrSweep").onclick = async () => {
+  if (!requireOut() || !inPort) { log("err", "Verbind eerst input én output."); return; }
+  const base = parseHex($("sweepBase").value);
+  if (base.length !== 3) { log("err", "Basis moet exact 3 bytes zijn (bv. 01 00 02)."); return; }
+  const from = parseHex($("addrFrom").value)[0] ?? 0x00;
+  const to = parseHex($("addrTo").value)[0] ?? 0x7f;
+
+  addrSweeping = true; quiet = true;
+  $("addrSweep").disabled = true; $("addrSweepStop").disabled = false;
+  log("info", `── Adres-sweep ${hexBytes(base)} ${hex(from)}–${hex(to)} (read-only) ──`);
+
+  let hits = 0;
+  for (let nn = from; nn <= to && addrSweeping; nn++) {
+    const addr = [...base, nn];
+    const data = await readAddr(addr, 1, { logTx: false, timeoutMs: 160 });
+    if (data) { hits++; quiet = false; log("ok", `${hexBytes(addr)} = ${hexBytes(data)}  (${data[0]})`); quiet = true; }
+    await sleep(25);
+  }
+  quiet = false; addrSweeping = false;
+  $("addrSweep").disabled = false; $("addrSweepStop").disabled = true;
+  log("info", `── Sweep klaar: ${hits} levende adres(sen) ──`);
+};
+$("addrSweepStop").onclick = () => { addrSweeping = false; };
+
+// ---- Parameter-register (FP-30X-afgeleid; te verifiëren op LX708) ----
+const PARAMS = [
+  { a: [0x01, 0x00, 0x02, 0x00], len: 1, name: "Keyboard-modus",      dec: (b) => ({ 0: "single", 1: "split", 2: "dual", 3: "twin" }[b[0]] ?? b[0]) },
+  { a: [0x01, 0x00, 0x02, 0x01], len: 1, name: "Split point",         dec: (b) => `${b[0]} (${noteName(b[0])})` },
+  { a: [0x01, 0x00, 0x02, 0x02], len: 1, name: "Split octave shift",  dec: (b) => b[0] - 64 },
+  { a: [0x01, 0x00, 0x02, 0x03], len: 1, name: "Split balance",       dec: (b) => b[0] },
+  { a: [0x01, 0x00, 0x02, 0x04], len: 1, name: "Dual octave shift",   dec: (b) => b[0] - 64 },
+  { a: [0x01, 0x00, 0x02, 0x05], len: 1, name: "Dual balance",        dec: (b) => b[0] },
+  { a: [0x01, 0x00, 0x02, 0x06], len: 1, name: "Twin piano modus",    dec: (b) => b[0] },
+  { a: [0x01, 0x00, 0x02, 0x07], len: 3, name: "Tone — single/right", dec: (b) => `cat ${b[0]}, num ${b[1] * 128 + b[2]}` },
+  { a: [0x01, 0x00, 0x02, 0x0a], len: 3, name: "Tone — split-left",   dec: (b) => `cat ${b[0]}, num ${b[1] * 128 + b[2]}` },
+  { a: [0x01, 0x00, 0x02, 0x0d], len: 3, name: "Tone — dual-2",       dec: (b) => `cat ${b[0]}, num ${b[1] * 128 + b[2]}` },
+  { a: [0x01, 0x00, 0x02, 0x10], len: 3, name: "Song-nummer",         dec: (b) => `cat ${b[0]}, num ${b[1] * 128 + b[2]}` },
+  { a: [0x01, 0x00, 0x02, 0x13], len: 1, name: "Master volume",       dec: (b) => `${b[0]}/100` },
+  { a: [0x01, 0x00, 0x02, 0x16], len: 1, name: "Split-right octave",  dec: (b) => b[0] - 64 },
+  { a: [0x01, 0x00, 0x02, 0x17], len: 1, name: "Dual tone1 octave",   dec: (b) => b[0] - 64 },
+  { a: [0x01, 0x00, 0x02, 0x18], len: 2, name: "Master tuning",       dec: (b) => { const r = b[0] * 128 + b[1]; return `raw ${r} (~${((4144 + r) / 10).toFixed(1)}Hz)`; } },
+  { a: [0x01, 0x00, 0x02, 0x1a], len: 1, name: "Ambience",            dec: (b) => b[0] },
+  { a: [0x01, 0x00, 0x02, 0x1b], len: 1, name: "Headphone 3D amb.",   dec: (b) => b[0] },
+  { a: [0x01, 0x00, 0x02, 0x1c], len: 1, name: "Brilliance",          dec: (b) => b[0] - 64 },
+  { a: [0x01, 0x00, 0x02, 0x1d], len: 1, name: "Key touch (?)",       dec: (b) => b[0] },
+  { a: [0x01, 0x00, 0x02, 0x1e], len: 1, name: "Transpose-modus",     dec: (b) => b[0] },
+  { a: [0x01, 0x00, 0x02, 0x1f], len: 1, name: "Metronoom-maat",      dec: (b) => ({ 0: "2/2", 2: "2/4", 3: "3/4", 4: "4/4", 9: "6/8", 12: "12/8" }[b[0]] ?? b[0]) },
+  { a: [0x01, 0x00, 0x02, 0x20], len: 1, name: "Metronoom-patroon",   dec: (b) => b[0] },
+  { a: [0x01, 0x00, 0x02, 0x21], len: 1, name: "Metronoom-volume",    dec: (b) => b[0] },
+  { a: [0x01, 0x00, 0x02, 0x22], len: 1, name: "Metronoom-toon",      dec: (b) => b[0] },
+  { a: [0x01, 0x00, 0x01, 0x03], len: 1, name: "Sequencer-status",    dec: (b) => b[0] },
+  { a: [0x01, 0x00, 0x01, 0x08], len: 2, name: "Tempo",               dec: (b) => `${b[0] * 128 + b[1]} bpm` },
+  { a: [0x01, 0x00, 0x01, 0x0f], len: 1, name: "Metronoom aan/uit",   dec: (b) => (b[0] ? "aan" : "uit") },
+];
+
+// ---- Lees-paneel ----
+$("readAll").onclick = async () => {
+  if (!requireOut() || !inPort) { log("err", "Verbind eerst input én output."); return; }
+  quiet = true;
+  const rows = [];
+  for (const p of PARAMS) {
+    const data = await readAddr(p.a, p.len, { logTx: false });
+    rows.push({ p, data });
+    await sleep(70);
+  }
+  quiet = false;
+  renderParamTable(rows);
+  log("info", `Lees-paneel bijgewerkt (${rows.filter((r) => r.data).length}/${rows.length}).`);
+};
+
+function renderParamTable(rows) {
+  const cell = "padding:3px 8px;border-bottom:1px solid var(--line);";
+  let html = `<table style="width:100%;border-collapse:collapse;font-size:12px">`;
+  for (const { p, data } of rows) {
+    const val = data ? escapeHtml(String(p.dec(data))) : `<span style="color:var(--err)">—</span>`;
+    const raw = data ? hexBytes(data) : "";
+    html += `<tr><td style="${cell}color:var(--muted);font-family:var(--mono)">${hexBytes(p.a)}</td>` +
+            `<td style="${cell}">${escapeHtml(p.name)}</td>` +
+            `<td style="${cell}font-weight:600">${val}</td>` +
+            `<td style="${cell}color:var(--muted);font-family:var(--mono)">${raw}</td></tr>`;
+  }
+  html += `</table>`;
+  $("paramTable").innerHTML = html;
+}
+
+// ---- Watch-modus (live diff) ----
+let watching = false;
+$("watch").onclick = async () => {
+  if (!requireOut() || !inPort) { log("err", "Verbind eerst input én output."); return; }
+  const base = parseHex($("watchBase").value);
+  if (base.length !== 3) { log("err", "Basis moet 3 bytes zijn."); return; }
+  const to = parseHex($("watchTo").value)[0] ?? 0x30;
+
+  watching = true; $("watch").disabled = true; $("watchStop").disabled = false;
+  log("info", `── Watch ${hexBytes(base)} 00–${hex(to)} — verander iets op de piano ──`);
+
+  const snapshot = new Map();
+  let first = true;
+  while (watching) {
+    quiet = true;
+    for (let nn = 0; nn <= to && watching; nn++) {
+      const addr = [...base, nn];
+      const data = await readAddr(addr, 1, { logTx: false, timeoutMs: 80 });
+      if (!data) continue;
+      const key = hex(nn);
+      const v = data[0];
+      const prev = snapshot.get(key);
+      snapshot.set(key, v);
+      if (!first && prev !== undefined && prev !== v) {
+        quiet = false;
+        log("ok", `Δ ${hexBytes(addr)}: ${prev} → ${v}  (${hex(prev)} → ${hex(v)})`);
+        quiet = true;
+      }
+      await sleep(8);
+    }
+    first = false;
+    quiet = false;
+    await sleep(150);
+  }
+  $("watch").disabled = false; $("watchStop").disabled = true;
+  log("info", "── Watch gestopt ──");
+};
+$("watchStop").onclick = () => { watching = false; };
+
+// ---- Blok-scan: welke 01 00 BB-blokken bestaan? ----
+$("scanBlocks").onclick = async () => {
+  if (!requireOut() || !inPort) { log("err", "Verbind eerst input én output."); return; }
+  log("info", "── Blok-scan 01 00 BB 00 (00–7F) ──");
+  quiet = true;
+  const hits = [];
+  for (let bb = 0; bb <= 0x7f; bb++) {
+    const data = await readAddr([0x01, 0x00, bb, 0x00], 1, { logTx: false, timeoutMs: 90 });
+    if (data) hits.push(bb);
+    await sleep(15);
+  }
+  quiet = false;
+  log("ok", `Levende blokken 01 00 BB: ${hits.map(hex).join(", ") || "(geen)"}`);
+};
+
+// ---- DT1 schrijven (gewaarschuwd) ----
+$("writeBtn").onclick = () => {
+  const addr = parseHex($("writeAddr").value);
+  if (addr.length !== 4) { log("err", "Adres moet 4 bytes zijn."); return; }
+  const data = parseHex($("writeData").value);
+  if (!confirm(`DT1 schrijven naar ${hexBytes(addr)} = ${hexBytes(data)} ?\nDit wijzigt de piano.`)) return;
+  sendRaw(buildRoland(0x12, [0x01, 0x00, 0x03, 0x06], [0x01]), "Handshake vóór schrijven");
+  setTimeout(() => sendRaw(buildRoland(0x12, addr, data), `DT1 schrijf ${hexBytes(addr)} = ${hexBytes(data)}`), 60);
+};
+
+// ---- Bank/PC zenden (decimaal) ----
+$("bpSend").onclick = () => {
+  if (!requireOut()) return;
+  const ch = Math.max(1, Math.min(16, parseInt($("bpChannel").value, 10) || 1)) - 1;
+  const msb = parseInt($("bpMsb").value, 10) & 0x7f;
+  const lsb = parseInt($("bpLsb").value, 10) & 0x7f;
+  const pc = ((parseInt($("bpPc").value, 10) || 1) - 1) & 0x7f;
+  sendRaw([0xb0 | ch, 0x00, msb], `Bank MSB ${msb} (ch ${ch + 1})`);
+  sendRaw([0xb0 | ch, 0x20, lsb], `Bank LSB ${lsb} (ch ${ch + 1})`);
+  sendRaw([0xc0 | ch, pc], `PC ${pc + 1} (ch ${ch + 1})`);
+};
+
+// ---- Log toolbar ----
+$("clear").onclick = () => { logEl.innerHTML = ""; };
+$("copy").onclick = () => navigator.clipboard.writeText(logEl.innerText).then(() => log("info", "Log gekopieerd."));
+</script>
+</body>
+</html>

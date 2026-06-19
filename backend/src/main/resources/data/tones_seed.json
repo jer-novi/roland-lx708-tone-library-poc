@@ -30,7 +30,11 @@
       "origin": "Roland PureAcoustic Piano Modeling",
       "wikipediaPageTitle": "Grand piano",
       "funFacts": "Gemodelleerd naar een Europese concertvleugel (Hamburg-stijl); dit is de hoofdklank van de LX708, opgebouwd met Roland's PureAcoustic Piano Modeling — er wordt dus geen sample afgespeeld maar fysiek gemodelleerd.",
-      "combinationSuggestions": "Dual met SymphonicStr1 voor filmische ballads; Split met AcousticBass voor jazz-trio gevoel."
+      "combinationSuggestions": "Dual met SymphonicStr1 voor filmische ballads; Split met AcousticBass voor jazz-trio gevoel.",
+      "midiBankMsb": 0,
+      "midiBankLsb": 68,
+      "midiProgram": 1,
+      "tags": "akoestisch,warm,klassiek,ballad"
     },
     {
       "toneNumber": 2,
@@ -40,7 +44,11 @@
       "origin": "Roland PureAcoustic Piano Modeling",
       "wikipediaPageTitle": "Grand piano",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 0,
+      "midiBankLsb": 69,
+      "midiProgram": 1,
+      "tags": "akoestisch,warm,klassiek"
     },
     {
       "toneNumber": 3,
@@ -50,7 +58,11 @@
       "origin": "Roland PureAcoustic Piano Modeling",
       "wikipediaPageTitle": "Steinway & Sons",
       "funFacts": "Gemodelleerd naar een Amerikaanse concertvleugel (New York-stijl) met een vollere, donkerdere bas en directere aanslag — ideaal voor jazz en pop.",
-      "combinationSuggestions": "Dual met Soft Pad voor moderne pop; Split met FingeredBass voor singer-songwriter werk."
+      "combinationSuggestions": "Dual met Soft Pad voor moderne pop; Split met FingeredBass voor singer-songwriter werk.",
+      "midiBankMsb": 1,
+      "midiBankLsb": 68,
+      "midiProgram": 1,
+      "tags": "akoestisch,helder,jazz,ballad"
     },
     {
       "toneNumber": 4,
@@ -60,7 +72,11 @@
       "origin": "Roland PureAcoustic Piano Modeling",
       "wikipediaPageTitle": "Steinway & Sons",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 1,
+      "midiBankLsb": 69,
+      "midiProgram": 1,
+      "tags": "akoestisch,helder,jazz"
     },
     {
       "toneNumber": 1,
@@ -70,7 +86,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Rhodes piano",
       "funFacts": "Geïnspireerd op de Fender Rhodes Mark I Suitcase uit 1976, dé elektrische piano van Stevie Wonder, Herbie Hancock en talloze soul- en fusionplaten.",
-      "combinationSuggestions": "Dual met Warm Pad voor neo-soul; combineer in Ableton met vinyl-ruis en een TR-808 groove uit Maschine."
+      "combinationSuggestions": "Dual met Warm Pad voor neo-soul; combineer in Ableton met vinyl-ruis en een TR-808 groove uit Maschine.",
+      "midiBankMsb": 8,
+      "midiBankLsb": 71,
+      "midiProgram": 5,
+      "tags": "vintage,warm,jazz,ballad"
     },
     {
       "toneNumber": 2,
@@ -80,7 +100,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Rhodes piano",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 0,
+      "midiBankLsb": 69,
+      "midiProgram": 5,
+      "tags": "vintage,zwevend,warm,ballad"
     },
     {
       "toneNumber": 3,
@@ -90,7 +114,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Electric piano",
       "funFacts": null,
-      "combinationSuggestions": "Dual met Choir 1 voor dromerige pop; mooi met sidechain-compressie in een deephouse-context."
+      "combinationSuggestions": "Dual met Choir 1 voor dromerige pop; mooi met sidechain-compressie in een deephouse-context.",
+      "midiBankMsb": 16,
+      "midiBankLsb": 67,
+      "midiProgram": 5,
+      "tags": "helder,sprankelend,ballad"
     },
     {
       "toneNumber": 4,
@@ -100,7 +128,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Wurlitzer electronic piano",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 0,
+      "midiBankLsb": 67,
+      "midiProgram": 5,
+      "tags": "vintage,warm,lo-fi"
     },
     {
       "toneNumber": 5,
@@ -110,7 +142,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Yamaha DX7",
       "funFacts": "Het klassieke FM-pianogeluid van de Yamaha DX7 — hét geluid van vrijwel elke pop-ballad uit de jaren '80.",
-      "combinationSuggestions": "Dual met Sine Pad voor 80s-ballads; leg er in Ableton een chorus + reverb overheen."
+      "combinationSuggestions": "Dual met Sine Pad voor 80s-ballads; leg er in Ableton een chorus + reverb overheen.",
+      "midiBankMsb": 0,
+      "midiBankLsb": 70,
+      "midiProgram": 6,
+      "tags": "synthetisch,helder,electronic,ballad"
     },
     {
       "toneNumber": 6,
@@ -120,7 +156,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Electric piano",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 8,
+      "midiBankLsb": 68,
+      "midiProgram": 6,
+      "tags": "zacht,sprankelend,ballad"
     },
     {
       "toneNumber": 7,
@@ -130,7 +170,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Wurlitzer electronic piano",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 24,
+      "midiBankLsb": 65,
+      "midiProgram": 5,
+      "tags": "vintage,warm,lo-fi"
     },
     {
       "toneNumber": 8,
@@ -140,7 +184,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Clavinet",
       "funFacts": "De Hohner Clavinet is wereldberoemd geworden door Stevie Wonder's 'Superstition' — perfect voor funk-riffs.",
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 0,
+      "midiBankLsb": 67,
+      "midiProgram": 8,
+      "tags": "percussief,vintage,jazz"
     },
     {
       "toneNumber": 9,
@@ -150,7 +198,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Phaser (effect)",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 0,
+      "midiBankLsb": 68,
+      "midiProgram": 5,
+      "tags": "vintage,zwevend,electronic"
     },
     {
       "toneNumber": 10,
@@ -160,7 +212,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Rhodes piano",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 16,
+      "midiBankLsb": 66,
+      "midiProgram": 5,
+      "tags": "vintage,warm,jazz"
     },
     {
       "toneNumber": 11,
@@ -170,7 +226,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Yamaha CP-70",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 0,
+      "midiBankLsb": 69,
+      "midiProgram": 3,
+      "tags": "helder,vintage,ballad"
     },
     {
       "toneNumber": 1,
@@ -180,7 +240,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "String section",
       "funFacts": null,
-      "combinationSuggestions": "Dual met European Grand (klassiek) of met Warm Pad (modern-klassiek à la Ólafur Arnalds)."
+      "combinationSuggestions": "Dual met European Grand (klassiek) of met Warm Pad (modern-klassiek à la Ólafur Arnalds).",
+      "midiBankMsb": 1,
+      "midiBankLsb": 67,
+      "midiProgram": 50,
+      "tags": "warm,zwevend,klassiek,fx/cinematic"
     },
     {
       "toneNumber": 2,
@@ -190,7 +254,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "String section",
       "funFacts": null,
-      "combinationSuggestions": "Dual met Magical Piano voor trailer-achtige composities."
+      "combinationSuggestions": "Dual met Magical Piano voor trailer-achtige composities.",
+      "midiBankMsb": 1,
+      "midiBankLsb": 67,
+      "midiProgram": 49,
+      "tags": "zwevend,klassiek,fx/cinematic"
     },
     {
       "toneNumber": 3,
@@ -200,7 +268,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "String section",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 0,
+      "midiBankLsb": 71,
+      "midiProgram": 50,
+      "tags": "warm,zwevend,ballad"
     },
     {
       "toneNumber": 4,
@@ -210,7 +282,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "String orchestra",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 0,
+      "midiBankLsb": 64,
+      "midiProgram": 49,
+      "tags": "akoestisch,klassiek"
     },
     {
       "toneNumber": 5,
@@ -220,7 +296,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Orchestra",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 8,
+      "midiBankLsb": 66,
+      "midiProgram": 49,
+      "tags": "akoestisch,klassiek,fx/cinematic"
     },
     {
       "toneNumber": 6,
@@ -230,7 +310,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Wind ensemble",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 0,
+      "midiBankLsb": 67,
+      "midiProgram": 69,
+      "tags": "zacht,akoestisch,klassiek"
     },
     {
       "toneNumber": 7,
@@ -240,7 +324,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Harp",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 0,
+      "midiBankLsb": 68,
+      "midiProgram": 47,
+      "tags": "sprankelend,zacht,klassiek"
     },
     {
       "toneNumber": 8,
@@ -250,7 +338,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Violin",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 0,
+      "midiBankLsb": 0,
+      "midiProgram": 41,
+      "tags": "akoestisch,helder,klassiek,folk"
     },
     {
       "toneNumber": 9,
@@ -260,7 +352,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "String section",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 1,
+      "midiBankLsb": 65,
+      "midiProgram": 49,
+      "tags": "zwevend,klassiek"
     },
     {
       "toneNumber": 10,
@@ -270,7 +366,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Flute",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 0,
+      "midiBankLsb": 64,
+      "midiProgram": 74,
+      "tags": "zacht,helder,klassiek"
     },
     {
       "toneNumber": 11,
@@ -280,7 +380,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Cello",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 0,
+      "midiBankLsb": 0,
+      "midiProgram": 43,
+      "tags": "warm,donker,klassiek"
     },
     {
       "toneNumber": 12,
@@ -290,7 +394,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Brass section",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 1,
+      "midiBankLsb": 66,
+      "midiProgram": 61,
+      "tags": "helder,klassiek,fx/cinematic"
     },
     {
       "toneNumber": 13,
@@ -300,7 +408,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Pizzicato",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 0,
+      "midiBankLsb": 0,
+      "midiProgram": 46,
+      "tags": "percussief,klassiek"
     },
     {
       "toneNumber": 14,
@@ -310,7 +422,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "String section",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 1,
+      "midiBankLsb": 65,
+      "midiProgram": 50,
+      "tags": "warm,zwevend,klassiek"
     },
     {
       "toneNumber": 15,
@@ -320,7 +436,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Synthesizer",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 0,
+      "midiBankLsb": 64,
+      "midiProgram": 90,
+      "tags": "zwevend,zacht,synthetisch,electronic"
     },
     {
       "toneNumber": 16,
@@ -330,7 +450,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Piano",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 47,
+      "midiBankLsb": 65,
+      "midiProgram": 3,
+      "tags": "sprankelend,zwevend,fx/cinematic"
     },
     {
       "toneNumber": 17,
@@ -340,7 +464,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Scat singing",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 0,
+      "midiBankLsb": 65,
+      "midiProgram": 55,
+      "tags": "vintage,jazz"
     },
     {
       "toneNumber": 18,
@@ -350,7 +478,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Double bass",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 0,
+      "midiBankLsb": 66,
+      "midiProgram": 33,
+      "tags": "akoestisch,donker,jazz"
     },
     {
       "toneNumber": 1,
@@ -360,7 +492,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Pipe organ",
       "funFacts": null,
-      "combinationSuggestions": "Solo gebruiken met veel Ambience voor kerkakoestiek; Split met Choir voor sacrale sfeer."
+      "combinationSuggestions": "Solo gebruiken met veel Ambience voor kerkakoestiek; Split met Choir voor sacrale sfeer.",
+      "midiBankMsb": 8,
+      "midiBankLsb": 70,
+      "midiProgram": 20,
+      "tags": "akoestisch,kerk/gospel,klassiek"
     },
     {
       "toneNumber": 2,
@@ -370,7 +506,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Flue pipe",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 16,
+      "midiBankLsb": 66,
+      "midiProgram": 20,
+      "tags": "zacht,kerk/gospel,klassiek"
     },
     {
       "toneNumber": 3,
@@ -380,7 +520,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Hammond organ",
       "funFacts": null,
-      "combinationSuggestions": "Split met AcousticBass: linkerhand walking bass, rechterhand orgel — instant jazzclub."
+      "combinationSuggestions": "Split met AcousticBass: linkerhand walking bass, rechterhand orgel — instant jazzclub.",
+      "midiBankMsb": 0,
+      "midiBankLsb": 70,
+      "midiProgram": 19,
+      "tags": "vintage,jazz"
     },
     {
       "toneNumber": 4,
@@ -390,7 +534,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Hammond organ",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 0,
+      "midiBankLsb": 69,
+      "midiProgram": 19,
+      "tags": "warm,ballad"
     },
     {
       "toneNumber": 5,
@@ -400,7 +548,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Pipe organ",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 0,
+      "midiBankLsb": 66,
+      "midiProgram": 20,
+      "tags": "akoestisch,kerk/gospel,klassiek"
     },
     {
       "toneNumber": 6,
@@ -410,7 +562,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Pipe organ",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 8,
+      "midiBankLsb": 69,
+      "midiProgram": 20,
+      "tags": "akoestisch,kerk/gospel,klassiek"
     },
     {
       "toneNumber": 7,
@@ -420,7 +576,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Leslie speaker",
       "funFacts": "Hammond-orgel door een roterende Leslie-speaker; het 'spin'-effect ontstaat door de draaiende hoorn die het geluid moduleert.",
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 0,
+      "midiBankLsb": 71,
+      "midiProgram": 17,
+      "tags": "vintage,kerk/gospel"
     },
     {
       "toneNumber": 8,
@@ -430,7 +590,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Pipe organ",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 0,
+      "midiBankLsb": 69,
+      "midiProgram": 17,
+      "tags": "helder,kerk/gospel,klassiek"
     },
     {
       "toneNumber": 9,
@@ -440,7 +604,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Hammond organ",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 32,
+      "midiBankLsb": 68,
+      "midiProgram": 17,
+      "tags": "warm,vintage,jazz"
     },
     {
       "toneNumber": 10,
@@ -450,7 +618,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Hammond organ",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 32,
+      "midiBankLsb": 69,
+      "midiProgram": 17,
+      "tags": "zacht,vintage,jazz"
     },
     {
       "toneNumber": 11,
@@ -460,7 +632,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Hammond organ",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 0,
+      "midiBankLsb": 66,
+      "midiProgram": 17,
+      "tags": "donker,vintage,jazz"
     },
     {
       "toneNumber": 12,
@@ -470,7 +646,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Vox Continental",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 16,
+      "midiBankLsb": 64,
+      "midiProgram": 17,
+      "tags": "vintage,lo-fi"
     },
     {
       "toneNumber": 13,
@@ -480,7 +660,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Upright piano",
       "funFacts": null,
-      "combinationSuggestions": "Mooi met weinig Ambience voor een intieme indie/folk-sound; dual met Tape-achtige pad uit Maschine."
+      "combinationSuggestions": "Mooi met weinig Ambience voor een intieme indie/folk-sound; dual met Tape-achtige pad uit Maschine.",
+      "midiBankMsb": 16,
+      "midiBankLsb": 64,
+      "midiProgram": 1,
+      "tags": "akoestisch,warm,folk"
     },
     {
       "toneNumber": 14,
@@ -490,7 +674,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Upright piano",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 1,
+      "midiBankLsb": 65,
+      "midiProgram": 1,
+      "tags": "akoestisch,zacht,ballad"
     },
     {
       "toneNumber": 15,
@@ -500,7 +688,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Upright piano",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 1,
+      "midiBankLsb": 66,
+      "midiProgram": 1,
+      "tags": "akoestisch,helder,folk"
     },
     {
       "toneNumber": 16,
@@ -510,7 +702,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Piano rock",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 8,
+      "midiBankLsb": 64,
+      "midiProgram": 3,
+      "tags": "akoestisch,helder,percussief"
     },
     {
       "toneNumber": 17,
@@ -520,7 +716,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Ragtime",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 0,
+      "midiBankLsb": 64,
+      "midiProgram": 4,
+      "tags": "vintage,lo-fi,jazz"
     },
     {
       "toneNumber": 18,
@@ -530,7 +730,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Fortepiano",
       "funFacts": "De voorloper van de moderne piano, zoals Mozart en de jonge Beethoven hem kenden — lichter van toon en sneller uitstervend.",
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 2,
+      "midiBankLsb": 64,
+      "midiProgram": 1,
+      "tags": "vintage,akoestisch,klassiek"
     },
     {
       "toneNumber": 19,
@@ -540,7 +744,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Fortepiano",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 2,
+      "midiBankLsb": 65,
+      "midiProgram": 1,
+      "tags": "vintage,zacht,klassiek"
     },
     {
       "toneNumber": 20,
@@ -550,7 +758,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Fortepiano",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 2,
+      "midiBankLsb": 66,
+      "midiProgram": 1,
+      "tags": "vintage,helder,klassiek"
     },
     {
       "toneNumber": 21,
@@ -560,7 +772,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Harpsichord",
       "funFacts": "Bij een klavecimbel worden de snaren getokkeld in plaats van aangeslagen; aanslaggevoeligheid bestond op het origineel dus niet.",
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 0,
+      "midiBankLsb": 67,
+      "midiProgram": 7,
+      "tags": "vintage,sprankelend,klassiek"
     },
     {
       "toneNumber": 22,
@@ -570,7 +786,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Harpsichord",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 8,
+      "midiBankLsb": 67,
+      "midiProgram": 7,
+      "tags": "vintage,sprankelend,klassiek"
     },
     {
       "toneNumber": 23,
@@ -580,7 +800,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": null,
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 10,
+      "midiProgram": 54,
+      "tags": "zacht,zwevend"
     },
     {
       "toneNumber": 24,
@@ -590,7 +814,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": null,
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 11,
+      "midiProgram": 54,
+      "tags": "zacht,zwevend"
     },
     {
       "toneNumber": 25,
@@ -600,7 +828,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": null,
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 12,
+      "midiProgram": 54,
+      "tags": "zacht,zwevend"
     },
     {
       "toneNumber": 26,
@@ -610,7 +842,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": null,
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 13,
+      "midiProgram": 54,
+      "tags": "zacht,zwevend"
     },
     {
       "toneNumber": 27,
@@ -620,7 +856,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Drum kit",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 120,
+      "midiBankLsb": 0,
+      "midiProgram": 1,
+      "tags": "percussief"
     },
     {
       "toneNumber": 28,
@@ -630,7 +870,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Drum kit",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 120,
+      "midiBankLsb": 0,
+      "midiProgram": 9,
+      "tags": "percussief"
     },
     {
       "toneNumber": 29,
@@ -640,7 +884,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Drum kit",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 120,
+      "midiBankLsb": 0,
+      "midiProgram": 17,
+      "tags": "percussief,electronic"
     },
     {
       "toneNumber": 30,
@@ -650,7 +898,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Electronic drum",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 120,
+      "midiBankLsb": 0,
+      "midiProgram": 25,
+      "tags": "percussief,synthetisch,electronic"
     },
     {
       "toneNumber": 31,
@@ -660,7 +912,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Roland TR-808",
       "funFacts": "Gebaseerd op de Roland TR-808 drummachine uit 1980 — de basis van hiphop, electro en techno. Een stukje Roland-geschiedenis in je piano.",
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 120,
+      "midiBankLsb": 0,
+      "midiProgram": 26,
+      "tags": "percussief,synthetisch,vintage,electronic"
     },
     {
       "toneNumber": 32,
@@ -670,7 +926,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Drum kit",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 120,
+      "midiBankLsb": 0,
+      "midiProgram": 33,
+      "tags": "percussief,akoestisch,jazz"
     },
     {
       "toneNumber": 33,
@@ -680,7 +940,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Brush (music)",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 120,
+      "midiBankLsb": 0,
+      "midiProgram": 41,
+      "tags": "percussief,zacht,akoestisch,jazz"
     },
     {
       "toneNumber": 34,
@@ -690,7 +954,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Percussion section",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 120,
+      "midiBankLsb": 0,
+      "midiProgram": 49,
+      "tags": "percussief,akoestisch,klassiek"
     },
     {
       "toneNumber": 35,
@@ -700,7 +968,11 @@
       "origin": "Roland SuperNATURAL",
       "wikipediaPageTitle": "Sound effect",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 120,
+      "midiBankLsb": 0,
+      "midiProgram": 57,
+      "tags": "percussief,fx/cinematic"
     },
     {
       "toneNumber": 36,
@@ -710,7 +982,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Piano",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 1,
+      "tags": "akoestisch,helder"
     },
     {
       "toneNumber": 37,
@@ -720,7 +996,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Piano",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 1,
+      "tags": "akoestisch,helder"
     },
     {
       "toneNumber": 38,
@@ -730,7 +1010,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Piano",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 2,
+      "midiProgram": 1,
+      "tags": "akoestisch,helder"
     },
     {
       "toneNumber": 39,
@@ -740,7 +1024,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Piano",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 2,
+      "tags": "akoestisch,helder"
     },
     {
       "toneNumber": 40,
@@ -750,7 +1038,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Piano",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 2,
+      "tags": "akoestisch,helder"
     },
     {
       "toneNumber": 41,
@@ -760,7 +1052,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Piano",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 3,
+      "tags": "akoestisch,helder"
     },
     {
       "toneNumber": 42,
@@ -770,7 +1066,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Piano",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 3,
+      "tags": "akoestisch,helder"
     },
     {
       "toneNumber": 43,
@@ -780,7 +1080,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Honky-tonk piano",
       "funFacts": "Het bewust ontstemde saloon-pianogeluid: twee licht uiteen gestemde pianolagen tegelijk.",
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 4,
+      "tags": "akoestisch,helder,vintage,lo-fi"
     },
     {
       "toneNumber": 44,
@@ -790,7 +1094,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Honky-tonk piano",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 4,
+      "tags": "akoestisch,helder,vintage,lo-fi"
     },
     {
       "toneNumber": 45,
@@ -800,7 +1108,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Piano",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 5,
+      "tags": "vintage,warm,ballad"
     },
     {
       "toneNumber": 46,
@@ -810,7 +1122,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Electric piano",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 5,
+      "tags": "vintage,warm,ballad,lo-fi"
     },
     {
       "toneNumber": 47,
@@ -820,7 +1136,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Wurlitzer electronic piano",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 2,
+      "midiProgram": 5,
+      "tags": "vintage,warm,ballad"
     },
     {
       "toneNumber": 48,
@@ -830,7 +1150,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Electric piano",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 3,
+      "midiProgram": 5,
+      "tags": "vintage,warm,ballad,lo-fi"
     },
     {
       "toneNumber": 49,
@@ -840,7 +1164,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Piano",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 6,
+      "tags": "vintage,warm,ballad"
     },
     {
       "toneNumber": 50,
@@ -850,7 +1178,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Electric piano",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 6,
+      "tags": "vintage,warm,ballad,lo-fi"
     },
     {
       "toneNumber": 51,
@@ -860,7 +1192,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Frequency modulation synthesis",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 2,
+      "midiProgram": 6,
+      "tags": "vintage,warm,ballad,synthetisch,electronic"
     },
     {
       "toneNumber": 52,
@@ -870,7 +1206,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Yamaha DX7",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 3,
+      "midiProgram": 6,
+      "tags": "vintage,warm,ballad,synthetisch"
     },
     {
       "toneNumber": 53,
@@ -880,7 +1220,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Electric piano",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 4,
+      "midiProgram": 6,
+      "tags": "vintage,warm,ballad,zwevend,electronic"
     },
     {
       "toneNumber": 54,
@@ -890,7 +1234,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Harpsichord",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 7,
+      "tags": "vintage,sprankelend,klassiek"
     },
     {
       "toneNumber": 55,
@@ -898,9 +1246,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Harpsichord",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 7,
+      "tags": "vintage,sprankelend,klassiek"
     },
     {
       "toneNumber": 56,
@@ -910,7 +1262,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Harpsichord",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 2,
+      "midiProgram": 7,
+      "tags": "vintage,sprankelend,klassiek"
     },
     {
       "toneNumber": 57,
@@ -920,7 +1276,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Harpsichord",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 3,
+      "midiProgram": 7,
+      "tags": "vintage,sprankelend,klassiek"
     },
     {
       "toneNumber": 58,
@@ -930,7 +1290,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Clavinet",
       "funFacts": "De Hohner Clavinet is wereldberoemd geworden door Stevie Wonder's 'Superstition' — perfect voor funk-riffs.",
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 8,
+      "tags": "percussief,vintage"
     },
     {
       "toneNumber": 59,
@@ -940,7 +1304,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Clavinet",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 8,
+      "tags": "percussief,vintage"
     },
     {
       "toneNumber": 60,
@@ -950,7 +1318,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Celesta",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 9,
+      "tags": "percussief,sprankelend,metallic"
     },
     {
       "toneNumber": 61,
@@ -960,7 +1332,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Glockenspiel",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 10,
+      "tags": "percussief,sprankelend,metallic"
     },
     {
       "toneNumber": 62,
@@ -970,7 +1346,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Music box",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 11,
+      "tags": "percussief,sprankelend,metallic"
     },
     {
       "toneNumber": 63,
@@ -980,7 +1360,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Vibraphone",
       "funFacts": "De vibrafoon heeft motorgedreven roterende kleppen in de resonatorbuizen die het kenmerkende vibrato veroorzaken.",
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 12,
+      "tags": "percussief,sprankelend,metallic"
     },
     {
       "toneNumber": 64,
@@ -990,7 +1374,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Vibraphone",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 12,
+      "tags": "percussief,sprankelend,metallic"
     },
     {
       "toneNumber": 65,
@@ -1000,7 +1388,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Marimba",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 13,
+      "tags": "percussief,aards,akoestisch"
     },
     {
       "toneNumber": 66,
@@ -1010,7 +1402,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Marimba",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 13,
+      "tags": "percussief,aards,akoestisch"
     },
     {
       "toneNumber": 67,
@@ -1020,7 +1416,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Xylophone",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 14,
+      "tags": "percussief,aards,akoestisch"
     },
     {
       "toneNumber": 68,
@@ -1030,7 +1430,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Tubular bells",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 15,
+      "tags": "metallic,sprankelend,kerk/gospel"
     },
     {
       "toneNumber": 69,
@@ -1040,7 +1444,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Church bell",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 15,
+      "tags": "metallic,sprankelend,kerk/gospel"
     },
     {
       "toneNumber": 70,
@@ -1050,7 +1458,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Carillon",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 2,
+      "midiProgram": 15,
+      "tags": "metallic,sprankelend,kerk/gospel"
     },
     {
       "toneNumber": 71,
@@ -1060,7 +1472,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Santur",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 16,
+      "tags": "sprankelend,metallic,wereldmuziek"
     },
     {
       "toneNumber": 72,
@@ -1070,7 +1486,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Hammond organ",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 17,
+      "tags": "warm,vintage"
     },
     {
       "toneNumber": 73,
@@ -1080,7 +1500,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Hammond organ",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 17,
+      "tags": "warm,vintage"
     },
     {
       "toneNumber": 74,
@@ -1090,7 +1514,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Vox Continental",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 2,
+      "midiProgram": 17,
+      "tags": "warm,vintage,lo-fi"
     },
     {
       "toneNumber": 75,
@@ -1100,7 +1528,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Hammond organ",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 3,
+      "midiProgram": 17,
+      "tags": "warm,vintage"
     },
     {
       "toneNumber": 76,
@@ -1110,7 +1542,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Hammond organ",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 18,
+      "tags": "warm,vintage"
     },
     {
       "toneNumber": 77,
@@ -1120,7 +1556,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Hammond organ",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 18,
+      "tags": "warm,vintage"
     },
     {
       "toneNumber": 78,
@@ -1130,7 +1570,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Hammond organ",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 2,
+      "midiProgram": 18,
+      "tags": "warm,vintage"
     },
     {
       "toneNumber": 79,
@@ -1140,7 +1584,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Hammond organ",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 19,
+      "tags": "warm,vintage"
     },
     {
       "toneNumber": 80,
@@ -1150,7 +1598,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Pipe organ",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 20,
+      "tags": "akoestisch,kerk/gospel,klassiek"
     },
     {
       "toneNumber": 81,
@@ -1160,7 +1612,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Pipe organ",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 20,
+      "tags": "akoestisch,kerk/gospel,klassiek"
     },
     {
       "toneNumber": 82,
@@ -1170,7 +1626,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Pipe organ",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 2,
+      "midiProgram": 20,
+      "tags": "akoestisch,kerk/gospel,klassiek"
     },
     {
       "toneNumber": 83,
@@ -1180,7 +1640,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Pump organ",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 21,
+      "tags": "zacht,vintage,folk"
     },
     {
       "toneNumber": 84,
@@ -1190,7 +1654,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Pump organ",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 21,
+      "tags": "zacht,vintage,folk"
     },
     {
       "toneNumber": 85,
@@ -1200,7 +1668,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Accordion",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 22,
+      "tags": "warm,akoestisch,folk,wereldmuziek"
     },
     {
       "toneNumber": 86,
@@ -1210,7 +1682,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Accordion",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 22,
+      "tags": "warm,akoestisch,folk,wereldmuziek"
     },
     {
       "toneNumber": 87,
@@ -1220,7 +1696,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Harmonica",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 23,
+      "tags": "warm,akoestisch,folk"
     },
     {
       "toneNumber": 88,
@@ -1230,7 +1710,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Bandoneon",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 24,
+      "tags": "warm,akoestisch,wereldmuziek"
     },
     {
       "toneNumber": 89,
@@ -1240,7 +1724,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Classical guitar",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 25,
+      "tags": "akoestisch,warm,folk,zacht,klassiek"
     },
     {
       "toneNumber": 90,
@@ -1250,7 +1738,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Ukulele",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 25,
+      "tags": "akoestisch,warm,folk,wereldmuziek"
     },
     {
       "toneNumber": 91,
@@ -1260,7 +1752,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Classical guitar",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 2,
+      "midiProgram": 25,
+      "tags": "akoestisch,warm,folk,zacht,klassiek"
     },
     {
       "toneNumber": 92,
@@ -1270,7 +1766,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Classical guitar",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 3,
+      "midiProgram": 25,
+      "tags": "akoestisch,warm,folk,zacht,klassiek"
     },
     {
       "toneNumber": 93,
@@ -1280,7 +1780,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Steel-string acoustic guitar",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 26,
+      "tags": "akoestisch,warm,folk"
     },
     {
       "toneNumber": 94,
@@ -1290,7 +1794,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Twelve-string guitar",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 26,
+      "tags": "akoestisch,warm,folk,sprankelend"
     },
     {
       "toneNumber": 95,
@@ -1300,7 +1808,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Mandolin",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 2,
+      "midiProgram": 26,
+      "tags": "akoestisch,warm,folk,wereldmuziek"
     },
     {
       "toneNumber": 96,
@@ -1310,7 +1822,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Steel-string acoustic guitar",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 3,
+      "midiProgram": 26,
+      "tags": "akoestisch,warm,folk"
     },
     {
       "toneNumber": 97,
@@ -1320,7 +1836,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Jazz guitar",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 27,
+      "tags": "warm,vintage,jazz"
     },
     {
       "toneNumber": 98,
@@ -1330,7 +1850,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Steel guitar",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 27,
+      "tags": "warm,vintage,jazz,wereldmuziek"
     },
     {
       "toneNumber": 99,
@@ -1340,7 +1864,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Electric guitar",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 28,
+      "tags": "helder,percussief"
     },
     {
       "toneNumber": 100,
@@ -1348,9 +1876,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Electric guitar",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 28,
+      "tags": "helder,percussief"
     },
     {
       "toneNumber": 101,
@@ -1358,9 +1890,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Electric guitar",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 2,
+      "midiProgram": 28,
+      "tags": "helder,percussief"
     },
     {
       "toneNumber": 102,
@@ -1370,7 +1906,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Palm mute",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 29,
+      "tags": "helder,percussief"
     },
     {
       "toneNumber": 103,
@@ -1380,7 +1920,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Electric guitar",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 29,
+      "tags": "helder,percussief"
     },
     {
       "toneNumber": 104,
@@ -1390,7 +1934,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Electric guitar",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 2,
+      "midiProgram": 29,
+      "tags": "helder,percussief"
     },
     {
       "toneNumber": 105,
@@ -1398,9 +1946,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Electric guitar",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 3,
+      "midiProgram": 29,
+      "tags": "helder,percussief"
     },
     {
       "toneNumber": 106,
@@ -1410,7 +1962,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Distortion (music)",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 30,
+      "tags": "metallic,electronic"
     },
     {
       "toneNumber": 107,
@@ -1420,7 +1976,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Electric guitar",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 30,
+      "tags": "metallic,electronic"
     },
     {
       "toneNumber": 108,
@@ -1430,7 +1990,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Distortion (music)",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 31,
+      "tags": "metallic,electronic"
     },
     {
       "toneNumber": 109,
@@ -1438,9 +2002,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Electric guitar",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 31,
+      "tags": "metallic,electronic,fx/cinematic"
     },
     {
       "toneNumber": 110,
@@ -1448,9 +2016,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Electric guitar",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 2,
+      "midiProgram": 31,
+      "tags": "metallic,electronic"
     },
     {
       "toneNumber": 111,
@@ -1458,9 +2030,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Natural harmonic",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 32,
+      "tags": "metallic,zwevend,fx/cinematic"
     },
     {
       "toneNumber": 112,
@@ -1468,9 +2044,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Electric guitar",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 32,
+      "tags": "metallic,zwevend,fx/cinematic"
     },
     {
       "toneNumber": 113,
@@ -1480,7 +2060,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Double bass",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 33,
+      "tags": "akoestisch,donker,jazz"
     },
     {
       "toneNumber": 114,
@@ -1490,7 +2074,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Bass guitar",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 34,
+      "tags": "warm,donker"
     },
     {
       "toneNumber": 115,
@@ -1498,9 +2086,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Electric bass",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 34,
+      "tags": "warm,donker"
     },
     {
       "toneNumber": 116,
@@ -1510,7 +2102,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Bass guitar",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 35,
+      "tags": "warm,donker"
     },
     {
       "toneNumber": 117,
@@ -1520,7 +2116,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Fretless guitar",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 36,
+      "tags": "warm,donker,zacht,jazz"
     },
     {
       "toneNumber": 118,
@@ -1530,7 +2130,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Slapping (music)",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 37,
+      "tags": "percussief,donker"
     },
     {
       "toneNumber": 119,
@@ -1540,7 +2144,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Slapping (music)",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 38,
+      "tags": "percussief,donker"
     },
     {
       "toneNumber": 120,
@@ -1550,7 +2158,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Bass synthesizer",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 39,
+      "tags": "synthetisch,donker,electronic"
     },
     {
       "toneNumber": 121,
@@ -1560,7 +2172,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Bass synthesizer",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 39,
+      "tags": "synthetisch,donker,electronic"
     },
     {
       "toneNumber": 122,
@@ -1570,7 +2186,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Bass synthesizer",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 2,
+      "midiProgram": 39,
+      "tags": "synthetisch,donker,electronic"
     },
     {
       "toneNumber": 123,
@@ -1580,7 +2200,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Clavinet",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 3,
+      "midiProgram": 39,
+      "tags": "synthetisch,donker,electronic"
     },
     {
       "toneNumber": 124,
@@ -1588,9 +2212,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Electric bass",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 4,
+      "midiProgram": 39,
+      "tags": "synthetisch,donker,electronic"
     },
     {
       "toneNumber": 125,
@@ -1600,7 +2228,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Bass synthesizer",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 40,
+      "tags": "synthetisch,donker,electronic"
     },
     {
       "toneNumber": 126,
@@ -1610,7 +2242,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Bass synthesizer",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 40,
+      "tags": "synthetisch,donker,electronic"
     },
     {
       "toneNumber": 127,
@@ -1620,7 +2256,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Bass synthesizer",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 2,
+      "midiProgram": 40,
+      "tags": "synthetisch,donker,electronic"
     },
     {
       "toneNumber": 128,
@@ -1628,9 +2268,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Percussion",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 3,
+      "midiProgram": 40,
+      "tags": "synthetisch,donker,electronic"
     },
     {
       "toneNumber": 129,
@@ -1640,7 +2284,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Violin",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 41,
+      "tags": "akoestisch,klassiek"
     },
     {
       "toneNumber": 130,
@@ -1650,7 +2298,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Violin",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 41,
+      "tags": "akoestisch,klassiek,zacht,ballad"
     },
     {
       "toneNumber": 131,
@@ -1660,7 +2312,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Viola",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 42,
+      "tags": "akoestisch,klassiek"
     },
     {
       "toneNumber": 132,
@@ -1670,7 +2326,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Cello",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 43,
+      "tags": "akoestisch,klassiek"
     },
     {
       "toneNumber": 133,
@@ -1680,7 +2340,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Double bass",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 44,
+      "tags": "akoestisch,klassiek"
     },
     {
       "toneNumber": 134,
@@ -1690,7 +2354,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Tremolo",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 45,
+      "tags": "zwevend,klassiek"
     },
     {
       "toneNumber": 135,
@@ -1700,7 +2368,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Pizzicato",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 46,
+      "tags": "percussief,klassiek"
     },
     {
       "toneNumber": 136,
@@ -1710,7 +2382,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Harp",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 47,
+      "tags": "sprankelend,zacht,klassiek"
     },
     {
       "toneNumber": 137,
@@ -1720,7 +2396,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Yangqin",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 47,
+      "tags": "sprankelend,zacht,klassiek,wereldmuziek"
     },
     {
       "toneNumber": 138,
@@ -1730,7 +2410,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Timpani",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 48,
+      "tags": "percussief,donker,klassiek"
     },
     {
       "toneNumber": 139,
@@ -1740,7 +2424,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "String section",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 49,
+      "tags": "warm,zwevend,klassiek"
     },
     {
       "toneNumber": 140,
@@ -1750,7 +2438,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Orchestra",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 49,
+      "tags": "warm,zwevend,klassiek"
     },
     {
       "toneNumber": 141,
@@ -1760,7 +2452,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "String section",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 2,
+      "midiProgram": 49,
+      "tags": "warm,zwevend,klassiek,vintage,lo-fi"
     },
     {
       "toneNumber": 142,
@@ -1770,7 +2466,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "String section",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 50,
+      "tags": "warm,zwevend,klassiek,zacht,ballad"
     },
     {
       "toneNumber": 143,
@@ -1780,7 +2480,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Synthesizer",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 51,
+      "tags": "synthetisch,zwevend,electronic"
     },
     {
       "toneNumber": 144,
@@ -1790,7 +2494,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Synthesizer",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 51,
+      "tags": "synthetisch,zwevend,electronic"
     },
     {
       "toneNumber": 145,
@@ -1800,7 +2508,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Synthesizer",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 52,
+      "tags": "synthetisch,zwevend,electronic"
     },
     {
       "toneNumber": 146,
@@ -1810,7 +2522,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Choir",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 53,
+      "tags": "zacht,zwevend"
     },
     {
       "toneNumber": 147,
@@ -1820,7 +2536,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Choir",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 53,
+      "tags": "zacht,zwevend"
     },
     {
       "toneNumber": 148,
@@ -1830,7 +2550,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Human voice",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 54,
+      "tags": "zacht,zwevend"
     },
     {
       "toneNumber": 149,
@@ -1840,7 +2564,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Humming",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 54,
+      "tags": "zacht,zwevend"
     },
     {
       "toneNumber": 150,
@@ -1850,7 +2578,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Vocoder",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 55,
+      "tags": "synthetisch,zwevend,electronic"
     },
     {
       "toneNumber": 151,
@@ -1860,7 +2592,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Vocoder",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 55,
+      "tags": "synthetisch,zwevend,electronic,vintage"
     },
     {
       "toneNumber": 152,
@@ -1870,7 +2606,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Orchestra hit",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 56,
+      "tags": "percussief,fx/cinematic"
     },
     {
       "toneNumber": 153,
@@ -1880,7 +2620,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Orchestra hit",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 56,
+      "tags": "percussief,fx/cinematic"
     },
     {
       "toneNumber": 154,
@@ -1890,7 +2634,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Orchestra hit",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 2,
+      "midiProgram": 56,
+      "tags": "percussief,fx/cinematic"
     },
     {
       "toneNumber": 155,
@@ -1900,7 +2648,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Orchestra hit",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 3,
+      "midiProgram": 56,
+      "tags": "percussief,fx/cinematic"
     },
     {
       "toneNumber": 156,
@@ -1910,7 +2662,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Trumpet",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 57,
+      "tags": "helder,klassiek"
     },
     {
       "toneNumber": 157,
@@ -1920,7 +2676,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Trumpet",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 57,
+      "tags": "helder,klassiek,donker"
     },
     {
       "toneNumber": 158,
@@ -1930,7 +2690,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Trombone",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 58,
+      "tags": "helder,klassiek"
     },
     {
       "toneNumber": 159,
@@ -1940,7 +2704,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Trombone",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 58,
+      "tags": "helder,klassiek"
     },
     {
       "toneNumber": 160,
@@ -1950,7 +2718,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Trombone",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 2,
+      "midiProgram": 58,
+      "tags": "helder,klassiek"
     },
     {
       "toneNumber": 161,
@@ -1960,7 +2732,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Tuba",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 59,
+      "tags": "helder,klassiek"
     },
     {
       "toneNumber": 162,
@@ -1970,7 +2746,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Mute (music)",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 60,
+      "tags": "zacht,jazz"
     },
     {
       "toneNumber": 163,
@@ -1980,7 +2760,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Mute (music)",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 60,
+      "tags": "zacht,jazz"
     },
     {
       "toneNumber": 164,
@@ -1990,7 +2774,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "French horn",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 61,
+      "tags": "warm,klassiek,fx/cinematic"
     },
     {
       "toneNumber": 165,
@@ -2000,7 +2788,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "French horn",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 61,
+      "tags": "warm,klassiek,fx/cinematic"
     },
     {
       "toneNumber": 166,
@@ -2010,7 +2802,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Brass section",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 62,
+      "tags": "helder,jazz"
     },
     {
       "toneNumber": 167,
@@ -2020,7 +2816,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Brass section",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 62,
+      "tags": "helder,jazz"
     },
     {
       "toneNumber": 168,
@@ -2030,7 +2830,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Brass section",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 63,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 169,
@@ -2040,7 +2844,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Brass section",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 63,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 170,
@@ -2050,7 +2858,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Brass section",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 2,
+      "midiProgram": 63,
+      "tags": "synthetisch,helder,electronic,vintage"
     },
     {
       "toneNumber": 171,
@@ -2060,7 +2872,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Brass section",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 3,
+      "midiProgram": 63,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 172,
@@ -2070,7 +2886,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Brass section",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 64,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 173,
@@ -2080,7 +2900,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Brass section",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 64,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 174,
@@ -2090,7 +2914,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Brass section",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 2,
+      "midiProgram": 64,
+      "tags": "synthetisch,helder,electronic,vintage"
     },
     {
       "toneNumber": 175,
@@ -2100,7 +2928,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Soprano saxophone",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 65,
+      "tags": "warm,jazz"
     },
     {
       "toneNumber": 176,
@@ -2110,7 +2942,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Alto saxophone",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 66,
+      "tags": "warm,jazz"
     },
     {
       "toneNumber": 177,
@@ -2120,7 +2956,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Tenor saxophone",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 67,
+      "tags": "warm,jazz"
     },
     {
       "toneNumber": 178,
@@ -2130,7 +2970,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Baritone saxophone",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 68,
+      "tags": "warm,jazz"
     },
     {
       "toneNumber": 179,
@@ -2140,7 +2984,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Oboe",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 69,
+      "tags": "warm,akoestisch,klassiek"
     },
     {
       "toneNumber": 180,
@@ -2150,7 +2998,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Cor anglais",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 70,
+      "tags": "warm,akoestisch,klassiek"
     },
     {
       "toneNumber": 181,
@@ -2160,7 +3012,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Bassoon",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 71,
+      "tags": "warm,akoestisch,klassiek"
     },
     {
       "toneNumber": 182,
@@ -2170,7 +3026,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Clarinet",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 72,
+      "tags": "warm,akoestisch,klassiek,jazz"
     },
     {
       "toneNumber": 183,
@@ -2180,7 +3040,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Piccolo",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 73,
+      "tags": "zacht,helder,klassiek"
     },
     {
       "toneNumber": 184,
@@ -2190,7 +3054,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Flute",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 74,
+      "tags": "zacht,helder,klassiek"
     },
     {
       "toneNumber": 185,
@@ -2200,7 +3068,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Recorder (musical instrument)",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 75,
+      "tags": "zacht,akoestisch,folk"
     },
     {
       "toneNumber": 186,
@@ -2210,7 +3082,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Pan flute",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 76,
+      "tags": "zacht,aards,wereldmuziek"
     },
     {
       "toneNumber": 187,
@@ -2218,9 +3094,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Bottle",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 77,
+      "tags": "zwevend,zacht,fx/cinematic"
     },
     {
       "toneNumber": 188,
@@ -2230,7 +3110,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Shakuhachi",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 78,
+      "tags": "aards,zacht,wereldmuziek"
     },
     {
       "toneNumber": 189,
@@ -2240,7 +3124,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Whistling",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 79,
+      "tags": "helder,folk"
     },
     {
       "toneNumber": 190,
@@ -2250,7 +3138,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Ocarina",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 80,
+      "tags": "zacht,aards,folk,wereldmuziek"
     },
     {
       "toneNumber": 191,
@@ -2260,7 +3152,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Lead synthesizer",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 81,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 192,
@@ -2270,7 +3166,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Lead synthesizer",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 81,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 193,
@@ -2280,7 +3180,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Lead synthesizer",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 2,
+      "midiProgram": 81,
+      "tags": "synthetisch,helder,electronic,zacht"
     },
     {
       "toneNumber": 194,
@@ -2290,7 +3194,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Lead synthesizer",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 82,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 195,
@@ -2300,7 +3208,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Lead synthesizer",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 82,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 196,
@@ -2308,9 +3220,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Lead synthesizer",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 2,
+      "midiProgram": 82,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 197,
@@ -2320,7 +3236,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Lead synthesizer",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 3,
+      "midiProgram": 82,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 198,
@@ -2330,7 +3250,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Sawtooth wave",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 4,
+      "midiProgram": 82,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 199,
@@ -2338,9 +3262,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Calliope (music)",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 83,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 200,
@@ -2350,7 +3278,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Lead synthesizer",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 84,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 201,
@@ -2358,9 +3290,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Lead synthesizer",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 85,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 202,
@@ -2370,7 +3306,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Lead synthesizer",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 85,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 203,
@@ -2378,9 +3318,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Human voice",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 86,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 204,
@@ -2390,7 +3334,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Lead synthesizer",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 87,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 205,
@@ -2400,7 +3348,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Lead synthesizer",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 88,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 206,
@@ -2410,7 +3362,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Lead synthesizer",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 88,
+      "tags": "synthetisch,helder,electronic"
     },
     {
       "toneNumber": 207,
@@ -2418,9 +3374,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Lead synthesizer",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 89,
+      "tags": "synthetisch,zwevend,zacht,electronic"
     },
     {
       "toneNumber": 208,
@@ -2430,7 +3390,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Synthesizer pad",
       "funFacts": null,
-      "combinationSuggestions": "Onderlaag onder elke pianoklank voor modern-klassiek; in de mix laagpass-filteren rond 5 kHz."
+      "combinationSuggestions": "Onderlaag onder elke pianoklank voor modern-klassiek; in de mix laagpass-filteren rond 5 kHz.",
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 90,
+      "tags": "synthetisch,zwevend,zacht,electronic"
     },
     {
       "toneNumber": 209,
@@ -2440,7 +3404,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Synthesizer pad",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 90,
+      "tags": "synthetisch,zwevend,zacht,electronic"
     },
     {
       "toneNumber": 210,
@@ -2448,9 +3416,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Polysynth",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 91,
+      "tags": "synthetisch,zwevend,zacht,electronic"
     },
     {
       "toneNumber": 211,
@@ -2458,9 +3430,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Vocoder",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 92,
+      "tags": "synthetisch,zwevend,zacht,electronic"
     },
     {
       "toneNumber": 212,
@@ -2468,9 +3444,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Lead synthesizer",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 92,
+      "tags": "synthetisch,zwevend,zacht,electronic"
     },
     {
       "toneNumber": 213,
@@ -2478,9 +3458,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Glass harmonica",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 93,
+      "tags": "synthetisch,zwevend,zacht,electronic"
     },
     {
       "toneNumber": 214,
@@ -2490,7 +3474,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Synthesizer pad",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 94,
+      "tags": "synthetisch,zwevend,zacht,electronic"
     },
     {
       "toneNumber": 215,
@@ -2500,7 +3488,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Synthesizer pad",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 95,
+      "tags": "synthetisch,zwevend,zacht,electronic"
     },
     {
       "toneNumber": 216,
@@ -2510,7 +3502,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Synthesizer pad",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 96,
+      "tags": "synthetisch,zwevend,zacht,electronic"
     },
     {
       "toneNumber": 217,
@@ -2518,9 +3514,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Lead synthesizer",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 97,
+      "tags": "synthetisch,zwevend,electronic,fx/cinematic"
     },
     {
       "toneNumber": 218,
@@ -2528,9 +3528,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Lead synthesizer",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 98,
+      "tags": "synthetisch,zwevend,electronic,fx/cinematic"
     },
     {
       "toneNumber": 219,
@@ -2538,9 +3542,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Lead synthesizer",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 99,
+      "tags": "synthetisch,zwevend,electronic,fx/cinematic"
     },
     {
       "toneNumber": 220,
@@ -2548,9 +3556,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Mallet percussion",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 99,
+      "tags": "synthetisch,zwevend,electronic,fx/cinematic"
     },
     {
       "toneNumber": 221,
@@ -2558,9 +3570,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Synthesizer pad",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 100,
+      "tags": "synthetisch,zwevend,electronic,fx/cinematic"
     },
     {
       "toneNumber": 222,
@@ -2568,9 +3584,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Synthesizer pad",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 101,
+      "tags": "synthetisch,zwevend,electronic,fx/cinematic,helder"
     },
     {
       "toneNumber": 223,
@@ -2578,9 +3598,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Synthesizer pad",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 102,
+      "tags": "synthetisch,zwevend,electronic,fx/cinematic"
     },
     {
       "toneNumber": 224,
@@ -2588,9 +3612,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Synthesizer pad",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 103,
+      "tags": "synthetisch,zwevend,electronic,fx/cinematic"
     },
     {
       "toneNumber": 225,
@@ -2598,9 +3626,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Synthesizer pad",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 103,
+      "tags": "synthetisch,zwevend,electronic,fx/cinematic"
     },
     {
       "toneNumber": 226,
@@ -2608,9 +3640,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Synthesizer pad",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 2,
+      "midiProgram": 103,
+      "tags": "synthetisch,zwevend,electronic,fx/cinematic"
     },
     {
       "toneNumber": 227,
@@ -2618,9 +3654,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Synthesizer pad",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 104,
+      "tags": "synthetisch,zwevend,electronic,fx/cinematic"
     },
     {
       "toneNumber": 228,
@@ -2630,7 +3670,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Sitar",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 105,
+      "tags": "akoestisch,aards,wereldmuziek"
     },
     {
       "toneNumber": 229,
@@ -2640,7 +3684,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Sitar",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 105,
+      "tags": "akoestisch,aards,wereldmuziek"
     },
     {
       "toneNumber": 230,
@@ -2650,7 +3698,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Banjo",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 106,
+      "tags": "akoestisch,aards,wereldmuziek"
     },
     {
       "toneNumber": 231,
@@ -2660,7 +3712,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Shamisen",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 107,
+      "tags": "akoestisch,aards,wereldmuziek"
     },
     {
       "toneNumber": 232,
@@ -2670,7 +3726,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Koto (instrument)",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 108,
+      "tags": "akoestisch,aards,wereldmuziek"
     },
     {
       "toneNumber": 233,
@@ -2680,7 +3740,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Taishōgoto",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 108,
+      "tags": "akoestisch,aards,wereldmuziek"
     },
     {
       "toneNumber": 234,
@@ -2690,7 +3754,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Mbira",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 109,
+      "tags": "akoestisch,aards,wereldmuziek"
     },
     {
       "toneNumber": 235,
@@ -2700,7 +3768,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Bagpipes",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 110,
+      "tags": "akoestisch,aards,wereldmuziek"
     },
     {
       "toneNumber": 236,
@@ -2710,7 +3782,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Fiddle",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 111,
+      "tags": "akoestisch,aards,wereldmuziek"
     },
     {
       "toneNumber": 237,
@@ -2720,7 +3796,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Shehnai",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 112,
+      "tags": "akoestisch,aards,wereldmuziek"
     },
     {
       "toneNumber": 238,
@@ -2730,7 +3810,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Bell",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 113,
+      "tags": "percussief,sprankelend,metallic"
     },
     {
       "toneNumber": 239,
@@ -2740,7 +3824,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Agogô",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 114,
+      "tags": "percussief,metallic,wereldmuziek"
     },
     {
       "toneNumber": 240,
@@ -2750,7 +3838,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Steelpan",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 115,
+      "tags": "percussief,metallic,wereldmuziek"
     },
     {
       "toneNumber": 241,
@@ -2760,7 +3852,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Wood block",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 116,
+      "tags": "percussief,aards,wereldmuziek"
     },
     {
       "toneNumber": 242,
@@ -2770,7 +3866,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Castanets",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 116,
+      "tags": "percussief,aards,wereldmuziek"
     },
     {
       "toneNumber": 243,
@@ -2780,7 +3880,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Taiko",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 117,
+      "tags": "percussief,aards,wereldmuziek"
     },
     {
       "toneNumber": 244,
@@ -2790,7 +3894,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Bass drum",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 117,
+      "tags": "percussief,klassiek"
     },
     {
       "toneNumber": 245,
@@ -2798,9 +3906,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Tom-tom",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 118,
+      "tags": "percussief,electronic"
     },
     {
       "toneNumber": 246,
@@ -2808,9 +3920,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Tom-tom",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 118,
+      "tags": "percussief,electronic"
     },
     {
       "toneNumber": 247,
@@ -2820,7 +3936,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Electronic drum",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 119,
+      "tags": "percussief,synthetisch,electronic"
     },
     {
       "toneNumber": 248,
@@ -2830,7 +3950,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Roland TR-808",
       "funFacts": "De synthetische toms van Roland's eigen TR-808 — onmisbaar in electro en oldschool hiphop.",
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 119,
+      "tags": "percussief,vintage,electronic"
     },
     {
       "toneNumber": 249,
@@ -2838,9 +3962,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Electronic percussion",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 2,
+      "midiProgram": 119,
+      "tags": "percussief,synthetisch,electronic"
     },
     {
       "toneNumber": 250,
@@ -2848,9 +3976,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Cymbal",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 120,
+      "tags": "zwevend,metallic,fx/cinematic"
     },
     {
       "toneNumber": 251,
@@ -2858,9 +3990,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Electric guitar",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 121,
+      "tags": "fx/cinematic,percussief"
     },
     {
       "toneNumber": 252,
@@ -2868,9 +4004,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Electric guitar",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 121,
+      "tags": "fx/cinematic,percussief"
     },
     {
       "toneNumber": 253,
@@ -2878,9 +4018,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Bass guitar",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 2,
+      "midiProgram": 121,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 254,
@@ -2888,9 +4032,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Breath",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 122,
+      "tags": "fx/cinematic,percussief"
     },
     {
       "toneNumber": 255,
@@ -2898,9 +4046,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Piano",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 122,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 256,
@@ -2910,7 +4062,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Ocean",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 123,
+      "tags": "fx/cinematic,zwevend"
     },
     {
       "toneNumber": 257,
@@ -2918,9 +4074,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Rain",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 123,
+      "tags": "fx/cinematic,zwevend"
     },
     {
       "toneNumber": 258,
@@ -2928,9 +4088,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Thunder",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 2,
+      "midiProgram": 123,
+      "tags": "fx/cinematic,donker"
     },
     {
       "toneNumber": 259,
@@ -2938,9 +4102,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Wind",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 3,
+      "midiProgram": 123,
+      "tags": "fx/cinematic,zwevend"
     },
     {
       "toneNumber": 260,
@@ -2948,9 +4116,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Stream",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 4,
+      "midiProgram": 123,
+      "tags": "fx/cinematic,zwevend"
     },
     {
       "toneNumber": 261,
@@ -2958,9 +4130,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Bubble",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 5,
+      "midiProgram": 123,
+      "tags": "fx/cinematic,zwevend"
     },
     {
       "toneNumber": 262,
@@ -2968,9 +4144,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Bird vocalization",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 124,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 263,
@@ -2978,9 +4158,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Dog",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 124,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 264,
@@ -2988,9 +4172,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Horse",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 2,
+      "midiProgram": 124,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 265,
@@ -2998,9 +4186,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Bird vocalization",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 3,
+      "midiProgram": 124,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 266,
@@ -3008,9 +4200,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Telephone",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 125,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 267,
@@ -3018,9 +4214,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Telephone",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 125,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 268,
@@ -3028,9 +4228,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Door",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 2,
+      "midiProgram": 125,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 269,
@@ -3038,9 +4242,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Door",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 3,
+      "midiProgram": 125,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 270,
@@ -3050,7 +4258,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Scratching",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 4,
+      "midiProgram": 125,
+      "tags": "fx/cinematic,percussief,lo-fi"
     },
     {
       "toneNumber": 271,
@@ -3060,7 +4272,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Wind chime",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 5,
+      "midiProgram": 125,
+      "tags": "fx/cinematic,zwevend"
     },
     {
       "toneNumber": 272,
@@ -3068,9 +4284,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Helicopter",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 126,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 273,
@@ -3078,9 +4298,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Car",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 126,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 274,
@@ -3088,9 +4312,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Car",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 2,
+      "midiProgram": 126,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 275,
@@ -3098,9 +4326,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Car",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 3,
+      "midiProgram": 126,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 276,
@@ -3108,9 +4340,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Car",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 4,
+      "midiProgram": 126,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 277,
@@ -3118,9 +4354,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Siren",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 5,
+      "midiProgram": 126,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 278,
@@ -3128,9 +4368,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Train",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 6,
+      "midiProgram": 126,
+      "tags": "fx/cinematic,zwevend"
     },
     {
       "toneNumber": 279,
@@ -3138,9 +4382,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Jet aircraft",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 7,
+      "midiProgram": 126,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 280,
@@ -3148,9 +4396,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Spacecraft",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 8,
+      "midiProgram": 126,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 281,
@@ -3158,9 +4410,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Explosion",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 9,
+      "midiProgram": 126,
+      "tags": "fx/cinematic,percussief"
     },
     {
       "toneNumber": 282,
@@ -3170,7 +4426,11 @@
       "origin": "GM2",
       "wikipediaPageTitle": "Applause",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 127,
+      "tags": "fx/cinematic,percussief"
     },
     {
       "toneNumber": 283,
@@ -3178,9 +4438,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Laughter",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 127,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 284,
@@ -3188,9 +4452,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Scream",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 2,
+      "midiProgram": 127,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 285,
@@ -3198,9 +4466,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Punch",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 3,
+      "midiProgram": 127,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 286,
@@ -3208,9 +4480,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Heart",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 4,
+      "midiProgram": 127,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 287,
@@ -3218,9 +4494,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Walking",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 5,
+      "midiProgram": 127,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 288,
@@ -3228,9 +4508,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Gunshot",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 0,
+      "midiProgram": 128,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 289,
@@ -3238,9 +4522,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Machine gun",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 1,
+      "midiProgram": 128,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 290,
@@ -3248,9 +4536,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Laser",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 2,
+      "midiProgram": 128,
+      "tags": "fx/cinematic"
     },
     {
       "toneNumber": 291,
@@ -3258,9 +4550,13 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Explosion",
       "funFacts": null,
-      "combinationSuggestions": null
+      "combinationSuggestions": null,
+      "midiBankMsb": 121,
+      "midiBankLsb": 3,
+      "midiProgram": 128,
+      "tags": "fx/cinematic"
     }
   ]
 }

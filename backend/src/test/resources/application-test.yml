@@ -17,3 +17,4 @@ app:
   wikipedia:
     base-url: http://localhost:9999
     bulk-delay-ms: 0
+    warmup-enabled: false

@@ -1,21 +1,23 @@
 "use client";
 
-import Image from "next/image";
 import type { ToneDto } from "@/lib/types";
 import { toneKey } from "@/lib/types";
+import { parseTags } from "@/lib/collections";
+import type { ToneZone } from "@/hooks/useRolandSysex";
+import { PlayToneButton } from "@/components/PlayToneButton";
+import { ToneThumbnail } from "@/components/ToneThumbnail";
+
+export interface ZoneButton {
+  zone: ToneZone;
+  label: string;
+  isActive: boolean;
+}
 
 const CATEGORY_COLORS: Record<string, string> = {
   Piano: "bg-amber-500/15 text-amber-300",
   "E. Piano": "bg-rose-500/15 text-rose-300",
   Strings: "bg-sky-500/15 text-sky-300",
   Other: "bg-emerald-500/15 text-emerald-300",
-};
-
-const CATEGORY_ICONS: Record<string, string> = {
-  Piano: "♪",
-  "E. Piano": "⚡",
-  Strings: "𝄢",
-  Other: "♬",
 };
 
 interface Props {
@@ -25,6 +27,11 @@ interface Props {
   onToggleFavorite: (key: string) => void;
   onToggleExpand: (key: string | null) => void;
   onOpen: (tone: ToneDto) => void;
+  onPlay: (tone: ToneDto) => Promise<boolean>;
+  midiAvailable: boolean;
+  /** In Split/Dual-modus: knoppen om deze klank aan een zone toe te wijzen. */
+  zoneButtons?: ZoneButton[];
+  onAssignZone?: (tone: ToneDto, zone: ToneZone) => void;
 }
 
 export function ToneCard({
@@ -34,10 +41,16 @@ export function ToneCard({
   onToggleFavorite,
   onToggleExpand,
   onOpen,
+  onPlay,
+  midiAvailable,
+  zoneButtons,
+  onAssignZone,
 }: Props) {
   const key = toneKey(tone);
   const badge = CATEGORY_COLORS[tone.category] ?? CATEGORY_COLORS.Other;
   const hasSummary = Boolean(tone.shortSummary);
+  const tags = parseTags(tone.tags);
+  const visibleTags = isExpanded ? tags : tags.slice(0, 2);
 
   return (
     <div
@@ -48,25 +61,7 @@ export function ToneCard({
       }`}
     >
       <div className="flex items-start gap-3">
-        {tone.thumbnailUrl ? (
-          <Image
-            src={tone.thumbnailUrl}
-            alt={tone.wikipediaPageTitle ?? tone.name}
-            width={48}
-            height={48}
-            className="size-12 shrink-0 cursor-pointer rounded-lg border border-border-soft object-cover"
-            onClick={() => onOpen(tone)}
-          />
-        ) : (
-          <div
-            className="flex size-12 shrink-0 cursor-pointer items-center justify-center rounded-lg
-                       bg-accent-soft text-lg text-accent"
-            onClick={() => onOpen(tone)}
-            aria-hidden
-          >
-            {CATEGORY_ICONS[tone.category] ?? "♬"}
-          </div>
-        )}
+        <ToneThumbnail tone={tone} size={48} onClick={() => onOpen(tone)} />
 
         <div className="min-w-0 flex-1 cursor-pointer" onClick={() => onOpen(tone)}>
           <p className="font-mono text-[11px] text-muted">#{tone.toneNumber}</p>
@@ -81,6 +76,39 @@ export function ToneCard({
               <span className="rounded-full bg-white/5 px-2 py-0.5 text-[11px] text-muted">
                 {tone.subCategory}
               </span>
+            )}
+            {visibleTags.map((tag) => (
+              <span
+                key={tag}
+                className="rounded-full border border-border-soft px-2 py-0.5 text-[11px] text-muted/80"
+              >
+                {tag}
+              </span>
+            ))}
+            {zoneButtons && zoneButtons.length > 0 ? (
+              <span className="flex items-center gap-1">
+                {zoneButtons.map((zb) => (
+                  <button
+                    key={zb.zone}
+                    onClick={() => onAssignZone?.(tone, zb.zone)}
+                    aria-pressed={zb.isActive}
+                    title={`Zet deze klank op zone "${zb.label}"`}
+                    className={`rounded-full px-2 py-0.5 text-[11px] font-medium transition ${
+                      zb.isActive
+                        ? "bg-accent text-[#06121f]"
+                        : "bg-accent-soft text-accent hover:brightness-125"
+                    }`}
+                  >
+                    {zb.label}
+                  </button>
+                ))}
+              </span>
+            ) : (
+              <PlayToneButton
+                tone={tone}
+                onPlay={onPlay}
+                midiAvailable={midiAvailable}
+              />
             )}
           </div>
         </div>
