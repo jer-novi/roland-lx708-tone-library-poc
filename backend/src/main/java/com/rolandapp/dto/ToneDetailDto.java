@@ -1,21 +1,19 @@
 package com.rolandapp.dto;
 
-import com.rolandapp.model.Tone;
-import com.rolandapp.service.HdThumbnailUrlBuilder;
-import com.rolandapp.service.ThumbnailUrlBuilder;
-
 import java.util.List;
 
+/**
+ * Detail-payload voor de kaart-carousel. Naast de bestaande tone/wiki/audio-velden:
+ * de taal-geselecteerde {@code oneLiner}, de {@code background} (samenvatting + facts
+ * per instrument) en {@code relatedTones} (andere klanken van hetzelfde instrument).
+ * Wordt samengesteld in {@code ToneService.getDetail}.
+ */
 public record ToneDetailDto(
         ToneDto tone,
         WikiDataDto wikiData,
-        List<AudioSampleDto> audioSamples
+        List<AudioSampleDto> audioSamples,
+        String oneLiner,
+        InstrumentBackgroundDto background,
+        List<RelatedToneDto> relatedTones
 ) {
-    public static ToneDetailDto from(Tone tone, ThumbnailUrlBuilder sdBuilder, HdThumbnailUrlBuilder hdBuilder) {
-        return new ToneDetailDto(
-                ToneDto.from(tone),
-                tone.getWikiData() != null ? WikiDataDto.from(tone.getWikiData(), sdBuilder, hdBuilder) : null,
-                tone.getAudioSamples().stream().map(AudioSampleDto::from).toList()
-        );
-    }
 }

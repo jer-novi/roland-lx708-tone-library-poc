@@ -34,7 +34,9 @@
       "midiBankMsb": 0,
       "midiBankLsb": 68,
       "midiProgram": 1,
-      "tags": "akoestisch,warm,klassiek,ballad"
+      "tags": "akoestisch,warm,klassiek,ballad",
+      "oneLinerNl": "Het kloppend hart van de LX708: een Hamburg-vleugel, noot voor noot gemodelleerd in plaats van gesampled.",
+      "oneLinerEn": "The beating heart of the LX708: a Hamburg-style grand, modelled note by note rather than sampled."
     },
     {
       "toneNumber": 2,
@@ -48,7 +50,9 @@
       "midiBankMsb": 0,
       "midiBankLsb": 69,
       "midiProgram": 1,
-      "tags": "akoestisch,warm,klassiek"
+      "tags": "akoestisch,warm,klassiek",
+      "oneLinerNl": "Dezelfde Europese vleugel, nu net iets ronder en intiemer afgeregeld voor zachtere passages.",
+      "oneLinerEn": "The same European grand, now voiced a touch rounder and more intimate for softer passages."
     },
     {
       "toneNumber": 3,
@@ -62,7 +66,9 @@
       "midiBankMsb": 1,
       "midiBankLsb": 68,
       "midiProgram": 1,
-      "tags": "akoestisch,helder,jazz,ballad"
+      "tags": "akoestisch,helder,jazz,ballad",
+      "oneLinerNl": "New Yorks staal: vollere bas, directe aanslag, gebouwd voor jazz, pop en singer-songwriter.",
+      "oneLinerEn": "New York steel: fuller bass and immediate attack, built for jazz, pop and singer-songwriter work."
     },
     {
       "toneNumber": 4,
@@ -76,7 +82,9 @@
       "midiBankMsb": 1,
       "midiBankLsb": 69,
       "midiProgram": 1,
-      "tags": "akoestisch,helder,jazz"
+      "tags": "akoestisch,helder,jazz",
+      "oneLinerNl": "De Amerikaanse vleugel in een warmere variant, met iets minder bite en meer body.",
+      "oneLinerEn": "The American grand in a warmer guise, with a little less bite and more body."
     },
     {
       "toneNumber": 1,
@@ -90,7 +98,9 @@
       "midiBankMsb": 8,
       "midiBankLsb": 71,
       "midiProgram": 5,
-      "tags": "vintage,warm,jazz,ballad"
+      "tags": "vintage,warm,jazz,ballad",
+      "oneLinerNl": "De fluwelen Rhodes uit 1976: belachtige tines die onder elke ballad blijven zweven.",
+      "oneLinerEn": "The velvet '76 Rhodes: bell-like tines that hover beneath any ballad."
     },
     {
       "toneNumber": 2,
@@ -104,7 +114,9 @@
       "midiBankMsb": 0,
       "midiBankLsb": 69,
       "midiProgram": 5,
-      "tags": "vintage,zwevend,warm,ballad"
+      "tags": "vintage,zwevend,warm,ballad",
+      "oneLinerNl": "Een Rhodes met deinende tremolo: het stereo-zwabberen dat soulballads laat ademen.",
+      "oneLinerEn": "A Rhodes drenched in tremolo: the stereo sway that lets soul ballads breathe."
     },
     {
       "toneNumber": 3,
@@ -118,7 +130,9 @@
       "midiBankMsb": 16,
       "midiBankLsb": 67,
       "midiProgram": 5,
-      "tags": "helder,sprankelend,ballad"
+      "tags": "helder,sprankelend,ballad",
+      "oneLinerNl": "Heldere, sprankelende elektrische piano die meteen vooraan in de mix glanst.",
+      "oneLinerEn": "A bright, sparkling electric piano that shines right at the front of the mix."
     },
     {
       "toneNumber": 4,
@@ -132,7 +146,9 @@
       "midiBankMsb": 0,
       "midiBankLsb": 67,
       "midiProgram": 5,
-      "tags": "vintage,warm,lo-fi"
+      "tags": "vintage,warm,lo-fi",
+      "oneLinerNl": "De rietige Wurlitzer-klank: knokig, warm en met een vleugje overstuur in de aanslag.",
+      "oneLinerEn": "The reedy Wurlitzer voice: gritty, warm and with a hint of overdrive in the attack."
     },
     {
       "toneNumber": 5,
@@ -146,7 +162,9 @@
       "midiBankMsb": 0,
       "midiBankLsb": 70,
       "midiProgram": 6,
-      "tags": "synthetisch,helder,electronic,ballad"
+      "tags": "synthetisch,helder,electronic,ballad",
+      "oneLinerNl": "Het glasheldere DX7 FM-piano: hét belletjes-geluid onder vrijwel elke jaren-80 ballad.",
+      "oneLinerEn": "The glassy DX7 FM piano: the chime behind nearly every 1980s ballad."
     },
     {
       "toneNumber": 6,
@@ -160,7 +178,9 @@
       "midiBankMsb": 8,
       "midiBankLsb": 68,
       "midiProgram": 6,
-      "tags": "zacht,sprankelend,ballad"
+      "tags": "zacht,sprankelend,ballad",
+      "oneLinerNl": "Een zachte, klokachtige EP die als een belletje boven trage ballads hangt.",
+      "oneLinerEn": "A soft, bell-like EP that chimes gently above slow ballads."
     },
     {
       "toneNumber": 7,
@@ -174,7 +194,9 @@
       "midiBankMsb": 24,
       "midiBankLsb": 65,
       "midiProgram": 5,
-      "tags": "vintage,warm,lo-fi"
+      "tags": "vintage,warm,lo-fi",
+      "oneLinerNl": "Een Wurlitzer-EP in jaren-60 sferen: rond, lo-fi en perfect voor retro-pop.",
+      "oneLinerEn": "A Wurlitzer EP in 1960s spirit: round, lo-fi and perfect for retro pop."
     },
     {
       "toneNumber": 8,
@@ -188,7 +210,9 @@
       "midiBankMsb": 0,
       "midiBankLsb": 67,
       "midiProgram": 8,
-      "tags": "percussief,vintage,jazz"
+      "tags": "percussief,vintage,jazz",
+      "oneLinerNl": "De knappende Hohner Clavinet: funky en percussief, het riff-geluid van 'Superstition'.",
+      "oneLinerEn": "The snappy Hohner Clavinet: funky and percussive, the riff sound of 'Superstition'."
     },
     {
       "toneNumber": 9,
@@ -202,7 +226,9 @@
       "midiBankMsb": 0,
       "midiBankLsb": 68,
       "midiProgram": 5,
-      "tags": "vintage,zwevend,electronic"
+      "tags": "vintage,zwevend,electronic",
+      "oneLinerNl": "Een elektrische piano die door een phaser zwiept: zwevend, wervelend en heerlijk vintage.",
+      "oneLinerEn": "An electric piano swept through a phaser: swirling, undulating and gloriously vintage."
     },
     {
       "toneNumber": 10,
@@ -216,7 +242,9 @@
       "midiBankMsb": 16,
       "midiBankLsb": 66,
       "midiProgram": 5,
-      "tags": "vintage,warm,jazz"
+      "tags": "vintage,warm,jazz",
+      "oneLinerNl": "Warme jaren-70 elektrische piano: rond, donker en gemaakt voor smeuïge fusion-akkoorden.",
+      "oneLinerEn": "Warm 1970s electric piano: round, dark and made for mellow fusion chords."
     },
     {
       "toneNumber": 11,
@@ -230,7 +258,9 @@
       "midiBankMsb": 0,
       "midiBankLsb": 69,
       "midiProgram": 3,
-      "tags": "helder,vintage,ballad"
+      "tags": "helder,vintage,ballad",
+      "oneLinerNl": "De Yamaha CP-70 in geest: echte snaren met pickups, helder en perfect voor pop-ballads.",
+      "oneLinerEn": "The Yamaha CP-70 in spirit: real strings with pickups, bright and made for pop ballads."
     },
     {
       "toneNumber": 1,
@@ -244,7 +274,9 @@
       "midiBankMsb": 1,
       "midiBankLsb": 67,
       "midiProgram": 50,
-      "tags": "warm,zwevend,klassiek,fx/cinematic"
+      "tags": "warm,zwevend,klassiek,fx/cinematic",
+      "oneLinerNl": "Een vol symfonisch strijkerstapijt: warm, breed en meteen klaar voor klassiek en cinema.",
+      "oneLinerEn": "A full symphonic string bed: warm, broad and instantly ready for classical and cinema."
     },
     {
       "toneNumber": 2,
@@ -258,7 +290,9 @@
       "midiBankMsb": 1,
       "midiBankLsb": 67,
       "midiProgram": 49,
-      "tags": "zwevend,klassiek,fx/cinematic"
+      "tags": "zwevend,klassiek,fx/cinematic",
+      "oneLinerNl": "Grootse, trailer-waardige strijkers die elke melodie naar het filmdoek tillen.",
+      "oneLinerEn": "Grand, trailer-worthy strings that lift any melody onto the silver screen."
     },
     {
       "toneNumber": 3,
@@ -272,7 +306,9 @@
       "midiBankMsb": 0,
       "midiBankLsb": 71,
       "midiProgram": 50,
-      "tags": "warm,zwevend,ballad"
+      "tags": "warm,zwevend,ballad",
+      "oneLinerNl": "Een dikke, warme strijkerslaag, ideaal als zacht fundament onder ballads.",
+      "oneLinerEn": "A thick, warm string layer, ideal as a soft foundation beneath ballads."
     },
     {
       "toneNumber": 4,
@@ -286,7 +322,9 @@
       "midiBankMsb": 0,
       "midiBankLsb": 64,
       "midiProgram": 49,
-      "tags": "akoestisch,klassiek"
+      "tags": "akoestisch,klassiek",
+      "oneLinerNl": "Akoestische orkeststrijkers met de natuurlijke ademing van een concertzaal.",
+      "oneLinerEn": "Acoustic orchestral strings with the natural breath of a concert hall."
     },
     {
       "toneNumber": 5,
@@ -300,7 +338,9 @@
       "midiBankMsb": 8,
       "midiBankLsb": 66,
       "midiProgram": 49,
-      "tags": "akoestisch,klassiek,fx/cinematic"
+      "tags": "akoestisch,klassiek,fx/cinematic",
+      "oneLinerNl": "Een compleet orkest in één klank: strijkers, blazers en glans voor filmische pracht.",
+      "oneLinerEn": "A whole orchestra in one voice: strings, winds and sheen for cinematic splendour."
     },
     {
       "toneNumber": 6,
@@ -314,7 +354,9 @@
       "midiBankMsb": 0,
       "midiBankLsb": 67,
       "midiProgram": 69,
-      "tags": "zacht,akoestisch,klassiek"
+      "tags": "zacht,akoestisch,klassiek",
+      "oneLinerNl": "Een intiem houtblazersensemble: zacht, pastoraal en op kamermuziek-schaal.",
+      "oneLinerEn": "An intimate woodwind ensemble: soft, pastoral and on a chamber-music scale."
     },
     {
       "toneNumber": 7,
@@ -328,7 +370,9 @@
       "midiBankMsb": 0,
       "midiBankLsb": 68,
       "midiProgram": 47,
-      "tags": "sprankelend,zacht,klassiek"
+      "tags": "sprankelend,zacht,klassiek",
+      "oneLinerNl": "Sprankelende harpklanken die als waterdruppels door je arpeggio's glijden.",
+      "oneLinerEn": "Sparkling harp tones that glide like water drops through your arpeggios."
     },
     {
       "toneNumber": 8,
@@ -342,7 +386,9 @@
       "midiBankMsb": 0,
       "midiBankLsb": 0,
       "midiProgram": 41,
-      "tags": "akoestisch,helder,klassiek,folk"
+      "tags": "akoestisch,helder,klassiek,folk",
+      "oneLinerNl": "Een solo-viool met heldere, zingende streek voor klassiek en folk.",
+      "oneLinerEn": "A solo violin with a bright, singing bow for classical and folk."
     },
     {
       "toneNumber": 9,
@@ -356,7 +402,9 @@
       "midiBankMsb": 1,
       "midiBankLsb": 65,
       "midiProgram": 49,
-      "tags": "zwevend,klassiek"
+      "tags": "zwevend,klassiek",
+      "oneLinerNl": "Strijkers die op je aanslag reageren: zacht strijken of fel inzetten, jij bepaalt.",
+      "oneLinerEn": "Strings that answer your touch: gentle bowing or a sharp attack, you decide."
     },
     {
       "toneNumber": 10,
@@ -370,7 +418,9 @@
       "midiBankMsb": 0,
       "midiBankLsb": 64,
       "midiProgram": 74,
-      "tags": "zacht,helder,klassiek"
+      "tags": "zacht,helder,klassiek",
+      "oneLinerNl": "Een ademende dwarsfluit: zacht, helder en luchtig voor pastorale lijnen.",
+      "oneLinerEn": "A breathy transverse flute: soft, bright and airy for pastoral lines."
     },
     {
       "toneNumber": 11,
@@ -384,7 +434,9 @@
       "midiBankMsb": 0,
       "midiBankLsb": 0,
       "midiProgram": 43,
-      "tags": "warm,donker,klassiek"
+      "tags": "warm,donker,klassiek",
+      "oneLinerNl": "De warme, donkere tenorstem van het strijkkwartet, met SuperNATURAL-realisme tot in elke streek.",
+      "oneLinerEn": "The warm, dark tenor voice of the string quartet, rendered with SuperNATURAL realism in every bow stroke."
     },
     {
       "toneNumber": 12,
@@ -398,7 +450,9 @@
       "midiBankMsb": 1,
       "midiBankLsb": 66,
       "midiProgram": 61,
-      "tags": "helder,klassiek,fx/cinematic"
+      "tags": "helder,klassiek,fx/cinematic",
+      "oneLinerNl": "Een heldere, brede orkestkoper-sectie; bouwt direct die filmische fanfare-grandeur op.",
+      "oneLinerEn": "A bright, broad orchestral brass section that instantly builds cinematic fanfare grandeur."
     },
     {
       "toneNumber": 13,
@@ -412,7 +466,9 @@
       "midiBankMsb": 0,
       "midiBankLsb": 0,
       "midiProgram": 46,
-      "tags": "percussief,klassiek"
+      "tags": "percussief,klassiek",
+      "oneLinerNl": "Geplukte strijkers: korte, percussieve plukjes die een arrangement van lichte tred geven.",
+      "oneLinerEn": "Plucked strings: short, percussive pizzicato that gives an arrangement a light, springy step."
     },
     {
       "toneNumber": 14,
@@ -426,7 +482,9 @@
       "midiBankMsb": 1,
       "midiBankLsb": 65,
       "midiProgram": 50,
-      "tags": "warm,zwevend,klassiek"
+      "tags": "warm,zwevend,klassiek",
+      "oneLinerNl": "Een tweede symfonische variant: nog warmer en ronder voor brede orkestklanken.",
+      "oneLinerEn": "A second symphonic take: warmer and rounder for broad orchestral textures."
     },
     {
       "toneNumber": 15,
@@ -440,7 +498,9 @@
       "midiBankMsb": 0,
       "midiBankLsb": 64,
       "midiProgram": 90,
-      "tags": "zwevend,zacht,synthetisch,electronic"
+      "tags": "zwevend,zacht,synthetisch,electronic",
+      "oneLinerNl": "Een zacht, zwevend synthpad dat als wolkendek onder elke melodie schuift.",
+      "oneLinerEn": "A soft, floating synth pad that slides like a cloud bed beneath any melody."
     },
     {
       "toneNumber": 16,
@@ -454,7 +514,9 @@
       "midiBankMsb": 47,
       "midiBankLsb": 65,
       "midiProgram": 3,
-      "tags": "sprankelend,zwevend,fx/cinematic"
+      "tags": "sprankelend,zwevend,fx/cinematic",
+      "oneLinerNl": "Een sprankelende piano met zwevende, klokachtige laag: vleugel met een vleugje fee.",
+      "oneLinerEn": "A sparkling piano with a shimmering, bell-like layer: a grand with a touch of fairy dust."
     },
     {
       "toneNumber": 17,
@@ -468,7 +530,9 @@
       "midiBankMsb": 0,
       "midiBankLsb": 65,
       "midiProgram": 55,
-      "tags": "vintage,jazz"
+      "tags": "vintage,jazz",
+      "oneLinerNl": "Een wordeloze jazzstem die 'doe-ba-dap' meeswingt; speel je melodie en de scat zingt mee.",
+      "oneLinerEn": "A wordless jazz voice that swings along in 'doo-ba-dap'; play a line and the scat sings it back."
     },
     {
       "toneNumber": 18,
@@ -482,7 +546,9 @@
       "midiBankMsb": 0,
       "midiBankLsb": 66,
       "midiProgram": 33,
-      "tags": "akoestisch,donker,jazz"
+      "tags": "akoestisch,donker,jazz",
+      "oneLinerNl": "Akoestische contrabas met een tikje bekken erbij: een compleet ritmesectie-fundament onder je linkerhand.",
+      "oneLinerEn": "Upright bass with a brush of cymbal on top: a whole rhythm-section foundation under your left hand."
     },
     {
       "toneNumber": 1,
@@ -496,7 +562,9 @@
       "midiBankMsb": 8,
       "midiBankLsb": 70,
       "midiProgram": 20,
-      "tags": "akoestisch,kerk/gospel,klassiek"
+      "tags": "akoestisch,kerk/gospel,klassiek",
+      "oneLinerNl": "Het volle pijporgel dat een hele kathedraal vult; majestueus, ademend en eindeloos aanhoudend.",
+      "oneLinerEn": "The full pipe organ that fills a whole cathedral; majestic, breathing and endlessly sustaining."
     },
     {
       "toneNumber": 2,
@@ -510,7 +578,9 @@
       "midiBankMsb": 16,
       "midiBankLsb": 66,
       "midiProgram": 20,
-      "tags": "zacht,kerk/gospel,klassiek"
+      "tags": "zacht,kerk/gospel,klassiek",
+      "oneLinerNl": "De zachte Nason-fluit op 8'-voet: een lieflijk, holpijpachtig orgelregister voor ingetogen passages.",
+      "oneLinerEn": "The gentle Nason flute at 8' pitch: a sweet, stopped-flute organ voice for intimate passages."
     },
     {
       "toneNumber": 3,
@@ -524,7 +594,9 @@
       "midiBankMsb": 0,
       "midiBankLsb": 70,
       "midiProgram": 19,
-      "tags": "vintage,jazz"
+      "tags": "vintage,jazz",
+      "oneLinerNl": "De knisperende combo-jazzorgel met percussieve klik: rechtstreeks uit de kelderclub van de jaren zestig.",
+      "oneLinerEn": "The crisp combo jazz organ with percussive click: straight out of a 1960s basement club."
     },
     {
       "toneNumber": 4,
@@ -538,7 +610,9 @@
       "midiBankMsb": 0,
       "midiBankLsb": 69,
       "midiProgram": 19,
-      "tags": "warm,ballad"
+      "tags": "warm,ballad",
+      "oneLinerNl": "Zacht en zwevend orgel met traag leslie-zweven: gemaakt om onder ballads te ademen.",
+      "oneLinerEn": "A soft, floating organ with slow Leslie swirl: made to breathe beneath ballads."
     },
     {
       "toneNumber": 5,
@@ -552,7 +626,9 @@
       "midiBankMsb": 0,
       "midiBankLsb": 66,
       "midiProgram": 20,
-      "tags": "akoestisch,kerk/gospel,klassiek"
+      "tags": "akoestisch,kerk/gospel,klassiek",
+      "oneLinerNl": "Een ronder, voller kerkorgelregister: ideaal voor koraal en plechtige hymnen.",
+      "oneLinerEn": "A rounder, fuller church-organ registration: ideal for chorales and solemn hymns."
     },
     {
       "toneNumber": 6,
@@ -566,7 +642,9 @@
       "midiBankMsb": 8,
       "midiBankLsb": 69,
       "midiProgram": 20,
-      "tags": "akoestisch,kerk/gospel,klassiek"
+      "tags": "akoestisch,kerk/gospel,klassiek",
+      "oneLinerNl": "Helderder en scherper kerkorgel dan variant 1, met meer bovenstem voor contrapunt.",
+      "oneLinerEn": "A brighter, more cutting church organ than variant 1, with extra upper voice for counterpoint."
     },
     {
       "toneNumber": 7,
@@ -580,7 +658,9 @@
       "midiBankMsb": 0,
       "midiBankLsb": 71,
       "midiProgram": 17,
-      "tags": "vintage,kerk/gospel"
+      "tags": "vintage,kerk/gospel",
+      "oneLinerNl": "Hammond-orgel door een draaiende Leslie: de zwiepende hoorn geeft die typische gospel-swirl die elke kerkdienst optilt.",
+      "oneLinerEn": "Hammond organ through a spinning Leslie: the whirling horn gives that gospel swirl that lifts any Sunday service."
     },
     {
       "toneNumber": 8,
@@ -594,7 +674,9 @@
       "midiBankMsb": 0,
       "midiBankLsb": 69,
       "midiProgram": 17,
-      "tags": "helder,kerk/gospel,klassiek"
+      "tags": "helder,kerk/gospel,klassiek",
+      "oneLinerNl": "Alle registers open: het oorverdovende tutti van het pijporgel in volle glorie.",
+      "oneLinerEn": "Every stop pulled out: the thunderous full tutti of the pipe organ in all its glory."
     },
     {
       "toneNumber": 9,
@@ -608,7 +690,9 @@
       "midiBankMsb": 32,
       "midiBankLsb": 68,
       "midiProgram": 17,
-      "tags": "warm,vintage,jazz"
+      "tags": "warm,vintage,jazz",
+      "oneLinerNl": "Ronde, donkere drawbar-instelling: warm en gedempt, zonder scherpe randjes.",
+      "oneLinerEn": "A round, dark drawbar setting: warm and mellow, with no sharp edges."
     },
     {
       "toneNumber": 10,
@@ -622,7 +706,9 @@
       "midiBankMsb": 32,
       "midiBankLsb": 69,
       "midiProgram": 17,
-      "tags": "zacht,vintage,jazz"
+      "tags": "zacht,vintage,jazz",
+      "oneLinerNl": "Lichte, ijle orgelklank voor luchtige akkoorden hoog in het klavier.",
+      "oneLinerEn": "A light, airy organ voice for breezy chords high up the keyboard."
     },
     {
       "toneNumber": 11,
@@ -636,7 +722,9 @@
       "midiBankMsb": 0,
       "midiBankLsb": 66,
       "midiProgram": 17,
-      "tags": "donker,vintage,jazz"
+      "tags": "donker,vintage,jazz",
+      "oneLinerNl": "Donker, gronderig orgelregister voor de linkerhand: het zware fundament onder een solo.",
+      "oneLinerEn": "A dark, grounded organ voice for the left hand: the heavy bed beneath a solo."
     },
     {
       "toneNumber": 12,
@@ -650,7 +738,9 @@
       "midiBankMsb": 16,
       "midiBankLsb": 64,
       "midiProgram": 17,
-      "tags": "vintage,lo-fi"
+      "tags": "vintage,lo-fi",
+      "oneLinerNl": "De rietachtige bite van een Vox Continental: het knisperende combo-orgel dat de Britse beat van de sixties kleurde.",
+      "oneLinerEn": "The reedy bite of a Vox Continental: the crisp combo organ that coloured the British beat of the sixties."
     },
     {
       "toneNumber": 13,
@@ -664,7 +754,9 @@
       "midiBankMsb": 16,
       "midiBankLsb": 64,
       "midiProgram": 1,
-      "tags": "akoestisch,warm,folk"
+      "tags": "akoestisch,warm,folk",
+      "oneLinerNl": "De huiskamerpiano: intiem, houtig en net iets minder strak dan een vleugel — perfect voor indie en folk.",
+      "oneLinerEn": "The living-room piano: intimate, woody and a touch looser than a grand, perfect for indie and folk."
     },
     {
       "toneNumber": 14,
@@ -678,7 +770,9 @@
       "midiBankMsb": 1,
       "midiBankLsb": 65,
       "midiProgram": 1,
-      "tags": "akoestisch,zacht,ballad"
+      "tags": "akoestisch,zacht,ballad",
+      "oneLinerNl": "Een zachtere buurman van de buffetpiano: gedempte aanslag en ronde toon, gemaakt voor stille ballads.",
+      "oneLinerEn": "A softer cousin of the upright: muted attack and rounded tone, made for hushed ballads."
     },
     {
       "toneNumber": 15,
@@ -692,7 +786,9 @@
       "midiBankMsb": 1,
       "midiBankLsb": 66,
       "midiProgram": 1,
-      "tags": "akoestisch,helder,folk"
+      "tags": "akoestisch,helder,folk",
+      "oneLinerNl": "De buffetpiano met meer glans: helder en doordringend zodat hij boven een bandje uitkomt.",
+      "oneLinerEn": "The upright with extra sparkle: bright and cutting so it sits on top of a band."
     },
     {
       "toneNumber": 16,
@@ -706,7 +802,9 @@
       "midiBankMsb": 8,
       "midiBankLsb": 64,
       "midiProgram": 3,
-      "tags": "akoestisch,helder,percussief"
+      "tags": "akoestisch,helder,percussief",
+      "oneLinerNl": "Een percussieve buffetpiano met bite: hard aangeslagen akkoorden die door een rocknummer beuken.",
+      "oneLinerEn": "A percussive upright with bite: hammered chords built to pound through a rock track."
     },
     {
       "toneNumber": 17,
@@ -720,7 +818,9 @@
       "midiBankMsb": 0,
       "midiBankLsb": 64,
       "midiProgram": 4,
-      "tags": "vintage,lo-fi,jazz"
+      "tags": "vintage,lo-fi,jazz",
+      "oneLinerNl": "De honky-tonk klank van een ontstemde saloonpiano: lo-fi en dansbaar, recht uit de ragtime-era.",
+      "oneLinerEn": "The honky-tonk twang of a detuned saloon piano: lo-fi and danceable, straight from the ragtime era."
     },
     {
       "toneNumber": 18,
@@ -734,7 +834,9 @@
       "midiBankMsb": 2,
       "midiBankLsb": 64,
       "midiProgram": 1,
-      "tags": "vintage,akoestisch,klassiek"
+      "tags": "vintage,akoestisch,klassiek",
+      "oneLinerNl": "De piano zoals Mozart hem kende: lichter, helderder en sneller uitstervend dan zijn moderne nazaat.",
+      "oneLinerEn": "The piano as Mozart knew it: lighter, clearer and quicker to fade than its modern descendant."
     },
     {
       "toneNumber": 19,
@@ -748,7 +850,9 @@
       "midiBankMsb": 2,
       "midiBankLsb": 65,
       "midiProgram": 1,
-      "tags": "vintage,zacht,klassiek"
+      "tags": "vintage,zacht,klassiek",
+      "oneLinerNl": "Een zachtere fortepiano: de klassieke aanslag blijft, maar de toon is ronder en intiemer.",
+      "oneLinerEn": "A mellower fortepiano: the classical attack stays, but the tone turns rounder and more intimate."
     },
     {
       "toneNumber": 20,
@@ -762,7 +866,9 @@
       "midiBankMsb": 2,
       "midiBankLsb": 66,
       "midiProgram": 1,
-      "tags": "vintage,helder,klassiek"
+      "tags": "vintage,helder,klassiek",
+      "oneLinerNl": "Een fellere fortepiano: extra glans en bite voor sprankelende klassieke loopjes.",
+      "oneLinerEn": "A brighter fortepiano: added sparkle and bite for crisp classical runs."
     },
     {
       "toneNumber": 21,
@@ -776,7 +882,9 @@
       "midiBankMsb": 0,
       "midiBankLsb": 67,
       "midiProgram": 7,
-      "tags": "vintage,sprankelend,klassiek"
+      "tags": "vintage,sprankelend,klassiek",
+      "oneLinerNl": "Het klavecimbel: getokkelde snaren met dat sprankelende, mechanische tjingel uit de barok.",
+      "oneLinerEn": "The harpsichord: plucked strings with that sparkling, mechanical jingle of the Baroque."
     },
     {
       "toneNumber": 22,
@@ -790,7 +898,9 @@
       "midiBankMsb": 8,
       "midiBankLsb": 67,
       "midiProgram": 7,
-      "tags": "vintage,sprankelend,klassiek"
+      "tags": "vintage,sprankelend,klassiek",
+      "oneLinerNl": "Klavecimbel met twee koren tegelijk: het 4'-register voegt een octaaf glans toe voor een voller, briljanter geluid.",
+      "oneLinerEn": "Harpsichord with two ranks at once: the 4' stop adds an octave of shimmer for a fuller, brighter sound."
     },
     {
       "toneNumber": 23,
@@ -798,13 +908,15 @@
       "category": "Other",
       "subCategory": "Do Re Mi",
       "origin": "Roland SuperNATURAL",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Solfège",
       "funFacts": null,
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 10,
       "midiProgram": 54,
-      "tags": "zacht,zwevend"
+      "tags": "zacht,zwevend",
+      "oneLinerNl": "Zacht zwevende solfège-stemmen die 'do re mi' zingen, hier in een toonsoort met één kruis.",
+      "oneLinerEn": "Soft, floating solfège voices singing 'do re mi', here in a key with one sharp."
     },
     {
       "toneNumber": 24,
@@ -812,13 +924,15 @@
       "category": "Other",
       "subCategory": "Do Re Mi",
       "origin": "Roland SuperNATURAL",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Solfège",
       "funFacts": null,
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 11,
       "midiProgram": 54,
-      "tags": "zacht,zwevend"
+      "tags": "zacht,zwevend",
+      "oneLinerNl": "Dezelfde zwevende solfège-stemmen, afgestemd op een toonsoort met één mol.",
+      "oneLinerEn": "The same floating solfège voices, tuned to a key with one flat."
     },
     {
       "toneNumber": 25,
@@ -826,13 +940,15 @@
       "category": "Other",
       "subCategory": "Do Re Mi",
       "origin": "Roland SuperNATURAL",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Solfège",
       "funFacts": null,
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 12,
       "midiProgram": 54,
-      "tags": "zacht,zwevend"
+      "tags": "zacht,zwevend",
+      "oneLinerNl": "Zachte solfège-stemmen in een toonsoort met twee kruisen — voor het oefenen van toonladders.",
+      "oneLinerEn": "Gentle solfège voices in a key with two sharps, made for practising scales."
     },
     {
       "toneNumber": 26,
@@ -840,13 +956,15 @@
       "category": "Other",
       "subCategory": "Do Re Mi",
       "origin": "Roland SuperNATURAL",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Solfège",
       "funFacts": null,
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 13,
       "midiProgram": 54,
-      "tags": "zacht,zwevend"
+      "tags": "zacht,zwevend",
+      "oneLinerNl": "Zwevende solfège-stemmen, nu in een toonsoort met twee mollen voor je gehoortraining.",
+      "oneLinerEn": "Floating solfège voices, now in a key with two flats for your ear training."
     },
     {
       "toneNumber": 27,
@@ -860,7 +978,9 @@
       "midiBankMsb": 120,
       "midiBankLsb": 0,
       "midiProgram": 1,
-      "tags": "percussief"
+      "tags": "percussief",
+      "oneLinerNl": "De allround drumkit van de LX708: strakke snare, ronde toms en een crashende ride voor elk genre.",
+      "oneLinerEn": "The LX708's all-round drum kit: tight snare, round toms and a crashing ride for any genre."
     },
     {
       "toneNumber": 28,
@@ -874,7 +994,9 @@
       "midiBankMsb": 120,
       "midiBankLsb": 0,
       "midiProgram": 9,
-      "tags": "percussief"
+      "tags": "percussief",
+      "oneLinerNl": "Dezelfde kit, maar opgenomen met kamergalm: een warme, ademende drumsound met natuurlijke ruimte.",
+      "oneLinerEn": "The same kit recorded with room ambience: a warm, breathing drum sound with natural space."
     },
     {
       "toneNumber": 29,
@@ -888,7 +1010,9 @@
       "midiBankMsb": 120,
       "midiBankLsb": 0,
       "midiProgram": 17,
-      "tags": "percussief,electronic"
+      "tags": "percussief,electronic",
+      "oneLinerNl": "Dikke, gecomprimeerde stadionklap: de bombastische jaren-80 drumsound met maximale punch.",
+      "oneLinerEn": "Thick, compressed stadium thump: the bombastic 1980s drum sound with maximum punch."
     },
     {
       "toneNumber": 30,
@@ -902,7 +1026,9 @@
       "midiBankMsb": 120,
       "midiBankLsb": 0,
       "midiProgram": 25,
-      "tags": "percussief,synthetisch,electronic"
+      "tags": "percussief,synthetisch,electronic",
+      "oneLinerNl": "Volledig elektronische drumklanken: knallende synthetische kicks en snares voor dance en pop.",
+      "oneLinerEn": "Fully electronic drum sounds: punchy synthetic kicks and snares for dance and pop."
     },
     {
       "toneNumber": 31,
@@ -916,7 +1042,9 @@
       "midiBankMsb": 120,
       "midiBankLsb": 0,
       "midiProgram": 26,
-      "tags": "percussief,synthetisch,vintage,electronic"
+      "tags": "percussief,synthetisch,vintage,electronic",
+      "oneLinerNl": "De legendarische TR-808: boomende kick, klikkende snare en die eindeloze tom-toon.",
+      "oneLinerEn": "The legendary TR-808: booming kick, clicking snare and that endless sliding tom."
     },
     {
       "toneNumber": 32,
@@ -930,7 +1058,9 @@
       "midiBankMsb": 120,
       "midiBankLsb": 0,
       "midiProgram": 33,
-      "tags": "percussief,akoestisch,jazz"
+      "tags": "percussief,akoestisch,jazz",
+      "oneLinerNl": "Lichte, soepele akoestische kit met strakke ride: gemaakt voor swing en brushwork.",
+      "oneLinerEn": "A light, supple acoustic kit with a crisp ride, made for swing and brushwork."
     },
     {
       "toneNumber": 33,
@@ -944,7 +1074,9 @@
       "midiBankMsb": 120,
       "midiBankLsb": 0,
       "midiProgram": 41,
-      "tags": "percussief,zacht,akoestisch,jazz"
+      "tags": "percussief,zacht,akoestisch,jazz",
+      "oneLinerNl": "Met bezems bespeeld: het zachte, ruisende vegen over de snare dat jazzballads ademt.",
+      "oneLinerEn": "Played with brushes: the soft, swishing sweep across the snare that breathes jazz ballads."
     },
     {
       "toneNumber": 34,
@@ -958,7 +1090,9 @@
       "midiBankMsb": 120,
       "midiBankLsb": 0,
       "midiProgram": 49,
-      "tags": "percussief,akoestisch,klassiek"
+      "tags": "percussief,akoestisch,klassiek",
+      "oneLinerNl": "Het orkestslagwerk: pauken, bekkens en concertbasdrum voor filmische, klassieke kracht.",
+      "oneLinerEn": "The orchestral percussion: timpani, cymbals and concert bass drum for cinematic, classical power."
     },
     {
       "toneNumber": 35,
@@ -972,7 +1106,9 @@
       "midiBankMsb": 120,
       "midiBankLsb": 0,
       "midiProgram": 57,
-      "tags": "percussief,fx/cinematic"
+      "tags": "percussief,fx/cinematic",
+      "oneLinerNl": "Een toetsenbord vol geluidseffecten: van applaus tot voetstappen, klaar voor je eigen scene.",
+      "oneLinerEn": "A keyboard full of sound effects: from applause to footsteps, ready for your own scene."
     },
     {
       "toneNumber": 36,
@@ -986,7 +1122,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 1,
-      "tags": "akoestisch,helder"
+      "tags": "akoestisch,helder",
+      "oneLinerNl": "De standaard GM2-vleugel: helder, akoestisch en universeel inzetbaar.",
+      "oneLinerEn": "The standard GM2 grand: bright, acoustic and good for anything."
     },
     {
       "toneNumber": 37,
@@ -1000,7 +1138,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 1,
-      "tags": "akoestisch,helder"
+      "tags": "akoestisch,helder",
+      "oneLinerNl": "Piano 1 met 'wide'-stereospreiding: dezelfde vleugel, breder over het stereobeeld.",
+      "oneLinerEn": "Piano 1 with 'wide' stereo spread: the same grand, opened up across the stereo field."
     },
     {
       "toneNumber": 38,
@@ -1014,7 +1154,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 2,
       "midiProgram": 1,
-      "tags": "akoestisch,helder"
+      "tags": "akoestisch,helder",
+      "oneLinerNl": "Piano 1 'detuned': licht ontstemd voor een warme, honky-tonk-achtige zweving.",
+      "oneLinerEn": "Piano 1 'detuned': slightly mistuned for a warm, honky-tonk-style shimmer."
     },
     {
       "toneNumber": 39,
@@ -1028,7 +1170,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 2,
-      "tags": "akoestisch,helder"
+      "tags": "akoestisch,helder",
+      "oneLinerNl": "Een tweede GM2-vleugel met iets ander karakter voor afwisseling in je mix.",
+      "oneLinerEn": "A second GM2 grand with a slightly different character for variety in your mix."
     },
     {
       "toneNumber": 40,
@@ -1042,7 +1186,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 2,
-      "tags": "akoestisch,helder"
+      "tags": "akoestisch,helder",
+      "oneLinerNl": "Piano 2 in 'wide'-stereo: breder uitgesmeerd voor een ruimer klankbeeld.",
+      "oneLinerEn": "Piano 2 in 'wide' stereo: spread wider for a roomier sound."
     },
     {
       "toneNumber": 41,
@@ -1056,7 +1202,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 3,
-      "tags": "akoestisch,helder"
+      "tags": "akoestisch,helder",
+      "oneLinerNl": "De derde GM2-vleugel: een helder, direct alternatief voor pop en song.",
+      "oneLinerEn": "The third GM2 grand: a bright, direct alternative for pop and song work."
     },
     {
       "toneNumber": 42,
@@ -1070,7 +1218,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 3,
-      "tags": "akoestisch,helder"
+      "tags": "akoestisch,helder",
+      "oneLinerNl": "Piano 3 'wide': dezelfde directe vleugel met een ruimere stereospreiding.",
+      "oneLinerEn": "Piano 3 'wide': the same direct grand with a roomier stereo spread."
     },
     {
       "toneNumber": 43,
@@ -1084,7 +1234,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 4,
-      "tags": "akoestisch,helder,vintage,lo-fi"
+      "tags": "akoestisch,helder,vintage,lo-fi",
+      "oneLinerNl": "De bewust ontstemde saloonpiano: twee uiteen gestemde lagen geven die rinkelende cafégalm.",
+      "oneLinerEn": "The deliberately detuned saloon piano: two mistuned layers give that jangly barroom ring."
     },
     {
       "toneNumber": 44,
@@ -1098,7 +1250,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 4,
-      "tags": "akoestisch,helder,vintage,lo-fi"
+      "tags": "akoestisch,helder,vintage,lo-fi",
+      "oneLinerNl": "Variant van de saloonpiano met breder, voller klankbeeld: nog meer rinkelende ragtime-charme.",
+      "oneLinerEn": "A fuller, wider take on the saloon piano: even more jangly ragtime charm."
     },
     {
       "toneNumber": 45,
@@ -1112,7 +1266,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 5,
-      "tags": "vintage,warm,ballad"
+      "tags": "vintage,warm,ballad",
+      "oneLinerNl": "De warme GM2-Rhodes: belachtige tines die zacht onder elke ballad zweven.",
+      "oneLinerEn": "The warm GM2 Rhodes: bell-like tines that float gently beneath any ballad."
     },
     {
       "toneNumber": 46,
@@ -1126,7 +1282,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 5,
-      "tags": "vintage,warm,ballad,lo-fi"
+      "tags": "vintage,warm,ballad,lo-fi",
+      "oneLinerNl": "GM2-Rhodes met een lichte ontstemming: dat zwevende, lo-fi chorus-effect zit ingebakken.",
+      "oneLinerEn": "A GM2 Rhodes with slight detuning baked in: that floating, lo-fi chorus shimmer."
     },
     {
       "toneNumber": 47,
@@ -1140,7 +1298,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 2,
       "midiProgram": 5,
-      "tags": "vintage,warm,ballad"
+      "tags": "vintage,warm,ballad",
+      "oneLinerNl": "De GM2-versie van de vintage Wurlitzer: warm reed-geluid voor multitimbraal werk.",
+      "oneLinerEn": "The GM2 take on the vintage Wurlitzer: warm reed tone for multitimbral work."
     },
     {
       "toneNumber": 48,
@@ -1154,7 +1314,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 3,
       "midiProgram": 5,
-      "tags": "vintage,warm,ballad,lo-fi"
+      "tags": "vintage,warm,ballad,lo-fi",
+      "oneLinerNl": "De vintage jaren-60 elektrische piano uit de GM2-set: warm, simpel en nostalgisch.",
+      "oneLinerEn": "The vintage 1960s electric piano from the GM2 set: warm, simple and nostalgic."
     },
     {
       "toneNumber": 49,
@@ -1168,7 +1330,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 6,
-      "tags": "vintage,warm,ballad"
+      "tags": "vintage,warm,ballad",
+      "oneLinerNl": "De GM2-FM-piano: glasheldere, DX-achtige bel voor jaren-80 pop en ballads.",
+      "oneLinerEn": "The GM2 FM piano: a glassy, DX-style bell for '80s pop and ballads."
     },
     {
       "toneNumber": 50,
@@ -1182,7 +1346,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 6,
-      "tags": "vintage,warm,ballad,lo-fi"
+      "tags": "vintage,warm,ballad,lo-fi",
+      "oneLinerNl": "Een tweede ontstemde GM2-EP, iets voller dan zijn broertje en net zo lo-fi-warm.",
+      "oneLinerEn": "A second detuned GM2 EP, a touch fuller than its sibling and just as lo-fi warm."
     },
     {
       "toneNumber": 51,
@@ -1196,7 +1362,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 2,
       "midiProgram": 6,
-      "tags": "vintage,warm,ballad,synthetisch,electronic"
+      "tags": "vintage,warm,ballad,synthetisch,electronic",
+      "oneLinerNl": "De FM-elektrische piano in stereo: glasheldere, belachtige DX-klank uit de jaren 80.",
+      "oneLinerEn": "The FM electric piano in stereo: glassy, bell-like DX tone straight from the 1980s."
     },
     {
       "toneNumber": 52,
@@ -1210,7 +1378,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 3,
       "midiProgram": 6,
-      "tags": "vintage,warm,ballad,synthetisch"
+      "tags": "vintage,warm,ballad,synthetisch",
+      "oneLinerNl": "De GM2-FM-piano: dat onmiskenbare digitale jaren-80 belgeluid, klaar voor de mix.",
+      "oneLinerEn": "The GM2 FM piano: that unmistakable digital '80s bell tone, ready for the mix."
     },
     {
       "toneNumber": 53,
@@ -1224,7 +1394,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 4,
       "midiProgram": 6,
-      "tags": "vintage,warm,ballad,zwevend,electronic"
+      "tags": "vintage,warm,ballad,zwevend,electronic",
+      "oneLinerNl": "Elektrische piano door een phaser gehaald: dat ronddraaiende, ruimtelijke jaren-70 zwiep.",
+      "oneLinerEn": "Electric piano pushed through a phaser: that swirling, spacey 1970s sweep."
     },
     {
       "toneNumber": 54,
@@ -1238,7 +1410,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 7,
-      "tags": "vintage,sprankelend,klassiek"
+      "tags": "vintage,sprankelend,klassiek",
+      "oneLinerNl": "Het standaard GM2-klavecimbel: getokkeld en sprankelend, klaar voor barokke MIDI-arrangementen.",
+      "oneLinerEn": "The standard GM2 harpsichord: plucked and sparkling, ready for Baroque MIDI arrangements."
     },
     {
       "toneNumber": 55,
@@ -1252,7 +1426,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 7,
-      "tags": "vintage,sprankelend,klassiek"
+      "tags": "vintage,sprankelend,klassiek",
+      "oneLinerNl": "GM2-klavecimbel met gekoppelde manualen: extra koren tegelijk voor een vol, briljant tutti-geluid.",
+      "oneLinerEn": "GM2 harpsichord with coupled manuals: extra ranks together for a full, brilliant tutti sound."
     },
     {
       "toneNumber": 56,
@@ -1266,7 +1442,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 2,
       "midiProgram": 7,
-      "tags": "vintage,sprankelend,klassiek"
+      "tags": "vintage,sprankelend,klassiek",
+      "oneLinerNl": "GM2-klavecimbel met meer aanzet-'tjak': het mechanische geluid van de plectra staat wat prominenter voorop.",
+      "oneLinerEn": "GM2 harpsichord with more attack 'click': the mechanical pluck of the quills sits more up front."
     },
     {
       "toneNumber": 57,
@@ -1280,7 +1458,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 3,
       "midiProgram": 7,
-      "tags": "vintage,sprankelend,klassiek"
+      "tags": "vintage,sprankelend,klassiek",
+      "oneLinerNl": "Een open GM2-klavecimbelvariant: net iets andere kleur en galm op hetzelfde getokkelde principe.",
+      "oneLinerEn": "An open GM2 harpsichord variant: a slightly different colour and bloom on the same plucked principle."
     },
     {
       "toneNumber": 58,
@@ -1294,7 +1474,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 8,
-      "tags": "percussief,vintage"
+      "tags": "percussief,vintage",
+      "oneLinerNl": "De GM2-Clavinet: dezelfde percussieve funk-bite, klaar voor multitimbraal gebruik.",
+      "oneLinerEn": "The GM2 Clavinet: the same percussive funk bite, ready for multitimbral use."
     },
     {
       "toneNumber": 59,
@@ -1308,7 +1490,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 8,
-      "tags": "percussief,vintage"
+      "tags": "percussief,vintage",
+      "oneLinerNl": "Een Clavinet met pulserende beweging: het funk-knetteren krijgt een ritmische puls.",
+      "oneLinerEn": "A Clavinet with pulsing movement: the funky snap gets a rhythmic throb."
     },
     {
       "toneNumber": 60,
@@ -1322,7 +1506,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 9,
-      "tags": "percussief,sprankelend,metallic"
+      "tags": "percussief,sprankelend,metallic",
+      "oneLinerNl": "Hamertjes op stalen staafjes: het tere, hemelse geklingel van de Suikerfee.",
+      "oneLinerEn": "Hammers on steel bars: the delicate, heavenly chime of the Sugar Plum Fairy."
     },
     {
       "toneNumber": 61,
@@ -1336,7 +1522,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 10,
-      "tags": "percussief,sprankelend,metallic"
+      "tags": "percussief,sprankelend,metallic",
+      "oneLinerNl": "Heldere, doordringende metalen plaatjes: het sprankelende klokkenspel van fanfare en orkest.",
+      "oneLinerEn": "Bright, piercing metal bars: the sparkling bells of marching band and orchestra."
     },
     {
       "toneNumber": 62,
@@ -1350,7 +1538,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 11,
-      "tags": "percussief,sprankelend,metallic"
+      "tags": "percussief,sprankelend,metallic",
+      "oneLinerNl": "Het breekbare, nostalgische tingelen van een opwindbaar speeldoosje.",
+      "oneLinerEn": "The fragile, nostalgic tinkle of a wind-up music box."
     },
     {
       "toneNumber": 63,
@@ -1364,7 +1554,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 12,
-      "tags": "percussief,sprankelend,metallic"
+      "tags": "percussief,sprankelend,metallic",
+      "oneLinerNl": "Warme metalen platen met motorgedreven vibrato: de zwevende glans van coole jazz.",
+      "oneLinerEn": "Warm metal bars with motor-driven vibrato: the floating shimmer of cool jazz."
     },
     {
       "toneNumber": 64,
@@ -1378,7 +1570,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 12,
-      "tags": "percussief,sprankelend,metallic"
+      "tags": "percussief,sprankelend,metallic",
+      "oneLinerNl": "Vollere variant van de vibrafoon: rijkere resonantie en een nog dromeriger zweving.",
+      "oneLinerEn": "A fuller take on the vibraphone: richer resonance and an even dreamier shimmer."
     },
     {
       "toneNumber": 65,
@@ -1392,7 +1586,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 13,
-      "tags": "percussief,aards,akoestisch"
+      "tags": "percussief,aards,akoestisch",
+      "oneLinerNl": "Houten staven met diepe resonatoren: de warme, aardse en houten toon van Midden-Amerika.",
+      "oneLinerEn": "Wooden bars over deep resonators: the warm, earthy, woody tone of Central America."
     },
     {
       "toneNumber": 66,
@@ -1406,7 +1602,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 13,
-      "tags": "percussief,aards,akoestisch"
+      "tags": "percussief,aards,akoestisch",
+      "oneLinerNl": "Vollere marimba-variant: rondere, dieper resonerende houten klank.",
+      "oneLinerEn": "A fuller marimba variant: a rounder, more deeply resonant woody sound."
     },
     {
       "toneNumber": 67,
@@ -1420,7 +1618,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 14,
-      "tags": "percussief,aards,akoestisch"
+      "tags": "percussief,aards,akoestisch",
+      "oneLinerNl": "Houten staven, droge klap: heldere, percussieve tonen die kort opspringen en meteen weer stil zijn.",
+      "oneLinerEn": "Wooden bars, dry strike: bright, percussive notes that pop up and fall silent at once."
     },
     {
       "toneNumber": 68,
@@ -1434,7 +1634,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 15,
-      "tags": "metallic,sprankelend,kerk/gospel"
+      "tags": "metallic,sprankelend,kerk/gospel",
+      "oneLinerNl": "Lange metalen buizen die galmen als kerkklokken: plechtig, sprankelend en eindeloos uitklinkend.",
+      "oneLinerEn": "Long metal tubes ringing like church bells: solemn, shimmering and endlessly resonant."
     },
     {
       "toneNumber": 69,
@@ -1448,7 +1650,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 15,
-      "tags": "metallic,sprankelend,kerk/gospel"
+      "tags": "metallic,sprankelend,kerk/gospel",
+      "oneLinerNl": "Een diepe bronzen luidklok: zware aanslag met brede, trage galm die de hele ruimte vult.",
+      "oneLinerEn": "A deep bronze tolling bell: heavy strike with a broad, slow bloom that fills the room."
     },
     {
       "toneNumber": 70,
@@ -1462,7 +1666,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 2,
       "midiProgram": 15,
-      "tags": "metallic,sprankelend,kerk/gospel"
+      "tags": "metallic,sprankelend,kerk/gospel",
+      "oneLinerNl": "Een toren vol klokken: heldere beiaardklanken die als een melodie over de daken zweven.",
+      "oneLinerEn": "A tower full of bells: bright carillon tones drifting like a melody over the rooftops."
     },
     {
       "toneNumber": 71,
@@ -1476,7 +1682,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 16,
-      "tags": "sprankelend,metallic,wereldmuziek"
+      "tags": "sprankelend,metallic,wereldmuziek",
+      "oneLinerNl": "Het Perzische hakkebord: sprankelende, metallic tonen aangeslagen met fijne houten hamertjes.",
+      "oneLinerEn": "The Persian hammered dulcimer: shimmering, metallic notes struck with delicate wooden mallets."
     },
     {
       "toneNumber": 72,
@@ -1490,7 +1698,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 17,
-      "tags": "warm,vintage"
+      "tags": "warm,vintage",
+      "oneLinerNl": "Het standaard GM2-trekkenorgel: warm en vintage, klaar voor pop en rock.",
+      "oneLinerEn": "The standard GM2 drawbar organ: warm and vintage, ready for pop and rock."
     },
     {
       "toneNumber": 73,
@@ -1504,7 +1714,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 17,
-      "tags": "warm,vintage"
+      "tags": "warm,vintage",
+      "oneLinerNl": "GM2-orgel met ingebouwde tremolo: dat golvende, pulserende zweven zit er al in.",
+      "oneLinerEn": "A GM2 organ with built-in tremolo: that wavering, pulsing swirl is baked right in."
     },
     {
       "toneNumber": 74,
@@ -1518,7 +1730,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 2,
       "midiProgram": 17,
-      "tags": "warm,vintage,lo-fi"
+      "tags": "warm,vintage,lo-fi",
+      "oneLinerNl": "GM2-versie van het sixties combo-orgel: iets warmer en ronder, klaar voor multitimbrale tracks.",
+      "oneLinerEn": "GM2 take on the sixties combo organ: a touch warmer and rounder, ready for multitimbral tracks."
     },
     {
       "toneNumber": 75,
@@ -1532,7 +1746,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 3,
       "midiProgram": 17,
-      "tags": "warm,vintage"
+      "tags": "warm,vintage",
+      "oneLinerNl": "Tweede GM2-orgelvariant: een ander drawbar-mengsel met iets meer body.",
+      "oneLinerEn": "A second GM2 organ variant: a different drawbar blend with a touch more body."
     },
     {
       "toneNumber": 76,
@@ -1546,7 +1762,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 18,
-      "tags": "warm,vintage"
+      "tags": "warm,vintage",
+      "oneLinerNl": "GM2-orgel met percussie-aanslag: die korte tik op elke noot geeft het bite.",
+      "oneLinerEn": "A GM2 organ with percussion attack: that short click on each note gives it bite."
     },
     {
       "toneNumber": 77,
@@ -1560,7 +1778,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 18,
-      "tags": "warm,vintage"
+      "tags": "warm,vintage",
+      "oneLinerNl": "GM2-orgel met chorus-effect: breder en glanzender door de licht ontstemde lagen.",
+      "oneLinerEn": "A GM2 organ with chorus: wider and shinier thanks to its slightly detuned layers."
     },
     {
       "toneNumber": 78,
@@ -1574,7 +1794,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 2,
       "midiProgram": 18,
-      "tags": "warm,vintage"
+      "tags": "warm,vintage",
+      "oneLinerNl": "Tweede percussie-orgelvariant: een scherpere tik voor funky stabs en riffs.",
+      "oneLinerEn": "A second percussion-organ variant: a sharper click for funky stabs and riffs."
     },
     {
       "toneNumber": 79,
@@ -1588,7 +1810,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 19,
-      "tags": "warm,vintage"
+      "tags": "warm,vintage",
+      "oneLinerNl": "Het overstuurde rockorgel met overdrive-bite: gemaakt om boven een band uit te schreeuwen.",
+      "oneLinerEn": "The overdriven rock organ with grit: built to scream out over a full band."
     },
     {
       "toneNumber": 80,
@@ -1602,7 +1826,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 20,
-      "tags": "akoestisch,kerk/gospel,klassiek"
+      "tags": "akoestisch,kerk/gospel,klassiek",
+      "oneLinerNl": "Het standaard GM2-kerkorgel: warm en breed inzetbaar voor sacrale begeleiding.",
+      "oneLinerEn": "The standard GM2 church organ: warm and broadly useful for sacred accompaniment."
     },
     {
       "toneNumber": 81,
@@ -1616,7 +1842,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 20,
-      "tags": "akoestisch,kerk/gospel,klassiek"
+      "tags": "akoestisch,kerk/gospel,klassiek",
+      "oneLinerNl": "GM2-kerkorgel met een ander registermengsel: net iets helderder dan variant 1.",
+      "oneLinerEn": "A GM2 church organ with a different stop blend: just a touch brighter than variant 1."
     },
     {
       "toneNumber": 82,
@@ -1630,7 +1858,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 2,
       "midiProgram": 20,
-      "tags": "akoestisch,kerk/gospel,klassiek"
+      "tags": "akoestisch,kerk/gospel,klassiek",
+      "oneLinerNl": "De derde GM2-kerkorgelvariant: voller en plechtiger voor grote slotakkoorden.",
+      "oneLinerEn": "The third GM2 church-organ variant: fuller and grander for big closing chords."
     },
     {
       "toneNumber": 83,
@@ -1644,7 +1874,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 21,
-      "tags": "zacht,vintage,folk"
+      "tags": "zacht,vintage,folk",
+      "oneLinerNl": "Het trapharmonium uit de huiskamer: zachte, rietige tonen met die typische ademende folkklank.",
+      "oneLinerEn": "The parlour harmonium: soft, reedy tones with that characteristic breathing folk warmth."
     },
     {
       "toneNumber": 84,
@@ -1658,7 +1890,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 21,
-      "tags": "zacht,vintage,folk"
+      "tags": "zacht,vintage,folk",
+      "oneLinerNl": "Een luchtiger harmoniumvariant: kleiner, ademend en wat hijgerig, ideaal voor speelse folkdeuntjes.",
+      "oneLinerEn": "A lighter harmonium variant: small, breathy and slightly puffing, perfect for playful folk tunes."
     },
     {
       "toneNumber": 85,
@@ -1672,7 +1906,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 22,
-      "tags": "warm,akoestisch,folk,wereldmuziek"
+      "tags": "warm,akoestisch,folk,wereldmuziek",
+      "oneLinerNl": "De klassieke trekzak: warme, ademende akkoorden die meteen naar café en straatmuziek ruiken.",
+      "oneLinerEn": "The classic squeezebox: warm, breathing chords that instantly evoke cafe and street music."
     },
     {
       "toneNumber": 86,
@@ -1686,7 +1922,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 22,
-      "tags": "warm,akoestisch,folk,wereldmuziek"
+      "tags": "warm,akoestisch,folk,wereldmuziek",
+      "oneLinerNl": "Een tweede accordeonkleur: net iets feller en musettiger, geknipt voor Franse en folkbalsfeer.",
+      "oneLinerEn": "A second accordion colour: a touch brighter and more musette, made for French and folk-dance moods."
     },
     {
       "toneNumber": 87,
@@ -1700,7 +1938,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 23,
-      "tags": "warm,akoestisch,folk"
+      "tags": "warm,akoestisch,folk",
+      "oneLinerNl": "Het mondharmonica-riet: warm, hees en bluesy, met die onmiskenbare ademende zucht.",
+      "oneLinerEn": "The harmonica reed: warm, raspy and bluesy, with that unmistakable breathy sigh."
     },
     {
       "toneNumber": 88,
@@ -1714,7 +1954,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 24,
-      "tags": "warm,akoestisch,wereldmuziek"
+      "tags": "warm,akoestisch,wereldmuziek",
+      "oneLinerNl": "De ziel van de tango: een melancholische trekharmonica die snikt en zucht in Buenos Aires-stijl.",
+      "oneLinerEn": "The soul of tango: a melancholic squeezebox that sobs and sighs in Buenos Aires style."
     },
     {
       "toneNumber": 89,
@@ -1728,7 +1970,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 25,
-      "tags": "akoestisch,warm,folk,zacht,klassiek"
+      "tags": "akoestisch,warm,folk,zacht,klassiek",
+      "oneLinerNl": "De klassieke gitaar met nylonsnaren: zacht, warm en rond, perfect voor Spaanse en intieme stukken.",
+      "oneLinerEn": "The classical guitar with nylon strings: soft, warm and round, perfect for Spanish and intimate pieces."
     },
     {
       "toneNumber": 90,
@@ -1742,7 +1986,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 25,
-      "tags": "akoestisch,warm,folk,wereldmuziek"
+      "tags": "akoestisch,warm,folk,wereldmuziek",
+      "oneLinerNl": "De vrolijke Hawaiiaanse mini-gitaar: licht, tokkelend en zonnig met vier nylonsnaren.",
+      "oneLinerEn": "The cheerful Hawaiian mini-guitar: light, strummy and sunny on four nylon strings."
     },
     {
       "toneNumber": 91,
@@ -1756,7 +2002,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 2,
       "midiProgram": 25,
-      "tags": "akoestisch,warm,folk,zacht,klassiek"
+      "tags": "akoestisch,warm,folk,zacht,klassiek",
+      "oneLinerNl": "Nylongitaar met meer open ruimte: ademende variant waarin het aanslag- en lichaamsgeluid duidelijker meekomt.",
+      "oneLinerEn": "A more open nylon guitar: a breathier variant where pluck and body noise come through more clearly."
     },
     {
       "toneNumber": 92,
@@ -1770,7 +2018,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 3,
       "midiProgram": 25,
-      "tags": "akoestisch,warm,folk,zacht,klassiek"
+      "tags": "akoestisch,warm,folk,zacht,klassiek",
+      "oneLinerNl": "Een tweede nylongitaarkleur: net iets voller en directer, geknipt voor solo- en begeleidingswerk.",
+      "oneLinerEn": "A second nylon-guitar colour: a touch fuller and more direct, suited to solo and accompaniment work."
     },
     {
       "toneNumber": 93,
@@ -1784,7 +2034,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 26,
-      "tags": "akoestisch,warm,folk"
+      "tags": "akoestisch,warm,folk",
+      "oneLinerNl": "De westerngitaar met stalen snaren: helder, rinkelend en stevig, de ruggengraat van folk en pop.",
+      "oneLinerEn": "The steel-string acoustic: bright, ringing and sturdy, the backbone of folk and pop."
     },
     {
       "toneNumber": 94,
@@ -1798,7 +2050,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 26,
-      "tags": "akoestisch,warm,folk,sprankelend"
+      "tags": "akoestisch,warm,folk,sprankelend",
+      "oneLinerNl": "De twaalfsnarige gitaar: gekoppelde snaren geven een sprankelende, koorachtige glans aan elk akkoord.",
+      "oneLinerEn": "The twelve-string guitar: paired strings lend every chord a shimmering, choir-like jangle."
     },
     {
       "toneNumber": 95,
@@ -1812,7 +2066,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 2,
       "midiProgram": 26,
-      "tags": "akoestisch,warm,folk,wereldmuziek"
+      "tags": "akoestisch,warm,folk,wereldmuziek",
+      "oneLinerNl": "De mandoline met dubbele snaren: helder, tremolerend en springerig, hart van folk en bluegrass.",
+      "oneLinerEn": "The double-strung mandolin: bright, tremolo-rich and springy, the heart of folk and bluegrass."
     },
     {
       "toneNumber": 96,
@@ -1826,7 +2082,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 3,
       "midiProgram": 26,
-      "tags": "akoestisch,warm,folk"
+      "tags": "akoestisch,warm,folk",
+      "oneLinerNl": "Stalen gitaar met extra body-resonantie: voller, houtiger geluid waarin de kast hoorbaar meeklinkt.",
+      "oneLinerEn": "Steel guitar with extra body resonance: a fuller, woodier sound where the soundbox audibly rings along."
     },
     {
       "toneNumber": 97,
@@ -1840,7 +2098,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 27,
-      "tags": "warm,vintage,jazz"
+      "tags": "warm,vintage,jazz",
+      "oneLinerNl": "De warme hollow-body jazzgitaar: rond, donker en rokerig, gemaakt voor smooth akkoorden en walking lines.",
+      "oneLinerEn": "The warm hollow-body jazz guitar: round, dark and smoky, made for smooth chords and walking lines."
     },
     {
       "toneNumber": 98,
@@ -1854,7 +2114,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 27,
-      "tags": "warm,vintage,jazz,wereldmuziek"
+      "tags": "warm,vintage,jazz,wereldmuziek",
+      "oneLinerNl": "De glijdende Hawaiiaanse steelgitaar: zwoele, zingende glissando's die tussen noten in smelten.",
+      "oneLinerEn": "The sliding Hawaiian steel guitar: sultry, singing glissandos that melt between the notes."
     },
     {
       "toneNumber": 99,
@@ -1868,7 +2130,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 28,
-      "tags": "helder,percussief"
+      "tags": "helder,percussief",
+      "oneLinerNl": "Onbewerkte elektrische gitaar: helder, percussief en strak, klaar voor funkakkoorden of clean arpeggio's.",
+      "oneLinerEn": "An untreated electric guitar: bright, percussive and tight, ready for funk chords or clean arpeggios."
     },
     {
       "toneNumber": 100,
@@ -1882,7 +2146,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 28,
-      "tags": "helder,percussief"
+      "tags": "helder,percussief",
+      "oneLinerNl": "Clean gitaar met een vleugje chorus: glinsterend en breed, de pop-rhythm-sound van de jaren 80.",
+      "oneLinerEn": "Clean guitar with a touch of chorus: shimmering and wide, the 1980s pop rhythm sound."
     },
     {
       "toneNumber": 101,
@@ -1896,7 +2162,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 2,
       "midiProgram": 28,
-      "tags": "helder,percussief"
+      "tags": "helder,percussief",
+      "oneLinerNl": "Een midden-getunede gitaar: warmer dan clean, nog zonder vervorming, ideaal voor begeleiding.",
+      "oneLinerEn": "A mid-toned guitar: warmer than fully clean, still undistorted, ideal for backing parts."
     },
     {
       "toneNumber": 102,
@@ -1910,7 +2178,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 29,
-      "tags": "helder,percussief"
+      "tags": "helder,percussief",
+      "oneLinerNl": "Palm-muted gitaar: gedempte, percussieve plukken die ritmisch en strak in de mix zitten.",
+      "oneLinerEn": "Palm-muted guitar: muffled, percussive plucks that sit tight and rhythmic in the mix."
     },
     {
       "toneNumber": 103,
@@ -1924,7 +2194,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 29,
-      "tags": "helder,percussief"
+      "tags": "helder,percussief",
+      "oneLinerNl": "Korte, percussieve funk-aanslag: knisperende sechtiende noten die schreeuwen om een wah-pedaal.",
+      "oneLinerEn": "Short, percussive funk attack: crisp sixteenth-note chops that beg for a wah pedal."
     },
     {
       "toneNumber": 104,
@@ -1938,7 +2210,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 2,
       "midiProgram": 29,
-      "tags": "helder,percussief"
+      "tags": "helder,percussief",
+      "oneLinerNl": "Tweede funk-variant met meer bite: scherpere muting voor strakke, ritmische riffs.",
+      "oneLinerEn": "A second funk variant with more bite: sharper muting for tight, rhythmic riffs."
     },
     {
       "toneNumber": 105,
@@ -1952,7 +2226,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 3,
       "midiProgram": 29,
-      "tags": "helder,percussief"
+      "tags": "helder,percussief",
+      "oneLinerNl": "Dichtere choruslaag op een clean gitaar: dromeriger en zwevender dan Chorus Gt 1.",
+      "oneLinerEn": "A denser chorus layer over a clean guitar: dreamier and more floating than Chorus Gt 1."
     },
     {
       "toneNumber": 106,
@@ -1966,7 +2242,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 30,
-      "tags": "metallic,electronic"
+      "tags": "metallic,electronic",
+      "oneLinerNl": "Warme overdrive: een licht overstuurde buizenversterker, zangerig genoeg voor bluesy solo's.",
+      "oneLinerEn": "Warm overdrive: a gently pushed tube amp, singing enough for bluesy solos."
     },
     {
       "toneNumber": 107,
@@ -1980,7 +2258,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 30,
-      "tags": "metallic,electronic"
+      "tags": "metallic,electronic",
+      "oneLinerNl": "De gillende pinch harmonic: metalen squeal die rock- en metal-solo's hun bite geeft.",
+      "oneLinerEn": "The squealing pinch harmonic: a metallic squeal that gives rock and metal solos their bite."
     },
     {
       "toneNumber": 108,
@@ -1994,7 +2274,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 31,
-      "tags": "metallic,electronic"
+      "tags": "metallic,electronic",
+      "oneLinerNl": "Volle distortion: agressieve, sustainrijke leadtoon voor rock- en metal-riffs.",
+      "oneLinerEn": "Full-on distortion: an aggressive, sustain-rich lead tone for rock and metal riffs."
     },
     {
       "toneNumber": 109,
@@ -2008,7 +2290,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 31,
-      "tags": "metallic,electronic,fx/cinematic"
+      "tags": "metallic,electronic,fx/cinematic",
+      "oneLinerNl": "Aanhoudende gitaarfeedback: die zwevende, gillende sustain als de versterker terugkoppelt.",
+      "oneLinerEn": "Sustained guitar feedback: that floating, screaming sustain when the amp howls back."
     },
     {
       "toneNumber": 110,
@@ -2022,7 +2306,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 2,
       "midiProgram": 31,
-      "tags": "metallic,electronic"
+      "tags": "metallic,electronic",
+      "oneLinerNl": "Vervormde rhythm-gitaar: stevige powerchords met grit, het fundament van hardrock.",
+      "oneLinerEn": "Distorted rhythm guitar: chunky power chords with grit, the backbone of hard rock."
     },
     {
       "toneNumber": 111,
@@ -2036,7 +2322,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 32,
-      "tags": "metallic,zwevend,fx/cinematic"
+      "tags": "metallic,zwevend,fx/cinematic",
+      "oneLinerNl": "Belheldere natuurlijke flageoletten: zwevende, metalen boventonen die ijl wegklinken.",
+      "oneLinerEn": "Bell-clear natural harmonics: floating, metallic overtones that ring away into air."
     },
     {
       "toneNumber": 112,
@@ -2050,7 +2338,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 32,
-      "tags": "metallic,zwevend,fx/cinematic"
+      "tags": "metallic,zwevend,fx/cinematic",
+      "oneLinerNl": "Tweede feedbackvariant: hoger en metalliger, een zwevende toon voor cinematische lagen.",
+      "oneLinerEn": "A second feedback variant: higher and more metallic, a floating tone for cinematic layers."
     },
     {
       "toneNumber": 113,
@@ -2064,7 +2354,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 33,
-      "tags": "akoestisch,donker,jazz"
+      "tags": "akoestisch,donker,jazz",
+      "oneLinerNl": "De warme, houten thump van een gestreken contrabas: het walking-bass-fundament van elke jazzclub.",
+      "oneLinerEn": "The warm, woody thump of a plucked upright bass: the walking-bass backbone of any jazz club."
     },
     {
       "toneNumber": 114,
@@ -2078,7 +2370,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 34,
-      "tags": "warm,donker"
+      "tags": "warm,donker",
+      "oneLinerNl": "Met de vingers getokkelde elektrische bas: warm, rond en donker, het groove-fundament.",
+      "oneLinerEn": "A finger-plucked electric bass: warm, round and dark, the foundation of the groove."
     },
     {
       "toneNumber": 115,
@@ -2092,7 +2386,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 34,
-      "tags": "warm,donker"
+      "tags": "warm,donker",
+      "oneLinerNl": "Slap-en-pop bas: percussief duimslag en gepopte snaren, de funk- en disco-groove.",
+      "oneLinerEn": "Slap-and-pop bass: percussive thumb thumps and popped strings, the funk and disco groove."
     },
     {
       "toneNumber": 116,
@@ -2106,7 +2402,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 35,
-      "tags": "warm,donker"
+      "tags": "warm,donker",
+      "oneLinerNl": "Bas met plectrum: stugger en bijtender dan vingerbas, met meer aanslag voor rock.",
+      "oneLinerEn": "Bass played with a pick: stiffer and punchier than fingered bass, with more attack for rock."
     },
     {
       "toneNumber": 117,
@@ -2120,7 +2418,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 36,
-      "tags": "warm,donker,zacht,jazz"
+      "tags": "warm,donker,zacht,jazz",
+      "oneLinerNl": "Fretloze basgitaar: glijdende glissando's en een warme, zingende toon voor jazz en ballads.",
+      "oneLinerEn": "Fretless bass: gliding slides and a warm, singing tone made for jazz and ballads."
     },
     {
       "toneNumber": 118,
@@ -2134,7 +2434,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 37,
-      "tags": "percussief,donker"
+      "tags": "percussief,donker",
+      "oneLinerNl": "Funky slapbas: duim die de snaar laat knallen, met die typische percussieve tik.",
+      "oneLinerEn": "Funky slap bass: thumb-popped strings with that signature percussive snap."
     },
     {
       "toneNumber": 119,
@@ -2148,7 +2450,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 38,
-      "tags": "percussief,donker"
+      "tags": "percussief,donker",
+      "oneLinerNl": "Een tweede slapbas-variant: scherper en agressiever, klaar voor strakke funkgrooves.",
+      "oneLinerEn": "A second slap-bass variant: brighter and punchier, ready for tight funk grooves."
     },
     {
       "toneNumber": 120,
@@ -2162,7 +2466,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 39,
-      "tags": "synthetisch,donker,electronic"
+      "tags": "synthetisch,donker,electronic",
+      "oneLinerNl": "De klassieke analoge synthbas: rond, vet en het fundament van menig electro-track.",
+      "oneLinerEn": "The classic analogue synth bass: round, fat and the foundation of countless electro tracks."
     },
     {
       "toneNumber": 121,
@@ -2176,7 +2482,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 39,
-      "tags": "synthetisch,donker,electronic"
+      "tags": "synthetisch,donker,electronic",
+      "oneLinerNl": "Een warmere synthbas-variant: zachtere aanzet en afgeronde toppen, minder bijtend.",
+      "oneLinerEn": "A warmer synth-bass variant: softer attack and rounded highs, less bite."
     },
     {
       "toneNumber": 122,
@@ -2190,7 +2498,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 2,
       "midiProgram": 39,
-      "tags": "synthetisch,donker,electronic"
+      "tags": "synthetisch,donker,electronic",
+      "oneLinerNl": "Een derde synthbas-smaak: dikker en dieper, voor zware electronic onderlagen.",
+      "oneLinerEn": "A third synth-bass flavour: thicker and deeper, for heavy electronic underpinnings."
     },
     {
       "toneNumber": 123,
@@ -2204,7 +2514,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 3,
       "midiProgram": 39,
-      "tags": "synthetisch,donker,electronic"
+      "tags": "synthetisch,donker,electronic",
+      "oneLinerNl": "De Clavinet getransponeerd naar de kelder: een donkere, synthetische funk-bas.",
+      "oneLinerEn": "The Clavinet dropped to the basement: a dark, synthetic funk bass."
     },
     {
       "toneNumber": 124,
@@ -2218,7 +2530,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 4,
       "midiProgram": 39,
-      "tags": "synthetisch,donker,electronic"
+      "tags": "synthetisch,donker,electronic",
+      "oneLinerNl": "Synth-bas met harde hammer-aanslag: donker, electronisch en strak voor dance en hiphop.",
+      "oneLinerEn": "A synth bass with a hard hammer attack: dark, electronic and tight for dance and hip-hop."
     },
     {
       "toneNumber": 125,
@@ -2232,7 +2546,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 40,
-      "tags": "synthetisch,donker,electronic"
+      "tags": "synthetisch,donker,electronic",
+      "oneLinerNl": "Strakke, helderdere synthbas: bijtende aanslag die door de mix snijdt.",
+      "oneLinerEn": "Tight, brighter synth bass: a biting attack that cuts through the mix."
     },
     {
       "toneNumber": 126,
@@ -2246,7 +2562,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 40,
-      "tags": "synthetisch,donker,electronic"
+      "tags": "synthetisch,donker,electronic",
+      "oneLinerNl": "Een vierde synthbas-variant: extra resonant en kleurrijk voor moderne dancegrooves.",
+      "oneLinerEn": "A fourth synth-bass variant: extra resonant and colourful for modern dance grooves."
     },
     {
       "toneNumber": 127,
@@ -2260,7 +2578,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 2,
       "midiProgram": 40,
-      "tags": "synthetisch,donker,electronic"
+      "tags": "synthetisch,donker,electronic",
+      "oneLinerNl": "Rubberachtige synthbas: elastische, stuiterende toon die meeveert met de groove.",
+      "oneLinerEn": "Rubbery synth bass: an elastic, bouncing tone that springs along with the groove."
     },
     {
       "toneNumber": 128,
@@ -2274,7 +2594,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 3,
       "midiProgram": 40,
-      "tags": "synthetisch,donker,electronic"
+      "tags": "synthetisch,donker,electronic",
+      "oneLinerNl": "Een korte synthpuls met scherpe aanzet: percussief accent voor electronic ritmes.",
+      "oneLinerEn": "A short synth pulse with a sharp attack: a percussive accent for electronic rhythms."
     },
     {
       "toneNumber": 129,
@@ -2288,7 +2610,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 41,
-      "tags": "akoestisch,klassiek"
+      "tags": "akoestisch,klassiek",
+      "oneLinerNl": "De GM2-soloviool: akoestisch en helder voor klassieke melodielijnen.",
+      "oneLinerEn": "The GM2 solo violin: acoustic and bright for classical melodic lines."
     },
     {
       "toneNumber": 130,
@@ -2302,7 +2626,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 41,
-      "tags": "akoestisch,klassiek,zacht,ballad"
+      "tags": "akoestisch,klassiek,zacht,ballad",
+      "oneLinerNl": "Een viool met trage, zwoele inzet die zacht opzwelt in ballads.",
+      "oneLinerEn": "A violin with a slow, sultry attack that swells softly through ballads."
     },
     {
       "toneNumber": 131,
@@ -2316,7 +2642,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 42,
-      "tags": "akoestisch,klassiek"
+      "tags": "akoestisch,klassiek",
+      "oneLinerNl": "De altviool: donkerder en warmer dan de viool, het fluwelen midden van het strijkkwartet.",
+      "oneLinerEn": "The viola: darker and warmer than the violin, the velvet middle of the string quartet."
     },
     {
       "toneNumber": 132,
@@ -2330,7 +2658,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 43,
-      "tags": "akoestisch,klassiek"
+      "tags": "akoestisch,klassiek",
+      "oneLinerNl": "De GM2-cello: een akoestische, klassieke strijkklank voor betrouwbaar General MIDI-werk.",
+      "oneLinerEn": "The GM2 cello: an acoustic, classical bowed tone for reliable General MIDI playback."
     },
     {
       "toneNumber": 133,
@@ -2344,7 +2674,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 44,
-      "tags": "akoestisch,klassiek"
+      "tags": "akoestisch,klassiek",
+      "oneLinerNl": "De gestreken contrabas uit het symfonieorkest: dieper en klassieker dan zijn jazz-broertje.",
+      "oneLinerEn": "The bowed double bass of the symphony orchestra: deeper and more classical than its jazz sibling."
     },
     {
       "toneNumber": 134,
@@ -2358,7 +2690,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 45,
-      "tags": "zwevend,klassiek"
+      "tags": "zwevend,klassiek",
+      "oneLinerNl": "Trillende strijkers: snel heen-en-weer strijken voor spanning en filmische dreiging.",
+      "oneLinerEn": "Trembling strings: rapid back-and-forth bowing for suspense and cinematic dread."
     },
     {
       "toneNumber": 135,
@@ -2372,7 +2706,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 46,
-      "tags": "percussief,klassiek"
+      "tags": "percussief,klassiek",
+      "oneLinerNl": "De GM2-pizzicato: dezelfde geplukte strijkerstik, klaar voor General MIDI-songs.",
+      "oneLinerEn": "The GM2 pizzicato: the same plucked-string tick, ready for General MIDI songs."
     },
     {
       "toneNumber": 136,
@@ -2386,7 +2722,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 47,
-      "tags": "sprankelend,zacht,klassiek"
+      "tags": "sprankelend,zacht,klassiek",
+      "oneLinerNl": "De GM2-harp: helder en zacht, ideaal voor glissando's in multitimbraal werk.",
+      "oneLinerEn": "The GM2 harp: bright and gentle, perfect for glissandos in multitimbral work."
     },
     {
       "toneNumber": 137,
@@ -2400,7 +2738,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 47,
-      "tags": "sprankelend,zacht,klassiek,wereldmuziek"
+      "tags": "sprankelend,zacht,klassiek,wereldmuziek",
+      "oneLinerNl": "De yangqin: een Chinees hakkebord vol sprankelende, tinkelende snaartonen.",
+      "oneLinerEn": "The yangqin: a Chinese hammered dulcimer full of sparkling, shimmering string tones."
     },
     {
       "toneNumber": 138,
@@ -2414,7 +2754,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 48,
-      "tags": "percussief,donker,klassiek"
+      "tags": "percussief,donker,klassiek",
+      "oneLinerNl": "Pauken: stembare keteltrommels die het orkest hun donderende, dramatische fundament geven.",
+      "oneLinerEn": "Timpani: tunable kettledrums that give the orchestra its thundering, dramatic foundation."
     },
     {
       "toneNumber": 139,
@@ -2428,7 +2770,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 49,
-      "tags": "warm,zwevend,klassiek"
+      "tags": "warm,zwevend,klassiek",
+      "oneLinerNl": "De standaard GM2-strijkerssectie: warm en betrouwbaar voor multitimbraal werk.",
+      "oneLinerEn": "The standard GM2 string section: warm and dependable for multitimbral work."
     },
     {
       "toneNumber": 140,
@@ -2442,7 +2786,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 49,
-      "tags": "warm,zwevend,klassiek"
+      "tags": "warm,zwevend,klassiek",
+      "oneLinerNl": "De GM2-orkestklank: een breed ensemble klaar voor multitimbrale arrangementen.",
+      "oneLinerEn": "The GM2 orchestra voice: a broad ensemble ready for multitimbral arrangements."
     },
     {
       "toneNumber": 141,
@@ -2456,7 +2802,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 2,
       "midiProgram": 49,
-      "tags": "warm,zwevend,klassiek,vintage,lo-fi"
+      "tags": "warm,zwevend,klassiek,vintage,lo-fi",
+      "oneLinerNl": "Lo-fi strijkers met een nostalgische jaren-60 gloed, alsof ze van vinyl komen.",
+      "oneLinerEn": "Lo-fi strings with a nostalgic 1960s glow, as if lifted straight off vinyl."
     },
     {
       "toneNumber": 142,
@@ -2470,7 +2818,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 50,
-      "tags": "warm,zwevend,klassiek,zacht,ballad"
+      "tags": "warm,zwevend,klassiek,zacht,ballad",
+      "oneLinerNl": "Strijkers met een trage, zachte inzet die langzaam opzwelt onder zang.",
+      "oneLinerEn": "Strings with a slow, soft attack that swells gently beneath vocals."
     },
     {
       "toneNumber": 143,
@@ -2478,13 +2828,15 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": "Synthesizer",
+      "wikipediaPageTitle": "String synthesizer",
       "funFacts": null,
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 51,
-      "tags": "synthetisch,zwevend,electronic"
+      "tags": "synthetisch,zwevend,electronic",
+      "oneLinerNl": "Zwevende synthstrijkers: warme padklank die hele akkoorden in een waas hult.",
+      "oneLinerEn": "Floating synth strings: a warm pad that wraps whole chords in a soft haze."
     },
     {
       "toneNumber": 144,
@@ -2492,13 +2844,15 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": "Synthesizer",
+      "wikipediaPageTitle": "String synthesizer",
       "funFacts": null,
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 51,
-      "tags": "synthetisch,zwevend,electronic"
+      "tags": "synthetisch,zwevend,electronic",
+      "oneLinerNl": "Een derde synthstrijker-variant: rijker en breder, met meer beweging in de klank.",
+      "oneLinerEn": "A third synth-string variant: richer and broader, with more movement in the tone."
     },
     {
       "toneNumber": 145,
@@ -2506,13 +2860,15 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": "Synthesizer",
+      "wikipediaPageTitle": "String synthesizer",
       "funFacts": null,
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 52,
-      "tags": "synthetisch,zwevend,electronic"
+      "tags": "synthetisch,zwevend,electronic",
+      "oneLinerNl": "Een tweede synthstrijker-variant: voller en dromeriger, ideaal als sfeervol tapijt.",
+      "oneLinerEn": "A second synth-string variant: fuller and dreamier, perfect as an atmospheric bed."
     },
     {
       "toneNumber": 146,
@@ -2526,7 +2882,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 53,
-      "tags": "zacht,zwevend"
+      "tags": "zacht,zwevend",
+      "oneLinerNl": "Zwevend 'aah'-koor: zachte stemmen die een hemelse gloed over je akkoorden leggen.",
+      "oneLinerEn": "Floating 'aah' choir: soft voices that lay a heavenly glow over your chords."
     },
     {
       "toneNumber": 147,
@@ -2540,7 +2898,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 53,
-      "tags": "zacht,zwevend"
+      "tags": "zacht,zwevend",
+      "oneLinerNl": "Een tweede koorvariant: warmer en voller, met meer body in de gezongen klank.",
+      "oneLinerEn": "A second choir variant: warmer and fuller, with more body in the sung tone."
     },
     {
       "toneNumber": 148,
@@ -2554,7 +2914,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 54,
-      "tags": "zacht,zwevend"
+      "tags": "zacht,zwevend",
+      "oneLinerNl": "Eén zwevende stem: een wordeloze 'oeh' die boven je akkoorden blijft hangen.",
+      "oneLinerEn": "A single floating voice: a wordless 'ooh' that hovers above your chords."
     },
     {
       "toneNumber": 149,
@@ -2568,7 +2930,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 54,
-      "tags": "zacht,zwevend"
+      "tags": "zacht,zwevend",
+      "oneLinerNl": "Een gesloten-mond 'mmm'-koor: zacht en zwevend, ideaal als warme onderlaag onder een melodie.",
+      "oneLinerEn": "A closed-mouth 'mmm' choir: soft and floating, perfect as a warm pad beneath a melody."
     },
     {
       "toneNumber": 150,
@@ -2582,7 +2946,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 55,
-      "tags": "synthetisch,zwevend,electronic"
+      "tags": "synthetisch,zwevend,electronic",
+      "oneLinerNl": "Een synthetisch 'aah'-koor: gladde, elektronische stemmen die zweven over elk akkoord.",
+      "oneLinerEn": "A synthetic 'aah' choir: smooth electronic voices drifting over any chord."
     },
     {
       "toneNumber": 151,
@@ -2596,7 +2962,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 55,
-      "tags": "synthetisch,zwevend,electronic,vintage"
+      "tags": "synthetisch,zwevend,electronic,vintage",
+      "oneLinerNl": "De vintage analoge variant van Synth Voice: warmer, korreliger, met een retro-synthrandje.",
+      "oneLinerEn": "The vintage analogue take on Synth Voice: warmer and grainier, with a retro-synth edge."
     },
     {
       "toneNumber": 152,
@@ -2610,7 +2978,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 56,
-      "tags": "percussief,fx/cinematic"
+      "tags": "percussief,fx/cinematic",
+      "oneLinerNl": "De legendarische sampled orkest-klap: een korte, percussieve 'BAM' van het hele ensemble.",
+      "oneLinerEn": "The legendary sampled orchestra stab: one short, percussive 'BAM' from the whole ensemble."
     },
     {
       "toneNumber": 153,
@@ -2624,7 +2994,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 56,
-      "tags": "percussief,fx/cinematic"
+      "tags": "percussief,fx/cinematic",
+      "oneLinerNl": "De donkere, lage variant van de orkest-klap: een diepe stoot die onder een groove ploft.",
+      "oneLinerEn": "The dark, low-register orchestra stab: a deep punch that drops under a groove."
     },
     {
       "toneNumber": 154,
@@ -2638,7 +3010,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 2,
       "midiProgram": 56,
-      "tags": "percussief,fx/cinematic"
+      "tags": "percussief,fx/cinematic",
+      "oneLinerNl": "Een orkest-klap met een sext-akkoordkleur: brutaler en jazzier dan de standaard hit.",
+      "oneLinerEn": "An orchestra stab with a sixth-chord colour: brasher and jazzier than the standard hit."
     },
     {
       "toneNumber": 155,
@@ -2652,7 +3026,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 3,
       "midiProgram": 56,
-      "tags": "percussief,fx/cinematic"
+      "tags": "percussief,fx/cinematic",
+      "oneLinerNl": "De Euro-dance variant van de orkest-klap: scherp en synthetisch, recht uit de jaren 90.",
+      "oneLinerEn": "The Euro-dance flavour of the orchestra stab: sharp and synthetic, straight out of the '90s."
     },
     {
       "toneNumber": 156,
@@ -2666,7 +3042,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 57,
-      "tags": "helder,klassiek"
+      "tags": "helder,klassiek",
+      "oneLinerNl": "Heldere, doordringende trompet: het stralende leadkoper van fanfare, jazz en pop.",
+      "oneLinerEn": "Bright, piercing trumpet: the radiant lead brass of marching band, jazz and pop."
     },
     {
       "toneNumber": 157,
@@ -2680,7 +3058,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 57,
-      "tags": "helder,klassiek,donker"
+      "tags": "helder,klassiek,donker",
+      "oneLinerNl": "Een zachtere, donkerder trompet: rondere toon met minder schittering, ideaal voor balladen.",
+      "oneLinerEn": "A softer, darker trumpet: a rounder tone with less glare, ideal for ballads."
     },
     {
       "toneNumber": 158,
@@ -2694,7 +3074,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 58,
-      "tags": "helder,klassiek"
+      "tags": "helder,klassiek",
+      "oneLinerNl": "Warme, gladde schuiftrombone: het zingende middenkoper van big band en orkest.",
+      "oneLinerEn": "Warm, smooth slide trombone: the singing middle voice of big band and orchestra."
     },
     {
       "toneNumber": 159,
@@ -2708,7 +3090,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 58,
-      "tags": "helder,klassiek"
+      "tags": "helder,klassiek",
+      "oneLinerNl": "Een alternatieve trombone-stem: net even anders van aanzet, fijn voor sectiestapeling.",
+      "oneLinerEn": "An alternate trombone voice: slightly different in attack, handy for stacking sections."
     },
     {
       "toneNumber": 160,
@@ -2722,7 +3106,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 2,
       "midiProgram": 58,
-      "tags": "helder,klassiek"
+      "tags": "helder,klassiek",
+      "oneLinerNl": "De felle trombone-variant: meer rand en kracht, snijdt door een drukke mix heen.",
+      "oneLinerEn": "The bright trombone variant: more edge and power, cutting through a busy mix."
     },
     {
       "toneNumber": 161,
@@ -2736,7 +3122,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 59,
-      "tags": "helder,klassiek"
+      "tags": "helder,klassiek",
+      "oneLinerNl": "Het diepste koper: een ronde, brommende basstem die het hele koperregister fundeert.",
+      "oneLinerEn": "The deepest brass: a round, rumbling bass voice that anchors the entire brass section."
     },
     {
       "toneNumber": 162,
@@ -2750,7 +3138,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 60,
-      "tags": "zacht,jazz"
+      "tags": "zacht,jazz",
+      "oneLinerNl": "Gedempte trompet met demper in de beker: ingetogen, nasaal en doortrokken van jazz-noir.",
+      "oneLinerEn": "Muted trumpet with a mute in the bell: intimate, nasal and steeped in jazz-noir."
     },
     {
       "toneNumber": 163,
@@ -2764,7 +3154,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 60,
-      "tags": "zacht,jazz"
+      "tags": "zacht,jazz",
+      "oneLinerNl": "Een tweede gedempte trompet: net iets ander timbre, voor afwisseling in de jazzsectie.",
+      "oneLinerEn": "A second muted trumpet: a slightly different timbre, for variety in the jazz section."
     },
     {
       "toneNumber": 164,
@@ -2778,7 +3170,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 61,
-      "tags": "warm,klassiek,fx/cinematic"
+      "tags": "warm,klassiek,fx/cinematic",
+      "oneLinerNl": "Warme, ronde hoorn: het edele, filmische koper dat orkestthema's plechtig optilt.",
+      "oneLinerEn": "Warm, rounded horn: the noble, cinematic brass that lifts orchestral themes aloft."
     },
     {
       "toneNumber": 165,
@@ -2792,7 +3186,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 61,
-      "tags": "warm,klassiek,fx/cinematic"
+      "tags": "warm,klassiek,fx/cinematic",
+      "oneLinerNl": "Een tweede hoornstem: subtiel ander karakter, fijn voor hoornsecties en harmonieën.",
+      "oneLinerEn": "A second horn voice: a subtly different character, great for horn sections and harmonies."
     },
     {
       "toneNumber": 166,
@@ -2806,7 +3202,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 62,
-      "tags": "helder,jazz"
+      "tags": "helder,jazz",
+      "oneLinerNl": "De heldere GM2-bigband-sectie: strakke unisono stabs voor jazz en funk.",
+      "oneLinerEn": "The bright GM2 big-band section: tight unison stabs for jazz and funk."
     },
     {
       "toneNumber": 167,
@@ -2820,7 +3218,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 62,
-      "tags": "helder,jazz"
+      "tags": "helder,jazz",
+      "oneLinerNl": "Een tweede, iets dikkere kopersectie-variant voor stevigere jazz-arrangementen.",
+      "oneLinerEn": "A second, slightly fatter brass-section variant for beefier jazz arrangements."
     },
     {
       "toneNumber": 168,
@@ -2834,7 +3234,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 63,
-      "tags": "synthetisch,helder,electronic"
+      "tags": "synthetisch,helder,electronic",
+      "oneLinerNl": "Synthkoper met punch: de helder snerpende stab die jaren-80 funk en pop kleurt.",
+      "oneLinerEn": "Synth brass with punch: the bright, snarling stab that colours '80s funk and pop."
     },
     {
       "toneNumber": 169,
@@ -2848,7 +3250,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 63,
-      "tags": "synthetisch,helder,electronic"
+      "tags": "synthetisch,helder,electronic",
+      "oneLinerNl": "Een agressievere synthkoper-variant met extra bite voor dance en electro.",
+      "oneLinerEn": "A more aggressive synth-brass variant with extra bite for dance and electro."
     },
     {
       "toneNumber": 170,
@@ -2862,7 +3266,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 2,
       "midiProgram": 63,
-      "tags": "synthetisch,helder,electronic,vintage"
+      "tags": "synthetisch,helder,electronic,vintage",
+      "oneLinerNl": "Warme analoge synthkoper: de vintage zaag-saw die naar oude polysynths ruikt.",
+      "oneLinerEn": "Warm analogue synth brass: the vintage sawtooth swell that smells of old polysynths."
     },
     {
       "toneNumber": 171,
@@ -2876,7 +3282,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 3,
       "midiProgram": 63,
-      "tags": "synthetisch,helder,electronic"
+      "tags": "synthetisch,helder,electronic",
+      "oneLinerNl": "De explosieve 'jump'-koperstab uit de rave- en hardhouse-toolkit.",
+      "oneLinerEn": "The explosive 'jump' brass stab straight from the rave and hard-house toolkit."
     },
     {
       "toneNumber": 172,
@@ -2890,7 +3298,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 64,
-      "tags": "synthetisch,helder,electronic"
+      "tags": "synthetisch,helder,electronic",
+      "oneLinerNl": "Een vollere synthkoper-laag, ideaal voor brede akkoordstabs en pads.",
+      "oneLinerEn": "A fuller synth-brass layer, ideal for wide chord stabs and pads."
     },
     {
       "toneNumber": 173,
@@ -2904,7 +3314,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 64,
-      "tags": "synthetisch,helder,electronic"
+      "tags": "synthetisch,helder,electronic",
+      "oneLinerNl": "Nog een synthkoper-smaak met scherpe attack voor stevige electro-hooks.",
+      "oneLinerEn": "Another synth-brass flavour with a sharp attack for punchy electro hooks."
     },
     {
       "toneNumber": 174,
@@ -2918,7 +3330,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 2,
       "midiProgram": 64,
-      "tags": "synthetisch,helder,electronic,vintage"
+      "tags": "synthetisch,helder,electronic,vintage",
+      "oneLinerNl": "De tweede analoge synthkoper: warm, vintage en breed uitgesmeerd.",
+      "oneLinerEn": "The second analogue synth brass: warm, vintage and broadly spread."
     },
     {
       "toneNumber": 175,
@@ -2932,7 +3346,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 65,
-      "tags": "warm,jazz"
+      "tags": "warm,jazz",
+      "oneLinerNl": "De hoogste saxofoon: rechte buis, helder en vocaal, beroemd uit smooth jazz.",
+      "oneLinerEn": "The highest saxophone: a straight horn, bright and vocal, famed from smooth jazz."
     },
     {
       "toneNumber": 176,
@@ -2946,7 +3362,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 66,
-      "tags": "warm,jazz"
+      "tags": "warm,jazz",
+      "oneLinerNl": "De altsaxofoon: warm en expressief, de meest gespeelde sax in jazz en pop.",
+      "oneLinerEn": "The alto saxophone: warm and expressive, the most-played sax in jazz and pop."
     },
     {
       "toneNumber": 177,
@@ -2960,7 +3378,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 67,
-      "tags": "warm,jazz"
+      "tags": "warm,jazz",
+      "oneLinerNl": "De tenorsaxofoon: vol en rokerig, de robuuste leadstem van jazz en soul.",
+      "oneLinerEn": "The tenor saxophone: full and smoky, the robust lead voice of jazz and soul."
     },
     {
       "toneNumber": 178,
@@ -2974,7 +3394,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 68,
-      "tags": "warm,jazz"
+      "tags": "warm,jazz",
+      "oneLinerNl": "De grommende kelder van de saxofoonfamilie: warm, rond en gemaakt voor jazzy baslijnen en riffs.",
+      "oneLinerEn": "The growling cellar of the sax family: warm, round and made for jazzy bass lines and riffs."
     },
     {
       "toneNumber": 179,
@@ -2988,7 +3410,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 69,
-      "tags": "warm,akoestisch,klassiek"
+      "tags": "warm,akoestisch,klassiek",
+      "oneLinerNl": "De nasale, melancholische sopraan van het orkest, die bovendien de stemtoon voor alle musici geeft.",
+      "oneLinerEn": "The nasal, plaintive soprano of the orchestra that also gives every musician the tuning note."
     },
     {
       "toneNumber": 180,
@@ -3002,7 +3426,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 70,
-      "tags": "warm,akoestisch,klassiek"
+      "tags": "warm,akoestisch,klassiek",
+      "oneLinerNl": "De donkere, weemoedige neef van de hobo: warmer en lager, beroemd om zijn smachtende solo's.",
+      "oneLinerEn": "The dark, wistful cousin of the oboe: warmer and lower, famed for its yearning solos."
     },
     {
       "toneNumber": 181,
@@ -3016,7 +3442,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 71,
-      "tags": "warm,akoestisch,klassiek"
+      "tags": "warm,akoestisch,klassiek",
+      "oneLinerNl": "De houten bas van het orkest: knorrig en komisch in de hoogte, plechtig en rond in de diepte.",
+      "oneLinerEn": "The orchestra's wooden bass: comic and reedy up high, solemn and round down low."
     },
     {
       "toneNumber": 182,
@@ -3030,7 +3458,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 72,
-      "tags": "warm,akoestisch,klassiek,jazz"
+      "tags": "warm,akoestisch,klassiek,jazz",
+      "oneLinerNl": "Soepel van zacht tot fel: de klarinet glijdt moeiteloos van klassieke kamermuziek naar swingende jazz.",
+      "oneLinerEn": "Smooth from soft to bold: the clarinet glides effortlessly from classical chamber music to swinging jazz."
     },
     {
       "toneNumber": 183,
@@ -3044,7 +3474,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 73,
-      "tags": "zacht,helder,klassiek"
+      "tags": "zacht,helder,klassiek",
+      "oneLinerNl": "Het kleinste fluitje met de hoogste stem: schril, glashelder en zo over een heel orkest heen te horen.",
+      "oneLinerEn": "The tiniest flute with the highest voice: shrill, crystal-clear and able to cut over a full orchestra."
     },
     {
       "toneNumber": 184,
@@ -3058,7 +3490,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 74,
-      "tags": "zacht,helder,klassiek"
+      "tags": "zacht,helder,klassiek",
+      "oneLinerNl": "De GM2-dwarsfluit: zacht en helder voor melodieën in multitimbrale sets.",
+      "oneLinerEn": "The GM2 transverse flute: soft and bright for melodies in multitimbral sets."
     },
     {
       "toneNumber": 185,
@@ -3072,7 +3506,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 75,
-      "tags": "zacht,akoestisch,folk"
+      "tags": "zacht,akoestisch,folk",
+      "oneLinerNl": "De zachte, houten blokfluit van de oude muziek: simpel, intiem en bij iedereen bekend van schoolbankjes.",
+      "oneLinerEn": "The soft, wooden recorder of early music: simple, intimate and known to everyone from school."
     },
     {
       "toneNumber": 186,
@@ -3086,7 +3522,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 76,
-      "tags": "zacht,aards,wereldmuziek"
+      "tags": "zacht,aards,wereldmuziek",
+      "oneLinerNl": "Een rij gestemde rietpijpjes met een ademende, weemoedige toon uit de Andes-traditie.",
+      "oneLinerEn": "A row of tuned cane pipes with a breathy, wistful tone from the Andean tradition."
     },
     {
       "toneNumber": 187,
@@ -3100,7 +3538,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 77,
-      "tags": "zwevend,zacht,fx/cinematic"
+      "tags": "zwevend,zacht,fx/cinematic",
+      "oneLinerNl": "De holle, zwevende toon van blazen over een flessenhals: zacht, mistig en filmisch.",
+      "oneLinerEn": "The hollow, floating note of blowing across a bottle's neck: soft, misty and cinematic."
     },
     {
       "toneNumber": 188,
@@ -3114,7 +3554,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 78,
-      "tags": "aards,zacht,wereldmuziek"
+      "tags": "aards,zacht,wereldmuziek",
+      "oneLinerNl": "De Japanse bamboefluit van zenmonniken: aards, ademend en vol stilte tussen de noten.",
+      "oneLinerEn": "The Japanese bamboo flute of Zen monks: earthy, breathy and full of silence between the notes."
     },
     {
       "toneNumber": 189,
@@ -3128,7 +3570,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 79,
-      "tags": "helder,folk"
+      "tags": "helder,folk",
+      "oneLinerNl": "Een vrolijk, helder gefluit: het meest menselijke instrument dat je altijd bij je draagt.",
+      "oneLinerEn": "A cheerful, bright whistle: the most human instrument you always carry with you."
     },
     {
       "toneNumber": 190,
@@ -3142,7 +3586,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 80,
-      "tags": "zacht,aards,folk,wereldmuziek"
+      "tags": "zacht,aards,folk,wereldmuziek",
+      "oneLinerNl": "Het ronde aarden fluitje met een zachte, holle toon, beroemd uit volksmuziek en games.",
+      "oneLinerEn": "The round clay flute with a soft, hollow tone, famous from folk music and video games."
     },
     {
       "toneNumber": 191,
@@ -3156,7 +3602,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 81,
-      "tags": "synthetisch,helder,electronic"
+      "tags": "synthetisch,helder,electronic",
+      "oneLinerNl": "De holle blokgolf-lead: het 8-bit hart van vroege synthpop en retro game-melodieën.",
+      "oneLinerEn": "The hollow square-wave lead: the 8-bit heart of early synth-pop and retro game tunes."
     },
     {
       "toneNumber": 192,
@@ -3170,7 +3618,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 81,
-      "tags": "synthetisch,helder,electronic"
+      "tags": "synthetisch,helder,electronic",
+      "oneLinerNl": "Een dikkere, breder gestemde blokgolf-lead: voller en gelaagder dan de eerste variant.",
+      "oneLinerEn": "A thicker, broader square-wave lead: fuller and more layered than the first variant."
     },
     {
       "toneNumber": 193,
@@ -3184,7 +3634,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 2,
       "midiProgram": 81,
-      "tags": "synthetisch,helder,electronic,zacht"
+      "tags": "synthetisch,helder,electronic,zacht",
+      "oneLinerNl": "De zuiverste golfvorm denkbaar: een ronde, fluitachtige lead zonder enige boventoon.",
+      "oneLinerEn": "The purest waveform imaginable: a round, flute-like lead with no overtones at all."
     },
     {
       "toneNumber": 194,
@@ -3198,7 +3650,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 82,
-      "tags": "synthetisch,helder,electronic"
+      "tags": "synthetisch,helder,electronic",
+      "oneLinerNl": "De rauwe, boventoonrijke zaagtand-lead: het scherpe handelsmerk van dance en synthrock.",
+      "oneLinerEn": "The raw, overtone-rich sawtooth lead: the cutting signature of dance and synth-rock."
     },
     {
       "toneNumber": 195,
@@ -3212,7 +3666,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 82,
-      "tags": "synthetisch,helder,electronic"
+      "tags": "synthetisch,helder,electronic",
+      "oneLinerNl": "Een dikkere zaagtand-lead met meer body: brutaler en doordringender dan variant 1.",
+      "oneLinerEn": "A fatter sawtooth lead with more body: bolder and more piercing than variant 1."
     },
     {
       "toneNumber": 196,
@@ -3226,7 +3682,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 2,
       "midiProgram": 82,
-      "tags": "synthetisch,helder,electronic"
+      "tags": "synthetisch,helder,electronic",
+      "oneLinerNl": "Een gladde, zingende solo-lead met portamento: gebouwd om expressief overheen te soleren.",
+      "oneLinerEn": "A smooth, singing solo lead with portamento: built to wail expressively on top."
     },
     {
       "toneNumber": 197,
@@ -3240,7 +3698,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 3,
       "midiProgram": 82,
-      "tags": "synthetisch,helder,electronic"
+      "tags": "synthetisch,helder,electronic",
+      "oneLinerNl": "Een warme, organische synth-lead die net iets akoestischer en ademender klinkt dan de rest.",
+      "oneLinerEn": "A warm, organic synth lead that sounds slightly more acoustic and breathy than the rest."
     },
     {
       "toneNumber": 198,
@@ -3254,7 +3714,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 4,
       "midiProgram": 82,
-      "tags": "synthetisch,helder,electronic"
+      "tags": "synthetisch,helder,electronic",
+      "oneLinerNl": "Een ritmisch geknipte zaagtand die zichzelf voortstuwt: arpeggio-achtige puls voor strakke synthlijnen.",
+      "oneLinerEn": "A rhythmically chopped sawtooth that drives itself forward: an arp-like pulse for tight synth lines."
     },
     {
       "toneNumber": 199,
@@ -3268,7 +3730,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 83,
-      "tags": "synthetisch,helder,electronic"
+      "tags": "synthetisch,helder,electronic",
+      "oneLinerNl": "De stoomorgel uit de kermis, nu synthetisch: helder fluitend en vrolijk circus-achtig.",
+      "oneLinerEn": "The fairground steam organ, now synthetic: bright, whistling and cheerfully circus-like."
     },
     {
       "toneNumber": 200,
@@ -3282,7 +3746,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 84,
-      "tags": "synthetisch,helder,electronic"
+      "tags": "synthetisch,helder,electronic",
+      "oneLinerNl": "Een lead met 'chiff': een hoorbare ademstoot aan het begin van elke noot, als een fluitaanzet.",
+      "oneLinerEn": "A lead with 'chiff': an audible puff of air at the start of each note, like a flute's onset."
     },
     {
       "toneNumber": 201,
@@ -3296,7 +3762,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 85,
-      "tags": "synthetisch,helder,electronic"
+      "tags": "synthetisch,helder,electronic",
+      "oneLinerNl": "Een vervormde, gitaarachtige synth-lead met bite: ruig genoeg om rocksolo's mee te spelen.",
+      "oneLinerEn": "A distorted, guitar-like synth lead with bite: gritty enough for rock solos."
     },
     {
       "toneNumber": 202,
@@ -3310,7 +3778,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 85,
-      "tags": "synthetisch,helder,electronic"
+      "tags": "synthetisch,helder,electronic",
+      "oneLinerNl": "Een strak, draadachtig dunne lead met scherpe rand: spannend en metalig in de hoogte.",
+      "oneLinerEn": "A tight, wiry thin lead with a sharp edge: tense and metallic up high."
     },
     {
       "toneNumber": 203,
@@ -3324,7 +3794,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 86,
-      "tags": "synthetisch,helder,electronic"
+      "tags": "synthetisch,helder,electronic",
+      "oneLinerNl": "Synthetische solostem: helder en expressief, met een vocale lead die door de mix zweeft.",
+      "oneLinerEn": "Synthetic solo voice: bright and expressive, a vocal lead that soars through the mix."
     },
     {
       "toneNumber": 204,
@@ -3338,7 +3810,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 87,
-      "tags": "synthetisch,helder,electronic"
+      "tags": "synthetisch,helder,electronic",
+      "oneLinerNl": "Een zaagtand-lead met een vaste kwint erbij: instant heroïsch en breed, zonder akkoorden.",
+      "oneLinerEn": "A sawtooth lead with a fixed fifth stacked on: instantly heroic and wide, no chords needed."
     },
     {
       "toneNumber": 205,
@@ -3352,7 +3826,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 88,
-      "tags": "synthetisch,helder,electronic"
+      "tags": "synthetisch,helder,electronic",
+      "oneLinerNl": "Bas en lead in één klank: een dikke, doordringende toon die laag fundeert en hoog snijdt.",
+      "oneLinerEn": "Bass and lead in one voice: a thick, cutting tone that anchors low and slices high."
     },
     {
       "toneNumber": 206,
@@ -3366,7 +3842,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 88,
-      "tags": "synthetisch,helder,electronic"
+      "tags": "synthetisch,helder,electronic",
+      "oneLinerNl": "Een lead met ingebouwde echo: elke noot galmt na in ritmische herhalingen.",
+      "oneLinerEn": "A lead with built-in echo: every note trails off in rhythmic repeats."
     },
     {
       "toneNumber": 207,
@@ -3380,7 +3858,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 89,
-      "tags": "synthetisch,zwevend,zacht,electronic"
+      "tags": "synthetisch,zwevend,zacht,electronic",
+      "oneLinerNl": "Een dromerige pad-lead vol bellen en zweving: het sprookjesachtige geluid van de jaren 80.",
+      "oneLinerEn": "A dreamy pad-lead full of bells and shimmer: the fairy-tale sound of the 1980s."
     },
     {
       "toneNumber": 208,
@@ -3394,7 +3874,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 90,
-      "tags": "synthetisch,zwevend,zacht,electronic"
+      "tags": "synthetisch,zwevend,zacht,electronic",
+      "oneLinerNl": "De klassieke zwevende synthlaag: zacht, warm en ideaal als kussen onder elke akkoord.",
+      "oneLinerEn": "The classic floating synth layer: soft, warm and the perfect cushion beneath any chord."
     },
     {
       "toneNumber": 209,
@@ -3408,7 +3890,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 90,
-      "tags": "synthetisch,zwevend,zacht,electronic"
+      "tags": "synthetisch,zwevend,zacht,electronic",
+      "oneLinerNl": "Een pad zonder scherpe randen: pure sinusronding, fluweelzacht en bijna ademend.",
+      "oneLinerEn": "A pad without sharp edges: pure sine roundness, velvet-soft and almost breathing."
     },
     {
       "toneNumber": 210,
@@ -3422,7 +3906,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 91,
-      "tags": "synthetisch,zwevend,zacht,electronic"
+      "tags": "synthetisch,zwevend,zacht,electronic",
+      "oneLinerNl": "De brede meerstemmige synthlaag: vol, warm en stuwend, het werkpaard van de jaren-80 leads.",
+      "oneLinerEn": "The broad polyphonic synth layer: full, warm and driving, the workhorse of '80s leads."
     },
     {
       "toneNumber": 211,
@@ -3436,7 +3922,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 92,
-      "tags": "synthetisch,zwevend,zacht,electronic"
+      "tags": "synthetisch,zwevend,zacht,electronic",
+      "oneLinerNl": "Een ijl, ruimtelijk koor: zachte stemmen die wegdrijven in galm, gemaakt voor sferische pads.",
+      "oneLinerEn": "An airy, spacious choir: soft voices dissolving into reverb, made for atmospheric pads."
     },
     {
       "toneNumber": 212,
@@ -3450,7 +3938,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 92,
-      "tags": "synthetisch,zwevend,zacht,electronic"
+      "tags": "synthetisch,zwevend,zacht,electronic",
+      "oneLinerNl": "Een warme, koorachtige pad-lead: zwevend en sferisch, gemaakt om akkoorden in te laten baden.",
+      "oneLinerEn": "A warm, choir-like pad-lead: floating and atmospheric, made to bathe chords in."
     },
     {
       "toneNumber": 213,
@@ -3464,7 +3954,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 93,
-      "tags": "synthetisch,zwevend,zacht,electronic"
+      "tags": "synthetisch,zwevend,zacht,electronic",
+      "oneLinerNl": "Een gestreken glasklank: ijl, glazig en zingend, alsof natte vingers over kristal glijden.",
+      "oneLinerEn": "A bowed-glass voice: thin, glassy and singing, like wet fingers gliding over crystal."
     },
     {
       "toneNumber": 214,
@@ -3478,7 +3970,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 94,
-      "tags": "synthetisch,zwevend,zacht,electronic"
+      "tags": "synthetisch,zwevend,zacht,electronic",
+      "oneLinerNl": "Zwevend pad met een koele metaalglans: glanzend, licht gespannen en sci-fi-achtig.",
+      "oneLinerEn": "A floating pad with a cool metallic sheen: glassy, slightly tense and sci-fi tinged."
     },
     {
       "toneNumber": 215,
@@ -3492,7 +3986,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 95,
-      "tags": "synthetisch,zwevend,zacht,electronic"
+      "tags": "synthetisch,zwevend,zacht,electronic",
+      "oneLinerNl": "Een stralenkrans van klank: koorachtig, sereen en boven alles uit zwevend.",
+      "oneLinerEn": "A halo of sound: choir-like, serene and hovering above everything else."
     },
     {
       "toneNumber": 216,
@@ -3506,7 +4002,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 96,
-      "tags": "synthetisch,zwevend,zacht,electronic"
+      "tags": "synthetisch,zwevend,zacht,electronic",
+      "oneLinerNl": "Pad met een traag openend filter: de klank veegt langzaam helder, dramatisch en filmisch.",
+      "oneLinerEn": "A pad with a slowly opening filter: the sound sweeps gradually bright, dramatic and cinematic."
     },
     {
       "toneNumber": 217,
@@ -3520,7 +4018,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 97,
-      "tags": "synthetisch,zwevend,electronic,fx/cinematic"
+      "tags": "synthetisch,zwevend,electronic,fx/cinematic",
+      "oneLinerNl": "Glinsterende, vallende druppels van klank: een ijzige, sprankelende texture-lead.",
+      "oneLinerEn": "Glistening, falling droplets of sound: an icy, sparkling texture lead."
     },
     {
       "toneNumber": 218,
@@ -3534,7 +4034,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 98,
-      "tags": "synthetisch,zwevend,electronic,fx/cinematic"
+      "tags": "synthetisch,zwevend,electronic,fx/cinematic",
+      "oneLinerNl": "Een brede, filmische sweep-pad: instant spanning en grootsheid voor cinematische scènes.",
+      "oneLinerEn": "A broad, cinematic sweep pad: instant tension and grandeur for film scenes."
     },
     {
       "toneNumber": 219,
@@ -3548,7 +4050,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 99,
-      "tags": "synthetisch,zwevend,electronic,fx/cinematic"
+      "tags": "synthetisch,zwevend,electronic,fx/cinematic",
+      "oneLinerNl": "Heldere, glasachtige bellen met een lange nagalm: sprankelend en bevroren in de tijd.",
+      "oneLinerEn": "Bright, glassy bells with a long tail: sparkling and frozen in time."
     },
     {
       "toneNumber": 220,
@@ -3562,7 +4066,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 99,
-      "tags": "synthetisch,zwevend,electronic,fx/cinematic"
+      "tags": "synthetisch,zwevend,electronic,fx/cinematic",
+      "oneLinerNl": "Een synthetische aanslag-percussie: helder tikkend, klokachtig en kort nazingend.",
+      "oneLinerEn": "A synthetic mallet percussion: bright, struck and bell-like with a short ring."
     },
     {
       "toneNumber": 221,
@@ -3576,7 +4082,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 100,
-      "tags": "synthetisch,zwevend,electronic,fx/cinematic"
+      "tags": "synthetisch,zwevend,electronic,fx/cinematic",
+      "oneLinerNl": "Een wijde, dromerige ruimteklank: ijl en sferisch, gemaakt om scenes mee te schilderen.",
+      "oneLinerEn": "A wide, dreamy spatial texture: airy and atmospheric, made for painting whole scenes."
     },
     {
       "toneNumber": 222,
@@ -3590,7 +4098,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 101,
-      "tags": "synthetisch,zwevend,electronic,fx/cinematic,helder"
+      "tags": "synthetisch,zwevend,electronic,fx/cinematic,helder",
+      "oneLinerNl": "Een glinsterend, kristalhelder pad: hoog oplichtend en sprankelend boven de mix.",
+      "oneLinerEn": "A glittering, crystal-clear pad: high, gleaming and sparkling above the mix."
     },
     {
       "toneNumber": 223,
@@ -3604,7 +4114,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 102,
-      "tags": "synthetisch,zwevend,electronic,fx/cinematic"
+      "tags": "synthetisch,zwevend,electronic,fx/cinematic",
+      "oneLinerNl": "Een grillig, schimmig fluisterpad: onrustig en spookachtig, perfect voor spanning.",
+      "oneLinerEn": "A restless, shadowy whispering pad: eerie and ghostly, perfect for suspense."
     },
     {
       "toneNumber": 224,
@@ -3618,7 +4130,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 103,
-      "tags": "synthetisch,zwevend,electronic,fx/cinematic"
+      "tags": "synthetisch,zwevend,electronic,fx/cinematic",
+      "oneLinerNl": "Druppels klank die in echo's wegvallen: ritmisch tikkend en dromerig nagalmend.",
+      "oneLinerEn": "Drops of sound falling away in echoes: rhythmically ticking and dreamily trailing off."
     },
     {
       "toneNumber": 225,
@@ -3632,7 +4146,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 103,
-      "tags": "synthetisch,zwevend,electronic,fx/cinematic"
+      "tags": "synthetisch,zwevend,electronic,fx/cinematic",
+      "oneLinerNl": "Belheldere tonen die zichzelf eindeloos herhalen: glinsterend en hypnotisch echoënd.",
+      "oneLinerEn": "Bell-clear tones repeating themselves endlessly: glistening and hypnotically echoing."
     },
     {
       "toneNumber": 226,
@@ -3646,7 +4162,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 2,
       "midiProgram": 103,
-      "tags": "synthetisch,zwevend,electronic,fx/cinematic"
+      "tags": "synthetisch,zwevend,electronic,fx/cinematic",
+      "oneLinerNl": "Echo's die van links naar rechts dansen: breed pannend en ruimtelijk in beweging.",
+      "oneLinerEn": "Echoes dancing from left to right: wide-panning and spatially in motion."
     },
     {
       "toneNumber": 227,
@@ -3660,7 +4178,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 104,
-      "tags": "synthetisch,zwevend,electronic,fx/cinematic"
+      "tags": "synthetisch,zwevend,electronic,fx/cinematic",
+      "oneLinerNl": "Een groots, sterrenstelsel-pad: episch en zwevend, gemaakt voor het grote ruimte-thema.",
+      "oneLinerEn": "A grand, galaxy-sized pad: epic and floating, made for the big space theme."
     },
     {
       "toneNumber": 228,
@@ -3674,7 +4194,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 105,
-      "tags": "akoestisch,aards,wereldmuziek"
+      "tags": "akoestisch,aards,wereldmuziek",
+      "oneLinerNl": "De gonzende sitar van Noord-India: snerpend, resonant en vol meeklinkende boventonen.",
+      "oneLinerEn": "The buzzing sitar of North India: twangy, resonant and full of sympathetic overtones."
     },
     {
       "toneNumber": 229,
@@ -3688,7 +4210,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 105,
-      "tags": "akoestisch,aards,wereldmuziek"
+      "tags": "akoestisch,aards,wereldmuziek",
+      "oneLinerNl": "Een tweede, ronder sitar-karakter: zachter aangezet maar even raga-rijk en gonzend.",
+      "oneLinerEn": "A second, rounder sitar voice: softer in attack but just as raga-rich and droning."
     },
     {
       "toneNumber": 230,
@@ -3702,7 +4226,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 106,
-      "tags": "akoestisch,aards,wereldmuziek"
+      "tags": "akoestisch,aards,wereldmuziek",
+      "oneLinerNl": "De pittige bluegrass-banjo: helder pingelend, snel en vol Appalachen-energie.",
+      "oneLinerEn": "The peppy bluegrass banjo: bright, plinking, fast and full of Appalachian energy."
     },
     {
       "toneNumber": 231,
@@ -3716,7 +4242,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 107,
-      "tags": "akoestisch,aards,wereldmuziek"
+      "tags": "akoestisch,aards,wereldmuziek",
+      "oneLinerNl": "De Japanse driesnarige luit: scherp getokkeld met een karakteristieke snerpende 'sawari'-buzz.",
+      "oneLinerEn": "The Japanese three-stringed lute: sharply plucked with its signature buzzing 'sawari' twang."
     },
     {
       "toneNumber": 232,
@@ -3730,7 +4258,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 108,
-      "tags": "akoestisch,aards,wereldmuziek"
+      "tags": "akoestisch,aards,wereldmuziek",
+      "oneLinerNl": "De Japanse koto: glijdende, pentatonische snaartonen die meteen een Zen-tuin oproepen.",
+      "oneLinerEn": "The Japanese koto: gliding, pentatonic string tones that instantly conjure a Zen garden."
     },
     {
       "toneNumber": 233,
@@ -3744,7 +4274,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 108,
-      "tags": "akoestisch,aards,wereldmuziek"
+      "tags": "akoestisch,aards,wereldmuziek",
+      "oneLinerNl": "De taisho-koto: een toetsen-citer met een nasaal, mechanisch tokkelend timbre uit het vroeg-moderne Japan.",
+      "oneLinerEn": "The taisho koto: a keyed zither with a nasal, mechanically plucked timbre from early-modern Japan."
     },
     {
       "toneNumber": 234,
@@ -3758,7 +4290,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 109,
-      "tags": "akoestisch,aards,wereldmuziek"
+      "tags": "akoestisch,aards,wereldmuziek",
+      "oneLinerNl": "De Afrikaanse duimpiano: ronde, kabbelende metalen lamellen met een hypnotiserende sprankel.",
+      "oneLinerEn": "The African thumb piano: round, rippling metal tines with a hypnotic sparkle."
     },
     {
       "toneNumber": 235,
@@ -3772,7 +4306,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 110,
-      "tags": "akoestisch,aards,wereldmuziek"
+      "tags": "akoestisch,aards,wereldmuziek",
+      "oneLinerNl": "De doedelzak: een doordringende rietklank boven een eindeloze bourdon-toon.",
+      "oneLinerEn": "The bagpipe: a piercing reed voice riding over an endless drone."
     },
     {
       "toneNumber": 236,
@@ -3786,7 +4322,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 111,
-      "tags": "akoestisch,aards,wereldmuziek"
+      "tags": "akoestisch,aards,wereldmuziek",
+      "oneLinerNl": "De fiddle: dezelfde viool, maar dansend en ruig voor folk, country en bluegrass.",
+      "oneLinerEn": "The fiddle: the same violin, but dancing and rough for folk, country and bluegrass."
     },
     {
       "toneNumber": 237,
@@ -3800,7 +4338,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 112,
-      "tags": "akoestisch,aards,wereldmuziek"
+      "tags": "akoestisch,aards,wereldmuziek",
+      "oneLinerNl": "De Indiase shehnai: een schel, feestelijk dubbelriet dat bruiloften en tempels begeleidt.",
+      "oneLinerEn": "The Indian shehnai: a shrill, festive double reed that accompanies weddings and temples."
     },
     {
       "toneNumber": 238,
@@ -3814,7 +4354,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 113,
-      "tags": "percussief,sprankelend,metallic"
+      "tags": "percussief,sprankelend,metallic",
+      "oneLinerNl": "Tinkle Bell: heldere, ijle belletjes die als sneeuwvlokken door je arrangement dwarrelen.",
+      "oneLinerEn": "Tinkle Bell: bright, airy chimes that drift through your arrangement like snowflakes."
     },
     {
       "toneNumber": 239,
@@ -3828,7 +4370,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 114,
-      "tags": "percussief,metallic,wereldmuziek"
+      "tags": "percussief,metallic,wereldmuziek",
+      "oneLinerNl": "De agogô: dubbele Braziliaanse klokjes met een scherpe, ritmische tik voor samba.",
+      "oneLinerEn": "The agogô: twin Brazilian bells with a sharp, rhythmic clack for samba."
     },
     {
       "toneNumber": 240,
@@ -3842,7 +4386,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 115,
-      "tags": "percussief,metallic,wereldmuziek"
+      "tags": "percussief,metallic,wereldmuziek",
+      "oneLinerNl": "De steelpan: warme, zoemende tropentonen geslagen uit een olievat van Trinidad.",
+      "oneLinerEn": "The steel drum: warm, buzzing tropical tones hammered from a Trinidad oil barrel."
     },
     {
       "toneNumber": 241,
@@ -3856,7 +4402,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 116,
-      "tags": "percussief,aards,wereldmuziek"
+      "tags": "percussief,aards,wereldmuziek",
+      "oneLinerNl": "Het woodblock: een droge, houten 'tok' die elk ritme strak op de tel zet.",
+      "oneLinerEn": "The woodblock: a dry, wooden 'tock' that locks any rhythm onto the beat."
     },
     {
       "toneNumber": 242,
@@ -3870,7 +4418,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 116,
-      "tags": "percussief,aards,wereldmuziek"
+      "tags": "percussief,aards,wereldmuziek",
+      "oneLinerNl": "Castagnetten: ratelende houten schelpjes met het hart van de flamenco.",
+      "oneLinerEn": "Castanets: rattling wooden shells with the heart of flamenco."
     },
     {
       "toneNumber": 243,
@@ -3884,7 +4434,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 117,
-      "tags": "percussief,aards,wereldmuziek"
+      "tags": "percussief,aards,wereldmuziek",
+      "oneLinerNl": "De taiko: een diepe, dreunende Japanse tromslag die de borstkas laat trillen.",
+      "oneLinerEn": "The taiko: a deep, thundering Japanese drum hit you feel in your chest."
     },
     {
       "toneNumber": 244,
@@ -3898,7 +4450,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 117,
-      "tags": "percussief,klassiek"
+      "tags": "percussief,klassiek",
+      "oneLinerNl": "De concertbasdrum: een zware, galmende orkestdreun voor dramatische crescendo's.",
+      "oneLinerEn": "The concert bass drum: a heavy, booming orchestral boom for dramatic crescendos."
     },
     {
       "toneNumber": 245,
@@ -3912,7 +4466,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 118,
-      "tags": "percussief,electronic"
+      "tags": "percussief,electronic",
+      "oneLinerNl": "Melodische tom 1: stembare roto-toms met een ronde, zingende dreun.",
+      "oneLinerEn": "Melodic tom 1: tunable roto-toms with a round, singing thump."
     },
     {
       "toneNumber": 246,
@@ -3926,7 +4482,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 118,
-      "tags": "percussief,electronic"
+      "tags": "percussief,electronic",
+      "oneLinerNl": "Melodische tom 2: een donkerder, dieper tom-timbre voor zware fills.",
+      "oneLinerEn": "Melodic tom 2: a darker, deeper tom timbre for heavy fills."
     },
     {
       "toneNumber": 247,
@@ -3940,7 +4498,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 119,
-      "tags": "percussief,synthetisch,electronic"
+      "tags": "percussief,synthetisch,electronic",
+      "oneLinerNl": "De GM2-synthdrum: dalende elektronische toms met dat onmiskenbare retro-glijgeluid.",
+      "oneLinerEn": "The GM2 synth drum: descending electronic toms with that unmistakable retro pitch-bend."
     },
     {
       "toneNumber": 248,
@@ -3954,7 +4514,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 119,
-      "tags": "percussief,vintage,electronic"
+      "tags": "percussief,vintage,electronic",
+      "oneLinerNl": "Alleen de iconische 808-toms: diepe, glijdende analoge dreun van electro en oldschool hiphop.",
+      "oneLinerEn": "Just the iconic 808 toms: deep, gliding analog boom of electro and old-school hip-hop."
     },
     {
       "toneNumber": 249,
@@ -3968,7 +4530,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 2,
       "midiProgram": 119,
-      "tags": "percussief,synthetisch,electronic"
+      "tags": "percussief,synthetisch,electronic",
+      "oneLinerNl": "Elektronische percussie: synthetische drumtonen met de punch van een drumcomputer.",
+      "oneLinerEn": "Electronic percussion: synthetic drum tones with the punch of a drum machine."
     },
     {
       "toneNumber": 250,
@@ -3982,7 +4546,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 120,
-      "tags": "zwevend,metallic,fx/cinematic"
+      "tags": "zwevend,metallic,fx/cinematic",
+      "oneLinerNl": "Reversed cymbal: een achteruit zwellende bekkenruis die elke overgang inluidt.",
+      "oneLinerEn": "Reverse cymbal: a backwards-swelling crash that announces any transition."
     },
     {
       "toneNumber": 251,
@@ -3996,7 +4562,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 121,
-      "tags": "fx/cinematic,percussief"
+      "tags": "fx/cinematic,percussief",
+      "oneLinerNl": "Het knerpen van vingers die over de snaren glijden: realistisch fretgeluid voor extra leven.",
+      "oneLinerEn": "The squeak of fingers sliding over strings: realistic fret noise for added realism."
     },
     {
       "toneNumber": 252,
@@ -4010,7 +4578,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 121,
-      "tags": "fx/cinematic,percussief"
+      "tags": "fx/cinematic,percussief",
+      "oneLinerNl": "De korte 'tik' van een afgekapte snaar: percussief snaargeluid om riffs ademend te maken.",
+      "oneLinerEn": "The short 'tick' of a cut-off string: a percussive string noise that makes riffs breathe."
     },
     {
       "toneNumber": 253,
@@ -4024,7 +4594,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 2,
       "midiProgram": 121,
-      "tags": "fx/cinematic"
+      "tags": "fx/cinematic",
+      "oneLinerNl": "Het kletterende slap-geluid: de bassnaar die tegen de fretten klapt, puur ritmisch effect.",
+      "oneLinerEn": "The snapping slap sound: the bass string clacking against the frets, a pure rhythmic effect."
     },
     {
       "toneNumber": 254,
@@ -4038,7 +4610,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 122,
-      "tags": "fx/cinematic,percussief"
+      "tags": "fx/cinematic,percussief",
+      "oneLinerNl": "Breath Noise: de hoorbare ademhaal van een blazer, ruisend en intiem als FX.",
+      "oneLinerEn": "Breath Noise: the audible inhale of a wind player, hissing and intimate as an effect."
     },
     {
       "toneNumber": 255,
@@ -4046,13 +4620,15 @@
       "category": "Other",
       "subCategory": "GM2",
       "origin": "GM2",
-      "wikipediaPageTitle": null,
+      "wikipediaPageTitle": "Flute",
       "funFacts": null,
       "combinationSuggestions": null,
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 122,
-      "tags": "fx/cinematic"
+      "tags": "fx/cinematic",
+      "oneLinerNl": "Het tikkende kleppengeluid van een fluit: een subtiel akoestisch FX-detail.",
+      "oneLinerEn": "The clicking key noise of a flute: a subtle acoustic FX detail."
     },
     {
       "toneNumber": 256,
@@ -4066,7 +4642,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 123,
-      "tags": "fx/cinematic,zwevend"
+      "tags": "fx/cinematic,zwevend",
+      "oneLinerNl": "Seashore: rollende branding en ruisende golven voor een rustgevende achtergrond.",
+      "oneLinerEn": "Seashore: rolling surf and hissing waves for a soothing backdrop."
     },
     {
       "toneNumber": 257,
@@ -4080,7 +4658,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 123,
-      "tags": "fx/cinematic,zwevend"
+      "tags": "fx/cinematic,zwevend",
+      "oneLinerNl": "Rain: een zacht tikkende regenbui die elke ballad een grijze hemel geeft.",
+      "oneLinerEn": "Rain: a softly pattering shower that lends any ballad a grey sky."
     },
     {
       "toneNumber": 258,
@@ -4094,7 +4674,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 2,
       "midiProgram": 123,
-      "tags": "fx/cinematic,donker"
+      "tags": "fx/cinematic,donker",
+      "oneLinerNl": "Thunder: een rommelende donderslag die je arrangement een onweersbui inrolt.",
+      "oneLinerEn": "Thunder: a rumbling thunderclap that rolls a storm into your arrangement."
     },
     {
       "toneNumber": 259,
@@ -4108,7 +4690,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 3,
       "midiProgram": 123,
-      "tags": "fx/cinematic,zwevend"
+      "tags": "fx/cinematic,zwevend",
+      "oneLinerNl": "Een zacht ruisende windvlaag: het GM2-effect dat een scene meteen winters en weids maakt.",
+      "oneLinerEn": "A softly hissing gust of wind: the GM2 effect that instantly makes a scene wintry and wide."
     },
     {
       "toneNumber": 260,
@@ -4122,7 +4706,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 4,
       "midiProgram": 123,
-      "tags": "fx/cinematic,zwevend"
+      "tags": "fx/cinematic,zwevend",
+      "oneLinerNl": "Een kabbelend beekje: borrelend stromend water dat rust en buitenlucht in je mix brengt.",
+      "oneLinerEn": "A babbling brook: bubbling running water that brings calm and open air to your mix."
     },
     {
       "toneNumber": 261,
@@ -4136,7 +4722,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 5,
       "midiProgram": 123,
-      "tags": "fx/cinematic,zwevend"
+      "tags": "fx/cinematic,zwevend",
+      "oneLinerNl": "Plop-plop onder water: speelse luchtbelletjes, perfect voor aquarium- of cartoonmomenten.",
+      "oneLinerEn": "Plop-plop underwater: playful air bubbles, perfect for aquarium or cartoon moments."
     },
     {
       "toneNumber": 262,
@@ -4150,7 +4738,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 124,
-      "tags": "fx/cinematic"
+      "tags": "fx/cinematic",
+      "oneLinerNl": "Een vrolijk fluitend vogeltje: het eerste GM2-vogeltjwitter voor zonnige ochtendscenes.",
+      "oneLinerEn": "A cheerfully whistling bird: the first GM2 chirp for sunny morning scenes."
     },
     {
       "toneNumber": 263,
@@ -4164,7 +4754,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 124,
-      "tags": "fx/cinematic"
+      "tags": "fx/cinematic",
+      "oneLinerNl": "Woef! Een geblafte hond als GM2-effect, voor komische timing of een levendige straatscene.",
+      "oneLinerEn": "Woof! A barking dog as a GM2 effect, for comic timing or a lively street scene."
     },
     {
       "toneNumber": 264,
@@ -4178,7 +4770,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 2,
       "midiProgram": 124,
-      "tags": "fx/cinematic"
+      "tags": "fx/cinematic",
+      "oneLinerNl": "Klipklop in galop: ritmische hoefslagen die je zo in een western laat draven.",
+      "oneLinerEn": "Clip-clop at a gallop: rhythmic hoofbeats that carry you straight into a western."
     },
     {
       "toneNumber": 265,
@@ -4192,7 +4786,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 3,
       "midiProgram": 124,
-      "tags": "fx/cinematic"
+      "tags": "fx/cinematic",
+      "oneLinerNl": "Een tweede vogelroep: andere soort, ander timbre, voor een vollere voliere in je arrangement.",
+      "oneLinerEn": "A second birdcall: different species, different timbre, for a fuller aviary in your arrangement."
     },
     {
       "toneNumber": 266,
@@ -4206,7 +4802,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 125,
-      "tags": "fx/cinematic"
+      "tags": "fx/cinematic",
+      "oneLinerNl": "Rinkelende vaste telefoon: het klassieke belgeluid voor een scene die om aandacht vraagt.",
+      "oneLinerEn": "A ringing landline phone: the classic bell sound for a scene that demands attention."
     },
     {
       "toneNumber": 267,
@@ -4220,7 +4818,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 125,
-      "tags": "fx/cinematic"
+      "tags": "fx/cinematic",
+      "oneLinerNl": "Een tweede telefoonbel: andere ring, dezelfde dramatische timing voor je verhaal.",
+      "oneLinerEn": "A second phone bell: a different ring, the same dramatic timing for your story."
     },
     {
       "toneNumber": 268,
@@ -4234,7 +4834,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 2,
       "midiProgram": 125,
-      "tags": "fx/cinematic"
+      "tags": "fx/cinematic",
+      "oneLinerNl": "Een krakende deur die langzaam opengaat: kippenvel-effect voor elke spannende scene.",
+      "oneLinerEn": "A creaking door swinging slowly open: a goosebump effect for any suspenseful scene."
     },
     {
       "toneNumber": 269,
@@ -4248,7 +4850,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 3,
       "midiProgram": 125,
-      "tags": "fx/cinematic"
+      "tags": "fx/cinematic",
+      "oneLinerNl": "Een dichtslaande deur: de korte klap die een scene afsluit of iemand laat vertrekken.",
+      "oneLinerEn": "A slamming door: the short bang that ends a scene or sends someone off."
     },
     {
       "toneNumber": 270,
@@ -4262,7 +4866,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 4,
       "midiProgram": 125,
-      "tags": "fx/cinematic,percussief,lo-fi"
+      "tags": "fx/cinematic,percussief,lo-fi",
+      "oneLinerNl": "Vinyl onder de naald: een lo-fi DJ-scratch, percussief en kant-en-klaar voor hiphop-grooves.",
+      "oneLinerEn": "Vinyl under the needle: a lo-fi DJ scratch, percussive and ready-made for hip-hop grooves."
     },
     {
       "toneNumber": 271,
@@ -4276,7 +4882,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 5,
       "midiProgram": 125,
-      "tags": "fx/cinematic,zwevend"
+      "tags": "fx/cinematic,zwevend",
+      "oneLinerNl": "Zacht tinkelende windgong: zwevende belletjes voor een dromerige, magische overgang.",
+      "oneLinerEn": "A softly tinkling wind chime: floating bells for a dreamy, magical transition."
     },
     {
       "toneNumber": 272,
@@ -4290,7 +4898,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 126,
-      "tags": "fx/cinematic"
+      "tags": "fx/cinematic",
+      "oneLinerNl": "Wiekende rotorbladen: het dreunende GM2-effect dat een helikopter laag overkomen laat lijken.",
+      "oneLinerEn": "Whirring rotor blades: the thudding GM2 effect of a helicopter passing low overhead."
     },
     {
       "toneNumber": 273,
@@ -4304,7 +4914,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 126,
-      "tags": "fx/cinematic"
+      "tags": "fx/cinematic",
+      "oneLinerNl": "Contact aan, motor brult: het GM2-effect voor je eigen filmscene.",
+      "oneLinerEn": "Ignition on, engine roars: the GM2 effect for your own movie scene."
     },
     {
       "toneNumber": 274,
@@ -4318,7 +4930,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 2,
       "midiProgram": 126,
-      "tags": "fx/cinematic"
+      "tags": "fx/cinematic",
+      "oneLinerNl": "Gierende remmen tot stilstand: de piepende stop die elke achtervolging afsluit.",
+      "oneLinerEn": "Screeching brakes to a halt: the squealing stop that ends any chase."
     },
     {
       "toneNumber": 275,
@@ -4332,7 +4946,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 3,
       "midiProgram": 126,
-      "tags": "fx/cinematic"
+      "tags": "fx/cinematic",
+      "oneLinerNl": "Een auto die voorbijscheurt: het zoevende doppler-effect van langsrazend verkeer.",
+      "oneLinerEn": "A car tearing past: the whooshing Doppler effect of traffic racing by."
     },
     {
       "toneNumber": 276,
@@ -4346,7 +4962,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 4,
       "midiProgram": 126,
-      "tags": "fx/cinematic"
+      "tags": "fx/cinematic",
+      "oneLinerNl": "Krakende botsing van metaal: het GM2-effect voor een dramatische ongelukscene.",
+      "oneLinerEn": "The crunching impact of metal: the GM2 effect for a dramatic crash scene."
     },
     {
       "toneNumber": 277,
@@ -4360,7 +4978,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 5,
       "midiProgram": 126,
-      "tags": "fx/cinematic"
+      "tags": "fx/cinematic",
+      "oneLinerNl": "Loeiende sirene: de op- en neergaande toon van politie of brandweer in volle vaart.",
+      "oneLinerEn": "A wailing siren: the rising-and-falling tone of police or fire trucks at full speed."
     },
     {
       "toneNumber": 278,
@@ -4374,7 +4994,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 6,
       "midiProgram": 126,
-      "tags": "fx/cinematic,zwevend"
+      "tags": "fx/cinematic,zwevend",
+      "oneLinerNl": "Een dreunende trein die voorbijdendert: ritmisch geratel met een nostalgische reisstemming.",
+      "oneLinerEn": "A rumbling train thundering by: rhythmic clatter with a nostalgic travelling mood."
     },
     {
       "toneNumber": 279,
@@ -4388,7 +5010,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 7,
       "midiProgram": 126,
-      "tags": "fx/cinematic"
+      "tags": "fx/cinematic",
+      "oneLinerNl": "Een straaljager die overvliegt: het brullende GM2-effect van een opstijgende jet.",
+      "oneLinerEn": "A jet flying over: the roaring GM2 effect of an aircraft taking off."
     },
     {
       "toneNumber": 280,
@@ -4402,7 +5026,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 8,
       "midiProgram": 126,
-      "tags": "fx/cinematic"
+      "tags": "fx/cinematic",
+      "oneLinerNl": "Sciencefiction-zoom: een opstijgend ruimteschip in één GM2-veeg, klaar voor je eigen lanceringsscene.",
+      "oneLinerEn": "Sci-fi swoosh: a rising starship in a single GM2 sweep, ready for your own launch scene."
     },
     {
       "toneNumber": 281,
@@ -4416,7 +5042,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 9,
       "midiProgram": 126,
-      "tags": "fx/cinematic,percussief"
+      "tags": "fx/cinematic,percussief",
+      "oneLinerNl": "Een korte ruisexplosie: percussieve knal voor inslagen, hits en plotselinge accenten.",
+      "oneLinerEn": "A short noise burst: a percussive crack for impacts, hits and sudden accents."
     },
     {
       "toneNumber": 282,
@@ -4430,7 +5058,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 127,
-      "tags": "fx/cinematic,percussief"
+      "tags": "fx/cinematic,percussief",
+      "oneLinerNl": "Een zaal vol klappende handen: instant publiek voor je grote slotakkoord.",
+      "oneLinerEn": "A hall full of clapping hands: instant audience for your big closing chord."
     },
     {
       "toneNumber": 283,
@@ -4444,7 +5074,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 127,
-      "tags": "fx/cinematic"
+      "tags": "fx/cinematic",
+      "oneLinerNl": "Aanstekelijke lach uit het GM2-effectrek: een vrolijke onderbreking tussen de noten.",
+      "oneLinerEn": "Infectious laughter from the GM2 effects rack: a cheerful interruption between the notes."
     },
     {
       "toneNumber": 284,
@@ -4458,7 +5090,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 2,
       "midiProgram": 127,
-      "tags": "fx/cinematic"
+      "tags": "fx/cinematic",
+      "oneLinerNl": "Een doordringende gil: het horror-effect voor de schrikmomenten in je verhaal.",
+      "oneLinerEn": "A piercing scream: the horror effect for the jump-scares in your story."
     },
     {
       "toneNumber": 285,
@@ -4472,7 +5106,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 3,
       "midiProgram": 127,
-      "tags": "fx/cinematic"
+      "tags": "fx/cinematic",
+      "oneLinerNl": "De droge dreun van een rake klap: cartoonesk geweld in één toets.",
+      "oneLinerEn": "The dry thud of a landed blow: cartoon violence in a single key."
     },
     {
       "toneNumber": 286,
@@ -4486,7 +5122,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 4,
       "midiProgram": 127,
-      "tags": "fx/cinematic"
+      "tags": "fx/cinematic",
+      "oneLinerNl": "Doffe boem-boem: een kloppend hart dat spanning opbouwt onder elke scene.",
+      "oneLinerEn": "A muffled lub-dub: a beating heart that builds tension beneath any scene."
     },
     {
       "toneNumber": 287,
@@ -4500,7 +5138,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 5,
       "midiProgram": 127,
-      "tags": "fx/cinematic"
+      "tags": "fx/cinematic",
+      "oneLinerNl": "Naderende voetstappen: het GM2-effect dat iemand de kamer in laat lopen.",
+      "oneLinerEn": "Approaching footsteps: the GM2 effect that walks someone into the room."
     },
     {
       "toneNumber": 288,
@@ -4514,7 +5154,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 0,
       "midiProgram": 128,
-      "tags": "fx/cinematic"
+      "tags": "fx/cinematic",
+      "oneLinerNl": "Eén scherp schot: de klassieke filmknal voor het beslissende moment.",
+      "oneLinerEn": "One sharp shot: the classic film bang for the decisive moment."
     },
     {
       "toneNumber": 289,
@@ -4528,7 +5170,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 1,
       "midiProgram": 128,
-      "tags": "fx/cinematic"
+      "tags": "fx/cinematic",
+      "oneLinerNl": "Ratelend salvo: een snelvuurketen van schoten voor actiescenes vol adrenaline.",
+      "oneLinerEn": "A rattling volley: a rapid-fire chain of shots for adrenaline-fuelled action scenes."
     },
     {
       "toneNumber": 290,
@@ -4542,7 +5186,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 2,
       "midiProgram": 128,
-      "tags": "fx/cinematic"
+      "tags": "fx/cinematic",
+      "oneLinerNl": "Pew-pew uit de ruimte: het zoevende laserschot recht uit elke retro-sciencefiction.",
+      "oneLinerEn": "Pew-pew from space: the zapping laser shot straight out of any retro sci-fi."
     },
     {
       "toneNumber": 291,
@@ -4556,7 +5202,9 @@
       "midiBankMsb": 121,
       "midiBankLsb": 3,
       "midiProgram": 128,
-      "tags": "fx/cinematic"
+      "tags": "fx/cinematic",
+      "oneLinerNl": "Voluit knallende detonatie: de grote filmische klap voor climax en chaos.",
+      "oneLinerEn": "A full-blown detonation: the big cinematic blast for climax and chaos."
     }
   ]
 }

@@ -20,18 +20,20 @@ public record ToneDto(
         Integer midiBankMsb,
         Integer midiBankLsb,
         Integer midiProgram,
-        String tags
+        String tags,
+        String oneLiner
 ) {
     public static ToneDto from(Tone tone) {
-        return from(tone, null, null, null, null, null);
+        return from(tone, null, null, null, null, null, null);
     }
 
     public static ToneDto from(Tone tone, String thumbnailUrl, String shortSummary) {
-        return from(tone, thumbnailUrl, null, null, shortSummary, null);
+        return from(tone, thumbnailUrl, null, null, shortSummary, null, null);
     }
 
     public static ToneDto from(Tone tone, String thumbnailUrl, Integer thumbnailWidth,
-                               Integer thumbnailHeight, String shortSummary, String thumbnailHdUrl) {
+                               Integer thumbnailHeight, String shortSummary, String thumbnailHdUrl,
+                               String oneLiner) {
         return new ToneDto(
                 tone.getId(),
                 tone.getToneNumber(),
@@ -50,7 +52,8 @@ public record ToneDto(
                 tone.getMidiBankMsb(),
                 tone.getMidiBankLsb(),
                 tone.getMidiProgram(),
-                tone.getTags()
+                tone.getTags(),
+                oneLiner
         );
     }
 }

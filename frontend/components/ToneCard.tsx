@@ -48,7 +48,9 @@ export function ToneCard({
 }: Props) {
   const key = toneKey(tone);
   const badge = CATEGORY_COLORS[tone.category] ?? CATEGORY_COLORS.Other;
-  const hasSummary = Boolean(tone.shortSummary);
+  // Pakkende one-liner heeft voorrang; val terug op de Wikipedia-samenvatting.
+  const hookText = tone.oneLiner ?? tone.shortSummary;
+  const hasSummary = Boolean(hookText);
   const tags = parseTags(tone.tags);
   const visibleTags = isExpanded ? tags : tags.slice(0, 2);
 
@@ -134,7 +136,7 @@ export function ToneCard({
             }`}
             onClick={() => onToggleExpand(isExpanded ? null : key)}
           >
-            {tone.shortSummary}
+            {hookText}
           </p>
           <div className="mt-1.5 flex items-center justify-between">
             <button

@@ -52,13 +52,15 @@ public class ToneController {
     @GetMapping("/tones")
     public List<ToneDto> getTones(@RequestParam(required = false) String category,
                                   @RequestParam(required = false) String subCategory,
-                                  @RequestParam(required = false) String q) {
-        return toneService.search(category, subCategory, q);
+                                  @RequestParam(required = false) String q,
+                                  @RequestParam(defaultValue = "nl") String lang) {
+        return toneService.search(category, subCategory, q, lang);
     }
 
     @GetMapping("/tones/{id}")
-    public ToneDetailDto getTone(@PathVariable Long id) {
-        return toneService.getDetail(id);
+    public ToneDetailDto getTone(@PathVariable Long id,
+                                 @RequestParam(defaultValue = "nl") String lang) {
+        return toneService.getDetail(id, lang);
     }
 
     @GetMapping("/tones/{id}/wiki")

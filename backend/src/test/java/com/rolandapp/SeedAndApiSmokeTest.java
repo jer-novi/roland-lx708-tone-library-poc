@@ -79,6 +79,29 @@ class SeedAndApiSmokeTest {
     }
 
     @Test
+    void detailServesBilingualCarouselContent() {
+        Long id = toneService.search("Piano", null, "European Grand").getFirst().id();
+
+        var nl = toneService.getDetail(id, "nl");
+        assertThat(nl.oneLiner()).isNotBlank();
+        assertThat(nl.background()).isNotNull();
+        assertThat(nl.background().pageTitle()).isEqualTo("Grand piano");
+        assertThat(nl.background().summary()).isNotBlank();
+        assertThat(nl.background().facts()).hasSizeGreaterThanOrEqualTo(5);
+        assertThat(nl.background().facts()).extracting(f -> f.category())
+                .contains("technical", "history", "playful", "exotic");
+        // European v2 deelt het artikel "Grand piano" -> verschijnt als verwante klank.
+        assertThat(nl.relatedTones()).extracting(rt -> rt.name()).contains("European v2");
+
+        // De EN-tak (pickLang + *_en kolommen + facts_json round-trip) draaide nog nooit:
+        // bewijs dat de tweetalige content daadwerkelijk verschilt.
+        var en = toneService.getDetail(id, "en");
+        assertThat(en.oneLiner()).isNotBlank();
+        assertThat(en.oneLiner()).isNotEqualTo(nl.oneLiner());
+        assertThat(en.background().summary()).isNotEqualTo(nl.background().summary());
+    }
+
+    @Test
     void gm2RangeIsComplete() {
         List<ToneDto> gm2 = toneService.search("Other", "GM2", null);
         assertThat(gm2).hasSize(256);

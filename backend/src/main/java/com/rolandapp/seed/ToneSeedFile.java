@@ -20,7 +20,9 @@ public record ToneSeedFile(List<CategorySeed> categories, List<ToneSeed> tones) 
             Integer midiBankMsb,
             Integer midiBankLsb,
             Integer midiProgram,
-            String tags
+            String tags,
+            String oneLinerNl,
+            String oneLinerEn
     ) {
     }
 }

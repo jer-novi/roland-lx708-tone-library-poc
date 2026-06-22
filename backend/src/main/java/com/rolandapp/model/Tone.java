@@ -49,6 +49,14 @@ public class Tone {
     @Column(length = 512)
     private String tags;
 
+    /** Pakkende one-liner per tone (NL), slide 1 van de kaart-carousel. */
+    @Column(name = "one_liner_nl", columnDefinition = "TEXT")
+    private String oneLinerNl;
+
+    /** Pakkende one-liner per tone (EN). */
+    @Column(name = "one_liner_en", columnDefinition = "TEXT")
+    private String oneLinerEn;
+
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "category_id", nullable = false)
     private ToneCategory category;
@@ -158,6 +166,22 @@ public class Tone {
 
     public void setTags(String tags) {
         this.tags = tags;
+    }
+
+    public String getOneLinerNl() {
+        return oneLinerNl;
+    }
+
+    public void setOneLinerNl(String oneLinerNl) {
+        this.oneLinerNl = oneLinerNl;
+    }
+
+    public String getOneLinerEn() {
+        return oneLinerEn;
+    }
+
+    public void setOneLinerEn(String oneLinerEn) {
+        this.oneLinerEn = oneLinerEn;
     }
 
     public ToneCategory getCategory() {

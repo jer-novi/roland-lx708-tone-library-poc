@@ -23,6 +23,9 @@ export interface ToneDto {
   midiProgram: number | null;
   /** Nederlandse klank-tags (timbre + context), comma-separated */
   tags: string | null;
+  /** Pakkende one-liner (taal-geselecteerd door de backend o.b.v. ?lang=).
+   *  Slide 1 van de kaart-carousel; valt terug op shortSummary als leeg. */
+  oneLiner?: string | null;
 }
 
 /** Voortgang van de wiki-warmup (achtergrondvulling van thumbnails). */
@@ -70,10 +73,37 @@ export interface AudioSampleDto {
   createdAt: string;
 }
 
+/** Eén fact-blok, al taal-geselecteerd. category = technical/history/playful/exotic/culture/usage. */
+export interface FactDto {
+  category: string;
+  text: string;
+}
+
+/** Achtergrond per instrument (gedeeld door alle tonen met dezelfde wikipediaPageTitle). */
+export interface InstrumentBackgroundDto {
+  pageTitle: string;
+  summary: string | null;
+  facts: FactDto[];
+}
+
+/** Verwante klank (zelfde instrument) voor de "Verwante klanken"-slide. */
+export interface RelatedToneDto {
+  id: number;
+  toneNumber: number;
+  name: string;
+  category: string;
+}
+
 export interface ToneDetailDto {
   tone: ToneDto;
   wikiData: WikiDataDto | null;
   audioSamples: AudioSampleDto[];
+  /** Taal-geselecteerde one-liner (zelfde als tone.oneLiner, voor het gemak). */
+  oneLiner: string | null;
+  /** Samenvatting + fact-blokken per instrument; null als er nog geen gecureerde tekst is. */
+  background: InstrumentBackgroundDto | null;
+  /** Andere klanken die hetzelfde instrument/Wikipedia-artikel delen. */
+  relatedTones: RelatedToneDto[];
 }
 
 /** Stable key for favorites: survives backend re-seeds and static fallback. */
